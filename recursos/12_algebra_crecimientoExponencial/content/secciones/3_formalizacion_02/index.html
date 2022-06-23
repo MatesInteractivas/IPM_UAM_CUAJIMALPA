@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+  <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onLoad="initialize();">
+  
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    </p><!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Formalización de los problemas</h1>
+    
+    <!--- Subtítulo (no necesario en introducción) --->
+    <h2>Problema 3. ¿Cómo comparamos tasas de interés cuando subdividimos el periodo en cuestión?</h2>
+
+    <p>
+      El caso de la comparación de una tasa de interés anual contra otra
+      mensual es un caso particular del problema que nos estamos
+      planteando ahora.
+    </p>
+
+    <p>
+      Para resolverlo haremos dos cosas:
+      <ol>
+	<li>
+	  Ver la forma de calcular la tasa o fracción de crecimiento
+	  de un periodo (grande) que es múltiplo del periodo (chico) dado. Dada la tasa
+	  mensual calcular la anual, por ejemplo.
+	</li>
+	<li>
+	  Ver la forma de calcular la tasa o fracción de crecimiento
+	  de un periodo (chico) que es submúltiplo del periodo
+	  (grande) dado. Por ejemplo, calcular la tasa diaria
+	  correspondiente a una tasa anual.
+	</li>
+      </ol>
+      
+    </p>
+
+    <div class="problema">
+      <strong>Problema 3</strong>
+      <ol>
+	<li> Dado un valor de \(f\), ¿cómo encontramos \(F\) de modo
+	  que \[Ca^n=Cb^1=Cb\] donde \(a=1+f\), \(b=1+F\)?
+	  <br><br>Aquí, \(n\) es un número natural arbitrario que representa el factor por
+	  el que hay que multiplicar el tamaño del periodo asociado a
+	  \(f\) para obtener el tamaño del periodo asociado a \(F\).
+	  Por ejemplo, \(n\) será \(12\) en caso de calcular la tasa anual a partir de la mensual.<br><br>
+	</li>
+	<li> Dado un valor de \(F\), ¿cómo encontramos \(f\) de modo
+	  que \[Ca^n=Cb^1=Cb\] donde \(a=1+f\), \(b=1+F\)?
+	  <br><br>Nuevamente, \(n\) es un
+	  número natural  arbitrario que representa el factor por
+	  el que hay que multiplicar el tamaño del periodo asociado a
+	  \(f\) para obtener el tamaño del periodo asociado a \(F\).
+	</li>
+    </div>
+
+    <h2>Problema 4. Determinar si un crecimiento de interés compuesto puede o no alcanzar a un crecimiento lineal.</h2>
+
+    <p>
+      Recordemos rápidamente que la gráfica de una cantidad ahorrada \(A\) a
+      la que se le suma un salario mensual fijo \(S\) es una recta de la
+      forma\[y=Sx+A\] que crece linealmente (la gráfica verde en el espacio interactivo más abajo).
+      Si nos fijamos sólo en los valores enteros podemos escribir
+      \[y=Sn+A\] donde \(n\) toma valores enteros (\(y\) es el dinero acumulado después de \(n\) meses).
+    </p>
+
+    <!--- Instrucciones --->
+    <div class="instrucciones">
+    El siguiente espacio que ya conoces te permite ajustar una cantidad inicial
+    ahorrada \(A\), el monto mensual del salario \(S\), una cantidad
+    inicial a invertir \(C\) y su correspondiente tasa de interés
+    mensual \(T\) representada como un porcentaje. Todas las
+    cantidades se expresan en miles de pesos.<br><br>En la cuadrícula
+    la gráfica del salario acumulado más ahorro está en verde,
+    mientras que la gráfica azul corresponde a la inversión
+    del capital \(C\) con interés compuesto del \(T\%\) mensual. Las
+    unidades del eje \(x\) son meses y las del eje \(y\) son millones
+    de pesos.<br><br>Puedes modificar la escala con las lupas de la
+    esquina inferior derecha.
+    </div>
+
+    <!-- ejemplo para incluir un documento externo en un iframe, aqui van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="480" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+
+    <div class="problema">
+      <strong>Problema 4.</strong>
+      <br><br>Dados valores de \(A,S,C\) y \(f\)
+      (que representará la fracción correspondiente al procentaje
+      \(T\)), tendremos que determinar si existe un número natural \(n\) de tal forma que \[Ca^n>An+S\]
+      donde \(a=1+f\).
+    </div>
+    
+    <p>Ahora que hemos planteado los problemas 2, 3 y 4 en términos algebraicos, avancemos a la siguiente sección para resolverlos.</p>
+
+
+
+
+
+    <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+    
+    
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onClick="showCredits()">Condiciones de uso</a>
+    </div>  
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+    
+
+  </div>
+  
+</article>
+
+
+
+
+</body>
+
+</html>

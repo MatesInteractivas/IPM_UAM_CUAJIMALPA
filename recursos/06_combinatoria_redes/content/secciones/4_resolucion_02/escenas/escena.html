@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>TITULO</title>
+
+        <link rel="stylesheet" type="text/css" href="css/descartes.css">
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body style="margin:0px;padding:0px;overflow:hidden;">
+
+<p align="center">
+<ajs name="Descartes" width=750 height=300 code="Descartes">
+   <param name="tamaño" value="750x300">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' despl_imagen='arr-izq' fondo='ffffffff' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='E2' x='420' y='0' ancho='250' alto='250' dibujar-si='b>0' imagen='images/fondo_peq.jpg' despl_imagen='arr-izq' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='A' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='1.' expresión='(30,0,30,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn30x30.png' acción='calcular' parámetro='b=1'">
+   <param name="C_02" value="id='B' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='2.' expresión='(30,50,30,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn30x30.png' acción='calcular' parámetro='b=2'">
+   <param name="C_03" value="id='C' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='3.' expresión='(30,100,30,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn30x30.png' acción='calcular' parámetro='b=3'">
+   <param name="C_04" value="id='D' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='4.' expresión='(30,150,30,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn30x30.png' acción='calcular' parámetro='b=4'">
+   <param name="C_05" value="id='E' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='5.' expresión='(30,200,30,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn30x30.png' acción='calcular' parámetro='b=5'">
+   <param name="C_06" value="id='ok' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='OK' expresión='(95,200,60,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn60x30.png' acción='calcular' parámetro='b=0'">
+   <param name="C_07" value="id='F' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='6.' expresión='(30,250,30,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn30x30.png' acción='calcular' parámetro='b=6'">
+   <param name="A_01" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez'">
+   <param name="A_02" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="G_01" value="espacio='E1' tipo='texto' color='negro' expresión='[70,5]' texto='Es un enlace del costo más bajo existente.' fuente='Serif,PLAIN,16' fijo='sí' ancho='330'">
+   <param name="G_02" value="espacio='E1' tipo='texto' color='negro' expresión='[70,50]' texto='Conecta a la solución en construcción con un punto de ella misma.' fuente='Serif,PLAIN,16' fijo='sí' ancho='330'">
+   <param name="G_03" value="espacio='E1' tipo='texto' color='negro' expresión='[70,100]' texto='Conecta a la solución en construcción con un punto exterior a ella, es decir, añade un punto.' fuente='Serif,PLAIN,16' fijo='sí' ancho='330'">
+   <param name="G_04" value="espacio='E1' tipo='texto' color='negro' expresión='[70,155]' texto='Es un enlace con costo menor o igual a los ya escogidos.' fuente='Serif,PLAIN,16' fijo='sí' ancho='330'">
+   <param name="G_05" value="espacio='E1' tipo='texto' color='negro' expresión='[70,250]' texto='Es el único enlace de costo más bajo que además cumple con 3. ' fuente='Serif,PLAIN,16' fijo='sí' ancho='330'">
+   <param name="G_06" value="espacio='E2' tipo='texto' color='negro' dibujar-si='b=1' expresión='[10,10]' texto='\nEs cierto en el ejemplo, pero\n\n¿será cierto en el caso general?\n' fuente='Serif,PLAIN,16' fijo='sí' ancho='230'">
+   <param name="G_07" value="espacio='E2' tipo='texto' color='negro' dibujar-si='b=2' expresión='[10,10]' texto='\nNo, es todo lo contrario,\nte estás confundiendo...' fuente='Serif,PLAIN,16' fijo='sí' ancho='230'">
+   <param name="G_08" value="espacio='E2' tipo='texto' color='negro' dibujar-si='b=3' expresión='[10,10]' texto='\nAsí es.\n\nAunque tiene otra \npropiedad importante\nque necesitamos.' fuente='Serif,PLAIN,16' fijo='sí' ancho='230'">
+   <param name="G_09" value="espacio='E1' tipo='imagen' dibujar-si='b=5' coord_abs='sí' expresión='(5,(b-1)*50+5)' archivo='images/bien.png'">
+   <param name="G_10" value="espacio='E1' tipo='imagen' dibujar-si='b!=5' coord_abs='sí' expresión='(5,(b-1)*50+5)' archivo='images/mal.png'">
+   <param name="G_11" value="espacio='E2' tipo='texto' color='negro' dibujar-si='b=4' expresión='[10,10]' texto='\nEs cierto en el ejemplo, pero\n\n¿podrá esto ocurrir siempre\nen el caso general?\n' fuente='Serif,PLAIN,16' fijo='sí' ancho='230'">
+   <param name="G_12" value="espacio='E2' tipo='texto' color='negro' dibujar-si='b=5' expresión='[10,10]' texto='Sí, es correcto, de hecho\npodríamos decir que: \n\n&squot;Es el enlace que conecta \na nuestra solución en\nconstrucción con el resto \ndel mundo con el menor \ncosto posible&squot;.' fuente='Serif,PLAIN,16' fijo='sí' ancho='230'">
+   <param name="G_13" value="espacio='E1' tipo='texto' color='negro' expresión='[70,200]' texto='Es uno de los enlaces del costo más bajo posible de entre los que además cumplen con 3.' fuente='Serif,PLAIN,16' fijo='sí' ancho='330'">
+   <param name="G_14" value="espacio='E2' tipo='texto' color='negro' dibujar-si='b=6' expresión='[10,10]' texto='\nNo, puede haber otros...' fuente='Serif,PLAIN,16' fijo='sí' ancho='230'">
+</ajs></p>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+   <h1>Exploración inicial del problema</h1>
+    
+    <h2>Optimización de la red primaria</h2>
+    <!--- Párrafo --->
+    <p>
+      Ahora trabajaremos con los datos de la primera parte del
+      problema, que corresponde a la optimización de la red de fibra
+      óptica.
+    </p>
+    
+    <!-- ejemplo para incluir un documento externo en un iframe, aqui van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <img  src="imgs/redFibraOptica.png"> </img>
+    </div>
+    
+    <div class='instrucciones'>
+      De manera muy similar a la escena anterior, a continuación
+      incluimos la representación gráfica correspondiente a la red de
+      fibra óptica con el objeto de que encuentres la solución de
+      costo mínimo que comunique todos los puntos. Podrás marcar y
+      desmarcar los enlaces al presionar sobre los puntos anaranjados
+      o sobre los costos en el cuadro.<br><br>En esta ocasión podrás
+      variar entre 4 y 8 el valor de \(N\), que representa el número de
+      puntos a conectar, con objeto de graduar la complejidad del
+      problema mientras exploras.
+    </div>
+    
+    <!-- ejemplo para incluir un documento externo en un iframe, aqui van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="480" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+
+  <div class="problema">
+    <strong>Preguntas</strong>
+    <br><br> Una vez que hayas practicado varias veces la búsqueda de
+     la solución de costo mínimo para la red de fibra óptica, contesta
+     las siguientes preguntas:
+     <ol>
+      <li>¿Por qué, para el caso de los ocho puntos, tomar todos los
+      enlaces de costo 1 no resuelve el problema?</li>
+      <br>
+      <li>¿Crees que comenzar con cuatro puntos e ir aumentando ayuda
+      a la solución del problema con los ocho puntos?</li>
+      <br>
+      <li>¿Crees que comenzar con cuatro puntos e ir aumentando ayuda
+      a encontrar un procedimiento general para solucionar este tipo
+      de problemas?</li>
+     </ol>
+  </div>
+
+    <p>
+    Seguramente no tardaste mucho en encontrar una o varias de las
+    soluciones posibles del problema. Sin embargo, el método de prueba
+    y error no siempre da resultado de forma rápida y fácil.  En la
+    siguiente página trabajaremos este mismo problema con un cuadro de
+    costos arbitrario, simulando la problemática que tienen quienes
+    realizan este tipo de proyectos en el mundo real.
+    </p>
+
+    <p>
+    Avanza a la página 3 para seguir explorando, ¡sobre todo si quieres
+   encontrar más pistas que te lleven al diseño del
+    procedimiento general!
+    </p>
+
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>
+    
+
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Exploración inicial del problema</h1>
+    
+    <h2>Curvas y puntos</h2>
+    <!--- Párrafo --->
+    
+    <p>
+    Para seguir con la exploración del problema de localizar un dispositivo en el plano, retomemos las primeras dos preguntas que formulamos al final de la página anterior.
+    Sin embargo, puntualicemos un poco más dichas preguntas.
+    <br><br>
+    En términos geométricos, podemos considerar al dispositivo como un punto no fijo (móvil) en el plano, mientras que la antena se puede representar como un punto fijo.
+    ¿De cuántas formas podemos entonces ubicar ambos puntos en el plano, y cuál es la figura geométrica que corresponde a esta situación?
+    En otras palabras, ¿qué curva se puede formar si tenemos dos puntos, de los cuales uno se coloca en una posición fija?
+    </p>
+    
+    <p>Es probable que ya conozcas la respuesta a esta pregunta. Compruébalo en el siguiente espacio interactivo.</p>
+    
+    <!--- Instrucciones --->
+    <div class="instrucciones">
+    <span>A continuación se muestra un dispositivo móvil y un punto azul fijo que representa una antena. 
+    Puedes arrastrar y mover el dispositivo de tal forma que la distancia entre ambos (representada por el segmento gris claro) se mantiene constante.
+    </span>
+    </div>
+    
+        <!-- ejemplo para incluir un documento externo en un iframe, aqui van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="750" height="510" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+    
+    <p class="importante" style="margin-left:10%;margin-right:10%;">
+    <strong>Definición</strong>
+    <br><br>
+    La <strong>circunferencia</strong> es el lugar geométrico de un punto que se mueve en un plano de tal manera que se conserva siempre a una distancia constante de un punto fijo de ese plano.
+    <br><br>
+    El punto fijo se llama <em>centro</em> de la circunferencia, y la distancia constante se llama <em>radio</em>.
+    </p>
+    
+      <p>
+      Bajo este esquema, la ubicación del dispositivo se encuentra en alguno de los puntos de la circunferencia, cuya cantidad es, en principio, infinita.
+      Por eso, necesitamos la información de más antenas, de tal forma que podamos trazar varias circunferencias que se intersequen.
+      Los puntos de intersección coinciden con los puntos en los que se puede encontrar el dispositivo.
+      </p>
+      
+      <p>
+      Entonces, ¿cuántas antenas serán necesarias para ubicar el dispositivo?
+      Es decir, ¿cuántas circunferencias se requieren como mínimo para asegurar que éstas al intersecarse definen un único punto?
+      Podrás encontrar la respuesta a esta pregunta en el espacio interactivo que se presenta a continuación.
+      </p>
+      
+     <!--- Instrucciones --->
+    <div class="instrucciones">
+    <span>
+      Primero, elige el número de antenas con las que quieres explorar el problema. Puedes arrastrarlas con el ratón para reubicarlas en el plano.
+      De la misma manera, puedes arrastrar el celular para reacomodarlo.
+      Posteriormente, haz clic en  'Ver circunferencias' para que se muestren las circunferencias que tienen las antenas como centro.
+      El control rojo sobre cada una de ellas te permite cambiar su radio, en aras de encontrar el o los puntos de intersección.
+      <br><br>
+      Orienta tu exploración considerando las preguntas que se formulan debajo del espacio interactivo.
+    </span>
+    </div>
+
+      <div class="course_extern_content"> 
+        <iframe class="course_iframe" width="750" height="450" frameborder="0" src="escenas/escena2.html"> </iframe>
+      </div>
+      
+            
+      <div class='problema'>
+      <strong>Preguntas</strong>
+      <br><br>
+      Apoyándote en tus pesquisas en el espacio interactivo, trata de contestar las siguientes preguntas:
+      <ol>
+        <li>¿En cuántos lugares se puede hallar el dispositivo si hay 2 antenas?</li>
+        <li>¿En cuántos lugares se puede encontrar el dispositivo si hay 3, 4 o 5 antenas?</li>
+        <li>¿Cuál es el mínimo de antenas necesarias para ubicar tu dispositivo en el plano sin equivocación?</li>
+      </ol>
+      ¡Procura buscar las respuestas antes de ver la solución!
+      </div>
+      
+      <div class="verSolucion" id="btSolucion" onclick="document.getElementById('solucion').setAttribute('class','visible');document.getElementById('btSolucion').setAttribute('class','oculto');">
+      </div>
+
+    <div id="solucion" class='oculto'>
+      
+    <h2>Respuestas a las preguntas</h2>
+    
+      <p>
+      Probablemente te hayas percatado de que trazando dos circunferencias de tal forma que estas se intersequen, existen dos posibilidades: una es que se intersequen en dos puntos, la otra es que se intersequen en un solo punto.
+      </p>
+      <p>
+      El caso en el que dos circunferencias se corten en un solo punto no es relevante para nuestro análisis, ya que esto solo sucede cuando el dispositivo está en la línea que une la posición de las antenas, lo cual es muy poco probable que ocurra en la realidad.
+      </p>
+      
+      <div class="course_extern_content"> 
+        <img src="imgs/2Circunf.png"> </img>
+      </div>
+      
+      <p>
+      Por lo mismo, cuando cuentas con solo 2 antenas, lo más probable es que haya 2 puntos en los que se puede ubicar el dispositivo, como se muestra en la imagen de abajo.
+      </p>
+      
+      <div class="course_extern_content"> 
+        <img src="imgs/2Circunf_2puntos.png"> </img>
+      </div>
+      
+      <p>
+      Por lo mismo, se requiere una tercera antena (léase <em>circunferencia</em>) para desambiguar la localización del dispositivo en el plano.
+      </p>
+      
+      <div class="course_extern_content"> 
+        <img src="imgs/3Circunf.png"> </img>
+      </div>
+      
+      <p>
+      Avanza a la siguiente página para conocer una últimas consideraciones de esta parte de exploración del problema.
+      </p>
+
+    </div>
+    
+
+
+  
+      <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

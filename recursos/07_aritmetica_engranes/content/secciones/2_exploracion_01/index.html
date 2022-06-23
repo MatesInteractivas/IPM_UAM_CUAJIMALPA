@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+   <h1>Exploración inicial del problema</h1>
+
+    <h2>¿Cuántos dientes se encajan?</h2>
+    <!--- Párrafo --->
+    <p>
+     En esta sección usarás un entorno interactivo para realizar algunas observaciones y analizar algunas ideas que te servirán para entender, en una pareja de diferentes engranes:
+     <ul>
+       <li>La relación entre el número de dientes y el número de vueltas;</li>
+       <br>
+       <li>La relación entre el número de dientes de cada engrane.</li>
+     </ul>
+     </p>
+
+
+    <p>
+    A continuación se muestran dos engranes cuyo número de dientes puede seleccionarse con un pulsador cada uno.
+    El número de dientes del engrane naranja siempre es 6 y el número de dientes del engrane azul puede variar entre 6 y 9.
+    Se marca en blanco una posición inicial: uno de los dientes en el engrane naranja y el hueco en el que éste se encaja en el engrane azúl.
+    También se irán marcando en color naranja los huecos en los que se encaja el diente marcado mientras ambos engranes giran.
+    </p>
+    
+    <p>
+      Posteriormente hay una serie de preguntas que pueden orientarte en la exploración del entorno interactivo.
+      Dichas preguntas se refieren a este conjunto particular de engranes.
+    </p>
+
+    <!--- Instrucciones --->
+    <div class="instrucciones">
+    Selecciona el número de dientes del engrane azul presionando el pulsador izquierdo. Presiona sobre el botón 'Mover' para hacer girar los engranes.
+    Con las flechas izquierda y derecha puedes hacer girar los engranes diente por diente.
+    </div>
+
+    <!-- ejemplo para incluir un documento externo en un iframe, aquí van las escenas y videos -->
+    <div class="course_extern_content">
+      <iframe class="course_iframe" width="760" height="460" frameborder="0" src="escenas/escena1.html"> </iframe>
+ <iframe class="course_iframe" width="750" height="130" frameborder="0" src="escenas/escena2.html"> </iframe>
+    </div>
+
+    <p>
+    En el entorno interactivo anterior pudiste observar una relación entre las parejas de engranes con 6 dientes cada uno, con 7 y 6 dientes, con 8 y 6 dientes y con 9 y 6 dientes, respectivamente.
+    Para simplificar, de ahora en adelante nos referiremos a una pareja de engranes por el número de dientes que tiene cada uno.
+    Por ejemplo, la pareja <strong>(6,7)</strong> es la compuesta por el engrane azul con 6 dientes y el engrane naranja con 7 dientes; la pareja <strong>(7,6)</strong> está compuesta por el engrane azul con 7 dientes y el engrane naranja con 6 dientes.
+   </p>
+
+   <p>
+Las preguntas siguientes se refieren a parejas de engranes con cualquier número de dientes.
+   </p>
+    <div class="problema">
+    <strong>Preguntas</strong>
+    <br><br>
+     Intenta encontrar la respuesta a las siguientes preguntas:
+     <ol>
+      <li>¿En qué par de engranes el diente marcado entra en todos los huecos del otro engrane?</li>
+      <br>
+     <li>¿En qué pares esto no pasa y por qué?</li>
+      <br>
+    <li>¿Puedes explicar cómo determinar qué pares cumplen que el diente marcado se encaja en todos los huecos del otro engrane, y por qué?</span>
+     </ol>
+  </div>
+
+
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>
+
+
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+
+
+
+  </div>
+
+
+</article>
+
+
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+  <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+   <h1>Formalización del problema: Bases del conteo</h1>
+    
+    <h2>La ley multiplicativa</h2>
+    <!--- Párrafo --->
+    <p>
+    En muchos ejemplos semejantes a los del acomodo de las cartas, se requiere de algo conocido como la <strong>ley multiplicativa</strong>.
+    El ejemplo más sencillo es el de las maneras de acomodar un conjunto de elementos dadas algunas condiciones.
+    Por ejemplo, el número de formas de acomodar tres monedas según la cara que muestran resulta ser 8: la primera moneda tiene dos opciones (águila o sol); este número de opciones se multiplica por el número de opciones de la segunda (nuevamente águila o sol) dando 4; y estas cuatro opciones se multiplican por el número de opciones de la tercera moneda (nuevamente águila o sol), dando el total de 8.
+    Notamos que las opciones de cada moneda, al ser independientes de las de cada otra moneda, se multiplican entre sí, dando el total de opciones de acomodo para el conjunto de tres monedas.
+    A esto se le conoce como la ley o regla multiplicativa, y es a partir de esta que se deducen las herramientas de conteo mostradas en el recurso interactivo más adelante. 
+    </p>
+
+    <p>
+    En el siguiente video puedes ver la ley multiplicativa aplicada a otro ejemplo.
+    </p>
+
+
+    <div class="course_extern_content"> 
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/U1Av-s7q7yY" frameborder="0" allowfullscreen></iframe>
+    </div>
+    
+    <h2>Cálculo de probabilidades</h2>
+
+    <p>
+    Supón que, para un experimento, cuentas con el número total de distintos desenlaces del mismo. Toma como ejemplo el de las monedas nuevamente. Un posible desenlace es águila, águila y águila para las 3 monedas, respectivamente. Otro puede ser águila, águila y sol. Otro, águila, sol, águila. Y así hasta completar el total de 8 desenlaces. No hay uno que esté más favorecido que otro. Es decir, todos los desenlaces tienen la misma probabilidad de ocurrir. Así pues, si lanzamos las 3 monedas, sabemos que alguno de esos desenlaces tiene que ocurrir. Cada desenlace tiene, al haber 8 desenlaces igualmente probables, un octavo de probabilidad de ocurrir, de tal forma que si se suman las probabilidades de todos los desenlaces nos da la unidad (el 100%).
+    </p>
+
+    <p>
+    Para el caso de nuestra baraja, vimos que hay muchas formas de, por ejemplo, hacer un full house. Y hay un total de manos de 5 cartas posibles con la baraja de 52 naipes. Si son muchas formas de hacer un full house, ¿cómo será la probabilidad de hacer un full (tomando en cuenta todas las diferentes manos para full) respecto a todas las manos posibles con el mazo de 52 cartas?
+    </p>
+
+    <p class="importante">
+    Dentro de todas las manos posibles con una baraja de 52 naipes, la probabilidad de sacar un full a la primera corresponde al número de formas de hacer un full house, dividido entre el número de todas las manos distintas posibles en la baraja.
+    </p><br>
+
+    <p>
+    Aún no hemos llegado al punto medular, pero estos primeros cimientos serán necesarios para resolver el problema principal en cuestión. Sin embargo, antes de continuar, medita sobre las siguientes preguntas.
+    </p>
+
+    <div class="problema">
+      <strong>Preguntas</strong>
+      <br><br>
+      Notaste que usar la ley multiplicativa te permite conocer el número de formas de acomodar monedas en un experimento. Sin embargo, en este caso, aunque en la primera moneda tengas sol, en la segunda aún puedes volver a colocar sol.
+      <ol>
+      <li>¿Qué pasa cuando al elegir una opción de un elemento, ya no es posible volver a elegirla, y así sucesivamente? Es decir, ¿qué pasa si habiendo elegido un elemento, los subsecuentes ya no pueden incluir dicho elemento?</li>
+      <li>¿Cómo expresarías la multiplicación correspondiente de forma algebraica, es decir, usando literales en vez de números?</li>
+      </ol>
+    </div>
+
+    <p>Trata de encontrar la respuesta a estas preguntas antes de avanzar a la siguiente página.</p>
+
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>      
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

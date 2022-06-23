@@ -1,0 +1,6 @@
+var BIBLIO = [
+    "a4PaperSize.org (2013). <em>Welcome to A4PaperSize.org.</em> Recuperado de <a href='http://www.a4papersize.org/' target='_blank'>http://www.a4papersize.org/</a>",
+    "El Confidencial (2015). <em>Treinta datos que no sabías sobre el 'número más bello'</em>. Recuperado de <a href='http://www.elconfidencial.com/tecnologia/2014-10-14/treinta-cosas-que-no-sabias-sobre-el-numero-aureo_231903/' target='_blank'>http://www.elconfidencial.com/tecnologia/2014-10-14/treinta-cosas-que-no-sabias-sobre-el-numero-aureo_231903/</a>",
+    "JK Paper Ltd. (2014). <em>ISO paper sizes.</em> Recuperado de <a href='http://www.jkpaper.com/index.php?option=com_content&view=article&id=53&Itemid=54' target='_blank'>http://www.jkpaper.com/index.php?option=com_content&view=article&id=53&Itemid=54</a>",
+    "Kuhn, M. (2014). <em>International standard paper sizes.</em> Recuperado de <a href='http://www.cl.cam.ac.uk/~mgk25/iso-paper.html' target='_blank'>http://www.cl.cam.ac.uk/~mgk25/iso-paper.html</a>"
+]

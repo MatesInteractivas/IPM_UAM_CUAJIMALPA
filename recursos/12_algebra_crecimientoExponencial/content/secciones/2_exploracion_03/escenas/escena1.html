@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>TITULO</title>
+
+      <style type="text/css" media="screen">
+	/*pulsador*/
+	#E1.escala { }
+	#E1.escala > canvas {
+	  display: none;
+	}
+    
+	#E1\.escala .up {
+	  background: #f6f8e0 url("images/zoomIn.png") no-repeat center !important;
+	  background-size: cover !important;
+	}
+	#E1\.escala > .up:hover {
+	  background-color: #e8ebd0 !important;
+	}
+	#E1\.escala > .up:active {
+	  box-shadow: 1px 1px 5px #e8ebd0;
+	  background-color: #eeeeee !important;
+	}
+    
+	#E1\.escala .down {
+	  background: #e8ebd0 url("images/zoomOut.png") no-repeat center !important;
+	  background-size: cover !important;
+	}
+	#E1\.escala .down:hover {
+	  background-color: #e8ebd0 !important;
+	}
+	#E1\.escala .down:active {
+	  box-shadow: 1px 1px 5px #e8ebd0;
+	  background-color: #eeeeee !important;
+	}
+      </style>
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body style="margin:0px;padding:0px;overflow:hidden;">
+
+<p align="center">
+<ajs name="Descartes" width=760 height=480 code="Descartes">
+   <param name="tamaño" value="760x480">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E2' imagen='images/fondo.jpg' despl_imagen='expand.' fondo='grisClaro' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='E1' x='10' y='10' ancho='740' alto='390' fijo='sí' O.x='-320' O.y='150' despl_imagen='arr-izq' red='b8c4c8' red10='889498' ejes='405860' texto='405860' números='sí'">
+   <param name="C_01" value="id='E1.escala' tipo='numérico' región='interior' espacio='E2' nombre='E1.escala' expresión='(E2._w-40,E2._h-70,30,60)' valor='30' incr='.5' min='.5' max='500' decimales='0' fijo='sí' visible='no'">
+   <param name="C_02" value="id='N' tipo='numérico' región='interior' espacio='E2' nombre='N' expresión='(10,410,170,60)' valor='100' incr='1' min='1' max='10000' decimales='0' fijo='no' visible='sí' acción='calcular' parámetro='Cy.y=N/1000'">
+   <param name="C_03" value="id='G' tipo='numérico' región='interior' espacio='E2' nombre='G' expresión='(210,410,160,60)' valor='5' incr='1' min='1' max='100' decimales='1' fijo='no' visible='sí'">
+   <param name="C_04" value="id='T' tipo='numérico' región='interior' espacio='E2' nombre='T' expresión='(410,410,160,60)' valor='6' incr='1' min='1' max='100' decimales='1' fijo='no' visible='sí'">
+   <param name="C_05" value="id='Cy' tipo='gráfico' espacio='E1' tamaño='6' expresión='(0,N/1000)' constricción='x=0'">
+   <param name="A_01" value="id='q' vector='sí' evaluar='una-sola-vez' tamaño='901'">
+   <param name="A_02" value="id='nsoc()' expresión='1' algoritmo='sí' Local='i' inicio='i=0; q[0]=N' hacer='i=i+1;q[i]=ent(q[i-1]*(T/G));q[i]=(q[i]>100000000)?100000000:q[i]' mientras='i<901'">
+   <param name="A_03" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez'">
+   <param name="A_04" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='a=log(T/G);Cy.y=(Cy.y<0)?0:Cy.y;Cy.y=(Cy.y>10)?10:Cy.y;N=Cy.y*1000;nsoc()'">
+   <param name="G_01" value="espacio='E1' tipo='curva' color='00a000' expresión='(t,q[t]/1000)' t.intervalo='[0,900]' t.pasos='900' ancho='8'">
+   <param name="G_02" value="espacio='E1' tipo='punto' expresión='(s,q[s]/1000)' familia='s' s.intervalo='[0,900]' s.pasos='900' fijo='sí' tamaño='4'">
+   <param name="G_03" value="espacio='E1' tipo='ecuación' color='0000a0' dibujar-si='x>=0' expresión='y=N*exp(a*x)/1000' ancho='2'">
+   <param name="Animación" value="pausa='100' controles='no' auto='no' inicio='t=0' hacer='t=t+1;temp=((t=1)&(paso=0))?calcseg():0;temp=((t>14)&(t<16))?calrect():0;temp=((t>15)&(t<41))?trasp():0;temp=((t>40)&(t<61))?rotar():0;temp=((t>70)&(t<91))?traslada():0;temp=((t>80)&(t<101))?trasp2():0;temp=((t>99)&(t<111))?frazon():0;temp=(t=100)?recalc():0' mientras='t<110'">
+</ajs></p>
+
+</body>
+</html>

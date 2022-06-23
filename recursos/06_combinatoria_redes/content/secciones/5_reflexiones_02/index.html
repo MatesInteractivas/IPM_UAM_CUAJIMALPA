@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Reflexiones y aplicaciones</h1>
+
+    <h2>Inducción matemática</h2>
+
+    <p>
+      Como ya hemos visto, este principio es una herramienta muy útil y poderosa en las
+      matemáticas en general. El tema que hemos trabajado pertenece a
+      la teoría de gráficas, la cual hace uso constante de este
+      principio. Recordemos nuevamente qué es la inducción matemática y en qué consiste.
+    </p>
+
+    <p class="importante">
+      <strong>Principio de inducción matemática</strong><br><br>Consiste
+      en establecer, sin lugar a dudas, que una propiedad se cumple
+      para cualquier número natural que sea mayor que o igual a un número
+      natural <strong>inicial</strong>. Esto se consigue garantizando que:
+      <br><br>
+      1. La propiedad se cumple para el número <strong>inicial</strong>.<br><br>
+      2. Suponiendo, o dando por hecho, que la propiedad se cumple para un número natural
+	arbitrario \(n\), podemos garantizar que se cumplirá para \(n+1\).
+    </p>
+
+    <p>
+      Aplicando este principio podemos comprobar, y así estar seguros,
+      de que el procedimiento que hemos desarrollado en verdad nos da
+      como resultado una configuración óptima en términos del
+      problema, ya sea de minimización o maximización.
+    </p>
+
+    <h2> Estrategia equivocada</h2>
+
+    <p>
+      Para realizar lo anterior, la primera idea que viene a nuestra
+      mente es verificar directamente que el procedimiento funciona
+      correctamente para \(n=2\), y luego ver si para una configuración cualquiera
+      de \(n\) puntos, donde el procedimiento nos da la solución
+      requerida, podemos llegar partiendo de ella a la solución correcta para \(m=n+1\)
+      puntos.
+    </p>
+
+    <p>
+      Sin embargo, esta primera idea que vino a nuestra mente no va a funcionar. ¿Por qué?
+    </p>
+
+    <p>
+      ¿Cómo es el procedimiento para enlazar dos puntos A y B? Sin
+      lugar a dudas funciona porque comenzamos por A y lo enlazamos
+      con B o al revés. No hay más. Obtenemos la solución única y
+      óptima a la vez. Lo que quiere decir que el primer paso de la
+      inducción matemática es exitoso. No tenemos problemas ahí.
+    </p>
+
+    <p>
+      El problema viene porque, en general, es decir, en todos los
+      casos habidos y por haber, no podemos partir de una
+      configuración óptima para \(n\) puntos para obtener la
+      correspondiente pero para \(n+1\) puntos.
+    </p>
+
+    <p class='problema'>
+    <strong>Problema</strong>
+    <br><br> Piensa y diseña un escenario en el que tengas una
+    solución óptima para \(n\) puntos. Luego añade un punto junto con
+    los costos de los enlaces de este punto al resto de los puntos, de
+    tal forma que enlazando este último punto con el enlace de costo
+    óptimo no resulte todo ello en una solución
+    óptima.<br><br><em>Pista: Puedes tomar \(n=2\) con un enlace
+    costoso, pensado en el problema de minimización</em>.
+    </p>
+
+
+    <div class='instrucciones'>
+      A continuación incluimos una escena del mismo tipo que las
+      anteriores. Puedes variar el número de puntos \(N\) entre 2 y
+      5. Si encuentras una solución de costo total mínimo e
+      incrementas el valor de \(N\), verás que tienes que eliminar
+      todos los enlaces que escogiste para obtener la nueva solución
+      de costo total mínimo.
+    </div>
+    
+    <!-- ejemplo para incluir un documento externo en un iframe, aqui van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="480" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+
+    <p class='importante' style='margin-left:10%;margin-right:10%;'>
+      Al resolver el problema podemos ver claramente que no podemos
+      aplicar la inducción matemática a partir de cualquier número de puntos ya enlazados.
+      <br><br>Lo que sí podemos hacer es verificar que para
+      cualquier número natural \(N\) de puntos, el procedimiento
+      funciona usando la inducción para ir de \(n=2\) hasta \(n=N\).  
+    </p>
+
+	
+  <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>
+
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  
+  </div>
+  
+  
+  
+</article>
+
+
+</body>
+
+</html>

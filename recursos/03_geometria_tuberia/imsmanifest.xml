@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--This is a Reload version 2.5.6 SCORM 1.2 Content Package document-->
+<!--Spawned from the Reload Content Package Generator - http://www.reload.ac.uk-->
+<manifest xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2" xmlns:imsmd="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" identifier="MANIFEST-C51B770DC10499E56D2A78EF8D8ECE52" xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <adlcp:location />
+    <imsmd:lom>
+      <imsmd:general>
+        <imsmd:identifier>03_geometria_tuberia</imsmd:identifier>
+        <imsmd:title>
+          <imsmd:langstring xml:lang="es">Geometría: Tuberías y sedimentos</imsmd:langstring>
+        </imsmd:title>
+      </imsmd:general>
+      <imsmd:lifecycle>
+        <imsmd:version>
+          <imsmd:langstring xml:lang="es">1.0</imsmd:langstring>
+        </imsmd:version>
+        <imsmd:status>
+          <imsmd:source>
+            <imsmd:langstring xml:lang="x-none">LOMv1.0</imsmd:langstring>
+          </imsmd:source>
+          <imsmd:value>
+            <imsmd:langstring xml:lang="es" />
+          </imsmd:value>
+        </imsmd:status>
+        <imsmd:contribute>
+          <imsmd:role>
+            <imsmd:source>
+              <imsmd:langstring xml:lang="x-none">LOMv1.0</imsmd:langstring>
+            </imsmd:source>
+            <imsmd:value>
+              <imsmd:langstring xml:lang="es">Autor</imsmd:langstring>
+            </imsmd:value>
+          </imsmd:role>
+          <imsmd:centity>
+            <imsmd:vcard>Oscar Escamilla González</imsmd:vcard>
+          </imsmd:centity>
+        </imsmd:contribute>
+      </imsmd:lifecycle>
+      <imsmd:metametadata>
+        <imsmd:identifier>03_geometria_tuberia</imsmd:identifier>
+      </imsmd:metametadata>
+      <imsmd:technical>
+        <imsmd:format>text/html</imsmd:format>
+        <imsmd:requirement>
+          <imsmd:name>
+            <imsmd:source>
+              <imsmd:langstring xml:lang="x-none">LOMv1.0</imsmd:langstring>
+            </imsmd:source>
+            <imsmd:value>
+              <imsmd:langstring xml:lang="es" />
+            </imsmd:value>
+          </imsmd:name>
+        </imsmd:requirement>
+      </imsmd:technical>
+      <imsmd:classification>
+        <imsmd:description>
+          <imsmd:langstring xml:lang="es"><![CDATA[Se plantea encontrar el tiempo máximo de saturación de una tubería a causa del sedimento acumulado.
+		  
+		  Los datos con los que contamos son la altura que tiene actualmente el agua y el sedimento acumulado, y el radio del tubo. Para resolver el problema necesitamos utilizar nuestro conocimiento de figuras geométricas básicas, identidades y razones trigonométricas, además de fórmulas para calcular el área de los sectores circulares y triángulos. Adicionalmente, se presentan aplicaciones y reflexiones en particular, como el uso de la trigonometría en la navegación y resolución de una gran variedad de problemas. Al final se ofrecen 5 preguntas de opción múltiple con fines de autoevaluación.]]></imsmd:langstring>
+        </imsmd:description>
+        <imsmd:keyword>
+          <imsmd:langstring xml:lang="es">Geometría</imsmd:langstring>
+      	  <imsmd:langstring xml:lang="es">Razón</imsmd:langstring>
+      	  <imsmd:langstring xml:lang="es">Proporción</imsmd:langstring>
+      	  <imsmd:langstring xml:lang="es">Razones trigonométricas</imsmd:langstring>
+      	  <imsmd:langstring xml:lang="es">Seno</imsmd:langstring>
+      	  <imsmd:langstring xml:lang="es">Coseno</imsmd:langstring>
+      	  <imsmd:langstring xml:lang="es">Tangente</imsmd:langstring>
+      	  <imsmd:langstring xml:lang="es">Arcocoseno</imsmd:langstring>
+      	  <imsmd:langstring xml:lang="es">Triángulo rectángulo</imsmd:langstring>
+      	  <imsmd:langstring xml:lang="es">Área de un círculo</imsmd:langstring>
+      	  <imsmd:langstring xml:lang="es">Segmento circular</imsmd:langstring>
+      	  <imsmd:langstring xml:lang="es">Sector circular</imsmd:langstring>
+      	  <imsmd:langstring xml:lang="es">Área de un segmento circular</imsmd:langstring>
+      	  <imsmd:langstring xml:lang="es">Área de triángulos</imsmd:langstring>
+        </imsmd:keyword>
+      </imsmd:classification>
+    </imsmd:lom>
+  </metadata>
+  <organizations default="ORG-66DFEE253D6A683735115ADE32F39FD5">
+    <organization identifier="ORG-66DFEE253D6A683735115ADE32F39FD5" structure="hierarchical">
+      <title>main</title>
+      <item identifier="ITEM-7D8E13C3DD94DF2137682321FE228CC3" isvisible="true" identifierref="RES-7AEBA12A3C37D31569C88FD366C6F96A">
+        <title>Geometría: Tuberías y sedimentos</title>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="RES-7AEBA12A3C37D31569C88FD366C6F96A" type="webcontent" href="content/index.html">
+      <file href="content/index.html" />
+      <file href="content/css/contenedor.css" />
+    </resource>
+  </resources>
+</manifest>
+

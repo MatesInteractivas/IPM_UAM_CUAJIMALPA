@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Resolución del problema</h1>
+    
+    <!--- Subtítulo (no necesario en introducción) --->
+    <h2>Registro del patrón para un cuadrado</h2>
+    
+    
+           
+
+<p>De la misma forma en que separamos los patrones de cerillos y encontramos regularidades que dependían del número de figura, también con el patrón de manzanos se presenta una regularidad que está en función del número de manzanos en cada lado del cuadrado
+  Nombremos \(n\) al conjunto de pinos que hay en cada uno de los lados del cuadrado. </p>
+<p class="instrucciones">Escribe la expresión que define el número de pinos en todos los lados del cuadrado.</p>
+<div class="course_extern_content"> 
+      <iframe class="course_iframe" width="450" height="180" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+
+<p>La expresión anterior nos da el número de pinos adyacentes a los lados del cuadrado de manzanos, pero faltan aquellos que se encuentran en las esquinas.</p>
+<p class="instrucciones"> Escribe la expresión que incluya dichos pinos.</p>
+<div class="course_extern_content"> 
+      <iframe class="course_iframe" width="450" height="180" frameborder="0" src="escenas/escena2.html"> </iframe>
+    </div>
+<p>La fórmula anterior nos permite generar cualquier elemento del patrón cuadrado de manzanos, y satisface a cualquiera de las figuras que Jorge le envió a Rubén en su correo electrónico. Pero, ¿recuerdas que Rubén tiene terrenos rectangulares? </p>
+
+<h2>Adaptación del patrón para un rectángulo</h2>
+
+<p>Para generalizar la solución del problema utilizaremos el número de columnas y de filas existentes en el cuadrado de manzanos.
+Asignémosle las letras \(n\) y \(m\) al número de columnas y filas de manzanos, respectivamente.</p>
+<div class="course_extern_content"> 
+        <img src="imgs/cuadroTerreno.png"></img>
+      </div>
+
+<p class="instrucciones">¿Cómo traduces lo anterior al lenguaje algebraico? Es decir, ¿cuántos pinos hay en los lados del rectángulo \(n \times m\)?</p>
+<div class="course_extern_content"> 
+      <iframe class="course_iframe" width="480" height="200" frameborder="0" src="escenas/escena3.html"> </iframe>
+    </div>
+<p>Muy bien, en cada una de las figuras del patrón tenemos \(2n\) pinos correspondientes a la parte superior e inferior de la figura, más \(2m\) pinos  correspondientes a los lados derecho e izquierdo de la misma.</p>
+
+<p>No hay que olvidar las esquinas, que como ya vimos son una constante en todas las figuras. Por lo que nuestra fórmula estará compuesta por:</p>
+
+<p class="importante">
+<strong>2 veces el número de columnas, más 2 veces el número de filas más cuatro (uno por cada esquina)
+o lo que es igual:</strong><br><br>
+<strong>\(2n+2m+4\)</strong>
+ 
+<br><br>
+En el caso particular de una configuración cuadrada, \(n\) es igual a \(m\), por lo que la formula sería:<br><br>
+<strong>\(2n+2n+4\)</strong><br><br>
+que como puedes comprobar es equivalente  a: <br><br>
+<strong>\(4n+4\)</strong>
+
+</p>
+
+<p class="instrucciones">Utiliza el siguiente recurso para probar la fórmula con diferentes configuraciones de filas y columnas. </p>
+<div class="course_extern_content"> 
+      <iframe class="course_iframe" width="700" height="550" frameborder="0" src="escenas/escena4.html"> </iframe>
+    </div>
+
+<p>Como has podido observar, la resolución de este tipo de problemas es muy sencilla.
+  Basta con echar a andar tu capacidad de reconocimiento de regularidades y poderlas expresar algebraicamente; después sólo haces algunas operaciones y ¡listo!
+  En la siguiente sección veremos la aplicación de este tema en algunos otros ámbitos de nuestra vida. </p>
+
+    
+    <!--- Párrafo --->
+
+  
+	
+  <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  </div>
+  
+
+</article>
+
+</body>
+
+</html>
+

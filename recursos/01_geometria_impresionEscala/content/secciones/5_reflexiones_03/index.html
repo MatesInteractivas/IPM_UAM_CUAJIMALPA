@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Reflexiones y aplicaciones</h1>
+
+    <h2 >Curiosidades y aplicaciones de la proporción áurea</h2>
+
+    <p>
+    En la solución al problema anterior, leíste que la proporción áurea o dorada equivale al valor \(1.618033989\) y se denota por la letra griega \(phi\) mayúscula: \(\Phi\). 
+    </p>
+
+    <p>
+    Algunas curiosidades de la proporción áurea, que tal vez ya hayas notado, y que eventualmente podrías investigar por tu cuenta, son:
+	<ul >
+		<li>La proporción buscada la podrías haber encontrado directamente al computar \(\frac{1+\sqrt{5}}{2}\).</li>
+		<li>El valor de \(b\) que originalmente encontraste corresponde también a \(\frac{1}{\Phi}\). Esto es, \(\frac{1}{\Phi}=0.618033989\). A este número se le denota con la letra griega <em>phi</em> minúscula: \(\phi\).</li>
+		<li>\(\Phi-1=\phi\). Observa que la cadena decimal es la misma para ambos números.</li>
+	</ul>
+    </p>
+
+    <p>
+    Es pertinente notar que \(\Phi\) y \(\phi\), al igual que \(\sqrt{2}\) en el ejemplo de las hojas DIN, es un número irracional. Es decir, la cadena decimal se prolonga infinitamente y sin repetir un patrón. Así pues, cuando se representa con notación decimal, el número está truncado hasta un cierto número de decimales, y no representa la proporción áurea de forma exacta. Esto es, es solo una aproximación.
+    </p>
+
+    <p>
+    La proporción áurea ha sido motivo de admiración desde la época de los griegos. Se han determinado múltiples aplicaciones de dicha proporción, principalmente en la naturaleza. A continuación enumeramos algunas:
+	<ul >
+		<li>La disposición de semillas en, por ejemplo, las plantas como los girasoles, se puede reproducir moviendo el radio a una determinada semilla un ángulo de \(\Phi\) radianes y a una distancia poco mayor que la original. Esto asegura una distribución de semillas en donde no quedan muy separadas o muy juntas independientemente de que se observen porciones cerca o lejos del centro del girasol.</li>
+		<br>
+		<!-- ejemplo para incluir una imagen -->
+		<div class="course_extern_content"> 
+		  <img src="imgs/proporcionAurea.jpg"></img>
+		</div>
+		<br>
+		<li>Varios objetos geométricos consideradas "estéticos" conllevan proporciones cercanas a \(\Phi\) o \(\phi\). Como ejemplo, de todos los rectángulos, supuestamente la mayoría de las personas consideran más bellos a aquellos que tienen dicho número como proporción entre sus lados. No obstante, esto es una cuestión subjetiva y no debe tomarse como un hecho.</li>
+		<br>
+		<li>Figuras tales como el pentagrama y algunos árboles de Cayley involucran de forma exacta la proporción áurea.</li>
+		<br>
+		<li>La estabilidad de las órbitas en mecánica celeste se encuentran relacionadas con la proporción áurea.</li>
+	</ul>
+    </p>
+
+    <p>
+    Adicionalmente, en la esfera del arte, algunos autores han preferido el uso de valores cercanos a la proporción áurea como guía en sus obras, argumentando que las obras resultantes serían más estéticas (cuestión de apreciación). Entre ellos se pueden mencionar a Piero della Francesca, Leonardo da Vinci y Le Corbusier, entre muchos otros. La proporción áurea aparece también en la música, la arquitectura y la pintura.
+    </p>
+
+    <p class="importante">
+    Para concluir, observa que tanto para el caso del problema original de los papeles DIN, como para el caso de la proporción áurea, pudiste obtener una ecuación algebraica a partir de la cual se puede determinar el número en cuestión.
+    Es importante notar que el correcto planteamiento de la ecuación permite encontrar una forma de expresar el número en cuestión.
+    Nuevamente se pone de manifiesto el poder del buen uso del álgebra.
+    </p>
+    
+	
+  <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+
+
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  
+  </div>
+  
+  
+  
+</article>
+
+
+</body>
+
+</html>

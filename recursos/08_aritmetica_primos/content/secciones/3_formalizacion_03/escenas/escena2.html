@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>TITULO</title>
+
+	   <style type="text/css" media="screen">
+	/*pulsador*/
+	#E1.escala { }
+	#E1.escala > canvas {
+	  display: none;
+	}
+    
+	#E1\.escala .up {
+	  background: #f6f8e0 url("images/zoomIn.png") no-repeat center !important;
+	  background-size: cover !important;
+	}
+	#E1\.escala > .up:hover {
+	  background-color: #e8ebd0 !important;
+	}
+	#E1\.escala > .up:active {
+	  box-shadow: 1px 1px 5px #e8ebd0;
+	  background-color: #eeeeee !important;
+	}
+    
+	#E1\.escala .down {
+	  background: #e8ebd0 url("images/zoomOut.png") no-repeat center !important;
+	  background-size: cover !important;
+	}
+	#E1\.escala .down:hover {
+	  background-color: #e8ebd0 !important;
+	}
+	#E1\.escala .down:active {
+	  box-shadow: 1px 1px 5px #e8ebd0;
+	  background-color: #eeeeee !important;
+	}
+      </style>	
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body style="margin:0px;padding:0px;overflow:hidden;">
+
+<p align="center">
+<ajs name="Descartes" width=760 height=480 code="Descartes">
+   <param name="tamaño" value="760x480">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.3.12, 2014-07-09">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E1' O.x='-270' O.y='120' imagen='images/fondo.jpg' despl_imagen='expand.' fondo='grisClaro' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='n' tipo='numérico' región='interior' espacio='E1' nombre='S' expresión='(20,20,180,60)' valor='360' incr='1' min='1' max='10000' decimales='0' fijo='no' visible='sí'">
+   <param name="C_02" value="id='p' tipo='numérico' región='interior' espacio='E1' nombre='B' expresión='(240,20,180,60)' valor='30' incr='.1' min='.1' max='n-.1' decimales='1' fijo='sí' visible='sí'">
+   <param name="C_03" value="id='E1.escala' tipo='numérico' región='interior' espacio='E1' nombre='E1.escala' expresión='(E1._w-40,E1._h-70,30,60)' valor='15' incr='1' min='1' max='100' decimales='0' fijo='no' visible='no'">
+   <param name="A_01" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez'">
+   <param name="A_02" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='q=ent(n/p);e=n-(p*q);h=p-e'">
+   <param name="G_01" value="espacio='E1' tipo='polígono' expresión='(0,0)(p,0)(p,n/p)(0,n/p)(0,0)' relleno='5336b399' info='rect'">
+   <param name="G_02" value="espacio='E1' tipo='texto' expresión='[20,430]' texto='P = [2*p+2*(n/p)] unidades lineales' fuente='SansSerif,BOLD,24' decimales='4' fijo='no'">
+   <param name="G_03" value="espacio='E1' tipo='texto' expresión='[460,35]' texto='H = [(n/p)]' fuente='SansSerif,BOLD,24' decimales='4' fijo='no'">
+   <param name="G_04" value="espacio='E1' tipo='segmento' expresión='(p,n/p)(0,n/p)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs36\b B\f2\fs30\b0}' fuente='SansSerif,BOLD,18' fijo='sí' tamaño='0' info='B'">
+   <param name="G_05" value="espacio='E1' tipo='segmento' expresión='(p,0)(p,n/p)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs36\b H\f2\fs30\b0}' fuente='SansSerif,BOLD,18' fijo='sí' tamaño='0' info='H'">
+   <param name="Animación" value="pausa='100' controles='no' auto='no' inicio='t=0' hacer='t=t+1;temp=((t=1)&(paso=0))?calcseg():0;temp=((t>14)&(t<16))?calrect():0;temp=((t>15)&(t<41))?trasp():0;temp=((t>40)&(t<61))?rotar():0;temp=((t>70)&(t<91))?traslada():0;temp=((t>80)&(t<101))?trasp2():0;temp=((t>99)&(t<111))?frazon():0;temp=(t=100)?recalc():0' mientras='t<110'">
+</ajs></p>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>TITULO</title>
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body style="margin:0px;padding:0px;overflow:hidden;">
+
+<p align="center">
+<ajs name="Descartes" width=760 height=450 code="Descartes">
+   <param name="tamaño" value="760x450">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=",">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.340, 2015-05-21">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E1' imagen='images/fondo.jpg' despl_imagen='arr-izq' fondo='blanco' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='E2' y='255' alto='190' dibujar-si='correTiempo' despl_imagen='arr-izq' fondo='fff0f8fa' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_03" value="tipo='R2' id='Retro' x='180' y='105' ancho='400' alto='180' dibujar-si='retro' despl_imagen='arr-izq' fondo='effffb' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='opc1' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(botX[0],E2._h-35)(51,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='15' imagen='images/btnOpcion.png' acción='calcular' parámetro='selecciono=1\ncorrecto=1' dibujar-si='!retro'">
+   <param name="C_02" value="id='opc2' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(botX[1],E2._h-35)(51,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='15' imagen='images/btnOpcion.png' acción='calcular' parámetro='selecciono=1\ncorrecto=0' dibujar-si='!retro' pos_mensajes='centro'">
+   <param name="C_03" value="id='opc3' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(botX[2],E2._h-35)(51,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='15' imagen='images/btnOpcion.png' acción='calcular' parámetro='selecciono=1\ncorrecto=0' dibujar-si='!retro' pos_mensajes='centro'">
+   <param name="C_04" value="id='animar' tipo='numérico' interfaz='botón' región='exterior' espacio='E1' nombre='animar' fijo='sí' visible='sí' acción='animar' pos_mensajes='centro'">
+   <param name="C_05" value="id='clockX' tipo='numérico' región='exterior' espacio='E1' nombre='clockX' valor='644' incr='1' fijo='sí' visible='sí' parámetro.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="C_06" value="id='clockY' tipo='numérico' región='exterior' espacio='E1' nombre='clockY' valor='133' incr='1' fijo='sí' visible='sí' pos_mensajes='centro'">
+   <param name="C_07" value="id='DEBUG' tipo='numérico' región='exterior' espacio='E1' nombre='DEBUG' incr='1' min='0' max='1' fijo='sí' visible='sí' pos_mensajes='centro'">
+   <param name="C_08" value="id='reiniciar' tipo='numérico' interfaz='botón' región='interior' espacio='Retro' nombre='Reiniciar' expresión='((Retro._w-90)/2,Retro._h-40)(90,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' negrita='sí' fuente puntos='15' imagen='images/btn90x30.png' acción='inicio'">
+   <param name="C_09" value="id='iniciar' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Iniciar' expresión='((E1._w-90)/2,E1._h-35)(120,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' negrita='sí' fuente puntos='18' imagen='images/btn120x30.png' acción='calcular' parámetro='correTiempo=1' dibujar-si='!correTiempo'">
+   <param name="A_01" value="id='botX' vector='sí' evaluar='una-sola-vez'">
+   <param name="A_02" value="id='miAleatorio()' algoritmo='sí' algoritmo='sí' hacer='aleatorio.minRango=0;aleatorio.maxRango=3;aleatorio.creaAleatorios();botX[aleatorio.resultadoVec[0]]=164;botX[aleatorio.resultadoVec[1]]=344;botX[aleatorio.resultadoVec[2]]=524;'">
+   <param name="A_03" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' inicio='modSegundero=0;s2=0;esc=0.4' hacer='agotoTiempo=0;correTiempo=0;animar=0;selecciono=0;correcto=0;tSeg=22;s2=tSeg/60;posX=50;posY=E2._h/2-10;N=ent(rnd*17)+3;miAleatorio();'">
+   <param name="A_04" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='s2=tSeg/60;esc=-0.034210526*N+1.034210526;retro=((tSeg==33)||selecciono)?1:retro;agotoTiempo=(tSeg==33)?1:agotoTiempo;;;'">
+   <param name="G_01" value="espacio='Retro' tipo='polígono' color='0a7b70' coord_abs='sí' expresión='(0,0)(Retro._w-2,0)(Retro._w-2,Retro._h-2)(0,Retro._h-2)(0,0)' ancho='2'">
+   <param name="G_02" value="espacio='E2' tipo='macro' dibujar-si='DEBUG' expresión='macros/randoms.txt' nombre='aleatorio'">
+   <param name="G_03" value="espacio='E1' tipo='imagen' coord_abs='sí' expresión='(clockX-3,clockY-8,1,1)' archivo='images/cronometro.png'">
+   <param name="G_04" value="espacio='E1' tipo='texto' dibujar-si='DEBUG' expresión='[20,20]' texto='[tSeg] [s2] [N]' fijo='sí'">
+   <param name="G_05" value="espacio='E1' tipo='flecha' color='ee0022' coord_abs='sí' expresión='(clockX,clockY)(clockX+(50*sen(2*pi*s2)),clockY+(50*cos(2*pi*s2)))' fijo='sí' ancho='2' ancho='2' punta='4'">
+   <param name="G_06" value="espacio='E1' tipo='punto' color='ee0022' coord_abs='sí' expresión='(clockX,clockY)' fijo='sí' tamaño='4'">
+   <param name="G_07" value="espacio='E2' tipo='imagen' coord_abs='sí' expresión='(posX,posY)(esc,esc)' archivo='images/cerillo0.png'">
+   <param name="G_08" value="espacio='E2' tipo='imagen' coord_abs='sí' expresión='(posX+(36*esc)+(56*esc)+(s*esc*80),posY)(esc,esc)' familia='s' s.intervalo='[0,N-1]' s.pasos='N-1' archivo='images/cerillo.png'">
+   <param name="G_09" value="espacio='E2' tipo='imagen' coord_abs='sí' expresión='(posX+(36*esc)+(56*esc)+((N-1)*esc*80)+(88*esc),posY)(esc,esc)' archivo='images/cerillo2.png'">
+   <param name="G_10" value="espacio='E2' tipo='texto' dibujar-si='!retro' expresión='[botX[0]+52,E2._h-32]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs38{\*\mjaformula{\expr (4*N)+10\decimals 0\fixed1}}\f2\fs30}' fuente='SansSerif,PLAIN,19' fijo='sí'">
+   <param name="G_11" value="espacio='E2' tipo='texto' dibujar-si='!retro' expresión='[botX[1]+52,E2._h-32]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs38{\*\mjaformula{\expr (4*N)+6\decimals 0\fixed1}}\f2\fs30}' fuente='SansSerif,PLAIN,19' fijo='sí'">
+   <param name="G_12" value="espacio='E2' tipo='texto' dibujar-si='!retro' expresión='[botX[2]+52,E2._h-32]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs38{\*\mjaformula{\expr ((4*N)+8)*0.9\decimals 0\fixed1}}\f2\fs30}' fuente='SansSerif,PLAIN,19' fijo='sí'">
+   <param name="G_13" value="espacio='E2' tipo='imagen' dibujar-si='!retro' coord_abs='sí' expresión='(botX[0]+51,E2._h-35)' archivo='images/opcion.png'">
+   <param name="G_14" value="espacio='E2' tipo='imagen' dibujar-si='!retro' coord_abs='sí' expresión='(botX[1]+51,E2._h-35)' archivo='images/opcion.png'">
+   <param name="G_15" value="espacio='E2' tipo='imagen' dibujar-si='!retro' coord_abs='sí' expresión='(botX[2]+51,E2._h-35)' archivo='images/opcion.png'">
+   <param name="G_16" value="espacio='Retro' tipo='texto' dibujar-si='agotoTiempo' expresión='[20,0]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Courier New;\f2\fcharset0 Arial;\f3\fcharset0 Arial;}\f1\fs30\par \f2\fs38          \fs40      Se te agot\u243  el tiempo.\par \par      Int\u233 ntalo de nuevo con otra figura. \f1\fs30}' fijo='sí'">
+   <param name="G_17" value="espacio='E1' tipo='texto' expresión='[30,25]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs52\u191 Cu\u225 ntos cerrillos tiene la figura{\*\mjaformula{\expr N\decimals 0\fixed1}}?\par                    (  n = {\*\mjaformula{\expr N\decimals 0\fixed1}})\f2\fs30}' fuente='SansSerif,PLAIN,26' fijo='sí'">
+   <param name="G_18" value="espacio='Retro' tipo='texto' dibujar-si='selecciono&&correcto' expresión='[20,0]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Courier New;\f2\fcharset0 Arial;\f3\fcharset0 Arial;\f4\fcharset0 Times New Roman;}\f1\fs30\par \f2\fs38          \fs40             \u161 Muy Bien!\par \par        La figura \f4\fs44\i{\*\mjaformula{\expr N\decimals 0\fixed1}}\f3\fs40\i0  tiene \f4\fs44\i{\*\mjaformula{\expr (4*N)+10\decimals 0\fixed1}}\f3\fs40\i0  cerillos. \f1\fs30}' fijo='sí'">
+   <param name="G_19" value="espacio='Retro' tipo='texto' dibujar-si='selecciono&&!correcto' expresión='[20,0]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Courier New;\f2\fcharset0 Arial;\f3\fcharset0 Arial;}\f1\fs30\par \f2\fs38          \fs40           Eso es incorrecto.\par \par  Trata de predecir el n\u250 mero de cerillos\par                     en otra figura\f1\fs30 .}' fijo='sí'">
+   <param name="Animación" value="pausa='1000' controles='no' auto='sí' inicio='tSeg=22' hacer='tSeg=((correTiempo==1)&&!selecciono)?tSeg+1:tSeg' mientras='tSeg<33'">
+</ajs></p>
+
+<script id="macros/randoms.txt" type="descartes/macro">
+tipo_de_macro=R2
+Idioma=español
+id='minRango' expresión='0' evaluar='una-sola-vez' constante='si'
+id='maxRango' expresión='10' evaluar='una-sola-vez' constante='si'
+id='n_numeros' expresión='ent(maxRango-minRango)'
+id='VecAux1' tamaño='n_numeros+100' evaluar='una-sola-vez' expresión='VecAux1[0]=0;VecAux1[1]=0;VecAux1[2]=0' vector='si'
+id='resultadoVec' tamaño='n_numeros+100' evaluar='una-sola-vez' vector='si'
+id='initVecAux1()' inicio='_indexT=0;_ancla=minRango;' hacer='VecAux1[_indexT]=_ancla;_indexT=_indexT+1;_ancla=_ancla+1;' mientras='_indexT<n_numeros' algoritmo='si'
+id='reacomodaVector(_posBorrar)' inicio='_indexAcomoda=_posBorrar;' hacer='VecAux1[_indexAcomoda]=VecAux1[_indexAcomoda+1];_indexAcomoda=_indexAcomoda+1' mientras='_indexAcomoda<(n_numeros-1)' algoritmo='si'
+id='creaAleatorios()' inicio='initVecAux1();_indexCrearAl=0;' hacer='_cuantosQuedan=(n_numeros-_indexCrearAl);_indexAleatorio=ent(rnd*_cuantosQuedan);;resultadoVec[_indexCrearAl]=VecAux1[_indexAleatorio];;reacomodaVector(_indexAleatorio);_indexCrearAl=_indexCrearAl+1' mientras='_indexCrearAl<n_numeros' algoritmo='si'
+tipo='texto' color='azul' expresión='[20,20*s]' familia='s' s.intervalo='[0,n_numeros-1]' s.pasos='n_numeros-1' texto='resultadoVec([s])=[resultadoVec[s]]' fijo='no' 
+tipo='texto' color='azul' expresión='[220,20*s]' familia='s' s.intervalo='[0,n_numeros-1]' s.pasos='n_numeros-1' texto='VecAux1([s])=[VecAux1[s]]' fijo='no' 
+</script>
+
+</body>
+</html>

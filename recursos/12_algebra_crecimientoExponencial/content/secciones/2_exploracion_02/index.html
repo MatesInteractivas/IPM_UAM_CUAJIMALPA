@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+  <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+
+</head>
+
+<body onLoad="initialize();">
+  
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    </p><!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Exploración inicial de los problemas</h1>
+    
+    <!--- Subtítulo (no necesario en introducción) --->
+    <h2>Distintos plazos</h2>
+
+    <p>
+      Ahora veremos el <strong>problema 3</strong>. Este problema surge porque tenemos dos opciones de
+      inversión que generan rendimientos sobre el capital invertido:
+      <ul>
+	<li>La primera da el \(2\%\) mensual.</li>
+	<li>La segunda da el \(25\%\) anual.</li>
+      </ul>
+    </p>
+    
+    <p>
+      Para estas inversiones con distintos plazos, ¿cómo saber cuál es mejor?
+    </p>
+
+    <p>
+      Lo primero que viene a nuestra mente es sumar los porcentajes de
+      rendimiento mensual hasta completar el año. Esto es, si en cada
+      mes obtenemos \(2\%\) del capital, entonces habremos de obtener:
+      \[\mathop{\underbrace{2+2+\dots+2}}_{\hbox{12 sumandos}}=2\times12=24\]
+    </p>
+    
+    <p class='importante' style='margin-left:15%;margin-right:15%;'>
+      De acuerdo con este cálculo, tendríamos 24 por
+      ciento en el año completo, lo que indicaría que la segunda opción es mejor.
+    </p>
+
+    <p>
+      ¿Esta 'regla de multiplicar' será válida?
+    </p>
+
+    <!--- Instrucciones --->
+    <div class="instrucciones">
+    En el siguiente espacio podrás ajustar la cantidad inicial a
+    invertir \(C\), expresada en miles de pesos, y sus
+    correspondientes tasas de interés mensual \(M\) y anual \(A\),
+    ambas representadas como porcentajes. Así, podrás verificar si la
+    'regla de multiplicar' es válida.  El punto rojo puede desplazarse
+    por el eje \(y\) para ajustar manualmente el valor de
+    \(C\).<br><br>  En la cuadrícula la gráfica correspondiente al
+    interés compuesto mensual está en verde, mientras que la anual
+    está en azul.  Las unidades del eje \(x\) son meses y las del eje
+    \(y\) son millones de pesos.<br><br>Puedes modificar la escala con
+    las lupas de la esquina inferior derecha. Si reduces la escala
+    podrás obtener resultados para tiempos más largos. El botón
+    poligonal lo usarás al responder las preguntas más abajo.
+    </div>
+
+    <!-- ejemplo para incluir un documento externo en un iframe, aqui van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="480" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+
+    <div class="problema">
+      <strong>Preguntas</strong>
+      <ol>
+      <li>
+	¿Es válida nuestra 'regla de multiplicar' en
+      general?
+      </li>
+      <br>
+      <li>
+      ¿En qué caso sí es válida?
+      </li>
+      <br>
+      <li>
+      ¿Por qué crees que pasa lo anterior?
+      </li>
+      <br>
+      <li>
+	¿Cómo crees que
+      hicimos para que las curvas sean suaves y no sean poligonales?
+      <br><br>
+      <em>(Fíjate que tanto el capital con rendimientos mensuales como
+      el de rendimientos anuales van creciendo conforme avanza el
+      tiempo dibujando una curva. Es posible apreciar, por ejemplo,
+      que en el segundo caso no hemos simplemente unido con un
+      segmento de recta los valores del inicio y del fin de cada
+      periodo anual. Reduce la escala para que abarques unos 100
+      meses, aumenta al máximo la C y oprime el botón poligonal para
+      visualizar mejor este fenómeno. Al oprimirlo de nuevo los
+      segmentos desaparecen.)
+      </em>
+      </ol>
+    </div>
+
+    <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+    
+    
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onClick="showCredits()">Condiciones de uso</a>
+    </div>  
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+    
+
+  </div>
+  
+</article>
+
+
+
+
+</body>
+
+</html>

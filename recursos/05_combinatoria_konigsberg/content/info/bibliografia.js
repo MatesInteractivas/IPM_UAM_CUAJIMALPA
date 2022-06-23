@@ -1,0 +1,8 @@
+var BIBLIO = [
+    "JK Paper Ltd. (2011). <em>Calculadora de distancia entre ciudades</em>. Recuperado de <a href='http://www.distanciasentreciudades.com/' target='_blank'>http://www.distanciasentreciudades.com/</a>",
+    "NRICH enriching mathematics (2015). <em>Welcome to the home of rich mathematics!</em> Recuperado de <a href='http://nrich.maths.org/frontpage/' target='_blank'>http://nrich.maths.org/frontpage/</a>",
+    "Travel by Mexico (2012). <em>Las 10 rutas turísticas de México</em>. Recuperado de <a href='http://www.travelbymexico.com/blog/5998-las-diez-rutas-turisticas-de-mexico/' target='_blank'>http://www.travelbymexico.com/blog/5998-las-diez-rutas-turisticas-de-mexico/</a>",
+    "WolframMathWorld (2015). <em>Königsberg Bridge Problem</em>. Recuperado de <a href='http://mathworld.wolfram.com/KoenigsbergBridgeProblem.html' target='_blank'>http://mathworld.wolfram.com/KoenigsbergBridgeProblem.html</a>",
+    "Mapa de Königsberg por Merian-Erben (1652). Recuperado de <a href='http://www.preussen-chronik.de/_/bild_jsp/key=bild_kathe2.html' target='_blank'>http://www.preussen-chronik.de/_/bild_jsp/key=bild_kathe2.html</a>. Obra cedida al dominio público vía <a href='https://commons.wikimedia.org/wiki/File:Image-Koenigsberg,_Map_by_Merian-Erben_1652.jpg#/media/File:Image-Koenigsberg,_Map_by_Merian-Erben_1652.jpg' target='_blank'>Wikimedia Commons</a>.",
+    "Mapa del Oriente Maya. Recuperado de <a href='http://www.valladolid.com.mx/img/orientemaya/mapaoriente.png' target='_blank'>http://www.valladolid.com.mx/img/orientemaya/mapaoriente.png</a>"
+]

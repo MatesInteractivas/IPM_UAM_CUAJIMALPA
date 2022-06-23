@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+  <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+
+</head>
+
+<body onload="initialize();">
+  
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    </p><!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Planteamiento del problema: Optimización de redes</h1>
+    
+    <!--- Subtítulo (no necesario en introducción) --->
+    <h2>Segunda parte</h2>
+    
+    
+    <!--- Párrafo --->
+    <p>
+      La red de telecomunicaciones por fibra óptica que instalaremos
+      puede llegar a fallar si se corta un enlace. Como los ocho
+      inmuebles que conectaremos son todos edificios altos, este
+      problema lo resolveremos instalando una red de respaldo de
+      enlaces mediante antenas de radio. Los enlaces de la red de
+      respaldo son bastante menos costosos pero la habremos también de
+      optimizar en la medida de lo posible.
+    </p>
+
+    <p>
+      El cuadro de costos (en miles de pesos) de la red de respaldo para
+      los mismos ocho inmuebles es el siguiente.
+    </p>
+    
+    <table  class="tablaImportante columna1">
+    <thead>
+    <tr>
+      <th>&nbsp;</th>
+      <th>B</th>
+      <th>C</th>
+      <th>D</th>
+      <th>E</th>
+      <th>F</th>
+      <th>G</th>
+      <th>H</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>A</td><td>10</td><td>20</td><td>10</td><td>10</td><td>10</td><td>30</td><td>10</td>
+    </tr>
+    <tr>
+      <td>B</td><td>&nbsp;</td><td>10</td><td>10</td><td>20</td><td>10</td><td>20</td><td>10</td>
+    </tr>
+    <tr>
+      <td>C</td><td>&nbsp;</td><td>&nbsp;</td><td>10</td><td>10</td><td>10</td><td>30</td><td>10</td>
+    </tr>
+    <tr>
+      <td>D</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>10</td><td>10</td><td>20</td><td>10</td>
+    </tr>
+    <tr>
+      <td>E</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>10</td><td>10</td><td>20</td>
+    </tr>
+    <tr>
+      <td>F</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>10</td><td>30</td>
+    </tr>
+    <tr>
+      <td>G</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>10</td>
+    </tr>
+    </tbody>
+    </table>
+
+    <p>
+      Como podemos apreciar en el cuadro, muchos costos son
+      iguales. Lo anterior se debe a que estamos usando solo tres
+      diferentes tipos de antenas parabólicas de diferentes precios.
+    </p>
+
+    <!--- Instrucciones --->
+    <div class="instrucciones">
+    <span>Con el objeto de que conozcas otra forma de presentar la
+    información que sirve para modelar el problema, a continuación
+    podrás trabajar con un cuadro de ejemplo de costos de 6 enlaces y
+    su representación en una gráfica. La idea es que detectes y
+    corrijas los errores en el cuadro para que la información coincida
+    con la representación gráfica. Para esto puedes usar los
+    pulsadores y ajustar los costos del cuadro. Los puntos de la
+    gráfica los puedes mover libremente para ver mejor los
+    costos.</span>
+    </div>
+
+    <!-- ejemplo para incluir un documento externo en un iframe, aqui van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="480" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+
+    
+    <p class='problema'>
+      <strong>Problema</strong>
+      <br><br> Resumiendo, el problema que abordaremos en esta unidad
+        consiste en encontrar la lista de enlaces entre puntos de
+        tal forma que la suma de los costos correspondientes sea la
+        menor posible, pero que haya siempre una ruta que permita
+        comunicar dos puntos cualesquiera.
+        <br>
+    </p>
+
+    <p class="importante">
+      ¿Tendría sentido este problema si pensamos en ciudades, en lugar
+      de inmuebles, y carreteras, en lugar de enlaces? ¿Cambiaría en
+      algo el problema o el formato del cuadro de costos?
+    </p>
+    
+
+
+
+    <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+    
+    
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+    
+
+  </div>
+  
+</article>
+
+
+
+
+</body>
+
+</html>

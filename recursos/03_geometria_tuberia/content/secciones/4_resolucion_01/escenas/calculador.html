@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>TITULO</title>
+
+	<link rel="stylesheet" href="../../../css/descartes.css" />
+	<script type='text/javascript' src='http://arquimedes.matem.unam.mx/Descartes5/lib/descartes-min.js'></script>
+</head>
+<body style="margin:0px;padding:0px;overflow:hidden;">
+
+<span id='calculator-descartes'>
+<ajs name="Descartes" width=570 height=120 code="Descartes">
+   <param name="tamaño" value="570x120">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.340, 2015-05-21">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' escala='1' O.x='-50%' O.y='-50%' imagen='images/fondo.jpg' despl_imagen='arr-izq' fondo='f3f0ec' red='no' red10='no' ejes='no' texto='405860'">
+   <param name="C_01" value="id='menuOper' tipo='numérico' interfaz='menú' región='interior' espacio='E1' expresión='(menuOper.x,menuOper.y,menuOper.w,menuOper.h)' decimales='0' fijo='sí' visible='no' opciones='sen,cos,arcoseno,arcocoseno' acción='calcular' parámetro='calcLimites()'">
+   <param name="C_02" value="id='campo' tipo='numérico' interfaz='campo de texto' región='interior' espacio='E1' expresión='(campo.x,campo.y,campo.w,campo.h)' valor='pi/2' fijo='sí' visible='sí'">
+   <param name="C_03" value="id='btnCalc' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Calcular' expresión='(btnCalc.x,btnCalc.y,btnCalc.w,btnCalc.h)' fijo='sí' visible='sí' color='blanco' color-int='gris' fuente puntos='18' imagen='vacio.gif'">
+   <param name="C_04" value="id='n4' tipo='numérico' región='exterior' espacio='E1' nombre='n4' valor='-140' incr='2' fijo='sí' visible='sí'">
+   <param name="A_01" value="id='calcLimites()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='min=0;max=0'">
+   <param name="A_02" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='menuOper.x=20;menuOper.y=20;menuOper.w=140;menuOper.h=40;;campo.x=menuOper.x+menuOper.w;campo.y=menuOper.y;campo.w=150;campo.h=menuOper.h;;btnCalc.x=campo.x+campo.w;btnCalc.y=campo.y;btnCalc.w=100;btnCalc.h=40;;result.txt1.x=btnCalc.x+btnCalc.w+10;result.txt1.y=btnCalc.y+5;;result.txt2.x=result.txt1.x-172+n4;result.txt2.y=btnCalc.y+btnCalc.h+20'">
+   <param name="A_03" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='resultado=sen(campo);resultado=(menuOper==1)?cos(campo):resultado;resultado=(menuOper==2)?asen(campo):resultado;resultado=(menuOper==3)?acos(campo):resultado;;operTxt=&squot;sen&squot;;operTxt=(menuOper==1)?&squot;cos&squot; :operTxt;operTxt=(menuOper==2)?&squot;asen&squot;:operTxt;operTxt=(menuOper==3)?&squot;acos&squot;:operTxt;;_tmpN=&squot;&squot;+resultado;_tmpO1=_tmpN==&squot;NaN&squot;;_tmpO2=_tmpN==NaN;;_tmpO=_tmpO1|_tmpO2;resultadoTxT=(_tmpO)?&squot;No definido&squot;:resultado;resultado=(_tmpO)?&squot;?&squot;:resultado;;;;_Print_(&squot;(_tmpN<>NaN)->&squot;+_tmpO1+&squot;,&squot;+_tmpO2);result.txt2.x=result.txt1.x-172+n4'">
+   <param name="G_01" value="espacio='E1' tipo='texto' dibujar-si='0' expresión='[20,20]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Courier New;}{\colortbl\red35\green35\blue35;\red64\green64\blue64;\red34\green162\blue141;\red112\green63\blue24;\red228\green113\blue0;\red236\green112\blue24;\red32\green48\blue58;}\cf0\f1\fs34\u201 sta es una escena Descartes. Se recomiendan los siguientes lineamientos:\par \par \b Ancho m\u225 ximo\b0  de la escena: 760px\par \b Alto m\u225 ximo\b0  (recomendado, no obligatorio): 480px\par \par \b Texto de p\u225 rrafo\b0 : 17px, \cf1 color grisObscuro\cf0\par \par \b Bot\u243 n\b0 : 30px de alto, texto blanco de 16 puntos\par \par \b Men\u250 \b0 : 34px de alto \par \par \b Pulsador\b0 : alto recomendado 50px \par \par \b Campo de texto\b0 : 34px de alto\par \par Por lo general, los colores que se recomienda usar en las escenas para resaltar cosas son:\par * \cf2\b color 22a28d \b0\cf3\par * \b\cf4 color e47100\cf5\b0  (color de men\u250  de navegaci\u243 n)\cf3\par \par \cf1 El fondo de estas escenas es images/fondo.jpg\cf3\par \cf6\f3\fs30\par }' fuente='SansSerif,PLAIN,17' fijo='sí' info='Párrafo'">
+   <param name="G_02" value="espacio='E1' tipo='texto' expresión='[result.txt1.x,result.txt1.y]' texto='= [resultado]' fuente='SansSerif,PLAIN,30' decimales='3' fijo='no' color_borde_texto='blanco'">
+   <param name="G_03" value="espacio='E1' tipo='texto' expresión='[result.txt2.x,result.txt2.y]' texto='[operTxt]([campo]) = [resultadoTxT]' fuente='SansSerif,PLAIN,30' decimales='3' fijo='sí' color_borde_texto='blanco'">
+   <param name="G_04" value="espacio='E1' tipo='imagen' fondo='sí' coord_abs='sí' expresión='(-2,-2)' archivo='images/fondo.jpg'">
+</ajs></span>
+
+</body>
+</html>

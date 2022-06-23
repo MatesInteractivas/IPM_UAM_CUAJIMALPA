@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>TITULO</title>
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body style="margin:0px;padding:0px;overflow:hidden;">
+
+<p align="center">
+<ajs name="Descartes" width=740 height=460 code="Descartes">
+   <param name="tamaño" value="740x460">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=",">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.4, 2016-05-18">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E2' fijo='sí' imagen='images/fondo.jpg' despl_imagen='arr-izq' fondo='f5f7df' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='dasX' tipo='numérico' región='exterior' espacio='E2' nombre='dasX' incr='1' decimales='0' fijo='sí' visible='sí' dibujar-si='0'">
+   <param name="C_02" value="id='dasY' tipo='numérico' región='exterior' espacio='E2' nombre='dasY' incr='1' decimales='0' fijo='sí' visible='sí' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_03" value="id='n1' tipo='numérico' región='interior' espacio='E2' nombre='_nada_' expresión='(n1.x,n1.y,n1.w,n1.h)' valor='6' incr='1' min='6' max='9' decimales='0' fijo='sí' visible='sí' acción='calcular' parámetro='Inicio()'">
+   <param name="C_04" value="id='n2' tipo='numérico' región='interior' espacio='E2' nombre='_nada_' expresión='(n2.x,n2.y,n2.w,n2.h)' valor='8' incr='1' min='6' max='9' decimales='0' fijo='sí' visible='sí' acción='calcular' parámetro='Inicio()\nn2a=n2\naux=(n2a!=n1)?doPlay(0):&squot;&squot;\naux=(n2a!=n1)?Inicio():&squot;&squot;'">
+   <param name="C_05" value="id='anim' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='[(animando)?&squot;Detener&squot;:&squot;Mover&squot;]' expresión='(anim.x,anim.y,anim.w,anim.h)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn90x30.png' acción='calcular' parámetro='animar=1;animando=0\nanimacion=animacion+1\naux=(animacion>1)?Inicio():&squot;&squot;' pos_mensajes='centro'">
+   <param name="C_06" value="id='back' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(back.x,back.y,back.w,back.h)' fijo='sí' visible='sí' imagen='images/retroceder.png' acción='calcular' parámetro='temps=temps-max(n1,n2)/24\nCalculos()' dibujar-si='!animando' pos_mensajes='centro'">
+   <param name="C_07" value="id='forward' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(forward.x,forward.y,forward.w,forward.h)' fijo='sí' visible='sí' imagen='images/avanzar.png' acción='calcular' parámetro='temps=temps+max(n1,n2)/24\nCalculos()' dibujar-si='!animando' pos_mensajes='centro'">
+   <param name="A_01" value="id='initBTN()' algoritmo='sí' algoritmo='sí' hacer='btn.w=80;btn.h=30;btn.img=&squot;images/btn90x30.png&squot;;;gap=100;gap_izq=(E2._w-btn.w*2-gap)/2;;n1.w=btn.w;n1.h=50;n1.x=gap_izq;n1.y=10;;n2.w=n1.w;n2.h=n1.h;n2.x=n1.w+gap_izq+gap;n2.y=10;;btn.w=90;btn.h=30;btn.img=&squot;images/btn90x30.png&squot;;;gap=20;gap_izq=(btn.w*2+100)/2;;anim.w=btn.w;anim.h=btn.h;anim.x=(E2._w-anim.w)/2;anim.y=E2._h-10-btn.h;;back.w=btn.h;back.h=btn.h;back.x=anim.x-10-back.w;back.y=anim.y;;forward.w=btn.h;forward.h=btn.h;forward.x=anim.x+10+anim.w;forward.y=anim.y;;'">
+   <param name="A_02" value="id='X' vector='sí' matriz='sí' evaluar='una-sola-vez' filas='404' expresión=';'">
+   <param name="A_03" value="id='Y' vector='sí' matriz='sí' evaluar='una-sola-vez' filas='404' expresión=';'">
+   <param name="A_04" value="id='calcXY0(m,n,t)' algoritmo='sí' algoritmo='sí' inicio='k=0;N1=4*m;N2=4*n;K=max(N1,N2);dosPi=2*pi;alfa1=-dosPi/(2*N1);alfa2=-pi/2-5*dosPi/(2*N2)' hacer='alfa=alfa1+dosPi*(k+t)/N1;X[1,k]=X1+Ri1*cos(alfa);Y[1,k]=Y1+Ri1*sen(alfa);alfa=alfa2+dosPi*(k+t)/N2;X[2,k]=X2+Ri2*sen(alfa);Y[2,k]=Y2+Ri2*cos(alfa);k=k+1;alfa=alfa1+dosPi*(k+t)/N1;X[1,k]=X1+Ri1*cos(alfa);Y[1,k]=Y1+Ri1*sen(alfa);alfa=alfa2+dosPi*(k+t)/N2;X[2,k]=X2+Ri2*sen(alfa);Y[2,k]=Y2+Ri2*cos(alfa);k=k+1;alfa=alfa1+dosPi*(k+t)/N1;X[1,k]=X1+Re1*cos(alfa);Y[1,k]=Y1+Re1*sen(alfa);alfa=alfa2+dosPi*(k+t)/N2;X[2,k]=X2+Re2*sen(alfa);Y[2,k]=Y2+Re2*cos(alfa);k=k+1;alfa=alfa1+dosPi*(k+t)/N1;X[1,k]=X1+Re1*cos(alfa);Y[1,k]=Y1+Re1*sen(alfa);alfa=alfa2+dosPi*(k+t)/N2;X[2,k]=X2+Re2*sen(alfa);Y[2,k]=Y2+Re2*cos(alfa);k=k+1' mientras='k<K+1'">
+   <param name="A_05" value="id='N(n)' expresión='(n==1)?N1:N2'">
+   <param name="A_06" value="id='T(s,t)' expresión='((t+temps)%N(s))'">
+   <param name="A_07" value="id='calcXY(n1,n2,t)' algoritmo='sí' algoritmo='sí' inicio='N1=4*n1;N2=4*n2;K=max(N1,N2);alfa01=-Ai1/2;alfa02=-pi/2-Ai2-a2-Ae2/2;k=0' hacer='alfa1=alfa01+dosPi*(k+t)/N1;X[1,k]=X1+Ri1*cos(alfa1);Y[1,k]=Y1+Ri1*sen(alfa1);alfa2=alfa02+dosPi*(k+t)/N2;X[2,k]=X2+Ri2*sen(alfa2);Y[2,k]=Y2+Ri2*cos(alfa2);k=k+1;alfa1=alfa1+Ai1;X[1,k]=X1+Ri1*cos(alfa1);Y[1,k]=Y1+Ri1*sen(alfa1);alfa2=alfa2+Ai2;X[2,k]=X2+Ri2*sen(alfa2);Y[2,k]=Y2+Ri2*cos(alfa2);k=k+1;alfa1=alfa1+a1;X[1,k]=X1+Re1*cos(alfa1);Y[1,k]=Y1+Re1*sen(alfa1);alfa2=alfa2+a2;X[2,k]=X2+Re2*sen(alfa2);Y[2,k]=Y2+Re2*cos(alfa2);k=k+1;alfa1=alfa1+Ae1;X[1,k]=X1+Re1*cos(alfa1);Y[1,k]=Y1+Re1*sen(alfa1);alfa2=alfa2+Ae2;X[2,k]=X2+Re2*sen(alfa2);Y[2,k]=Y2+Re2*cos(alfa2);k=k+1' mientras='k<K+1'">
+   <param name="A_08" value="id='calcRadii1(n1,n2)' algoritmo='sí' algoritmo='sí' hacer='Ae2=(dosPi/n2)/(2+2*p);a2=p*Ae2;Ai2=Ae2;Ai1=Re2*Ae2/Ri1;Ae1=Ri2*Ai2/Re1;a1=dosPi/(2*n1)-(Ai1+Ae1)/2;;'">
+   <param name="A_09" value="id='calcRadii2(n1,n2)' algoritmo='sí' algoritmo='sí' hacer='Ae1=(dosPi/n1)/(2+2*p);a1=p*Ae1;Ai1=Ae1;Ai2=Re1*Ae1/Ri2;Ae2=Ri1*Ai1/Re2;a2=dosPi/(2*n2)-(Ai2+Ae2)/2;;'">
+   <param name="A_10" value="id='Inicio()' algoritmo='sí' algoritmo='sí' inicio='temps=0;animando=0' hacer='dR=(2+sqrt(sqrt(max(n1,n2))))/max(n1,n2);R1=(n1<=n2)?2*n1/n2:2;R2=(n1<=n2)?2:2*n2/n1;X1=-R1-1/E2.escala+.35;Y1=0-.7;Ri1=R1-dR;Re1=R1+dR;X2=R2+1/E2.escala+.35;Y2=0-.7;Ri2=R2-dR;Re2=R2+dR;p=min(n1,n2)/max(n1,n2);dosPi=2*pi;aux=(n1<=n2)?calcRadii1(n1,n2):calcRadii2(n1,n2);pSz=max(Re2*Ae2*E2.escala/3,2)+1;mcm=McM(n1,n2);Mcd=ent((n1*n2/mcm)+0.001);V1=mcm/n1;V2=mcm/n2;Calculos();;'">
+   <param name="A_11" value="id='Calculos()' algoritmo='sí' algoritmo='sí' hacer='calcXY(n1,n2,temps);;diEnc=ent(temps/4+0.0001);;v1=ent(temps/N1+0.0001);v2=ent(temps/N2+0.0001);;PX=X1+((Ri1-(pSz+2)/E2.escala)/Ri1)*(X[1,0]-X1+X[1,1]-X1)/2;PY=Y1+((Ri1-(pSz+2)/E2.escala)/Ri1)*(Y[1,0]-Y1+Y[1,1]-Y1)/2;;QX=X2+((Re2-(pSz+2)/E2.escala)/Re2)*(X[2,2]-X2+X[2,3]-X2)/2;QY=Y2+((Re2-(pSz+2)/E2.escala)/Re2)*(Y[2,2]-Y2+Y[2,3]-Y2)/2;;showit=((abs(temps-N1*V1)%(N1*V1))<0.2)&(temps>0)'">
+   <param name="A_12" value="id='dx(s)' expresión='(s==1)?7*(n2>9):7*(n1>9)'">
+   <param name="A_13" value="id='dv(s)' expresión='(s==1)?7*(v2>9):7*(v1>9)'">
+   <param name="A_14" value="id='dV(s)' expresión='(s==1)?7*(V2>9):7*(V1>9)'">
+   <param name="A_15" value="id='McM(a,b)' algoritmo='sí' expresión='mcm' algoritmo='sí' inicio='minab=min(a,b);mcm=a*b;k=2' hacer='mustDivide=(k*ent(a/k+0.000001)==a)&(k*ent(b/k+0.000001)==b);mcm=(mustDivide)?ent(mcm/k+0.000001):mcm;a=(mustDivide)?ent(a/k+0.000001):a;b=(mustDivide)?ent(b/k+0.000001):b;k=(mustDivide)?k:k+1;' mientras='k<=minab'">
+   <param name="A_16" value="id='Mul(n,m)' expresión='(m*ent(n/m+0.000001)==n)'">
+   <param name="A_17" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='initBTN();Inicio();;;'">
+   <param name="A_18" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer=';'">
+   <param name="A_19" value="id='Animar' evento='sí' condición='animar' acción='animar' ejecución='siempre' pos_mensajes='centro'">
+   <param name="A_20" value="id='fin' evento='sí' condición='1' acción='calcular' parámetro='animar=0' ejecución='siempre' pos_mensajes='centro'">
+   <param name="G_01" value="espacio='E2' tipo='texto' dibujar-si='0' expresión='[20,300]' texto='auxDiv=[auxDiv]\nM=[M]   K=[K]\nauxL=[auxL]\nV2=[V2]   V1=[V1]\ntemps=[temps]' fijo='sí' info='debug'">
+   <param name="G_02" value="espacio='E2' tipo='texto' fondo='sí' color='grisObscuro' expresión='[83+_dasX,26+_dasY]' texto='Número de dientes:' fuente='SansSerif,PLAIN,17' fijo='sí'">
+   <param name="G_03" value="espacio='E2' tipo='texto' fondo='sí' color='grisObscuro' expresión='[363+_dasX,26]' texto='y' fuente='SansSerif,PLAIN,17' fijo='sí'">
+   <param name="G_04" value="espacio='E2' tipo='texto' fondo='sí' color='grisObscuro' expresión='[83,74]' texto='Número de dientes encajados:' fuente='SansSerif,PLAIN,17' decimales='0' fijo='sí'">
+   <param name="G_05" value="espacio='E2' tipo='texto' color='grisObscuro' dibujar-si='diEnc>0' expresión='[323+_dasX-4*(diEnc>9)-4*(diEnc>99),74+_dasY]' texto='[diEnc]' fuente='SansSerif,BOLD,19' decimales='0' fijo='sí' info='no. de dientes encajados'">
+   <param name="G_06" value="espacio='E2' tipo='texto' fondo='sí' color='grisObscuro' expresión='[83,116]' texto='Número de vueltas:' fuente='SansSerif,PLAIN,17' fijo='sí'">
+   <param name="G_07" value="espacio='E2' tipo='texto' color='4ea7ab' dibujar-si='max(v1,v2)>0' expresión='[320-dv(s)+_dasX,117+_dasY]' texto='[v1]' fuente='SansSerif,BOLD,19' decimales='0' fijo='sí' info='no. de vueltas engrane azul'">
+   <param name="G_08" value="espacio='E2' tipo='texto' color='e47100' dibujar-si='max(v1,v2)>0' expresión='[320+80-dv(s)+_dasX,117+_dasY]' texto='[v2]' fuente='SansSerif,BOLD,19' decimales='0' fijo='sí' info='no. de vueltas engrane naranja'">
+   <param name="G_09" value="espacio='E2' tipo='texto' color='grisObscuro' dibujar-si='showit' expresión='[84+_dasX,392+_dasY]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs34 Observa que este engrane da}' fuente='SansSerif,PLAIN,17' fijo='sí' info='Observa que este engrane da'">
+   <param name="G_10" value="espacio='E2' tipo='texto' color='4ea7ab' dibujar-si='showit' expresión='[330-dV(s)+_dasX,392+_dasY]' texto='[V1]' fuente='SansSerif,BOLD,19' decimales='0' fijo='sí' info='no. de vueltas de uno por no. de vueltas del otro'">
+   <param name="G_11" value="espacio='E2' tipo='texto' color='e47100' dibujar-si='showit' expresión='[330+170-dV(s)+_dasX,392+_dasY]' texto='[V2]' fuente='SansSerif,BOLD,19' decimales='0' fijo='sí' info='no. de vueltas de uno por no. de vueltas del otro'">
+   <param name="G_12" value="espacio='E2' tipo='texto' color='grisObscuro' dibujar-si='showit' expresión='[335+_dasX,392]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs34    {\*\mjaformula{\expr (V1==1|V2==1)?&squot;vuelta&squot;:&squot;vueltas&squot;\decimals 2\fixed0}}por cada         que da este otro.}' fuente='SansSerif,PLAIN,17' fijo='sí' info='vueltas por cada      que da este otro'">
+   <param name="G_13" value="espacio='E2' tipo='texto' color='grisObscuro' dibujar-si='showit&0' expresión='[60+_dasX-8*((n1>9)+(v1>9)+(v1>99)+(diEnc>9)+(diEnc>99)),255+_dasY]' texto='[n1] × [v1] = [diEnc]' fuente='SansSerif,BOLD,19' decimales='0' fijo='sí' info='multiplicación izquierda'">
+   <param name="G_14" value="espacio='E2' tipo='texto' color='grisObscuro' dibujar-si='showit&0' expresión='[610+_dasX,255]' texto='[n2] × [v2] = [diEnc]' fuente='SansSerif,BOLD,19' decimales='0' fijo='sí' info='multiplicación derecha'">
+   <param name="G_15" value="espacio='E2' tipo='curva' color='80000000' expresión='(X[s,T(s,t)],Y[s,T(s,t)])' familia='s' s.intervalo='[1,1]' s.pasos='1' t.intervalo='[0,N(s)]' t.pasos='N(s)' relleno='4ea7ab' info='Engranes'">
+   <param name="G_16" value="espacio='E2' tipo='curva' color='80000000' expresión='(X[s,T(s,t)],Y[s,T(s,t)])' familia='s' s.intervalo='[2,2]' s.pasos='1' t.intervalo='[0,N(s)]' t.pasos='N(s)' relleno='e46d00' info='Engranes'">
+   <param name="G_17" value="espacio='E2' tipo='punto' color='f5f7df' expresión='(PX,PY)' decimales='0' fijo='sí' tamaño='pSz'">
+   <param name="G_18" value="espacio='E2' tipo='punto' color='f5f7df' expresión='(QX+.01,QY)' decimales='0' fijo='sí' tamaño='pSz'">
+   <param name="G_19" value="espacio='E2' tipo='segmento' color='f5f7df' expresión='(X1,Y1)(PX,PY)' fijo='sí' tamaño='0'">
+   <param name="G_20" value="espacio='E2' tipo='segmento' color='f5f7df' expresión='(X2,Y2)(QX,QY)' fijo='sí' tamaño='0'">
+   <param name="G_21" value="espacio='E2' tipo='punto' color='e47100' dibujar-si='s<v2' expresión='(X1+(Ri1-(pSz+2)/E2.escala)*cos(-((n1+n2*(s+1))%n1)*dosPi/n1 +dosPi*temps/(4*n1)),Y1+(Ri1-(pSz+2)/E2.escala)*sen(-((n1+n2*(s+1))%n1)*dosPi/n1 +dosPi*temps/(4*n1)))' familia='s' s.intervalo='[0,n1-1]' s.pasos='n1-1' texto='[s+1]' fuente='SansSerif,PLAIN,15' decimales='7' fijo='no' tamaño='pSz' info='dientes encajados'">
+   <param name="Animación" value="pausa='40' controles='no' auto='no' hacer='animando=1;temps=temps+max(n1,n2)/24;Calculos();animando=(abs(temps-N1*V1)%(N1*V1)>0.1);str=&squot;&squot;+(N1*V1)+&squot; &squot;+(temps)' mientras='animando'">
+</ajs></p>
+
+</body>
+</html>

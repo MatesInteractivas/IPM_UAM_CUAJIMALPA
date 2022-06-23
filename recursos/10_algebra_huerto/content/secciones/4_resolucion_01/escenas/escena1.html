@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>TITULO</title>
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body style="margin:0px;padding:0px;overflow:hidden;">
+
+<p align="center">
+<ajs name="Descartes" width=730 height=230 code="Descartes">
+   <param name="tamaño" value="730x230">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=",">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.340, 2015-05-21">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E1' ancho='730' alto='230' imagen='images/tablaPinos.jpg' despl_imagen='arr-izq' fondo='blanco' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='fig2' tipo='numérico' interfaz='campo de texto' solo_texto='sí' región='interior' espacio='E1' expresión='(281,39)(64,24)' decimales='0' fijo='sí' visible='sí' activo-si='evaluado=0'">
+   <param name="C_02" value="id='fig6' tipo='numérico' interfaz='campo de texto' solo_texto='sí' región='interior' espacio='E1' expresión='(631,39)(64,24)' decimales='0' fijo='sí' visible='sí' activo-si='evaluado=0'">
+   <param name="C_03" value="id='fc1' tipo='numérico' interfaz='campo de texto' solo_texto='sí' región='interior' espacio='E1' expresión='(194,68)(64,24)' decimales='0' fijo='sí' visible='sí' activo-si='evaluado=0'">
+   <param name="C_04" value="id='fc4' tipo='numérico' interfaz='campo de texto' solo_texto='sí' región='interior' espacio='E1' expresión='(456,68)(64,24)' decimales='0' fijo='sí' visible='sí' activo-si='evaluado=0'">
+   <param name="C_05" value="id='fc6' tipo='numérico' interfaz='campo de texto' solo_texto='sí' región='interior' espacio='E1' expresión='(631,68)(64,24)' decimales='0' fijo='sí' visible='sí' activo-si='evaluado=0'">
+   <param name="C_06" value="id='pino1' tipo='numérico' interfaz='campo de texto' solo_texto='sí' región='interior' espacio='E1' expresión='(194,96)(64,24)' decimales='0' fijo='sí' visible='sí' activo-si='evaluado=0'">
+   <param name="C_07" value="id='pino3' tipo='numérico' interfaz='campo de texto' solo_texto='sí' región='interior' espacio='E1' expresión='(368,96)(64,24)' decimales='0' fijo='sí' visible='sí' activo-si='evaluado=0'">
+   <param name="C_08" value="id='pino5' tipo='numérico' interfaz='campo de texto' solo_texto='sí' región='interior' espacio='E1' expresión='(543,96)(64,24)' decimales='0' fijo='sí' visible='sí' activo-si='evaluado=0'">
+   <param name="C_09" value="id='verificar' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Verificar' expresión='(E1._w/2-60,E1._h-40,120,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn120x30.png' acción='calcular' parámetro='eval(1)\nevaluado=1' dibujar-si='evaluado=0'">
+   <param name="C_10" value="id='cerrar' tipo='numérico' interfaz='botón' región='interior' espacio='retro' expresión='(retro._w-25,5,20,20)' fijo='sí' visible='sí' imagen='images/cerrar.png' acción='calcular' parámetro='evaluado=0'">
+   <param name="C_11" value="id='DEBUG' tipo='numérico' región='exterior' espacio='E1' nombre='DEBUG' incr='1' min='0' max='1' fijo='sí' visible='sí' pos_mensajes='centro'">
+   <param name="C_12" value="id='reintentar' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Reintentar' expresión='(E1._w/2-60,E1._h-40,120,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn120x30.png' acción='calcular' parámetro='evaluado=0' parámetro.fuente='SansSerif,PLAIN,15' dibujar-si='evaluado=1'">
+   <param name="A_01" value="id='eval(x)' algoritmo='sí' expresión='x' algoritmo='sí' hacer='errorFigura2=1;errorFigura6=1;errorFxC1=1;errorFxC4=1;errorFxC6=1;errorPinos1=1;errorPinos3=1;errorPinos5=1;;errorFigura2=(fig2==&squot;2&squot;)?0:1;errorFigura6=(fig6==&squot;6&squot;)?0:1;;errorFxC1=((fc1==&squot;1x1&squot;)||(fc1==&squot;1 x 1&squot;)||(fc1==&squot;1 x1&squot;)||(fc1==&squot;1x 1&squot;))?0:1;errorFxC4=((fc4==&squot;4x4&squot;)||(fc4==&squot;4 x 4&squot;)||(fc1==&squot;4 x4&squot;)||(fc4==&squot;4x 4&squot;))?0:1;errorFxC6=((fc6==&squot;6x6&squot;)||(fc6==&squot;6 x 6&squot;)||(fc6==&squot;6 x6&squot;)||(fc6==&squot;6x 6&squot;))?0:1;;errorPinos1=(pino1==&squot;8&squot;)?0:1;errorPinos3=(pino3==&squot;16&squot;)?0:1;errorPinos5=(pino5==&squot;24&squot;)?0:1;;'">
+   <param name="A_02" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' inicio='corr=0;evaluado=0' hacer='errorFigura2=1;errorFigura6=1;errorFxC1=1;errorFxC4=1;errorFxC6=1;errorPinos1=1;errorPinos3=1;errorPinos5=1'">
+   <param name="A_03" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="G_01" value="espacio='E1' tipo='texto' dibujar-si='DEBUG' expresión='[0,0]' texto='[corr] [errorFigura] [errorFxC] [errorPinos]' fijo='sí'">
+   <param name="G_02" value="espacio='E1' tipo='imagen' dibujar-si='evaluado&&!errorFigura2' coord_abs='sí' expresión='(344,40)' archivo='images/bien.png'">
+   <param name="G_03" value="espacio='E1' tipo='imagen' dibujar-si='evaluado&&errorFigura2' coord_abs='sí' expresión='(344,40)' archivo='images/mal.png'">
+   <param name="G_04" value="espacio='E1' tipo='imagen' dibujar-si='evaluado&&!errorFigura6' coord_abs='sí' expresión='(694,40)' archivo='images/bien.png'">
+   <param name="G_05" value="espacio='E1' tipo='imagen' dibujar-si='evaluado&&errorFigura6' coord_abs='sí' expresión='(694,40)' archivo='images/mal.png'">
+   <param name="G_06" value="espacio='E1' tipo='imagen' dibujar-si='evaluado&&!errorFxC1' coord_abs='sí' expresión='(257,70)' archivo='images/bien.png'">
+   <param name="G_07" value="espacio='E1' tipo='imagen' dibujar-si='evaluado&&errorFxC1' coord_abs='sí' expresión='(257,70)' archivo='images/mal.png'">
+   <param name="G_08" value="espacio='E1' tipo='imagen' dibujar-si='evaluado&&!errorPinos1' coord_abs='sí' expresión='(257,98)' archivo='images/bien.png'">
+   <param name="G_09" value="espacio='E1' tipo='imagen' dibujar-si='evaluado&&errorPinos1' coord_abs='sí' expresión='(257,98)' archivo='images/mal.png'">
+   <param name="G_10" value="espacio='E1' tipo='imagen' dibujar-si='evaluado&&!errorFxC6' coord_abs='sí' expresión='(694,70)' archivo='images/bien.png'">
+   <param name="G_11" value="espacio='E1' tipo='imagen' dibujar-si='evaluado&&errorFxC6' coord_abs='sí' expresión='(694,70)' archivo='images/mal.png'">
+   <param name="G_12" value="espacio='E1' tipo='imagen' dibujar-si='evaluado&&!errorFxC4' coord_abs='sí' expresión='(520,70)' archivo='images/bien.png'">
+   <param name="G_13" value="espacio='E1' tipo='imagen' dibujar-si='evaluado&&errorFxC4' coord_abs='sí' expresión='(520,70)' archivo='images/mal.png'">
+   <param name="G_14" value="espacio='E1' tipo='imagen' dibujar-si='evaluado&&!errorPinos3' coord_abs='sí' expresión='(431,98)' archivo='images/bien.png'">
+   <param name="G_15" value="espacio='E1' tipo='imagen' dibujar-si='evaluado&&errorPinos3' coord_abs='sí' expresión='(431,98)' archivo='images/mal.png'">
+   <param name="G_16" value="espacio='E1' tipo='imagen' dibujar-si='evaluado&&!errorPinos5' coord_abs='sí' expresión='(607,98)' archivo='images/bien.png'">
+   <param name="G_17" value="espacio='E1' tipo='imagen' dibujar-si='evaluado&&errorPinos5' coord_abs='sí' expresión='(607,98)' archivo='images/mal.png'">
+</ajs></p>
+
+</body>
+</html>

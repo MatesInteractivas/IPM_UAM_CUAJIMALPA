@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>  
+
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Reflexiones y aplicaciones</h1>
+    
+    <!--- Subtítulo (no necesario en introducción) --->
+    <h2>Problema de maximización</h2>
+    
+    
+    <!--- Párrafo --->
+    <p>
+      Hemos encontrado una forma de conectar un conjunto de puntos
+      reduciendo al mínimo la suma de los costos de los enlaces; también nos
+      hemos preguntado si el problema de aumentar al máximo la suma de
+      los costos de los enlaces tiene sentido. En el primer caso
+      tenemos un problema de minimización y en el segundo, el
+      equivalente problema de <strong>maximización</strong>.
+    </p>
+
+    <p>
+    Lo cierto es que ambos problemas tienen sentido en el mundo real y
+    además comparten el procedimiento de solución si interpretamos el
+    cuadro de costos de manera inversa.
+    </p>
+
+    <p>
+      Una aplicación real del problema de maximización es la siguiente.
+    </p>
+
+    <p class="problema">
+      <strong>Problema</strong>
+      <br><br>
+      Nos presentan el esquema funcional de una federación que agrupa
+      a un conjunto de asociaciones. En este esquema todas las
+      asociaciones tienen consejos directivos (CD) que se comunican
+      entre sí. Los CD reciben propuestas de otro CD y los someten a
+      votación entre los miembros de su asociación. Una propuesta no
+      es aprobada en la federación hasta que no se discuta y apruebe
+      en todas las asociaciones.
+    <br><br>
+      Los directivos de la federación han detectado que la claridad en
+      la comunicación, misma que es fundamental para la
+      retroalimentación y aprobación de las propuestas, no es la misma
+      entre diferentes parejas de CD.
+    <br><br>
+      Algo que afecta negativamente la aprobación de las propuestas es
+      que un CD reciba la información de más de una fuente. Lo mejor
+      es que la propuesta le sea comunicada por un solo CD.
+    <br><br>
+      En concreto, nos dan el siguiente cuadro de valores de
+      empatía, que refleja la claridad en las comunicaciones entre las
+      7 asociaciones. Nos piden que encontremos un conjunto de rutas
+      para las propuestas que generen los CD, de tal forma que la suma
+      de los correspondientes valores del cuadro sea lo mayor posible
+      en aras de incrementar el índice de aprobación de la federación.
+    </p>
+
+    <table  class="tablaImportante columna1">
+    <thead>
+    <tr>
+      <th>&nbsp;</th>
+      <th>AC 2</th>
+      <th>AC 3</th>
+      <th>AC 4</th>
+      <th>AC 5</th>
+      <th>AC 6</th>
+      <th>AC 7</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>AC 1</td><td>5</td><td>7</td><td>2</td><td>6</td><td>9</td><td>10</td>
+    </tr>
+    <tr>
+      <td>AC 2</td><td>&nbsp;</td><td>0</td><td>0</td><td>0</td><td>3</td><td>5</td>
+    </tr>
+    <tr>
+      <td>AC 3</td><td>&nbsp;</td><td>&nbsp;</td><td>3</td><td>0</td><td>0</td><td>8</td>
+    </tr>
+    <tr>
+      <td>AC 4</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>3</td><td>3</td><td>3</td>
+    </tr>
+    <tr>
+      <td>AC 5</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>0</td><td>3</td>
+    </tr>
+    <tr>
+      <td>AC 6</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>10</td>
+    </tr>
+    </tbody>
+    </table>
+
+    <div class='instrucciones'>
+      Con miras a la tarea de abajo, a continuación incluimos un
+      cuadro con los costos del problema anterior con el objeto de que
+      encuentres una solución de costo
+      total <strong>máximo</strong>. El funcionamiento es equivalente
+      al de los espacios interactivos que ya conoces.
+    </div>
+    
+    <!-- ejemplo para incluir un documento externo en un iframe, aqui van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="480" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+
+  <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>     
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  </div>
+  
+
+</article>
+
+</body>
+
+</html>
+

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+  <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Formalización del problema</h1>
+
+    <h2>Los múltiplos de los números del 1 al 10</h2>
+
+    <!--- Párrafo --->
+    <p>
+    En seguida se muestra una cuadrícula de 10 por 10 con algunos números sombreados de distintos colores.
+    </p>
+
+    <div class="course_extern_content">
+        <img src="imgs/cuadricula.png"></img>
+    </div>
+
+    <p class="problema">
+    <strong>Preguntas</strong>
+    <br><br>
+     A partir de la imagen anterior encuentra la respuesta a las siguientes preguntas:
+     <br><br>
+      <span style="margin-left:25px;">1. ¿Qué tienen en común los números sombreados en azul?</span>
+      <br><br>
+      <span style="margin-left:25px;">2. ¿Qué observas de los números sombreados en amarillo?</span>
+      <br><br>
+      <span style="margin-left:25px;">3. ¿Puedes decir por qué algunos números están sombreados en verde?</span>
+    </p>
+
+    <p>
+    En el siguiente espacio interactivo puedes explorar esta cuadrícula.
+
+    <!--- Instrucciones --->
+    <div class="instrucciones">
+    Presiona los pulsadores para cambiar los valores de los números de la derecha y observa cómo cambia el sombreado de la cuadrícula.
+    Responde las preguntas anteriores para cada par de número que elijas. 
+    </div>
+
+    <!-- ejemplo para incluir un documento externo en un iframe, aqui van las escenas y videos -->
+    <div class="course_extern_content">
+      <iframe class="course_iframe" width="750" height="480" frameborder="0" src="escenas/escena1.html"> </iframe>
+      <iframe class="course_iframe" width="750" height="130" frameborder="0" src="escenas/escena2.html"> </iframe>
+    </div>
+
+    <p>
+    La tabla anterior muestra los múltiplos menores que o iguales a 100 para cada número del 1 al 10.
+    Veamos algunas parejas de número que nos servirán para hacer algunas observaciones importantes.
+    En todos los casos tomaremos en cuenta múltiplos menores que 100.
+    Si no respondiste correctamente las preguntas anteriores, tal vez puedas hacerlo después de estos ejemplos.
+    </p>
+
+    <div class="course_extern_content">
+      <iframe class="course_iframe" width="750" height="130" frameborder="0" src="escenas/escena3.html"> </iframe>
+    </div>
+
+    <p>
+    Como habrás notado, hay números para los cuales el mínimo común múltiplo es el producto de ellos, por ejemplo \( mcm(3,5)=3\times 5=15 \) y \( mcm(9,7)=9\times 7=63 \). Los números de las parejas \((3,5)\) y \((9,7)\) se llaman <em>primos relativos</em>. Otros ejemplos de números primos relativos son las parejas \((5,6)\), \((5,7)\) y \((5,9)\). Responde las siguientes preguntas.
+    </p>
+
+    <div class="course_extern_content">
+      <iframe class="course_iframe" width="750" height="130" frameborder="0" src="escenas/escena4.html"> </iframe>
+    </div>
+
+    <p class='importante' style='margin-left:10%;margin-right:10%;'>
+      Los números que no tienen <em>divisores comunes</em> distintos de \(1\) se llaman <strong>primos relativos</strong> o <em>primos entre sí</em>. Consideremos nuevamente cualesquiera dos números naturales.
+      <br><br>
+      Si \(a\) y \(b\) son <em>primos relativos</em> entonces \[mcm(a,b)=a\times b\] \[MCD(a,b)=1\]
+    </p>
+
+
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>
+
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+
+
+
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

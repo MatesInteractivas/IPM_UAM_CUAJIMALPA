@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>TITULO</title>	
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body style="margin:0px;padding:0px;overflow:hidden;">
+
+<p align="center">
+<ajs name="Descartes" width=760 height=480 code="Descartes">
+   <param name="tamaño" value="760x480">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.3.12, 2014-07-09">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E1' escala='5' imagen='images/fondo.jpg' despl_imagen='expand.' fondo='grisClaro' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='sig' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Localizar' expresión='(650,430,90,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn90x30.png' acción='animar' dibujar-si='t=0'">
+   <param name="C_02" value="id='reint' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Reiniciar' expresión='(650,430,90,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn90x30.png' acción='inicio' dibujar-si='t>Tmax+8' pos_mensajes='centro'">
+   <param name="A_01" value="id='init()' algoritmo='sí' algoritmo='sí' hacer='calculos()'">
+   <param name="A_02" value="id='calculos()' algoritmo='sí' algoritmo='sí' hacer='DispX=-3+rnd*6;DispY=-3+rnd*6;llenaVec()'">
+   <param name="A_03" value="id='pX' vector='sí' evaluar='una-sola-vez' tamaño='5'">
+   <param name="A_04" value="id='pY' vector='sí' evaluar='una-sola-vez' tamaño='5'">
+   <param name="A_05" value="id='Dis' vector='sí' evaluar='una-sola-vez' tamaño='5'">
+   <param name="A_06" value="id='Tam' vector='sí' evaluar='una-sola-vez' tamaño='4'">
+   <param name="A_07" value="id='llenaVec()' algoritmo='sí' algoritmo='sí' inicio='i=0' hacer='pX[i]=(-13+(rnd*26))*5;pY[i]=(-4+(rnd*12))*5;Dis[i]=sqrt((DispX-pX[i])^2+(DispY-pY[i])^2);Dis[i]=(Dis[i]-ent(Dis[i])>.5)?ent(Dis[i])+1:ent(Dis[i]);Tmax=max(Dis[i],Tmax);i=i+1' mientras='i<4'">
+   <param name="A_08" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='init()'">
+   <param name="A_09" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="G_01" value="espacio='E1' tipo='imagen' expresión='(pX[s]-.4,pY[s]+1.5)' familia='s' s.intervalo='[0,3]' s.pasos='3' archivo='images/antena.png'">
+   <param name="G_02" value="espacio='E1' tipo='punto' dibujar-si='0' expresión='(pX[s],pY[s])' familia='s' s.intervalo='[0,3]' s.pasos='3' fijo='sí'">
+   <param name="G_03" value="espacio='E1' tipo='arco' color='81808080' centro='(pX[s],pY[s])' radio='Tam[s]' fin='360' familia='s' s.intervalo='[0,3]' s.pasos='3' fijo='sí' ancho='3'">
+   <param name="G_04" value="espacio='E1' tipo='punto' color='aeffc800' dibujar-si='(t>=Tmax)&(t%2=0)' expresión='(DispX,DispY)' fijo='sí' tamaño='7'">
+   <param name="G_05" value="espacio='E1' tipo='imagen' dibujar-si='t>Tmax+8' expresión='(DispX-2.5,DispY+5)' archivo='images/cel.png'">
+   <param name="G_06" value="espacio='E1' tipo='texto' dibujar-si='debug' expresión='[20,20+15*s]' familia='s' s.intervalo='[0,3]' s.pasos='3' texto='[Dis[s]] [Tmax]   [t]' fijo='sí'">
+   <param name="Animación" value="pausa='200' controles='no' auto='no' inicio='t=0' hacer='Tam[0]=(t<Dis[0])?t:Dis[0];Tam[1]=(t<Dis[1])?t:Dis[1];Tam[2]=(t<Dis[2])?t:Dis[2];Tam[3]=(t<Dis[3])?t:Dis[3];t=t+1' mientras='t<Tmax+10'">
+</ajs></p>
+
+</body>
+</html>

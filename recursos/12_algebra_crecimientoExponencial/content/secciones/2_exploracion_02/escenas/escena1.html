@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>TITULO</title>
+
+      <style type="text/css" media="screen">
+	/*pulsador*/
+	#E1.escala { }
+	#E1.escala > canvas {
+	  display: none;
+	}
+    
+	#E1\.escala .up {
+	  background: #f6f8e0 url("images/zoomIn.png") no-repeat center !important;
+	  background-size: cover !important;
+	}
+	#E1\.escala > .up:hover {
+	  background-color: #e8ebd0 !important;
+	}
+	#E1\.escala > .up:active {
+	  box-shadow: 1px 1px 5px #e8ebd0;
+	  background-color: #eeeeee !important;
+	}
+    
+	#E1\.escala .down {
+	  background: #e8ebd0 url("images/zoomOut.png") no-repeat center !important;
+	  background-size: cover !important;
+	}
+	#E1\.escala .down:hover {
+	  background-color: #e8ebd0 !important;
+	}
+	#E1\.escala .down:active {
+	  box-shadow: 1px 1px 5px #e8ebd0;
+	  background-color: #eeeeee !important;
+	}
+      </style>
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body style="margin:0px;padding:0px;overflow:hidden;">
+
+<p align="center">
+<ajs name="Descartes" width=760 height=480 code="Descartes">
+   <param name="tamaño" value="760x480">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E2' imagen='images/fondo.jpg' despl_imagen='expand.' fondo='grisClaro' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='E1' x='10' y='10' ancho='740' alto='390' fijo='sí' O.x='-320' O.y='150' despl_imagen='arr-izq' red='b8c4c8' red10='889498' ejes='405860' texto='405860' números='sí'">
+   <param name="C_01" value="id='E1.escala' tipo='numérico' región='interior' espacio='E2' nombre='E1.escala' expresión='(E2._w-40,E2._h-70,30,60)' valor='30' incr='.5' min='.5' max='500' decimales='0' fijo='sí' visible='no'">
+   <param name="C_02" value="id='C' tipo='numérico' región='interior' espacio='E2' nombre='C' expresión='(10,410,170,60)' valor='500' incr='10' min='10' max='10000' decimales='0' fijo='no' visible='sí' acción='calcular' parámetro='Cy.y=C/1000' pos_mensajes='centro'">
+   <param name="C_03" value="id='M' tipo='numérico' región='interior' espacio='E2' nombre='M(%)' expresión='(210,410,160,60)' valor='5' incr='.1' min='0' max='100' decimales='1' fijo='no' visible='sí' pos_mensajes='centro'">
+   <param name="C_04" value="id='A' tipo='numérico' región='interior' espacio='E2' nombre='A(%)' expresión='(410,410,160,60)' valor='60' incr='.1' min='0' max='100' decimales='1' fijo='no' visible='sí' pos_mensajes='centro'">
+   <param name="C_05" value="id='Cy' tipo='gráfico' espacio='E1' tamaño='6' expresión='(0,C/1000)' constricción='x=0' fijo='sí'">
+   <param name="C_06" value="id='ver' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='poligonal' expresión='(580,425,120,30)' fijo='sí' visible='sí' color='f0f8ff' negrita='sí' fuente puntos='17' imagen='images/btn120x30.png' acción='calcular' parámetro='v=1-v'">
+   <param name="A_01" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='ver=0'">
+   <param name="A_02" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='m=log(1+M/100);a=log((1+A/100))/12;C=Cy.y*1000;Cy.y=(Cy.y<0)?0:Cy.y;Cy.y=(Cy.y>10)?10:Cy.y;'">
+   <param name="G_01" value="espacio='E1' tipo='ecuación' color='00a000' dibujar-si='x>=0' expresión='y=C*exp(m*x)/1000' ancho='2'">
+   <param name="G_02" value="espacio='E1' tipo='ecuación' color='0000a0' dibujar-si='x>=0' expresión='y=C*exp(a*x)/1000' ancho='2'">
+   <param name="G_03" value="espacio='E1' tipo='segmento' dibujar-si='v' expresión='(s*12,C*exp(a*s*12)/1000)((s+1)*12,C*exp(a*(s+1)*12)/1000)' familia='s' s.intervalo='[0,9]' s.pasos='9' fijo='sí'">
+   <param name="Animación" value="pausa='100' controles='no' auto='no' inicio='t=0' hacer='t=t+1;temp=((t=1)&(paso=0))?calcseg():0;temp=((t>14)&(t<16))?calrect():0;temp=((t>15)&(t<41))?trasp():0;temp=((t>40)&(t<61))?rotar():0;temp=((t>70)&(t<91))?traslada():0;temp=((t>80)&(t<101))?trasp2():0;temp=((t>99)&(t<111))?frazon():0;temp=(t=100)?recalc():0' mientras='t<110'">
+</ajs></p>
+
+</body>
+</html>

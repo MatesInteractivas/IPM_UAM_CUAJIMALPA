@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>TITULO</title>	
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body style="margin:0px;padding:0px;overflow:hidden;">
+   
+   <style type="text/css" media="screen">
+	/*pulsadores*/
+	
+	#dX1 { }
+	#dX1 > canvas {
+	  display: none;
+	}
+    
+	#dX1 .up {
+	  background: #f6f8e0 url("images/btn_out.png") no-repeat center !important;
+	  background-size: cover !important;
+	}
+	#dX1 > .up:hover {
+	  background: #f6f8e0 url("images/btn_out_over.png") no-repeat center !important;
+	  background-size: cover !important;
+	}
+	#dX1 > .up:active {
+	  background: #f6f8e0 url("images/btn_out_down.png") no-repeat center !important;
+	  background-size: cover !important;
+	}
+    
+	#dX1 .down {
+	  background: #e8ebd0 url("images/btn_in.png") no-repeat center !important;
+	  background-size: cover !important;
+	}
+	#dX1 .down:hover {
+	  background: #f6f8e0 url("images/btn_in_over.png") no-repeat center !important;
+	  background-size: cover !important;
+	}
+	#dX1 .down:active {
+	  background: #f6f8e0 url("images/btn_in_down.png") no-repeat center !important;
+	  background-size: cover !important;
+	}
+	
+	
+	#dX2 { }
+	#dX2 > canvas {
+	  display: none;
+	}
+    
+	#dX2 .up {
+	  background: #f6f8e0 url("images/btn_out.png") no-repeat center !important;
+	  background-size: cover !important;
+	}
+	#dX2 > .up:hover {
+	  background: #f6f8e0 url("images/btn_out_over.png") no-repeat center !important;
+	  background-size: cover !important;
+	}
+	#dX2 > .up:active {
+	  background: #f6f8e0 url("images/btn_out_down.png") no-repeat center !important;
+	  background-size: cover !important;
+	}
+    
+	#dX2 .down {
+	  background: #e8ebd0 url("images/btn_in.png") no-repeat center !important;
+	  background-size: cover !important;
+	}
+	#dX2 .down:hover {
+	  background: #f6f8e0 url("images/btn_in_over.png") no-repeat center !important;
+	  background-size: cover !important;
+	}
+	#dX2 .down:active {
+	  background: #f6f8e0 url("images/btn_in_down.png") no-repeat center !important;
+	  background-size: cover !important;
+	}
+	
+	#dX3 { }
+	#dX3 > canvas {
+	  display: none;
+	}
+    
+	#dX3 .up {
+	  background: #f6f8e0 url("images/btn_out.png") no-repeat center !important;
+	  background-size: cover !important;
+	}
+	#dX3 > .up:hover {
+	  background: #f6f8e0 url("images/btn_out_over.png") no-repeat center !important;
+	  background-size: cover !important;
+	}
+	#dX3 > .up:active {
+	  background: #f6f8e0 url("images/btn_out_down.png") no-repeat center !important;
+	  background-size: cover !important;
+	}
+    
+	#dX3 .down {
+	  background: #e8ebd0 url("images/btn_in.png") no-repeat center !important;
+	  background-size: cover !important;
+	}
+	#dX3 .down:hover {
+	  background: #f6f8e0 url("images/btn_in_over.png") no-repeat center !important;
+	  background-size: cover !important;
+	}
+	#dX3 .down:active {
+	  background: #f6f8e0 url("images/btn_in_down.png") no-repeat center !important;
+	  background-size: cover !important;
+	}
+      </style>
+
+
+<p align="center">
+<ajs name="Descartes" width=760 height=450 code="Descartes">
+   <param name="tamaño" value="760x450">
+   <param name="decimal_symbol" value=",">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.3.12, 2014-07-09">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E1' imagen='images/fondo.jpg' despl_imagen='arr-izq' fondo='blanco' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='DEBUG' tipo='numérico' región='exterior' espacio='E1' nombre='DEBUG' incr='1' min='0' max='1' fijo='sí' visible='sí'">
+   <param name="C_02" value="id='dX1' tipo='numérico' región='interior' espacio='E1' nombre='Izquierda' expresión='(30,E1._h-70)(160,60)' incr='1' decimales='0' fijo='sí' visible='no' acción='calcular'">
+   <param name="C_03" value="id='dX2' tipo='numérico' región='interior' espacio='E1' nombre='Centro' expresión='(310,E1._h-70)(140,60)' incr='1' decimales='0' fijo='sí' visible='no' acción='calcular' parámetro='dX1=(tempdX2>dX2)?dX1-1:dX1+1\ndX3=(tempdX2>dX2)?dX3-1:dX3+1\ntempdX2=dX2\n'">
+   <param name="C_04" value="id='dX3' tipo='numérico' región='interior' espacio='E1' nombre='Derecha' expresión='(580,E1._h-70)(150,60)' incr='1' decimales='0' fijo='sí' visible='no' acción='calcular'">
+   <param name="A_01" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' inicio='esc=0.8' hacer='posX0=E1._w/2-70;posY0=E1._h/2-160;;posX1=E1._w/2-100;posY1=E1._h/2-50;;posX2=E1._w/2-130;posY2=E1._h/2+65;N=1;M=2;O=3;;'">
+   <param name="A_02" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer=';;;'">
+   <param name="G_01" value="espacio='E1' tipo='texto' dibujar-si='DEBUG' expresión='[20,20]' texto='[tSeg] [s2] [N]' fijo='sí'">
+   <param name="G_02" value="espacio='E1' tipo='imagen' coord_abs='sí' expresión='(posX0-dX1,posY0)(esc,esc)' archivo='images/cerillo0.png'">
+   <param name="G_03" value="espacio='E1' tipo='imagen' coord_abs='sí' expresión='(posX0+(36*esc)+(56*esc)+(0*esc*80),posY0)(esc,esc)' archivo='images/cerillo.png'">
+   <param name="G_04" value="espacio='E1' tipo='imagen' coord_abs='sí' expresión='(posX0+dX3+(36*esc)+(56*esc)+((N-1)*esc*80)+(88*esc),posY0)(esc,esc)' archivo='images/cerillo2.png'">
+   <param name="G_05" value="espacio='E1' tipo='imagen' coord_abs='sí' expresión='(posX1-dX1,posY1)(esc,esc)' archivo='images/cerillo0.png'">
+   <param name="G_06" value="espacio='E1' tipo='imagen' coord_abs='sí' expresión='(posX1+(36*esc)+(56*esc)+(0*esc*80)-dX2,posY1)(esc,esc)' archivo='images/cerillo.png'">
+   <param name="G_07" value="espacio='E1' tipo='imagen' coord_abs='sí' expresión='(posX1+(36*esc)+(56*esc)+(1*esc*80)+dX2,posY1)(esc,esc)' archivo='images/cerillo.png'">
+   <param name="G_08" value="espacio='E1' tipo='imagen' coord_abs='sí' expresión='(posX1+dX3+(36*esc)+(56*esc)+((M-1)*esc*80)+(88*esc),posY1)(esc,esc)' archivo='images/cerillo2.png'">
+   <param name="G_09" value="espacio='E1' tipo='imagen' coord_abs='sí' expresión='(posX2-dX1,posY2)(esc,esc)' archivo='images/cerillo0.png'">
+   <param name="G_10" value="espacio='E1' tipo='imagen' coord_abs='sí' expresión='(posX2+(36*esc)+(56*esc)+(0*esc*80)-dX2,posY2)(esc,esc)' archivo='images/cerillo.png'">
+   <param name="G_11" value="espacio='E1' tipo='imagen' coord_abs='sí' expresión='(posX2+(36*esc)+(56*esc)+(1*esc*80),posY2)(esc,esc)' archivo='images/cerillo.png'">
+   <param name="G_12" value="espacio='E1' tipo='imagen' coord_abs='sí' expresión='(posX2+(36*esc)+(56*esc)+(2*esc*80)+dX2,posY2)(esc,esc)' archivo='images/cerillo.png'">
+   <param name="G_13" value="espacio='E1' tipo='imagen' coord_abs='sí' expresión='(posX2+dX3+(36*esc)+(56*esc)+((O-1)*esc*80)+(88*esc),posY2)(esc,esc)' archivo='images/cerillo2.png'">
+   <param name="G_14" value="espacio='E1' tipo='texto' expresión='[20,posY0-17]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs46 n=1\f2\fs30}' fuente='SansSerif,PLAIN,23' fijo='sí'">
+   <param name="G_15" value="espacio='E1' tipo='texto' expresión='[20,posY1-17]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs46 n=2\f2\fs30}' fuente='SansSerif,PLAIN,23' fijo='sí'">
+   <param name="G_16" value="espacio='E1' tipo='texto' expresión='[20,posY2-17]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs46 n=3\f2\fs30}' fuente='SansSerif,PLAIN,23' fijo='sí'">
+</ajs></p>
+
+<script id="macros/randoms.txt" type="descartes/macro">
+tipo_de_macro=R2
+Idioma=español
+id='minRango' expresión='0' evaluar='una-sola-vez' constante='si'
+id='maxRango' expresión='10' evaluar='una-sola-vez' constante='si'
+id='n_numeros' expresión='ent(maxRango-minRango)'
+id='VecAux1' tamaño='n_numeros+100' evaluar='una-sola-vez' expresión='VecAux1[0]=0;VecAux1[1]=0;VecAux1[2]=0' vector='si'
+id='resultadoVec' tamaño='n_numeros+100' evaluar='una-sola-vez' vector='si'
+id='initVecAux1()' inicio='_indexT=0;_ancla=minRango;' hacer='VecAux1[_indexT]=_ancla;_indexT=_indexT+1;_ancla=_ancla+1;' mientras='_indexT<n_numeros' algoritmo='si'
+id='reacomodaVector(_posBorrar)' inicio='_indexAcomoda=_posBorrar;' hacer='VecAux1[_indexAcomoda]=VecAux1[_indexAcomoda+1];_indexAcomoda=_indexAcomoda+1' mientras='_indexAcomoda<(n_numeros-1)' algoritmo='si'
+id='creaAleatorios()' inicio='initVecAux1();_indexCrearAl=0;' hacer='_cuantosQuedan=(n_numeros-_indexCrearAl);_indexAleatorio=ent(rnd*_cuantosQuedan);;resultadoVec[_indexCrearAl]=VecAux1[_indexAleatorio];;reacomodaVector(_indexAleatorio);_indexCrearAl=_indexCrearAl+1' mientras='_indexCrearAl<n_numeros' algoritmo='si'
+tipo='texto' color='azul' expresión='[20,20*s]' familia='s' s.intervalo='[0,n_numeros-1]' s.pasos='n_numeros-1' texto='resultadoVec([s])=[resultadoVec[s]]' fijo='no' 
+tipo='texto' color='azul' expresión='[220,20*s]' familia='s' s.intervalo='[0,n_numeros-1]' s.pasos='n_numeros-1' texto='VecAux1([s])=[VecAux1[s]]' fijo='no' 
+</script>
+
+</body>
+</html>

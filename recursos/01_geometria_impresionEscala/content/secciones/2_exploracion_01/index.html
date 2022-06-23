@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+   <h1>Exploración inicial del problema</h1>
+    
+    <h2>Cortes de la hoja</h2>
+    <!--- Párrafo --->
+    <p>
+      En estas páginas empezarás a adentrarte más en el problema que se expuso en la página anterior, en aras de acercarte a su solución.
+      En concreto, realizarás una serie de observaciones que te ayudarán a entender qué sucede exactamente con los lados de una foto y la razón en la que se encuentran, cuando duplicamos la imagen para que quepa dos veces en sí misma, tal como lo viste anteriormente.
+    </p>
+    
+    <p>
+    Pero antes de proseguir con la parte de la exploración, recordemos brevemente qué son la razón y la proporción.
+    </p>
+    
+    <p class='importante' style="margin-left:10%;margin-right:10%;">
+    <strong>Razón y proporción</strong>
+    <br><br>
+    Una <strong>razón</strong> es una relación que existe entre dos números. Por ejemplo, si tenemos los números \(20\) y \(5\), la <em>razón de 20 a 5</em> se expresa como \(20:5\). También se puede expresar como fracción: \( \frac{20}{5} \), y finalmente como el valor que resulta de dividir dichos números, en este caso \(4\). Esto nos indica que \(5\) cabe cuatro veces en \(20\) o que \(20\) contiene cuatro veces a \(5\).
+    <br><br>
+    Resumiendo: \(20:5 = \frac{20}{5} = 4\)
+    <br><br>
+    La <strong>proporción</strong> se define como la igualdad de dos razones. Por ejemplo, la razón de \(32\) a \(8\) equivale a \(4\), al igual que la razón de \(20\) a \(5\). Como ambas razones son iguales, podemos hacer una igualdad de estas razones o cocientes, es decir, \( \frac{20}{5}=\frac{32}{8} \). Esta igualdad se conoce como proporción y se dice que los números \(20, 5\) y \(32, 8\) <em>están en proporción</em>.
+    <br><br>
+    Esta proporción también se puede expresar como \(20:5::32:8\), que se lee <em>20 es a 5 como 32 es a 8</em>.
+    <br>
+    </p>
+    
+    <br>
+    <div class='instrucciones'>
+      Si quieres, observa el siguiente video sobre razones y proporciones. Para ver los subtítulos en español, presiona el ícono del engrane en la esquina inferior derecha del video.
+    </div>
+    
+     <div class="course_extern_content"> 
+      <a target="_blank" href="https://www.khanacademy.org/video/introduction-to-ratios-new-hd-version?utm_campaign=embed">
+      <b>Introduction to ratios</b>: What a ratio is.  Simple ratio problems.
+    </a><br/>
+    <iframe frameborder="0" scrolling="no" width="560" height="355" src="https://www.khanacademy.org/embed_video?v=HpdMJaKaXXc"></iframe>
+    </div>
+
+   <p>
+      Regresando a nuestras fotos, cuando las reducimos de manera que quepan exactamente dos, cuatro, ocho, etcétera veces en su tamaño original, lo que realmente estamos intentando es encuadrar la imagen en el rectángulo que resulta de cortar la imagen a la mitad por su lado más largo.
+      En el espacio interactivo que sigue, puedes observar este procedimiento. 
+    </p>
+    
+    <!--- Instrucciones --->
+    <div class="instrucciones">
+    <span>A continuación se muestra la imagen de una hoja, la cual puede cambiarse de tamaño arrastrando el control grafico que se encuentra en la esquina superior derecha de la hoja o escribiendo los valores en los campos de texto. Una vez elegido el tamaño de la hoja, pulsa "Cortar" para avanzar en los cortes.</span>
+    <br><br>
+    Nota que del lado derecho se muestra la razón en sus 3 posibles formas.</span> 
+    </div>
+
+
+
+    <!-- ejemplo para incluir un documento externo en un iframe, aqui van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="480" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+
+  <div class="problema">
+    <strong>Preguntas</strong>
+    <br><br>
+     Encuentra la respuesta a las siguientes preguntas:
+     <ol>
+      <li>¿De dónde vienen los valores de los lados de los rectángulos que resultan de los recortes?</li>
+      <br>
+      <li>¿La razón de los lados del nuevo rectángulo es proporcional al anterior?</li>
+     </ol>
+  </div>
+
+    <p>
+    Como habrás notado, para obtener la razón de los lados de una hoja, se divide el número que representa el tamaño de uno de los lados entre el número que representa el tamaño del otro lado. Cuando la hoja se corta por la mitad, se repite este proceso y se comparan los resultados.
+    <p>
+    
+    <p>
+      <strong>¡Ojo!</strong> 
+      Es importante que, al comparar las razones entre dos valores, siempre se comparen los valores correspondientes. En nuestro caso, esto significa que siempre se debe comparar la razón del lado mayor al lado menor, o bien la razón del lado menor al lado mayor, <em>en ambos rectángulos</em>.
+      Por ejemplo, sean \(L1\) y \(l1\) el lado mayor y menor del rectángulo original, respectivamente; y \(L2\) y \(l2\) el lado mayor y menor del rectángulo reducido. 
+      Entonces, para establecer si los lados son proporcionales, debemos comparar las razones \(L1:l1\) y \(L2:l2\), mas no \(l1:L1\) y \(L2:l2\).
+    </p>
+    <p>
+    Como habrás notado, no es tan fácil que sean proporcionales las razones del rectángulo original y el que resulta de recortar este a la mitad. Avanza a la página 2 para seguir explorando.
+    </p>
+
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>
+    
+
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>TITULO</title>	
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body style="margin:0px;padding:0px;overflow:hidden;">
+
+<p align="center">
+<ajs name="Descartes" width=400 height=450 code="Descartes">
+   <param name="tamaño" value="400x450">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.3.12, 2014-07-09">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' escala='15' O.y='-50' imagen='images/fondo.png' despl_imagen='expand.' fondo='grisClaro' red='no' red10='no' ejes='405860' texto='no'">
+   <param name="C_01" value="id='ant' tipo='gráfico' espacio='E1' tamaño='6' expresión='(disp.x,disp.y)' activo-si='!verif'">
+   <param name="C_02" value="id='ant.x' tipo='numérico' región='escenario' espacio='E1' nombre='ant.x' expresión='(0,0,0,0)' valor='xant' incr='1' min='-11' max='disp.x-1' discreto='sí' fijo='sí' visible='sí' pos_mensajes='centro'">
+   <param name="C_03" value="id='ant.y' tipo='numérico' región='escenario' espacio='E1' nombre='ant.y' expresión='(0,0,0,0)' valor='yant' incr='1' min='-11' max='disp.y-1' discreto='sí' fijo='sí' visible='sí' pos_mensajes='centro'">
+   <param name="C_04" value="id='disp' tipo='gráfico' espacio='E1' tamaño='6' expresión='(disp.x,disp.y)' fijo='sí' activo-si='!verif'">
+   <param name="C_05" value="id='disp.x' tipo='numérico' región='escenario' espacio='E1' nombre='disp.x' expresión='(0,0,0,0)' valor='xdisp' incr='1' min='ant.x+1' max='11' discreto='sí' fijo='sí' visible='sí' pos_mensajes='centro'">
+   <param name="C_06" value="id='disp.y' tipo='numérico' región='escenario' espacio='E1' nombre='disp.y' expresión='(0,0,0,0)' valor='ydisp' incr='1' min='ant.x+1' max='11' discreto='sí' fijo='sí' visible='sí' pos_mensajes='centro'">
+   <param name="C_07" value="id='verif' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Verificar' expresión='(141,410,120,30)' fijo='sí' visible='sí' color='blanco' fuente puntos='16' imagen='images/btn120x30.png' acción='calcular' parámetro='verif=1\nverifica()' dibujar-si='(!verif)&&0'">
+   <param name="C_08" value="id='reint' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Reintentar' expresión='(270,410,120,30)' fijo='sí' visible='sí' color='blanco' fuente puntos='16' imagen='images/btn120x30.png' acción='calcular' parámetro='verif=0' dibujar-si='(verif)&(!bien)&(intetos<3)' pos_mensajes='centro'">
+   <param name="C_09" value="id='resp' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Respuesta' expresión='(270,410,120,30)' fijo='sí' visible='sí' color='blanco' fuente puntos='16' imagen='images/btn120x30.png' acción='calcular' parámetro='respuesta()' dibujar-si='(verif)&(!bien)&(intetos=3)'">
+   <param name="C_10" value="id='ctrlRadio' tipo='gráfico' espacio='E1' expresión='(ctrlRadio.x,ctrlRadio.y)' dibujar-si='0'">
+   <param name="A_01" value="id='init()' algoritmo='sí' algoritmo='sí' hacer='calculos()'">
+   <param name="A_02" value="id='calculos()' algoritmo='sí' algoritmo='sí' hacer='xdisp=9;ydisp=2;xant=-7;yant=-5'">
+   <param name="A_03" value="id='CalDis()' algoritmo='sí' algoritmo='sí' hacer='p1.x=ant.x;p1.y=ant.y;p2.x=disp.x;p2.y=ant.y;p3.x=disp.x;p3.y=disp.y;p4.x=ant.x;p4.y=disp.y;d1=sqrt((p1.x)^2+(p1.y)^2);d2=sqrt((p2.x)^2+(p2.y)^2);d3=sqrt((p3.x)^2+(p3.y)^2);d4=sqrt((p4.x)^2+(p4.y)^2);w=p2.x-p1.x;h=p3.y-p2.y'">
+   <param name="A_04" value="id='verifica()' algoritmo='sí' algoritmo='sí' inicio='tipoEr=0;intetos=intetos+1' hacer='tipoEr=(w#h)?3:0;tipoEr=((d1<9.8)|(d2<9.8)|(d3<9.8)|(d4<9.8))?2:tipoEr;tipoEr=((d1>=10.1)|(d2>=10.1)|(d3>=10.1)|(d4>=10.1))?1:tipoEr;bien=(tipoEr=0)?1:0'">
+   <param name="A_05" value="id='respuesta()' algoritmo='sí' algoritmo='sí' hacer='verif=1;bien=1;tipoEr=0;disp.x=7;disp.y=7;ant.x=-7;ant.y=-7;'">
+   <param name="A_06" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='init()'">
+   <param name="A_07" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='CalDis()'">
+   <param name="G_01" value="espacio='E1' tipo='arco' color='74808080' radio='10' fin='360' fijo='sí' ancho='3'">
+   <param name="G_02" value="espacio='E1' tipo='polígono' color='82ff1c18' expresión='(p1.x,p1.y)(p2.x,p2.y)(p3.x,p3.y)(p4.x,p4.y)(p1.x,p1.y)' ancho='3'">
+   <param name="G_03" value="espacio='E1' tipo='texto' dibujar-si='(verif)&(tipoEr=1)' expresión='[20,330]' texto='Las esquinas del rectánguo no pueden salir\ndel circulo pues en estas zonas no habría\ncobertura. Intenta nuevamente.' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_04" value="espacio='E1' tipo='texto' dibujar-si='(verif)&(tipoEr=2)' expresión='[20,330]' texto='Si el rectángulo es mucho más pequeño que\nla circunferencia, se desperdicia área en la\nque puede dar cobertura una antena.\nIntenta nuevamente.' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_05" value="espacio='E1' tipo='texto' dibujar-si='(verif)&(tipoEr=3)' expresión='[20,330]' texto='Si se pone el rectángulo de esta forma, se\ndesperdicia área del lado más corto.\nIntenta nuevamente.' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_06" value="espacio='E1' tipo='texto' dibujar-si='(w=h)&(verif)' expresión='[20,330]' texto='Muy bien, de esta forma se maximiza el aréa\ndel circulo, la forma que se debe construir es\nun cuadrado ya que este es simétrico en\ndiferentes cortes como la circunferencia.' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_07" value="espacio='E1' tipo='texto' dibujar-si='debug' expresión='[20,20]' texto='tipoEr=[tipoEr]\nbien=[bien]\nd1=[d1]\nd2=[d2]\nd3=[d3]\nd4=[d4]' fijo='sí'">
+</ajs></p>
+
+</body>
+</html>

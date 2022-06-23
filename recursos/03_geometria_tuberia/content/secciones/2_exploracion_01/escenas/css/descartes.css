@@ -1,0 +1,47 @@
+div.DescartesSpinnerContainer, div.DescartesTextFieldContainer, div.DescartesMenuContainer{
+	background: none  !important;
+}
+
+.DescartesButtonContainer,
+.DescartesSpinnerLabel{
+
+	background: -webkit-linear-gradient(top, rgb(7, 106, 99) 0%, rgb(35, 163, 142) 93%, rgb(37, 169, 145) 96%, rgb(94, 194, 175) 100%);
+	background: -o-linear-gradient(top, rgb(7, 106, 99) 0%, rgb(35, 163, 142) 93%, rgb(37, 169, 145) 96%, rgb(94, 194, 175) 100%);
+	background: -ms-linear-gradient(top, rgb(7, 106, 99) 0%, rgb(35, 163, 142) 93%, rgb(37, 169, 145) 96%, rgb(94, 194, 175) 100%);
+	background: -moz-linear-gradient(top, rgb(7, 106, 99) 0%, rgb(35, 163, 142) 93%, rgb(37, 169, 145) 96%, rgb(94, 194, 175) 100%);
+	background: linear-gradient(to bottom, rgb(7, 106, 99) 0%, rgb(35, 163, 142) 93%, rgb(37, 169, 145) 96%, rgb(94, 194, 175) 100%);
+
+	border-radius: 6px;
+	
+	
+	color: white;
+	text-shadow:0px 0px 3px black;
+}
+
+
+
+.DescartesSpinnerLabel{
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.DescartesSpinnerContainer > .DescartesSpinnerField {
+	border-radius: 6px;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+#gAreaSed,
+#gAreaAgua,
+#graficos{
+	
+	border-radius: 20px;
+	border: 3px solid #939683;
+	overflow: hidden;
+}
+
+#gAreaSed > canvas,
+#gAreaAgua > canvas,
+#graficos > canvas{
+	border-radius: 11px;
+}

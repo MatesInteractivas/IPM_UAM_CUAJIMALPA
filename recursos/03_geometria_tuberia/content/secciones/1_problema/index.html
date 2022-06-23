@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+  <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+
+</head>
+
+<body onload="initialize();">
+  
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    <!-- INICIA EL CONTENIDO DE LA PÁGINA -->
+    
+    <!--- Título de la página -->
+    <h1>Planteamiento del problema : Sedimento en tubería</h1>
+  
+    <!--- Párrafo -->
+    <p>
+      Supongamos que tenemos un desagüe de un poblado que drena el agua de lluvia y drenaje. 
+      El flujo de agua es más o menos constante y el tubo es suficiente para desalojar el líquido.
+      El problema es que, a un ritmo también constante, la tubería se va llenando de sedimentos en la parte inferior
+      de manera uniforme, como se muestra en el siguiente corte transversal de la tubería:   
+    </p>
+    
+      <div class="course_extern_content"> 
+        <img src="imgs/foto1.png"></img>
+      </div>
+  
+	<p>
+	Como el sedimento seguirá acumulándose en la tubería con el paso del tiempo, llegará un momento en que la capacidad de esta última para drenar el agua ya no será suficiente.
+	Es nuestra tarea determinar el tiempo máximo que se puede esperar para remplazar o desazolvar el tubo, ya que implica dejar sin servicio de drenaje por varias horas al poblado.
+	</p>
+  
+	<div class='importante' style='margin-left:15%;margin-right:15%;'>
+	  <br>
+	  <span style='margin:30px 20px;'>
+	  La única información con la que contamos es la siguiente:
+	  </span>
+	  <ul>
+	    <li>el radio de la tubería</li>
+	    <li>la altura del sedimento dentro del tubo</li>
+	    <li>la altura del agua con el nivel actual de sedimento</li>
+	    <li>la velocidad con la que se incrementa la cantidad de sedimento</li>		.
+	  </ul>
+	</div>
+	
+	<br>
+	
+	<div class="course_extern_content"> 
+        <img src="imgs/foto2.png"></img>
+	</div>
+  
+    <div class='problema'>
+    <strong>Problema</strong>
+      <br><br>
+      Resumiendo el problema, lo que tenemos que calcular es el tiempo que puede pasar antes de que el sedimento haya incrementado su nivel
+      de tal modo que ya no permite el paso del agua considerando el flujo de líquido actual. 
+     <!--<ol>
+    	  <li>
+          el área restante que puede ocupar el sedimento para que aún permita el paso del 
+          agua considerando el flujo de líquido actual;
+        </li>
+	  <br>
+    	  <li>
+	    el tiempo que le tomará al sedimento llenar dicha área.
+        </li>
+    	</ol>-->
+  </div>
+  
+
+    <!-- TERMINA EL CONTENIDO DE LA PÁGINA -->
+    
+    
+         <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+    
+  
+  <!-- TERMINA LA INFO SOBRE LAS CONDICIONES DE USO -->
+    
+
+  </div>
+  
+</article>
+
+
+
+
+</body>
+
+</html>

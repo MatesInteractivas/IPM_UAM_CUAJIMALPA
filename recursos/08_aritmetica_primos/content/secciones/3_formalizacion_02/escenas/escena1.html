@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>TITULO</title>
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body style="margin:0px;padding:0px;overflow:hidden;">
+
+<p align="center">
+<ajs name="Descartes" width=760 height=480 code="Descartes">
+   <param name="tamaño" value="760x480">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' escala='1' O.x='-300' O.y='100' imagen='images/fondo.png' despl_imagen='centrada' fondo='grisClaro' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='a' tipo='numérico' interfaz='botón' región='interior' espacio='E1' expresión='(40,100,45,45)' fijo='sí' visible='sí' imagen='images/avanzar.png' acción='calcular' parámetro='p=(p<3)?1:4\nmal=1\nbien=0' dibujar-si='p<6'">
+   <param name="C_02" value="id='b' tipo='numérico' interfaz='botón' región='interior' espacio='E1' expresión='(40,180,45,45)' fijo='sí' visible='sí' imagen='images/avanzar.png' acción='calcular' parámetro='p=(p<3)?1:4\nmal=2\nbien=0' dibujar-si='p<6' pos_mensajes='centro'">
+   <param name="C_03" value="id='c' tipo='numérico' interfaz='botón' región='interior' espacio='E1' expresión='(40,260,45,45)' fijo='sí' visible='sí' imagen='images/avanzar.png' acción='calcular' parámetro='p=(p<3)?2:5\nbien=3\nmal=0' dibujar-si='p<6' pos_mensajes='centro'">
+   <param name="C_04" value="id='d' tipo='numérico' interfaz='botón' región='interior' espacio='E1' expresión='(40,340,45,45)' fijo='sí' visible='sí' imagen='images/avanzar.png' acción='calcular' parámetro='p=(p<3)?2:5\nbien=4\nmal=0' dibujar-si='p<6' pos_mensajes='centro'">
+   <param name="C_05" value="id='ok' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Seguir' expresión='(E1._w/2-45,E1._h-40,90,30)' fijo='sí' visible='sí' color='blanco' fuente puntos='18' imagen='images/btn90x30.png' acción='calcular' parámetro='p=p+1\nbien=0\nmal=0' dibujar-si='p=2' pos_mensajes='centro'">
+   <param name="C_06" value="id='ok' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Seguir' expresión='(E1._w/2-45,E1._h-40,90,30)' fijo='sí' visible='sí' color='blanco' fuente puntos='18' imagen='images/btn90x30.png' acción='calcular' parámetro='p=p+1\nbien=0\nmal=0' dibujar-si='p=5' pos_mensajes='centro'">
+   <param name="C_07" value="id='ok' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Reiniciar' expresión='(E1._w/2-45,E1._h-40,90,30)' fijo='sí' visible='sí' color='blanco' fuente puntos='18' imagen='images/btn90x30.png' acción='calcular' parámetro='p=0\nbien=0\nmal=0' dibujar-si='p=6' pos_mensajes='centro'">
+   <param name="A_01" value="id='setp(x)' algoritmo='sí' expresión='set' algoritmo='sí' hacer='set=(p<2)?1+x:4+x'">
+   <param name="A_02" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='p=0'">
+   <param name="A_03" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="G_01" value="espacio='E1' tipo='texto' dibujar-si='p<3' expresión='[20,20]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}\f1\fs36\b Imagina mentalmente el paquete \f2\fs40\i{\*\mjaformula n=p x q}\f1\fs36\i0  de cajas c\u250 bicas de un pie de arista\par y piensa cu\u225 l es la cantidad de pies cuadrados de lona necesarios para cubrir la\par parte superior del paquete.}' fuente='SansSerif,BOLD,18' fijo='sí' ancho='720'">
+   <param name="G_02" value="espacio='E1' tipo='texto' dibujar-si='p<3' expresión='[90,113]' texto='2p + 2q' fuente='SansSerif,PLAIN,18' fijo='sí' ancho='720'">
+   <param name="G_03" value="espacio='E1' tipo='texto' dibujar-si='p<3' expresión='[90,193]' texto='n × n' fuente='SansSerif,PLAIN,18' fijo='sí' ancho='720'">
+   <param name="G_04" value="espacio='E1' tipo='texto' dibujar-si='p<3' expresión='[90,273]' texto='p × q' fuente='SansSerif,PLAIN,18' fijo='sí' ancho='720'">
+   <param name="G_05" value="espacio='E1' tipo='texto' dibujar-si='p<3' expresión='[90,353]' texto='n' fuente='SansSerif,PLAIN,18' fijo='sí' ancho='720'">
+   <param name="G_06" value="espacio='E1' tipo='texto' dibujar-si='(mal=1)&(p=1)' expresión='[200,32+80*mal]' texto='No, esta no es la respuesta porque p y q representan los lados del paquete, por lo que 2p + 2q corresponde más bien al perímetro del paquete.' fuente='SansSerif,PLAIN,18' fijo='sí' ancho='500'">
+   <param name="G_07" value="espacio='E1' tipo='texto' dibujar-si='p=2' expresión='[250,120]' texto='Claro, para cubrir n = p × q cajas por arriba hacen falta n = p × q pies cuadrados de lona.' fuente='SansSerif,PLAIN,18' fijo='sí' ancho='380'">
+   <param name="G_08" value="espacio='E1' tipo='imagen' dibujar-si='(p>1)&(p<5)' expresión='(120,150)' archivo='images/cajas02.png'">
+   <param name="G_09" value="espacio='E1' tipo='texto' dibujar-si='(p>1)&(p<5)' expresión='[442,220]' texto='p' fuente='SansSerif,BOLD,18' fijo='sí'">
+   <param name="G_10" value="espacio='E1' tipo='texto' dibujar-si='(p>1)&(p<5)' expresión='[245,250]' texto='q' fuente='SansSerif,BOLD,18' fijo='sí'">
+   <param name="G_11" value="espacio='E1' tipo='texto' dibujar-si='(p>2)&(p<6)' expresión='[20,20]' texto='La superficie que falta por cubrir, es decir, el área total de los cuatro costados del paquete, puede calcularse en pies cuadrados como:' fuente='SansSerif,BOLD,18' fijo='sí' ancho='720'">
+   <param name="G_12" value="espacio='E1' tipo='texto' dibujar-si='(p>2)&(p<6)' expresión='[90,113]' texto='n + 2p + 2q' fuente='SansSerif,PLAIN,18' fijo='sí' ancho='720'">
+   <param name="G_13" value="espacio='E1' tipo='texto' dibujar-si='(p>2)&(p<6)' expresión='[90,193]' texto='2q × 2p' fuente='SansSerif,PLAIN,18' fijo='sí' ancho='720'">
+   <param name="G_14" value="espacio='E1' tipo='texto' dibujar-si='(p>2)&(p<6)' expresión='[90,273]' texto='2p + 2q' fuente='SansSerif,PLAIN,18' fijo='sí' ancho='720'">
+   <param name="G_15" value="espacio='E1' tipo='texto' dibujar-si='(p>2)&(p<6)' expresión='[90,353]' texto='p + q + p + q' fuente='SansSerif,PLAIN,18' fijo='sí' ancho='720'">
+   <param name="G_16" value="espacio='E1' tipo='texto' dibujar-si='p=5' expresión='[250,120]' texto='Así es.\n\nDe este modo, el total de pies cuadrados de lona será p × q + 2p + 2q = n + 2(p + q).' fuente='SansSerif,PLAIN,18' fijo='sí' ancho='380'">
+   <param name="G_17" value="espacio='E1' tipo='imagen' dibujar-si='p=5' expresión='(130,130)' archivo='images/cajas03.png'">
+   <param name="G_18" value="espacio='E1' tipo='texto' dibujar-si='p=5' expresión='[442,245]' texto='p' fuente='SansSerif,BOLD,18' fijo='sí'">
+   <param name="G_19" value="espacio='E1' tipo='texto' dibujar-si='p=5' expresión='[245,275]' texto='q' fuente='SansSerif,BOLD,18' fijo='sí'">
+   <param name="G_20" value="espacio='E1' tipo='imagen' dibujar-si='p=6' expresión='(90,130)' archivo='images/cajas03.png'">
+   <param name="G_21" value="espacio='E1' tipo='texto' dibujar-si='p=6' expresión='[20,20]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}\f1\fs36\b Finalmente llegamos a la conclusi\u243 n de que la cantidad de pies cuadrados de lona\par que necesitamos puede calcularse como:\par \par                                                      \f2\fs40\i{\*\mjaformula L = p x q + 2p + 2q}\f1\fs36\i0\par Lo anterior es lo mismo que:\par                                                       \f2\fs40\i{\*\mjaformula L = n + 2(p + q)}\f1\fs36\i0}' fuente='SansSerif,BOLD,18' fijo='sí' ancho='720'">
+   <param name="G_22" value="espacio='E1' tipo='texto' dibujar-si='p=6' expresión='[402,245]' texto='p' fuente='SansSerif,BOLD,18' fijo='sí'">
+   <param name="G_23" value="espacio='E1' tipo='texto' dibujar-si='p=6' expresión='[205,275]' texto='q' fuente='SansSerif,BOLD,18' fijo='sí'">
+   <param name="G_24" value="espacio='E1' tipo='imagen' dibujar-si='mal>0' coord_abs='sí' expresión='(15,32+80*mal)' archivo='images/mal.png'">
+   <param name="G_25" value="espacio='E1' tipo='imagen' dibujar-si='bien>0' coord_abs='sí' expresión='(15,32+80*bien)' archivo='images/bien.png'">
+   <param name="G_26" value="espacio='E1' tipo='texto' dibujar-si='(mal=2)&(p=1)' expresión='[200,32+80*mal]' texto='No, esto sería correcto si el paquete fuera un cuadrado de n cajas de lado.' fuente='SansSerif,PLAIN,18' fijo='sí' ancho='500'">
+   <param name="G_27" value="espacio='E1' tipo='texto' dibujar-si='(mal=1)&(p=4)' expresión='[240,32+80]' texto='No, esta expresión representa un número mayor que el total de cajas. De hecho, es el área total de la cubierta. Te adelantaste.' fuente='SansSerif,PLAIN,18' fijo='sí' ancho='480'">
+   <param name="G_28" value="espacio='E1' tipo='texto' dibujar-si='(mal=2)&(p=4)' expresión='[240,32+80]' texto='No, esta expresión representa un número mayor que el total de cajas. De hecho, es el cuádruple del número de cajas.' fuente='SansSerif,PLAIN,18' fijo='sí' ancho='480'">
+   <param name="Animación" value="pausa='100' controles='no' auto='no' inicio='t=0' hacer='t=t+1;temp=((t=1)&(paso=0))?calcseg():0;temp=((t>14)&(t<16))?calrect():0;temp=((t>15)&(t<41))?trasp():0;temp=((t>40)&(t<61))?rotar():0;temp=((t>70)&(t<91))?traslada():0;temp=((t>80)&(t<101))?trasp2():0;temp=((t>99)&(t<111))?frazon():0;temp=(t=100)?recalc():0' mientras='t<110'">
+</ajs></p>
+
+</body>
+</html>

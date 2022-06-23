@@ -1,0 +1,16 @@
+{
+  "nivel": [
+    "Bachillerato",
+    "Licenciatura"
+  ],
+  "titulo": "Unidades Didácticas Interactivas de Introducción al Pensamiento Matemático",
+  "abreviacion": "IPM - UAM",
+  "descripcion": "12 recursos digitales interactivos autosuficientes para la Unidad de Enseñanza - Aprendizaje 'Introducción al Pensamiento Matemático' de la Universidad Autónoma Metropolitana (UAM) Cuajimalpa. Los recursos se encuentran empaquetados según el estándar SCORM 1.2. La secuencia didáctica utilizada se encuentra conformada por: 1. Planteamiento del problema; 2. Exploración; 3. Formalización; 4. Resolución; 5. Reflexiones, generalizaciones y aplicaciones; y 6. Evaluación. En la evaluación se presentan 5 preguntas de opción múltiple que comunican la calificación del alumno a la plataforma Moodle utilizando el API del mismo estándar SCORM.",
+  "resena": "12 recursos interactivos autosuficientes de matemáticas asociados a problemas de aplicación.",
+  "recursos_valores_omision": {
+    "tamano": {
+      "ancho":960,
+      "alto":640
+    }
+  }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>TITULO</title>
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body style="margin:0px;padding:0px;overflow:hidden;">
+
+<p align="center">
+<ajs name="Descartes" width=760 height=480 code="Descartes">
+   <param name="tamaño" value="760x480">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.340, 2015-05-21">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' imagen='images/fondo.jpg' despl_imagen='arr-izq' fondo='f3f0ec' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='Retro' x='3%' y='30%' ancho='70%' alto='65%' fijo='sí' escala='130' O.x='-210' O.y='130' despl_imagen='arr-izq' fondo='18b2dde1' red='no' red10='no' ejes='no' texto='no' números='sí'">
+   <param name="C_01" value="id='GenInf' tipo='numérico' región='interior' espacio='Retro' nombre='_nada_' expresión='(15,Retro._h/2-25,27,50)' incr='1' min='0' max='3' decimales='0' fijo='sí' visible='no' acción='calcular' parámetro='GenSup=GenInf+1\nShwSeg=(GenInf==3)?1:ShwSeg'">
+   <param name="A_01" value="id='NAbejas' vector='sí' evaluar='una-sola-vez' tamaño='5' expresión='NAbejas[0]=1;NAbejas[1]=1;NAbejas[2]=NAbejas[0]+NAbejas[1];NAbejas[3]=NAbejas[1]+NAbejas[2];NAbejas[4]=NAbejas[2]+NAbejas[3]'">
+   <param name="A_02" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='GenInf=0;GenSup=GenInf+1'">
+   <param name="A_03" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="G_01" value="espacio='E1' tipo='texto' dibujar-si='0' expresión='[20,20]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Courier New;}{\colortbl\red35\green35\blue35;\red64\green64\blue64;\red34\green162\blue141;\red112\green63\blue24;\red228\green113\blue0;\red236\green112\blue24;\red32\green48\blue58;}\cf0\f1\fs34\u201 sta es una escena Descartes. Se recomiendan los siguientes lineamientos:\par \par \b Ancho m\u225 ximo\b0  de la escena: 760px\par \b Alto m\u225 ximo\b0  (recomendado, no obligatorio): 480px\par \par \b Texto de p\u225 rrafo\b0 : 17px, \cf1 color grisObscuro\cf0\par \par \b Bot\u243 n\b0 : 30px de alto, texto blanco de 16 puntos\par \par \b Men\u250 \b0 : 34px de alto \par \par \b Pulsador\b0 : alto recomendado 50px \par \par \b Campo de texto\b0 : 34px de alto\par \par Por lo general, los colores que se recomienda usar en las escenas para resaltar cosas son:\par * \cf2\b color 22a28d \b0\cf3\par * \b\cf4 color e47100\cf5\b0  (color de men\u250  de navegaci\u243 n)\cf3\par \par \cf1 El fondo de estas escenas es images/fondo.jpg\cf3\par \cf6\f3\fs30\par }' fuente='SansSerif,PLAIN,17' fijo='sí' info='Párrafo'">
+   <param name="G_02" value="espacio='Retro' tipo='segmento' fondo='sí' color='negro' expresión='(0,-2)(0,3)' fijo='sí'">
+   <param name="G_03" value="espacio='E1' tipo='texto' color='grisObscuro' expresión='[20,20]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}\f1\fs34 El n\u250 mero de abejas de la generaci\u243 n inferior {\*\mjaformula{\expr GenInf\decimals 2\fixed0}} es {\*\mjaformula{\expr NAbejas[GenInf]\decimals 2\fixed0}}.\par Es decir, \f2\fs38\i{\*\mjaformula F{\subix{\expr GenInf\decimals 2\fixed0}}={\expr NAbejas[GenInf]\decimals 2\fixed0}}\f1\fs34\i0 .\par El n\u250 mero de abejas de la generaci\u243 n inferior {\*\mjaformula{\expr GenSup\decimals 2\fixed0}} es {\*\mjaformula{\expr NAbejas[GenSup]\decimals 2\fixed0}}.\par Es decir, \f2\fs38\i{\*\mjaformula F{\subix{\expr GenSup\decimals 2\fixed0}}={\expr NAbejas[GenSup]\decimals 2\fixed0}}\f1\fs34\i0 .}' fuente='SansSerif,PLAIN,17' fijo='sí'">
+   <param name="G_04" value="espacio='Retro' tipo='segmento' fondo='sí' color='negro' expresión='(-2,0)(6,0)' fijo='sí'">
+   <param name="G_05" value="espacio='Retro' tipo='punto' fondo='sí' expresión='(-0.17,s)' familia='s' s.intervalo='[1,2]' s.pasos='1' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Arial;}\f1\fs38\i{\*\mjaformula{\expr s\decimals 2\fixed0}}\f2\fs34\i0}' fuente='Serif,ITALIC,19' fijo='sí' tamaño='0'">
+   <param name="G_06" value="espacio='E1' tipo='texto' color='grisObscuro' expresión='[550,270]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Arial;}\f1\fs46\i{\*\mjaformula{\fraction{\num F{\subix{\expr GenSup\decimals 2\fixed0}}}{\den F{\subix{\expr GenInf\decimals 2\fixed0}}}}={\fraction{\num{\expr NAbejas[GenSup]\decimals 2\fixed0}}{\den{\expr NAbejas[GenInf]\decimals 2\fixed0}}}={\expr NAbejas[GenSup]/NAbejas[GenInf]\decimals 5\fixed0}}\f2\fs34\i0}' fuente='Serif,ITALIC,23' fijo='sí'">
+   <param name="G_07" value="espacio='Retro' tipo='punto' fondo='sí' expresión='(s-0.175,-0.15)' familia='s' s.intervalo='[0,3]' s.pasos='3' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Arial;}\f1\fs38\i{\*\mjaformula{\expr s\decimals 2\fixed0}}\f2\fs34\i0}' fuente='Serif,ITALIC,19' fijo='sí' tamaño='0'">
+   <param name="G_08" value="espacio='Retro' tipo='polígono' fondo='sí' color='8ebec0' coord_abs='sí' expresión='(1,1)(Retro._w-1,1)(Retro._w-1,Retro._h-1)(1,Retro._h-1)(1,1)' ancho='2'">
+   <param name="G_09" value="espacio='Retro' tipo='punto' color='cb0000' expresión='(GenInf,NAbejas[GenSup]/NAbejas[GenInf])' rastro='gris' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Courier New;}\f1\fs38\i{\*\mjaformula{\expr NAbejas[GenSup]/NAbejas[GenInf]\decimals 5\fixed0}}\f2\fs30\i0}' fuente='Serif,ITALIC,19' fijo='sí' tamaño='5'">
+   <param name="G_10" value="espacio='Retro' tipo='segmento' color='00b500' dibujar-si='ShwSeg' expresión='(-1,(sqrt(5)+1)/2)(5,(sqrt(5)+1)/2)' fijo='sí'">
+</ajs></p>
+
+</body>
+</html>

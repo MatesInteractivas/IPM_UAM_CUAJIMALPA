@@ -1,0 +1,147 @@
+
+/*
+ * SimpleModal Basic Modal Dialog
+ * http://simplemodal.com
+ *
+ * Copyright (c) 2013 Eric Martin - http://ericmmartin.com
+ *
+ * Licensed under the MIT license:
+ *   http://www.opensource.org/licenses/mit-license.php
+ */
+
+#basic-modal-content {display:none;}
+
+/* Overlay */
+#simplemodal-overlay {background-color:#000;}
+
+/* Container */
+#simplemodal-container {
+	color:#bbb; 
+	background-color:#333; 
+	border:4px solid #444; 
+	padding:12px;
+
+	position: absolute;
+	background-color: #FFF;
+	border: 2px solid #36B399;
+	border-radius: 5px;
+	color: #232323;
+	overflow: hidden;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
+	font-family: arial;
+	font-size: 15px;
+
+
+
+	top:50%;
+	left: 50%;
+
+	transform: translate(-50%, -50%);
+
+}
+
+
+#simplemodal-container .content{
+	padding-top: 10px; 
+}
+
+#simplemodal-container .simplemodal-data {
+	padding:8px;
+}
+
+#simplemodal-container code {
+	background:#141414; 
+	border-left:3px 
+	solid #65B43D; 
+	color:#bbb; 
+	display:block; 
+	font-size:12px; 
+	margin-bottom:12px; 
+	padding:4px 6px 6px;
+}
+
+#simplemodal-container a {color:#ddd;}
+#simplemodal-container a.modalCloseImg {
+	display:block; 
+	border-radius: 8px;
+	padding-top: 4px;
+	font-family: sans-serif;
+	text-decoration: none;
+	font-size: 20px;
+	line-height: 20px;
+	text-align: center;
+	cursor: pointer;
+	
+	color: #ffffff;
+		
+	background: #323B4D; /* Old browsers */
+	background: -moz-linear-gradient(top,  #36B399 0%, #323B4D 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#36B399), color-stop(100%,#323B4D)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #36B399 0%, #323B4D 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #36B399 0%, #323B4D 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #36B399 0%, #323B4D 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #36B399 0%, #323B4D 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#36B399', endColorstr='#323B4D',GradientType=0 ); /* IE6-9 */
+	
+	position: absolute;
+	top: 8px;
+	right: 6px;
+	width: 28px;
+	height: 25px;
+	font-size: 30px;
+}
+#simplemodal-container a.modalCloseImg::before{
+	content: '×';
+}
+
+
+#simplemodal-container  h3 {
+	font-size: 20px;
+	font-weight: bold;
+	color: #323B4D;
+	margin: 0px;
+	border-bottom: 2px solid #36B399;
+	line-height: 42px;
+	text-align: center;	
+}
+
+
+
+
+#simplemodal-container.error {
+	border-color: #dd0000;
+}
+
+
+#simplemodal-container.error  h3 {
+	border-bottom: 2px solid #dd0000;
+	color:#8c2323;
+	background: url('imgs/error.png') no-repeat 0, 0;
+	padding-left: 30px;
+	padding-right: 28px;
+}
+
+#simplemodal-container.error a.modalCloseImg{
+
+
+	background: -webkit-linear-gradient(top, rgb(210, 106, 98) 0%, rgb(205, 45, 33) 4%, rgb(161, 23, 1) 48%, rgb(142, 23, 0) 100%);
+	background: -o-linear-gradient(top, rgb(210, 106, 98) 0%, rgb(205, 45, 33) 4%, rgb(161, 23, 1) 48%, rgb(142, 23, 0) 100%);
+	background: -ms-linear-gradient(top, rgb(210, 106, 98) 0%, rgb(205, 45, 33) 4%, rgb(161, 23, 1) 48%, rgb(142, 23, 0) 100%);
+	background: -moz-linear-gradient(top, rgb(210, 106, 98) 0%, rgb(205, 45, 33) 4%, rgb(161, 23, 1) 48%, rgb(142, 23, 0) 100%);
+	background: linear-gradient(to bottom, rgb(210, 106, 98) 0%, rgb(205, 45, 33) 4%, rgb(161, 23, 1) 48%, rgb(142, 23, 0) 100%);
+}
+
+
+
+#simplemodal-container.success {
+
+}
+
+
+#simplemodal-container.success h3 {
+	
+	color:#78a44c;
+	background: url('imgs/success.png') no-repeat 0, 0;
+	padding-left: 30px;
+}
+

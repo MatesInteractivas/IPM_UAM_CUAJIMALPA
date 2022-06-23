@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+  <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Formalización del problema</h1>
+    
+    <h2>Cálculo del número de abejas en una generación dadas las generaciones posteriores</h2>
+
+	<p class='problema'>
+    <strong>Objetivo</strong>
+    <br><br>
+	En esta página analizaremos el brazo izquierdo del árbol genealógico que exploraste anteriormente, y buscaremos una similitud con alguna generación sucesiva.
+	A partir de ella, calcularemos el número de abejas sobre este brazo en la generación anterior (más arriba en el árbol).
+	<br><br>
+	Haremos lo mismo para el brazo derecho y, a partir de estos dos datos, calcularemos las abejas totales en la generación anterior.
+    </p>
+    
+    <h2>¿En qué nos ayuda la autosimilitud?</h2>
+    
+    <!--- Párrafo --->
+    <p>
+    Para aprovechar la autosimilitud, partiremos ahora el árbol en un brazo izquierdo y uno derecho.
+    Esta división se hace evidente a partir de la segunda generación.
+    Para poner un poco más de sabor al problema y hacer evidente que este procedimiento se puede aplicar a cualquier generación, en esta formalización nos enfocaremos en el cálculo del número de abejas de la generación 4 y 5.
+    </p>
+
+    <p>
+    Aborda el siguiente recurso interactivo, en el que habrás de completar algunos datos para proceder.
+    </p>
+	
+    <!--- Instrucciones --->
+    <div class="instrucciones">
+    A continuación se divide el árbol en una rama izquierda y una rama derecha mediante un segmento vertical azul.
+    Se te mostrará una abeja o conjunto de abejas resaltado en amarillo. Al pulsar sobre la parte resaltada, tendrás que responder unas preguntas al respecto antes de continuar.
+    Una vez respondidas correctamente podrás analizar otras abejas importantes en el árbol de la misma manera.
+    Si no puedes responder las preguntas, tras tres intentos fallidos podrás ver la respuesta. Sin embargo, procura obtener las respuestas correctas antes de continuar.
+    <!--<br><br>
+    <span style="font-size:12px;">
+      * Nota que, con el objeto que el primer rectángulo sea vertical, \(l\) está restringido a un valor máximo de tres cuartas partes de \(L\).
+    </span>-->
+    </div>
+
+
+    <!-- ejemplo para incluir un documento externo en un iframe, aqui van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="750" height="510" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+
+    <p>
+    De tu interacción con el recurso anterior debiste haber entendido que:
+	<ol>
+		<li>El número de abejas de la generación 4 se obtiene de sumar el número de abejas de la generación 3 con las de la 2: \(F_4=F_3+F_2\). O, escrito en orden: \(F_4=F_2+F_3\).</li>
+		<br>
+		<li>El número de abejas de la generación 5 se obtiene de sumar el número de abejas de la generación 4 con la 3. Ya escrito en orden: \(F_5=F_3+F_4\).</li>
+		<br>
+		<li>De forma general, para una generación \(n\) cualquiera que no sea ni la generación cero ni la uno, el número de abejas de dicha generación se obtiene sumando las abejas de las dos generaciones posteriores (eso es, las dos que se encuentran inmediatemente abajo en el árbol).</li>
+	</ol>
+    </p>
+
+
+    <p class="importante" style='margin-left:10%;margin-right:10%;'>
+    De forma general, para una generación \(n\), donde \(n>1\), el número de abejas en esa generación se calcula mediante la siguiente suma: \[F_n=F_{n-2}+F_{n-1}\].
+    <br>
+    La anterior notación define una sucesión de números \(F\) (el número de abejas) en función de un índice de generación \(n\), y la regla de correspondencia es la mostrada arriba.
+    <br><br>
+    Esta sucesión se conoce como <em><strong>la sucesión de Fibonacci</strong></em>, en honor al matemático italiano Leonardo Fibonacci, también conocido como Leonardo de Pisa.
+    </p>
+
+
+    <p>
+	Ahora que ya conoces una forma de calcular los números de Fibonacci dependiendo del índice \(n\) de la generación, se te presentan unas preguntas que te convendría responder antes de pasar a la siguiente sección.
+    </p>
+
+    <div class="problema">
+      <strong>Preguntas</strong>
+
+      <ol>
+	<li>Si te encuentras en una generación \(n\) dada, ¿cómo calculas el cociente del número de abejas de esa generación respecto al número de abejas de su generación posterior dada la fórmula de la sucesión de Fibonacci?</li>
+	<br>
+	<li>Recordando un poco los cocientes que abordaste en la segunda página de la exploración, ¿qué pasa con el cociente encontrado en la pregunta anterior conforme \(n\) es cada vez más grande, es decir, conforme se consideran generaciones más y más anteriores?</li>
+      </ol>
+    </div>
+
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>      
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

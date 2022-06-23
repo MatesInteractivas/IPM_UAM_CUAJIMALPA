@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<title>HTML5</title>
+		<style>
+		body {
+			margin: 0;
+			padding: 0;
+			overflow:hidden;
+			
+		}
+
+		.boton{
+		cursor:pointer;
+		padding:5px 25px; 
+		background-color: #2bae95; background-image: -webkit-gradient(linear, left top, left bottom, from(#2bae95), to(#076A63));
+		background-image: -webkit-linear-gradient(top, #2bae95, #076A63);
+		background-image: -moz-linear-gradient(top, #2bae95, #076A63);
+		background-image: -ms-linear-gradient(top, #2bae95, #076A63);
+		background-image: -o-linear-gradient(top, #2bae95, #076A63);
+		background-image: linear-gradient(to bottom, #2bae95, #076A63);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#2bae95, endColorstr=#076A63);
+
+		border:1px solid #33842a; 
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+		border-radius: 10px;		
+		-webkit-box-shadow: 0 0 4px rgba(0,0,0, .75);
+		-moz-box-shadow: 0 0 4px rgba(0,0,0, .75);
+		box-shadow: 0 0 4px rgba(0,0,0, .75);	
+		color:#f3f3f3;
+		font-size:1.1em;
+		}
+		
+		.boton:hover, .boton:focus{
+		background-color: #218572; background-image: -webkit-gradient(linear, left top, left bottom, from(#218572), to(#043a36));
+		background-image: -webkit-linear-gradient(top, #218572, #043a36);
+		background-image: -moz-linear-gradient(top, #218572, #043a36);
+		background-image: -ms-linear-gradient(top, #218572, #043a36);
+		background-image: -o-linear-gradient(top, #218572, #043a36);
+		background-image: linear-gradient(to bottom, #218572, #043a36);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#218572, endColorstr=#043a36);
+		-webkit-box-shadow: 0 0 1px rgba(0,0,0, .75);
+		-moz-box-shadow: 0 0 1px rgba(0,0,0, .75);
+		box-shadow: 0 0 1px rgba(0,0,0, .75);
+		}
+
+
+		#caso1{
+		position:absolute;
+		top: 200px;
+		left: 450px;
+		}
+
+		#caso2{
+		position:absolute;
+		top: 250px;
+		left: 450px;
+		}
+
+		#caso3{
+		position:absolute;
+		top: 300px;
+		left: 450px;
+		}
+
+		#caso4{
+		position:absolute;
+		top: 200px;
+		left: 570px;
+		}
+
+		#caso5{
+		position:absolute;
+		top: 250px;
+		left: 570px;
+		}
+
+		#caso6{
+		position:absolute;
+		top: 300px;
+		left: 570px;
+		}
+
+		#caso7{
+		position:absolute;
+		top: 350px;
+		left: 490px;
+		}
+
+		#caso0{
+		position:absolute;
+		top: 400px;
+		left: 520px;
+		}
+
+
+		</style>
+		
+		<script type="text/javascript">
+
+			 var map1 = [
+				          [0,0,0,0],
+				          [0,1,1,0],
+				          [0,1,1,0],
+				          [0,0,0,0]
+				        ];
+
+			var map2 = [
+				          [0,0,0,0,0],
+				          [0,1,1,1,0],
+				          [0,1,1,1,0],
+				          [0,1,1,1,0],
+				          [0,0,0,0,0]
+				        ];	
+
+			var map3 = [
+				          [0,0,0,0,0,0],
+				          [0,1,1,1,1,0],
+				          [0,1,1,1,1,0],
+				          [0,1,1,1,1,0],
+				          [0,1,1,1,1,0],
+				          [0,0,0,0,0,0]
+				        ];		                
+
+       		 var tileGraphics = [];
+
+
+       		 var ctx;
+
+       		 function loadImg() {
+            
+	          var tileGraphicsToLoad = ["images/pino.png","images/manzano.png"],
+	          tileGraphicsLoaded = 0;
+
+	          for (var i = 0; i < tileGraphicsToLoad.length; i++) {
+	            tileGraphics[i] = new Image();
+	            tileGraphics[i].src = tileGraphicsToLoad[i];
+	            tileGraphics[i].onload = function() {
+
+	              tileGraphicsLoaded++;
+	              if (tileGraphicsLoaded === tileGraphicsToLoad.length) {
+	                  drawMap(map1,200,20,0);
+	                  drawMap(map2,200,200,0);
+	                  drawMap(map3,200,415,0);
+	              }
+	            }
+	          }
+
+	        }
+
+
+	         function drawMap(map,posX,posY,caso) {
+              ctx = document.getElementById('main').getContext('2d');
+
+	          var tileH = 35;
+	          var tileW = 40;
+	          
+	  		  var myMap=map;
+			  var mapX = posX;
+	          var mapY = posY;
+
+	          var drawTile;
+
+	          for (var i = 0; i < myMap.length; i++) {
+	            for (var j = 0; j < myMap[i].length; j++) {
+	              drawTile = myMap[i][j];
+
+	            switch(caso){
+	              	//caso general
+	              	case 0:
+	              		ctx.globalAlpha = 1;
+	              		break;
+	              	//filas
+	              	case 1:
+	              		if (i!=1) {
+	              			ctx.globalAlpha = 0.3;
+	              		}
+	              		else{
+	              			ctx.globalAlpha = 1;
+	              		}	              		
+	              		break;	
+	              	case 2:
+	              		if (i!=2) {
+	              			ctx.globalAlpha = 0.3;
+	              		}
+	              		else{
+	              			ctx.globalAlpha = 1;
+	              		}	              		
+	              		break;
+	              	case 3:
+	              		if (i!=myMap.length-2) {
+	              			ctx.globalAlpha = 0.3;
+	              		}
+	              		else{
+	              			ctx.globalAlpha = 1;
+	              		}	              		
+	              		break;	
+	              	//columnas
+	              	case 4:
+	              		if (j!=myMap[i].length-2) {
+	              			ctx.globalAlpha = 0.3;
+	              		}
+	              		else{
+	              			ctx.globalAlpha = 1;
+	              		}	              		
+	              		break;
+	              	case 5:
+	              		if (j!=myMap[i].length-3) {
+	              			ctx.globalAlpha = 0.3;
+	              		}
+	              		else{
+	              			ctx.globalAlpha = 1;
+	              		}	              		
+	              		break;
+	              	case 6:
+	              		if (j!=1) {
+	              			ctx.globalAlpha = 0.3;
+	              		}
+	              		else{
+	              			ctx.globalAlpha = 1;
+	              		}	              		
+	              		break;	
+	              	// filas y columnas
+	              	case 7:
+	              		if (((i==0) && (j==0)) || ((i==0) && (j==myMap[i].length-1)) || ((i==myMap.length-1) && (j==myMap[i].length-1)) || ((i==myMap.length-1) && (j==0))) {
+	              			ctx.globalAlpha = 0.3;
+	              		}
+	              		else{
+	              			ctx.globalAlpha = 1;
+	              		}	              		
+	              		break;					
+	              	default:
+	              		statements_def
+	              		break;
+	              }  
+				  
+	              ctx.drawImage(tileGraphics[drawTile], (i - j) * tileH + mapX, (i + j) * tileH / 2 + mapY);
+	            }
+	          }
+	        }
+
+
+			function init() {
+				loadImg();
+				//click event
+				document.getElementById('caso0').addEventListener('click', function() {
+				repinta(0);
+			    }, false);
+
+				document.getElementById('caso1').addEventListener('click', function() {
+				repinta(1);
+			    }, false);
+
+			    document.getElementById('caso2').addEventListener('click', function() {
+				repinta(2);
+			    }, false);
+
+			    document.getElementById('caso3').addEventListener('click', function() {
+				repinta(3);
+			    }, false);
+
+			    document.getElementById('caso4').addEventListener('click', function() {
+				repinta(4);
+			    }, false);
+
+			    document.getElementById('caso5').addEventListener('click', function() {
+				repinta(5);
+			    }, false);
+
+			    document.getElementById('caso6').addEventListener('click', function() {
+				repinta(6);
+			    }, false);
+
+			    document.getElementById('caso7').addEventListener('click', function() {
+				repinta(7);
+			    }, false);
+
+			    //touchEvent
+
+			    document.getElementById('caso0').addEventListener('touchstart', function() {
+			    repinta(0);
+			    }, false);
+
+			    document.getElementById('caso1').addEventListener('touchstart', function() {
+				repinta(1);
+			    }, false);
+
+			    document.getElementById('caso2').addEventListener('touchstart', function() {
+				repinta(2);
+			    }, false);
+
+			    document.getElementById('caso3').addEventListener('touchstart', function() {
+				repinta(3);
+			    }, false);
+
+			    document.getElementById('caso4').addEventListener('touchstart', function() {
+				repinta(4);
+			    }, false);
+
+			    document.getElementById('caso5').addEventListener('touchstart', function() {
+				repinta(5);
+			    }, false);
+
+			    document.getElementById('caso6').addEventListener('touchstart', function() {
+				repinta(6);
+			    }, false);
+
+			    document.getElementById('caso7').addEventListener('touchstart', function() {
+				repinta(7);
+			    }, false);
+			}
+
+			function repinta(caso){
+				if (caso!=0) {
+					document.getElementById('caso0').style.visibility = 'visible';	
+				}
+				else{
+					document.getElementById('caso0').style.visibility = 'hidden';
+				}
+				ctx.clearRect(0, 0, 420, 650);
+				drawMap(map1,200,20,caso);
+	            drawMap(map2,200,200,caso);
+	            drawMap(map3,200,415,caso);
+			}
+
+
+
+
+
+		</script>
+
+	</head>
+	
+	<body onload="init()">
+
+	 <canvas id="main" width="420" height="650"></canvas>	
+	 <input id="caso0" class="boton" type="button" value="Reiniciar" style="visibility:hidden;">
+	 <input id="caso1" class="boton" type="button" value="Fila 1">
+	 <input id="caso2" class="boton" type="button" value="Fila 2">
+	 <input id="caso3" class="boton" type="button" value="Fila N">
+	 <input id="caso4" class="boton" type="button" value="Columna 1">
+	 <input id="caso5" class="boton" type="button" value="Columna 2">
+	 <input id="caso6" class="boton" type="button" value="Columna N">
+	 <input id="caso7" class="boton" type="button" value="Filas y columnas">
+
+
+	</body>
+
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>  
+
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Reflexiones y aplicaciones</h1>
+    
+    <!--- Subtítulo (no necesario en introducción) --->
+    <h2>El conteo en otros ámbitos</h2>
+    
+    
+    <!--- Párrafo --->
+    <p>
+    En las páginas anteriores has visto que las herramientas de conteo son muy útiles para poder contar el número de formas de acomodar elementos dadas ciertas condiciones. No obstante, seguramente notaste que hay que ser muy cuidadoso al emplear estas herramientas, ya que en la mayoría de los casos será necesario pensar bien en la correcta manera de usarlas para llegar a un conteo correcto.
+    </p>
+
+    <p>
+    Veamos ahora otras aplicaciones de estas herramientas.
+    </p>
+
+    <div class="instrucciones">
+    Analiza los problemas planteados en el siguiente recurso interactivo y determina qué tipo de estrategia de conteo conviene. En caso de que requieras usar decimales en el campo de probabilidad, procura introducir al menos 7.
+    </div>
+
+    <!-- ejemplo para incluir un documento externo en un iframe, aquí van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="480" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+
+    <p>
+    Como has notado, hay varias otras formas de poner en uso las herramientas de conteo, más allá del juego de naipes.
+    </p>
+
+    <p>
+    Cuentas con las herramientas básicas. No obstante, no siempre has de usarlas todas, como seguro notaste en los problemas pasados, y hasta en los relacionados con los naipes. Las herramientas no te resolverán el problema; para ello es necesario meditar la naturaleza del problema y ver cuáles de las herramientas conviene aplicar y de qué manera. Como has visto, a veces los problemas de los mismos naipes no se resolvían sólo con combinaciones sencillas, sino que era necesario usar combinaciones con restas, por ejemplo. Así pues, este tipo de problemas no se resuelven con una receta. Es necesario entender bien el problema y pensar.
+    </p>
+
+    <div class='tarea'>
+      
+      <h3>Tarea</h3>
+      
+      <p>
+      De tarea, trata de resolver los siguientes poblemas adicionales de dados:
+      <br>
+	<ul>
+	  <li>Obtener las formas de lograr, en un tiro de 3 dados, una suma de 5.</li>
+	  <li>Obtener el número de formas de sumar, con un tiro de dos dados, el número 2, 3, y así hasta el 12.</li>
+	</ul>
+      </p>
+      
+      <p>
+      ¡Intenta encontrar las respuestas por tu cuenta antes de ver la solución!
+      </p>
+
+    <div class="verSolucion" id="btSolucion" onclick="document.getElementById('solucion').setAttribute('class','visible');document.getElementById('btSolucion').setAttribute('class','oculto');">
+    </div>
+    
+    </div>
+
+    <div id="solucion" class='oculto'>
+      
+      <h2>Solución de la tarea</h2>
+   
+	<ul>
+		<li>Para obtener una suma de 5 tirando tres dados, uno de ellos podría ser 1, otro podría ser 1 y el último 3. O bien, uno podría ser 1, otro podría ser 2 y el último 2. Éstas son las únicas formas de hacerlo. Pero nota que no dijimos qué dado tiene qué valor. Para el primer caso, la disposición del primer, segundo y tercer dados puede ser 1, 1, 3, o 1, 3, 1, o 3, 1, 1. Para el segundo caso, la disposición para el primer, segundo y tercer dados puede ser 1, 2 y 2, o 1, 2, 1, o 2, 1, 1. Así, hay 6 tiros totales de 3 dados que forman una suma de 5. Parece que si un número se repite (como el 1 en el 3, 1, 1; o como el 2 en el 1, 2, 2), hay 3 formas de acomodar los dados. ¿Será esto igual si no hay números que se repiten? Medítalo como actividad extra.</li>
+		<br>
+		<li>Para formar 2 con la suma de dos dados sólo hay una configuración: 1+1. Para formar 3, las configuraciones posibles son 2: 1+2 y 2+1. Para formar 4, las configuraciones son 3: 1+3, 3+1 y 2+2. Siguiendo este procedimiento, para formar 5 hay 4; para formar 6 hay 5 configuraciones; para formar 7 hay 6 configuraciones; para formar 8 hay 5 configuraciones; para formar 9 hay 4 configuraciones; para formar 10 hay 3 configuraciones; para formar 11 hay 2 configuraciones; y para formar 12 sólo hay una configuración. Por un lado, nota la simetría de las formas de sumar un número: asciende desde 1 hasta 6 formas y luego desciende nuevamente hasta 1. Por otro lado, nota que sumar 7 es seis veces más probable que sumar 2 o sumar 12. Esto lo puedes experimentar tirando muchas veces dados y dividiendo el número de veces que te suma 7 entre el número de veces que te suma 2.</li>
+	</ul>
+
+
+    <p>
+    Pasa a la sección de 'Evaluación' para poner a prueba tus habilidades de conteo.
+    </p>
+
+	</div>
+  
+	
+  <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>     
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  </div>
+  
+
+</article>
+
+</body>
+
+</html>
+

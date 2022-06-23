@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Resolución del problema</h1>
+    
+    <!--- Subtítulo (no necesario en introducción) --->
+    <h2>Las parejas que funcionan</h2>
+    
+    <p>
+    Finalmente enunciaremos las condiciones que debe cumplir el número de dientes de cada engrane para que el diente marcado en el engrane naranja se encaje en cada uno de los huecos del engrane azul mientras ambos giran. Tienes el entorno interactivo de siempre a tu disposicón para explorar con cualquier pareja de engranes con un mínimo de 4 dientes y un máximo de 48.
+    </p>
+    
+    <p>
+    Intenta responder a las preguntas planteadas después de este entorno. El planteamiento de estas preguntas se da de forma general, es decir, no son preguntas de ejemplos específicos (eso sería de forma particular), sino para parejas de engranes formadas por cualesquiera dos números enteros \(p\) y \(q\).
+    </p>
+
+
+    <div class="instrucciones">
+     Selecciona el número de dientes de cada engrane presionando sobre los pulsadores correspondientes, el izquierdo para el engrane azul y el derecho para el engrane naranja. Presiona sobre el botón 'Mover' para hacer girar los engranes.
+    Con las flechas izquierda y derecha puedes hacer girar los engranes diente por diente.
+    </div>
+
+    <div class="course_extern_content">
+      <iframe class="course_iframe" width="750" height="460" frameborder="0" src="escenas/escena1.html"> </iframe>
+      <iframe class="course_iframe" width="750" height="130" frameborder="0" src="escenas/escena2.html"> </iframe>
+    </div>
+    
+    <br>
+    
+    <div class="importante" style='margin-left:5%;margin-right:5%;'>
+    <strong>Conclusión</strong>
+    <br><br>
+    Las parejas de números que son solución del problema cumplen que son <strong>primos relativos</strong>.
+    El problema que se planteó consideraba números 
+    \(p\) y \(q\) tales que \( 4≤q≤p≤12\); sin embargo, podemos considerar números tales que \( 1≤q≤p≤48\), e incluso sin restricción por la 
+    derecha, es decir, todos los números naturales.
+    De manera más formal diríamos que:
+    <br><br>
+     En una pareja de engranes (\(p,q)\), donde \(p\) y \(q\) son números naturales, los valores de \(p\) y de \(q\) para los que el diente marcado en el engrane naranja se encaja en cada hueco en el engrane azul a medida que los engranes giran son tales que
+    \[mcm(p,q)=p\times q\]
+    Esto equivale a que
+    \[MCD(p,q)=1\]
+    Es decir, \(p\) y \(q\) son primos relativos.
+</p>
+    </div>
+
+
+
+  <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>
+
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+
+
+  </div>
+
+
+</article>
+
+</body>
+
+</html>
+

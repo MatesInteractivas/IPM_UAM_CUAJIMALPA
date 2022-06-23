@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Reflexiones y aplicaciones</h1>
+    
+    <h2>Rutas turísticas: ¿Problema de maximización o minimización?</h2>
+
+    <p>
+       Un escenario, equivalente matemáticamente al problema
+	  anterior, es pensar en el gobierno de un estado de la
+	  República Mexicana que busca promover el turismo. Para ello
+	  habrá de invertir en mejorar y/o ampliar las carreteras que
+	  conectan ciertos poblados. Como la inversión en carreteras
+	  es costosa, se busca que haya siempre una ruta, pero solo
+	  una, que conecte cada par de poblados. Rutas adicionales
+	  encarecerían el proyecto sin necesidad.
+    </p>
+    
+     <!-- ejemplo para incluir un documento externo en un iframe, aqui van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <img src="imgs/mexico.png"> </img>
+    </div>
+
+    <div class='tarea'>
+      <h3>Tarea</h3>
+      
+      <p>Encuentra la respuesta a las siguientes preguntas.</p>
+
+      <ol>
+	<li>
+	 El problema descrito anteriormente, ¿es un problema de minimización o maximización?
+	</li>
+	<br>
+	<li>
+	  ¿Puedes pensar en un problema similar, relacionado con la promoción turística en México (u otro país), pero que represente el escenario opuesto, es decir, minimización en lugar de maximización, o viceversa?
+	</li>
+	<br>
+	<li>
+	  ¿Qué ajuste habría que hacer en el procedimiento del problema descrito arriba para encontrar la solución al problema inverso?
+	  Describe claramente este ajuste.
+	</li>
+	<br>
+	<li>
+	  Describe la forma en la que aplicarías la inducción
+	  matemática para verificar que el procedimiento que hemos
+	  desarrollado funciona para optimizar la conexión de cualquier
+	  número natural \(N\) de puntos.
+	</li>
+	<br>
+      </ol>
+	
+	      <div class="verSolucion" id="btSolucion" onclick="document.getElementById('conjuntos').setAttribute('class','visible');document.getElementById('btSolucion').setAttribute('class','oculto');">
+      </div>
+
+    </div>
+
+
+    <div id="conjuntos" class="oculto">
+      
+      <p>
+	<h2>Respuestas</h2>
+      </p>
+
+      <ol>
+	<li>
+	  Es un problema de <strong>minimización</strong>: al agregar cada nuevo enlace a la red, habrá que buscar siempre el que extienda la red existente al menor costo posible.
+	</li>
+	<br>
+	<li>
+	 Un posible escenario de <strong>maximización</strong> del problema sería que para la elección de
+	  las carreteras, en vez de considerar el costo de construcción de las mismas,
+	  se tomara en cuenta la cantidad y calidad de
+	  atractivos turísticos entre los poblados a conectar.
+	  A cada una de las vías se podría dar una calificación de 0 a 10 de la
+	  forma tradicional. 
+	</li>
+	<br>
+	<li>
+	  En este último caso, el cuadro de calificaciones
+	  reemplazará al cuadro de costos que habíamos venido considerando,
+	  y nos interesará que la suma de calificaciones sea
+	  lo más grande posible porque ello querrá decir que la red de
+	  carreteras mejoradas y/o ampliadas permite visitar los
+	  atractivos turísticos en mayor cantidad y/o calidad.
+	  El ajuste consiste en tomar el costo máximo como el óptimo
+	  en lugar del costo mínimo. Lo anterior al momento de
+	   escoger cada enlace. 
+	</li>
+	<br>
+	<li>
+	Suponemos que tenemos una configuración de \(N\) puntos junto
+	con su correspondiente tabla de costos de enlaces y tomamos un primer punto \(P\) al azar.
+	<br><br>
+	El caso \(n=2\) es una configuración
+	óptima para 2 puntos a partir de \(P\), ya que se construye con uno
+	de los enlaces óptimos que conectan a \(P\) con el resto de los puntos.
+	<br><br>
+	Si damos por hecho que hemos construido a partir de \(P\) una
+	configuración óptima \(S_n\) de \(n\) puntos y con \(n\le N-1\),
+	entonces la configuración con \(S_{n+1}\) puntos es óptima ya que se construye con uno
+	de los enlaces óptimos que conectan a \(S_n\) con el resto de los puntos que no están ya en \(S_n\).
+	<br><br>
+	Cuando \(n=N\) el proceso inductivo se detiene porque hemos terminado el proceso.
+	</li>
+      </ol>
+    </div>
+
+	
+  <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>
+
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  
+  </div>
+  
+  
+  
+</article>
+
+
+</body>
+
+</html>

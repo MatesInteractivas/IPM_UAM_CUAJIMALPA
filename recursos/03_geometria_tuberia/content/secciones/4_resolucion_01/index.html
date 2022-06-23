@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-- MathJax -- para fórmulas matemáticas -->
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!-- Script para mostrar créditos y agregar ligas a glosario -->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+
+<style type="text/css">
+    table#final_result{
+      width: 450px; 
+      font--size: 20px;
+    }
+    table#final_result  tr > td:nth-child(1){
+      text-align: right;
+    }
+    table#final_result  tr > td:nth-child(2){
+      padding-left: 10px; 
+      padding-right: 10px;
+    }
+    div.importante {
+      margin: 20px 30px;
+    }
+  </style>
+  
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!-- INICIA EL CONTENIDO DE LA PÁGINA -->
+    
+    <!-- Título de la página -->
+    <h1>Resolución del problema</h1>
+    
+    <!-- Subtítulo (no necesario en introducción) -->
+    <h2>Cálculo del área restante como un segmento circular</h2>
+    
+    
+    <!-- Párrafo -->
+    <p>
+      Como vimos en las secciones anteriores podemos resolver nuestro problema utilizando las siguientes fórmulas: 
+    </p>
+    
+    
+    
+    <div class='importante' style='margin-left:15%;margin-right:15%;'>
+
+      <table id='final_result'>
+        <tr>
+          <td style='text-align:right;padding-right:5px;'>Área del <br>segmento circular</td>   
+          <td>=</td>    
+          <td>\({r^2\over{2}} ( \alpha -   sen \alpha ) \)</td>
+        </tr>
+        <tr>
+          <td>\( \alpha \)</td>   <td>=</td>    <td>\(2 arccos \left(1 - { h_{vacío} \over{r} }\right) \)</td>
+        </tr>
+        <tr>
+          <td>\( h_{vacío} \)</td>   <td>=</td>    <td>\(2 r - h_{agua + sedimento}  \)</td>
+        </tr>
+      </table>
+     
+    </div>
+    
+    <!--<div class='problema'>
+      En la siguiente sección utilizaremos estas fórmulas para resolver nuestro 
+      problema con valores reales para:
+       $$ \begin{align}
+          &r                      &= \text{El radio del tubo}  \\
+          &h_{agua}               &= \text{La altura del agua} \\
+          &h_{sedimento}          &= \text{La altura inicial del sedimento} \\
+          &h_{agua+sedimento}     &= \text{La altura combinada del agua y el sedimento} \\
+          &c_{sedimento}          &= \text{El factor con que crece el} \\ 
+          &                       & \text{Área del sedimento con respecto al tiempo} \\
+      \end{align} $$
+    </div>-->
+
+    <!--
+    <p>
+      Sólo faltaría dividir esa área entre la velocidad con la que crece el área del sedimento (\( V_{c}\)).
+
+      $$ V_{c} =  k \frac{\text{cm}^2 }{\text{hora}}$$
+    </p>
+    -->
+    
+    <div class="instrucciones">
+      Con los datos que se te proporcionan y las fórmulas obtenidas en la sección anterior,
+      haz los cálculos necesarios y escribe cuánto tiempo le llevará al sedimento cubrir el tubo de tal forma que impida el paso del agua.
+      <br><br>
+      En general las calculadoras científicas te permiten calcular el arcocoseno o arcoseno con las teclas 
+      cos<sup>-1</sup> o sen<sup>-1</sup> respectivamente. Si no cuentas con una calculadora puedes usar las siguiente 
+      escena para calcular los valores de estos para diferentes números.
+      <p/>
+      <div class="course_extern_content">  
+        <iframe 
+          width="570" height="120"
+          class="course_iframe"  frameborder="0" 
+          src="escenas/calculador.html" 
+          style="box-shadow: 0px 0px 8px rgb(102, 102, 102); border-radius: 46px;"> 
+        </iframe>
+      </div>
+    </div>
+
+    <!-- ejemplo para incluir un documento externo en un iframe, aquí van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="480" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+
+<!--
+    <p>
+    Ahora que ya has abordado el cálculo de las probabilidades de las manos, te puedes dar cuenta de por qué algunos tipos de mano valen más que otros.
+    Obtener una flor imperial de inicio es muy difícil, pues la probabilidad de que ocurra es bajísima. Por el contrario, la probabilidad de obtener un par es bastante alta.
+    Es por ello que una flor imperial tiene un valor mayor que el de un par. Y es así como se ordenan los tipos de mano según su valor.
+    </p>
+
+    <p>
+    Por otra parte, recibir de inicio un tipo de mano como flor imperial, flor corrida, póker, full house o color es muy poco probable.
+    Es por ello que en los juegos de naipes frecuentemente se pueden cambiar las cartas de inicio con el fin de tratar de hacer una mano más valiosa.
+    </p>
+
+    <p>
+    Aborda ahora algunas preguntas que te permitirán practicar un poco más lo aprendido hasta ahora.
+    </p>
+
+    <div class="problema">
+      <strong>Preguntas</strong>
+      <br><br>
+      Intenta responder las siguientes preguntas antes de ver la solución:
+	<ul>
+		<li>¿Cuál es la probabilidad, en forma porcentual, de obtener un tipo de mano mayor a tercia?</li>
+		<li>¿Cuál es la probabilidad, en forma porcentual, de obtener dos pares, un par o nada?</li>
+		<li>¿Cuál es la probabilidad, en forma porcentual, de obtener una corrida de cualquier tipo (ya sea flor imperial, flor corrida o corrida sencilla)?</li>
+		<li>Supón que sumas la probabilidad porcentual de las últimas dos columnas. ¿A la probabilidad de obtener qué corresponde el valor de dicha suma?</li>
+	</ul>
+    </div>
+
+    <div class="verSolucion" id="btSolucion" onclick="verSolucion('btSolucion','solucion')">
+    </div>
+
+    <div id="solucion" class='oculto'>
+      
+       <h2>Respuestas a las preguntas</h2>
+   
+	<ul>
+		<li>La probabilidad, en forma porcentual, de obtener una mano mayor a tercia corresponde evidentemente a la suma de probabilidades de todos los tipos de mano mayores a tercia, a saber: flor imperial, flor corrida, póker, full house, color y corrida. Esta suma de probabilidades es: (0.000153907 + 0.001385169 + 0.024009603 + 0.144057623 + 0.196540154 + 0.392464678)% = 0.758611134%. ¡Nota que la probabilidad de obtener cualquiera de estas manos sigue siendo bajísima!</li>
+		<br>
+		<li>La probabilidad porcentual de obtener o dos pares o un par o nada la podemos calcular como lo que resta para completar el 100% de probabilidad habiendo calculado aquella probabilidad para todas las demás manos (el resultado de la pregunta anterior), más la probabilidad de la tercia. Así pues, la probabilidad de obtenerlas es 100% - 0.758611134% - 2.112845138% = 97.1285437279%. Puedes ver que lo más seguro es que te salga alguno de estos tipos de mano al tomar tus 5 cartas de mano inicial.</li>
+		<br>
+		<li>La probabilidad de hacer una corrida de cualquier tipo involucra la probabilidad conjunta de hacer una flor imperial, una flor corrida y una corrida sencilla. Es decir: (0.000153907 + 0.001385169 + 0.392464678)% = 0.394003754%. También es una probabilidad muy baja. Seguramente, si has jugado naipes, te habrás percatado de que casi nunca se te da algún tipo de corrida de inicio al repartirte tus 5 cartas de mano.</li>
+		<br>
+		<li>El sumar los valores porcentuales de las últimas 2 columnas da 92.374642%. Esta probabilidad corresponde a sacar una mano de valor menor a dos pares. Nota que no sacar nada o sacar un par es lo que con más probabilidad sucederá. Haciendo muchos experimentos de sacar manos de 5 cartas, en más de 9 de cada 10 encontrarás o par o nada.</li>
+	</ul>
+
+    <p>
+    Aunque hasta ahora nos hayamos enfocado en los naipes, en la siguiente página conocerás otros problemas para los que el conteo puede ser muy útil.
+    </p>  
+
+	</div>
+  -->
+	
+  <!-- TERMINA EL CONTENIDO DE LA PÁGINA -->
+
+  
+     <!-- INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR -->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+
+  <!-- TERMINA LA INFO SOBRE LAS CONDICIONES DE USO -->
+  
+  
+  </div>
+  
+
+</article>
+
+</body>
+
+</html>
+

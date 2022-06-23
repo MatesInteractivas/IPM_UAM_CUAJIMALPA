@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>TITULO</title>
+
+        <link rel="stylesheet" type="text/css" href="css/descartes.css">
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body style="margin:0px;padding:0px;overflow:hidden;">
+
+<p align="center">
+<ajs name="Descartes" width=750 height=30 code="Descartes">
+   <param name="tamaño" value="750x30">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' despl_imagen='arr-izq' fondo='ffffffff' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='A' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='1.' expresión='(0,0,30,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn30x30.png' acción='calcular' parámetro='b=1' dibujar-si='b!=c'">
+   <param name="C_02" value="id='B' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='2.' expresión='(step,0,30,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn30x30.png' acción='calcular' parámetro='b=2' dibujar-si='b!=c' pos_mensajes='centro'">
+   <param name="C_03" value="id='C' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='3.' expresión='(2*step,0,30,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn30x30.png' acción='calcular' parámetro='b=3' dibujar-si='b!=c' pos_mensajes='centro'">
+   <param name="C_04" value="id='D' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='4.' expresión='(3*step,0,30,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn30x30.png' acción='calcular' parámetro='b=4' dibujar-si='b!=c' pos_mensajes='centro'">
+   <param name="A_01" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='c=4;step=160'">
+   <param name="A_02" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="G_01" value="espacio='E1' tipo='imagen' dibujar-si='b=c' coord_abs='sí' expresión='((c-1)*step+10,0)' archivo='images/bien.png'">
+   <param name="G_02" value="espacio='E1' tipo='imagen' dibujar-si='!(b=c)&(b>0)' coord_abs='sí' expresión='(100+step*(b-1),0)' archivo='images/mal.png'">
+   <param name="G_03" value="espacio='E1' tipo='texto' color='negro' dibujar-si='b!=c' expresión='[35,0]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Times New Roman;}\f1\fs36\i{\*\mjaformula a=b{\supix n}}\fs32}' fuente='Serif,ITALIC,18' fijo='sí'">
+   <param name="G_04" value="espacio='E1' tipo='texto' color='negro' dibujar-si='b!=c' expresión='[35+step,0]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Times New Roman;}\f1\fs36\i{\*\mjaformula F=f {\supix n}}\fs32}' fuente='Serif,ITALIC,18' fijo='sí'">
+   <param name="G_05" value="espacio='E1' tipo='texto' color='negro' dibujar-si='b!=c' expresión='[35+2*step,0]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Times New Roman;}\f1\fs36\i{\*\mjaformula b=a{\supix 2}}\fs32}' fuente='Serif,ITALIC,18' fijo='sí'">
+   <param name="G_06" value="espacio='E1' tipo='texto' color='negro' expresión='[35+3*step,0]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Times New Roman;}\f1\fs36\i{\*\mjaformula F+1=(f+1){\supix n}}\fs32}' fuente='Serif,ITALIC,18' fijo='sí'">
+   <param name="G_07" value="espacio='E1' tipo='texto' color='gris' dibujar-si='b=c' expresión='[35,0]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Times New Roman;}\f1\fs36\i{\*\mjaformula a{\supix 2}=b}\fs32}' fuente='Serif,ITALIC,18' fijo='sí'">
+   <param name="G_08" value="espacio='E1' tipo='texto' color='gris' dibujar-si='b=c' expresión='[35+step,0]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Times New Roman;}\f1\fs36\i{\*\mjaformula a{\supix n}=b{\supix n}}\fs32}' fuente='Serif,ITALIC,18' fijo='sí'">
+   <param name="G_09" value="espacio='E1' tipo='texto' color='gris' dibujar-si='b=c' expresión='[35+2*step,0]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Times New Roman;}\f1\fs36\i{\*\mjaformula a{\supix n}=b}\fs32}' fuente='Serif,ITALIC,18' fijo='sí'">
+</ajs></p>
+
+</body>
+</html>

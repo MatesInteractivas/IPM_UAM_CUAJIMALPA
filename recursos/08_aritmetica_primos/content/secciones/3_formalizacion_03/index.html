@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Formalización del problema</h1>
+    
+
+    <h2>Cuadrilátero de perímetro mínimo</h2>
+
+    <p class="importante" style='margin-left:10%;margin-right:10%;'>
+      De entre todos los cuadriláteros que encierran la misma
+      superficie, el cuadrado es el que tiene el menor
+      perímetro.
+
+      <p>
+      En particular, de entre los cuadriláteros de ángulos rectos que tienen la misma área, es decir, los
+      rectángulos y el cuadrado, este último es el de menor perímetro.
+    </p>
+
+    <p>
+      Lo que dice el párrafo anterior lo puedes corroborar
+      experimentalmente en el espacio interactivo más
+      abajo. Matemáticamente puede demostrarse usando Cálculo
+      Diferencial.
+    </p>
+
+    <!--- Instrucciones --->
+    <div class="instrucciones">
+    <span>
+      A continuación podrás introducir el valor de la superficie
+      \(S\) de un rectángulo para después hacer variar la longitud de la
+      base \(B\). \(H\) indica la altura. Observa cómo varía el perímetro \(P\) y trata de
+      encontrar el valor mínimo. Puedes arrastrar el rectángulo para
+      moverlo y modificar la escala con las lupas de la esquina inferior
+      derecha.
+    </span><br></div>
+
+    <!-- ejemplo para incluir un documento externo en un iframe, aqui van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="480" frameborder="0" src="escenas/escena2.html"> </iframe>
+    </div>
+
+
+    <p class="importante" style='margin-left:10%;margin-right:10%;'>
+      Aunque ya lo debes haber pensado, de la lista de divisores de
+      \(n\) habremos de escoger \(p\) y calcular \(q=n\div p\) <strong> de tal
+      suerte que \(p -q\) sea lo más cercano a cero que se pueda</strong>.
+      Así tenemos la forma del paquete lo más parecida posible a un
+      cuadrado.
+    </p>
+
+    <p>
+      Ahora que ya que hemos dado forma al problema y a los conceptos
+      involucrados, procederemos a resolverlo.
+    </p>
+
+      <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

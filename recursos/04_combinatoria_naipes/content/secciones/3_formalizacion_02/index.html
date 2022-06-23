@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Formalización del problema: Las permutaciones</h1>
+    
+    <!--- Párrafo --->
+	
+      <p class='problema'>
+    <strong>Objetivo</strong>
+    <br><br>
+	Abordarás la forma de contar elementos tomados de un conjunto y organizados en una lista de tal forma que sólo puedas elegir un elemento una vez.
+    </p>
+
+    <p>
+    Una de las principales diferencias entre el ejemplo de las monedas y el de las cartas es que en el de las monedas puedes elegir dos veces un mismo resultado (sacar, por ejemplo, águila), mientras que en el de las cartas no (una vez tomado el as de espadas del mazo de 52 cartas no podrás volverlo a elegir). Es para ello que sirven las permutaciones.
+    </p>
+
+	<h2>Las permutaciones</h2>
+
+    <p>
+    Las permutaciones u ordenaciones son una herramienta de conteo en la que, dado un conjunto de elementos inicial (por ejemplo, las 52 cartas), se toman ya sea todos (las 52 cartas) o sólo algunos (por ejemplo, sólo 5 cartas como en el caso de una mano) y de modo ordenado. Las permutaciones nos permiten calcular, para el caso de las cartas, de cuántas distintas formas se pueden ordenar los 52 elementos tomados en un subconjunto de 5 elementos. Es importante precisar que en las permutaciones se considera el orden en que aparecen los elementos, es decir, dos subconjuntos de elementos idénticos pero que aparecen en un orden distinto, se cuentan por separado.
+    Todo esto lo podrás estudiar en el siguiente espacio interactivo.
+    </p>
+
+    <!--- Instrucciones --->
+    <div class="instrucciones">
+    A continuación tendrás que responder unas cuantas preguntas para poder avanzar. Podrás decidir con qué carta quedarte para la primera carta de la mano.
+    Una vez escogida ésta, abordarás la segunda carta de la mano, y también podrás escoger cuál del mazo tomar. Y así sucesivamente.
+    Observa cuántas y qué cartas van quedando para escoger.
+    Pulsa ENTER cada vez que hayas escrito tu respuesta.
+    </div>
+
+    <!-- ejemplo para incluir un documento externo en un iframe, aquí van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="480" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+
+    <p>
+    Dando respuesta a la pregunta formulada en la página anterior, empiezas con 52 opciones para la primera mano. De ahí, una vez elegida la primera, sólo quedan 51 opciones para la segunda. De tal forma que, cada vez que escoges una carta, queda una menos para elegir en el siguiente turno.</p>
+    
+    <p class="importante" style="width:60%;margin:20px auto;">
+    Usando la ley multiplicativa, esto nos indica que hay \[(52)(51)(50)(49)(48)=311,875,200\] formas de hacer una mano de 5 cartas eligiendo de un mazo de 52.
+    <br>
+    Algebraicamente, esta multiplicación se puede expresar así:
+    \[(n)(n-1)(n-2)(n-3)(n-4)\]
+    </p>
+
+    <p>
+      En matemáticas, este tipo de operaciones se llaman <strong>permutaciones</strong> u <strong>ordenaciones</strong>. Como ya viste, te permite contar todas las formas de ordenar (es decir, importando el orden) un conjunto inicial (las 52 cartas en nuestro ejemplo) en subconjuntos de menor o igual tamaño (las 5 cartas de la mano en nuestro ejemplo).
+    </p>
+
+    <p>
+    Por un lado, ya abordaste el concepto de permutaciones. Por otro, notaste que para obtener las permutaciones se usa la regla multiplicativa. Pero es muy importante notar algo más.
+    </p>
+
+    <h2>¿El orden importa?</h2>
+
+    <p>
+      Acabamos de ver que en el juego de póker, hay \(311,875,200\) formas de hacer una mano de 5 cartas eligiendo de un mazo de 52. Pero es muy importante notar algo más. Considera la flor imperial 10, joto, reina, rey y as de espadas. 
+      El resultado de la permutación \((52)(51)(50)(49)(48)\) nos indica la cantidad de manos que pueden salir del mazo de 52, lo cual equivale a decir que hay una probabilidad de \(1\) en \((52)(51)(50)(49)(48)\) de que la mano obtenida sea la flor imperial referida y <em>en el orden señalado</em>.
+    </p>
+
+    <p>
+      Ahora bien, como viste en el planteamiento del problema, esta misma mano (flor imperial 10, joto, reina, rey y as de espadas) puede salir en orden variado, ya que uno siempre puede reordenar las cartas manualmente una vez que le fueron repartidas. En otras palabras, algunas de las \(311,875,200\) posibles manos serán idénticas entre sí en términos de su valor en el póker. Pero ¿cuántas manos serán idénticas? Reformulándolo, entre las \(311,875,200\) formas de hacer una mano, ¿cuántas contendrán las mismas cartas pero en distinto orden? 
+    </p>
+
+    <p>
+    Antes de proseguir, abordemos algunas cosas de nomenclatura y convención de las permutaciones que abordaste arriba:
+	<ul>
+		<li>Notaste que para ordenar 52 elementos (el mazo) tomados en 5 (las cartas que caben en la mano), haces la operación \((52)(51)(50)(49)(48)\). Una notación que suele utilizarse en este caso es \(_{52}P_{5}\), que se lee como <em>permutaciones de 52 tomadas en 5</em>. De forma general, se consideran las permutaciones de \(n\) tomadas en \(m\) (con \(n\) y \(m\) enteros) que se representa como \(_nP_m\).</li>
+		<br>
+                <li>Es posible que alguna vez también te encuentres con una notación de esta fórmula un poco más complicada: \(_nP_m=\frac{n!}{(n-m)!}\). El ! detrás de un número se conoce como <em>factorial</em> y sólo quiere decir multiplicar ese número, por su entero anterior, por el anterior, y así sucesivamente llegando hasta la unidad. Notamos que, para nuestro ejemplo, \(n=52\), \(m=5\), de donde \(n-m=47\) y \(_nP_m=\frac{52!}{(n-m)!}=\frac{(52)(51)(50)(49)(48)(47)(46)(45)...1}{(47)(46)(45)...1}=(52)(51)(50)(49)(48)\), que es la expresión que obtuvimos originalmente.</li>
+		<br>
+                <li>Al trabajar algunas expresiones como las anteriores, obtendrás casos como \(0!\). Por comodidad y conveniencia en el uso de estas fórmulas, cero factorial se define como la unidad. Es decir, \(0!=1\).</li>
+		<br>
+                <li>Nota que el permutar todos los elementos de una lista de \(n\) elementos corresponde a \(_nP_n=\frac{n!}{(n-n)!}\). Pero por la definición arriba mencionada, \((n-n)!=0!=1\). Y entonces, \(_nP_n=n!\).</li>
+	</ul>
+    </p>
+
+    <div class="problema">
+      <strong>Preguntas</strong>
+      <br><br>
+      Trata de encontrar la respuesta a estas preguntas:
+      <ol>
+	<li>¿Cuántas maneras hay de ordenar un conjunto de 5 cartas, tomadas en 5?</li>
+	<li>Una vez obtenido este valor, ¿cómo se puede expresar la cantidad real de manos distintas, sin importar el orden en que son repartidas, en un mazo de 52?</li>
+      </ol>
+    </div>
+
+    <p>
+    Nuevamente, intenta obtener una respuesta a las preguntas anteriores antes de avanzar a la siguiente página.
+    </p>
+
+  
+      <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

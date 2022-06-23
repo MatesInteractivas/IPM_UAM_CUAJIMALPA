@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-- MathJax -- para fórmulas matemáticas -->
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!-- Script para mostrar créditos y agregar ligas a glosario -->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+  <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+  <style type="text/css">
+    table#final_result{
+      width: 350px; 
+      font-size: 20px;
+    }
+    table#final_result  tr > td:nth-child(1){
+      text-align: right;
+    }
+    table#final_result  tr > td:nth-child(2){
+      padding-left: 10px; 
+      padding-right: 10px;
+    }
+    div.importante {
+      margin: 20px 30px;
+    }
+  </style>
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!-- INICIA EL CONTENIDO DE LA PÁGINA -->
+    
+    <!-- INICIA EL CONTENIDO DE LA PÁGINA -->
+    
+    <!-- Título de la página -->
+    <h1>Formalización del problema</h1>
+    
+    <h2>¿Sumar o restar el triángulo?</h2>
+    
+    <p>
+      Ya sabemos cómo calcular el área del triángulo que nos ayudará a obtener el área libre del tubo;
+      además, tenemos una fórmula para determinar el valor del ángulo  \( \theta \) que define el sector circular.
+    Como sabemos que el área de un sector circular equivale a \(r^2 \frac{\alpha}{2}\), donde \(\alpha = 2\theta\), tenemos ahora las herramientas requeridas para calcular su valor.
+    </p>
+    
+    <div class='importante' style='margin-left:15%;margin-right:15%;'>
+      La forma geométrica del área libre que deseamos calcular se llama un <strong>segmento circular</strong>.
+      <br><br>
+      <strong>¡Ojo</strong>, no confundas un <em>sector</em> circular con un <em>segmento</em> circular!
+      <br>
+      <div class="course_extern_content">
+        <img src='imgs/segmentoSector.png'></img>
+      </div>
+    </div>
+    
+
+    <p>En la página anterior mencionamos que, para obtener el área de un segmento circular a partir de un sector circular, existen casos donde el triángulo correspondiente se debe <em>restar</em> del área del sector,
+      y otros donde hay que <em>sumar</em> ambas áreas. Analicémoslo de una vez.</p>
+    
+    <!-- Párrafo -->
+    <p class='instrucciones'>
+      Utiliza el siguiente recurso para determinar en qué casos se debe sumar el triángulo y
+      en qué casos es necesario restarlo.
+    </p>
+  
+  
+     <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="750" height="510" frameborder="0" src="escenas/areas1.html"> </iframe>
+    </div>
+    
+     
+    <h2>Área del segmento circular</h2>
+    
+    <p>
+      A continuación definiremos finalmente la fórmula que nos permitirá calcular el área del segmento circular libre en nuestra tubería.
+      Para ello, retomemos nuevamente las fórmulas de la página anterior:
+    </p>
+    
+    <p class='importante' style='margin-left:15%;margin-right:15%;'>
+        $$ \text{Área de un sector circular} =  r^2 \frac{\alpha}{2}  $$
+        $$ \text{Área del triángulo} =  \frac{r^2}2 (  sen 2\theta )  $$
+        $$ \theta = arccos \left(1-{ h_{vacío} \over{r} }\right)      $$    
+    </p>
+    
+
+    <p>
+      Usaremos la resta para obtener el área del segmento circular, es decir, restamos la fórmula del área de nuestro triángulo de la fórmula del sector circular:
+
+        $$ r^2 \frac{\alpha}{2} - {r^2\over{2}} (  sen 2\theta )  $$  
+     </p>
+
+    <p>   
+      Pero antes de continuar tenemos que hacer un cambio para que las 
+      dos fórmulas utilicen el mismo ángulo. Recuerda que \(\alpha\ = 2\theta\), por lo que 
+      podemos sustituir y nos queda: 
+          $$ r^2 \frac{\alpha}{2} - {r^2\over{2}} (  sen \alpha ) $$
+    </p>
+    
+    <p>
+      Simplificando los términos tenemos : 
+      $$ \begin{align}
+        {r^2\over{2}} \alpha - {r^2\over{2}} (  sen \alpha ) 
+        &= {r^2\over{2}} ( \alpha -   sen \alpha ) \\
+      \end{align} $$
+    </p>
+    
+    <p class='importante' style='margin-left:15%;margin-right:15%;'>
+        Entonces, la fórmula para calcular el área de un segmento circular es:  
+
+        $$ {r^2\over{2}} ( \alpha -   sen \alpha )  $$
+    </p>
+    
+
+
+    <!-- Párrafo -->
+    <div class='problema'>
+      <strong>Pregunta</strong>
+      <br></br>
+      
+      Obtuvimos la anterior fórmula para calcular el área del espacio
+      vacío a partir de la resta del área del sector y el triángulo.
+      <br><br>
+      ¿Cómo será dicha fórmula si ambas áreas se deben <strong>sumar</strong>?
+    </div>
+    
+    <p>
+      En el siguiente espacio interactivo podrás encontrar la respuesta. 
+    </p>
+
+    <p class="instrucciones">
+       Mueve el ángulo que define al sector circular y observa qué sucede con la fórmula cuando ocurre el cambio de sumar
+      el área del triángulo a restarla.
+    </p>
+
+
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="750" height="510" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+    
+    <p>
+      Como pudiste observar, nuestra fórmula para calcular el área de un segmento circular indirectamente toma en cuenta los casos donde se debe 
+      sumar o restar el triángulo.
+    </p>
+    
+    <p>
+      ¡Por fin encontramos un método para calcular el área que puede llenar el sedimento antes de que 
+      el tubo se sature, conociendo la altura del agua y del sedimento!
+    </p>
+
+    
+    <!--<div class='importante' style='margin-left:15%;margin-right:15%;'>
+
+      <table id='final_result'>
+        <tr>
+          <td style='text-align:center'>Área del <br>segmento circular</td>   
+          <td>=</td>    
+          <td>\({r^2\over{2}} ( \alpha -   sen \alpha ) \)</td>
+        </tr>
+        <tr>
+          <td>\( \alpha \)</td>   <td>=</td>    <td>\(2 arccos \left(1 - { h_{vacío} \over{r} }\right) \)</td>
+        </tr>
+        <tr>
+          <td>\( h_{vacío} \)</td>   <td>=</td>    <td>\(2 r - h_{agua + sedimento}  \)</td>
+        </tr>
+      </table>
+     
+    </div>
+    
+    <div class='problema'>
+      En la siguiente sección utilizaremos estas fórmulas para resolver nuestro 
+      problema con valores reales para:
+       $$ \begin{align}
+          &r                      &= \text{El radio del tubo}  \\
+          &h_{agua}               &= \text{La altura del agua} \\
+          &h_{sedimento}          &= \text{La altura inicial del sedimento} \\
+          &h_{agua+sedimento}     &= \text{La altura combinada del agua y el sedimento} \\
+          &c_{sedimento}          &= \text{El factor con que crece el} \\ 
+          &                       & \text{Área del sedimento con respecto al tiempo} \\
+      \end{align} $$
+    </div>
+    
+    -->
+
+
+    
+
+
+    <!-- INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR -->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+  
+  <!-- TERMINA LA INFO SOBRE LAS CONDICIONES DE USO -->
+  
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

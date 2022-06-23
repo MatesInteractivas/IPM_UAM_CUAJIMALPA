@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>TITULO</title>
+
+        <link rel="stylesheet" type="text/css" href="css/descartes.css">
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body style="margin:0px;padding:0px;overflow:hidden;">
+
+<p align="center">
+<ajs name="Descartes" width=750 height=130 code="Descartes">
+   <param name="tamaño" value="750x130">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' despl_imagen='arr-izq' fondo='fff3f0ec' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='AntBt' tipo='numérico' interfaz='botón' región='interior' espacio='E1' expresión='(E1._w/2-85,E1._h-40,30,30)' fijo='sí' visible='sí' color='blanco' color-int='fff0f8ff' negrita='sí' fuente puntos='17' imagen='images/retroceder.png' acción='calcular' parámetro='scrl=scrl-1' dibujar-si='scrl>0'">
+   <param name="C_02" value="id='SigBt' tipo='numérico' interfaz='botón' región='interior' espacio='E1' expresión='(E1._w/2+55,E1._h-40,30,30)' fijo='sí' visible='sí' color='blanco' color-int='fff0f8ff' negrita='sí' fuente puntos='17' imagen='images/avanzar.png' acción='calcular' parámetro='corr=0\nscrl=scrl+1' dibujar-si='(scrl<scrlmax)&((visit[scrl]==1)|(corr==1))'">
+   <param name="C_03" value="id='P1' tipo='numérico' interfaz='menú' región='interior' espacio='E1' nombre='_nada_' expresión='(10,55,300,34)' decimales='0' fijo='sí' visible='no' opciones=' ,Que dE es un factor de vA y de vN,Que dE es un múltiplo de vA y de vN' acción='calcular' parámetro='corr1=0\ncorr=0' dibujar-si='scrl==0'">
+   <param name="C_04" value="id='P2' tipo='numérico' interfaz='menú' región='interior' espacio='E1' nombre='_nada_' expresión='(10,55,300,34)' decimales='0' fijo='sí' visible='no' opciones=' ,Que dE es un múltiplo de dA y de dN,Que dE es un factor del dA y de dN' acción='calcular' parámetro='corr2=0\ncorr=0' dibujar-si='scrl==1'">
+   <param name="C_05" value="id='P3' tipo='numérico' interfaz='menú' región='interior' espacio='E1' nombre='_nada_' expresión='(10,55,400,34)' decimales='0' fijo='sí' visible='no' opciones=' ,Que d multiplicado por v es igual a dE,No hay ninguna relación entre estos tres números' acción='calcular' parámetro='corr3=0\ncorr=0' dibujar-si='scrl==2'">
+   <param name="C_06" value="id='VerifBt' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Verificar' expresión='(E1._w/2-45,E1._h-40,90,30)' fijo='sí' visible='sí' color='blanco' color-int='fff0f8ff' negrita='sí' fuente puntos='17' imagen='images/btn90x30.png' acción='calcular' parámetro='verif=1\nVerif()' activo-si='((scrl==0)&(P1!=0))|((scrl==1)&(P2!=0))|((scrl==2)&(P3!=0))|((scrl==3)&(P4!=0))|((scrl==4)&(P5!=0))|((scrl==5)&(P6!=0))'">
+   <param name="A_01" value="id='visit' vector='sí' evaluar='una-sola-vez' expresión='visit[0]=0;visit[1]=0;visit[2]=0;'">
+   <param name="A_02" value="id='Verif()' algoritmo='sí' algoritmo='sí' hacer='bla=(scrl==0)?Verif1():bla;bla=(scrl==1)?Verif2():bla;bla=(scrl==2)?Verif3():bla;'">
+   <param name="A_03" value="id='Verif1()' algoritmo='sí' algoritmo='sí' inicio='corr1=0' hacer='corr1=(P1==2)?1:2;corr=(P1==2)?1:2;visit[scrl]=(corr==1)?1:visit[scrl]'">
+   <param name="A_04" value="id='Verif2()' algoritmo='sí' algoritmo='sí' inicio='corr2=0' hacer='corr2=(P2==1)?1:2;corr=(P2==1)?1:2;visit[scrl]=(corr==1)?1:visit[scrl]'">
+   <param name="A_05" value="id='Verif3()' algoritmo='sí' algoritmo='sí' inicio='corr3=0' hacer='corr3=(P3==1)?1:2;corr=(P3==1)?1:2;visit[scrl]=(corr==1)?1:visit[scrl]'">
+   <param name="A_06" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='verif=0;scrlmax=2;'">
+   <param name="A_07" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="G_01" value="espacio='E1' tipo='imagen' coord_abs='sí' expresión='((-E1._w/2)/E1.escala+7,(E1._h/2)/E1.escala-2)' archivo='images/fondo_opcMult.png'">
+   <param name="G_02" value="espacio='E1' tipo='texto' color='232323' dibujar-si='scrl==0' expresión='[10,10]' texto='¿Qué se puede observar acerca del número total de dientes encajados en relación con el número de vueltas que da cada engrane? ' fuente='SansSerif,PLAIN,17' fijo='sí' ancho='730'">
+   <param name="G_03" value="espacio='E1' tipo='texto' color='232323' dibujar-si='scrl==1' expresión='[10,10]' texto='¿Qué relación observas entre el número de dientes encajados y el número de dientes de cada engrane?' fuente='SansSerif,PLAIN,17' fijo='sí' ancho='730'">
+   <param name="G_04" value="espacio='E1' tipo='texto' color='232323' dibujar-si='scrl==2' expresión='[10,10]' texto='¿Qué se puede observar acerca del número de dientes encajados en relación con el número de vueltas que da cada engrane y el número de dientes de cada uno?' fuente='SansSerif,PLAIN,17' fijo='sí' ancho='700'">
+   <param name="G_05" value="espacio='E1' tipo='imagen' dibujar-si='(corr1==1)&(scrl==0)' coord_abs='sí' expresión='(10+300+10,60)' archivo='images/bien.png'">
+   <param name="G_06" value="espacio='E1' tipo='imagen' dibujar-si='(corr1==2)&(scrl==0)' coord_abs='sí' expresión='(10+300+10,60)' archivo='images/mal.png'">
+   <param name="G_07" value="espacio='E1' tipo='imagen' dibujar-si='(corr2==1)&(scrl==1)' coord_abs='sí' expresión='(10+300+10,60)' archivo='images/bien.png'">
+   <param name="G_08" value="espacio='E1' tipo='imagen' dibujar-si='(corr2==2)&(scrl==1)' coord_abs='sí' expresión='(10+300+10,60)' archivo='images/mal.png'">
+   <param name="G_09" value="espacio='E1' tipo='imagen' dibujar-si='(corr3==1)&(scrl==2)' coord_abs='sí' expresión='(10+400+10,60)' archivo='images/bien.png'">
+   <param name="G_10" value="espacio='E1' tipo='imagen' dibujar-si='(corr3==2)&(scrl==2)' coord_abs='sí' expresión='(10+400+10,60)' archivo='images/mal.png'">
+   <param name="G_11" value="espacio='E1' tipo='texto' color='232323' dibujar-si='correcto==1' expresión='[10,350]' texto='¡Bien hecho! Continúa sobre la unidad para que veas la relevancia de estos conceptos en relación con el problema en cuestión.' fuente='SansSerif,PLAIN,17' fijo='sí' ancho='625'">
+   <param name="G_12" value="espacio='E1' tipo='texto' color='232323' dibujar-si='correcto==2' expresión='[10,350]' texto='Alguna de tus respuestas está mal. Intenta nuevamente con cuidado.' fuente='SansSerif,PLAIN,17' fijo='sí' ancho='625'">
+   <param name="G_13" value="espacio='E1' tipo='texto' expresión='[20,150]' texto='n1=[n1]    n2={n2]' fijo='sí' info='debug'">
+</ajs></p>
+
+</body>
+</html>

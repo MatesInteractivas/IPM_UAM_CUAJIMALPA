@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>  
+
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Reflexiones y aplicaciones: La sucesión de Fibonacci en otros ámbitos</h1>
+    
+    <!--- Subtítulo (no necesario en introducción) --->
+    <h2>Los conejos de Fibonacci</h2>
+    
+    
+    <!--- Párrafo --->
+    <p>
+	Algunos fenómenos biológicos también se pueden representar por modelos simplistas que hacen muchas suposiciones que no suelen ocurrir en la realidad.
+    A pesar de ser simplificaciones de comportamientos más complicados, este tipo de modelos suelen estudiarse por sus interesantes aspectos matemáticos.
+    </p>
+
+    <p>
+    Uno de estos modelos es el árbol de descendencia de una pareja de conejos bajo reglas bastante simplificadas, a saber:
+    </p>
+    
+    <div class='importante' style='margin-left:10%;margin-right:10%'>
+	<ul>
+		<li>El tiempo se mide en meses.</li>
+		<li>Se comienza con una pareja de conejos juvenil (la generación cero).</li>
+		<li>Las parejas juveniles aún no se encuentran en edad reproductiva y se tardan un mes en alcanzar dicha edad. Esto significa que en el siguiente mes, una pareja juvenil sólo se habrá convertido en una pareja madura, sin haber procreado aún.</li>
+		<li>Una pareja de conejos madura o adulta, al procrear, generará una sola pareja juvenil de conejos por mes.</li>
+		<li>Los conejos no mueren.</li>
+	</ul>
+    </div>
+
+    <p>
+    Es obvio que este modelo no es realista. Los conejos no siempre tardarán el mismo tiempo en volverse fértiles, no siempre tendrán sólo una pareja de conejos por camada, y evidententemente no son inmortales. Pero, independientemente de la falta de realismo, intentemos ver cómo se comporta la descendencia de esta pareja inicial de conejos.
+    </p>
+
+    <p>
+    El siguiente recurso interactivo te permitirá estudiar el comportamiento de la pareja de conejos. Pero tú habrás de ayudar a construirlo.
+    </p>
+
+    <p>
+    Es importante notar algunas cosas para que puedas abordar dicho recurso:
+	<ul>
+		<li>Las parejas juveniles (que aún no alcanzan la edad reproductiva) se representan sólo con las caritas. Las parejas aldultas o maduras (ya en edad reproductiva) se representan con cuerpo completo.</li>
+		<li>Las generaciones, a diferencia del caso de las abejas, se incrementan hacia abajo. Es decir, una generación posterior o siguiente (en este caso la descendencia) tendrá un índice mayor que aquella de donde provienen.</li>
+		<li>Cuando una pareja chica llega a la edad reproductiva, ella se representa en la nueva generación justo debajo de su versión inmadura en la generación previa. Igualmente, parejas ya en edad reproductiva se representan, en nuevas generaciones, justo debajo de si mismas. Lo importante aquí es no interpretar las que aparecen justo debajo de otra en una generación anterior como si fueran una pareja nueva, sino interpretarlas como la misma pareja.</li>
+	</ul>
+    </p>
+
+    <div class="instrucciones">El siguiente espacio interactivo funciona semejante al que visitaste en la primera parte de la formalización.
+    Pulsa en los recuadros marcados en amarillo para responder algunas preguntas con respecto al árbol mostrado.
+    Al errar tres veces podrás acceder a la respuesta, pero procura no recurrir a ella.
+    Al responder correctamente las preguntas, se irá construyendo la generación 4 a partir de la 3.</div>
+    
+      <!-- ejemplo para incluir un documento externo en un iframe, aqui van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="480" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+
+    <p>
+    Seguro notaste que el comportamiento del árbol es idéntico al de las abejas. Aquí se analizó sólo la cuarta generación, pero ello es suficiente, pues las condiciones de inicio son las mismas y la regla para calcular el número de parejas es análoga a la de las abejas. Así que los árboles serán idénticos.
+	</p>
+
+    <p>
+    La única diferencia es que este árbol crece hacia abajo.
+    Esto nos muestra la versatilidad que un modelo algebraico puede tener para representar un fenómeno, siempre que el comportamiento subyacente de los fenómenos sea igual.
+    Seguramente pudiste notar que el zángano en el árbol genealógico de las abejas corresponde a una pareja juvenil en este árbol, y que la reina en el otro corresponde a una pareja adulta en éste.
+    </p>
+
+    <p>
+    Avanza ahora a la siguiente página para que veas otras propiedades de la proporción áurea.
+    </p>
+  
+	
+  <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>     
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  </div>
+  
+
+</article>
+
+</body>
+
+</html>
+

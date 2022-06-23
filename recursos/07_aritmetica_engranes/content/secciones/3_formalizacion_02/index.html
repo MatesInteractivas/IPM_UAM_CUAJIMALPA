@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+   <h1>Formalización del problema</h1>
+
+    <h2>¿Qué es el divisor de un número?</h2>
+
+    <p>
+     En la página anterior recordamos varios conceptos importantes para poder dar respuesta al problema planteado.
+     Ahora recordaremos otros conceptos también importantes: qué es un divisor de un número, qué es un divisor común, y qué relación tiene el divisor de un número con sus factores.
+    </p>
+
+    <!--
+    <p class='importante' style="margin-left:10%;margin-right:10%;">
+    <strong>Divisores</strong>
+    <br><br>
+    Los <strong>divisores</strong> de un número son los números que lo dividen de manera que el resultado del cociente es un número entero y el residuo es \(0\). Por ejemplo, \(5\) es divisor de \(75\), pues el cociente \(75/5\) es \(15\), que es un número entero, y al dividir \(75\) entre \(5\), el residuo es \(0\).
+<br>\(5\) no es divisor de \(38\), pues al dividir \(38/5\) el residuo no es \(0\), sino \(3\). Para que el residuo de dividir \(38\) entre \(5\) sea \(0\) tendríamos que considerar números no enteros:
+    <div class="course_extern_content">
+        <img src="imgs/division.jpg"></img>
+    </div>
+    </p>
+
+    <p class='importante' style="margin-left:10%;margin-right:10%;">
+Diremos que un número <strong>divide</strong> a otro si cumple estas dos condiciones: el resultado de la división es un número entero y el residuo es \(0\). Un número que divide a dos o más números es un <strong>divisor común</strong> de esos números. Por ejemplo \(5\) es un <em>divisor</em> de \(20\) y de \(75\).
+    </p>
+    -->
+    
+    <div class='importante' style="margin-left:15%;margin-right:15%;">
+      <strong>Divisores</strong>
+      <br><br>
+      Los <strong>divisores</strong> de un número son los números que lo dividen de manera que el resultado del cociente es un número entero y el residuo es \(0\).
+      <br><br>
+      Por ejemplo, \(5\) es divisor de \(75\), pues el cociente \(75/5\) es \(15\), que es un número entero, y al dividir \(75\) entre \(5\), el residuo es \(0\).
+      <br><br>\(5\) no es divisor de \(38\), pues al dividir \(38/5\) el residuo no es \(0\), sino \(3\). Para que el residuo de dividir \(38\) entre \(5\) sea \(0\) tendríamos que considerar números no enteros:
+      <div class="course_extern_content">
+          <img src="imgs/division.png"></img>
+      </div>
+      Diremos que un número <strong>divide</strong> a otro si cumple estas dos condiciones: el resultado de la división es un número entero y el residuo es \(0\).
+      
+      <br><br>
+      <strong>Divisor común</strong>
+      <br><br>
+      Un número que divide a dos o más números es un <strong>divisor común</strong> de esos números. Por ejemplo \(5\) es un <em>divisor común</em> de \(20\) y de \(75\).
+    </div>
+
+    <p>
+    Hagamos algunas observaciones sobre estos conceptos y los ejemplos que dimos por medio de las siguientes preguntas.
+    </p>
+
+    <div class="course_extern_content">
+      <iframe class="course_iframe" width="750" height="130" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+
+    <p>
+    Ya vimos que \(5\) es <em>divisor</em> de \(20\), de \(75\) y de muchos otros números. De hecho, \(5\) es divisor de una infinidad de números (pues hay una infinidad de números enteros). ¿Puedes dar algunos?
+    </p>
+
+    <p>
+    Vimos también que \(5\) es <em>factor</em> de \(20\) y de \(75\), pues \(20=5\times 4\), es decir que \(5\) está contenido en \(20\) cuatro veces; y \(75=5\times 15\), es decir que \(5\) está contenido en \(75\) quince veces. Además, de manera general, <strong>los factores de un número son también sus divisores</strong>.
+    </p>
+
+    <p>
+    Volvamos a las observaciones que hiciste en la tercera página de la Exploración.
+    Precisaremos estas observaciones usando las definiciones que se dieron al principio de esta página.
+    A partir de ellas y de la exploración del entorno interactivo, puedes responder a las preguntas que se plantearon en la página 3 de la sección Exploración.
+    Enseguida se muestra el entorno interactivo de la página anterior con otro dato más.
+   </p>
+
+    <!--- Instrucciones --->
+    <div class="instrucciones">
+     Selecciona el número de dientes de cada engrane presionando sobre los pulsadores correspondientes, el izquierdo para el engrane azul y el derecho para el engrane naranja. Presiona sobre el botón 'Mover' para hacer girar los engranes.
+    Con las flechas izquierda y derecha puedes hacer girar los engranes diente por diente.
+    </div>
+
+    <!-- ejemplo para incluir un documento externo en un iframe, aquí van las escenas y videos -->
+    <div class="course_extern_content">
+      <iframe class="course_iframe" width="760" height="460" frameborder="0" src="escenas/escena2.html"> </iframe>
+    </div>
+
+    <p>
+Ya habíamos observado que el número de vueltas que da el engrane naranja para volver por primera vez a su posición inicial también es el número de puntos naranja marcados en los huecos del engrane azul. Veamos qué relación tienen estos puntos con los divisores del número de dientes del engrane azul.
+    </p>
+
+    <div class="course_extern_content">
+      <iframe class="course_iframe" width="750" height="130" frameborder="0" src="escenas/escena3.html"> </iframe>
+    </div>
+
+    <p>
+El número de puntos naranja marcados en los huecos del engrane azul es entonces un divisor de su número de dientes.
+Además, como el número de dientes encajados entre el número de vueltas que da ese engrane es un número entero e igual al número de dientes del engrane, entonces el número de vueltas del engrane es divisor del número de dientes encajados.
+Con esto hemos respondido a las preguntas planteadas en la página 3 de la sección Exploración.
+</p>
+    
+    <p>
+Así como existe un mínimo común múltiplo, también hay un máximo común divisor. Consideremos nuevamente dos números naturales cualquiera.
+    </p>
+
+    <p class='importante' style="margin-left:10%;margin-right:10%;">
+    El más grande de los divisores comunes de dos números \(a\) y \(b\) se llama <strong>máximo común divisor</strong> y se denota por \( MCD(a,b) \).
+    </p>
+
+    <!--- Instrucciones --->
+    <div class="instrucciones">
+    A continuación se muestran nuevamente dos engranes cuyo número de dientes puede seleccionarse con un pulsador para cada uno. Se muestra también el máximo común divisor del número de dientes de cada engrane. Presiona sobre el botón 'Mover' para hacer girar los engranes.
+    </div>
+
+    <!-- ejemplo para incluir un documento externo en un iframe, aquí van las escenas y videos -->
+    <div class="course_extern_content">
+      <iframe class="course_iframe" width="760" height="460" frameborder="0" src="escenas/escena4.html"> </iframe>
+    </div>
+
+
+  <p>
+  Recordemos la nomenclatura de la página anterior: <strong>dA</strong> es el número de dientes del engrane azul, <strong>dN</strong> al número de dientes del engrane naranja, <strong>vA</strong> al número de vueltas que da el engrane azul, y <strong>vN</strong> el número de vueltas que da el engrane naranja. 
+  Sin embargo, hay otro par de números que es relevante: el que aparece en la oración abajo de los engranes cuando dejan de girar. Les llamaremos <strong>VA</strong> y <strong>VN</strong> respectivamente.
+  Entonces la frase queda como: <em>"Observa que este engrane da <strong>VA</strong> vueltas por cada <strong>VN</strong> que da este otro"</em>.
+  Fíjate en que, para el mismo par de engranes, estos números no cambian aunque presiones el botón 'Mover' más de una vez, y que cuando lo presionas por primera vez <strong>vA</strong> y <strong>vN</strong> coinciden con <strong>VA</strong> y <strong>VN</strong>, respectivamente.
+  </p>
+
+  <div class="course_extern_content">
+      <iframe class="course_iframe" width="750" height="130" frameborder="0" src="escenas/escena5.html"> </iframe>
+  </div>
+
+  <p>
+  Vimos que \(MCD(12,8)=12/3=8/2=4\). En general, el <em>máximo común divisor</em> de \(dA\) y \(dN\), es \(dA/VN\) o \(dV/VA\), es decir:
+  </p>
+  <p class='importante' style='margin-left:15%;margin-right:15%;'>
+  \[MCD(dA,dN)=dA/VN=dV/VA\]
+  
+  Además:
+  \[MCD(dA,dN)=MCD(dN,dA)\]
+  </p>
+
+  <p>
+  Es importante considerar el número de vueltas para volver por primera vez a la posición inicial, pues si consideramos la segunda vez, la tercera vez,... que los engranes regresan a la posición inicial, obtendríamos divisores del número de dientes encajados, pero no necesariamente divisores del número de dientes de cada engrane. Veamos un ejemplo.
+  </p>
+
+  <div class="course_extern_content">
+      <iframe class="course_iframe" width="750" height="130" frameborder="0" src="escenas/escena6.html"> </iframe>
+  </div>
+
+  <p>
+  Cuando la pareja (12,8) regresa por tercera vez a la posición inicial, el engrane azul dio 6 vueltas y el naranja dio 9.
+  Si dividimos el número de dientes de un engrane entre el número de vueltas del otro, se obtienen las fracciones \(12/9\) y \(8/6\).
+  Una fracción puede interpretarse como una división; si hacemos estas divisiones, el resultado no es un número entero.
+  Sin embargo, son fracciones equivalentes y ambas pueden reducirse a la fracción irreductible (es decir, que no puede reducirse más) \(4/3\).
+
+
+
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>
+
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+
+
+
+  </div>
+
+
+</article>
+
+
+</body>
+
+</html>

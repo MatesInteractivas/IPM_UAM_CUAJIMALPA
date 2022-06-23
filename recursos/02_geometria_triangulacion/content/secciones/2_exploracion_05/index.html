@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Exploración inicial del problema</h1>
+    
+    <h2>Puntos de intersección de circunferencias</h2>
+    <!--- Párrafo --->
+    
+    <p>
+    Ahora que ya descubriste que con un mínimo de tres antenas puedes localizar un dispositivo móvil, vamos a ver cómo se hace en la realidad.
+    Ten claro que la siguiente animación sigue siendo una simplificación del problema, que muestra la localización del dispositivo en el plano en vez de las 3 dimensiones que se tienen en el mundo real.
+    
+    <!--- Instrucciones --->
+    <div class="instrucciones">
+    <span>En el siguiente espacio se muestran varias antenas. Estas se comunican con un mismo dispositivo para determinar la distancia que hay entre ellas y el dispositivo, para luego mandar esta información a una estación base.
+    A continuación se comienzan a trazar circunferencias con centro en las antenas y radio igual a la distancia entre la antena correspondiente y el dispositivo.
+    A partir de estas circunferencias se ubica la posición del dispositivo. Pulsa el botón "Localizar" para ver la animación.</span>
+    </div>
+
+    <!-- ejemplo para incluir un documento externo en un iframe, aqui van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="750" height="510" frameborder="0" src="escenas/escena2.html"> </iframe>
+    </div>
+    
+     <p>
+    ¿Por qué se están usando cuatro antenas, si ya observamos que bastan tres circunferencias para ubicar un punto en un plano?
+    Esto se debe a que, como ya lo comentamos, en la realidad hay diversas limitantes, como la presencia de obstáculos tales como edificios altos que provocan que los datos obtenidos por las antenas no sean exactos.
+    Por eso, si hiciéramos el cálculo con el mínimo requerido de tres antenas, podríamos no obtener un punto de intersección, como lo puedes ver en la siguiente imagen.
+    </p>
+    
+    <div class="course_extern_content"> 
+        <img src="imgs/zoom.png"></img>
+      </div>
+      
+      <p>
+    Es por esta razón que se recomienda que los dispositivos se comuniquen con 4 antenas para realizar una mejor localización.
+    Lógicamente, entre más antenas intervengan habrá mayor precisión en la ubicación. Por otro lado, esto implica hacer un mayor número de cálculos y, por lo tanto, un aumento en el tráfico de datos.
+    </p>
+    
+    <p>
+      Ahora que sabemos que para localizar un dispositivo móvil, necesitamos de al menos tres antenas, es decir de la intersección de tres circunferencias con centro en la posición de las antenas, procederemos a plantear el problema en términos algebraicos.
+    </p>
+    
+
+  
+      <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

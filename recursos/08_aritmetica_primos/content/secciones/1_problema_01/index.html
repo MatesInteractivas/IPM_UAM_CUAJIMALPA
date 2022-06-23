@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+  <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+
+</head>
+
+<body onload="initialize();">
+  
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    </p><!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Planteamiento del problema: Acomodo óptimo para transporte</h1>
+    
+    <!--- Subtítulo (no necesario en introducción) --->
+    <h2>Logística</h2>
+    
+    
+    <!--- Párrafo --->
+    <p>
+      Somos los coordinadores logísticos encargados de realizar envíos
+      internacionales por barco y nos llega una petición especial de
+      un cliente que necesita trasladar \(360\) cajas de madera, todas
+      ellas de forma cúbica de un pie de arista, que contienen unas
+      preparaciones coloidales usadas en la fabricación de ciertos
+      alimentos.
+    </p>
+
+    <p>
+      El cliente nos advierte que los coloides son delicados y pueden
+      dañarse tanto por los rayos solares como por movimientos bruscos
+      de las cajas. Por ejemplo, si una caja resbala y choca con otra
+      el coloide se puede echar a perder.
+    </p>
+
+    <p>
+      Otro detalle con estas cajas es que no están hechas para
+      apilarse, no podemos poner unas cajas sobre otras.
+    </p>
+
+      <div class="course_extern_content"> 
+        <img src="imgs/barco01.jpg"></img>
+      </div>
+
+    <p>
+      El barco en el que realizaremos el envío cuenta con un área
+      plana de \(500\) por \(500\) pies, ubicada sobre el resto de la carga y
+      que está completamente libre. Pondremos las cajas ahí pero
+      acomodadas en un solo paquete de forma rectangular donde todas
+      ellas quepan exactamente, para evitar que resbalen y se dañen
+      los coloides al chocar las cajas bruscamente.
+    </p>
+
+    <p>
+      El paquete debe ser cubierto con una lona que resguarde y dé
+      sombra a todas las cajas por la parte superior y las
+      laterales. Nos apoyaremos en cuatro postes para sujetar el
+      paquete y colocar la lona.
+    </p>
+
+    <p>
+      Algo que no podríamos hacer es, por ejemplo, formar filas de \(17\)
+      cajas porque \(17\times21=357\), lo que significa que al
+      acomodar las \(360\) cajas tendríamos que formar \(3\) filas de \(18\)
+      cajas, señaladas por la flecha azul en el dibujo, dejando un
+      hueco de \(18\) espacios en el que las tres cajas podrían
+      deslizarse. Aunque pusiéramos las tres cajas en otro lugar del
+      paquete tendríamos el mismo problema de posibles deslizamientos.
+    </p>
+
+      <div class="course_extern_content"> 
+        <img src="imgs/cajas01.png"></img>
+      </div>
+    
+      <p>
+	La lona que se usa en estos casos es bastante cara y debemos
+	adquirirla tratando de ahorrar lo más posible.
+      </p>
+
+
+    <p class="importante" style='margin-left:10%;margin-right:10%;'>
+      ¿Cómo acomodamos las cajas?
+      <br><br>
+      ¿Cómo hacemos si fuera un número cualquiera de cajas entre \(100\) y \(10,000\)?
+    </p>
+
+    <div class='problema'>
+      <strong>Problema</strong>
+      
+      <br><br>
+      El problema planteado de forma general,
+        para un número natural arbitrario \(n\) que represente la cantidad
+        de cajas, consiste de dos partes:
+        <ol>
+        <li>Encontrar todas
+        las posibles parejas de números naturales \(p\) y \(q\) cuyo producto
+        sea \(n\).</li>
+        <li>Elegir la pareja de números \(p\) y \(q\) tales que
+        la superficie de la lona, misma que podemos calcular a partir
+        de \(p\) y \(q\), sea la más pequeña posible.</li>
+        </ol>
+        Si solo hubiera
+        una pareja de números \(p\) y \(q\), entonces el punto 2 queda resuelto
+        automáticamente.
+    </div>
+    
+    <br>
+    
+    <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+    
+    
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+    
+
+  </div>
+  
+</article>
+
+
+
+
+</body>
+
+</html>

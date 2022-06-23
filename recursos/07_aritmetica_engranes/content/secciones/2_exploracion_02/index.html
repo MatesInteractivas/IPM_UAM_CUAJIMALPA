@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+   <h1>Exploración inicial del problema</h1>
+
+    <h2>¿Qué relaciones hay con respecto al número de dientes encajados?</h2>
+
+    <p>
+     Te habrás dado cuenta de que responder a la última pregunta de la página anterior es equivalente a resolver el problema planteado, así que no te preocupes si no encontraste todas las respuestas.
+     Para profundizar un poco más en el problema, en esta página usarás un entorno interactivo que te permitirá realizar y analizar algunas observaciones que te servirán para entender:
+
+     <ul>
+       <li>Qué relación existe entre el número total de dientes encajados y el número de dientes de cada engrane;</li>
+       <br>
+       <li>Qué relación existe entre el número total de dientes encajados y el número de vueltas que da cada engrane.</li>
+     </ul>
+    </p>
+
+    <p>
+    A continuación se muestran nuevamente dos engranes cuyo número de dientes puede seleccionarse con diferentes pulsadores, pero esta vez el número de dientes de cada engrane puede variar entre 4 y 12.
+    Otra vez se marca en blanco una posición inicial, así como los huecos en los que se encaja el diente marcado mientras ambos engranes giran.
+    Posteriormente hay una serie de preguntas que pueden orientarte en la exploración del entorno interactivo. Dichas preguntas se refieren a esta parejas particular de engranes.
+</p>
+
+    <!--- Instrucciones --->
+    <div class="instrucciones">
+    Selecciona el número de dientes de cada engrane presionando sobre los pulsadores correspondientes, el izquierdo para el engrane azul y el derecho para el engrane naranja.
+    Presiona sobre el botón 'Mover' para hacer girar los engranes.
+    Con las flechas izquierda y derecha puedes hacer girar los engranes diente por diente.
+    </div>
+
+    <!-- ejemplo para incluir un documento externo en un iframe, aquí van las escenas y videos -->
+    <div class="course_extern_content">
+    <iframe class="course_iframe" width="760" height="460" frameborder="0" src="escenas/escena1.html"> </iframe>
+    <iframe class="course_iframe" width="750" height="130" frameborder="0" src="escenas/escena2.html"> </iframe>
+    </div>
+
+    <p>
+    En el entorno interactivo anterior pudiste observar una relación entre las parejas de engranes <em>(6,6)</em>, <em>(6,7)</em>, <em>(6,8)</em>, <em>(6,9)</em>, <em>(6,10)</em>, <em>(6,11)</em>, <em>(6,12)</em>, <em>(7,6)</em>, etcétera.
+    ¿Puedes enlistar todas las parejas? Te sugerimos llevar un registro de tus observaciones para que puedas hacer deducciones más fácilmente.
+    ¿Hay alguna diferencia en tus observaciones respecto a las parejas con el mismo par de números pero invertidos, por ejemplo las parejas <em>(6,8)</em> y <em>(8,6)</em>?
+    </p>
+
+
+    <div class="problema">
+    <strong>Preguntas</strong>
+    <br><br>
+     Intenta encontrar la respuesta a las siguientes preguntas:
+      <ol>
+      <li>¿Qué se puede observar acerca del número total de dientes encajados en relación con  el número de vueltas que da cada engrane?</li>
+      <br>
+      <li>¿Qué relación observas entre el número total de dientes encajados y el número de dientes de cada engrane?</li>
+      <br>
+      <li>¿Qué se puede observar acerca del número de dientes encajados en relación con el número de vueltas que da cada engrane y el número de dientes de cada uno?</li>
+      </ol>
+    </div>
+
+
+
+
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>
+
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+
+
+
+  </div>
+
+
+</article>
+
+
+</body>
+
+</html>

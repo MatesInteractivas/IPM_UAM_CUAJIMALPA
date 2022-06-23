@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Resolución del problema</h1>
+    
+
+    <p class="problema">
+      <strong>El problema</strong>
+      <br><br>
+      Dados \(n\) puntos y un cuadro de costos de todos los enlaces
+      requeridos para comunicar cada pareja de puntos, debemos escoger
+      una lista de enlaces de tal forma que la suma de los costos
+      correspondientes sea la menor posible, pero que haya siempre una
+      ruta que permita comunicar dos puntos cualesquiera.
+    </p>
+
+    <!--- Subtítulo (no necesario en introducción) --->
+    <h2>Dos conjuntos de puntos</h2>
+        
+    <!--- Párrafo --->
+    <p>
+    Algo que notamos con facilidad cuando intentamos encontrar la
+    solución al problema en cualquiera de los espacios interactivos, es
+    que en cuanto comenzamos a marcar enlaces, incluyéndolos como
+    parte de la solución, dividimos el conjunto de puntos en los
+    siguientes <strong>dos subconjuntos complementarios</strong>:
+    </p>
+    
+    <div class='importante' style='margin-left: 10%;margin-right: 10%;'>
+    <ol>
+      <li>
+	El subconjunto de puntos que ya están enlazados con algún otro, que
+	podemos también denominar como el conjunto de los puntos de la solución en
+	construcción.
+      </li>
+      <br>
+      <li>
+	El conjunto de puntos aislados, es decir, el de los puntos que aún no han
+	sido incluidos en la solución en construcción.
+      </li>
+    </ol>
+    </div>
+
+    <p>
+      Lo anterior es tan obvio y evidente que ni siquiera le habíamos
+      dado importancia, aunque al buscar la solución debíamos tener
+      cuidado de ir incluyendo todos los puntos.
+    </p>
+
+    <p>
+      Vamos a denotar como \(S_1\) al conjunto de la solución
+      compuesto por un primer punto. Llamaremos \(S_2\) al mismo
+      conjunto cuando tenga dos puntos y a \(S_k\) al conjunto de
+      puntos de la solución en construcción cuando llevemos incluidos
+      \(k\) puntos. Con esta notación \(S_n\) será nuestra solución e
+      incluirá a todos los puntos.
+    </p>
+
+    <p>
+      De forma paralela, vamos construyendo el conjunto de enlaces de
+      nuestra solución. Denotaremos \(E_1\) al conjunto de enlaces de
+      la solución en construcción compuesto por un primer
+      enlace. Llamaremos \(E_2\) al mismo conjunto cuando tenga dos
+      enlaces y a \(E_k\) al conjunto de enlaces de la solución en
+      construcción cuando llevemos incluidos \(k\) enlaces. Con esta
+      notación \(E_{n-1}\) será nuestra solución e incluirá a todos
+      los enlaces necesarios para conectar los \(n\) puntos. 
+    </p>
+
+    <p>
+      Para tener siempre un conjunto \(E_{k-1}\) asociado a un
+      conjunto \(S_k\) añadiremos el conjunto \(E_0\) que es el
+      conjunto de enlaces correspondiente a \(S_1\). ¿Cuál es?
+    </p>
+
+    <div class="instrucciones">
+    La siguiente es la misma escena que usamos en la primera página de
+    la exploración y corresponde a los datos de la red de respaldo
+    conformada por enlaces con antenas de radio. En esta ocasión te
+    pedimos que construyas la solución paso a paso e identifiques los
+    conjuntos \(S_1,S_2,S_3,S_4,S_5,S_6,S_7,S_8\), así como los
+    conjuntos \(E_0,E_1,E_2,E_3,E_4,E_5,E_6,E_7\).
+    </div>
+    
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="480" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+  
+
+    <p class="problema">
+      Si en el espacio anterior tomas sucesivamente los enlaces AB,
+      BC, CD, DE, EF, FG y GH, entonces encuentras una solución correcta. ¿Cuáles
+      son los conjuntos \(S_1,S_2,S_3,S_4,S_5,S_6,S_7,S_8\) y
+      \(E_0,E_1,E_2,E_3,E_4,E_5,E_6,E_7\) si comienzas por el punto A?
+    </p>
+
+    <div class="verSolucion" id="btSolucion" onclick="document.getElementById('conjuntos').setAttribute('class','visible');document.getElementById('btSolucion').setAttribute('class','oculto');">
+    </div>
+
+    <div id="conjuntos" class="oculto">
+      \[S_1=\{A\},\ \ E_0=\{\}\]
+      \[S_2=\{A,B\},\ \ E_1=\{AB\}\]
+      \[S_3=\{A,B,C\},\ \ E_2=\{AB,BC\}\]
+      \[S_4=\{A,B,C,D\},\ \ E_3=\{AB,BC,CD\},\]
+      \[S_5=\{A,B,C,D,E\},\ \ E_4=\{AB,BC,CD,DE\},\]
+      \[S_6=\{A,B,C,D,E,F\},\ \ E_5=\{AB,BC,CD,DE,EF\},\]
+      \[S_7=\{A,B,C,D,E,F,G\},\ \ E_6=\{AB,BC,CD,DE,EF,FG\},\]
+      \[S_8=\{A,B,C,D,E,F,G,H\},\ \ E_7=\{AB,BC,CD,DE,EF,FG,GH\}.\]
+    </div>
+
+
+	
+  <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  </div>
+  
+
+</article>
+
+</body>
+
+</html>
+

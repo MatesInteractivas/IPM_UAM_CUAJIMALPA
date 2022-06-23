@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+  <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Formalización del problema</h1>
+    
+    <h2>Alternancia de proporciones</h2>
+    
+    <!--- Párrafo --->
+    <p>
+    Ahora que ya has visto que los cortes sucesivos involucran una alternancia de las proporciones, analizaremos el porqué de dicha alternancia.
+    </p>
+	
+    <!--- Instrucciones --->
+    <div class="instrucciones">
+    En el siguiente espacio interactivo podrás notar qué ocurre en cada uno de los lados al ser cortado sucesivamente. Comenzaremos por llamar \(L\) al lado mayor y \(l\) al lado menor*. Elige una longitud para cada lado mediante los pulsadores.
+    Una vez elegidas las longitudes, pulsa 'Siguiente' para avanzar en los cortes, o 'Anterior' para retroceder.
+    Observa las anotaciones e intenta resolver el cuestionario en la parte inferior.
+    Procura obtener las respuestas correctas antes de continuar.
+    <br><br>
+    <span style="font-size:12px;">
+      * Nota que, con el objeto que el primer rectángulo sea vertical, \(l\) está restringido a un valor máximo de tres cuartas partes de \(L\).
+    </span>
+    </div>
+
+
+    <!-- ejemplo para incluir un documento externo en un iframe, aqui van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="750" height="510" frameborder="0" src="escenas/escena1.html"> </iframe>
+      <iframe class="course_iframe" width="750" height="130" frameborder="0" src="escenas/escena2.html"> </iframe>
+    </div>
+
+    <p>
+    Como habrás notado tras resolver el cuestionario correctamente, tras dos recortes (el rectángulo \(C\)), los lados grande y chico del rectángulo resultante son la mitad del grande y chico del original (rectángulo \(A\)), respectivamente.
+    Esto significa que el rectángulo resultante está a escala \(0.5\) del original.
+    El hecho que el rectángulo resultante \(C\) esté a escala del original implica que son <strong>proporcionales</strong>.
+    </p>
+
+
+    <p>
+    Ello también se puede ver a partir de que el cociente entre lados correspondientes es el mismo. En este ejemplo, el cociente entre lados correspondientes es \(2\).
+    Por ejemplo, si eliges los valores \(4\) y \(3\) para los lados \(L\) y \(l\) del rectángulo original, observarás las siguientes razones entre los lados:
+    </p>
+    
+      
+    <table  class="tablaImportante">
+    <thead>
+    <tr>
+      <th>
+	Rectángulo A
+      </th>
+      <th>
+	Rectángulo C
+      </th>
+    </tr>
+    </thead>
+    <tr>
+      <td>
+	\[\frac{L}{l} = \frac{4}{3}\]
+      </td>
+      <td>
+	\[\frac{L/2}{l/2} = \frac{2}{1.5}\]
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+	\[\frac{L}{L/2} = \frac{4}{2} = 2\]
+	\[\frac{l}{l/2} = \frac{3}{1.5} = 2\]
+      </td>
+    </tr>
+    </table>
+
+    
+    <p>
+    Así pues, la proporción entre lados se conserva. Esto implica que también el cociente del lado mayor entre el lado menor del rectángulo original \(A\) será igual a aquel del lado mayor entre el lado menor del rectángulo del rectángulo \(C\) que se obtiene tras dos recortes.
+    </p>
+    
+    <table  class="tablaImportante">
+    <thead>
+    <tr>
+      <th>
+	Rectángulo A
+      </th>
+      <th>
+	Rectángulo C
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>
+	\[\frac{L}{l} = \frac{4}{3} = 1.333...\]
+      </td>
+      <td>
+	\[\frac{L/2}{l/2} = \frac{2}{1.5} = 1.333...\]
+      </td>
+    </tr>
+    </tbody>
+    </table>
+    
+	
+    <p class=''>
+    Tras recortar un rectángulo a la mitad de su lado mayor, y posteriormente recortar uno de los rectángulos resultantes de la misma manera, se obtendrá un rectángulo a escala \(0.5\) del original y con igual proporción entre lados al original.
+    </p>
+
+
+    <p>
+    Podemos concluir que, independientemente de la forma del rectángulo, tras 1 recorte (rectángulo \(B\)) obtendremos un rectángulo cuya proporción entre lados puede ser distinta al original. No obstante, tras un segundo recorte de este nuevo rectángulo (rectángulo \(C\)), se obtendrá por fuerza uno cuya proporción entre lados es igual a la del primer rectángulo. Un recorte sucesivo, por lógica, generará un cuarto rectángulo cuya proporción entre lados es la del segundo rectángulo \(B\).
+    </p>
+    
+    <p class=''>
+    Así pues, observamos que los rectángulos resultantes de un número par de recortes todos conservan la misma proporción entre lados entre sí, y los rectángulos resultantes de un número non de recortes también conservan dicha proporción entre sí.
+    </p>
+    
+    <table  class="tablaImportante">
+    <thead>
+    <tr>
+      <th>
+	Rectángulo A
+      </th>
+      <th>
+	Rectángulo B
+      </th>
+      <th>
+	Rectángulo C
+      </th>
+      <th>
+	Rectángulo D
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>
+	# de recortes: 1
+      </td>
+      <td>
+	# de recortes: 2
+      </td>
+      <td>
+	# de recortes: 3
+      </td>
+      <td>
+	# de recortes: 4
+      </td>
+    </tr>
+    <tr>
+      <td>
+	\[ \frac{4}{3} = 1.333...\]
+      </td>
+      <td>
+	\[ \frac{3}{2} = 1.5\]
+      </td>
+      <td>
+	\[ \frac{2}{1.5} = 1.333...\]
+      </td>
+      <td>
+	\[\frac{1.5}{1} = 1.5\]
+      </td>
+    </tr>
+    </tbody>
+    </table>
+
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>      
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

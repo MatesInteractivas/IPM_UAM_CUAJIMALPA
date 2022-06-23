@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>TITULO</title>
+
+        <link rel="stylesheet" type="text/css" href="css/descartes.css">
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body style="margin:0px;padding:0px;overflow:hidden;">
+
+<p align="center">
+<ajs name="Descartes" width=750 height=200 code="Descartes">
+   <param name="tamaño" value="750x200">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' despl_imagen='arr-izq' fondo='ffffffff' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='A' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='1.' expresión='(0,0,30,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn30x30.png' acción='calcular' parámetro='b=1' dibujar-si='b!=c'">
+   <param name="C_02" value="id='B' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='2.' expresión='(step,0,30,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn30x30.png' acción='calcular' parámetro='b=2' dibujar-si='b!=c' pos_mensajes='centro'">
+   <param name="A_01" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='c=1;step=350'">
+   <param name="A_02" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="G_01" value="espacio='E1' tipo='imagen' dibujar-si='b=c' coord_abs='sí' expresión='((c-1)*step+100,0)' archivo='images/bien.png'">
+   <param name="G_02" value="espacio='E1' tipo='imagen' dibujar-si='!(b=c)&(b>0)' coord_abs='sí' expresión='(100+step*(b-1),0)' archivo='images/mal.png'">
+   <param name="G_03" value="espacio='E1' tipo='texto' color='negro' expresión='[0,40]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs32 A partir de cierto momento\par las pendientes de estas rectas,\par que miden el crecimiento de\par la curva, pueden rebasar cualquier\par valor dado de antemano. Por ello,\par podr\u225 n rebasar y mantenerse por\par encima de cualquier pendiente \par de un crecimiento lineal.}' fuente='SansSerif,PLAIN,16' fijo='sí'">
+   <param name="G_04" value="espacio='E1' tipo='texto' color='negro' dibujar-si='b!=c' expresión='[step,40]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs32 Las pendientes de estas rectas,\par que miden el crecimiento de\par la curva, pueden crecer mucho,\par pero pueden no rebasar cualquier\par valor dado de antemano.}' fuente='SansSerif,PLAIN,16' fijo='sí'">
+   <param name="G_05" value="espacio='E1' tipo='texto' color='gris' dibujar-si='b=c' expresión='[step,40]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs32 Las pendientes de estas rectas,\par que miden el crecimiento de\par la curva, pueden crecer mucho,\par pero pueden no rebasar cualquier\par valor dado de antemano.}' fuente='SansSerif,PLAIN,16' fijo='sí'">
+</ajs></p>
+
+</body>
+</html>

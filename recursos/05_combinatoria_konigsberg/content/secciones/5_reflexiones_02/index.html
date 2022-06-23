@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>  
+
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Reflexiones y aplicaciones</h1>
+    
+    <!--- Subtítulo (no necesario en introducción) --->
+    <h2>¿Para qué sirve la teoría de gráficas?</h2>
+    
+  
+    <!--- Párrafo --->
+    <div class='instrucciones'>
+      Te sugerimos observar el siguiente video en el que se presenta una variedad de ejemplo de aplicaciones de la teoría de gráficas a la vida real.
+    </div>
+    
+     <div class="course_extern_content"> 
+      <a target="_blank" href="https://www.youtube.com/embed/8ifsbUJHbak?list=PL6kQim6ljTJu44dsVeZifHHiuDC1MEZ7q">
+      <b>Aplicaciones de la Teoría de Grafos a la vida real</b>
+    </a><br/>
+    <iframe frameborder="0" scrolling="no" width="560" height="355" src="https://www.youtube.com/embed/8ifsbUJHbak?list=PL6kQim6ljTJu44dsVeZifHHiuDC1MEZ7q"></iframe>
+    </div>
+
+    <br>
+
+    <h2>Optimización de recorridos</h2>
+
+    <p>
+    Como has visto, una de las aplicaciones de la teoría de gráficas es la optimización de recorridos en mapas, por ejemplo, en <strong>rutas turísticas</strong>, para encontrar una ruta en la que no se recorra ningún camino más de una vez y se visiten todos los puntos de interés, si es que ésta existe. 
+    </p>
+    
+    <p>
+     En mayo de 2010, la Secretaría de Turismo de México lanzó el programa “Las 10 Rutas de México“, con el fin de ofrecer a los turistas nacionales y extranjeros la oportunidad de combinar su visita a los destinos de sol y playa con el amplio patrimonio histórico y cultural de México y así promover la actividad turística en el país.
+     La ruta 8, “El misterio y el origen de los mayas” es un recorrido por los vestigios arqueológicos de la Civilización Maya. Incluye también las ciudades coloniales de Campeche y Mérida, testimonios de la arquitectura de estilo barroco traída por los españoles.
+     Los destinos de esta ruta son: Villahermosa, Palenque, Campeche, Uxmal, Mérida, Chichén Itzá y Cancún.
+     Sin embargo, hay múltiples destinos cercanos a estas ciudades, además de varias rutas para visitarlos, como lo ilustra el siguiente mapa de la zona:
+     </p>
+          
+      <div class="course_extern_content"> 
+        <img src="imgs/mapaOriente.png"></img>
+      </div>
+    
+    <div class='tarea'>
+      
+      <h3>Tarea</h3>
+
+      <p>
+      Imagina que eres un agente de viajes y estás planeando un <em>tour</em> por los destinos que están enmarcados en naranja en el mapa de arriba.
+      Para hacer el recorrido lo más atractivo posible, y para no gastar innecesariamente en gasolina, te propones nunca regresar sobre tus pasos, es decir, recorrer cada camino no más de una vez.
+      Además eres prudente, así que decides sólo tomar los caminos que estén seguros y se encuentren en buen estado (los de color cáfe, azul y naranja).
+      </p>
+      
+      <p>
+      <strong>A.</strong> En un inicio, tu plan es hacer base en la ciudad de Valladolid y desde ahí emprender pequeñas excursiones de un día.
+      </p>
+      
+      <ul>
+	<li>¿Cuántos de los destinos señalados en el mapa se pueden visitar bajo las condiciones señaladas?</li>
+	<li>¿Cómo representarías esta situación mediante una gráfica como la que elaboró Euler?</li>
+	<li>¿A qué tipo de gráfica euleriana corresponde el plan descrito?</li>
+      </ul>
+     
+     <br>
+     <p>
+      <strong>B.</strong> Rápidamente te das cuenta de que tu plan inicial está condenado al fracaso. Ahora optas por un solo recorrido partiendo de un punto aún por determinar y pasando por la mayor cantidad de destinos posible, nuevamente sin repetir rutas.
+     </p>
+     
+     <ul>
+	<li>¿Cuántos de los destinos señalados en el mapa es posible visitar con esta nueva estrategia?</li>
+	<li>Elabora una gráfica y explica, en términos 'eulerianos', por qué es así.</li>
+      </ul>
+     
+     <br>
+     <p>
+      <strong>C.</strong> Ahora supongamos que los gobiernos de los estados donde se encuentran estos puntos de interés quieren construir carreteras para extender la red de rutas turísticas.
+      ¿Qué carreteras se deberían de construir para poder realizar los trayectos que se señalan a continuación, sin repetir caminos?
+      Considera que las obras se deben realizar al menor costo posible, es decir, cubriendo la menor distancia posible con las carreteras que se van a construir.
+      Nuevamente, apóyate en la teoría de grafos para justificar tus recomendaciones.
+     </p>
+    
+    <p>Recorridos que se deberían de poder realizar gracias a la extensión de la red vial:</p>
+      <ul>
+	<li>Tour <em>El vago</em>: dos pequeñas excursiones desde Valladolid, visitando tres destinos cercanos a esta ciudad.</li>
+	<li>Tour <em>De paso</em>: un solo trayecto pasando por Valladolid y otros 4 destinos cercanos.</li>
+	<li>Tour <em>El aventurero</em>: un gran recorrido de varios días que inicia y termina en Valladolid, pero sin pasar por esta ciudad durante el recorrido.</li>
+      </ul>
+    
+      <!--
+      <p>
+      La siguiente tabla muestra las distancias entre algunos sitios. La primera es la distancia lineal y la segunda es la distancia por carretera (la mejor ruta). Otras distancias puedes consultarlas en
+      <a href="http://www.distanciasentreciudades.com/" target="_blank">http://www.distanciasentreciudades.com/</a>
+      </p>
+	  
+	<table class='tablaTarea'>
+	<thead>
+	<tr>
+		<th></th>
+		<th>Valladolid</th>
+		<th>Chichen Itzá</th>
+		<th>Ekbalam</th>
+		<th>Izamal</th>
+		<th>Río Lagartos</th>
+		
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td><strong>Valladolid</strong></td>
+		<td>0</td>
+		<td>38.21/41.53</td>
+		<td>23.3/27.05</td>
+		<td>89.46/110.14</td>
+        <td>100.95/105.66</td>		
+	</tr>
+	<tr>
+		<td><strong>Chichen Itzá</strong></td>
+		<td>38.21/41.53</td>
+		<td>0</td>
+		<td>50/70.99</td>		
+		<td>54.91/72.96</td>
+        <td>110.72/149.64</td>		
+	</tr>
+	<tr>
+		<td><strong>Ekbalam</strong></td>
+		<td>23.3/27.05</td>
+		<td>50/70.99</td>
+		<td>0</td>		
+		<td>91.28/124.95</td>
+        <td>78.29/91.3</td>		
+	</tr>
+	<tr>
+		<td><strong>Izamal</strong></td>
+		<td>89.46/110.14</td>
+		<td>54.91/72.96</td>
+		<td>91.28/124.95</td>
+        <td>0</td>		
+		<td>116.45/161.26</td>
+     </tr>
+     <tr>   
+        <td><strong>Río Lagartos</strong></td>
+		<td>100.95/105.66</td>
+		<td>110.72/149.64</td>
+		<td>78.29/91.3</td>
+        <td>116.45/161.26</td>		
+		<td>0</td>			
+	</tr>
+	
+	</tbody>
+	</table>
+	
+    -->
+   
+    
+    <p>
+    Para buscar las respuestas a las preguntas, puedes usar las herramientas interactivas de siempre.
+    </p>
+      
+      <!--<div class="verSolucion" id="btSolucion" onclick="document.getElementById('solucion').setAttribute('class','visible');document.getElementById('btSolucion').setAttribute('class','oculto');">
+      </div>-->
+    
+    </div>
+    
+          <div class='instrucciones'>
+      Coloca el control gráfico en uno de los puntos de la gráfica y pulsa el botón "Iniciar". Para cambiar el punto de inicio pulsa el botón "Cambiar posición" y luego pulsa "Iniciar". Pulsa sobre el botón "Limpiar" para borrar los caminos que hayas trazado si así lo requieres.
+      </div>
+    
+      <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="730" height="500" frameborder="0" src="escenas/escena1.html"> </iframe>
+      </div>
+     
+    
+   <!--
+    <div id="solucion" class='oculto'>
+      
+      <h2>Solución de la tarea</h2>
+      
+      <p>
+      En la primera parte del recorrido, en realidad lo que se pide es un ciclo euleriano con punto de inicio y término en la ciudad de Valladolid. Recuerda que para que un trayecto sea un ciclo euleriano todos los vértices tienen que ser pares. En esta gráfica hay 15 vértices. 
+      </p>
+      
+      <p>
+     En la segunda parte del ejercicio se pide un camino euleriano. Para encontrar alguno, tendría que haber 13 vértices pares y 2 vértices impares. 
+      </p>
+      
+      <p>
+      En ambos casos puedes intentar enlistar todas las posibilidades, considerando las condiciones que debe cumplir el recorrido, y calcular las distancia total de cada recorrido. Puedes estar seguro de que es la distancia más corta o la más larga comparando las distancias de todas las rutas. Sabiendo cuáles son las rutas más cortas, habría que decidir si en esa ruta es necesario construir alguna carretera y cuál sería, obviamente tendría que ser la más corta posible para reducir costos y disminuir distancias.
+      </p>
+      
+      <p> 
+      Por ejemplo, una posible ruta es:
+      <br>1er día: Valladolid, Cenotillo, Izamal, Yaxcabá, Yaxuná, Chichén Itzá, Valladolid (82.95+48.19+60.91+18.79+26.84+41.53 = <strong>279.21 km</strong>).
+      <br>2o día: Valladolid, Tihosuco, Tepich, Punta laguna, Valladolid (67.88+128.63+53.33 = <strong>249.84 km</strong>).
+      <br>3er día: Valladolid, Tizimín, Río Lagartos, El cuyo, Tizimín, Ekbalam, Valladolid (52.16+52.42+96.32+96+37.48+27.05 = <strong>265.43 km </strong>).
+      <br>Esta ruta es de <strong>794.48 km</strong> en total, recorriéndola por las carreteras existentes. 
+      </p>
+
+    </div>
+    -->
+  
+	
+  <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>     
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  </div>
+  
+
+</article>
+
+</body>
+
+</html>
+

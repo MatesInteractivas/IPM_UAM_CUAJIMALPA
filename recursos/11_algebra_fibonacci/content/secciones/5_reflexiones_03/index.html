@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Reflexiones y aplicaciones: La paradoja del rectángulo de Fibonacci</h1>
+
+    <h2>¿Es posible obtener diferentes valores para el área de un mismo rectángulo al calcularla de distintas formas?</h2>
+
+    <p>
+    A continuación verás un problema interesantísimo y no fácilmente soluble.
+    </p>
+
+    <p>
+    Abajo se despliega la imagen de un rectángulo donde se observa que el área del mismo, calculada como base por altura, difiere del área si se suman distintos triángulos y cuadrados que componen al rectángulo.
+    </p>
+
+    <div class="course_extern_content"> 
+    <img src="imgs/Rectangulo.png"> </img>
+    </div>
+
+    <p>
+    El rectángulo, cuyas dimensiones son 233 de largo y 144 de alto, se encuentra descompuesto en otras figuras geométricas conocidas: triángulos y cuadrados.
+    Los cuadrados miden 89 por lado. Dentro de las componentes que conforman al rectángulo se muestra un cálculo del área de cada componente.
+    </p>
+
+    <p class='problema'>
+    
+    <strong>Problema</strong>
+    <br><br>
+    Nota que la suma por partes del área total del rectángulo da: \[2(7921)+2(6408)+2(2447.5)=33553\]
+    Pero el área del rectángulo usando sólo la fórmula de base por altura nos da: \[(233)(144)=33552\]
+    ¡Pareciera que todo lo que sabemos de geometría está mal!
+    </p>
+
+    <p>
+    Seguramente ya habrás notado que los lados de los rectángulos son números de Fibonacci. Al igual que los lados de los cuadrados, y los lados de los triángulos.
+	</p>
+
+	<p>
+	Para tratar de resolver la paradoja, lo único que se te puede decir hasta ahora es que observes la inclinación de la diagonal de todo el rectángulo. También estudia la inclinación de la diagonal debajo del triángulo pequeño inferior (es decir, la hipotenusa de dicho triángulo). Recuerda que una medida de la inclinación es la pendiente. Para calcularla puedes tomar las coordenadas del extremo derecho (llamémoslas \((x_1,y_1)\)) y las del extremo izquierdo (llamémoslas \((x_0,y_0)\)) de tu segmento e introducirlas en la siguiente fórmula: \(m=\frac{y_1-y_0}{x_1-x_0}\), donde \(m\) es la pendiente.
+    </p>
+
+    <p>
+    Adelante habrás de responder esta pregunta como tarea.
+	</p>
+
+    <div class='tarea'>
+      
+    <h3>Tarea</h3>
+      
+    <p>
+	Responde a las siguientes preguntas:
+	<br>
+	<ol>
+		<li>¿Por qué el área obtenida de diferentes maneras de abordar el problema difiere?</li>
+		<br>
+		<li>¿Es igual la pendiente de los segmentos sugeridos a analizar?</li>
+		<br>
+		<li>¿Dónde queda la unidad de área que constituye la diferencia en las mediciones?</li>
+	</ol>
+    </p>
+      
+	<p>
+	¡Busca tú mismo la respuesta antes de consultarla adelante!
+	</p>
+      
+      <div class="verSolucion" id="btSolucion" onclick="document.getElementById('solucion').setAttribute('class','visible');document.getElementById('btSolucion').setAttribute('class','oculto');">
+      </div>
+    
+    </div>
+    
+    
+    <div id="solucion" class='oculto'>
+      
+    <h2>Solución de la tarea</h2>
+
+	<p>
+    Habrás notado que los números de Fibonacci que se usaron para el rectángulo son grandes. Es decir, ya está avanzada la sucesión. ¿Cómo se verá un rectángulo análogo usando números anteriores en la sucesión?
+    </p>
+
+    <div class="instrucciones">El siguiente recurso interactivo te permitirá primero ver el rectángulo original. Podrás analizar las pendientes de los segmentos sugeridos con el botón 'Analizar'. Asimismo, podrás reducir el valor de \(n\) y observar rectángulos construidos a partir de índices más pequeños que el inicial. Intenta notar dónde queda la unidad de área que provoca la discrepancia. Nota que el rectángulo se muestra a escala. Es decir, aunque lo veas del mismo tamaño al variar el índice, las longitudes de sus lados varían.</div>
+      
+    <div class="course_extern_content"> 
+    <iframe class="course_iframe" width="760" height="480" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+      
+    <p>
+    Ahora ya viste que cuando reduces el índice se forma un paralelogramo en la diagonal del rectángulo. Al parecer, este paralelogramo tiene un área justo de 1. A veces esta área sobra, a veces falta (al parecer, también dependiendo de si el índice es par o impar).
+    </p>
+
+    <p>
+    Para índices grandes, el paralelogramo también está presente y sigue teniendo un área de 1 (seguramente observaste que la discrepancia entre áreas siempre es de una unidad).
+    Pero, para mantener un área de 1, en la diagonal de un rectángulo grande como el de índices grandes de la sucesión, ¡el paralelogramo ha de ser delgadísimo!
+    Tanto es así que casi no se ve, y se parece más a una diagonal que a un paralelogramo.
+    </p>
+
+    <p>
+    Adicionalmente, la pendiente de los segmentos analizados tiende al inverso de la proporción áurea (a \(\frac{1}{\Phi}\)). A este número se le suele denotar como <em>fi minúscula</em>, o \(\phi\). El hecho que las pendientes se aproximen mucho a dicho número se debe a que la sucesión está avanzada. Para valores pequeños del índice, no son tan similares y puedes ver que lo que forma la diagonal es, efecivamente, un paralelogramo y no un segmento. Sólo si las pendientes de los segmentos fueran iguales podrías aseverar que la diagonal se compone de un segmento y no de un paralelogramo.
+    </p>
+      
+    </div>
+    
+	
+  <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>
+
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  
+  </div>
+  
+  
+  
+</article>
+
+
+</body>
+
+</html>

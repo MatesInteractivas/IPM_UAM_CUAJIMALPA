@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<title>Huerto</title>
+		<style>
+		body {
+			margin: 0;
+			padding: 0;
+			overflow:hidden;
+			
+		}
+
+		.boton{
+		cursor:pointer;
+		padding:5px 25px; 
+		background-color: #2bae95; background-image: -webkit-gradient(linear, left top, left bottom, from(#2bae95), to(#076A63));
+		background-image: -webkit-linear-gradient(top, #2bae95, #076A63);
+		background-image: -moz-linear-gradient(top, #2bae95, #076A63);
+		background-image: -ms-linear-gradient(top, #2bae95, #076A63);
+		background-image: -o-linear-gradient(top, #2bae95, #076A63);
+		background-image: linear-gradient(to bottom, #2bae95, #076A63);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#2bae95, endColorstr=#076A63);
+
+		border:1px solid #33842a; 
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+		border-radius: 10px;		
+		-webkit-box-shadow: 0 0 4px rgba(0,0,0, .75);
+		-moz-box-shadow: 0 0 4px rgba(0,0,0, .75);
+		box-shadow: 0 0 4px rgba(0,0,0, .75);	
+		color:#f3f3f3;
+		font-size:1.1em;
+		}
+		
+		.boton:hover, .boton:focus{
+		background-color: #218572; background-image: -webkit-gradient(linear, left top, left bottom, from(#218572), to(#043a36));
+		background-image: -webkit-linear-gradient(top, #218572, #043a36);
+		background-image: -moz-linear-gradient(top, #218572, #043a36);
+		background-image: -ms-linear-gradient(top, #218572, #043a36);
+		background-image: -o-linear-gradient(top, #218572, #043a36);
+		background-image: linear-gradient(to bottom, #218572, #043a36);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#218572, endColorstr=#043a36);
+		-webkit-box-shadow: 0 0 1px rgba(0,0,0, .75);
+		-moz-box-shadow: 0 0 1px rgba(0,0,0, .75);
+		box-shadow: 0 0 1px rgba(0,0,0, .75);
+		}
+
+
+		#caso5{
+		position:absolute;
+		top: 450px;
+		left: 110px;
+		}
+
+		#caso4{
+		position:absolute;
+		top: 450px;
+		left: 240px;
+		}
+
+
+		#caso2{
+		position:absolute;
+		top: 450px;
+		left: 410px;
+		}
+
+		#caso1{
+		position:absolute;
+		top: 450px;
+		left: 540px;
+		}
+
+		#lblColumnas{
+		position:absolute;
+		top: 405px;
+		left: 150px;
+		}
+
+		#lblFilas{
+		position:absolute;
+		top: 405px;
+		left: 467px;
+		}
+
+		#strColumnas{
+		position:absolute;
+		top: 433px;
+		left: 200px;
+		}
+
+		#strFilas{
+		position:absolute;
+		top: 433px;
+		left: 502px;
+		}
+
+		#strFormula{
+		position:absolute;
+		top: 370px;
+		left: 240px;
+		}
+
+
+
+
+
+
+
+		</style>
+		
+		<script type="text/javascript">
+
+			 var filas=1;
+			 var cols=1;
+			 var map1 = [
+				          [0,0,0],
+				          [0,1,0],
+				          [0,0,0]
+				        ];
+		                
+
+       		 var tileGraphics = [];
+       		 var ctx;
+
+       		 function loadImg() {
+            
+	          var tileGraphicsToLoad = ["images/pino.png","images/manzano.png"],
+	          tileGraphicsLoaded = 0;
+
+	          for (var i = 0; i < tileGraphicsToLoad.length; i++) {
+	            tileGraphics[i] = new Image();
+	            tileGraphics[i].src = tileGraphicsToLoad[i];
+	            tileGraphics[i].onload = function() {
+
+	              tileGraphicsLoaded++;
+	              if (tileGraphicsLoaded === tileGraphicsToLoad.length) {
+	                  drawMap(map1,330,0);
+	              }
+	            }
+	          }
+
+	        }
+
+
+	         function masFila(){
+	         	if (filas<8) {
+	         	filas++;
+	         }
+	         	pintaHuerto();
+	         }
+
+	         function menosFila(){
+	         	if (filas>1) {
+	         		filas--;
+	         	}	         	
+	         		pintaHuerto();         	
+	         }
+
+	         function masColumna () {
+	         	if (cols<8) {
+	         	cols++;
+	         }
+	         	pintaHuerto();	         	
+	         }
+
+	         function menosColumna () {
+	         	if (cols>1) {
+	         	cols--;
+	         }
+	         	pintaHuerto();	         	
+	         }
+
+	         function pintaHuerto() {
+	         	document.getElementById('strFilas').innerHTML=filas;
+	         	document.getElementById('strColumnas').innerHTML=cols;
+	         	document.getElementById('strFormula').innerHTML="2n+2m+4 = 2("+cols+")+2("+filas+")+4 = "+(2*cols+2*filas+4);
+	         	creaMapa(filas,cols);
+	         	drawMap(map1,330,0);
+	         }
+
+
+	         function creaMapa(filas,columnas){
+	         	map1=new Array(filas+2);	         		
+	         	for(var k=0;k<filas+2;k++){
+	         		map1[k]=new Array(cols+2);
+	         		}
+
+	         	for (var i = 0; i < map1.length; i++) {
+	            for (var j = 0; j < map1[i].length; j++) {	
+	            map1[i][j]=0;
+	            if ( ((i>0)&&(i<map1.length-1))&& ((j>0)&&(j<map1[i].length-1)))  {
+	            	map1[i][j]=1;
+	            }
+	            }
+	            }	
+	        
+	         }
+
+
+	         function drawMap(map,posX,posY) {
+              ctx = document.getElementById('main').getContext('2d');
+
+              ctx.clearRect(0, 0, 700, 400);
+	          var tileH = 35;
+	          var tileW = 40;
+	          
+	  		  var myMap=map;
+			  var mapX = posX;
+	          var mapY = posY;
+
+	          var drawTile;
+	          for (var i = 0; i < myMap.length; i++) {
+	            for (var j = 0; j < myMap[i].length; j++) {
+	              drawTile = myMap[i][j];	              
+                  ctx.drawImage(tileGraphics[drawTile], (i - j) * tileH + mapX, (i + j) * tileH / 2 + mapY);
+	            }
+	          }
+	        }
+
+
+			function init() {
+				loadImg();
+				//click event
+
+				document.getElementById('caso1').addEventListener('click', function() {
+				masFila();
+			    }, false);
+
+			    document.getElementById('caso2').addEventListener('click', function() {
+				menosFila();
+			    }, false);
+
+			   
+
+			    document.getElementById('caso4').addEventListener('click', function() {
+				masColumna();
+			    }, false);
+
+			    document.getElementById('caso5').addEventListener('click', function() {
+			    menosColumna();
+			    }, false);
+			  
+			    //touchEvent
+			    
+			    document.getElementById('caso1').addEventListener('touchstart', function() {
+				masFila();
+			    }, false);
+
+			    document.getElementById('caso2').addEventListener('touchstart', function() {
+				menosFila();
+			    }, false);
+
+
+			    document.getElementById('caso4').addEventListener('touchstart', function() {
+				masColumna();
+			    }, false);
+
+			    document.getElementById('caso5').addEventListener('touchstart', function() {
+				menosColumna();
+			    }, false);
+
+			}
+
+
+
+
+
+		</script>
+
+	</head>
+	
+	<body onload="init()">
+
+	 <canvas id="main" width="700" height="400"></canvas>	
+	 <input id="caso1" class="boton" type="button" value="+">
+	 <input id="caso2" class="boton" type="button" value="-">
+	 <input id="caso4" class="boton" type="button" value="+">
+	 <input id="caso5" class="boton" type="button" value="-">
+	 <h3 id="lblFilas">Filas (m)</h3>
+	 <h3 id="lblColumnas">Columnas (n)</h3>
+	 <h2 id="strFilas">1</h2>
+	 <h2 id="strColumnas">1</h2>
+	 <h3 id="strFormula">2n+2m+4 = 2(1)+2(1)+4 = 8</h3>
+	</body>
+
+</html>

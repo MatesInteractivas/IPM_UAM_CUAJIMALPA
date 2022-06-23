@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Formalización del problema</h1>
+    <h2>Prueba de validez de un patrón</h2>
+    
+    <!--- Párrafo --->
+    <p>
+    En la página anterior hemos acabado el <strong>registro </strong>del patrón.
+    Inicialmente sólo habíamos contado los cerillos, pero eso no resulta muy práctico, sobre todo en elementos que ocupan posiciones muy grandes en el patrón.
+    </p>
+    <p class="importante" style='margin-left:15%;margin-right:15%;'>
+      Recordemos la fórmula:
+    <br>
+    <br><strong>\(x = 4n + 10\)</strong></p>
+    
+    
+    
+    <p>
+    Es tiempo de verificar la validez de la fórmula creada (cuarta y última etapa). Por medio del siguiente recurso verifica que la fórmula genere la figura con número de cerillos correcto.
+   
+    </p>
+    
+    <p class="instrucciones">Verifica la validez de la fórmula con diferentes <strong>\(n\)</strong>.</p>
+    
+<div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="310" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+    
+    <p>
+    Nota que la fórmula que hemos desarrollado define todas las figuras del patrón.
+    Si quieres puedes verificar más figuras del patrón por medio del botón <em>Otra n</em>.
+    </p>
+    
+    <div class="tarea">
+<h3>Tarea</h3>
+<p>
+Desarrolla la fórmula para encontrar el número de cerillos existentes por figura en el siguiente patrón.  
+</p>
+<div class="course_extern_content"> 
+        <img src="imgs/tareaCerillos.png"></img>
+      </div>
+<div class="verSolucion" id="btSolucion" onclick="document.getElementById('solucion').setAttribute('class','visible');document.getElementById('btSolucion').setAttribute('class','oculto');">
+      </div>
+</div>
+    
+    <div id="solucion" class='oculto'>
+      
+      <h4>Solución de la tarea</h4>
+      <p>Tomemos la figura 3 y seccionémosla. Añadamos un poco de color para diferenciar las partes.</p>
+      <div class="course_extern_content"> 
+        <img src="imgs/paso1.png"></img>
+      </div>
+      <p>Como puedes ver, hay dos cerillos al inicio (naranjas) y dos cerillos al final (azules). Con estas regularidades empecemos a formular la ecuación:</p>
+      <p class="importante" style='margin-left:20%;margin-right:20%;'>
+      <strong>\(x =\) <font color="#FF6600">\(2\)</font>\( + y +\) <font color="#3366FF">\(2\)</font></strong></p>
+      
+      <p>En nuestra expresión, <strong>\(y\)</strong> es equivalente al número de cerillos que hay en el elemento intermedio de la figura.
+      Seccionemos este elemento a fin de encontrar la relación con <strong>\(n\)</strong>.</p>
+      .
+      
+      <div class="course_extern_content"> 
+        <img src="imgs/paso2.png"></img>
+      </div>
+      
+      <p>Para <strong>\(n = 3\)</strong>, existen 3 pequeños grupos de cerillos. Si vemos el patrón con las tres figuras, observamos que pasa lo mismo para <strong>\(n = 1\)</strong> y <strong>\(n = 2\)</strong>, respectivamente.
+      También podemos ver que los grupos tienen dos cerillos en casi todos los casos, exceptuando el último que contiene tres.
+      Seccionemos este último elemento de tal modo que obtengamos un grupo de dos y otro en donde sólo quede uno.</p>
+      
+      <div class="course_extern_content"> 
+        <img src="imgs/paso3.png"></img>
+      </div>
+      
+      <p>Al separar este grupo hemos encontrado la relación que tiene el elemento interior con <strong>\(n\)</strong>: hay <strong>\(n\)</strong> grupos de dos cerillos.
+      Definamos a <strong>\(y\)</strong> como sigue:</p>
+      <p class="importante" style='margin-left:20%;margin-right:20%;'>
+      <strong>\(y = 2n\)</strong></p>
+      <p>Ahora agreguemos el cerillo que ha quedado sólo al grupo del final (azul) y reformulemos.</p>
+      <div class="course_extern_content"> 
+        <img src="imgs/paso4.png"></img>
+      </div>
+      
+      <p class="importante" style='margin-left:20%;margin-right:20%;'>
+            <strong>\(x =\) <font color="#FF6600">\(2\)</font> \(+ y +\) <font color="#3366FF">\(3\)</font></strong>
+            <br><br>
+            Sustituyamos <strong>\(y\)</strong>
+            <br><br>
+            <strong>\(x =\) <font color="#FF6600">\(2\)</font> \(+ 2n +\) <font color="#3366FF">\(3\)</font></strong>
+      </p>
+            <p>En este punto podemos hacer dos cosas; la primera es factorizar los dos terminos iniciales de tal modo que <strong>\(2 + 2n\)</strong> quede como <strong> \(2( 1 + n )\)</strong> o sumar el termino inicial (naranja) con el termino final (azul). Expresemos las dos ecuaciones equivalentes:</p>
+            
+            <p class="importante" style='margin-left:20%;margin-right:20%;'>
+            <strong>\(x =  2(1 + n) + 3\)</strong>
+            <br><br>
+            Es equivalente a 
+            <br><br>
+            <strong>\(x =  2n + 5\)</strong>
+            </p>
+      
+      <p>
+        Es posible que hayas seguido otro procedimiento, es decir, que hayas discernido y registrado otras regularidades en las figuras.
+        Esto no constituye ningún problema, siempre y cuando la fórmula final a la que llegaste sea la misma.
+      </p>
+      
+    </div>
+    
+    
+
+  
+    <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

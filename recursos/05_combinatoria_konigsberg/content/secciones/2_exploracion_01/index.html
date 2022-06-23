@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+   <h1>Exploración inicial del problema</h1>
+    
+    <h2>Posibles caminos partiendo de un único punto</h2>
+    <!--- Párrafo --->
+    <p>
+      En estas páginas vas a explorar el problema que se expuso en la página anterior y adentrarte más en él, con la finalidad de que puedas llegar a una conclusión.
+      En concreto, realizarás algunas observaciones que te ayudarán a entender qué sucede exactamente al intentar atravesar los siete puentes.
+    </p>
+    
+    <p>
+    En el siguiente espacio interactivo se muestra un mapa del río con los siete puentes y un sujeto que al moverlo deja un rastro. Explora distintos caminos.
+    </p>
+    
+    <!--- Instrucciones --->
+    <div class="instrucciones">
+    <span>En este espacio interactivo puedes trazar un recorrido pulsando sobre el sujeto y moviéndolo sin soltarlo. Pulsa sobre el botón "Limpiar" para borrar los caminos que hayas trazado si así lo requieres.
+    </span> 
+    </div>
+
+
+
+    <!-- ejemplo para incluir un documento externo en un iframe, aqui van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="480" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+
+  <div class="problema">
+    <strong>Preguntas</strong>
+    <br><br>
+     Encuentra la respuesta a las siguientes preguntas:
+     <ol>
+      <li>Partiendo siempre de la orilla norte del río, ¿lograste recorrer los siete puentes pasando sólo una vez por cada uno?</li>
+      <br>
+      <li>Si no lo lograste ¿qué crees que se necesitaría para lograrlo?</li>
+     </ol>
+     Si por el momento no encontraste una respuesta a la segunda pregunta, no te preocupes, seguiremos explorando.
+  </div>
+
+    <p>
+    En la escena que acabas de explorar el sujeto sólo puede partir de uno de los lechos del río. Veamos si teniendo la posibilidad de iniciar el recorrido desde otro punto hay alguna diferencia en los recorridos o caminos que puedes trazar. 
+    <p>
+    
+      
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>
+    
+
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

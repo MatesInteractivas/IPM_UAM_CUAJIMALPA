@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+  <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onLoad="initialize();">
+  
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    </p><!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Resolución de los problemas</h1>
+    
+    <h2>Problema 4: Determinar si un crecimiento de interés compuesto puede o no alcanzar a un crecimiento lineal</h2>
+
+    <p>
+      Comenzaremos analizando y caracterizando un fenómeno muy
+      sencillo relativo al crecimiento lineal. Así como es de sencillo
+      es de importante, en términos matemáticos, para llevar a cabo el
+      razonamiento que resuelve el problema.
+    </p>
+
+    <div class="instrucciones">
+    En el siguiente espacio puedes ajustar <span class='formula'>m</span> y <span class='formula'>b</span> relativos a la recta
+    verde y tambien <span class='formula'>n</span> y <span class='formula'>c</span> que corresponden a la recta
+    azul.<br><br>Puedes modificar la escala con las lupas de la
+    esquina inferior derecha.
+    </div>
+
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="480" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+
+    <p>
+      Como seguramente notaste, los valores de las literales
+      \(m, b, n, c\) son siempre positivos, pero
+      adicionalmente tienen las siguientes dos restricciones:
+      <ol>
+	<li>
+	  \(b&gt;c\)
+	</li>
+	<li>
+	  \(m&lt;n\)
+	  
+	</li>
+      </ol>
+    </p>
+
+    <div class='problema'>
+      <p>
+	La recta verde tiene por ecuación:
+      </p>
+      <div class="course_extern_content"> 
+	<iframe class="course_iframe" width="760" height="30" frameborder="0" src="escenas/escena2.html"> </iframe>
+      </div>
+      <p>
+	Mientras que la azul:
+      </p>
+      <div class="course_extern_content"> 
+	<iframe class="course_iframe" width="760" height="30" frameborder="0" src="escenas/escena3.html"> </iframe>
+      </div>
+    </div>
+
+    <p>
+      La primera de las restricciones de arriba significa que cuando
+      \(x=0\) la recta azul siempre estará por debajo de la
+      verde, mientras que la segunda obliga a que la pendiente de la
+      recta azul sea siempre mayor que la de la verde.
+    </p>
+    
+    <p>
+      Lo último es equivalente a decir que la cantidad representada
+      por la recta azul aumenta más que la verde conforme los valores
+      de \(x\) van creciendo. Mientras que la recta verde aumenta
+      \(m\) unidades (hacia arriba) cada vez que \(x\) aumenta en una
+      unidad, la recta azul crece \(n\) unidades (también hacia
+      arriba) cuando la \(x\) aumenta en uno. Como \(n&gt;m\) la recta
+      azul va siempre aumentando más que la verde.
+    </p>
+
+    <p>
+      Si habláramos de un dinero
+      '<font color='green'><b>verde</b></font>' y un dinero
+      '<font color='blue'><b>azul</b></font>', pensando en la \(x\)
+      como el tiempo, diríamos que el crecimiento, al avanzar el
+      tiempo del dinero <font color='blue'><b>azul</b></font> es
+      siempre mayor al del
+      dinero <font color='green'><b>verde</b></font>, debido a la
+      segunda de las restricciones.
+
+    <div class='problema'>
+	Tu conclusión final es que:
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	(oprime el número de la respuesta correcta)
+      <div class="course_extern_content"> 
+	<iframe class="course_iframe" width="760" height="200" frameborder="0" src="escenas/escena4.html"> </iframe>
+      </div>
+    </div>
+
+    <p>
+      Sin olvidar la conclusión acerca de este fenómeno, continuaremos
+      observando una característica importante inherente a cualquier
+      crecimiento con una tasa de interés compuesto mayor al \(0\%\),
+      es decir, con tasa de crecimiento positiva.
+    </p>
+
+    <div class="instrucciones">
+    En el siguiente espacio puedes ajustar \(C\), el capital inicial,
+    y \(f\), la fracción, que corresponden a un esquema de interés
+    compuesto con la tasa de interés correspondiente a
+    \(f\).<br><br>El botón 'rectas' te permite ver y ocultar unos
+    segmentos que son prolongaciones de la curva poligonal y cuyas
+    pendientes indican el crecimiento de la curva en cada periodo,
+    que en este caso coincide con cada unidad de tiempo.
+    <br><br>Puedes modificar la escala con las lupas de la
+    esquina inferior derecha.
+    </div>
+
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="480" frameborder="0" src="escenas/escena5.html"> </iframe>
+    </div>
+
+    <p>
+      Si nos fijamos en los segmentos que obtienes en el espacio
+      anterior al oprimir el botón etiquetado como 'rectas', vemos que
+      hay un continuo aumento en las pendientes conforme nos
+      recorremos hacia la derecha. Esto se debe a que cada pendiente
+      corresponde a la fracción \(f\) del capital acumulado hasta ese
+      punto, pero como el capital aumenta, debido a que la fracción se
+      suma antes de comenzar el siguiente periodo, entonces el
+      siguiente aumento será forzosamente más grande que el
+      anterior. 
+    </p>
+
+    <p>
+      Lo anterior no basta para poder asegurar que las pendientes no
+      van a dejar nunca de aumentar más allá de cualquier
+      límite\(^*\), pero en el caso que nos ocupa no pueden
+      'estancarse' porque son una fracción \(f\) del capital que va
+      creciendo y aumentando en cada unidad de tiempo.
+    </p>
+
+    <div class='problema'>
+	Tu conclusión sobre lo anterior es que:
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;
+	(oprime el número de la respuesta correcta)
+      <div class="course_extern_content"> 
+	<iframe class="course_iframe" width="760" height="200" frameborder="0" src="escenas/escena6.html"> </iframe>
+      </div>
+    </div>
+
+    <p class='importante'>
+      Las dos conlusiones a las que hemos llegado, si las combinamos,
+      nos permiten asegurar que cualquier esquema de interés compuesto
+      con tasa positiva rebasará siempre a un crecimiento
+      lineal.<br><br>El argumento final es que si la curva del capital
+      invertido (que gana una fracción positiva de sí mismo cada
+      unidad de tiempo) a partir de cierto momento tiene un
+      crecimiento mayor a cualquier crecimiento lineal dado de
+      antemano, entonces podemos escoger un
+      dinero <font color='blue'><b>azul</b></font> que rebasará
+      al <font color='green'><b>verde</b></font>, cualquiera que este
+      sea, y como la curva rebasa
+      al <font color='blue'><b>azul</b></font>, tendrá también que
+      rebasar al <font color='green'><b>verde</b></font>.
+    </p>
+
+
+    <p>
+      \(^*\) El que una cantidad aumente no necesariamente quiere
+      decir que rebase siempre cualquier límite que fijemos. Piensa en
+      un objeto que está en el piso y lo subimos paso a paso. En cada
+      paso lo colocamos a la mitad de la distancia que le falta para llegar
+      al techo. Aunque siempre va subiendo nunca llegará al techo y
+      menos llegará a estar un metro sobre el techo.
+      </p>
+
+    <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+    
+    
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onClick="showCredits()">Condiciones de uso</a>
+    </div>  
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+    
+
+  </div>
+  
+</article>
+
+
+
+
+</body>
+
+</html>

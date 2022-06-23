@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  <!--<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ TeX: { extensions: ["color.js"] }});
+  </script>-->
+
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Resolución del problema</h1>
+    
+    <!--- Subtítulo (no necesario en introducción) --->
+    <h2>Lista completa de divisores de un número</h2>
+    
+
+    <p>
+      Retomando las preguntas que se formularon al final de la página anterior, si tenemos la descomposición en factores primos de un número
+      natural \(n\) es relativamente sencillo generar la lista de todos
+      los divisores de \(n\).
+      Lo que se hace es tomar <strong>todas las combinaciones de potencias</strong>
+      de sus factores primos, <strong>desde cero hasta la potencia que tienen
+      en la descomposición</strong>.
+    </p>
+    
+    <p>
+      Por ejemplo, para \(360\), cuya descomposición en primos es \(2^ \color{red}3 \times3^ \color{green}2\times5^\color{blue}1\) 
+    </p>
+      <ul>
+	<li>
+	  el factor primo \(2\), con potencia \(\color{red}3\), se puede incluir en el producto de cuatro formas: \(2^0,2^1,2^2,2^3,\)
+	</li>
+	<li>
+	  el factor primo \(3\), con potencia \(\color{green}2\), se puede incluir en el producto de tres formas: \(3^0,3^1,3^2,\)
+	</li>
+	<li>
+	  el factor primo \(5\), con potencia \(\color{blue}1\), se puede incluir en el producto de dos formas: \(5^0,5^1.\)
+	</li>
+      </ul>
+      
+      <p>
+      El número total de divisores, es decir, el tamaño de la lista,
+      podemos calcularlo si multiplicamos las potencias de cada unos de los factores primos que aparecen en la
+      descomposición, aumentadas en
+      \(1\).
+    </p>
+    
+    <p>
+      Por ejemplo, para \(360=2^ \color{red}3 \times3^ \color{green}2\times5^\color{blue}1\) tendremos
+      \((\color{red}3+1)\times (\color{green}2+1)\times (\color{blue}1+1)=4\times3\times2=24\).
+    </p>
+
+
+    <p>
+      Esto se debe a que el número de formas en que podemos usar cada
+      factor primo para encontrar un divisor va de cero hasta la
+      potencia a la que está elevado en la descomposición.
+    </p>
+
+
+
+    <p class="importante">
+      En la escena de la página siguiente, aunque no es el objetivo
+      primario, podrás constatar que es posible obtener todos
+      los divisores de un número natural arbitrario variando los
+      exponentes de la descomposición en factores primos
+      correspondiente.
+    </p>
+
+    <p>
+      A continuación se muestra la lista completa de los \(24\) divisores, ordenados de menor a mayor.
+      La raíz cuadrada de \(360\) es poco más de \(18.97\), por lo que primero obtendremos los \(12\) divisores de \(360\) menores que \(18.97\),
+    </p>
+
+    <p>
+      \(2^0\times3^0\times5^0=1\),<br>
+      \(2^1\times3^0\times5^0=2\),<br>
+      \(2^0\times3^1\times5^0=3\),<br>
+      \(2^2\times3^0\times5^0=2\times2=4\),<br>
+      \(2^0\times3^0\times5^1=5\),<br>
+      \(2^1\times3^1\times5^0=2\times3=6\),<br>
+      \(2^3\times3^0\times5^0=2\times2\times2=8\),<br>
+      \(2^0\times3^2\times5^0=3\times3=9\),<br>
+      \(2^1\times3^0\times5^1=2\times5=10\),<br>
+      \(2^2\times3^1\times5^0=4\times3=12\),<br>
+      \(2^0\times3^1\times5^1=3\times5=15\) y<br>
+      \(2^1\times3^2\times5^0=2\times9=18\).<br>
+    </p>
+
+    <p>
+      Los \(12\) divisores complementarios a los anteriores, que son mayores que la raíz cuadrada de \(360\), son los siguientes:<br><br>
+      \(360/18=20\),<br>
+      \(360/15=24\),<br>
+      \(360/12=30\),<br>
+      \(360/10=36\),<br>
+      \(360/9=40\),<br>
+      \(360/8=45\),<br>
+      \(360/6=60\),<br>
+      \(360/5=75\),<br>
+      \(360/4=90\),<br>
+      \(360/3=120\),<br>
+      \(360/2=240\) y<br>
+      \(360/1=360\).<br>
+    </p>
+
+    <div class="problema">
+      <strong>Preguntas</strong>
+      
+      <ul>
+	<li>
+	  ¿Crees que la segunda parte de la lista puede también obtenerse usando potencias de los factores primos?
+	</li>
+	<br>
+	<li>
+	  De la lista anterior, ¿cuáles serán los divisores que dan solución a nuestro problema?
+	</li>
+      </ul>
+      
+    </div>
+	
+  <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  </div>
+  
+
+</article>
+
+</body>
+
+</html>
+

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+  <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+
+</head>
+
+<body onload="initialize();">
+  
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    </p><!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Planteamiento del problema: Optimización de redes</h1>
+    
+    <!--- Subtítulo (no necesario en introducción) --->
+    <h2>Primera parte</h2>
+
+    <div class="course_extern_content"> 
+      <img src="imgs/pic1.jpg"></img>
+    </div>
+    
+    <!--- Párrafo --->
+    <p>
+      Nos invitan a participar en un proyecto de telecomunicaciones en
+      el que se habrán de colocar enlaces de fibra óptica para
+      comunicar las redes de cómputo internas de un grupo de inmuebles
+      en nuestra ciudad.
+    </p>
+
+    <p>
+      Una primera idea, que en teoría funcionaría muy bien, es colocar
+      un enlace entre cada pareja de edificios. Si, por ejemplo, son 5
+      edificios, como en la siguiente figura, de cada uno saldrían 4
+      enlaces a los otros edificios.
+    </p>
+
+    <div class="course_extern_content"> 
+      <img src="imgs/pic2.jpg"></img>
+    </div>
+    
+    <p class="problema">
+      <strong>Pregunta</strong>
+      <br><br>
+      ¿Cuántos enlaces habría que colocar para comunicar 10 edificios todos con todos?
+      <br><br>Ve pensando cómo calcularías esta cantidad si de
+      antemano supieras la respuesta para 9 edificios. Estudiaremos
+      esta útil estrategia más adelante. 
+    </p>
+
+    <p>
+      La tecnología de fibra óptica permite transmitir a velocidades
+      muy altas y basta con que exista un camino para ir de un
+      inmueble a otro, es decir, podemos comunicar dos puntos siempre
+      y cuando exista una ruta entre ellos aunque tengamos que ir
+      pasando por puntos intermedios.
+    </p>
+
+    <p>
+      Para darnos una mejor idea de lo que entendemos por camino o
+      ruta, vemos que en la figura de arriba, para cualquier par de
+      edificios podemos encontrar una ruta que los conecte pero que
+      además pase primero por los otros tres.
+    </p>
+
+    <p>
+      Una cuestión importante es que este tipo de enlaces digitales
+      suelen ser costosos porque hay que colocar físicamente un
+      cable, ya sea de forma subterránea o usando los postes de la
+      calle. Por esta razón es que la idea de conectar los edificios,
+      todos con todos, no es económicamente viable.
+    </p>
+
+    <p>
+      El proyecto al que nos invitan considera 8 inmuebles (A, B, C,
+      D, E, F, G y H) y tiene el siguiente cuadro de costos asociados
+      en cientos de miles de pesos.
+    </p>
+    
+    <table  class="tablaImportante columna1">
+    <thead>
+    <tr>
+      <th>&nbsp;</th>
+      <th>B</th>
+      <th>C</th>
+      <th>D</th>
+      <th>E</th>
+      <th>F</th>
+      <th>G</th>
+      <th>H</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>A</td><td>1</td><td>2</td><td>5</td><td>1</td><td>12</td><td>10</td><td>1</td>
+    </tr>
+    <tr>
+      <td>B</td><td>&nbsp;</td><td>3</td><td>8</td><td>2</td><td>1</td><td>2</td><td>4</td>
+    </tr>
+    <tr>
+      <td>C</td><td>&nbsp;</td><td>&nbsp;</td><td>6</td><td>1</td><td>10</td><td>9</td><td>8</td>
+    </tr>
+    <tr>
+      <td>D</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>8</td><td>3</td><td>2</td><td>1</td>
+    </tr>
+    <tr>
+      <td>E</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>1</td><td>8</td><td>12</td>
+    </tr>
+    <tr>
+      <td>F</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>3</td><td>7</td>
+    </tr>
+    <tr>
+      <td>G</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>9</td>
+    </tr>
+    </tbody>
+    </table>
+
+    <p>
+      A uno de nuestros compañeros el cuadro le parece un poco raro:
+      la A no aparece en las columnas, la H no está en los reglones y
+      además casi la mitad está vacío.
+    </p>
+
+    <p class="problema">
+      <strong>Preguntas</strong>
+      <br><br>
+      ¿Está mal hecho el cuadro? ¿Falta información?
+      <br><br>
+      Explica cómo es que debemos interpretar o, en su caso, arreglar este cuadro.
+    </p>
+
+    <p>
+      Una vez que tenemos claro el significado de los valores en el
+      cuadro, lo que requerimos determinar es la lista de enlaces a
+      instalar, misma que debe ser tal que:
+    </p>
+
+    <ol>
+      <li>
+        la suma de los costos sea la menor posible, y
+      </li>
+      <li>
+        existan rutas entre cualquier par de puntos.
+      </li>
+    </ol>
+
+    <p class="problema">
+      <strong>Preguntas</strong>
+      <br><br>
+      ¿Cuál es el número mínimo de enlaces que requerimos para
+      conectar los 8 edificios? ¿Y si fuera un número más grande,
+      digamos cien o mil?
+      <br><br>¿Nos serviría conocer de antemano la respuesta para 7
+      edificios, para 99 o para 999, según el caso?
+    </p>
+    
+    <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+    
+    
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+    
+
+  </div>
+  
+</article>
+
+
+
+
+</body>
+
+</html>

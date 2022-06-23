@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>HTML5</title>
+		<style>
+		body {
+			margin: 0;
+			padding: 0;
+			overflow:hidden;
+			
+		}
+
+		.boton{
+		cursor:pointer;
+		padding:5px 25px; 
+		background-color: #2bae95; background-image: -webkit-gradient(linear, left top, left bottom, from(#2bae95), to(#076A63));
+		background-image: -webkit-linear-gradient(top, #2bae95, #076A63);
+		background-image: -moz-linear-gradient(top, #2bae95, #076A63);
+		background-image: -ms-linear-gradient(top, #2bae95, #076A63);
+		background-image: -o-linear-gradient(top, #2bae95, #076A63);
+		background-image: linear-gradient(to bottom, #2bae95, #076A63);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#2bae95, endColorstr=#076A63);
+
+		border:1px solid #33842a; 
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+		border-radius: 10px;		
+		-webkit-box-shadow: 0 0 4px rgba(0,0,0, .75);
+		-moz-box-shadow: 0 0 4px rgba(0,0,0, .75);
+		box-shadow: 0 0 4px rgba(0,0,0, .75);	
+		color:#f3f3f3;
+		font-size:1.1em;
+		}
+		
+		.boton:hover, .boton:focus{
+		background-color: #218572; background-image: -webkit-gradient(linear, left top, left bottom, from(#218572), to(#043a36));
+		background-image: -webkit-linear-gradient(top, #218572, #043a36);
+		background-image: -moz-linear-gradient(top, #218572, #043a36);
+		background-image: -ms-linear-gradient(top, #218572, #043a36);
+		background-image: -o-linear-gradient(top, #218572, #043a36);
+		background-image: linear-gradient(to bottom, #218572, #043a36);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#218572, endColorstr=#043a36);
+		-webkit-box-shadow: 0 0 1px rgba(0,0,0, .75);
+		-moz-box-shadow: 0 0 1px rgba(0,0,0, .75);
+		box-shadow: 0 0 1px rgba(0,0,0, .75);
+		}
+
+		#menosN{
+		position:absolute;
+		top: 130px;
+		left: 40px;
+		}
+
+		#masN{
+		position:absolute;
+		top: 130px;
+		left: 190px;
+		}
+
+		#config{
+		position:absolute;
+		top: 175px;
+		left: 35px;
+		}
+
+		#n1{
+		position:absolute;
+		top: 115px;
+		left: 128px;
+		}
+
+		#lado{
+		position:absolute;
+		top: 30px;
+		left: 130px;	
+		}
+
+		#LEDs{
+		position:absolute;
+		top: 240px;
+		left: 30px;		
+		}
+
+	</style>	
+	<script type="text/javascript">
+
+	var ctx;
+	var lados=4;	
+	var colorNucleo='#ff0000';
+	var colorInterior='#ff0000';
+	var colorExterior='#0000ff';
+	var colorEsquinas='#ff0000';
+	var colorVertice='#0000ff';
+	var n=1;
+
+	var origen1={
+		x:530,
+		y:220
+	};
+
+	function init(){
+		ctx=document.getElementById('main').getContext('2d');
+
+		document.getElementById('masN').addEventListener('click', function() {
+				incrementaN();
+			    }, false);
+
+		document.getElementById('menosN').addEventListener('click', function() {
+				decrementaN();
+			    }, false);
+
+		document.getElementById('config').addEventListener('click', function() {
+				cambiaConfig();
+			    }, false);
+
+		document.getElementById('masN').addEventListener('touchstart', function() {
+				incrementaN();
+			    }, false);
+
+		document.getElementById('menosN').addEventListener('touchstart', function() {
+				decrementaN();
+			    }, false);
+
+		document.getElementById('config').addEventListener('touchstart', function() {
+				cambiaConfig();
+			    }, false);
+		update();
+
+	};	
+
+	function incrementaN(){
+		if (n>=10) {
+			n=10;
+		}
+		else{
+			n++;
+		}
+		update();
+	}
+
+	function calculaLEDs(){
+		var res;
+		res=(lado*(2*n))+4;
+		return res;
+	}
+
+	function decrementaN(){
+		if (n<=1) {
+			n=1;
+		}
+		else{
+			n--;
+		}
+		update();
+	}
+
+
+	function update(){
+		ctx.clearRect(0, 0, 750, 430);
+		var res=((2*n)*lados)+lados;
+		document.getElementById('LEDs').innerHTML="l(2n)+l= "+lados+"(2("+n+"))+"+lados+" = "+res;
+		document.getElementById('n1').innerHTML="n="+n;
+		document.getElementById('lado').innerHTML="l="+lados;
+		pintaPoligono(origen1,lados,n,colorInterior,colorExterior,colorEsquinas);	
+	}
+
+	function cambiaInterior(){
+		if (colorNucleo==colorInterior) {
+			colorNucleo='#bb0000';
+		}
+		else{
+			colorNucleo=colorInterior;
+		}
+		update();
+	}
+
+	function cambiaConfig(){
+		if (lados>5) {
+			lados=4;
+		}
+		else{
+			lados++;
+		}
+		
+		update();
+		
+	}
+
+	function cambiaVertices(){
+		if (colorVertice==colorExterior) {
+			colorVertice='#6881d4';
+		}
+		else{
+			colorVertice=colorExterior;
+		}
+		update();
+		
+	}
+
+	function pintaPoligono(origen,lados,n,colorInt,colorExt,colorEsq){
+		//poligono interno
+		drawPoint(origen.x,origen.y,colorNucleo);
+		poligono(origen,lados,15,0,colorNucleo,colorNucleo);
+
+		//Polígonos externos a partir de uno, el último tiene color Externo
+		for (var i = 1; i <=n; i++) {
+			if (i!=n) {
+				poligono(origen,lados,15+(i*20),(2*i)+1,colorInt,colorEsq);
+			}
+			else{				
+					poligono(origen,lados,15+(i*20),(2*i)+1,colorExt,colorVertice);
+				
+			}
+			
+		}
+
+	}
+
+	function poligono(origen,lados,R,div,color,colorEsq){
+		var ang=(360/lados)*(Math.PI/180);
+		var ajuste=((360/lados)/(lados-1))*(Math.PI/180);
+
+		var punto;
+		for (var i = 0; i <lados+1; i++) {
+			punto=polar2cartesian(R,(ang*i)-ajuste);
+			drawPoint(origen.x+punto.x,origen.y+punto.y,colorEsq);
+
+			if (div!=0) {
+
+				if (i>0&&i<lados+1) {
+				punto1=polar2cartesian(R,(ang*(i-1))-ajuste);
+				punto2=polar2cartesian(R,(ang*i)-ajuste);
+				
+				for (var j=1;j<div;j++) {
+						punto3=polar2cartesian(R,((ang*i)-((ang/div)*j))-ajuste);
+						puntoInt=interseccion(punto1.x,punto1.y,punto2.x,punto2.y,0,0,punto3.x,punto3.y);
+						drawPoint(origen.x+puntoInt.x,origen.y+puntoInt.y,color);
+					};
+		
+			
+			};
+
+		};
+
+		};
+
+
+			
+	};
+
+
+	function polar2cartesian(R, theta) {
+		var punto={
+			x:null,
+			y:null	
+		};
+        punto.x = R * Math.cos(theta);
+        punto.y= R * Math.sin(theta);
+        return punto;
+    };
+
+	function interseccion(linea1StartX, linea1StartY, linea1EndX, linea1EndY, linea2StartX, linea2StartY, linea2EndX, linea2EndY) {
+
+    var denominador, a, b, numerador1, numerador2, result = {
+        x: null,
+        y: null,
+        onLinea1: false,
+        onLinea2: false
+    };
+    denominador = ((linea2EndY - linea2StartY) * (linea1EndX - linea1StartX)) - ((linea2EndX - linea2StartX) * (linea1EndY - linea1StartY));
+    if (denominador == 0) {
+        return result;
+    }
+    a = linea1StartY - linea2StartY;
+    b = linea1StartX - linea2StartX;
+    numerador1 = ((linea2EndX - linea2StartX) * a) - ((linea2EndY - linea2StartY) * b);
+    numerador2 = ((linea1EndX - linea1StartX) * a) - ((linea1EndY - linea1StartY) * b);
+    a = numerador1 / denominador;
+    b = numerador2 / denominador;
+
+    
+    result.x = linea1StartX + (a * (linea1EndX - linea1StartX));
+    result.y = linea1StartY + (a * (linea1EndY - linea1StartY));
+
+    if (a > 0 && a < 1) {
+        result.onLinea1 = true;
+    }
+  
+    if (b > 0 && b < 1) {
+        result.onLinea2 = true;
+    }
+  
+    return result;
+};
+
+	function drawPoint(x, y, color) {	
+    ctx.fillStyle = color || 'black';
+    ctx.beginPath();
+    ctx.arc(x, y, 4, 0, 2 * Math.PI, true);
+    ctx.fill();
+    };
+
+	</script>
+
+     
+     <body onload="init()">
+
+	 <canvas id="main" width="750" height="430"></canvas>	
+	 <input id="masN" class="boton" type="button" value=" + ">
+	 <input id="menosN" class="boton" type="button" value=" - ">
+	 <input id="config" class="boton" type="button" value="Cambiar configuración">
+	 <h2 id="n1">n=1</h2>
+	 <h2 id="lado">l=4</h2>
+	 <h2 id="LEDs">l(2n)+4</h2>
+	</body>
+
+</html>

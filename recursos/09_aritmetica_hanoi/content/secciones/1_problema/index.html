@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+  <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+
+</head>
+
+<body onload="initialize();">
+  
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+   <!-- INICIA EL CONTENIDO DE LA PÁGINA -->
+    
+    <!-- Título de la página -->
+    <h1>Planteamiento del problema</h1>
+    
+    <!-- Subtítulo (no necesario en introducción) -->
+    <h2>Las torres de Hanoi</h2>
+    
+    
+    <!-- Párrafo -->
+    <p>
+      Existen varias leyendas acerca de las míticas torres de Hanoi. 
+      Unos cuentan que en tiempos antiguos, dentro del templo de  
+      <a href='https://es.wikipedia.org/wiki/Benar%C3%A9s' target='_blank'>Benarés</a>
+      existía una cúpula que marcaba el centro del mundo. Debajo de ésta, 
+      un rey mandó colocar tres postes de diamante y en uno de ellos
+      colocó 64 discos de oro de distintos tamaños apilados de mayor a menor
+      diámetro. Encomendó a los monjes del templo la tarea de mover los discos
+      de un poste a otro pero siguiendo estas reglas:
+
+      <ul>
+        <li>Cada sacerdote sólo puede mover un disco a la vez.</li>
+        <li>No se puede poner un disco sobre otro de menor diámetro.</li>
+      </ul>
+     <p>
+
+    <div class="course_extern_content"> 
+      <img src="imgs/foto1.jpg"></img>
+    </div>
+
+     <p>
+      Otros cuentan que Dios, después de crear al mundo, erigió tres postes de diamante
+      con 64 discos de oro en una de ellas, colocados de mayor a menor diámetro. Ordenó
+      a un grupo de monjes que construyeran un templo alrededor de los postes. Después 
+      de terminar el templo, Dios les ordenó mover los discos de oro del poste original a
+      otro siguiendo las reglas ya expuestas.
+      Y Dios le dijo a los monjes que cuando hubieran movido todas las piezas al siguiente poste,
+      sería el tiempo en el que el mundo llegaría a su fin.
+    </p>
+
+  
+    <p class='importante' style='margin-left:15%;margin-right:15%;'>
+      En realidad, la historia fue creada por el matemático 
+      <a href="https://es.wikipedia.org/wiki/%C3%89douard_Lucas"
+        target='_blank' 
+        title="François Éduard Anatole Lucas">Éduard Lucas</a>
+      para promocionar su juego de las torres de Hanoi. <br><br>
+      Alrededor de 1883, era común 
+      encontrar matemáticos viajando de ciudad en ciudad promocionando juegos de 
+      su invención, de forma parecida a como lo hacían los juglares.
+    </p>
+
+      <div class="course_extern_content"> 
+        <img src="imgs/torres-de-hanoi.jpg"></img>
+      </div>
+    
+    <p >
+        A pesar de que era una historia inventada, resultó ser tan atractiva que aún 
+        en nuestros días se sigue hablando de ella, ya que nos invita a preguntarnos: 
+        ¿cuánto tiempo les llevaría a los monjes mover todos los discos de un poste a otro
+        con sólo esas dos reglas? Y a intentar hacerlo por nosotros mismos. 
+        También sirve como un ejemplo de problemas con reglas sencillas pero cuya
+        solución puede tomar mucho tiempo.
+    </p>
+
+   
+    
+
+    <div class='problema'>
+      <strong>Problema</strong>
+      <br><br>
+        Supongamos que la leyenda es cierta y que cada monje puede mover un disco
+        por segundo. 
+      <br><br>
+      ¿Cuál es el número mínimo de movimientos que necesitan realizar los monjes para
+      cambiar todos los discos de un poste a otro? Y entonces, ¿en cuánto tiempo
+      llegará el mundo a su fin?
+	  </div>
+  
+
+
+   
+
+
+    <!-- TERMINA EL CONTENIDO DE LA PÁGINA -->
+    
+    
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+    
+
+  </div>
+  
+</article>
+
+
+
+
+</body>
+
+</html>

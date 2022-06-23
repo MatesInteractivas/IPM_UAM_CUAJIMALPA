@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>TITULO</title>
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body style="margin:0px;padding:0px;overflow:hidden;">
+
+<p align="center">
+<ajs name="Descartes" width=450 height=180 code="Descartes">
+   <param name="tamaño" value="450x180">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=",">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.340, 2015-05-21">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E1' ancho='450' alto='180' imagen='images/fondo.jpg' despl_imagen='arr-izq' fondo='blanco' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='retro' x='25' y='15' ancho='400' alto='150' dibujar-si='evaluado' despl_imagen='arr-izq' fondo='effffb' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='DEBUG' tipo='numérico' región='exterior' espacio='E1' nombre='DEBUG' incr='1' min='0' max='1' fijo='sí' visible='sí'">
+   <param name="C_02" value="id='verificar' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Verificar' expresión='(165,130,120,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn120x30.png' acción='calcular' parámetro='verificar()\nevaluado=1' pos_mensajes='centro'">
+   <param name="C_03" value="id='valCar' tipo='numérico' interfaz='campo de texto' solo_texto='sí' región='interior' espacio='E1' expresión='(200,65)(60,35)' fijo='sí' visible='sí'">
+   <param name="C_04" value="id='cerrar' tipo='numérico' interfaz='botón' región='interior' espacio='retro' expresión='(retro._w-25,5,20,20)' fijo='sí' visible='sí' imagen='images/cerrar.png' acción='calcular' parámetro='evaluado=0'">
+   <param name="A_01" value="id='posX' vector='sí' evaluar='una-sola-vez'">
+   <param name="A_02" value="id='verificar()' algoritmo='sí' algoritmo='sí' hacer=';;correcto=((valCar==&squot;3F&squot;)||(valCar==&squot;3f&squot;)||(valCar==&squot;3(F)&squot;)||(valCar==&squot;3(f)&squot;))?1:0'">
+   <param name="A_03" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='evaluado=0;correcto=0;'">
+   <param name="A_04" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="G_01" value="espacio='E1' tipo='macro' dibujar-si='DEBUG&0' expresión='macros/randoms.txt' nombre='aleatorio'">
+   <param name="G_02" value="espacio='retro' tipo='polígono' color='0a7b70' coord_abs='sí' expresión='(0,0)(retro._w-2,0)(retro._w-2,retro._h-2)(0,retro._h-2)(0,0)' ancho='2'">
+   <param name="G_03" value="espacio='E1' tipo='texto' expresión='[33,30]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs30\b Edad de Carlos es tres veces m\u225 s que la de Fernanda\f2\fs30\b0}' fuente='SansSerif,BOLD,15' fijo='sí'">
+   <param name="G_04" value="espacio='E1' tipo='texto' dibujar-si='DEBUG' expresión='[20,0]' texto='[correcto]  [literal] [valores]' fijo='sí'">
+   <param name="G_05" value="espacio='retro' tipo='texto' dibujar-si='correcto' expresión='[10,15]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Arial;}\f1\fs40                        \u161 Correcto!\fs34\par \par                      \b           C=3(F)\b0\par \par               La edad de Carlos es tres veces \par                      la edad de Fernanda}' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_06" value="espacio='E1' tipo='texto' expresión='[155,70]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs40 C = \f0\fs30}' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_07" value="espacio='retro' tipo='texto' dibujar-si='!correcto' expresión='[10,15]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;}\f1\fs40                        \u161 Incorrecto!\fs34\par \par   Por favor verifica la expresión que ingresaste.\par }' fuente='SansSerif,PLAIN,20' fijo='sí'">
+</ajs></p>
+
+</body>
+</html>

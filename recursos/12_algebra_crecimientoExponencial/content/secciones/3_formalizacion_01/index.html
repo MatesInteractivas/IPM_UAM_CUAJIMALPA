@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+  <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onLoad="initialize();">
+  
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    </p><!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Formalización de los problemas</h1>
+    
+    <p>
+      El <strong>problema 1</strong> no requiere estrictamente de una formalización
+      en términos matemáticos y lo resolveremos directamente en la siguiente sección.
+    </p>
+
+    <!--- Subtítulo (no necesario en introducción) --->
+    <h2>Problema 2. ¿Hay relación entre el problema del crecimiento del
+    número de personas del esquema de fraude y el crecimiento del
+    capital en una inversión?</h2>
+
+    <p>
+      En este problema, lo que debemos hacer es caracterizar tanto las
+      similitudes como las diferencias en los dos tipos de
+      crecimiento.
+    </p>
+
+    <p>
+      <strong>Crecimiento de capitales invertidos</strong>
+    </p>
+
+    <p>
+      Cuando hablamos de invertir un capital en un esquema de interés
+      compuesto, como el que ofrecen por ejemplo los bancos, nos
+      referimos a una cantidad de dinero que aumentará en una cierta
+      tasa cada vez que transcurra un plazo o cierto periodo fijado
+      de antemano. La tasa puede representarse mediante una fracción o
+      bien como un porcentaje, que finalmente es una forma alterna de
+      escribir las fracciones.
+    </p>
+
+    <p>
+      Lo interesante de estos esquemas es que los intereses, es decir,
+      la cantidad en que aumenta el capital al transcurrir el periodo
+      prefijado, son agregados al capital antes de comenzar el
+      siguiente periodo. De este modo las ganancias que el capital va
+      generando crecen en la misma proporción que el propio capital lo
+      hace.
+    </p>
+
+    <div class='instrucciones'>
+      ¿Cómo crecería un capital de $100 durante 4 semanas si genera
+      20% de intereses semanalmente?
+      <br>Oprime el botón con las respuesta correcta.<br><br>
+      <div class="course_extern_content"> 
+	<iframe class="course_iframe" width="760" height="200" frameborder="0" src="escenas/escena.html"> </iframe>
+      </div>
+    </div>
+
+    <p class='importante'>
+      Diremos que un capital \(C\) invertido en un esquema de interés
+      compuesto que gana una fracción \(f\) de sí mismo cada vez que
+      transcurre un cierto periodo va creciendo al
+      transcurrir sucesivamente los periodos como \[C\rightarrow
+      Ca\rightarrow Ca^2\rightarrow Ca^3\rightarrow\dots\rightarrow
+      Ca^n\] donde \(a=1+f\)  y \(n\) es el número de un periodo
+      arbitrario cualquiera. De hecho podemos escribir
+      \[Ca^0\rightarrow Ca^1\rightarrow Ca^2\rightarrow
+      Ca^3\rightarrow\dots\rightarrow Ca^n\] donde las literales
+      tienen el mismo significado que antes, permitiéndonos ahora
+      identificar el número del periodo con el exponente de la \(a\).
+      <br><br><strong>Nota:</strong> los puntos suspensivos \(\cdots\) ubicados entre
+      las flechas se usan para indicar que el proceso continúa y se
+      recorren todos los valores intermedios.
+    </p>
+
+    <p class='problema'>
+      <strong>Pregunta</strong>
+      <br><br>
+      Según la definición anterior, ¿qué pasa cuando \(f\geq1\)?
+    </p>
+
+    <p>
+      <strong>Crecimiento del número de 'socios' al pasar al siguiente nivel en una pirámide</strong>
+    </p>
+
+    <p>
+      Consideraremos cuatro casos, de acuerdo con lo que pudimos
+      observar en la última página de la exploración y que puedes
+      verificar en la escena más abajo.
+      <ol>
+	<li>Cada socio por su cuenta recluta dos o más nuevos socios.</li>
+	<li>Un grupo de dos o más socios se encarga de reclutar al
+	menos un socio más que el tamaño del grupo. Aquí daremos por
+	hecho que de inicio hay socios suficientes para formar al
+	menos un grupo, ya que de lo contrario no habrá crecimiento al pasar al siguiente nivel.</li>
+	<li>Un grupo de socios se encarga de reclutar tantos socios como el tamaño del grupo.</li>
+	<li>Un grupo de dos o más socios se encarga de reclutar menos socios que el tamaño del grupo.</li>
+      </ol>
+
+    </p>
+    
+    <!--- Instrucciones --->
+    <div class="instrucciones">
+      El siguiente espacio ya lo usaste en la primera sección, en él
+      podrás ajustar el número inicial de socios \(N\), entre 1 y 10;
+      el tamaño del grupo de reclutadores \(G\), entre 1 y 9; y el
+      tamaño del grupo de reclutados \(T\), entre 1 y 10, para
+      experimentar con los diez primeros niveles y verificar los
+      cuatro posibles casos que acabamos de mencionar.
+    </div>
+
+    <!-- ejemplo para incluir un documento externo en un iframe, aqui van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="480" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+
+    <p class="problema">
+      <strong>Problema 2</strong>
+      <br><br> En concreto, lo que debemos hacer es encontrar en
+      cuáles de los cuatro casos que listamos arriba podemos encontrar
+      un número que permita describir el crecimiento del número de
+      'socios' al pasar al siguiente nivel en una
+      pirámide.<br><br>Habremos de determinar el valor de \(f\) de tal
+      manera que \[Ca^0\rightarrow Ca^1\rightarrow Ca^2\rightarrow
+      Ca^3\rightarrow\dots\rightarrow Ca^n\] donde \(a=1+f\)  y \(n\)
+      sea el número de un nivel arbitrario de la pirámide.<br><br>
+    </p>
+    
+    <p>
+      Este problema 2 lo resolveremos más adelante, en la sección de Resolución.
+      Por ahora, avanza a la siguiente página para seguir abordando el problema 3.
+
+    <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+    
+    
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onClick="showCredits()">Condiciones de uso</a>
+    </div>  
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+    
+
+  </div>
+  
+</article>
+
+
+
+
+</body>
+
+</html>

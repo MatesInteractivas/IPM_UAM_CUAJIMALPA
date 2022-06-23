@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>TITULO</title>	
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body style="margin:0px;padding:0px;overflow:hidden;">
+
+<p align="center">
+<ajs name="Descartes" width=750 height=480 code="Descartes">
+   <param name="tamaño" value="750x480">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.3.12, 2014-07-09">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' imagen='images/fondo.png' despl_imagen='arr-izq' fondo='f3f0ec' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='E2' x='35%' y='0%' ancho='60%' alto='95%' fijo='sí' escala='320' O.x='-130' O.y='120' imagen='images/fondo.png' despl_imagen='arr-izq' fondo='f3f0ec' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='Ant1' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='Anterior' expresión='(E2._w/3-45,410,90,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn90x30.png' acción='calcular' parámetro='scrl1=scrl1-1' dibujar-si='scrl1>0'">
+   <param name="C_02" value="id='Sig1' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='Siguiente' expresión='(E2._w*2/3-45,410,90,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn90x30.png' acción='calcular' parámetro='scrl1=scrl1+1' dibujar-si='scrl1<1' pos_mensajes='centro'">
+   <param name="C_03" value="id='b' tipo='numérico' región='interior' espacio='E1' nombre='b' expresión='(20,25,115,50)' valor='0.7' incr='0.01' min='0.4' max='0.8' discreto='sí' fijo='sí' visible='sí' pos_mensajes='centro'">
+   <param name="A_01" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='a=1'">
+   <param name="A_02" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="G_01" value="espacio='E1' tipo='polígono' fondo='sí' color='bfbebe' dibujar-si='0' coord_abs='sí' expresión='(-(E1._w/2)+1,E1._h/2-1)(E1._w/2-1,E1._h/2-1)(E1._w/2-1,-(E1._h/2)+1)(-(E1._w/2)+1,-(E1._h/2)+1)(-(E1._w/2)+1,E1._h/2-1)' info='Marco escena ¿¿??'">
+   <param name="G_02" value="espacio='E1' tipo='texto' color='232323' dibujar-si='0' expresión='[20,20]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}\f1\fs34 Al rect\u225 ngulo de lados \f2\fs38\i a\f1\fs34\i0  y \f2\fs38\i b\f1\fs34\i0  mostrado a continuaci\u243 n se le recorta un cuadrado de lado \f2\fs38\i b\f1\fs34\i0 .\par Tras hacer esto, sobra un rect\u225 ngulo de lados \f2\fs38\i b\f1\fs34\i0  y \f2\fs38\i a-b\f1\fs34\i0 . Se busca que la proporci\u243 n entre\par estos lados sea igual que la proporci\u243 n original del rect\u225 ngulo.}' fuente='SansSerif,PLAIN,17' fijo='sí'">
+   <param name="G_03" value="espacio='E2' tipo='polígono' color='ffff80' expresión='(0,0)(a,0)(a,b)(0,b)(0,0)' relleno='ffff80'">
+   <param name="G_04" value="espacio='E1' tipo='texto' color='232323' dibujar-si='0' expresión='[20,110]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}\f1\fs34 Para simplificar, digamos que la longitud del lado \f2\fs38\i a\f1\fs34\i0  es la unidad. Hemos de encontrar\par la longitud de \f2\fs38\i b\f1\fs34\i0  que satisfaga la condici\u243 n anteriormente mencionada. Intenta diversos\par valores de \f2\fs38\i b\f1\fs34\i0  hasta que encuentres uno cercano al que cumple la condici\u243 n. Una vez\par que lo encuentres, observa la proporci\u243 n \f2\fs38\i{\*\mjaformula{\fraction{\num a}{\den b}}}\f1\fs34\i0  de los lados.}' fuente='SansSerif,PLAIN,17' fijo='sí'">
+   <param name="G_05" value="espacio='E1' tipo='texto' expresión='[20,140]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs40 Raz\u243 n entre lados\f2\fs30}' fuente='SansSerif,PLAIN,20' fijo='sí' info='Razón entre lados'">
+   <param name="G_06" value="espacio='E2' tipo='punto' color='232323' expresión='(-0.23,b/2)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Times New Roman;}\f1\fs38\i b={\*\mjaformula{\expr b\decimals 2\fixed0}}\fs34\i0}' fuente='Serif,ITALIC,19' fijo='sí' tamaño='0'">
+   <param name="G_07" value="espacio='E2' tipo='punto' color='232323' expresión='(-0.08+a/2,-0.1)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Times New Roman;}\f1\fs38\i a={\*\mjaformula{\expr a\decimals 2\fixed0}}\fs34\i0}' fuente='Serif,ITALIC,19' fijo='sí' tamaño='0'">
+   <param name="G_08" value="espacio='E2' tipo='polígono' color='9292ff' dibujar-si='scrl1>0' expresión='(0,0)(b,0)(b,b)(0,b)(0,0)' relleno='9292ff'">
+   <param name="G_09" value="espacio='E2' tipo='polígono' color='ff4141' dibujar-si='scrl1>0' expresión='(b,0)(a,0)(a,b)(b,b)(b,0)' relleno='ff4141'">
+   <param name="G_10" value="espacio='E2' tipo='segmento' expresión='(-0.02,0)(-0.02,b)' fijo='sí'">
+   <param name="G_11" value="espacio='E2' tipo='segmento' expresión='(0,-0.02)(a,-0.02)' fijo='sí'">
+   <param name="G_12" value="espacio='E2' tipo='punto' color='232323' dibujar-si='scrl1>0' expresión='(0.03,b/2)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Times New Roman;}\f1\fs38\i b={\*\mjaformula{\expr b\decimals 2\fixed0}}\fs34\i0}' fuente='Serif,ITALIC,19' fijo='sí' tamaño='0'">
+   <param name="G_13" value="espacio='E1' tipo='texto' color='232323' expresión='[20,200]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;}\f1\fs34 Rect\u225 ngulo amarillo original:\fs38}' fuente='SansSerif,PLAIN,17' fijo='sí'">
+   <param name="G_14" value="espacio='E2' tipo='punto' color='232323' dibujar-si='scrl1>0' expresión='(-0.1+b/2,0.05)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Times New Roman;}\f1\fs38\i b={\*\mjaformula{\expr b\decimals 2\fixed0}}\fs34\i0}' fuente='Serif,ITALIC,19' fijo='sí' tamaño='0'">
+   <param name="G_15" value="espacio='E1' tipo='texto' color='232323' expresión='[20,230]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Arial;}\f1\fs38\b\i{\*\mjaformula{\fraction{\num a}{\den b}}={\fraction{\num 1}{\den{\expr b\decimals 2\fixed0}}}={\expr 1/b\decimals 3\fixed0}}\f2\fs34\b0\i0}' fuente='Serif,BOLD+ITALIC,19' fijo='sí'">
+   <param name="G_16" value="espacio='E1' tipo='texto' color='232323' dibujar-si='scrl1>0' expresión='[20,300]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;}\f1\fs34 Rect\u225 ngulo rojo peque\u241 o:\fs38}' fuente='SansSerif,PLAIN,17' fijo='sí'">
+   <param name="G_17" value="espacio='E1' tipo='texto' color='232323' dibujar-si='scrl1>0' expresión='[20,330]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Arial;}\f1\fs38\b\i{\*\mjaformula{\fraction{\num ?}{\den ?}}={\fraction{\num{\expr b\decimals 2\fixed1}}{\den{\expr a-b\decimals 2\fixed0}}}={\expr b/(a-b)\decimals 3\fixed0}}\f2\fs34\b0\i0}' fuente='Serif,BOLD+ITALIC,19' fijo='sí'">
+   <param name="G_18" value="espacio='E2' tipo='punto' color='232323' dibujar-si='scrl1>0' expresión='(b+0.03,b/2)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Times New Roman;}\f1\fs38\i b={\*\mjaformula{\expr b\decimals 2\fixed0}}\fs34\i0}' fuente='Serif,ITALIC,19' fijo='sí' tamaño='0'">
+   <param name="G_19" value="espacio='E2' tipo='punto' color='232323' dibujar-si='0' expresión='(-0.08+(a+b)/2,0.1)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Times New Roman;}\f1\fs38\i   a-b=\par {\*\mjaformula{\expr a-b\decimals 2\fixed0}}\fs34\i0}' fuente='Serif,ITALIC,19' fijo='sí' tamaño='0' info='a-b  scrl1>0'">
+   <param name="G_20" value="espacio='E2' tipo='segmento' dibujar-si='scrl1>0' expresión='(0.02,0)(0.02,b)' fijo='sí'">
+   <param name="G_21" value="espacio='E2' tipo='segmento' dibujar-si='scrl1>0' expresión='(0,0.027)(b,0.027)' fijo='sí'">
+   <param name="G_22" value="espacio='E2' tipo='segmento' dibujar-si='scrl1>0' expresión='(0.02+b,0)(0.02+b,b)' fijo='sí'">
+   <param name="G_23" value="espacio='E2' tipo='segmento' dibujar-si='0' expresión='(b,0.013)(a,0.013)' fijo='sí' info='b-a scrl1>0'">
+   <param name="G_24" value="espacio='E2' tipo='polígono' color='negro' dibujar-si='0' coord_abs='sí' expresión='(1,1)(E2._w-1,1)(E2._w-1,E2._h-1)(1,E2._h-1)(1,1)' ancho='2'">
+</ajs></p>
+
+</body>
+</html>

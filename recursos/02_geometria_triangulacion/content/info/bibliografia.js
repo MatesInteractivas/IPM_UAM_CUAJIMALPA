@@ -1,0 +1,7 @@
+var BIBLIO = [
+    "Beltrán, G. (2012). <em>Geolocalización y Redes Sociales: Un mundo social local y móvil.</em> Valencia, España: Bubok Publishing.",
+    "Gende, M. & Molina, I. (2011). <em>Trilateración.</em> La Plata, Argentina: Universidad Nacional de la Plata, Facultad de Ciencias Astronómicas y Geofísicas. Recuperado el 12 de junio de 2015 de <a href='http://catedras.fcaglp.unlp.edu.ar/' target='_blank'>http://catedras.fcaglp.unlp.edu.ar/</a>",
+    "López, A. (2012). <em>Manual de prácticas de geodesia I.</em> México: UACH. Recuperado el 12 de Junio de 2015 de <a href='http://www.uach.mx/extension_y_difusion/catalogo_de_capacitacion/2008/04/02/cat_cap_ing/' target='_blank'>http://www.uach.mx/extension_y_difusion/catalogo_de_capacitacion/2008/04/02/cat_cap_ing/</a>",
+    "Márquez, U. (2013). <em>Apuntes de transmisión de datos.</em> Capítulo 4: Transmisión y localización de dispositivos. México: Facultad de Ingeniería, UNAM. Recuperado el 15 de junio de 2015 de <a href='http://www.ptolomeo.unam.mx:8080/xmlui/bitstream/handle/132.248.52.100/260/A7.pdf?sequence=7' target='_blank'>http://www.ptolomeo.unam.mx:8080/xmlui/bitstream/handle/132.248.52.100/260/A7.pdf?sequence=7</a>",
+    "Universidad Politécnica de Madrid (2013). <em>Geoposicionamiento GSM independiente de la red móvil.</em> Madrid, España: Facultad de Informática de la Universidad Politécnica de Madrid. Recuperado el 15 de junio de 2015 de <a href='http://www.kriptopolis.com/geoposicionamiento-gsm-7' target='_blank'>http://www.kriptopolis.com/geoposicionamiento-gsm-7</a>"
+]

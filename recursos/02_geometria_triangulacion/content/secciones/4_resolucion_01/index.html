@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Resolución del problema</h1>
+    
+    <!--- Subtítulo (no necesario en introducción) --->
+    <h2>Sustitución en las ecuaciones</h2>
+    
+    
+    <!--- Párrafo --->
+    <p>Ya tenemos todo lo necesario para realizar la localización de un dispositivo.
+    Para resolver nuestro problema, lo único que falta es sustituir los datos de tres antenas en las ecuaciones que acabamos de obtener.
+    </p>
+    
+     <!--- Instrucciones --->
+    <div class="instrucciones">
+    En el siguiente espacio interactivo se muestra un mapa con tres antenas.
+    A partir de la información que se proporciona respecto a las distancias de dichas antenas al dispositivo, 
+    y observando la posición de las mismas en el plano cartesiano, tendrás que escribir los valores correctos para las literales \(x\), \(y\) y \(d\).
+    Estos valores se sustituirán en las ecuaciones que obtuvimos en la página anterior para así obtener los valores numéricos de las coordenadas \((x,y)\) del dispositivo.
+    <br><br>
+    <span style='font-size:12px;'>Nota: En el recurso, cada cuadrito del plano cartesiano corresponde a \(1 km^2\).</span>
+    </div>
+
+
+
+    <!-- ejemplo para incluir un documento externo en un iframe, aqui van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="500" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+    
+    <p>Finalmente, con el ejercicio que acabamos de realizar podemos dar por terminado el proceso que se realiza para localizar un dispositivo.
+    <br>
+    <br>Como pudimos ver, el método matemático de localización sólo requiere de ecuaciones relativamente sencillas y muy conocidas como la ecuación de la circunferencia y el teorema de Pitágoras.
+    La parte más complicada del método es la obtención de los datos; como vimos esto se debe a las condiciones impredecibles en un entorno inalámbrico.
+    <br>
+    <br>A continuación veremos algunas utilidades e implicaciones del poder ubicar un dispositivo que se comunique con una antena.</p>
+    
+	
+	
+  <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+    
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  </div>
+  
+
+</article>
+
+</body>
+
+</html>
+

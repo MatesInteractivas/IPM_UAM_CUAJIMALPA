@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>  
+
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Reflexiones y aplicaciones</h1>
+    
+    <!--- Subtítulo (no necesario en introducción) --->
+    <h2>Descifrando códigos</h2>
+    
+  
+    <!--- Párrafo --->
+    <div class='instrucciones'>
+      Te sugerimos observar el siguiente video en el que se presenta una breve historia de la codificación y la decodificación.
+    </div>
+    
+     <div class="course_extern_content"> 
+      <a target="_blank" href="https://www.youtube.com/embed/YxrTSAedNY4?list=PL6kQim6ljTJu44dsVeZifHHiuDC1MEZ7q">
+      <b>Code Breaking and Mathematics (Decodificación y matemáticas)</b>
+    </a><br/>
+    <iframe frameborder="0" scrolling="no" width="560" height="355" src="https://www.youtube.com/embed/EUtyNP1IN7s"></iframe>
+    </div>
+
+    <p>
+    Veamos un ejemplo concreto de un código, que a pesar de su sencillez es utilizado ampliamente.
+    Se trata del código ISBN. ISBN son las siglas de "International Standard Book Number" (Número Estándar Internacional de Libros).
+    Este código es un identificador único de cada libro.
+    Antes de enero de 2007, estaba formado por 10 dígitos, pero los libros publicados desde 2007 tienen códigos con 13 dígitos compatibles con los códigos de barras EAN ("European Article Number").
+    Este código se encuentra en la misma página donde están los datos de edición, o en la parte de atrás del libro cuando es compatible con un código de barras como el que se muestra en la imagen.
+    </p>
+
+    <div class="course_extern_content">
+      <img src="imgs/isbn.jpg"></img>
+    </div>
+
+    <p>
+  En nuestro siguiente ejemplo usaremos un código de 10 dígitos. Un ISBN de 10 dígitos consta de cuatro elementos o partes:
+    <ol>
+       <li>Grupo de registro (grupo de países con un lenguaje compartido, país o territorio particular), que es un código del país o lengua de origen;</li>
+       <li>Editorial;</li>
+       <li>Publicación (asignado por la editorial);</li>
+       <li>Dígito de control.</li>
+     </ol>
+    </p>
+
+    <p>
+    El elemento que nos interesa es el <em>dígito de control</em>, que es el último dígito del código y debe ser un número del 0 al 10, aunque para 10, siendo un número de dos dígitos, se usa la letra X. Por ejemplo, tomemos el código de uno de los libros de Elena Poniatovska:  <strong>968 - 411 - 220 - 3</strong>. Calculemos la suma
+
+\[(9\times 1)+(6\times 2)+(8\times 3)+(4\times 4)+(1\times 5)+(1\times 6)+\]
+\[+(2\times 7)+(2\times 8)+(0\times 9)+(3\times 10)\]
+
+Esta suma es igual a
+
+\[9+12+24+16+5+6+14+16+0+30=132\]
+    <br>
+¿Pero para qué nos sirve hacer esta suma? Lo descubrirás al realizar la siguiente tarea.
+    </p>
+
+    <div class='tarea'>
+
+      <h3>Tarea</h3>
+
+      <p>
+      Esta tarea consta de dos partes:
+      <ol>
+       <li>Encuentra algunos libros y repite esta suma para cada uno de sus códigos ISBN. ¿Qué tienen en común todos los resultados?</li>
+       <br>
+       <li>En el siguiente código ISBN hay un dígito que se remplazó por un asterisco:  <strong>968 - 16 - 164* - X</strong>. Encuentra el dígito que ha sido reemplazado para que sea un código ISBN válido.</li>
+      </ol>
+      </p>
+
+      <p>
+      Te sugerimos hacer la primera parte de la tarea en equipo, de manera que cada integrante haga la suma para al menos 5 libros y tengan más casos para encontrar una relación entre ellos.
+      </p>
+
+      <!--<div class="descargar" onclick="window.open('pdf/solucion_dinA.pdf')">
+    </div>-->
+    <div class="verSolucion" id="btSolucion" onclick="document.getElementById('solucion').setAttribute('class','visible');document.getElementById('btSolucion').setAttribute('class','oculto');">
+      </div>
+
+    </div>
+    
+   
+    <div id="solucion" class='oculto'>
+      
+      <h4>Solución de la tarea</h4>
+      
+      <p>
+  <strong>Primera parte</strong>
+
+  <br><br>
+  La suma en nuestro ejemplo fue 132. Otros números que pudiste haber obtenido son: 77, 187, 198, 209, 242, etc. Todos estos números son múltiplos de 11. Esa es la relación que hay entre ellos.
+  <br><br>
+Por cierto, este es el código ISBN de <em>La noche de Tlatelolco</em>.
+      </p>
+
+      <p>
+<strong>Segunda parte</strong>
+
+  <br><br>
+  Por la primera parte de la tarea, sabemos que la suma debe resultar en un múltiplo de \(11\), es decir
+
+\[(9\times 1)+(6\times 2)+(8\times 3)+(1\times 4)+(6\times 5)+(1\times 6)+\]
+\[+(6\times 7)+(4\times 8)+(*\times 9)+(10\times 10)\]
+
+Recuerda que cuando el último número (el dígito de control) es \(10\) se reemplaza por la letra \(X\). El resultado de esta suma es
+\[9+12+24+4+30+6+42+32+9*+100=259+9*\]
+Y esto debe ser igual a un múltiplo de \(11\). Podemos proceder por prueba y error dándole valores a * empezando por \(1\):
+      <ol>
+       <li>Si \(*=1\), sustituyendo \(*\) por \(1\) en la suma obtenemos: \[259+9*=259+9=268\] pero \(268\) no es múltiplo de \(11\).</li>
+       <br>
+       <li>Si \(*=2\), sustituyendo \(*\) por \(2\) en la suma obtenemos: \[259+9*=259+9\times 2=259+18=277\] pero \(277\) tampoco es múltiplo de \(11\).</li>
+       <br>
+       <li>Si \(*=3\), sustituyendo \(*\) por \(3\) en la suma obtenemos: \[259+9*=259+9\times 3=259+27=286\]  \(268\) es múltiplo de \(11\), pues \(11 \times 26=286\).</li>
+      </ol>
+  </p>
+
+  <p>
+      Por lo tanto el dígito que había sido reemplazado por un asterisco es \(3\).
+      <br><br>
+      Por cierto, el código <strong>ISBN  968 - 16 - 1643 - X</strong> corresponde a uno de los libros más famosos de Octavio Paz, <em>El laberinto de la Soledad</em>.
+    <br><br>
+  ¿Habrá algún otro dígito que también funcione?<br>
+  ¿Se te ocurre algún otro método para encontrar la solución?
+  </p>
+
+  <p>
+  Los elementos de un código ISBN se asignan de acuerdo a ciertos criterios y características específicas de cada libro, por lo tanto no se toma en cuenta si la suma será un múltiplo de 11 para asignarlos.
+  Entonces, para que el código cumpla la condición de que la suma sea un múltiplo de 11, es el dígito de control el que va a garantizarlo.
+  Tomemos nuevamente el ejemplo del libro <em>La noche de Tlatelolco</em> de Elena Poniatowska: <strong>968 - 411 - 220 - ?</strong>, suponiendo que no conocemos el dígito de control. Para obtenerlo hacemos lo siguiente:
+
+     <ol>
+       <li>Hacemos la suma hasta las primeras 9 cifras: \[9+12+24+16+5+6+14+16+0=102\]</li>
+       <br>
+       <li>Dividimos el número resultante entre \(11\): \[102/11=9.272727...\]</li>
+       <br>
+       <li>El residuo de la división es el dígito buscado, que como sabemos es \(3\).</li>
+      </ol>
+      <br>
+  </p>
+
+  <p>
+  Observa que \(102=99+3=9\times 11+3\), donde justamente \(3\) es el residuo de dividir \(102\) entre \(11\).
+  Al utilizar este residuo como dígito de control, se sumará \(3 \times 10\) al número \(102\) ya obtenido, de manera que el residuo total será de \(3 + 3 \times 10 = 33\), lo cual es un múltiplo de 11.
+  Así nos aseguramos de que la suma total es múltiplo de 11.
+  <br><br>
+  ¿Por qué crees que se utiliza el código ISBN?
+ </p>
+
+
+   
+  <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>     
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  </div>
+  
+
+</article>
+
+</body>
+
+</html>
+

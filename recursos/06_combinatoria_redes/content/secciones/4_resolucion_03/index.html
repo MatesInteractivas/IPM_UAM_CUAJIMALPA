@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Resolución del problema</h1>
+    
+    <!--- Subtítulo (no necesario en introducción) --->
+    <h2>Algoritmo de Prim</h2>
+
+    <p>
+      Es conveniente que sepas que el procedimiento que hemos
+      construido es una versión simplificada del algoritmo de Prim.
+      </p>
+
+    <p>
+      La simplificación consiste en que nosotros hemos siempre
+      requerido que el cuadro de costos esté completo, es decir, que
+      siempre haya un costo asociado a la conexión de cada par de
+      puntos. Sin embargo, no es necesario contar con el cuadro completo de costos.
+      Por ejemplo, pensando en la red de antenas,
+      puede ser que un enlace no se pueda instalar porque hay un
+      edificio alto entre dos de los puntos que impide poner las
+      antenas. En este caso el enlace no existe, pero de todas formas
+      tiene sentido pensar en el problema de optimización del resto de
+      la configuración.
+      </p>
+
+    <p>
+      En lugar de necesitar que existan los enlaces para conectar los
+      puntos todos con todos, el algoritmo de Prim solo requiere que
+      haya al menos una ruta de enlaces que conecte cualquier par de
+      puntos, es decir, que todos los puntos se encuentren conectados
+      en una sola red. Este algoritmo permite optimizar los costos
+      totales, tanto de forma mínima como máxima.
+    </p>
+
+
+    <h2>Espacio de práctica</h2>
+    
+    <div class='instrucciones'>
+      Este espacio es similar a los que ya conoces. A continuación
+      incluimos un cuadro de costos generados aleatoriamente y la
+      representación gráfica correspondiente. Podrás marcar y
+      desmarcar los enlaces al presionar sobre los puntos anaranjados
+      o sobre los costos del cuadro. Podrás variar entre 3 y 8 el
+      valor de \(N\), que representa el número de puntos a conectar.
+      <br><br>
+      El botón <strong>Cuadro</strong> muestra y esconde el cuadro de
+      costos.<br>El botón <strong>Lista</strong> muestra y esconde la
+      lista de costos en orden ascendente.<br>El
+      botón <strong>Solución</strong> muestra la solución óptima del
+      problema de minimización de costos planteado.
+      <br><br>
+      Si seleccionas
+      un punto para comenzar, o vas avanzando en la construcción de la
+      solución, en la lista se marcarán en verde los enlaces válidos
+      (los que conectan la solución en construcción con el resto del
+      mundo), de los que deberás escoger uno entre los del menor costo
+      disponible (si es que hay varios con exactamente el mismo
+      costo).
+    </div>
+    
+    <!-- ejemplo para incluir un documento externo en un iframe, aqui van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="480" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+
+
+    <p class="problema">
+      <strong>Invitación</strong>
+      <br><br>
+      Una vez que hayas practicado, puedes regresar a la página 3 de la 
+      exploración y por fin resolver el problema de la red de fibra
+      óptica con un método infalible.
+    </p>
+	
+  <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  </div>
+  
+
+</article>
+
+</body>
+
+</html>
+

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+  <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!-- INICIA EL CONTENIDO DE LA PÁGINA -->
+    
+    <!-- Título de la página -->
+   <h1>Exploración inicial del problema</h1>
+    
+    <h2>Identificación de los datos faltantes</h2>
+    
+    <!-- Párrafo -->
+    <p>
+      En esta sección empezaremos a analizar el problema, con el fin de que tengas claro cómo se puede abordar.
+    </p>
+    
+    <p>
+      En la página anterior, establecimos que conocemos el radio del tubo, así como las alturas del sedimento y del líquido que se encuentran dentro del mismo.
+      Ahora bien, para poder resolver el problema, ¿qué otros datos se requieren, además de los ya mencionados?
+      El recurso interactivo que se muestra a continuación te ayudará a averiguarlo.
+    </p>
+    
+    <!-- Instrucciones -->
+    <div class="instrucciones">
+     Esta escena interactiva te permite cambiar la altura inicial del sedimento y el diámetro del tubo.
+     La cantidad de agua se mantiene constante.
+     Observa cómo cambia la altura del agua dentro del tubo al cambiar la altura del sedimento y el radio del tubo.
+    </div>
+
+    <!-- ejemplo para incluir un documento externo en un iframe, aquí van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <iframe src="escenas/escena1.html" class="course_iframe" width="760" height="480" frameborder="0" > </iframe>
+    </div>
+  
+    <div class='problema'>
+      <strong>Preguntas</strong>
+      <br><br>
+      Basándote en las observaciones que pudiste hacer en el recurso de arriba, busca la respuesta a las siguientes preguntas:
+
+      <ol>
+      <li>¿Cuáles son los datos que tendrás que obtener, a partir de los conocidos, para dar solución al problema?</li>
+      <br>
+      <li>¿De qué manera los puedes calcular?</li>
+      </ol>
+    </div>
+    
+    <p>
+      Trata de formular tus respuestas antes de avanzar a la siguiente página.
+    </p>
+    
+    
+    <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+  
+  <!-- TERMINA LA INFO SOBRE LAS CONDICIONES DE USO -->
+  
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

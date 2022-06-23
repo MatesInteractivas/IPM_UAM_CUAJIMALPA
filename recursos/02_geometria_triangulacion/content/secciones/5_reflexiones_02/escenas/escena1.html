@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>Capítulo 1 - Matemáticas de la actividad humana | Lugares geométricos</title>
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body BGCOLOR="c0c0c0" leftmargin="0" topmargin="0">
+<ajs name="Descartes" width=510 height=500 code="Descartes">
+   <param name="tamaño" value="510x500">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="sonido" value="sí">
+   <param name="álgebra" value="sí">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no">
+   <param name="E_01" value="tipo='R2' id='E2' fijo='sí' escala='1' O.x='-50%' O.y='-50%' imagen='images/fondo.jpg' despl_imagen='arr-izq' fondo='blanco' red='no' red10='no' ejes='no' texto='negro'">
+   <param name="E_02" value="tipo='R3' id='ESP' x='5' y='5' ancho='500' alto='450' fijo='sí' escala='15' imagen='images/cosmos.jpg' despl_imagen='arr-izq' fondo='negro' despliegue='pintor' R3='sí'">
+   <param name="C_01" value="id='btnEspOp1' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='Ver órbitas' expresión='(80,460,120,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn120x30.png' acción='calcular' parámetro='verOrbitas=(verOrbitas+1)%2' parámetro.fuente='Monospaced,PLAIN,12'">
+   <param name="C_02" value="id='btnEspOp2' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='Animar' expresión='(320,460,120,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn120x30.png' acción='calcular' parámetro='anima=(anima+1)%2' parámetro.fuente='Monospaced,PLAIN,12'">
+   <param name="C_03" value="id='---POS_BTNS---' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='------POS_BTNS---' expresión='(0,0,0,0)' fijo='sí' visible='no' parámetro.fuente='Monospaced,PLAIN,12' dibujar-si='0' activo-si='0' pos_mensajes='centro'">
+   <param name="C_04" value="id='graficas' tipo='gráfico' espacio='E2' color='azul' color-int='rojo' expresión='(graficas.x,graficas.y)' fijo='sí' dibujar-si='verCtrAcomodar' activo-si='verCtrAcomodar'">
+   <param name="C_05" value="id='btnVerArriba' tipo='gráfico' espacio='E2' color='azul' color-int='rojo' expresión='(btnVerArriba.x,btnVerArriba.y)' fijo='sí' dibujar-si='verCtrAcomodar' activo-si='verCtrAcomodar'">
+   <param name="C_06" value="id='btnVerAbajo' tipo='gráfico' espacio='E2' color='azul' color-int='rojo' expresión='(btnVerAbajo.x,btnVerAbajo.y)' fijo='sí' dibujar-si='verCtrAcomodar' activo-si='verCtrAcomodar'">
+   <param name="C_07" value="id='pulsa' tipo='gráfico' espacio='E2' color='azul' color-int='rojo' expresión='(pulsa.x,pulsa.y)' fijo='sí' dibujar-si='verCtrAcomodar' activo-si='verCtrAcomodar'">
+   <param name="C_08" value="id='outputPos' tipo='numérico' interfaz='campo de texto' región='exterior' espacio='E2' fijo='sí' visible='sí' acción='calcular' parámetro='muestraPosBtns()\n' parámetro.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="C_09" value="id='verCtrAcomodar' tipo='numérico' región='exterior' espacio='E2' nombre='verCtrAcomodar' incr='1' min='0' fijo='sí' visible='sí' acción='calcular' parámetro.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="C_10" value="id='---MIS_CONTROLES---' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='------MIS_CONTROLES---' expresión='(0,0,0,0)' fijo='sí' visible='no' parámetro.fuente='Monospaced,PLAIN,12' dibujar-si='0' activo-si='0' pos_mensajes='centro'">
+   <param name="C_11" value="id='debug' tipo='numérico' región='exterior' espacio='E2' nombre='debug' incr='1' min='0' max='1' fijo='sí' visible='sí' parámetro.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="C_12" value="id='otravez' tipo='numérico' interfaz='botón' región='interior' espacio='T0' nombre='Otra vez' expresión='(xB1,yB1,B1.b,B1.h)' fijo='sí' visible='sí' imagen='images/btn100/btn.png ffffff_N_13' acción='calcular' parámetro='reini=1' parámetro.fuente='Monospaced,PLAIN,12' dibujar-si='0' activo-si='0' pos_mensajes='centro'">
+   <param name="C_13" value="id='theta.mas' tipo='numérico' interfaz='botón' región='exterior' espacio='E2' nombre='theta.mas' fijo='sí' visible='sí' acción='calcular' parámetro='gps.theta=(gps.theta+0.1)%pi;locate=1' parámetro.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="C_14" value="id='theta.menos' tipo='numérico' interfaz='botón' región='exterior' espacio='E2' nombre='theta.menos' fijo='sí' visible='sí' acción='calcular' parámetro='gps.theta=(gps.theta-0.1)%pi;locate=1' parámetro.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="C_15" value="id='phi.mas' tipo='numérico' interfaz='botón' región='exterior' espacio='E2' nombre='phi.mas' fijo='sí' visible='sí' acción='calcular' parámetro='gps.phi=(gps.phi+0.1)%(2*pi);locate=1' parámetro.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="C_16" value="id='phi.menos' tipo='numérico' interfaz='botón' región='exterior' espacio='E2' nombre='phi.menos' fijo='sí' visible='sí' acción='calcular' parámetro='gps.phi=(gps.phi-0.1)%(2*pi);locate=1' parámetro.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="C_17" value="id='yRot_mas' tipo='numérico' interfaz='botón' región='exterior' espacio='E2' nombre='Rot.y +' fijo='sí' visible='sí' acción='calcular' parámetro='ESP.rot.y=ESP.rot.y+1' parámetro.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="C_18" value="id='yRot_menos' tipo='numérico' interfaz='botón' región='exterior' espacio='E2' nombre='Rot.y -' fijo='sí' visible='sí' acción='calcular' parámetro='ESP.rot.y=ESP.rot.y-1' parámetro.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="C_19" value="id='zRot_mas' tipo='numérico' interfaz='botón' región='exterior' espacio='E2' nombre='Rot.z +' fijo='sí' visible='sí' acción='calcular' parámetro='ESP.rot.z=ESP.rot.z+1' parámetro.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="C_20" value="id='zRot_menos' tipo='numérico' interfaz='botón' región='exterior' espacio='E2' nombre='Rot.z -' fijo='sí' visible='sí' acción='calcular' parámetro='ESP.rot.z=ESP.rot.z-1' parámetro.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="A_01" value="id='---PLATILLA----------------'">
+   <param name="A_02" value="id='ctrsVarNames' vector='sí' evaluar='una-sola-vez' tamaño='4' expresión='ctrsVarNames[0]=&squot;graficas&squot;;ctrsVarNames[1]=&squot;btnVerArriba&squot;;ctrsVarNames[2]=&squot;btnVerAbajo&squot;;ctrsVarNames[3]=&squot;pulsa&squot;;;;;'">
+   <param name="A_03" value="id='muestraPosBtns()' algoritmo='sí' algoritmo='sí' inicio='_i=0;strOut=&squot;&squot;;strX=&squot;.x&squot;;strY=&squot;.y&squot;;strIgual=&squot;=&squot;;strSep=&squot;@&squot;' hacer='COMM=|***********************************************  *|;COMM=|*CON ESTA FUNCION SE PUEDE OBTENER LA POSICION   *|;COMM=|*DE LOS CONTROLES. HAY QUE REGISTRARLOS EN EL    *|;COMM=|*VECTOR -ctrsVarNames-. Hacer enter en el campo  *|;COMM=|*de texto externo y copiar la cadena que se ponga*|;COMM=|*Hay que remplazar las @ por el simbolo          *|;COMM=|*-punto y coma- y ponerlo en un  ALG para que    *|;COMM=|*asigne esas pocisiones -INIT_CTR-               *|;COMM=|**************************************************|;;;_strVar=ctrsVarNames[_i];_strVarX=_strVar+strX;_strVarY=_strVar+strY;_valVarX=_Eval_(_strVarX);_valVarY=_Eval_(_strVarY);;strTMP=_strVarX+strIgual+_valVarX+strSep;strTMP2=_strVarY+strIgual+_valVarY+strSep;;strOut=strOut+strTMP+strTMP2;outputPos=strOut;_i=_i+1;' mientras='_i<ctrsVarNames.long'">
+   <param name="A_04" value="id='acomodaDependientes()' algoritmo='sí' algoritmo='sí' hacer='btnEspOp.x=(ESP.x+ESP.w-btnEspOp.w)-20;btnEspOp.y=(-ESP.y+ESP.h-1)-110;;;;pulsa.up.x=pulsa.x+3;pulsa.up.y=-pulsa.y;pulsa.dw.x=pulsa.up.x+pulsa.up.w+2;pulsa.dw.y=pulsa.up.y;;pulsa.txt.x=pulsa.dw.x+pulsa.dw.w+2;pulsa.txt.y=pulsa.dw.y+1'">
+   <param name="A_05" value="id='---CODIGO-----------'">
+   <param name="A_06" value="id='toRad(x)' expresión='x*(pi/180)'">
+   <param name="A_07" value="id='toGrd(x)' expresión='x*(180/pi)'">
+   <param name="A_08" value="id='xCart(r,theta,phi)' expresión='r*sen(theta)*cos(phi)'">
+   <param name="A_09" value="id='yCart(r,theta,phi)' expresión='r*sen(theta)*sen(phi)'">
+   <param name="A_10" value="id='zCart(r,theta,phi)' expresión='r*cos(theta)'">
+   <param name="A_11" value="id='rSM1' vector='sí' evaluar='una-sola-vez' tamaño='6'">
+   <param name="A_12" value="id='tSM1' vector='sí' evaluar='una-sola-vez' tamaño='6'">
+   <param name="A_13" value="id='pSM1' vector='sí' evaluar='una-sola-vez' tamaño='6'">
+   <param name="A_14" value="id='xSM1' vector='sí' evaluar='una-sola-vez' tamaño='6'">
+   <param name="A_15" value="id='ySM1' vector='sí' evaluar='una-sola-vez' tamaño='6'">
+   <param name="A_16" value="id='zSM1' vector='sí' evaluar='una-sola-vez' tamaño='6'">
+   <param name="A_17" value="id='rSM2' vector='sí' evaluar='una-sola-vez' tamaño='6'">
+   <param name="A_18" value="id='tSM2' vector='sí' evaluar='una-sola-vez' tamaño='6'">
+   <param name="A_19" value="id='pSM2' vector='sí' evaluar='una-sola-vez' tamaño='6'">
+   <param name="A_20" value="id='xSM2' vector='sí' evaluar='una-sola-vez' tamaño='6'">
+   <param name="A_21" value="id='ySM2' vector='sí' evaluar='una-sola-vez' tamaño='6'">
+   <param name="A_22" value="id='zSM2' vector='sí' evaluar='una-sola-vez' tamaño='6'">
+   <param name="A_23" value="id='rSM3' vector='sí' evaluar='una-sola-vez' tamaño='6'">
+   <param name="A_24" value="id='tSM3' vector='sí' evaluar='una-sola-vez' tamaño='6'">
+   <param name="A_25" value="id='pSM3' vector='sí' evaluar='una-sola-vez' tamaño='6'">
+   <param name="A_26" value="id='xSM3' vector='sí' evaluar='una-sola-vez' tamaño='6'">
+   <param name="A_27" value="id='ySM3' vector='sí' evaluar='una-sola-vez' tamaño='6'">
+   <param name="A_28" value="id='zSM3' vector='sí' evaluar='una-sola-vez' tamaño='6'">
+   <param name="A_29" value="id='rSP1' vector='sí' evaluar='una-sola-vez' tamaño='6'">
+   <param name="A_30" value="id='tSP1' vector='sí' evaluar='una-sola-vez' tamaño='6'">
+   <param name="A_31" value="id='pSP1' vector='sí' evaluar='una-sola-vez' tamaño='6'">
+   <param name="A_32" value="id='xSP1' vector='sí' evaluar='una-sola-vez' tamaño='6'">
+   <param name="A_33" value="id='ySP1' vector='sí' evaluar='una-sola-vez' tamaño='6'">
+   <param name="A_34" value="id='zSP1' vector='sí' evaluar='una-sola-vez' tamaño='6'">
+   <param name="A_35" value="id='rSP2' vector='sí' evaluar='una-sola-vez' tamaño='6'">
+   <param name="A_36" value="id='tSP2' vector='sí' evaluar='una-sola-vez' tamaño='6'">
+   <param name="A_37" value="id='pSP2' vector='sí' evaluar='una-sola-vez' tamaño='6'">
+   <param name="A_38" value="id='xSP2' vector='sí' evaluar='una-sola-vez' tamaño='6'">
+   <param name="A_39" value="id='ySP2' vector='sí' evaluar='una-sola-vez' tamaño='6'">
+   <param name="A_40" value="id='zSP2' vector='sí' evaluar='una-sola-vez' tamaño='6'">
+   <param name="A_41" value="id='rSP3' vector='sí' evaluar='una-sola-vez' tamaño='6'">
+   <param name="A_42" value="id='tSP3' vector='sí' evaluar='una-sola-vez' tamaño='6'">
+   <param name="A_43" value="id='pSP3' vector='sí' evaluar='una-sola-vez' tamaño='6'">
+   <param name="A_44" value="id='xSP3' vector='sí' evaluar='una-sola-vez' tamaño='6'">
+   <param name="A_45" value="id='ySP3' vector='sí' evaluar='una-sola-vez' tamaño='6'">
+   <param name="A_46" value="id='zSP3' vector='sí' evaluar='una-sola-vez' tamaño='6'">
+   <param name="A_47" value="id='iniSat()' algoritmo='sí' expresión='1' algoritmo='sí' inicio='_i=0' hacer='rSM1[_i]=9;tSM1[_i]=_i*(pi/2);pSM1[_i]=0;;rSM2[_i]=9;tSM2[_i]=_i*(pi/2)+(pi/3);pSM2[_i]=(2*pi)/3;;rSM3[_i]=9;tSM3[_i]=_i*(pi/2)+2*(pi/3);pSM3[_i]=2*((2*pi)/3);;rSP1[_i]=9;tSP1[_i]=pi/2;pSP1[_i]=_i*(pi/2)+(2*pi)/5;;rSP2[_i]=9;tSP2[_i]=pi/2;pSP2[_i]=_i*(pi/2)+2*(2*pi)/5;;rSP3[_i]=9;tSP3[_i]=pi/2;pSP3[_i]=_i*(pi/2)+3*(2*pi)/5;;_i=_i+1' mientras='_i<4'">
+   <param name="A_48" value="id='setSat()' algoritmo='sí' expresión='1' algoritmo='sí' inicio='_i=0' hacer='xSM1[_i]=xCart(rSM1[_i],tSM1[_i],pSM1[_i]);ySM1[_i]=yCart(rSM1[_i],tSM1[_i],pSM1[_i]);zSM1[_i]=zCart(rSM1[_i],tSM1[_i],pSM1[_i]);;xSM2[_i]=xCart(rSM2[_i],tSM2[_i],pSM2[_i]);ySM2[_i]=yCart(rSM2[_i],tSM2[_i],pSM2[_i]);zSM2[_i]=zCart(rSM2[_i],tSM2[_i],pSM2[_i]);;xSM3[_i]=xCart(rSM3[_i],tSM3[_i],pSM3[_i]);ySM3[_i]=yCart(rSM3[_i],tSM3[_i],pSM3[_i]);zSM3[_i]=zCart(rSM3[_i],tSM3[_i],pSM3[_i]);;xSP1[_i]=xCart(rSP1[_i],tSP1[_i],pSP1[_i]);ySP1[_i]=yCart(rSP1[_i],tSP1[_i],pSP1[_i]);zSP1[_i]=zCart(rSP1[_i],tSP1[_i],pSP1[_i]);;xSP2[_i]=xCart(rSP2[_i],tSP2[_i],pSP2[_i]);ySP2[_i]=yCart(rSP2[_i],tSP2[_i],pSP2[_i]);zSP2[_i]=zCart(rSP2[_i],tSP2[_i],pSP2[_i]);;xSP3[_i]=xCart(rSP3[_i],tSP3[_i],pSP3[_i]);ySP3[_i]=yCart(rSP3[_i],tSP3[_i],pSP3[_i]);zSP3[_i]=zCart(rSP3[_i],tSP3[_i],pSP3[_i]);;_i=_i+1' mientras='_i<4'">
+   <param name="A_49" value="id='iniGPS()' algoritmo='sí' expresión='1' algoritmo='sí' hacer='gps.r=PLT.r;gps.theta=(rnd*pi);gps.phi=(rnd*2*pi);gps.theta=toRad(71);gps.phi=toRad(261);;locate=1'">
+   <param name="A_50" value="id='setGPS()' algoritmo='sí' expresión='1' algoritmo='sí' inicio='locate=0' hacer='xGPS=xCart(gps.r,gps.theta,gps.phi);yGPS=yCart(gps.r,gps.theta,gps.phi);zGPS=zCart(gps.r,gps.theta,gps.phi);;_lat=((gps.theta<pi/2)?pi/2-gps.theta:gps.theta-pi/2);Latitud=_lat+((gps.theta<pi/2)?norte:sur);_lon=((gps.phi<pi)?gps.phi:2*pi-gps.phi);Longitud=_lon+((gps.phi<pi)?este:oeste);Altitud=gps.r+vacio'">
+   <param name="A_51" value="id='Reini()' algoritmo='sí' expresión='1' algoritmo='sí' inicio='reini=0' hacer='anima=0;verOrbitas=1;Latitud=&squot;&squot;;Longitud=&squot;&squot;;Altitud=&squot;&squot;;;aux=iniSat()*setSat()*iniGPS();;ESP.rot.y=11;ESP.rot.z=77'">
+   <param name="A_52" value="id='rotSat()' algoritmo='sí' expresión='1' algoritmo='sí' inicio='_i=0' hacer='tSM1[_i]=tSM1[_i]+pi/32;tSM2[_i]=tSM2[_i]+pi/32;tSM3[_i]=tSM3[_i]+pi/32;;pSP1[_i]=pSP1[_i]+pi/32;pSP2[_i]=pSP2[_i]+pi/32;pSP3[_i]=pSP3[_i]+pi/32;;_i=_i+1' mientras='_i<4'">
+   <param name="A_53" value="id='INIT_ESP' algoritmo='sí' evaluar='una-sola-vez' hacer='E2.w=E2._w;E2.h=E2._h;ESP.w=ESP._w;ESP.h=ESP._h'">
+   <param name="A_54" value="id='INIT_T' algoritmo='sí' evaluar='una-sola-vez' hacer='ô=&squot;***********************************************&squot;;ô=&squot;*****INICIALIZAMOS LOS TEXTOS DEL TITULO*******&squot;;ô=&squot;***********************************************&squot;;;titulo.capitulo=&squot;1 – Matemáticas de la actividad humana&squot;;titulo.capitulo.txt=&squot;Lugares geométricos&squot;;titulo.titulo.txt=&squot;Introducción&squot;;ô=&squot;*Para centrar el titulo*&squot;;titulo.titulo.dx=200;;;;ô=&squot;***********************************************&squot;;ô=&squot;*******INICIALIZAMOS LAS INSTRUCCIONES*********&squot;;ô=&squot;***********************************************&squot;;titulo.nRenglones=1;titulo.instrucciones[0]=&squot;El funcionamiento del NAVSTAR-GPS se basa en lugares geométricos.&squot;;titulo.instrucciones[1]=&squot;&squot;;titulo.instrucciones[2]=&squot;&squot;;;titulo.verPestanaTitulo=1;titulo.verFondoMenu=1;'">
+   <param name="A_55" value="id='INIT_BTN_PLANT' algoritmo='sí' evaluar='una-sola-vez' hacer='retro.visible=0;avanzar.visible=1;;retro.x=(avanzar.visible)?667:690;retro.y=520;retro.w=35;retro.h=35;;avanzar.x=retro.x+retro.w+10;avanzar.x=(retro.visible)?avanzar.x:690;avanzar.y=retro.y;avanzar.w=retro.w;avanzar.h=retro.h;;;;;escBtn1.visible=1;escBtn2.visible=1;escBtn3.visible=1;;escBtn1.x=72;escBtn1.y=531;escBtn1.w=148;escBtn1.h=25;;escBtn2.x=escBtn1.x+escBtn1.w+35;escBtn2.y=escBtn1.y;escBtn2.w=escBtn1.w;escBtn2.h=escBtn1.h;;escBtn3.x=escBtn2.x+escBtn2.w+35;escBtn3.y=escBtn2.y;escBtn3.w=escBtn2.w;escBtn3.h=escBtn2.h'">
+   <param name="A_56" value="id='INIT_CTR' algoritmo='sí' evaluar='una-sola-vez' hacer='btnVerArriba.visible=1;btnVerArriba.act=1;btnVerArriba.w=100;btnVerArriba.h=27;;btnVerAbajo.visible=1;btnVerAbajo.act=1;btnVerAbajo.w=100;btnVerAbajo.h=27;;btnEspOp.visible=1;btnEspOp.w=147;btnEspOp.h=27;;;ESP.x=370;ESP.y=-110;btnVerArriba.x=190;btnVerArriba.y=-330;btnVerAbajo.x=62;btnVerAbajo.y=-330;pulsa.x=150;pulsa.y=-260;;;;pulsa.txt.w=50;pulsa.txt.h=22;;pulsa.up.w=22;pulsa.up.h=22;;pulsa.dw.w=22;pulsa.dw.h=22;pulsa.min=0;pulsa.max=10;pulsa=5;acomodaDependientes();;;'">
+   <param name="A_57" value="id='INIT' algoritmo='sí' evaluar='una-sola-vez'">
+   <param name="A_58" value="id='SYNC_ESP' algoritmo='sí' evaluar='siempre' hacer='titulo.Esp.w=E2._w;titulo.Esp.h=E2._h;;marcoG1.Esp.w=ESP._w;marcoG1.Esp.h=ESP._h;marcoG1.Esp.x=ESP.x;marcoG1.Esp.y=-ESP.y;marcoG1.margenImg=2;;;acomodaDependientes()'">
+   <param name="A_59" value="id='sigEscena' evento='sí' condición='nextEscena==1' acción='abrir Escena' parámetro='escena2.html target=_self' ejecución='alternar' pos_mensajes='centro'">
+   <param name="A_60" value="id='antEscena' evento='sí' condición='prevEscena==1' acción='abrir Escena' parámetro='index.html target=_self' ejecución='alternar' pos_mensajes='centro'">
+   <param name="A_61" value="id='CONFIG' algoritmo='sí' evaluar='una-sola-vez' hacer=';;'">
+   <param name="A_62" value="id='INI_BTN' algoritmo='sí' evaluar='una-sola-vez' hacer='B1.b=100;B1.h=27;xB1=115;yB1=383;;B2.b=100;B2.h=27;xB2=5;yB2=300;;B3.b=100;B3.h=27;xB3=5;yB3=330'">
+   <param name="A_63" value="id='INI_PLT' algoritmo='sí' evaluar='una-sola-vez' hacer='numMerid=24;numParal=10;;PLT.r=6.371'">
+   <param name="A_64" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' inicio='reini=1' hacer='vacio=||;;norte=|° N|;sur=|° S|;este=|° E|;oeste=|° O|'">
+   <param name="A_65" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' inicio='aux=((reini)?Reini():0)' hacer='aux=((locate)?setGPS():0);aux=((anima)?rotSat()*setSat():0)'">
+   <param name="A_66" value="id='e67' evento='sí' condición='1' acción='calcular' parámetro='anima=1' ejecución='una-sola-vez' pos_mensajes='centro'">
+   <param name="A_67" value="id='animar' evento='sí' condición='anima' acción='animar' ejecución='alternar' pos_mensajes='centro'">
+   <param name="G_01" value="espacio='E2' tipo='polígono' dibujar-si='debug' coord_abs='sí' expresión='(20,110)(770,110)(770,520)(20,520)(20,110)'">
+   <param name="S_01" value="espacio='ESP' tipo='esfera' color='1664a6' color_reverso='rosa' expresión='Esfera' ancho='2*PLT.r' Nu='numParal' Nv='numMerid'">
+   <param name="S_02" value="espacio='ESP' tipo='esfera' color='grisClaro' color_reverso='rosa' expresión='Esfera' modelo='alambre' ancho='2*PLT.r' Nu='numParal' Nv='numMerid'">
+   <param name="S_03" value="espacio='ESP' tipo='curva' color='rojo' expresión='x=xCart(PLT.r,pi*u,0)\ny=yCart(PLT.r,pi*u,0)\nz=zCart(PLT.r,pi*u,0)' ancho='2' Nu='numParal'">
+   <param name="S_04" value="espacio='ESP' tipo='curva' fondo='sí' color='naranja' expresión='x=xCart(PLT.r,toRad(90-23.5),2*pi*u)\ny=yCart(PLT.r,toRad(90-23.5),2*pi*u)\nz=zCart(PLT.r,toRad(90-23.5),2*pi*u)' ancho='2' Nu='numMerid'">
+   <param name="S_05" value="espacio='ESP' tipo='curva' fondo='sí' color='naranja' expresión='x=xCart(PLT.r,toRad(90+23.5),2*pi*u)\ny=yCart(PLT.r,toRad(90+23.5),2*pi*u)\nz=zCart(PLT.r,toRad(90+23.5),2*pi*u)' ancho='2' Nu='numMerid'">
+   <param name="S_06" value="espacio='ESP' tipo='curva' fondo='sí' color='verde' expresión='x=xCart(PLT.r,toRad(90-66.5),2*pi*u)\ny=yCart(PLT.r,toRad(90-66.5),2*pi*u)\nz=zCart(PLT.r,toRad(90-66.5),2*pi*u)' ancho='2' Nu='numMerid'">
+   <param name="S_07" value="espacio='ESP' tipo='curva' fondo='sí' color='verde' expresión='x=xCart(PLT.r,toRad(90+66.5),2*pi*u)\ny=yCart(PLT.r,toRad(90+66.5),2*pi*u)\nz=zCart(PLT.r,toRad(90+66.5),2*pi*u)' ancho='2' Nu='numMerid'">
+   <param name="S_08" value="espacio='ESP' tipo='esfera' color='amarillo' color_reverso='rosa' expresión='Esfera' posini='(xGPS,yGPS,zGPS)' ancho='0.5'">
+   <param name="S_09" value="espacio='ESP' tipo='curva' color='99ff00ff' dibujar-si='verOrbitas' expresión='x=xCart(9,2*pi*u,s*(pi/3))\ny=yCart(9,2*pi*u,s*(pi/3))\nz=zCart(9,2*pi*u,s*(pi/3))' familia='s' s.intervalo='[0,2]' s.pasos='2' ancho='2' Nu='30'">
+   <param name="S_10" value="espacio='ESP' tipo='curva' color='99ff00ff' dibujar-si='verOrbitas' expresión='x=xCart(9,pi/2,2*pi*u)\ny=yCart(9,pi/2,2*pi*u)\nz=zCart(9,pi/2,2*pi*u)' familia='s' s.intervalo='[-1,1]' s.pasos='2' rotini='(0,45*s,0)' ancho='2' Nu='30'">
+   <param name="S_11" value="espacio='ESP' tipo='esfera' color='turquesa' color_reverso='rosa' dibujar-si='0' expresión='Esfera' familia='s' s.intervalo='[0,3]' s.pasos='3' posini='(xSM1[s],ySM1[s],zSM1[s])' ancho='1'">
+   <param name="S_12" value="espacio='ESP' tipo='punto' color='turquesa' color_reverso='rosa' expresión='(0,0,0)' familia='s' s.intervalo='[0,3]' s.pasos='3' posini='(xSM1[s],ySM1[s],zSM1[s])' fuente='Monospaced,PLAIN,12' fijo='sí' ancho='4'">
+   <param name="S_13" value="espacio='ESP' tipo='punto' color='turquesa' color_reverso='rosa' expresión='(0,0,0)' familia='s' s.intervalo='[0,3]' s.pasos='3' posini='(xSM2[s],ySM2[s],zSM2[s])' fuente='Monospaced,PLAIN,12' fijo='sí' ancho='4'">
+   <param name="S_14" value="espacio='ESP' tipo='punto' color='turquesa' color_reverso='rosa' expresión='(0,0,0)' familia='s' s.intervalo='[0,3]' s.pasos='3' posini='(xSM3[s],ySM3[s],zSM3[s])' fuente='Monospaced,PLAIN,12' fijo='sí' ancho='4'">
+   <param name="S_15" value="espacio='ESP' tipo='punto' color='turquesa' color_reverso='rosa' expresión='(0,0,0)' familia='s' s.intervalo='[0,3]' s.pasos='3' posini='(xSP1[s],ySP1[s],zSP1[s])' fuente='Monospaced,PLAIN,12' fijo='sí' ancho='4'">
+   <param name="S_16" value="espacio='ESP' tipo='punto' color='turquesa' color_reverso='rosa' expresión='(0,0,0)' familia='s' s.intervalo='[0,3]' s.pasos='3' posini='(xSP2[s],ySP2[s],zSP2[s])' rotfin='(0,45,0)' fuente='Monospaced,PLAIN,12' fijo='sí' ancho='4'">
+   <param name="S_17" value="espacio='ESP' tipo='punto' color='turquesa' color_reverso='rosa' expresión='(0,0,0)' familia='s' s.intervalo='[0,3]' s.pasos='3' posini='(xSP3[s],ySP3[s],zSP3[s])' rotfin='(0,-45,0)' fuente='Monospaced,PLAIN,12' fijo='sí' ancho='4'">
+   <param name="Animación" value="pausa='0' controles='no' auto='no' inicio='paso=0' hacer='paso=paso+1' mientras='anima=1'">
+</ajs>
+
+<script id="macros/marcoGraf.txt" type="descartes/macro">
+tipo_de_macro=R2
+
+Idioma=español
+
+id='debug' constante='sí' expresión='1' evaluar='una-sola-vez'
+
+id='Esp.x' constante='sí' expresión='0' evaluar='una-sola-vez'
+
+id='Esp.y' constante='sí' expresión='0' evaluar='una-sola-vez'
+
+id='Esp.w' constante='sí' expresión='20' evaluar='una-sola-vez'
+
+id='Esp.h' constante='sí' expresión='20' evaluar='una-sola-vez'
+
+id='margenImg' constante='sí' expresión='4' evaluar='una-sola-vez'
+
+id='INIT' algoritmo='sí' evaluar='una-sola-vez' hacer='imgEsq.h=10;imgEsq.w=10;imgLado.w=10;imgLado.h=2'
+
+id='CALC' algoritmo='sí' evaluar='siempre' hacer='tmpEsp.x=Esp.x-margenImg;tmpEsp.y=Esp.y-margenImg;tmpEsp.w=Esp.w+2*margenImg;tmpEsp.h=Esp.h+2*margenImg;;tmpEsp.w=tmpEsp.w+(tmpEsp.w%2);tmpEsp.h=tmpEsp.h+(tmpEsp.h%2);;esqLT.x=tmpEsp.x-imgEsq.w/2;esqLT.y=tmpEsp.y-imgEsq.h/2;;esqLB.x=tmpEsp.x-imgEsq.w/2;esqLB.y=tmpEsp.y+tmpEsp.h-imgEsq.h/2;;esqRT.x=tmpEsp.x+tmpEsp.w-imgEsq.w/2;esqRT.y=tmpEsp.y-imgEsq.h/2;;esqRB.x=tmpEsp.x+tmpEsp.w-imgEsq.w/2;esqRB.y=tmpEsp.y+tmpEsp.h-imgEsq.h/2;;;borL.escX=1;borL.escY=(tmpEsp.h-imgEsq.h)/imgLado.h;borL.x=tmpEsp.x;borL.y=tmpEsp.y+tmpEsp.h/2;;borR.escX=1;borR.escY=borL.escY;borR.x=tmpEsp.x+tmpEsp.w;borR.y=borL.y;;;;;;borT.x=tmpEsp.x+tmpEsp.w/2;borT.y=tmpEsp.y;borT.escX=1;borT.escY=(tmpEsp.w-imgEsq.w)/imgLado.h;;;borB.x=tmpEsp.x+tmpEsp.w/2;borB.y=tmpEsp.y+tmpEsp.h;borB.escX=1;borB.escY=(tmpEsp.w-imgEsq.w)/imgLado.h'
+
+tipo='imagen' coord_abs='sí' expresión='(borT.x,borT.y,borT.escX,borT.escY)' archivo='images/titulo/marcoGraf/lado.png' rotini='90' 
+
+tipo='imagen' coord_abs='sí' expresión='(borR.x,borR.y,borR.escX,borR.escY)' archivo='images/titulo/marcoGraf/lado.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(borB.x,borB.y,borB.escX,borB.escY)' archivo='images/titulo/marcoGraf/lado.png' rotini='-90' 
+
+tipo='imagen' coord_abs='sí' expresión='(borL.x,borL.y,borL.escX,borL.escY)' archivo='images/titulo/marcoGraf/lado.png' rotini='180' 
+
+tipo='imagen' coord_abs='sí' expresión='(esqLT.x,esqLT.y)' archivo='images/titulo/marcoGraf/esquina.png' rotini='180' 
+
+tipo='imagen' coord_abs='sí' expresión='(esqRT.x,esqRT.y)' archivo='images/titulo/marcoGraf/esquina.png' rotini='90' 
+
+tipo='imagen' coord_abs='sí' expresión='(esqLB.x,esqLB.y)' archivo='images/titulo/marcoGraf/esquina.png' rotini='-90' 
+
+tipo='imagen' coord_abs='sí' expresión='(esqRB.x,esqRB.y)' archivo='images/titulo/marcoGraf/esquina.png' 
+
+tipo='polígono' coord_abs='sí' expresión='(Esp.x,Esp.y)(Esp.x+Esp.w,Esp.y)(Esp.x+Esp.w,Esp.y+Esp.h)(Esp.x,Esp.y+Esp.h)(Esp.x,Esp.y)' relleno='blanco' ancho='0' 
+
+</script>
+
+<script id="macros/tituloUNAM.txt" type="descartes/macro">
+tipo_de_macro=R2
+
+Idioma=español
+
+id='verFondo' constante='sí' expresión='1' evaluar='una-sola-vez'
+
+id='verFondoMenu' constante='sí' expresión='1' evaluar='una-sola-vez'
+
+id='verPestanaTitulo' constante='sí' expresión='1' evaluar='una-sola-vez'
+
+id='Esp.w' constante='sí' expresión='1' evaluar='una-sola-vez'
+
+id='Esp.h' constante='sí' expresión='1' evaluar='una-sola-vez'
+
+id='nRenglones' constante='sí' expresión='6' evaluar='una-sola-vez'
+
+id='instrucciones' vector='sí' evaluar='una-sola-vez' tamaño='nRenglones' expresión='instrucciones[0]=|Instrucciones Renglon 1|;instrucciones[1]=|Instrucciones Renglon 2|;instrucciones[2]=|Instrucciones Renglon 3|;instrucciones[3]=|Instrucciones Renglon 3|;instrucciones[4]=|Instrucciones Renglon 3|;instrucciones[5]=|Instrucciones Renglon 3|;instrucciones[6]=|Instrucciones Renglon 3|'
+
+id='capitulo' constante='sí' expresión='3' evaluar='una-sola-vez'
+
+id='capitulo.txt' constante='sí' expresión='|Curvas, reas y volmenes. El cálculo diferencial e integral|' evaluar='una-sola-vez'
+
+id='titulo.dx' constante='sí' expresión='170' evaluar='una-sola-vez'
+
+id='titulo.txt' constante='sí' expresión='|La razón de cambio|' evaluar='una-sola-vez'
+
+id='INIT' algoritmo='sí' evaluar='una-sola-vez' hacer='head.img.w=1;head.img.h=50;;head.escX=Esp.w/head.img.w;head.escY=1;;head.x=(head.img.w*head.escX)/2;head.y=(head.img.h*head.escY)/2;;quitar=1;espacio.w=900;espacio.h=460;;hRenglonTxt=20;totalHeightTxt=hRenglonTxt*nRenglones;;;panelInst.partUp.w=756;panelInst.partUp.h=9;panelInst.partC.w=756;panelInst.partC.h=1;panelInst.partDw.w=778;panelInst.partDw.h=9;;;titulo.x=0;titulo.y=0;titulo.w=max(200,titulo.w);titulo.izq.w=13;titulo.izq.h=41;titulo.der.w=12;titulo.der.h=41;titulo.c.w=1;titulo.c.h=41;;;;imgEsq.w=20;imgEsq.h=20;;imgLado.w=19	;imgLado.h=2;;;panelInst.x=16;panelInst.y=55;;Menu.h=130;Menu.w=790'
+
+id='CALC' algoritmo='sí' evaluar='siempre' hacer='_guionTmp=|Capítulo |;_pipe=&squot;      |       &squot;;;;capituloTxt=_guionTmp+capitulo+&squot; | &squot;+capitulo.txt;tituloInterTxt=titulo.txt;;;;titulo.izq.x=titulo.x;titulo.izq.y=titulo.y;;;_faltaPorLlenar=titulo.w-titulo.der.w-titulo.izq.w;titulo.c.escX=_faltaPorLlenar/titulo.c.w;titulo.c.escY=1;titulo.c.x=titulo.x+titulo.izq.w+_faltaPorLlenar/2;titulo.c.y=titulo.y+titulo.c.h/2;;_aumento=(_faltaPorLlenar%2)?1:0;titulo.der.x=titulo.izq.x+_faltaPorLlenar+titulo.izq.w+_aumento;titulo.der.y=titulo.izq.y;;;totalHeightTxt=15*nRenglones;hTxtPorCubrir=totalHeightTxt-2*panelInst.partUp.h+15;hTxtPorCubrir=max(hTxtPorCubrir,2);;;panelInst.x=(Esp.w-panelInst.partUp.w)/2;panelInst.y=60;;panelInst.partUp.x=panelInst.x;panelInst.partUp.y=panelInst.y;;panelInst.partC.x=panelInst.partUp.x+panelInst.partC.w/2;panelInst.partC.y=panelInst.y+panelInst.partUp.h+hTxtPorCubrir/2-1;panelInst.partC.escX=1;panelInst.partC.escY=hTxtPorCubrir/panelInst.partC.h;;panelInst.partDw.x=panelInst.partUp.x;panelInst.partDw.y=panelInst.partC.y+hTxtPorCubrir/2;;;inst.x=panelInst.x+3;inst.y=panelInst.y+((nRenglones>1)?6:6);;panelInst.pestana.x=panelInst.x+20;panelInst.pestana.y=panelInst.partDw.y+panelInst.partDw.h-2;;verDialogInstruciones=(nRenglones>0);;;;;'
+
+tipo='polígono' coord_abs='sí' expresión='(0,0)(0,Esp.h)(Esp.w,Esp.h)(Esp.w,0)' relleno='e4e2df' ancho='0' 
+
+tipo='imagen' coord_abs='sí' expresión='(0,0)' archivo='images/titulo/fondo.png' 
+
+tipo='texto' expresión='[5,5]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}{\colortbl\red0\green0\blue0;\red60\green18\blue6;\red0\green0\blue255;}\cf0\f1\fs26\b{\*\mjaformula\cf1{\expr capituloTxt}\cf0}\cf2\f2\fs24\b0\par}' fuente='Arial,BOLD,13' fijo='sí' 
+
+tipo='texto' expresión='[153+titulo.dx,30]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Courier New;}{\colortbl\red0\green0\blue0;\red255\green255\blue255;\red0\green0\blue255;}\cf0\f1\fs24\b{\*\mjaformula\f2\fs22\b\cf1{\expr tituloInterTxt}\f3\fs24\b0\cf0}\cf2\f3\fs24\b0\par}' fuente='Arial,BOLD,12' fijo='sí' 
+
+tipo='imagen' dibujar-si='(nRenglones>0)' coord_abs='sí' expresión='(panelInst.partC.x,panelInst.partC.y,panelInst.partC.escX,panelInst.partC.escY)' archivo='images/titulo/panel/enMedio.png' 
+
+tipo='imagen' dibujar-si='(nRenglones>0)' coord_abs='sí' expresión='(panelInst.partUp.x,panelInst.partUp.y)' archivo='images/titulo/panel/arriba.png' 
+
+tipo='imagen' dibujar-si='(nRenglones>0)' coord_abs='sí' expresión='(panelInst.partDw.x,panelInst.partDw.y)' archivo='images/titulo/panel/arriba.png' rotini='-180' 
+
+tipo='imagen' dibujar-si='(nRenglones>0)&(verPestanaTitulo)' coord_abs='sí' expresión='(panelInst.pestana.x,panelInst.pestana.y)' archivo='images/titulo/panel/pestana.png' 
+
+tipo='texto' dibujar-si='(nRenglones>0)' expresión='[inst.x,inst.y+s*15]' familia='s' s.intervalo='[0,nRenglones-1]' s.pasos='nRenglones-1' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}{\colortbl\red50\green77\blue88;\red0\green0\blue255;}\f1\fs28{\*\mjaformula\cf0{\expr instrucciones[s]}\cf1}\f2\fs24\par}' fuente='Arial,PLAIN,14' fijo='sí' 
+
+tipo='imagen' dibujar-si='verFondoMenu' coord_abs='sí' expresión='(0,Esp.h-Menu.h)' archivo='images/titulo/menu/fondoMenu.png' 
+
+</script>
+
+</body>
+</html>

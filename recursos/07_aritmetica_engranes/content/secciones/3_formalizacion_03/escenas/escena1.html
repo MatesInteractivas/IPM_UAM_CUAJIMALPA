@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>TITULO</title>
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body style="margin:0px;padding:0px;overflow:hidden;">
+
+<p align="center">
+<ajs name="Descartes" width=760 height=480 code="Descartes">
+   <param name="tamaño" value="760x480">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E2' fijo='sí' escala='1' O.x='-60%' O.y='54%' imagen='images/fondo.jpg' despl_imagen='centrada' fondo='grisClaro' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='PRIM' ancho='80' alto='455' dibujar-si='0' fijo='sí' escala='10' O.x='-40' O.y='-200' despl_imagen='arr-izq' fondo='fff0f8fa' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='P' tipo='gráfico' espacio='PRIM' color='ff000000' color-int='aa000000' tamaño='24' expresión='(1.5,0)' constricción='x=1.5' dibujar-si='0'">
+   <param name="C_02" value="id='Q' tipo='gráfico' espacio='E2' color='ff406080' color-int='aacc0022' tamaño='24' expresión='(90,490)' dibujar-si='0' activo-si='0'">
+   <param name="C_03" value="id='R' tipo='gráfico' espacio='E2' color='ff406080' color-int='aacc0022' tamaño='24' expresión='(610,30)' dibujar-si='0' activo-si='0'">
+   <param name="C_04" value="id='T' tipo='gráfico' espacio='E2' color='ff406080' color-int='aacc0022' tamaño='24' expresión='(620,480)' constricción='x=620' dibujar-si='0'">
+   <param name="C_05" value="id='S1' tipo='numérico' región='interior' espacio='E2' nombre='_nada_' expresión='(565+_mX,217,70,45)' valor='3' incr='1' min='1' max='10' decimales='0' fijo='sí' visible='sí'">
+   <param name="C_06" value="id='S2' tipo='numérico' región='interior' espacio='E2' nombre='_nada_' expresión='(565+_mX+80,217,70,45)' valor='5' incr='1' min='1' max='10' decimales='0' fijo='sí' visible='sí'">
+   <param name="C_07" value="id='mX' tipo='numérico' región='exterior' espacio='E2' nombre='mX' incr='1' decimales='0' fijo='sí' visible='sí'">
+   <param name="C_08" value="id='mY' tipo='numérico' región='exterior' espacio='E2' nombre='mY' incr='1' decimales='0' fijo='sí' visible='sí'">
+   <param name="A_01" value="id='botX(d,x,w,t)' algoritmo='sí' expresión='val' algoritmo='sí' inicio='val=x' hacer='val=((t==1)|(t==6))?x+d    :val;val=((t==2)|(t==5))?x+w-1-d:val;val=((t==3)|(t==4))?x+w-1  :val;'">
+   <param name="A_02" value="id='botY(d,y,h,t)' algoritmo='sí' expresión='val' algoritmo='sí' inicio='val=y' hacer='val=((t%8==0)|(t==3))?y+d  :val;val=((t==4)|(t==7))?y+h-1-d:val;val=((t==5)|(t==6))?y+h-1  :val;'">
+   <param name="A_03" value="id='isCommonDen(d)' algoritmo='sí' expresión='(mcm*ent(d/mcm)==d)' algoritmo='sí' inicio='mcm=McM(den,den)'">
+   <param name="A_04" value="id='Inicio()' algoritmo='sí' algoritmo='sí' hacer='S1=3;S2=5;Q.xa=Q.x;Q.ya=Q.y;'">
+   <param name="A_05" value="id='McM(a,b)' algoritmo='sí' expresión='mcm' algoritmo='sí' inicio='minab=min(a,b);mcm=a*b;k=2' hacer='mustDivide=(k*ent(a/k+0.000001)==a)&(k*ent(b/k+0.000001)==b);mcm=(mustDivide)?ent(mcm/k+0.000001):mcm;a=(mustDivide)?ent(a/k+0.000001):a;b=(mustDivide)?ent(b/k+0.000001):b;k=(mustDivide)?k:k+1;' mientras='k<=minab'">
+   <param name="A_06" value="id='Mul(n,m)' expresión='(m*ent(n/m+0.000001)==n)'">
+   <param name="A_07" value="id='Trsnp(k,n)' algoritmo='sí' expresión='0.5' algoritmo='sí'">
+   <param name="A_08" value="id='Red(k,n)' algoritmo='sí' expresión='red' algoritmo='sí' inicio='red=1' hacer='red=(k==1)?1-Mul(n,S1)+.1:red;red=(k==2)?1:red;'">
+   <param name="A_09" value="id='Green(k,n)' algoritmo='sí' expresión='green' algoritmo='sí' inicio='green=1' hacer='green=(k==1)?1-Mul(n,S1)+.6:green;green=(k==2)?1:green;'">
+   <param name="A_10" value="id='Blue(k,n)' algoritmo='sí' expresión='blue' algoritmo='sí' inicio='blue=1' hacer='blue=(k==1)?1:blue;blue=(k==2)?1-Mul(n,S2)+.5:blue;;'">
+   <param name="A_11" value="id='Clip()' algoritmo='sí' algoritmo='sí' hacer='P.y=max(min(0,P.y),-42);Q.x=max(min(920,Q.x),90);Q.y=max(min(490,Q.y),30);R.x=max(min(970,R.x),Q.x+80);R.y=max(min(Q.y-50,R.y),30);T.y=max(min(470,T.y),50);'">
+   <param name="A_12" value="id='Calculos()' algoritmo='sí' algoritmo='sí' hacer='h1=2.5-P.y*10;h2=2.5-P.y*10;nw=50;nh=45;nx=28;ny=1;bx=12;by=-3;bw=nw-6;bh=nh-4;R.x=R.x+(Q.x-Q.xa);R.y=R.y+(Q.y-Q.ya);Q.xa=Q.x;Q.ya=Q.y;NW=ent((R.x-Q.x)/nw);NH=ent((Q.y-R.y)/nh);NN=NH*NW;DS=NW*ent((470-T.y)/2.0);'">
+   <param name="A_13" value="id='Mensaje()' algoritmo='sí' algoritmo='sí' inicio='mcm=McM(S1,S2);S2mS1=Mul(S2,S1);S1mS2=Mul(S1,S2)' hacer='msg=&squot;Los múltiplos de &squot;+S1+&squot; están marcados en azul.\n&squot;;msg=msg+&squot;Los múltiplos de &squot;+S2+&squot; están marcados en amarillo.\n&squot;;msg=msg+&squot;Los múltiplos comunes de &squot;+S1+&squot; y &squot;+S2+&squot; están marcados en rojo.\n\n&squot;;;add=(S2mS1)?&squot;&squot;+S2+&squot; es múltiplo de &squot;+S1+&squot;.\n\n&squot;:&squot;&squot;;msg=msg+add;add=(S1mS2)?&squot;&squot;+S1+&squot; es múltiplo de &squot;+S2+&squot;.\n\n&squot;:&squot;&squot;;msg=msg+add;add=((!Mul(S1,S2))&(!Mul(S2,S1)))?&squot;&squot;+S1+&squot; no es múltiplo de &squot;+S2+&squot;.\n\n&squot;+S2+&squot; no es múltiplo de &squot;+S1+&squot;.\n\n&squot;:&squot;&squot;;msg=msg+add;msg=msg+&squot;El mínimo común múltiplo\nde &squot;+S1+&squot; y &squot;+S2+&squot; es &squot;+McM(S1,S2)+&squot;.\n&squot;;add=(mcm==S1*S2)?&squot;Y es igual al producto  &squot;+S1+&squot; × &squot;+S2+&squot; = &squot;+(S1*S2)+&squot;.\nAsí que &squot;+S1+&squot; y &squot;+S2+&squot; son primos entre sí,\nes decir, no tienen divisor común distinto de 1.\n&squot;:&squot;&squot;;add=((mcm<S1*S2)&!(S1mS2|S2mS1))?&squot;Y es menor que &squot;+S1+&squot; × &squot;+S2+&squot; = &squot;+(S1*S2)+&squot;.\nPor lo tanto &squot;+S1+&squot; y &squot;+S2+&squot; tienen divisores comunes.\n&squot;:add;msg=msg+add+&squot;\n&squot;;add=(mcm<S1*S2)?&squot;&squot;+((S1*S2)/mcm)+&squot; es el máximo común divisor\nde &squot;+S1+&squot; y &squot;+S2+&squot;.\n\n&squot;:&squot;&squot;;msg=msg+add'">
+   <param name="A_14" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='initDisplay();Inicio();'">
+   <param name="A_15" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='Clip();MP=PRIM.mouse_pressed;aux=(MP|MPA)?processMouse(PRIM.mouse_x,PRIM.mouse_y):&squot;&squot;;MPA=MP;Calculos();Mensaje();;'">
+   <param name="G_01" value="espacio='PRIM' tipo='curva' fondo='sí' color='negro' coord_abs='sí' expresión='(botX(0,30,PRIM._w-30,t),botY(0,0,PRIM._h,t))' t.intervalo='[0,8]' relleno='blanco' info='Orilla de PRIM'">
+   <param name="G_02" value="espacio='PRIM' tipo='curva' fondo='sí' color='negro' dibujar-si='0' coord_abs='sí' expresión='(botX(0,0,30,t),botY(0,0,PRIM._h,t))' t.intervalo='[0,8]' info='Deslizador en PRIM'">
+   <param name="G_03" value="espacio='PRIM' tipo='curva' dibujar-si='0' expresión='(botX(0,P.x-1.0,3.0,t),botY(0,P.y,3.0,t))' t.intervalo='[0,8]' relleno='rojo' ancho='3' info='Botón del deslizador en PRIM'">
+   <param name="G_04" value="espacio='PRIM' tipo='curva' expresión='(botX(0.2,3.5,5,t),botY(0.2,h1-0.6-S1*3,4,t))' t.intervalo='[0,8]' relleno='8022a28d' info='Marca del número seleccionado S1'">
+   <param name="G_05" value="espacio='PRIM' tipo='curva' expresión='(botX(0.2,3.5,5,t),botY(0.2,h2-0.6-S2*3,4,t))' t.intervalo='[0,8]' relleno='80e47100' info='Marca del número seleccionado S2'">
+   <param name="G_06" value="espacio='PRIM' tipo='punto' expresión='(5.0-0.75*((s>9.9)+(s>99.9)),h1-s*3)' familia='s' s.intervalo='[1,100]' s.pasos='99' texto='[s]' fuente='SansSerif,BOLD,21' decimales='0' fijo='sí' tamaño='0' info='Todos los números en PRIM'">
+   <param name="G_07" value="espacio='E2' tipo='curva' color='negro' dibujar-si='0' expresión='(botX(0,Q.x,R.x-Q.x,t),botY(0,Q.y,R.y-Q.y,t))' t.intervalo='[0,8]' relleno='88bbaa' ancho='3' info='Marco par los números'">
+   <param name="G_08" value="espacio='E2' tipo='curva' color='aa000000' expresión='(botX(0,bx+Q.x+nw*((s-1)%NW),bw,t),botY(0,by+Q.y-nh*ent(1+(s-1)/NW),bh,t))' familia='s' s.intervalo='[1,NN]' s.pasos='NN-1' t.intervalo='[0,8]' relleno='(Red(1,DS+s),Green(1,DS+s),Blue(1,DS+s),Trsnp(1,DS+s))' info='Los fondos de los números en E2'">
+   <param name="G_09" value="espacio='E2' tipo='curva' color='ff000000' expresión='(botX(0,bx+Q.x+nw*((s-1)%NW),bw,t),botY(0,by+Q.y-nh*ent(1+(s-1)/NW),bh,t))' familia='s' s.intervalo='[1,NN]' s.pasos='NN-1' t.intervalo='[0,8]' relleno='(Red(2,DS+s),Green(2,DS+s),Blue(2,DS+s),Trsnp(2,DS+s))' ancho='0' info='Los fondos de los números en E2'">
+   <param name="G_10" value="espacio='E2' tipo='punto' expresión='(1+nx+Q.x-5*(((DS+s)>9.9)+((DS+s)>99.9)+((DS+s)>999.9))+nw*((s-1)%NW),1+ny+Q.y-nh*(1+ent((s-1)/NW)))' familia='s' s.intervalo='[1,NN]' s.pasos='NN-1' texto='[DS+s]' fuente='SansSerif,PLAIN,18' decimales='0' fijo='sí' tamaño='0' info='Todos los números en E2'">
+   <param name="G_11" value="espacio='E2' tipo='texto' color='blanco' dibujar-si='0' expresión='[650,50]' texto='[msg]' fuente='Monospaced,PLAIN,19' decimales='0' fijo='sí' ancho='320'">
+</ajs></p>
+
+</body>
+</html>

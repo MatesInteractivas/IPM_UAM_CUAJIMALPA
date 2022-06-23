@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>  
+
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Reflexiones y aplicaciones</h1>
+    
+    <!--- Subtítulo (no necesario en introducción) --->
+    <h2>Resolución de problemas similares</h2>
+    
+    
+    <!--- Párrafo --->
+    <p>
+      En el problema que hemos resuelto hay una serie de
+      características particulares que pueden cambiar en otros
+      contextos.
+    </p>
+
+    <p>
+      En este problema, las cajas que habríamos de
+      transportar 
+      <ul>
+	<li>eran cúbicas,
+	<li>no se podían apilar, y
+	<li>debían colocarse en un paquete sin cubrirlas por abajo.
+	</ul>
+    </p>
+
+    <p>
+      Estas características y restricciones pueden cambiar, incluso
+      ser reemplazadas por otras de distinta naturaleza, y, sin
+      embargo, dar lugar a problemas que pueden ser resueltos
+      utilizando los conceptos y técnicas que hemos trabajado.
+    </p>
+
+    <div class="problema">
+      <strong>Problema</strong>
+      <br><br>
+      <span>
+      Imaginemos que nuestro cliente, que piensa realizar sus envíos
+      regularmente, ha diseñado unas cajas cúbicas más robustas que
+      pueden apilarse y que ya no requieren ser cubiertas para
+      protegerlas de los rayos solares. Lo anterior nos representa a
+      ambos un gran ahorro y nos permite reducir la superficie de la carga.
+      Como quiera tenemos que armar un
+      paquete de varios pisos de cajas donde todos los pisos estén
+      llenos para evitar que las cajas se resbalen. Los pisos deberán
+      ser todos de forma rectangular y de las mismas dimensiones para
+      poder recubrir y fijar el paquete adecuadamente.
+      </span>
+      <br><br>
+      <span>
+      Partiendo del procedimiento que hemos estudiado, reflexiona
+      sobre las siguientes preguntas. Ello te ayudará a resolver la
+      tarea.
+      </span>
+      <ul>
+	<li>¿Cómo se haría? ¿En qué cambia el procedimiento?</li>
+	<li>¿Nos sirve descomponer el número de cajas en sus factores primos?</li>
+      </ul>	
+    </div>
+
+    <p>
+      Si pensamos en paquetes de objetos que sí pueden ser apilados y
+      requerimos encontrar las dimensiones de un paquete de varios
+      pisos, entonces la descomposición en factores primos de \(n\) es
+      mucho más útil, dado que el problema es más complicado.
+    </p>
+
+    <div class="instrucciones">
+    <span>Con el objeto de explorar un poco esta nueva versión del
+      problema donde las cajas sí pueden apilarse, a continuación
+      incluimos un espacio tridimensional que de inicio nos muestra
+      cómo acomodar las \(360\) cajas del problema original.<br><br>El
+      número total de cajas lo puedes variar entre \(1\) y
+      \(10,000\). La \(p\) y la \(q\) corresponden al ancho y largo de
+      los pisos rectangulares de cajas.<br><br>Puedes rotar el paquete
+      y modificar la escala con las lupas de la esquina inferior
+      derecha.</span>
+    </div>
+
+    <!-- ejemplo para incluir un documento externo en un iframe, aqui van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="480" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+
+    <div class='tarea'>
+      
+      <h3>Tarea</h3>
+      
+      <p>
+	<ol>
+	  <li>
+	    Pensando en que tenemos \(360\) cajas y requerimos
+	    encontrar un espacio para colocarlas en el barco, ¿de cuántas maneras
+	    diferentes podemos armar el paquete que cumpla con los
+	    requisitos del problema y que de alto tenga entre \(9\) y
+	    \(12\) cajas, además de que los pisos no sean hileras de
+	    una sola caja? Como antes, no nos importa la orientación
+	    de filas y columnas en los pisos del paquete.
+	  </li>
+	  <br>
+	  <li>Considerando que las cajas sí se pueden apilar, con una
+		estiba máxima de \(5\), encuentra cuál de las
+		siguientes cantidades de cajas <strong>no</strong>
+		permite armar un paquete con pisos completos. Explica
+		tu respuesta.
+	    <br>a) \(216\)<br>b) \(2,500\)<br>c) \(539\)
+	  </li>
+	</ol>
+      </p>
+      
+      <p>
+      ¡Trata de encontrar la solución por tu cuenta antes de oprimir el botón de abajo!
+      </p>
+      
+      
+    <div class="verSolucion" id="btSolucion" onclick="document.getElementById('conjuntos').setAttribute('class','visible');document.getElementById('btSolucion').setAttribute('class','oculto');">
+    </div>
+
+    </div>
+
+
+    <div id="conjuntos" class="oculto">
+      <p>
+	<h4>Respuestas</h3>
+      </p>
+      <p>
+	<ol>
+	  <li style='text-align:left;'>
+	    \(360=2^3\times3^2\times5\), lo que significa que solamente podemos
+	    tener paquetes con alturas de<br><br>
+	    a) \(3^2=9\),<br>
+	    b) \(2\times5=10\),<br>
+	    c) \(2^2\times3=12\).<br><br>
+	    En el caso a), \(360\div9=40\) y
+	    \(40=2^3\times5=2\times(2^2\times5)=2^2\times(2\times5)=(2\times2\times2)\times5\),
+	    dando lugar a las combinaciones del siguiente cuadro.
+	  </li>
+    <table  class="tablaImportante">
+    <thead>
+    <tr>
+      <th align="center">Alto</th>
+      <th align="center">Ancho o largo</th>
+      <th align="center">Largo o ancho</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>9</td><td>2</td><td>20</td>
+    </tr>
+    <tr>
+      <td>9</td><td>4</td><td>10</td>
+    </tr>
+    <tr>
+      <td>9</td><td>8</td><td>5</td>
+    </tr>
+    </tbody>
+    </table>
+    <br><br>
+	    En el caso b), \(360\div10=36\) y<br>
+	    \(36=2^2\times3^2=2\times(2\times3^2)=3\times(2^2\times3)=(2^2)\times(3^2)=(2\times3)\times(2\times3)\),
+	    dando lugar a las siguientes combinaciones.
+	  </li>
+    <table  class="tablaImportante">
+    <thead>
+    <tr>
+      <th align="center">Alto</th>
+      <th align="center">Ancho o largo</th>
+      <th align="center">Largo o ancho</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>10</td><td>2</td><td>18</td>
+    </tr>
+    <tr>
+      <td>10</td><td>3</td><td>12</td>
+    </tr>
+    <tr>
+      <td>10</td><td>4</td><td>9</td>
+    </tr>
+    <tr>
+      <td>10</td><td>6</td><td>6</td>
+    </tr>
+    </tbody>
+    </table>
+<br><br>
+	    En el caso c), \(360\div12=30\) y<br>
+	    \(30=2\times3\times5=2\times(3\times5)=3\times(2\times5)=5\times(2\times3)\),
+	    dando lugar a las siguientes combinaciones.
+	  </li>
+    <table  class="tablaImportante">
+    <thead>
+    <tr>
+      <th align="center">Alto</th>
+      <th align="center">Ancho o largo</th>
+      <th align="center">Largo o ancho</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>12</td><td>2</td><td>15</td>
+    </tr>
+    <tr>
+      <td>12</td><td>3</td><td>10</td>
+    </tr>
+    <tr>
+      <td>12</td><td>5</td><td>6</td>
+    </tr>
+    </tbody>
+    </table>
+
+
+	  <li>
+	    <ul>
+	      <li>
+		\(216=2^3\times3^3=2^2\times\left(2\times3^3\right)\),
+	  es decir, podemos armar un paquete de \(4\) pisos con
+	  \(54\) cajas cada piso.
+		<li>
+		\(2,500=2^2\times5^4=5\times\left(2^2\times5^3\right)\),
+	  por ejemplo, lo que permite armar un paquete de \(5\) pisos con
+	  \(500\) cajas cada piso.
+		<li>
+		\(539=7^2\times11\), lo que obliga a tener \(7\) u
+	  \(11\) pisos. Esta cantidad de cajas no puede disponerse en
+	  un paquete de pisos completos con menos de \(7\) pisos, por
+	  lo que es la respuesta correcta.
+		  <ul>
+	</ol>
+      </p>
+      
+    </div>
+
+  
+  <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>     
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  </div>
+  
+
+</article>
+
+</body>
+
+</html>
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>TITULO</title>
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body style="margin:0px;padding:0px;overflow:hidden;">
+
+<p align="center">
+<ajs name="Descartes" width=760 height=480 code="Descartes">
+   <param name="tamaño" value="760x480">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' escala='15' O.y='180' imagen='images/fondo.jpg' despl_imagen='expand.' fondo='grisClaro' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='N' tipo='numérico' región='interior' espacio='E1' nombre='N' expresión='(650,20,100,50)' valor='1' incr='1' min='1' max='10' discreto='sí' decimales='0' fijo='no' visible='sí'">
+   <param name="C_02" value="id='G' tipo='numérico' región='interior' espacio='E1' nombre='G' expresión='(650,80,100,50)' valor='1' incr='1' min='1' max='9' discreto='sí' decimales='0' fijo='no' visible='sí'">
+   <param name="C_03" value="id='T' tipo='numérico' región='interior' espacio='E1' nombre='T' expresión='(650,140,100,50)' valor='G+1' incr='1' min='1' max='10' discreto='sí' decimales='0' fijo='no' visible='sí'">
+   <param name="A_01" value="id='s' vector='sí' evaluar='una-sola-vez' tamaño='11'">
+   <param name="A_02" value="id='nsoc()' expresión='1' algoritmo='sí' Local='i' inicio='i=0; s[0]=N' hacer='i=i+1;s[i]=ent(s[i-1]*(T/G))' mientras='i<11'">
+   <param name="A_03" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez'">
+   <param name="A_04" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='nsoc()'">
+   <param name="G_01" value="espacio='E1' tipo='segmento' color='naranja' coord_abs='sí' expresión='(50,70+s*40)(550,70+s*40)' familia='s' s.intervalo='[0,10]' s.pasos='10' fijo='sí' tamaño='0'">
+   <param name="G_02" value="espacio='E1' tipo='texto' expresión='[35-_AnchoDeCadena_(s+&squot;&squot;,&squot;SansSerif&squot;,&squot;PLAIN&squot;,16),45+s*40]' familia='s' s.intervalo='[0,10]' s.pasos='10' texto='[s]' fuente='SansSerif,BOLD,16' fijo='no'">
+   <param name="G_03" value="espacio='E1' tipo='texto' color='0000be' expresión='[10,10]' texto='Nivel' fuente='SansSerif,BOLD,16' fijo='sí'">
+   <param name="G_04" value="espacio='E1' tipo='texto' color='negro' expresión='[320-_AnchoDeCadena_(s[s]+&squot;&squot;,&squot;SansSerif&squot;,&squot;PLAIN&squot;,16),45+s*40]' familia='s' s.intervalo='[0,10]' s.pasos='10' texto='[s[s]]' fuente='SansSerif,BOLD,16' fijo='no'">
+   <param name="G_05" value="espacio='E1' tipo='texto' color='0000be' expresión='[270,10]' texto='Socios' fuente='SansSerif,BOLD,16' fijo='sí'">
+   <param name="Animación" value="pausa='100' controles='no' auto='no' inicio='t=0' hacer='t=t+1;temp=((t=1)&(paso=0))?calcseg():0;temp=((t>14)&(t<16))?calrect():0;temp=((t>15)&(t<41))?trasp():0;temp=((t>40)&(t<61))?rotar():0;temp=((t>70)&(t<91))?traslada():0;temp=((t>80)&(t<101))?trasp2():0;temp=((t>99)&(t<111))?frazon():0;temp=(t=100)?recalc():0' mientras='t<110'">
+</ajs></p>
+
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Resolución del problema</h1>
+    
+    <h2>La cubierta de costo mínimo</h2>
+
+    <p>
+      Para encontrar las dimensiones del paquete de cajas, en realidad
+      no necesitamos escribir todos los divisores. Basta con que
+      encontremos los más cercanos a la raíz cuadrada del número de
+      cajas que denotamos por \(n\).
+    </p>
+	
+    <p>
+      En el problema, si \(n = 360\) vemos que \(18\) y \(20\) son los más
+      cercanos a la raíz cuadrada de \(360\) y por ello son la mejor
+      elección.
+    </p>
+
+    <p>
+      ¿Cómo hacemos esto? Tomamos la descomposición
+      \(360=2^3\times3^2\times5\) y la dividimos en dos
+      partes lo más cercanas posible, esto es, 
+      \((4\times5)\times (2\times9)\).
+    </p>
+
+    <p class="instrucciones">
+      A continuación trabajaremos con un número natural \(n\) que
+      representa la cantidad de cajas del paquete y del cual tenemos ya
+      calculada la descomposición en factores primos. Este número
+      primero será \(360\) como en nuestro problema, pero al reiniciar
+      se generará de manera aleatoria entre \(2\) y \(10,000\).
+      <br><br>
+      Podrás construir el divisor \(p\) variando las
+      potencias de los factores primos de \(n\) con los tres pulsadores.
+      El valor de \(q\) se calculará automáticamente con base en el valor de \(p\).
+      <br><br>
+      La idea es
+      encontrar las dimensiones de la cubierta óptima acercando \(p\)
+      y \(q\) lo más posible. Intenta hacerlo sin recorrer toda
+      la lista de posibles parejas de divisores.
+    </p>
+
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="480" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+
+    <p>
+      Si por ejemplo, tomamos \(n = 361\) tenemos que su descomposición en
+      factores primos es \(19\times19\), que nos da automáticamente la
+      solución: un paquete cuadrado de \(19\) por \(19\) cajas.
+    </p>
+
+    <p>
+      Para \(n = 1024\) tenemos que su descomposición en
+      factores primos es \(2^{10}=2^5\times2^5=32\times32\), que nos da automáticamente la
+      solución: un paquete cuadrado de \(32\) por \(32\) cajas.
+    </p>
+
+    <p>
+      Para \(n = 1025\) tenemos que su descomposición en factores primos
+      es \(5^2\times41\). Como en este caso no hay muchas opciones
+      vemos que la solución es un paquete rectangular de \(25\) por \(41\)
+      cajas.
+    </p>
+
+    <p>
+      Esta forma de resolver el problema, buscando dividir los
+      factores en dos partes de tal forma que los productos de cada
+      parte sean lo más parecidos posible entre sí, puede complicarse
+      un poco si la descomposición incluye muchos números primos
+      diferentes, pero en general tendremos que realizar muchas menos
+      operaciones y pruebas. Definitivamente no tendremos que ver la
+      divisibilidad intentando dividir \(n\) entre todos y cada uno de
+      los números menores a él ni tampoco escribir la lista completa
+      de divisores de \(n\).
+    </p>
+
+    <div class='tarea'>
+      
+      <h3>Tarea</h3>
+      
+      <p>
+	Pensando en el problema original, donde \(n\) es el número de cajas cúbicas a transportar:
+	<ol>
+	  <li>Encuentra la solución óptima para \(n=32, 33\) y \(9,999\).
+	  </li>
+	  <br>
+	  <li>Encuentra tres valores diferentes de \(n\) menores a
+	  100,000 para los cuales la solución del problema sea un
+	  cuadrado y en la descomposición en factores primos de \(n\)
+	  solo aparezcan 3 números primos distintos menores que \(10\).
+	  </li>
+	    <br>
+	  <li>Explica por qué, cuando la solución al problema es un
+	  paquete exactamente cuadrado, las potencias de los primos que conforman
+	  la descomposición de \(n\) siempre son números
+	  pares. Explícalo con un caso concreto.
+	  </li>
+	</ol>
+      </p>
+      
+      <p>
+      ¡Trata de encontrar la solución por tu cuenta antes de oprimir el botón de abajo!
+      </p>
+      
+       <div class="verSolucion" id="btSolucion" onclick="document.getElementById('conjuntos').setAttribute('class','visible');document.getElementById('btSolucion').setAttribute('class','oculto');">
+    </div>
+
+    </div>
+
+   
+
+    <div id="conjuntos" class="oculto">
+      <p>
+	<h4>Respuestas</h3>
+      </p>
+      <p>
+	<ol>
+	  <li>
+	    <ul>
+	      <li>\(32=2^5\), por lo que \(2^2\) y \(2^3\) son las
+	      dimensiones óptimas.
+	      <li>\(33=3\times11\), lo que muestra directamente la solución.
+	      <li>\(9,999=3^2\times11\times101=99\times101\), donde
+	      los dos últimos factores componen la solución óptima.
+	    </ul>
+	  <br><br>
+	  <li>
+	    <ul>
+	      <li>\(n=2^2\times3^2\times5^2=900\).
+	      <li>\(n=2^4\times3^4\times7^2=63,504\).
+	      <li>\(n=3^4\times5^2\times7^2=99,225\).
+	    </ul>
+	  <br><br>
+	  <li>En general, si el paquete es cuadrado entonces
+	    \(n=m\times m\). Si al descomponer \(m\) en sus factores
+	    primos tenemos que \[m=p_1^{e_1}\times
+	    p_2^{e_2}\times\dots\times p_k^{e_k},\] donde las
+	    \(p_i\) son \(k\) primos y las \(e_i\) las potencias
+	    correspondientes, para \(i=1,2,\dots k\).
+	    <br><br>
+	    Entonces
+	    \[n=m\times m=\left(p_1^{e_1}\times
+	    p_2^{e_2}\times\dots\times p_k^{e_k}\right)\times
+	    \left(p_1^{e_1}\times p_2^{e_2}\times\dots\times
+	    p_k^{e_k}\right) =p_1^{2e_1}\times
+	    p_2^{2e_2}\times\dots\times p_k^{2e_k}\]
+	    <br>
+	    Es decir,
+	    \(n\) se descompone en los mismos factores primos que su
+	    raíz cuadrada pero, como consecuencia de la
+	    multiplicación, los exponentes en la descomposición de
+	    \(n\) duplican a los exponentes en la descomposición de
+	    \(m\).
+	    <br><br>Un ejemplo concreto es
+	    \(n=3,600=60\times60\), donde \[60 = 2^2\times3\times5\]
+	    Mientras que \[3,600=60\times60 =
+	    \left(2^2\times3\times5\right)\times\left(2^2\times3\times5\right)=2^4\times3^2\times5^2\]
+	</ol>
+      </p>
+      
+
+
+    </div>
+
+
+	
+  <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  </div>
+  
+
+</article>
+
+</body>
+
+</html>
+

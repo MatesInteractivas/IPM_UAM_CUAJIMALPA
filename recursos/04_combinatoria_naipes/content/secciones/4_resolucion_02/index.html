@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+  <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    
+    <!--- Párrafo --->
+	<h1>Las frecuencias relativas y la probabilidad teórica</h1>
+	<p class='problema'>
+    <strong>Objetivo</strong>
+    <br><br>
+	Observarás la relación entre la probabilidad teórica hasta ahora obtenida y la frecuencia relativa obtenida a partir de generar una gran cantidad de manos.
+    </p>
+
+	<h2>La probabilidad teórica</h2>
+
+    <p>
+    La probabilidad que hasta ahora has obtenido de sacar un determinado tipo de mano se conoce como una <em>probabilidad teórica</em>. Los valores de las probabilidades teóricas fueron los vistos como columnas en la página anterior de la sección de resolución.
+    </p>
+
+	<h2>Las frecuencias relativas</h2>
+
+    <p>
+    Si en un experimento dado, después de generar, digamos, 20 manos tomadas al azar (tomando 5 cartas al azar del mazo de 52), te salieran 5 manos que corresponden a un par, la frecuencia relativa sería \((100)(\frac{5}{20})\)%=\(25\)% (el factor de 100 se usa para convertir a porcentaje). El 25% obtenido indica que, de seguirse exactamente el mismo comportamiento al extraer manos, en 100 manos distintas tendrías 25 que corresponderían a un tipo de mano de un par.
+    </p>
+
+    <p>
+    Evidentemente, el comportamiento seguido al extraer manos no tiene por qué ser igual siempre. No obstante, la frecuencia relativa siempre se puede calcular.
+    </p>
+
+    <p>
+    Resulta ser que hay una relación entre la probabilidad y la frecuencia relativa, misma que podrás estudiar en el siguiente recurso interactivo.
+    </p>
+
+    <div class="instrucciones">
+    <span>A continuación se muestra un programa que te genera manos de 5 cartas al azar. Puedes generar de una en una pulsando el botón '+ 1'. O bien, si quieres generar más manos de golpe, puedes oprimir el botón '+ 1000' (que te genera 1000 manos adicionales) o el '+ 10000' (que te genera 10000 manos adicionales). El programa automáticamente analiza a qué tipo de mano corresponde la obtenida y lleva un contador de cuántas manos han salido correspondientes a cada tipo de mano, mismo que puedes visualizar a la derecha del recurso.</span>
+    <br><br>Genera primero de una mano en una y observa el tipo de mano que obtienes. Posteriormente, genera varias de golpe y observa qué sucede con las columnas azules (correspondientes a las frecuencias relativas) respecto a las columnas verdes (correspondientes a las probabilidades que obtuviste en la página anterior). Siempre que quieras empezar a usar el interactivo desde cero, oprime el botón 'Reiniciar'.
+    <br><br>
+    Nota: al generar 10000 manos de golpe, habrás de ser paciente con tu navegador pues toma su tiempo hacerlas y analizarlas.</span> 
+    </div>
+
+    <!-- ejemplo para incluir un documento externo en un iframe, aquí van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="480" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+
+	<h2>La relación entre la probabilidad y las frecuencias relativas</h2>
+
+    <p>
+    Como habrás notado, al generar varias manos de una en una, las frecuencias relativas de tus columnas varían mucho, aunque siempre encontrándose entre 0% y 100%. Pero al ya contar con una gran cantidad de manos generadas, las variaciones disminuyen.
+    </p>
+
+    <p>
+    Lo más interesante es que los porcentajes de las frecuencias relativas se ajustan a los de las probabilidades teóricas. Este resultado tiene que ver con la <strong>ley débil de los grandes números</strong>. Tal vez te convenga estudiar por tu cuenta un poco más al respecto, pues te servirán en los temas de estadística que eventualmente hayas de abordar.
+    </p>
+
+  
+       <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>      
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+  <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!-- INICIA EL CONTENIDO DE LA PÁGINA -->
+    
+    <!-- Título de la página -->
+   <h1>Exploración inicial del problema</h1>
+    
+    <h2>Representación geométrica del problema</h2>
+    
+    <!-- Párrafo -->
+    <p>
+      Antes de seguir con la exploración del problema, demos respuesta a la primera pregunta de la página anterior.
+    </p>
+
+    <p class='importante' style='margin-left:10%;margin-right:10%;'>
+      Para resolver el problema, lo único que tenemos que calcular es 
+      <strong>el área libre dentro del tubo</strong>.
+      <br><br>
+      Esto debido a que conocemos la velocidad con la que incrementa la cantidad de sedimento,
+      lo cual en este caso coincide con el aumento del área del sedimento por unidad de tiempo.
+     
+    </p>
+    
+    <p>
+      Entonces para resolver el problema necesitamos una manera de encontrar el valor de esta área.
+      Para lograrlo, vamos a representar y analizar nuestro problema a partir de composiciones geométricas.
+      En el espacio interactivo que se muestra a continuación podrás ver cómo las áreas
+      (del agua, el sedimento y el segmento libre del tubo) se pueden obtener a partir de su composición o descomposición en 
+      distintas figuras geométricas, cuyas áreas podemos calcular mediante razones trigonométricas.
+     </p>
+    <p>
+      Si aún no te queda muy clara esta idea, no te preocupes, poco a poco se irán despejando tus dudas.
+      Debajo de la escena interactiva se formulan algunas preguntas que pueden guiarte en tu análisis de
+      las configuraciones geométricas proporcionadas en la escena.
+    </p>
+    
+  <!-- Instrucciones -->
+    <div class="instrucciones">
+      Elige el área que quieres analizar e identifica los elementos que se te piden 
+      haciendo clic en cada uno. 
+    </div>
+
+    <!-- ejemplo para incluir un documento externo en un iframe, aquí van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="480" frameborder="0" src="escenas/escena2.html"> </iframe>
+    </div>
+    
+    <div class='problema'>
+      <strong>Preguntas</strong>
+      <br><br>
+      Observando las secciones resaltadas en la escena interactiva, reflexiona sobre lo siguiente:
+
+      <ol>
+        <li>
+          ¿Qué son exactamente los <strong>sectores circulares</strong>? 
+          ¿De qué manera se podrá calcular su área?
+        </li>
+        <br>
+        <li>
+          ¿De qué sirven los <strong>triángulos</strong>? ¿En qué puntos del plano 
+          se encuentran sus vértices? ¿Con qué medidas contamos entonces y qué nos permiten calcular?
+        </li>
+        <br>
+        <li>¿Qué operaciones habrá que realizar para obtener, a partir de las áreas de las dos 
+            figuras anteriores, el área que deseamos conocer?
+        </li>
+      </ol>
+    </div>
+    
+    <br>
+    
+    
+    <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+  
+  <!-- TERMINA LA INFO SOBRE LAS CONDICIONES DE USO -->
+  
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Resolución del problema</h1>
+    
+    <!--- Subtítulo (no necesario en introducción) --->
+    <h2>Cálculo y comparación de probabilidades porcentuales</h2>
+    
+    
+    <!--- Párrafo --->
+    <p>
+    Como se mencionó antes, ninguna de las 2,598,960 manos es más favorecida que otra en el póker.
+    Cada una de ellas tiene igual probabilidad de salir que otra, así que cada una tiene una probabilidad de 1 en 2,598,960.
+    Lo que nos compete ahora es la conversión de dicha probabilidad a una expresión porcentual, de manera que se pueda leer de la forma "Existe un ? por ciento de probabilidad de sacar tal o cual mano".
+    </p>
+
+    <p>
+    En el párrafo anterior se hace referencia a la probabilidad de sacar una mano en particular. Por ejemplo, del par de ases con joto de espadas, reina de corazones y tres de tréboles.
+    Pero sabemos que no es el único par que existe. En la página anterior se vieron, de hecho, todas las formas de hacer par, y están lejos de ser sólo una. De tal forma que la probabilidad de sacar par es la probabilidad de sacar un par en particular multiplicado por el número de formas de hacer un par.
+    O, alternativamente, puedes usar directamente el número de formas de hacer tu tipo de mano en particular y operarlo correctamente contra el número total de manos posibles, como atenderás en el siguiente espacio interactivo.
+    </p>
+
+    <div class="instrucciones">
+	A continuación se muestra el número de formas de hacer un tipo de mano dado. Éste se mide respecto al eje izquierdo (verde) de tu gráfica. Observa que se muestra (como punto de referencia) dónde se encuentra el valor correspondiente a la mitad del número de manos posibles (1,299,480).
+	Ahora lo que buscas es cómo convertir dichos valores a valores porcentuales, de tal manera que tengas información más relevante y fácilmente interpretable. Para tener acceso a dicha representación en el gráfico, deberás responder correctamente la pregunta.
+	A los 3 intentos fallidos podrás ver la respuesta, pero intenta por tu cuenta primero. Una vez que tengas la respuesta correcta, podrás ver el gráfico usando la visualización numérica, porcentual o combinada.
+	<br><br>
+	<span style='font-size:12px;'>Nota: En el gráfico, FI es la abreviatura de flor imperial, FC la de flor corrida, Corr la de corrida y 2Par la de dos pares.</span>
+    </div>
+
+    <!-- ejemplo para incluir un documento externo en un iframe, aquí van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="480" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+
+    <p>
+    Ahora que ya has abordado el cálculo de las probabilidades de las manos, te puedes dar cuenta de por qué algunos tipos de mano valen más que otros.
+    Obtener una flor imperial de inicio es muy difícil, pues la probabilidad de que ocurra es bajísima. Por el contrario, la probabilidad de obtener un par es bastante alta.
+    Es por ello que una flor imperial tiene un valor mayor que el de un par. Y es así como se ordenan los tipos de mano según su valor.
+    </p>
+
+    <p>
+    Por otra parte, recibir de inicio un tipo de mano como flor imperial, flor corrida, póker, full house o color es muy poco probable.
+    Es por ello que en los juegos de naipes frecuentemente se pueden cambiar las cartas de inicio con el fin de tratar de hacer una mano más valiosa.
+    </p>
+
+    <p>
+    Aborda ahora algunas preguntas que te permitirán practicar un poco más lo aprendido hasta ahora.
+    </p>
+
+    <div class="problema">
+      <strong>Preguntas</strong>
+      <br><br>
+      Intenta responder las siguientes preguntas antes de ver la solución:
+	<ul>
+		<li>¿Cuál es la probabilidad, en forma porcentual, de obtener un tipo de mano mayor a tercia?</li>
+		<li>¿Cuál es la probabilidad, en forma porcentual, de obtener dos pares, un par o nada?</li>
+		<li>¿Cuál es la probabilidad, en forma porcentual, de obtener una corrida de cualquier tipo (ya sea flor imperial, flor corrida o corrida sencilla)?</li>
+		<li>Supón que sumas la probabilidad porcentual de las últimas dos columnas. ¿A la probabilidad de obtener qué corresponde el valor de dicha suma?</li>
+	</ul>
+    </div>
+
+    <div class="verSolucion" id="btSolucion" onclick="document.getElementById('solucion').setAttribute('class','visible');document.getElementById('btSolucion').setAttribute('class','oculto');">
+    </div>
+
+    <div id="solucion" class='oculto'>
+      
+       <h2>Respuestas a las preguntas</h2>
+   
+	<ul>
+		<li>La probabilidad, en forma porcentual, de obtener una mano mayor a tercia corresponde evidentemente a la suma de probabilidades de todos los tipos de mano mayores a tercia, a saber: flor imperial, flor corrida, póker, full house, color y corrida. Esta suma de probabilidades es: (0.000153907 + 0.001385169 + 0.024009603 + 0.144057623 + 0.196540154 + 0.392464678)% = 0.758611134%. ¡Nota que la probabilidad de obtener cualquiera de estas manos sigue siendo bajísima!</li>
+		<br>
+		<li>La probabilidad porcentual de obtener o dos pares o un par o nada la podemos calcular como lo que resta para completar el 100% de probabilidad habiendo calculado aquella probabilidad para todas las demás manos (el resultado de la pregunta anterior), más la probabilidad de la tercia. Así pues, la probabilidad de obtenerlas es 100% - 0.758611134% - 2.112845138% = 97.1285437279%. Puedes ver que lo más seguro es que te salga alguno de estos tipos de mano al tomar tus 5 cartas de mano inicial.</li>
+		<br>
+		<li>La probabilidad de hacer una corrida de cualquier tipo involucra la probabilidad conjunta de hacer una flor imperial, una flor corrida y una corrida sencilla. Es decir: (0.000153907 + 0.001385169 + 0.392464678)% = 0.394003754%. También es una probabilidad muy baja. Seguramente, si has jugado naipes, te habrás percatado de que casi nunca se te da algún tipo de corrida de inicio al repartirte tus 5 cartas de mano.</li>
+		<br>
+		<li>El sumar los valores porcentuales de las últimas 2 columnas da 92.374642%. Esta probabilidad corresponde a sacar una mano de valor menor a dos pares. Nota que no sacar nada o sacar un par es lo que con más probabilidad sucederá. Haciendo muchos experimentos de sacar manos de 5 cartas, en más de 9 de cada 10 encontrarás o par o nada.</li>
+	</ul>
+
+    <p>
+    Aunque hasta ahora nos hayamos enfocado en los naipes, en la siguiente página conocerás otros problemas para los que el conteo puede ser muy útil.
+    </p>
+
+	</div>
+  
+	
+  <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  </div>
+  
+
+</article>
+
+</body>
+
+</html>
+

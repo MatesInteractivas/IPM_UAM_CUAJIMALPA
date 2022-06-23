@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>TITULO</title>
+
+      <style type="text/css" media="screen">
+	/*pulsador*/
+	#E1.escala { }
+	#E1.escala > canvas {
+	  display: none;
+	}
+    
+	#E1\.escala .up {
+	  background: #f6f8e0 url("images/zoomIn.png") no-repeat center !important;
+	  background-size: cover !important;
+	}
+	#E1\.escala > .up:hover {
+	  background-color: #e8ebd0 !important;
+	}
+	#E1\.escala > .up:active {
+	  box-shadow: 1px 1px 5px #e8ebd0;
+	  background-color: #eeeeee !important;
+	}
+    
+	#E1\.escala .down {
+	  background: #e8ebd0 url("images/zoomOut.png") no-repeat center !important;
+	  background-size: cover !important;
+	}
+	#E1\.escala .down:hover {
+	  background-color: #e8ebd0 !important;
+	}
+	#E1\.escala .down:active {
+	  box-shadow: 1px 1px 5px #e8ebd0;
+	  background-color: #eeeeee !important;
+	}
+      </style>
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body style="margin:0px;padding:0px;overflow:hidden;">
+
+<p align="center">
+<ajs name="Descartes" width=760 height=480 code="Descartes">
+   <param name="tamaño" value="760x480">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E2' imagen='images/fondo.jpg' despl_imagen='arr-izq' fondo='fff0f8fa' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R3' id='E1' despl_imagen='arr-izq' fondo='fff0f8fa' sensible_a_los_movimientos_del_ratón='sí' R3='sí'">
+   <param name="C_01" value="id='n' tipo='numérico' región='interior' espacio='E1' nombre='_nada_' expresión='(180,10,120,60)' valor='360' incr='1' min='1' max='10000' decimales='0' fijo='no' visible='sí'">
+   <param name="C_02" value="id='E1.escala' tipo='numérico' región='interior' espacio='E1' nombre='E1.escala' expresión='(E1._w-40,E1._h-70,30,60)' valor='30' incr='1' min='1' max='100' discreto='sí' decimales='0' fijo='sí' visible='no' pos_mensajes='centro'">
+   <param name="C_03" value="id='p' tipo='numérico' región='interior' espacio='E1' nombre='_nada_' expresión='(500,10,90,60)' valor='8' incr='1' min='1' max='n' decimales='0' fijo='no' visible='sí'">
+   <param name="C_04" value="id='q' tipo='numérico' región='interior' espacio='E1' nombre='_nada_' expresión='(E1._w-100,10,90,60)' valor='9' incr='1' min='1' max='ent(n/p)' decimales='0' fijo='no' visible='sí'">
+   <param name="A_01" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez'">
+   <param name="A_02" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='r=ent(n/(p*q));'">
+   <param name="G_01" value="espacio='E2' tipo='texto' expresión='[20,33]' texto='Al acomodar                                  cajas en pisos de   p =                    por q =' fuente='SansSerif,BOLD,18' fijo='sí'">
+   <param name="G_02" value="espacio='E2' tipo='texto' dibujar-si='n-p*q*r>1' expresión='[20,420]' texto='formamos [r] pisos completos y nos sobran [n-p*q*r] cajas.' fuente='SansSerif,BOLD,18' fijo='no'">
+   <param name="G_03" value="espacio='E2' tipo='texto' dibujar-si='n-p*q*r=1' expresión='[20,420]' texto='formamos [r] pisos completos y nos sobra una caja.' fuente='SansSerif,BOLD,18' fijo='no'">
+   <param name="G_04" value="espacio='E2' tipo='texto' color='00aa00' dibujar-si='n-p*q*r=0' expresión='[20,420]' texto='formamos [r] pisos completos sin cajas sobrantes.' fuente='SansSerif,BOLD,18' fijo='no'">
+   <param name="S_01" value="espacio='E1' tipo='paralelepípedo' color='eeeeffaa' color_reverso='ff6090a0' expresión='Paralelepípedo' familia='s' s.intervalo='[0,p]' s.pasos='p' posini='(s/2,0,0)' aristas='sí' modelo='metal' ancho='s' largo='q' alto='r'">
+   <param name="S_02" value="espacio='E1' tipo='paralelepípedo' color='ffeeffaa' color_reverso='ff6090a0' expresión='Paralelepípedo' familia='s' s.intervalo='[0,q]' s.pasos='q' posini='(p/2,s/2-q/2,0)' aristas='sí' ancho='p' largo='s' alto='r'">
+   <param name="S_03" value="espacio='E1' tipo='paralelepípedo' color='ffeeffaa' color_reverso='ff6090a0' expresión='Paralelepípedo' familia='s' s.intervalo='[0,r]' s.pasos='r' posini='(p/2,0,s/2-r/2)' aristas='sí' ancho='p' largo='q' alto='s'">
+   <param name="Animación" value="pausa='100' controles='no' auto='no' inicio='t=0' hacer='t=t+1;temp=((t=1)&(paso=0))?calcseg():0;temp=((t>14)&(t<16))?calrect():0;temp=((t>15)&(t<41))?trasp():0;temp=((t>40)&(t<61))?rotar():0;temp=((t>70)&(t<91))?traslada():0;temp=((t>80)&(t<101))?trasp2():0;temp=((t>99)&(t<111))?frazon():0;temp=(t=100)?recalc():0' mientras='t<110'">
+</ajs></p>
+
+</body>
+</html>

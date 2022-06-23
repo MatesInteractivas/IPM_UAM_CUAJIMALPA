@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>TITULO</title>
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body style="margin:0px;padding:0px;overflow:hidden;">
+
+<p align="center">
+<ajs name="Descartes" width=760 height=310 code="Descartes">
+   <param name="tamaño" value="760x310">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=",">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.340, 2015-05-21">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E1' imagen='images/fondo.jpg' despl_imagen='arr-izq' fondo='blanco' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='E2' y='65' alto='150' despl_imagen='arr-izq' fondo='fff0f8fa' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='DEBUG' tipo='numérico' región='exterior' espacio='E1' nombre='DEBUG' incr='1' min='0' max='1' fijo='sí' visible='sí'">
+   <param name="C_02" value="id='N' tipo='numérico' región='interior' espacio='E1' nombre='n' expresión='(50,E1._h-80)(110,70)' valor='8' incr='1' min='1' max='37' decimales='0' fijo='sí' visible='sí'">
+   <param name="C_03" value="id='otraN' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Otra n' expresión='(500,E1._h-40)(120,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' negrita='sí' fuente puntos='18' imagen='images/btn120x30.png' acción='calcular' parámetro='N=ent(rnd*37)+1'">
+   <param name="A_01" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='posX=40;posY=E2._h/2;N=ent(rnd*17)+3;;'">
+   <param name="A_02" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='esc=(N<8)?1:6.136*N^(-0.913);;;;'">
+   <param name="G_01" value="espacio='E1' tipo='texto' dibujar-si='DEBUG' expresión='[20,20]' texto='[tSeg] [s2] [N] [esc]' fijo='sí'">
+   <param name="G_02" value="espacio='E2' tipo='imagen' coord_abs='sí' expresión='(posX,posY)(esc,esc)' archivo='images/cerillo0.png'">
+   <param name="G_03" value="espacio='E2' tipo='imagen' coord_abs='sí' expresión='(posX+(36*esc)+(56*esc)+(s*esc*80),posY)(esc,esc)' familia='s' s.intervalo='[0,N-1]' s.pasos='N-1' archivo='images/cerillo.png'">
+   <param name="G_04" value="espacio='E2' tipo='imagen' coord_abs='sí' expresión='(posX+(36*esc)+(56*esc)+((N-1)*esc*80)+(88*esc),posY)(esc,esc)' archivo='images/cerillo2.png'">
+   <param name="G_05" value="espacio='E1' tipo='texto' expresión='[135,25]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Times New Roman;\f4\fcharset0 Arial;\f5\fcharset0 Courier New;}\f1\fs58\b 4n + 10\fs52\b0   =  4  ({\*\mjaformula{\expr N\decimals 0\fixed1}}) + 10 = \f3\fs56\i{\*\mjaformula{\expr 4*N\decimals 0\fixed1}}\f2\fs52\i0 +10 = \fs56\b{\*\mjaformula{\expr (4*N)+10\decimals 0\fixed1}} \f5\fs30\b0}' fuente='SansSerif,BOLD,29' fijo='sí'">
+</ajs></p>
+
+<script id="macros/randoms.txt" type="descartes/macro">
+tipo_de_macro=R2
+Idioma=español
+id='minRango' expresión='0' evaluar='una-sola-vez' constante='si'
+id='maxRango' expresión='10' evaluar='una-sola-vez' constante='si'
+id='n_numeros' expresión='ent(maxRango-minRango)'
+id='VecAux1' tamaño='n_numeros+100' evaluar='una-sola-vez' expresión='VecAux1[0]=0;VecAux1[1]=0;VecAux1[2]=0' vector='si'
+id='resultadoVec' tamaño='n_numeros+100' evaluar='una-sola-vez' vector='si'
+id='initVecAux1()' inicio='_indexT=0;_ancla=minRango;' hacer='VecAux1[_indexT]=_ancla;_indexT=_indexT+1;_ancla=_ancla+1;' mientras='_indexT<n_numeros' algoritmo='si'
+id='reacomodaVector(_posBorrar)' inicio='_indexAcomoda=_posBorrar;' hacer='VecAux1[_indexAcomoda]=VecAux1[_indexAcomoda+1];_indexAcomoda=_indexAcomoda+1' mientras='_indexAcomoda<(n_numeros-1)' algoritmo='si'
+id='creaAleatorios()' inicio='initVecAux1();_indexCrearAl=0;' hacer='_cuantosQuedan=(n_numeros-_indexCrearAl);_indexAleatorio=ent(rnd*_cuantosQuedan);;resultadoVec[_indexCrearAl]=VecAux1[_indexAleatorio];;reacomodaVector(_indexAleatorio);_indexCrearAl=_indexCrearAl+1' mientras='_indexCrearAl<n_numeros' algoritmo='si'
+tipo='texto' color='azul' expresión='[20,20*s]' familia='s' s.intervalo='[0,n_numeros-1]' s.pasos='n_numeros-1' texto='resultadoVec([s])=[resultadoVec[s]]' fijo='no' 
+tipo='texto' color='azul' expresión='[220,20*s]' familia='s' s.intervalo='[0,n_numeros-1]' s.pasos='n_numeros-1' texto='VecAux1([s])=[VecAux1[s]]' fijo='no' 
+</script>
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+     <!--- Título de la página --->
+   <h1>Exploración inicial del problema</h1>
+
+    <p>
+      Cuando se quiere ubicar en un plano la posición de un dispositivo (representado como un punto en el plano), se pueden utilizar diversos métodos de localización.
+      Los que más se destacan son AOA (<em>angle of arrival</em> o ángulo de llegada), TOA (<em>time of arrival</em> o tiempo de llegada), y RSSI (<em>received signal strength indicator</em> o indicador de fuerza de la señal recibida).
+      Estos tres métodos necesitan que exista una comunicación entre una antena y el dispositivo para así determinar la <strong>distancia</strong> que los separa.
+      Posteriormente, con la información obtenida por estos métodos, se hacen cálculos geométricos conocidos como "triangulación" o "trilateración" para determinar las coordenadas del dispositivo.
+    </p>
+    
+    <p>
+      En esta parte de la unidad analizaremos el procedimiento para calcular la distancia entre una antena y un dispositivo para cada uno de los métodos mencionados; a partir de este análisis, nos daremos cuenta de las ventajas y desventajas de cada uno de ellos.
+      Luego estableceremos qué más se requiere, además de la distancia, para poder localizar el dispositivo.
+    </p>
+    
+    <p>
+      Antes de iniciar, es muy importante aclarar que, en aras de simplificar el problema, en estas páginas se presentará y resolverá en el plano, es decir, en un espacio de dos dimensiones. Queda claro que en la realidad la geolocalización se realiza en espacios de tres dimensiones. 
+    
+    <h2>Distancia entre una antena y un dispositivo con el método AOA</h2>
+    
+   <p class='importante' style="margin-left:10%;margin-right:10%;">
+    <strong>Método AOA, ángulo de llegada</strong>
+    <br><br>
+    Este es un método donde se usan al menos dos antenas de ubicación conocida, cada una de estas antenas se compone de un arreglo de células o pequeñas antenas dispuestas de tal forma que cubran los 360° de visión.
+    Cuando un dispositivo se encuentra cerca de una de las antenas, esta captura la señal del dispositivo que quiere ser ubicado. La antena se encarga de determinar la dirección de la que proviene la señal, es decir mide el ángulo con el que llega y así se traza una línea en la cual se encuentra el dispositivo.
+    Este mismo proceso se realiza con otra antena cercana, la cual trazará otra línea.
+    Finalmente la posición del dispositivo se fijará en el punto de intersección de las líneas, esto se determina por medio de cálculos trigonométricos y geométricos.
+    <br>
+
+    </p>
+
+     <!--- Instrucciones --->
+    <div class="instrucciones">
+    <span>En el siguiente espacio interactivo se mostrará el proceso antes mencionado. Lo primero que debes hacer es ubicar el dispositivo en el lugar que desees, arrastrando y soltando la imagen que se muestra del mismo.
+    A continuación pulsa el botón 'Localizar' y observa el proceso.</span>
+    </div>
+
+
+
+    <!-- ejemplo para incluir un documento externo en un iframe, aqui van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="480" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+
+  <div class="problema">
+    <strong>Preguntas</strong>
+    <br><br>
+     Encuentra la respuesta a las siguientes preguntas:
+     
+     <ol>
+      <li>¿Con qué formulas se puede resolver el triángulo?</li>
+      <li>¿Qué limitantes tiene este método?</li>
+     </ol>
+  </div>
+
+    <p>
+    Avanza a la siguiente página para seguir explorando el problema.
+    </p>
+
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+
+    <div id="popup_creditos" class="oculto">
+      
+      <div class='popup_inner'>
+      
+          <a id="bt_close_popup" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onclick="document.getElementById('popup_creditos').className='oculto';">×</a>
+  
+	  <h1 class="popup_header">Condiciones de uso</h1>
+	  
+	  <div class="popup_content">
+  
+	    <!-- Aviso licencias -->
+	    <div class="licencias">
+		    <p>Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+		    <p>La unidad didáctica contiene escenas elaboradas con <a href='http://arquimedes.matem.unam.mx/' target='_blank'>Descartes</a>, una herramienta de código abierto.</p>
+		    <br><br>
+		    <div class="course_extern_content"> 
+		      <img src="icns/logosCondUso.jpg"></img>
+		    </div>
+	    </div>
+	</div>
+      </div>
+    </div> 
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

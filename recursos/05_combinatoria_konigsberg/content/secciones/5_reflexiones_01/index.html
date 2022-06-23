@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>  
+
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Reflexiones y aplicaciones</h1>
+    
+    <!--- Subtítulo (no necesario en introducción) --->
+    <h2>Algo de historia</h2>
+    
+  
+    <!--- Párrafo --->
+    <div class='instrucciones'>
+      Te sugerimos observar el siguiente video en el que se presenta una variedad de ejemplos históricos de aplicaciones de la teoría de gráficas a la vida real.
+    </div>
+    
+     <div class="course_extern_content"> 
+      <a target="_blank" href="https://www.youtube.com/embed/YxrTSAedNY4?list=PL6kQim6ljTJu44dsVeZifHHiuDC1MEZ7q">
+      <b>Introducción histórica a la teoría de gráficas</b>
+    </a><br/>
+    <iframe frameborder="0" scrolling="no" width="560" height="355" src="https://www.youtube.com/embed/YxrTSAedNY4?list=PL6kQim6ljTJu44dsVeZifHHiuDC1MEZ7q"></iframe>
+    </div>
+
+    <p>
+    Antes de pasar a un ejemplo concreto de la aplicación de la teoría de gráficas a la vida real, haremos un ejercicio sencillo que cumple dos objetivos: reforzar la comprensión de los conceptos y la resolución del problema de los siete puentes de Königsberg visto anteriormente, y aportar una práctica para resolver la tarea en la siguiente página.
+    </p>
+    
+    
+    <div class='tarea'>
+      
+      <h3>Tarea</h3>
+      
+      <p>
+      Vimos que un trayecto que se puede dibujar sobre cierta gráfica de manera que no se separe el lápiz del papel, y que pase por todas las aristas sólo una vez es un <strong>camino euleriano</strong> si los puntos de partida y regreso no son el mismo punto. Así llamamos al trayecto dibujado sobre la gráfica.
+      </p>
+      <p>
+      De manera análoga, una gráfica que puede dibujarse
+      </p>
+       <ul>
+	    <li>sin levantar el lápiz del papel</li>
+	    <li>sin dibujar ninguna línea dos veces</li>
+	</ul>
+      <p>
+       se llama <em><strong>transitable</strong></em>.
+       Si los puntos inicial y final son distintos, obtuviste un <em>camino transitable</em>, si son el mismo, ser trata de un <em>circuito transitable</em>. 
+      </p>
+	  
+      <p>
+      Decide cuáles de las siguientes gráficas son transitables, y si se trata de un camino o un circuito transitable.
+      Trata de formular tu respuesta <em>sin hacer los recorridos</em>; sólo observa y razona.
+      <br>Pista: fíjate bien en los vértices. 
+      </p>
+      
+      <div class="course_extern_content"> 
+      <img src="escenas/images/graficas.png"> </img>
+      </div>
+
+      
+      <!--<div class="descargar" onclick="window.open('pdf/solucion_dinA.pdf')">
+    </div>-->
+    <div class="verSolucion" id="btSolucion" onclick="document.getElementById('solucion').setAttribute('class','visible');document.getElementById('btSolucion').setAttribute('class','oculto');">
+      </div>
+    
+    </div>
+    
+   
+    <div id="solucion" class='oculto'>
+      
+      <h2>Solución de la tarea</h2>
+      
+      <p>
+	Si contaste bien el número de aristas que salen de cada vértice en estas gráficas, deberías de haber llegado a las siguientes conclusiones:
+      </p>
+      
+      <ol>
+	<li>La gráfica 1 tiene 2 vértices impares, por lo que es una gráfica transitable y puedes encontrar un camino euleriano.</li>
+	<li>En la gráfica 2 todos los vértices tienen 3 aristas, por lo que todos son impares y queda claro que esta gráfica no es transitable.</li>
+	<li>Los 6 vértices de gráfica 3 son pares, por lo que constituye un circuito transitable.</li>
+	<li>En la gráfica 4, todos los vértices son pares; sobre esta gráfica se puede trazar un ciclo euleriano o, en otras palabras, es un circuito transitable.</li>
+	<li>En la gráfica 5, 4 de los 6 vértices son impares: no es transitable.</li>
+	<li>La gráfica 6 tiene 7 vértices, de los cuales sólo 2 son impares, entonces se trata de un camino transitable mas no de un circuito. Recuerda que para poder recorrer la gráfica, tendrás que empezar en uno de los dos vértices impares.</li>
+      </ol>
+      
+      <p>
+	Ahora corrobora lo anterior usando las herramientas interactivas de siempre.
+      
+      <div class='instrucciones'>
+      Coloca el control gráfico en uno de los puntos de la gráfica y pulsa el botón "Iniciar". Para cambiar el punto de inicio pulsa el botón "Cambiar posición" y luego pulsa "Iniciar". Pulsa sobre el botón "Limpiar" para borrar los caminos que hayas trazado si así lo requieres.
+      </div>
+    
+      <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="730" height="450" frameborder="0" src="escenas/escena1.html"> </iframe>
+      </div>
+      
+      
+  
+	
+  <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>     
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  </div>
+  
+
+</article>
+
+</body>
+
+</html>
+

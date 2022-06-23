@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+  <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+
+</head>
+
+<body onload="initialize();">
+  
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    </p><!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Planteamiento del problema: Impresión a escala</h1>
+    
+    <!--- Subtítulo (no necesario en introducción) --->
+    <h2>Ejemplo 1</h2>
+    
+    
+    <!--- Párrafo --->
+    <p>
+      Supongamos que tenemos la siguiente imagen que mide 10.583 cm de ancho por 15.875 cm de alto, o 400x600 pixeles.
+    </p>
+    
+      <div class="course_extern_content"> 
+        <img src="imgs/foto1.jpg"></img>
+      </div>
+    
+    <p class="importante">
+      ¿Crees que sea posible reducirla de tal manera que dos imágenes reducidas juntas cubran de manera exacta la imagen original? 
+    </p>
+    
+    <p>
+      Hagamos la prueba. Reducimos la imagen de tal manera que su altura sea de 10.583 cm o 400 pixeles, es decir, igual al ancho de la imagen original. Para que la imagen no se distorsione, su ancho tiene que ser de 
+      7.055cm (o 265 pixeles); solo así se conserva la relación aparente de la imagen original, 15.875:10.583. Finalmente colocamos dos imágenes juntas 
+      para que queden así:
+    </p>
+      
+      <div class="course_extern_content"> 
+        <img src="imgs/foto1_duplicada.jpg"></img>
+      </div>
+    
+    <p>  
+      Puedes notar que si se mantiene la relación aparente de la imagen original, sobra un espacio (en gris). Si quisiéramos que las imágenes cubrieran de manera exacta 
+      la imagen original, tendríamos que ignorar la relación aparente, lo que provoca una distorsión:
+    </p>
+    
+      <div class="course_extern_content"> 
+        <img src="imgs/foto1_distorcionada.jpg"></img>
+      </div> 
+    
+     <h2>Ejemplo 2</h2>
+    
+    <p>
+      Consideremos ahora una imagen que mide 5.62 cm de ancho por 5.29 cm de alto (o bien 425x400 pixeles). 
+    </p>
+    
+    <div class="course_extern_content"> 
+      <img src="imgs/foto2.jpg"></img>
+    </div>
+    
+    <p>
+      Con esta imagen, el problema del escalado se hace aún más patente.
+      Para lograr que las imágenes quepan una al lado de la otra dentro de las dimensiones originales, nuevamente habría que ignorar la relación aparente, lo que provocaría 
+      una distorción muy grande, o bien habría que hacer un recorte muy considerable en una de las imágenes.
+    </p>
+    
+    <table style="border:0px;">
+    <tr>
+      <td  style="border:0px;">
+	<div class="course_extern_content"> 
+	  <img src="imgs/foto2_distorcionada.jpg"></img>
+	</div>
+      </td>
+      <td  style="border:0px;">
+	<div class="course_extern_content"> 
+	  <img src="imgs/foto2_recortada.jpg"></img>
+	</div>
+      </td>
+    </tr>
+    </table>
+
+    <h2>Planteamiento del problema</h2>
+      
+    <p>
+      En ambos ejemplos lo que en realidad estamos buscando es que al reducir la imagen como lo hemos hecho, preservando la relación aparente, <strong>la reducción cubra de manera exacta la mitad de la hoja</strong>.
+      Vimos que eso no pasa en estos dos casos, lo cual nos lleva a preguntarnos cuál es la <strong>razón</strong> que debe existir entre los lados de la hoja para que sí se cumpla.
+    </p>
+    
+    <p>
+      Una vez determinada esta razón, podemos repetir el proceso de reducción tantas veces como queramos, es decir, tomamos la fotografía reducida, la reducimos de manera que el lado más largo tenga el tamaño del lado pequeño de la reducción anterior, y así sucesivamente.
+    </p>
+    
+    <table style="border:0px;">
+    <tr>
+      <td  style="border:0px;">
+	<div class="course_extern_content"> 
+	  <img src="imgs/foto2_razonCorrecta.jpg"></img>
+	</div>
+      </td>
+      <td style="border:0px;">
+	<div class="course_extern_content"> 
+	  <img src="imgs/foto2_4x.jpg"></img>
+	</div>
+      </td>
+    </tr>
+    </table>
+    
+    <p>
+      ¿Por qué nos interesa que no falte ni sobre espacio? Si al reducir las imágenes para imprimirlas, éstas cupieran de manera exacta en la hoja, no habría
+      que hacer recortes, lo que implica no desperdiciar papel, ni tiempo para recortar el papel sobrante.
+      Cabe mencionar que para lograr esto, evidentemente el papel en el cual se hace la impresión debe tener las mismas dimensiones que la imagen original.
+    </p>
+
+    
+    <p class='problema'>
+      <strong>Problema</strong>
+      <br><br>
+        Resumiendo, el problema que abordaremos en esta unidad consiste en encontrar la razón entre los lados de una foto, de manera que al reducirla quepa exactamente 
+        dos, cuatro, ocho, ... veces en sí misma, sin que falte ni sobre espacio. 
+        <br>
+    </p>
+
+
+
+
+    <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+    
+    
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+    
+
+  </div>
+  
+</article>
+
+
+
+
+</body>
+
+</html>

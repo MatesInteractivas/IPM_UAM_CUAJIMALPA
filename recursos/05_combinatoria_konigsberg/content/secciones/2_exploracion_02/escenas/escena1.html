@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>TITULO</title>	
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body style="margin:0px;padding:0px;overflow:hidden;">
+
+<p align="center">
+<ajs name="Descartes" width=760 height=480 code="Descartes">
+   <param name="tamaño" value="760x480">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.3.12, 2014-07-09">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' escala='1' O.x='-50%' O.y='-50%' imagen='images/conFranja.jpg' despl_imagen='centrada' fondo='grisClaro' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='mX' tipo='numérico' región='exterior' espacio='E1' nombre='mX' incr='1' decimales='0' fijo='no' visible='sí'">
+   <param name="C_02" value="id='mY' tipo='numérico' región='exterior' espacio='E1' nombre='mY' incr='1' decimales='0' fijo='no' visible='sí' pos_mensajes='centro'">
+   <param name="C_03" value="id='Ini' tipo='gráfico' espacio='E1' expresión='(350,-30)' fijo='sí' imagen='images/humanoSur.png' dibujar-si='menu==0'">
+   <param name="C_04" value="id='limpiar' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Limpiar' expresión='(lim.x,lim.y,lim.w,lim.h)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn90x30.png' acción='limpiar' parámetro='inicia=0' pos_mensajes='centro'">
+   <param name="C_05" value="id='iniciar' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Iniciar' expresión='(ini.x,ini.y,ini.w,ini.h)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn90x30.png' acción='calcular' parámetro='inicia=1' pos_mensajes='centro'">
+   <param name="C_06" value="id='cambiar' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Cambiar posición' expresión='(cam.x,cam.y,cam.w,cam.h)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn150x30.png' acción='calcular' parámetro='inicia=0'">
+   <param name="A_01" value="id='InitBtn()' algoritmo='sí' algoritmo='sí' hacer='menu.w=140;menu.h=34;;lim.w=90;lim.h=30;ini.w=90;ini.h=30;cam.w=150;cam.h=30;;gap=10;margenIzq=(E1._w-menu.w-lim.w-gap)/2;margenIzq=(E1._w-ini.w-lim.w-cam.w-2*gap)/2;texto.w=120;;menu.x=margenIzq+texto.w/2;menu.y=E1._h-9-menu.h;;ini.x=margenIzq;ini.y=E1._h-11-lim.h;cam.x=ini.x+ini.w+gap;cam.y=E1._h-11-cam.h;lim.x=cam.x+cam.w+gap;lim.y=E1._h-11-lim.h;;'">
+   <param name="A_02" value="id='Init()' algoritmo='sí' algoritmo='sí' hacer='menu=0;inicia=0;Ini.x=350;Ini.y=-30;InitBtn()'">
+   <param name="A_03" value="id='posIni()' algoritmo='sí' algoritmo='sí' hacer='Ini.x=350;Ini.y=-30;Ini2.x=400;Ini2.y=-400;Ini3.x=400;Ini3.y=-200;Ini4.x=600;Ini4.y=-230'">
+   <param name="A_04" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='Init()'">
+   <param name="A_05" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="G_01" value="espacio='E1' tipo='texto' dibujar-si='0' expresión='[20,10]' texto='Ini.x=[Ini.x]   inicia=[inicia]' fijo='sí' info='debug'">
+   <param name="G_02" value="espacio='E1' tipo='imagen' fondo='sí' coord_abs='sí' expresión='(350+_mX,54+_mY)' archivo='images/puenteVertical.png'">
+   <param name="G_03" value="espacio='E1' tipo='imagen' fondo='sí' coord_abs='sí' expresión='(432+_mX,54+_mY)' archivo='images/puenteVertical.png'">
+   <param name="G_04" value="espacio='E1' tipo='imagen' fondo='sí' coord_abs='sí' expresión='(344+_mX,294+_mY)' archivo='images/puenteVertical.png'">
+   <param name="G_05" value="espacio='E1' tipo='imagen' fondo='sí' coord_abs='sí' expresión='(430+_mX,294+_mY)' archivo='images/puenteVertical.png'">
+   <param name="G_06" value="espacio='E1' tipo='imagen' fondo='sí' coord_abs='sí' expresión='(477+_mX,211+_mY)' archivo='images/puenteHorizontal.png'">
+   <param name="G_07" value="espacio='E1' tipo='imagen' fondo='sí' coord_abs='sí' expresión='(600+_mX,87+_mY)' archivo='images/puenteInc1.png'">
+   <param name="G_08" value="espacio='E1' tipo='imagen' fondo='sí' coord_abs='sí' expresión='(603+_mX,294+_mY)' archivo='images/puenteInc2.png'">
+   <param name="G_09" value="espacio='E1' tipo='punto' color='2d72b5' dibujar-si='(inicia)' expresión='(Ini.x,Ini.y)' rastro='2d72b5' fijo='sí'">
+   <param name="G_10" value="espacio='E1' tipo='texto' fondo='sí' color='2d72b5' expresión='[20+_mX,79+_mY]' texto='Lecho del río A' fuente='SansSerif,PLAIN,24' fijo='sí'">
+   <param name="G_11" value="espacio='E1' tipo='texto' fondo='sí' color='2d72b5' expresión='[52+_mX,290+_mY]' texto='Lecho del río B' fuente='SansSerif,PLAIN,24' fijo='sí'">
+   <param name="G_12" value="espacio='E1' tipo='texto' fondo='sí' color='2d72b5' expresión='[375+_mX,213+_mY]' texto='Isla C' fuente='SansSerif,PLAIN,24' fijo='sí'">
+   <param name="G_13" value="espacio='E1' tipo='texto' fondo='sí' color='2d72b5' expresión='[640+_mX,213+_mY]' texto='Isla D' fuente='SansSerif,PLAIN,24' fijo='sí'">
+   <param name="G_14" value="espacio='E1' tipo='texto' color='22a28d' dibujar-si='0' expresión='[texto.w/2+135+_mX,444+_mY]' texto='Punto de inicio' fuente='SansSerif,BOLD,17' fijo='sí'">
+   <param name="Animación" value="pausa='100' controles='no' auto='no' inicio='t=0' hacer='t=t+1;temp=((t>14)&(t<16))?calrect():0;temp=((t>15)&(t<41))?trasp():0;temp=((t>40)&(t<61))?rotar():0;temp=((t>70)&(t<91))?traslada():0;temp=((t>70)&(t<91))?trasp2():0;temp=((t>90)&(t<92))?calrect2():0;temp=((t>114)&(t<139))?trasp2():0;temp=((t>140)&(t<161))?rotar2():0;temp=((t>170)&(t<191))?traslada2():0;temp=(t=195)?calPosFin():0' mientras='t<200'">
+</ajs></p>
+
+</body>
+</html>

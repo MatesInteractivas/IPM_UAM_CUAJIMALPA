@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+  <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+
+</head>
+
+<body onLoad="initialize();">
+  
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    </p><!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Planteamiento del problema: Negocios en pirámide</h1>
+    
+    <!--- Subtítulo (no necesario en introducción) --->
+    <h2>La propuesta del negocio</h2>
+
+    <p>
+      Un amigo que está en un negocio te invita a participar en él.
+      Para ingresar debes invertir sólo mil pesos, los cuales
+      recuperarás con una buena ganancia cuando consigas que otras dos
+      personas entren como socios con mil pesos cada una. Tu amigo te
+      dice que es muy fácil conseguir dos persona nuevas, porque la
+      propuesta es la misma: ellos recuperarán su inversión con una
+      pequeña ganancia al traer cada uno a dos nuevos amigos. De los
+      dos mil pesos aportados por los dos nuevos socios que
+      conseguiste, tú obtendrás mil doscientos y los restantes
+      ochocientos pesos irán para el organizador del negocio.
+    </p>
+
+    <div class="course_extern_content"> 
+      <img src="imgs/pic1.jpg"></img>
+    </div>
+    
+    <!--- Párrafo --->
+    <p>
+      Tu amigo te explica que este proceso se repite y de forma
+      natural se va creando una pirámide de varios pisos o niveles. El
+      nivel \(0\) es el del organizador y gran visionario que organizó
+      el negocio; en el nivel \(1\) están las dos primeras personas
+      que el organizador invitó; en el nivel \(2\) hay cuatro
+      personas, que son las invitadas por los socios del nivel \(1\),
+      y así sucesivamente. 
+    </p>
+    
+    <p class='importante' style='margin-left:15%;margin-right:15%;'>
+      En el nivel \(n+1\) hay el doble de socios
+      que en el nivel \(n\) ya que siempre cada socio consigue a otros
+      dos más.
+    </p>
+    
+    <p>
+      ¡Parece ser un negocio muy seguro! Y, para alentarte aún más, tu
+      amigo te comenta que el organizador, también conocido como la
+      punta de la pirámide, habrá de abandonar el negocio una vez que
+      se alcancen los \(10\) niveles completos. A partir de ese
+      momento los dos primeros amigos que invitó serán las puntas de
+      dos pirámides separadas y cobrarán los ochocientos pesos de los
+      nuevos reclutas de la base de la pirámide. Posteriormente, al
+      completarse de nuevo el nivel \(10\) en cada una de las nuevas
+      pirámides, el cobro de los ochocientos pesos de los reclutas
+      bajará al nivel siguiente y así sucesivamente. De esta forma, en
+      algún momento tú serás la punta de una pirámide con \(10\)
+      niveles y cobrarás los ochocientos pesos de los nuevos reclutas
+      de la base de tu pirámide.
+    </p>
+
+    <!--- Instrucciones --->
+    <div class="instrucciones">
+    En el siguiente espacio podrás ajustar el número de niveles de
+    socios reclutados de la pirámide entre \(0\) y \(10\) utilizando
+    el pulsador de la esquina superior derecha. Con ello podrás
+    construir los primeros diez pisos de la pirámide para calcular el
+    número de socios que te darán ochocientos pesos cuando te toque
+    ser la punta de la pirámide. Observa que cuando está el
+    organizador solo, consideramos que hay cero niveles de socios
+    reclutados.
+    </div>
+
+    <!-- ejemplo para incluir un documento externo en un iframe, aqui van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="480" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+
+    <p class='importante' style='margin-left:15%;margin-right:15%;'>
+      Cuando seas la punta de la pirámide recibirás \(1024\times\$800\), que son ¡más de ochocientos mil pesos!
+    </p>
+
+    <p>
+      Ahora el negocio no sólo parece ser seguro, ¡parece ser el
+      negocio perfecto! Además, tu amigo te dice que si quieres entrar debes
+      apresurarte ya que hay muchas personas interesadas en participar, pero
+      como tú eres su amigo te está dando la preferencia para que
+      estés en un nivel más alto y seas punta de pirámide antes que
+      los demás.
+    </p>
+    
+    <p class='importante' style='margin-left:15%;margin-right:15%;'>
+      El negocio no puede fallar porque... ¿quién no tiene mil pesos?
+    </p>
+    
+    <div class="problema">
+      <strong>Preguntas</strong>
+      <ul>
+      <li>
+        ¿Te parece un buen negocio?
+      </li>
+      <br>
+      <li>
+      ¿Entrarías en él?
+      </li>
+      <br>
+      <li>
+      ¿Crees que exista algún riesgo?
+      </li>
+      </ul>
+    </div>
+
+    <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+    
+    
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onClick="showCredits()">Condiciones de uso</a>
+    </div>  
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+    
+
+  </div>
+  
+</article>
+
+
+
+
+</body>
+
+</html>

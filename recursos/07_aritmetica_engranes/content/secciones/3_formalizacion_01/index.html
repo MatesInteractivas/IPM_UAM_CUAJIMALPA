@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+   <h1>Formalización del problema</h1>
+
+    <h2>¿Qué son los múltiplos de un número?</h2>
+    <!--- Párrafo --->
+    <p>
+     En la sección anterior hiciste una serie de observaciones que relacionan el número de vueltas que da cada engrane, el número de dientes encajados y el número de dientes de cada engrane. En esta sección recordaremos la definición de varios conceptos que usaremos en la Resolución del problema. Empecemos por recordar qué son los múltiplos de un número, qué es un múltiplo común, y qué es un factor de un número.
+    </p>
+
+    <div class='importante' style="margin-left:10%;margin-right:10%;">
+    <strong>Múltiplos</strong>
+    <br><br>
+    Los <strong>múltiplos</strong> de un número son los números que resultan de multiplicar ese número por otros números.
+    Decimos que un número es <em>múltiplo</em> de otro si lo contiene un número entero de veces. Por ejemplo, \(20\) es <em>múltiplo</em> de \(5\), pues \(20\) contiene cuatro veces al número \(5\).
+    <br><br>
+    Un número que es múltiplo de dos o más números se llama <strong>múltiplo común</strong> de esos números.
+    De hecho, un número obtenido al multiplicar dos números es múltiplo de esos dos números. Por ejemplo \(20\) es <em>múltiplo común</em> de \(4\) y de \(5\).
+    <br><br>
+    Además, un número que está contenido en otro un número entero de veces es un <strong>factor</strong> del primero. Por ejemplo \(4\) y \(5\) son <em>factores</em> de \(20\), pues \(4\) está <em>contenido en</em> \(20\) <em>cinco veces</em> y \(5\) <em>cuatro veces</em>.
+    </div>
+
+    <p>
+    Las anteriores definiciones se aplican a todos los números reales. Cabe mencionar que en esta unidad didáctica consideraremos sólo números naturales, es decir números enteros positivos. Veamos algunos ejemplos de los conceptos que acabamos de enunciar.
+    </p>
+
+    <div class="course_extern_content">
+      <iframe class="course_iframe" width="750" height="130" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+    
+    <h2>Uso del lenguaje matemático para definir las primeras respuestas</h2>
+
+    <p>
+    Volvamos a las observaciones que hiciste en la segunda página de la Exploración. Enseguida se muestra el entorno interactivo de siempre, pero esta vez hay un dato adicional. Además, al presionar el botón 'Mover' más de una vez, el número de vueltas y el número de dientes encajados siguen aumentando.
+    </p>
+
+    <!--- Instrucciones --->
+    <div class="instrucciones">
+    Selecciona el número de dientes de cada engrane presionando sobre los pulsadores correspondientes, el izquierdo para el engrane azul y el derecho para el engrane naranja.
+    Presiona sobre el botón 'Mover' para hacer girar los engranes.
+    Con las flechas izquierda y derecha puedes hacer girar los engranes diente por diente.
+    </div>
+
+    <!-- ejemplo para incluir un documento externo en un iframe, aquí van las escenas y videos -->
+    <div class="course_extern_content">
+      <iframe class="course_iframe" width="760" height="460" frameborder="0" src="escenas/escena2.html"> </iframe>
+    </div>
+
+    <p>
+    A partir de las definiciones al principio de esta página y la exploración del entorno interactivo puedes responder a las preguntas que se plantearon en la página 2 de la sección anterior.
+    Pero antes, veremos que en muchas ocasiones es conveniente simplificar o acortar una frase. Para hacerlo podemos sustituir un grupo de palabras por una sola.
+    </p>
+      
+    <p>
+    Por ejemplo, tenemos la oración <em>El número de dientes encajados es múltiplo del número de dientes del engrane azul y del número de dientes del engrane naranja</em>.
+    Tratemos de acortar y simplificar esta afirmación usando sólo una palabra para referirnos a cada uno de los tres números mencionados en la oración.
+    Entonces, renombraremos los tres números como sigue:
+    </p>
+    
+    <ul>
+      <li>Reemplazamos <em>el número de dientes encajados</em> por <strong>NoDiEnc</strong></li>
+      <li>Reemplazamos <em>el número de dientes del engrane azul</em> por <strong>NoDiEngA</strong></li>
+      <li>Reemplazamos <em>el número de dientes del engrane naranja</em> por <strong>NoDiEngN</strong></li>
+    </ul>
+   </p>
+
+   <p>
+      De manera que la afirmación resultante es mucho más corta: <em>"NoDiEnc es múltiplo de NoDiEngA y de NoDiEngN"</em>.
+      Sin embargo, si en lugar de reemplazar estas "subfrases" por palabras lo hacemos por una letra, la oración se simplifica aún más.
+      En matemáticas muchas veces usamos letras, más que palabras, para simplificar frases.
+   </p>
+
+    <div class="course_extern_content">
+      <iframe class="course_iframe" width="750" height="130" frameborder="0" src="escenas/escena3.html"> </iframe>
+    </div>
+
+    <p>
+    Entonces, si en lugar de sustuir las subfrases por <strong>NoDiEnc</strong>, <strong>NoDiEngA</strong> y <strong>NoDiEngN</strong>, lo hacemos por <strong>E</strong>, <strong>A</strong> y <strong>N</strong> respectivamente, tenemos un enunciado mucho más simplificado: <em>"E es múltiplo de A y de N"</em>.
+    ¿Qué frase prefieres usar? Tal vez la siguiente serie de preguntas te ayude a decidir.
+
+    <p>
+    Ahora sí, volvamos a las preguntas de la página 2 de la Exploración. Usaremos una escritura "matemática" para dar las opciones de respuesta. Dado que usaremos tanto el número de dientes como el número de vueltas de cada engrane, para mayor claridad, haremos una modificación a la sustitución anterior y asignaremos una <strong>v</strong> al número de vueltas, y una <strong>d</strong> al número de dientes, de manera que tenemos la siguiente nomenclatura:
+
+    <ul>
+      <li>Reemplazamos <em>el número de vueltas que da el engrane azul</em> por <strong>vA</strong></li>
+      <li>Reemplazamos <em>el número de vueltas que da el engrane naranja</em> por <strong>vN</strong></li>
+      <li>Reemplazamos <em>el número de dientes del engrane azul</em> por <strong>dA</strong></li>
+      <li>Reemplazamos <em>el número de dientes del engrane engrane naranja</em> por <strong>dN</strong></li>
+      <li>Reemplazamos <em>el número de dientes encajados</em> por <strong>dE</strong></li>
+    </ul>
+    </p>
+
+    <div class="course_extern_content">
+      <iframe class="course_iframe" width="750" height="130" frameborder="0" src="escenas/escena4.html"> </iframe>
+    </div>
+
+    <p>
+    En matemáticas muchas veces usamos letras también para generalizar una serie de casos particulares.
+    Por ejemplo, si queremos referirnos a cualquier número natural, en lugar de enlistar muchos de ellos (pues es imposible enlistarlos todos, ya que hay una infinidad de ellos), simplemente decimos que \(n\) es un número natural.
+    De esta manera sabemos que puede ser cualquiera, por ejemplo, podría ser \(1\) o \(1,457\) o \(15,428,796,532\) o cualquier otro número natural.
+    Ahora responde las siguientes preguntas.
+  </p>
+
+  <div class="course_extern_content">
+    <iframe class="course_iframe" width="750" height="130" frameborder="0" src="escenas/escena5.html"> </iframe>
+  </div>
+
+    <p>
+    Podríamos simplicar todavía más las frases usando el lenguaje matemático, pero por ahora usemos lo que hemos visto hasta el momento. Para definir el siguiente concepto, usaremos este "lenguaje de letras". Consideremos dos números naturales cualesquiera:
+
+  <p class='importante' style="margin-left:10%;margin-right:10%;">
+  El múltiplo más pequeño de todos los múltiplos que \(a\) y \(b\) tienen en común se llama <strong>mínimo común múltiplo</strong>. Se denota por <strong>\(mcm(a,b)\)</strong>.
+  </p>
+
+
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>
+
+
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+
+
+
+  </div>
+
+
+</article>
+
+
+</body>
+
+</html>

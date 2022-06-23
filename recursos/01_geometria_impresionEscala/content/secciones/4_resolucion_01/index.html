@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Resolución del problema</h1>
+    
+    <!--- Subtítulo (no necesario en introducción) --->
+    <h2>Entonces, ¿cuánto deben medir los lados de mi foto?</h2>
+    
+    
+    <!--- Párrafo --->
+    <p>
+    Al inicio de esta unidad, planteamos el siguiente problema: ¿cuál debe ser la razón entre los lados de una foto para que ésta, al reducirse, quepa exactamente 2, 4, 8, ... veces en sí misma?
+    En la sección anterior obtuvimos la solución algebraica a este problema: la razón entre el lado mayor \(L\) y el lado menor \(l\) de la foto debe ser igual a la raíz cuadrada de 2:
+    </p>
+    
+    <p class='importante' style='margin-left:40%;margin-right:40%;'>
+        \[\frac{L}{l}=\sqrt{2}\]
+    </p>
+    
+    <p>
+    Ya teniendo esta expresión algebraica, podemos resolver nuestro problema inicial. Recuerda la siguiente foto:
+    </p>
+    
+    <!-- ejemplo para incluir una imagen -->
+    <div class="course_extern_content"> 
+      <img src="imgs/foto1_conDimensiones.png"></img>
+    </div>
+
+    <p>
+    Queda claro que, en su tamaño actual, nuestra foto no cumple con la ecuación: \(\frac{425}{400}=1.0625 \neq \sqrt{2}\)
+    </p>
+    
+    <p>
+    Lo que queremos hacer es recortar la foto de tal manera que sus lados presenten la ya conocida razón, pero conservando intacto el retrato del perro en la medida de lo posible. En otras palabras, vamos a reducir el lado mayor \(L\) tal como se muestra abajo: 
+    </p>
+    
+    <!-- ejemplo para incluir una imagen -->
+    <div class="course_extern_content"> 
+      <img src="imgs/foto1_conRecortes.jpg"></img>
+    </div>
+    
+    <p class='problema'>
+    <strong>Pregunta</strong>
+    <br><br>
+      ¿Cuántos pixeles se deben recortar de cada lado de la foto para que sus lados presenten la razón \(\frac{L}{l}=\sqrt{2}\)?
+      <br>
+    </p>
+    
+    <p>
+    Recuerda, al presentar esta razón entre sus lados, podremos escalar la imagen para que quepa cuantas veces queramos en una hoja sin que sobre ni falte espacio; así ahorraremos papel y tiempo al imprimirla.  
+    </p>
+
+    <div class="instrucciones">
+    Haz los cálculos necesarios para dar respuesta a la pregunta. En el espacio interactivo de abajo, indica cuántos pixeles se deben quitar de ambos lados del lado \(L\) para que la razón entre lados sea igual a \(\sqrt{2}\). Pulsa 'Verificar' cuando hayas llenado el valor que consideras correcto.
+    </div>
+    
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="480" frameborder="0" src="escenas/escena.html"> </iframe>
+    </div>
+  
+	
+  <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  </div>
+  
+
+</article>
+
+</body>
+
+</html>
+

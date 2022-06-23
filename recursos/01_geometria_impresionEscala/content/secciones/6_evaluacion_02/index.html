@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Evaluación</h1>
+
+    <h2>Tarea final: La proporción áurea</h2>
+
+    <p>
+    Encontramos que, en el caso expuesto en esta unidad y en las hojas del estándar DIN, la proporción entre lados es \(\sqrt{2}\).
+    </p>
+    
+    <p>
+    No obstante, existen otro tipo de proporciones. Una de ellas es la llamada <em>proporción áurea</em>. Esta proporción  se denota por la letra griega \(phi\) mayúscula: \(\Phi\), y ha sido motivo de admiración desde la época de los griegos. Se han determinado múltiples aplicaciones de dicha proporción, principalmente en la naturaleza. A continuación enumeramos algunas:
+    </p>
+    
+    <ul>
+	    <li>La disposición de semillas en, por ejemplo, las plantas como los girasoles, se puede reproducir moviendo el radio a una determinada semilla un ángulo de \(\Phi\) radianes y a una distancia poco mayor que la original. Esto asegura una distribución de semillas en donde no quedan muy separadas o muy juntas independientemente de que se observen porciones cerca o lejos del centro del girasol.</li>
+	    <br>
+	    <!-- ejemplo para incluir una imagen -->
+	    <div class="course_extern_content"> 
+	      <img src="imgs/proporcionAurea.jpg"></img>
+	    </div>
+	    <br>
+	    <li>Varios objetos geométricos considerados "estéticos" conllevan proporciones cercanas a \(\Phi\).
+	    Como ejemplo, de todos los rectángulos, supuestamente la mayoría de las personas consideran más bellos aquellos que tienen dicho número como proporción entre sus lados. No obstante, esto es una cuestión subjetiva y no debe tomarse como un hecho.</li>
+      </ul>
+
+    <p>
+      A continuación, te presentamos un problema que involucra, justamente, la presencia de la proporción áurea en los rectángulos. Tendrás que resolver dicho problema como tarea final de esta unidad. Para su resolución, te podrás apoyar en el recurso interactivo que se proporciona al final de esta página.
+    </p>
+    
+    <p class='problema'>
+    <strong>Problema</strong>
+    <br><br>
+    Supón que tienes un rectángulo cuyo lado mayor denotamos con \(a\) y cuyo lado menor denotamos con \(b\). Construyes un cuadrado dentro de él de lado \(b\) y lo recortas. Sobrará, así pues, un rectángulo. ¿Qué proporción \(\frac{a}{b}\) debe tener el rectángulo original para que el rectángulo sobrante tras recortar el cuadrado tenga la misma proporción (que el original)? 
+    </p>
+    
+    <div class='tarea'>
+      
+      <h4>Tarea final</h4>
+    
+      <p>
+	Encuentra la razón \(\frac{a}{b}\) que da solución al problema descrito. En un archivo de texto, haz lo siguiente:
+      </p>
+	<ol>
+	  <li>Plantea el problema usando notaciones algebraicas. Esto significa que tendrás que escribir la ecuación algebraica que exprese correctamente la relación entre los lados de los dos rectángulos mencionados.</li>
+	  <br>
+	  <li>Calcula, a partir de la ecuación que obtuviste, el valor de la razón \(\frac{a}{b}\), el cual corresponde a la proporción áurea.</li>
+	  <br>
+	  <li>Explica, en no más de tres párrafos, el proceso que seguiste para resolver el problema.</li>
+	  <br>
+	  <li>Busca alguna otra aplicación de la proporción áurea que te llame la atención y descríbela en un párrafo. Puedes incluir una imagen si lo deseas. ¡No olvides incluir las fuentes consultadas!</li>
+	</ol>
+      
+      <p>
+	<strong>Al terminar, sube tu archivo a la plataforma para que sea evaluado por tu monitor.</strong>
+      </p>
+      
+      <div class="cargar" onclick="">
+      </div>
+    
+    </div>
+    
+    <br>
+    <p>
+    Para empezar a analizar el problema descrito, explora el siguiente recurso interactivo siguiendo las instrucciones que se te proporcionan.
+    </p>
+
+    <div class="instrucciones">En el espacio interactivo de abajo se muestra un rectángulo cuyo lado mayor \(a\) mide 1 unidad. Puedes mover el valor del lado menor \(b\) entre 0.4 y 0.8. Una vez que hayas definido las dimensiones iniciales del rectángulo amarillo original, pulsa el botón 'Siguiente'; verás el recorte del cuadrado (azul) y el rectángulo resultante tras el recorte (rojo).<br><br>Observa bien la proporción del rectángulo original así como la del rectángulo resultante y compáralas. Trata de encontrar un valor para \(b\) para el cual las razones de los lados de ambos rectángulas (amarillo y rojo) sean lo más parecidas posible.</div>
+
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="750" height="480" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+
+
+    <!-- Contenido en pdf -->
+    <!--<p>
+      Observa que las dimensiones del rectángulo azul están dadas por \(b\) como el lado grande del mismo y \(a-b\) como el lado chico. La proporción entre estos lados será \(\frac{b}{a-b}\). Y lo que hiciste al mover los valores de \(b\) fue buscar aquél para el cual la proporción \(\frac{a}{b}\) del rectángulo original fuera lo más cercana (intentando que fueran iguales) a la del rectángulo azul. Es decir, lo que buscaste fue un valor para \(b\) tal que \(\frac{a}{b}=\frac{b}{a-b}\).
+    </p>
+
+    <p>
+    Siguiendo el mismo espíritu que en el interactivo, si consideramos de inicio que \(a=1\), tenemos que \(\frac{1}{b}=\frac{b}{1-b}\). Multiplicando ambos lados de la ecuación por \(b\) obtenemos que \(1=\frac{b^2}{1-b}\). Luego, multiplicamos ambos lados de esta última ecuación por \(1-b\), de donde obtenemos que \(1-b=b^2\). Pasamos el \(1-b\) restando al lado derecho de la igualdad, obteniendo: \(b^2+b-1=0\). Esta es una ecuación cuadrática que podemos resolver para \(b\). Así, \(b=\frac{-1\pm\sqrt{1^2+4}}{2}\), de donde \(b=\frac{-1+\sqrt{5}}{2}=0.618033989...\). Nota que en la última ecuación, escogemos el signo + del \(\pm\), ya que es el que nos da un valor positivo (que es el único que tiene sentido para una longitud). Finalmente, la proporción que buscamos del lado más grande al más pequeño está dada por \(\frac{a}{b}=\frac{1}{0.618033989}=1.618033989\). Este valor se conoce como la <em>proporción áurea</em> o <em>dorada</em> y se denota por la letra griega <em>phi</em> mayúscula: \(\Phi\).
+    </p>-->
+	
+  <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  
+  </div>
+  
+  
+  
+</article>
+
+
+</body>
+
+</html>

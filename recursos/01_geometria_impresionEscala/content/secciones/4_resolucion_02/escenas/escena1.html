@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>TITULO</title>	
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body style="margin:0px;padding:0px;overflow:hidden;">
+
+<p align="center">
+<ajs name="Descartes" width=760 height=500 code="Descartes">
+   <param name="tamaño" value="760x500">
+   <param name="decimal_symbol" value=",">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.3.12, 2014-07-09">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' O.x='-50' O.y='-230' imagen='images/fondo.png' despl_imagen='arr-izq' fondo='blanco' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='seleccion' x='330' y='20' ancho='307' alto='460' O.x='-153' O.y='-230' despl_imagen='arr-izq' fondo='fff0f8fa' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_03" value="tipo='R2' id='retro' x='12' y='105' ancho='380' alto='300' dibujar-si='verificado' despl_imagen='arr-izq' fondo='effffb' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='ctrl' tipo='gráfico' espacio='seleccion' color='dfdfdf' color-int='aa000000' tamaño='20' expresión='(.4,-.4)' dibujar-si='(modo!=0)&&(modo!=3)'">
+   <param name="C_02" value="id='modo' tipo='numérico' interfaz='menú' región='interior' espacio='E1' expresión='(20,20,200,40)' decimales='0' fijo='sí' visible='no' opciones='Selección:,Normal,Razón fija,Tamaño fijo' acción='calcular' parámetro='ayuda=(modo==2)?setRazon():setAA()' pos_mensajes='centro'">
+   <param name="C_03" value="id='ancho' tipo='numérico' región='interior' espacio='E1' nombre='Ancho (px)' expresión='(20,90,220,60)' valor='25' incr='1' min='25' max='400' decimales='0' fijo='sí' visible='sí' acción='calcular' parámetro='ctrl.x=(ancho/escala)+(.4*(3/5))' dibujar-si='(modo!=0)&&(modo!=2)' activo-si='modo==3' pos_mensajes='centro'">
+   <param name="C_04" value="id='alto' tipo='numérico' región='interior' espacio='E1' nombre='Alto (px)' expresión='(20,170,220,60)' valor='25' incr='1' min='25' max='600' decimales='0' fijo='sí' visible='sí' acción='calcular' parámetro='ctrl.y=(-alto/escala)-.4' dibujar-si='(modo!=0)&&(modo!=2)' activo-si='modo==3' pos_mensajes='centro'">
+   <param name="C_05" value="id='ancho_r' tipo='numérico' región='interior' espacio='E1' nombre='Ancho' expresión='(20,90,220,60)' valor='1' min='0.1' max='10' decimales='3' fijo='sí' visible='sí' dibujar-si='modo==2' pos_mensajes='centro'">
+   <param name="C_06" value="id='alto_r' tipo='numérico' región='interior' espacio='E1' nombre='Alto' expresión='(20,170,220,60)' valor='1' min='0.1' max='10' decimales='3' fijo='sí' visible='sí' dibujar-si='modo==2' pos_mensajes='centro'">
+   <param name="C_07" value="id='verificar' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Recortar' expresión='(70,E1._h-50,120,30)' fijo='sí' visible='sí' color='blanco' fuente puntos='16' imagen='images/btn120x30.png' acción='calcular' parámetro='verificar()' dibujar-si='modo!=0'">
+   <param name="C_08" value="id='cerrar' tipo='numérico' interfaz='botón' región='interior' espacio='retro' expresión='(retro._w-35,5,30,30)' fijo='sí' visible='sí' imagen='images/cerrar.png' acción='calcular' parámetro='verificado=0' pos_mensajes='centro'">
+   <param name="A_01" value="id='setAA()' algoritmo='sí' algoritmo='sí' hacer='ctrl.x=(ctrl.x<.4)?.4:ctrl.x;ctrl.x=(ctrl.x>6.365)?6.365:ctrl.x;ctrl.y=(ctrl.y>-.4)?-.4:ctrl.y;ctrl.y=(ctrl.y<-9.583)?-9.583:ctrl.y;ancho=(ctrl.x*escala)-15;alto=(-ctrl.y*escala)-25'">
+   <param name="A_02" value="id='setRazon()' algoritmo='sí' algoritmo='sí' hacer='ctrl.y=-(ctrl.x*alto_r)/ancho_r'">
+   <param name="A_03" value="id='verificar()' algoritmo='sí' algoritmo='sí' hacer='corrAA=(ancho==alto)?0:(ancho>alto?((ancho/alto>=1.41)&&(ancho/alto<1.42)):((alto/ancho>=1.41)&&(alto/ancho<1.42)));corrRazon=(ancho_r==alto_r)?0:(ancho_r>alto_r?((ancho_r/alto_r>=1.41)&&(ancho_r/alto_r<1.42)):((alto_r/ancho_r>=1.41)&&(alto_r/ancho_r<1.42)));corr=(modo==2)?corrRazon:corrAA;verificado=1'">
+   <param name="A_04" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' inicio='verificado=0;corr=0' hacer='xIni=0;yIni=0;xFin=6.4;yFin=-9.6;escala=1.304*50'">
+   <param name="A_05" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='varAyuda1=(modo==1)?setAA():0;varAyuda2=(modo==2)?setRazon():0'">
+   <param name="G_01" value="espacio='E1' tipo='imagen' expresión='(xIni,yIni)' archivo='images/foto_tarea.jpg'">
+   <param name="G_02" value="espacio='seleccion' tipo='polígono' color='31808080' dibujar-si='modo!=0' expresión='(xIni,yIni)(ctrl.x,yIni)(ctrl.x,ctrl.y)(xIni,ctrl.y)(xIni,yIni)' relleno='c6ffffff' info='Área de selección'">
+   <param name="G_03" value="espacio='seleccion' tipo='polígono' color='008400' dibujar-si='(modo!=0)&&(verificado==1)&&(corr==1)' expresión='(xIni,yIni)(ctrl.x,yIni)(ctrl.x,ctrl.y)(xIni,ctrl.y)(xIni,yIni)' relleno='ffffffff' ancho='3' info='Área de selección corr'">
+   <param name="G_04" value="espacio='E1' tipo='texto' dibujar-si='0' expresión='[600,20]' texto='[seleccion.Oy]' decimales='3' fijo='sí' info='trace'">
+   <param name="G_05" value="espacio='retro' tipo='texto' dibujar-si='(corr==1)&&(modo==2)' expresión='[20,50]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;\f3\fcharset0 Courier New;}\f1\fs34\u161 Muy bien! La raz\u243 n que elegiste cumple\par con la ecuaci\u243 n \f2\fs34\i{\*\mjaformula{\fraction{\num L}{\den l}}={\radical{\index}{\radicand 2}}}\f3\fs30\i0 .\par \par \f1\fs34\u191 Ya hiciste el ejercicio con los otros\par modos de selecci\u243 n?\f3\fs30}' fuente='SansSerif,PLAIN,17' fijo='sí'">
+   <param name="G_06" value="espacio='retro' tipo='texto' dibujar-si='(corr==0)&&(modo==2)' expresión='[20,20]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;\f3\fcharset0 Courier New;}\f1\fs34 Recuerda que la raz\u243 n entre los lados de \par la foto debe cumplir con la ecuaci\u243 n\par  \f2\fs34\i{\*\mjaformula{\fraction{\num L}{\den l}}={\radical{\index}{\radicand 2}}}\f3\fs30\i0 .\par \par \f1\fs34 Para encontrar 2 valores v\u225 lidos, \par simplemente fija el valor de uno \par de los lados; luego sustit\u250 yelo en\par la ecuaci\u243 n y despeja el otro lado.\f3\fs30}' fuente='SansSerif,PLAIN,17' fijo='sí'">
+   <param name="G_07" value="espacio='retro' tipo='texto' dibujar-si='(corr==1)&&(modo!=2)' expresión='[30,30]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;\f3\fcharset0 Courier New;}\f1\fs34\u161 Muy bien! Los valores de los lados\par cumplen con la ecuaci\u243 n \f2\fs34\i{\*\mjaformula{\fraction{\num L}{\den l}}={\radical{\index}{\radicand 2}}}\f3\fs30\i0 .\par \par \f1\fs34\u191 Ya hiciste el ejercicio con el modo\par de selecci\u243 n &squot;Raz\u243 n fija&squot;?\f3\fs30  \f1\fs34 Es el que\par probablemente te resulte m\u225 s \u250 til\par para hacer este tipo de edici\u243 n de\par imagen.\f3\fs30}' fuente='SansSerif,PLAIN,17' fijo='sí'">
+   <param name="G_08" value="espacio='retro' tipo='texto' dibujar-si='(corr==0)&&(modo!=2)' expresión='[20,20]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;\f3\fcharset0 Courier New;}\f1\fs34 Recuerda que la raz\u243 n entre los lados de \par la foto debe cumplir con la ecuaci\u243 n\par  \f2\fs34\i{\*\mjaformula{\fraction{\num L}{\den l}}={\radical{\index}{\radicand 2}}}\f3\fs30\i0 .\par \par \f1\fs34 Para encontrar 2 valores v\u225 lidos, \par simplemente fija el valor de uno \par de los lados; luego sustit\u250 yelo en\par la ecuaci\u243 n y despeja el otro lado.\f3\fs30}' fuente='SansSerif,PLAIN,17' fijo='sí'">
+   <param name="G_09" value="espacio='retro' tipo='polígono' color='07746b' coord_abs='sí' expresión='(0,0)(retro._w-2,0)(retro._w-2,retro._h-2)(0,retro._h-2)(0,0)' ancho='2'">
+   <param name="G_10" value="espacio='seleccion' tipo='polígono' color='31808080' dibujar-si='verificado&&corr&&0' expresión='(ctrl.x,yIni)(xFin,yIni)(xFin,yFin)(xIni,yFin)(xIni,-ctrl.y)(ctrl.x,-ctrl.y)(ctrl.x,yIni)' relleno='negro' info='Polígono alrededor'">
+</ajs></p>
+
+</body>
+</html>

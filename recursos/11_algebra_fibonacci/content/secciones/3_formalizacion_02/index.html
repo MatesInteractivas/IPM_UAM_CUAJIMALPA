@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Formalización del problema</h1>
+    <h2>Tendencia de cocientes sucesivos de números de Fibonacci</h2>
+    
+    <!--- Párrafo --->
+    <p>
+    Ya sabemos que el número de Fibonacci de una generación \(n\) (la cual, en el caso de las abejas, corresponde al número de abejas en esa generación) se denota como \(F_n\).
+    El número de Fibonacci de una generación sucesiva se denotará entonces como \(F_{n-1}\). De tal forma que el cociente entre estos dos sucesivos es \(\frac{F_n}{F_{n-1}}\).
+    <br>
+    Y seguramente observaste en la segunda página de la exploración que al ser \(n\) cada vez más grande, este cociente parece tender a un valor determinado, representado por la línea verde en el recurso interactivo de esa página.
+    </p>
+    
+    <p class='problema'>
+      <strong>Objetivo</strong>
+      <br><br>
+    Dada la notación de cocientes de números de Fibonacci, vamos a determinar el valor al que se aproximan dichos cocientes de generaciones sucesivas al crecer mucho \(n\).
+    </p>
+    
+    <p>
+    Para ello, es importante notar algunas cosas:
+    <ul>
+      <li>Cuando \(n\) es cada vez más grande, los cocientes sucesivos de números de Fibonacci se parecerán más y más entre ellos, de manera que cuando \(n\) se vuelva infinito, los cocientes sucesivos serán iguales.</li>
+      <br>
+      <li>Lo anterior te permitirá llegar a una ecuación para encontrar el número al que tienden los cocientes al tender \(n\) a la infinidad.</li>
+    </ul>
+    </p>
+    
+
+    <p>
+    El siguiente espacio interactivo te ayudará a entender cómo usar los 2 puntos anteriormente mencionados para obtener la ecuación requerida y, a partir de ésta, calcular el valor al que tienden los cocientes.
+    </p>
+    
+    <!--- Instrucciones --->
+    <div class="instrucciones">En el siguiente interactivo habrás de responder primero una serie de preguntas que te llevarán al valor exacto al que tienden los cocientes de números de Fibonacci sucesivos al hacerse \(n\) tan grande como se desee. Para avanzar de una pantalla a otra, habrás primero de responder correctamente las preguntas de la pantalla en que te encuentres. Una vez que respondas bien todas las preguntas, podrás cerrar la ventana de preguntas y observar los valores de los cocientes de la sucesión hasta el decimoquinto valor. Haz tu mejor intento para encontrar las respuestas por tu propia cuenta. Intenta varias veces de ser necesario. Tras tres intentos fallidos tendrás acceso a la respuesta. Sin embargo, sólo pulsa el botón 'Respuesta' cuando realmente no logres obtener la solución al problema.</div>
+
+
+    <!-- ejemplo para incluir un documento externo en un iframe, aqui van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="750" height="510" frameborder="0" src="escenas/escena1.html"></iframe>
+    </div>
+
+    
+    <h2>Algunas observaciones sobre el número \(\Phi\)</h2>
+
+    <p class='importante' style='margin-left:10%;margin-right:10%'>
+    Observamos que los cocientes de números sucesivos de la sucesión de Fibonacci tienden a \(\Phi\), la proporción áurea.
+    </p>
+    <p>
+    En la parte de reflexiones de la unidad <em>Geometría: Impresión a escala</em> también se hace referencia a esta proporción.
+    </p>
+
+    <p>
+    Habrás notado que los cocientes tienden a este número muy rápido, tal que para la decimoquinta generación casi no se notan ya diferencias hasta los 5 primeros decimales.
+    </p>
+
+    <p>
+    Algunas propiedades sorprendentes de dicho número:
+    </p>
+	<ul>
+		<li>Es el único número que elevado al cuadrado da el mismo valor que si le sumas la unidad. Es decir: \(1.61803^2=1.61803+1\). ¡Claro!, la fórmula de donde lo obtuviste es \(x^2=x+1\); esa misma definición lleva implícito este comportamiento.</li>
+		<br>
+		<li>Aparece en una gran cantidad de fenómenos naturales, algunos de los cuales podrás explorar en la sección de reflexiones de la presente unidad.</li>
+		<br>
+		<li>Presenta formas matemáticas de escribirlo muy curiosas. También éstas las conocerás en las reflexiones.</li>
+		<br>
+		<li>Al igual que \(\sqrt{2}\), <em>e</em> y \(\pi\), es un número irracional (no puede escribirse como el cociente de dos enteros).
+		No obstante, bajo una notación particular que verás en la parte de reflexiones, es el número que más difícilmente puede aproximarse al cociente de dos enteros.
+		Por ello, algunos consideran que es <strong>el número más irracional que existe</strong>.</li>
+	</ul>
+
+    
+    <br>
+
+    <div class="tarea">
+      <h3>Tarea</h3>
+      <p>
+      Trata de encontrar, por tu cuenta, el mismo número al que tienden los cocientes pero ahora usando el cociente \(\frac{F_n}{F_{n-1}}\) en vez del \(\frac{F_{n-1}}{F_{n-2}}\). Se te presentan algunas sugerencias:
+      
+      </p><ul>
+	<li>Recuerda que para ello, deberás usar el hecho de que el número de Fibonacci de un cierto índice es igual a la suma del número de Fibonacci de un índice previo y aquél de dos índices menores. Ahora deberás encontrar una forma de expresar a \(F_{n-2}\) en términos de \(F_n\) y \(F_{n-1}\).</li>
+	<br>
+	<li>Al igual que como se realizó en el espacio interactivo, con que llegues a la ecuación \(x^2=x+1\) es suficiente, ya que ya sabes que el resolverla para \(x\) dará el resultado que buscas.</li>
+      </ul>
+      
+      <br>
+      <div class="verSolucion" id="btSolucion" onclick="document.getElementById('solucion').setAttribute('class','visible');document.getElementById('btSolucion').setAttribute('class','oculto');">
+    </div>
+      
+    </div>
+
+    
+
+    <div id="solucion" class='oculto'>
+    
+    <h2>Solución</h2>
+      
+    <p>
+    <ol>
+		<li>Sabemos que \(F_{n}=F_{n-2}+F_{n-1}\). De ahí que \(F_{n-2}=F_n-F_{n-1}\).</li>
+		<br>
+		<li>Sustituyendo esto en la igualdad ya obtenida de \(\frac{F_n}{F_{n-1}}=\frac{F_{n-1}}{F_{n-2}}\), se obtiene que \(\frac{F_n}{F_{n-1}}=\frac{F_{n-1}}{F_n-F_{n-1}}\).</li>
+		<br>
+		<li>Multiplicamos ambos lados de la ecuación por \(F_n-F_{n-1}\), de donde se obtiene \(\frac{{F_n}^2-{F_n}{F_{n-1}}}{F_{n-1}}=F_{n-1}\).</li>
+		<br>
+		<li>Dividimos ambos lados por \(F_n\), de donde \(\frac{F_n-F_{n-1}}{F_{n-1}}=\frac{F_{n-1}}{F_n}\), que simplificando resulta ser \(\frac{F_n}{F_{n-1}}-1=\frac{F_{n-1}}{F_n}\).</li>
+		<br>
+		<li>El cociente que buscamos es \(\frac{F_n}{F_{n-1}}\), al cual bautizaremos como \(x\). Así, la ecuación queda representada como \(x-1=\frac{1}{x}\).</li>
+		<br>
+		<li>Multiplicamos ambos lados por \(x\), lo cual nos da \(x^2-x=1\). Agrupando los términos de un mismo lado de la igualdad, se obtiene \(x^2-x-1=0\), la misma que habíamos obtenido anteriormente.</li>
+	</ol>
+    </p>
+    
+    <p>
+    Avanza ahora a la parte de resolución de problemas para practicar con algunos ejercicios relacionados con la sucesión de Fibonacci.
+    </p>
+
+    </div>
+
+  
+      <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

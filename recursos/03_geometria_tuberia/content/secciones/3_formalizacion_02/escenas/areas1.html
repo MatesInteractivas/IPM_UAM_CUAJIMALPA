@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<title>TITULO</title>
+	<!-- CSS -->
+	<link rel="stylesheet" href="../../../css/descartes.css" />
+	<title>TITULO</title>	
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body style="margin:0px;padding:0px;overflow:hidden;">
+
+<p align="center">
+<ajs name="Descartes" width=760 height=480 code="Descartes">
+   <param name="tamaño" value="760x480">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.3.12, 2014-07-09">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' escala='1' O.x='-50%' O.y='-50%' imagen='images/fondo.jpg' despl_imagen='arr-izq' fondo='f7f0ec' red='no' red10='no' ejes='no' texto='405860'">
+   <param name="E_02" value="tipo='R2' id='graficos' x='graficos.x' y='graficos.y' ancho='440' alto='440' fijo='sí' escala='50' despl_imagen='arr-izq' red='b8c4c8' red10='889498' ejes='405860' texto='no'">
+   <param name="E_03" value="tipo='R2' id='MSG_mask' dibujar-si='MSG.visible' fijo='sí' despl_imagen='arr-izq' fondo='82000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_04" value="tipo='R2' id='MSG' x='MSG.x' y='MSG.y' ancho='570' alto='400' dibujar-si='MSG.visible' fijo='sí' despl_imagen='arr-izq' fondo='blanco' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='boton cua' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='?' expresión='(410,155,30,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn30x30.png' dibujar-si='0'">
+   <param name="C_02" value="id='boton peq' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Botón' expresión='(450,155,60,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn60x30.png' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_03" value="id='boton med' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Verificar' expresión='(520,155,90,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn90x30.png' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_04" value="id='boton gra' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Haz clic aquí' expresión='(620,155,120,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn120x30.png' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_05" value="id='r' tipo='numérico' región='exterior' espacio='E1' nombre='Radio' expresión='(r.ctr.x,r.ctr.y,r.ctr.w,r.ctr.h)' valor='r' min='2' max='4' fijo='sí' visible='sí' acción='calcular' parámetro='updateGraf()' dibujar-si='r.ctr.visible' activo-si='r.ctr.activo' pos_mensajes='centro'">
+   <param name="C_06" value="id='ang' tipo='numérico' región='exterior' espacio='E1' nombre='Ángulo' expresión='(ang.x,ang.y,ang.w,ang.h)' valor='ang' min='minAng' max='maxAng' fijo='sí' visible='sí' acción='calcular' parámetro='updateGraf()' pos_mensajes='centro'">
+   <param name="C_07" value="id='menuResp' tipo='numérico' interfaz='menú' región='interior' espacio='E1' nombre='_nada_' expresión='(menuResp.x,menuResp.y,menuResp.w,menuResp.h)' fijo='sí' visible='no' opciones='Selecciona...,Suma,Resta' acción='calcular' pos_mensajes='centro'">
+   <param name="C_08" value="id='btnClose' tipo='numérico' interfaz='botón' región='interior' espacio='MSG' nombre='Continuar' expresión='(btnClose.x,btnClose.y,btnClose.w,btnClose.h)' fijo='sí' visible='sí' color='blanco' color-int='blanco' negrita='sí' fuente puntos='22' imagen='vacio.gif' acción='calcular' parámetro='tt=(menuResp>0)?initInter():0\nMSG.visible=0' pos_mensajes='centro'">
+   <param name="C_09" value="id='btnInfo' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Verificar' expresión='(btnInfo.x,btnInfo.y,btnInfo.w,btnInfo.h)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='22' imagen='vacio.gif' acción='calcular' parámetro='verificar(menuResp)' pos_mensajes='centro'">
+   <param name="A_01" value="id='polArea' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='100' filas='103' expresión=';'">
+   <param name="A_02" value="id='hackImages()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='tmp=&squot;images/btn30x30.png&squot;'">
+   <param name="A_03" value="id='initEscene()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='_margenX=20;graficos.x=_margenX;graficos.y=(E1._h-graficos._h)/2;;;MSG.x=(E1._w-MSG._w)/2;MSG.y=(E1._h-MSG._h)/2;;initCtrs();MSG.visible=0'">
+   <param name="A_04" value="id='initCtrs()' algoritmo='sí' algoritmo='sí' hacer='r.ctr.w=210;r.ctr.h=50;;r.ctr.txt=&squot;r&squot;;r.ctr.activo=1;r.ctr.visible=1;;ang.w=210;ang.h=50;;;_gapX=20;_gapY=20;;_tmpH=(r.ctr.h+_gapY+ang.h);r.ctr.x=(graficos.x+graficos._w+_gapX);r.ctr.y=(E1._h-_tmpH-_gapY);;ang.x=r.ctr.x;ang.y=r.ctr.y+r.ctr.h+_gapY;;;btnClose.w=130;btnClose.h=40;btnClose.x=(MSG._w-btnClose.w)/2;btnClose.y=MSG._h-btnClose.h-10;;;;;;menuResp.w=200;menuResp.h=40;_tmpX=(graficos.x+graficos._w);_tmpW=(E1._w-_tmpX);menuResp.x=_tmpX+(_tmpW-menuResp.w)/2;menuResp.y=225;;;btnInfo.w=120;btnInfo.h=50;btnInfo.x=_tmpX+(_tmpW-btnInfo.w)/2;btnInfo.y=(graficos.y+graficos._h)-btnInfo.h;'">
+   <param name="A_05" value="id='initInter()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='r.ctr.visible=1;r=4;;;minAng=pi/4;maxAng=7*pi/4;;ang=(minAng+rnd*(maxAng-minAng));ang=ent((ang+0.005)*100)/100;;correcta=0;verificado=0;menuResp=0;MSG.visible=0;;;updateGraf();'">
+   <param name="A_06" value="id='updateGraf()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='ang.rad1=pi/2-ang/2;ang.rad2=pi/2+ang/2;;ang.arc.ini=ang.rad1*180/pi;ang.arc.end=ang.rad2*180/pi;;;ang.p1.x=r*cos(ang.rad1);ang.p1.y=r*sen(ang.rad1);;ang.p2.x=r*cos(ang.rad2);ang.p2.y=r*sen(ang.rad2);;ang.label.x=0;ang.label.y=(r/3);;;;;;;;;;tiang.px=r*cos(ang.rad1);tiang.py=r*sen(ang.rad1);tiang.p1x=(tiang.py<0)?-tiang.px:tiang.px;tiang.p2x=-tiang.p1x;;tiang.angR=min(r/3,abs(tiang.py/2));triang.ang1=((tiang.py>0)?180-ang.arc.end:ang.arc.ini);triang.ang2=((tiang.py>0)?180-ang.arc.ini:ang.arc.end);;triang.angM=(pi/180)*(triang.ang1+triang.ang2)/2;triang.angM=(pi/2)*((tiang.py<0)?-1:1);;;;triang.recto.x=20/graficos.escala;triang.recto.y=triang.recto.x;triang.recto.y=tiang.py+((tiang.py<0)?1:-1)*triang.recto.y;;;k=20-graficos2._h/2+graficos2.escala*tiang.py;k2=graficos2._h-20-graficos2._h/2+graficos2.escala*tiang.py;;graficos2.Oy=min(max(graficos2.Oy,k),k2);;;getAbsCoordGraf(tiang.px/3,tiang.py);aLabel.x=_px;aLabel.y=_py;getAbsCoordGraf(0,tiang.py*2/3);bLabel.x=_px;bLabel.y=_py;getAbsCoordGraf(tiang.px/2,tiang.py/2);rLabel.x=_px;rLabel.y=_py;;getAbsCoordGraf(0,(tiang.py<0)?0:tiang.angR);tLabel.x=_px;tLabel.y=_py+20;;;_suma=pi/2;angArea.rad1=(_suma-ang/2);angArea.rad2=(_suma+ang/2);;angArea.paso=ent(35*abs(angArea.rad1-angArea.rad2)/(2*pi));'">
+   <param name="A_07" value="id='getAbsCoordGraf(px,py)' algoritmo='sí' algoritmo='sí' hacer='_px=graficos.Ox+graficos._w/2+graficos.escala*px;_py=graficos.Oy+graficos._h/2-graficos.escala*py'">
+   <param name="A_08" value="id='verificar(idxRes)' algoritmo='sí' algoritmo='sí' hacer='_correcta=(ang>pi)?1:2;correcta=(idxRes==_correcta);MSG.visible=1;'">
+   <param name="A_09" value="id='creaPoligono(x)' algoritmo='sí' expresión='x' algoritmo='sí' inicio='init=ang.rad1;nP=12'">
+   <param name="A_10" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='initEscene();initInter()'">
+   <param name="A_11" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='sychEspGraf();rG=r+1/graficos.escala;tt=(graficos.mouse_pressed)?getSelected():0;;pySed=r*sen(sedimento.ang);pyAgua=r*sen(agua.ang-pi/2);;tt=(graficos.mouse_pressed)?getSelectedArea():0;;sychEspGraf();creaPolAgua();;;;'">
+   <param name="G_01" value="espacio='graficos' tipo='curva' color='2286f1' expresión='(r*cos(t),r*sen(t))' t.intervalo='[angArea.rad1,angArea.rad2]' t.pasos='angArea.paso' relleno='f7f896' ancho='0' info='relleno area'">
+   <param name="G_02" value="espacio='graficos' tipo='arco' radio='r' inicio='ang.arc.ini' fin='ang.arc.end' fijo='sí' relleno='fff7f896' ancho='2'">
+   <param name="G_03" value="espacio='graficos' tipo='polígono' expresión='(ang.p1.x,ang.p1.y)(0,0)(ang.p2.x,ang.p2.y)' ancho='2' info='Bordes rectos el arco'">
+   <param name="G_04" value="espacio='graficos' tipo='polígono' expresión='(0,0)(tiang.px,tiang.py)(-tiang.px,tiang.py)(0,0)' relleno='71f5ab5c' ancho='2' info='Triangulo'">
+   <param name="G_05" value="espacio='graficos' tipo='arco' radio='r' fin='360' fijo='sí' ancho='3' info='Circulo completp'">
+   <param name="G_06" value="espacio='graficos' tipo='arco' color='gris' radio='tiang.angR' inicio='_(tiang.p1x,tiang.py)' fin='(tiang.p2x,tiang.py)' vectores='sí' fuente='SansSerif,BOLD,22' fijo='sí' ancho='3' info='Angulo triangulo'">
+   <param name="G_07" value="espacio='graficos' tipo='arco' color='gris' radio='r/3' inicio='ang.arc.ini' fin='ang.arc.end' fijo='sí' ancho='2' info='Angulo alpha'">
+   <param name="G_08" value="espacio='graficos' tipo='polígono' fondo='sí' dibujar-si='0' expresión='(0,triang.recto.y)(triang.recto.x,triang.recto.y)(triang.recto.x,tiang.py)(0,tiang.py)(0,triang.recto.y)' relleno='ff2286f1' ancho='2' info='Águlo Recto'">
+   <param name="G_09" value="espacio='graficos' tipo='punto' fondo='sí' color='blanco' dibujar-si='0' expresión='(-15/graficos.escala+(2/graficos.escala)*cos(s),r/3+(2/graficos.escala)*sen(s))' familia='s' s.intervalo='[0,2*pi]' s.pasos='7' texto='2θ' fuente='SansSerif,BOLD,22' fijo='sí' tamaño='0' info='Etiqueta sombra'">
+   <param name="G_10" value="espacio='graficos' tipo='punto' fondo='sí' color='grisObscuro' dibujar-si='0' expresión='(-15/graficos.escala,r/3)' texto='2θ' fuente='SansSerif,BOLD,22' fijo='sí' tamaño='0' info='Etiqueta'">
+   <param name="G_11" value="espacio='graficos' tipo='texto' fondo='sí' dibujar-si='0' expresión='[10,graficos._h-25]' texto='α=2θ' fuente='Serif,ITALIC,22' fijo='sí' ancho='2' color_borde_texto='blanco'">
+   <param name="G_12" value="espacio='graficos' tipo='texto' fondo='sí' dibujar-si='0' expresión='[aLabel.x,aLabel.y]' texto='a' fuente='SansSerif,BOLD,22' fijo='sí' ancho='2' color_borde_texto='blanco'">
+   <param name="G_13" value="espacio='graficos' tipo='texto' fondo='sí' dibujar-si='0' expresión='[bLabel.x,bLabel.y]' texto='b' fuente='SansSerif,BOLD,22' fijo='sí' ancho='2' color_borde_texto='blanco'">
+   <param name="G_14" value="espacio='graficos' tipo='texto' fondo='sí' dibujar-si='0' expresión='[rLabel.x,rLabel.y]' texto='r' fuente='SansSerif,BOLD,22' fijo='sí' ancho='2' color_borde_texto='blanco'">
+   <param name="G_15" value="espacio='graficos' tipo='texto' fondo='sí' dibujar-si='0' expresión='[graficos._w-120,10]' texto='  Base = a\nAltura = b' fuente='SansSerif,BOLD,18' fijo='sí' color_borde_texto='blanco'">
+   <param name="G_16" value="espacio='graficos' tipo='texto' fondo='sí' dibujar-si='0' expresión='[tLabel.x,tLabel.y]' texto='θ' fuente='SansSerif,BOLD,22' fijo='sí' ancho='2' color_borde_texto='blanco'">
+   <param name="G_17" value="espacio='MSG' tipo='texto' dibujar-si='(menuResp>0)&(!correcta)' expresión='[10,40]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Arial;\f4\fcharset0 Courier New;}{\colortbl\red72\green180\blue116;\red154\green29\blue34;\red32\green48\blue58;}\cf0\f1\fs64\b\par \par            \cf1 Revisa tu respuesta.\cf2\fs44\b0\par \par \fs56            En este caso se debe\fs44  \fs56{\*\mjaformula{\expr (ang&gt;pi)?&squot;sumar&squot;:&squot;restar&squot;\decimals 2\fixed1}}\f4\fs30 .}' fuente='SansSerif,BOLD,32' fijo='sí'">
+   <param name="G_18" value="espacio='E1' tipo='texto' expresión='[menuResp.x-40,menuResp.y-100]' texto='La operación que se necesita hacer en este caso es : ' fuente='SansSerif,PLAIN,26' fijo='sí' ancho='300' color_borde_texto='blanco'">
+   <param name="G_19" value="espacio='graficos' tipo='curva' color='2286f1' expresión='(r*cos(t),r*sen(t))' t.intervalo='[angArea.rad1,angArea.rad2]' t.pasos='angArea.paso' ancho='4'">
+   <param name="G_20" value="espacio='graficos' tipo='segmento' color='2286f1' expresión='(tiang.px,tiang.py)(-tiang.px,tiang.py)' fijo='sí' tamaño='0' ancho='5'">
+   <param name="G_21" value="espacio='MSG' tipo='texto' dibujar-si='(menuResp>0)&(correcta)' expresión='[10,40]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Arial;\f4\fcharset0 Courier New;}{\colortbl\red72\green180\blue116;\red32\green48\blue58;}\cf0\f1\fs64\b\par \par                    Corrrecto\cf1\fs44\b0  \par \par \fs56            En este caso se debe\fs44  \fs56{\*\mjaformula{\expr (ang&gt;pi)?&squot;sumar&squot;:&squot;restar&squot;\decimals 2\fixed1}}.\f4\fs30}' fuente='SansSerif,BOLD,32' fijo='sí'">
+   <param name="G_22" value="espacio='MSG' tipo='texto' dibujar-si='menuResp==0' expresión='[10,40]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs60\par \par \par Debes seleccionar una de las opciones\f2\fs30 .}' fuente='SansSerif,PLAIN,30' fijo='sí'">
+</ajs></p>
+
+</body>
+</html>

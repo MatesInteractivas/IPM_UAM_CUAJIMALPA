@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+   <h1>Exploración inicial del problema</h1>
+    
+    <h2>Optimización de una red arbitraria</h2>
+    <!--- Párrafo --->
+    <p>
+      Como te prometimos, ahora trabajaremos con un cuadro de costos
+      generado al azar, simulando una problemática real cualquiera.
+    </p>
+    
+    <div class='instrucciones'>
+      De manera muy similar a la escena anterior, a continuación
+      incluimos un cuadro de costos y la representación gráfica
+      correspondiente. Podrás marcar y desmarcar los enlaces al
+      presionar sobre los puntos anaranjados o sobre los costos del
+      cuadro.<br><br>Podrás variar entre 3 y 9 el valor de \(N\), que
+      representa el número de puntos a conectar.
+    </div>
+    
+    <!-- ejemplo para incluir un documento externo en un iframe, aqui van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="480" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+
+    <p>
+      <strong>¿Solución inválida?</strong>
+      <br><br>
+      Es importante aclarar a qué se refiere esta situación.
+      <br><br>
+      Si obtuviste
+      este resultado al trabajar con la escena anterior, o incluso en
+      alguna de las previas, ya sabes de qué se trata. Si no fue así,
+      puedes obtenerlo, por ejemplo, si ajustas a 5 el número de
+      puntos y marcas los siguientes enlaces: AB, BC, CA y DE.
+      <br><br>
+      ¿Qué pasa?, ¿por qué, a pesar de que todos los puntos están conectados
+      con algún otro y el número de enlaces es suficiente para unir
+      todos los puntos, esta configuración no nos es útil para
+      solucionar el problema?
+    </p>
+
+  <div class="problema">
+    <strong>Preguntas</strong>
+    <br><br> Después de haber practicado varias veces la búsqueda de
+     la solución óptima, seguramente ya tienes algunas ideas del procedimiento.
+     <ol>
+      <li>¿Cuáles son estas ideas o recomendaciones generales?</li>
+      <br>
+      <li>¿Qué pasos te permiten acercarte a la solución óptima?</li>
+      <br>
+      <li>¿Crees que el procedimiento para solucionar este tipo de
+      problemas puede modificarse si en lugar de buscar la suma mínima
+      de costos, nos interesara lo contrario y buscásemos la suma máxima de costos?</li>
+      <br>
+      <li>¿Se te ocurre alguna situación donde el costo máximo, a lo
+      mejor visto como capacidad, voltaje o ganancia, por ejemplo,
+      tenga sentido?</li>
+     </ol>
+  </div>
+
+    <p class="importante" style='margin-left:10%;margin-right:10%;'>
+      En relación con la última pregunta, en la parte de las
+      matemáticas que se dedica a estudiar este tipo de problemas, la
+      terminología que generalmente se usa en lugar
+      de <strong>costo</strong> es
+      <strong>peso</strong>. También a los <strong>puntos</strong> 
+      se les conoce como <strong>vértices</strong>
+      o <strong>nodos</strong> y a los
+      <strong>enlaces</strong> como <strong>aristas</strong>.
+    </p>
+
+    <p>
+    En la siguiente sección estudiaremos algunos conceptos y daremos
+    solución al problema desarrollando un procedimiento general que
+    será aplicable tanto para minimizar como para maximizar la suma de pesos.
+    </p>
+
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>
+    
+
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

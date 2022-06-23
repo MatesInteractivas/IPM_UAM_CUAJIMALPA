@@ -1,0 +1,331 @@
+/* CSS Document */
+@charset "utf-8";
+@font-face { font-family:Lobster-Regular; src: url('../fonts/Lobster-Regular.ttf'); } 
+@font-face { font-family:RobotoCondensed-Regular; src:url('../fonts/RobotoCondensed-Regular.ttf'); } 
+@font-face { font-family:RobotoCondensed-Bold; src:url('../fonts/RobotoCondensed-Bold.ttf'); } 
+@font-face { font-family:Raleway-SemiBold; src: url('../fonts/Raleway-SemiBold.ttf'); } 
+
+
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: RobotoCondensed-Regular;
+}
+
+/* cuerpo de la pagina html */
+body {
+	/*background-color: #ffffff;*/
+	color: #111;
+	font-family: RobotoCondensed-Regular;
+	padding: 10px 0px;
+        margin: 0px;
+        border: 0px;
+	overflow: hidden;
+}
+
+
+/* título de la página */
+h1{
+font-size: 20px;
+color: #323B4D;
+margin: 10px 30px 15px;
+border-bottom: 2px solid #36B399;
+line-height: 34px;
+font-family: RobotoCondensed-Bold;
+}
+
+/* subtítulos */
+h2{
+	font-size: 18px;
+	font-weight: normal;
+	color: #d07020;
+	/*color: #b76024; --> otra propuesta */
+	margin: 20px 30px 15px 30px;
+	text-indent:33px;
+	background: url("../img/Ic-h2.png ") no-repeat scroll 0% 0% transparent;
+	font-family: RobotoCondensed-Regular;
+}
+
+/* header tareas */
+h3{
+	font-size: 20px;
+	font-weight: normal;
+	color: #323B4D;
+	/*color: #b76024; --> otra propuesta */
+	margin: 20px 30px 15px 30px;
+	font-family: Lobster-Regular;
+	text-indent:30px;
+	background: url("../img/Ic-tarea.png ") no-repeat scroll 0% 0% transparent;
+
+}
+
+/* texto */
+p{
+	font-size: 16px;
+	color: #232323;
+	text-align: justify;
+	margin: 20px 30px;
+}
+
+/* Ordered list */
+ol{
+	padding-left: 60px;
+	padding-right: 60px;
+	text-align: justify;
+}
+
+/* Unordered list */
+ul{
+	padding-right: 60px;
+	text-align: justify;
+}
+
+ul > li{
+	margin-left:20px;
+}
+
+
+/* contenedor del contenido, para estilar mejor como acomodar el contenido */
+.course_content_container {
+	position: relative;	
+	background:url(../img/light_wool.png);
+	width: 830px;
+	height: 100%;
+	/*min-height: 580px;*/
+	min-height: 600px;
+	text-align: center;
+	padding: 0px;
+	margin: 0px auto;
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.75);
+}
+
+/* el texto del contenido */
+.course_content { 
+	width: 100%;
+	/*height: 100%;*/
+	overflow: auto;
+	text-align: initial;
+	display: inline-block;
+	margin: 0px;
+	padding: 20px 0px 10px 0px;
+	background-image:url(../img/light_wool.png);
+}
+
+/* el texto del índice */
+.course_content, .index_content {
+	text-align: initial;
+	display: inline-block;
+}
+
+
+/* contenedor para los elementos externos, como animaciones, interacciones y video */
+div .course_extern_content {
+	text-align: center;
+	padding: 5px;
+	overflow: hidden;
+}
+
+.course_iframe{
+	overflow: hidden;
+}
+
+img {
+	max-width: 100%;
+}
+
+
+/*Créditos y Condiciones de uso*/
+
+.div_creditos{
+	margin: 10px 30px 15px 30px;
+	border-top: 2px solid #36B399;
+	margin-top: 30px;
+	text-align: center;
+	padding-top: 15px;
+}
+
+.liga_creditos{
+	color: #323B4D;
+	font-size: 13px;
+	cursor: pointer;
+	font-weight: lighter;
+}
+.liga_creditos:hover{
+	color: #36B399;
+}
+.liga_creditos:active{
+	color: #323B4D;
+}
+
+/*Resaltes en cajas de texto*/
+
+/*Instrucciones*/
+.instrucciones {
+    color: #363030;
+    font-style: italic;
+    margin: 10px 28px;
+    padding: 10px;
+    border: 1px solid #DCDCDC;
+    text-align: justify;
+    font-size: 16px;
+    border-radius: 10px;
+    text-indent:20px;
+    background: url("../img/Ic-inst.png ") no-repeat scroll 0% 0% rgba(62, 164, 168, 0.41);
+}
+
+
+/* contenedor para resaltar contenido importante como definiciones, leyes, axiomas, ... */
+.importante {
+    background: none repeat scroll 0% 0% rgba(240, 129, 24, 0.2);
+    border-radius: 10px;
+    padding: 15px;
+    color: #475E8C;
+}
+
+
+/*Tarea*/
+/* contenedor con tarea cuya soluci—n se proporcionar‡ en pdf */
+
+.tarea {
+    border-radius: 10px;
+    padding: 0px;
+    margin: 20px 30px;
+    font-weight: normal;
+    display: block;
+	background:url("../img/gplaypattern.png");
+	border: 1px solid #36B399;
+}
+
+/* contenedor para resaltar un problema matemático que se tiene que resolver  */
+.problema{
+	border-radius: 10px 40px;
+	padding: 20px;
+	background: none repeat scroll 0% 0% rgba(59, 179, 212, 0.23);
+	color: #2F385D;
+	/*margin-left: 70px;*/
+	margin: 20px 30px 20px 70px;
+}
+
+.cargar{
+	background-image: url("../img/bt_cargar_up.png");
+	width: 160px;
+	height: 47px;
+	position: relative;
+	left: 50%;
+	margin-left: -80px;
+	margin-bottom: 20px;
+	cursor: pointer;
+}
+.cargar:hover{
+	background-image: url("../img/bt_cargar_over.png");
+}
+
+
+.verSolucion{
+	background-image: url("../img/bt_verSolucion_up.png");
+	width: 140px;
+	height: 47px;
+	position: relative;
+	left: 50%;
+	margin-left: -70px;
+	margin-bottom: 20px;
+	cursor: pointer;
+}
+.verSolucion:hover{
+	background-image: url("../img/bt_verSolucion_over.png");
+}
+
+/* fórmulas matemáticas */
+.formula{
+  font-family: serif;
+  font-size: 19px;
+  font-style: italic; 
+}
+
+/*** Nuevo Tine ***/
+a{
+	color: #344E8D;
+}
+/******/
+
+
+table{
+	width: 85%;
+	margin: 20px auto;
+}
+
+/* Estilo tablas en tarea */
+.tablaTarea{
+	border: 2px solid #dddddd;
+	
+}
+.tablaTarea > thead{
+	border: 2px solid #dddddd;
+	padding: 10px;
+	background-color: #dddddd;
+}
+.tablaTarea > thead > tr > th{
+	padding: 10px;
+}
+.tablaTarea > tbody > tr > td{
+	border: 1px solid #dddddd;
+	padding: 6px;
+}
+
+/* Estilo tablas importantes en html */
+.tablaImportante{
+	border: 0px;
+	width: auto;
+	min-width: 50%;
+}
+.tablaImportante > thead {
+	background: rgba(240, 129, 24, 0.5);
+	border-radius: 10px !important;
+	padding: 20px;
+}
+.tablaImportante > thead > tr {
+	border-radius: 10px !important;
+}
+.tablaImportante > thead > tr > th {
+	padding: 20px !important;
+}
+.tablaImportante > tbody > tr > td {
+	background: rgba(240, 129, 24, 0.2);
+	border-radius: 10px;
+	border: 0px;
+	padding: 8px;
+	text-align: center;
+}
+
+
+
+/****** VENTANA DEFINICIÓN GLOSARIO ********/
+
+.ventana_def{
+  position: relative;
+  width: 400px;
+  height: auto;
+  left: 50%;
+  margin-left: -200px;
+  border-radius: 10px;
+  background-color: #F7E0D0;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.75);
+  padding: 20px;
+  text-align: justify;
+}
+
+
+/* header tarea final */
+h4{
+	font-size: 20px;
+	font-weight: normal;
+	color: #D78028;
+	margin: 20px 30px 15px 30px;
+	font-family: Lobster-Regular;
+	text-indent:30px;
+	background: url("../img/Ic-tFinal.png") no-repeat scroll 0% 0% transparent;
+}
+
+

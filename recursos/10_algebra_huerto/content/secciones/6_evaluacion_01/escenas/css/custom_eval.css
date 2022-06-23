@@ -1,0 +1,154 @@
+.text img{
+	height: 150px;
+	border-radius: 6px;
+	margin-left: 15px;
+	margin-right: 0px;
+	vertical-align: top;
+	border: 2px solid #666;
+	box-shadow: 1px 1px 4px #999;
+
+	transition:transform 0.1s ease-in;
+	cursor:zoom-in;
+}
+
+.text img:hover{
+	transform : scale(2) translate(-25%,25%);
+	z-index: 999;
+	position: relative;
+	
+}
+
+.text {
+	text-align: justify;
+}
+
+
+
+
+#aviones .text .ilustrations {
+	margin: 10px 0 10px 0px;
+	text-align: center;
+}
+
+
+
+#aviones .text img:hover{
+	transform: scale(2) translate(15%, 25%);
+}
+
+#aviones .text table{
+	background: white;
+	border: 1px solid;
+	margin-left: 30px;
+}
+
+#areas01 .text table {
+	display: inline-table;
+	background-color: white;
+	vertical-align: middle;
+}
+
+
+#areas01 .text div.info{
+	text-align: center;
+	margin: 10px 10px;
+
+}
+
+#areas01 .text div.info img {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 20px;
+}
+
+
+#areas01 .text .info table  tr > td:nth-child(1){
+	background-color: #999;
+	padding: 2px 5px;
+}
+
+#areas01 .text .info table  tr > td:nth-child(2){
+	text-align: left;
+	padding: 2px 5px;
+}
+
+#areas01 .text{
+	margin-bottom: 5px;
+}
+
+#areas01 .options{
+	padding-top: 10px;
+}
+
+
+
+#areas01 .options.list-align > div{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+
+#areas01 .text table th,
+#aviones .text table th {
+	background-color: #9C9C9C;
+}
+
+#aviones .text table td,
+#aviones .text table th,
+OTRO{
+	text-align: center;
+	padding: 5px;
+	color: black;
+	border:1px solid gray;
+}
+
+#escalera .options {
+	font-size: 16px; 
+}
+
+
+#e_scalera .options > div{
+	margin: 0px 5px 0px 5px;
+	padding: 0px;
+}
+
+#escalera .options > div label .MathJax_Display{
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin: 0px;
+}
+
+#escalera .text img{
+	margin-left: 15px;
+	margin-right: 0px;
+}
+
+#escalera .text table{
+	width:98%;
+	margin-bottom:5px
+}
+
+
+
+#pentagono .text img:hover {
+	transform : scale(2) translate(25%,25%);
+}
+
+#huerto1 .text img:hover{
+	transform : scale(1);
+	cursor:default;
+	z-index: 999;
+}
+
+#huerto2 .text img:hover{
+	transform : scale(1);
+	cursor:default;
+	z-index: 999;
+}
+
+#huerto3 .text img:hover{
+	transform : scale(1);
+	cursor:default;
+	z-index: 999;
+}
+

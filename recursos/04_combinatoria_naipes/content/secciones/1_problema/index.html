@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+  <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+
+</head>
+
+<body onload="initialize();">
+  
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    <!--- Título de la página --->
+    <h1>Planteamiento del problema: Determinar las formas de realizar combinaciones de cartas</h1>
+    
+    <!--- Subtítulo (no necesario en introducción) --->
+    <h2>El juego de póker</h2>
+    
+    
+    <p>
+    Seguramente ya conoces o has oído hablar del juego de póker.
+    Y es probable te hayas preguntado por qué ciertas manos valen más que otras.
+    En esta unidad veremos la razón detrás de esto.
+    Pero antes que nada, hagamos un breve recordatorio de algunos conceptos necesarios para entender el juego.
+    </p>
+    
+    <div class="course_extern_content"> 
+      <img src="imgs/cartoon3904.png"> </img>
+    </div>
+
+    <p>
+    El póker se juega con una baraja o mazo de 52 cartas. Este mazo está dividido en 4 palos, a saber: las espadas, los diamantes, los tréboles y los corazones. Cada palo tiene 13 cartas (del as al rey).
+    </p>
+
+    <p>
+    El objeto del juego es obtener la mano más alta de entre los jugadores. Existen muchas variantes del póker para hacerlo más interesante (como, por ejemplo, aquellas que permiten cambiar algunas cartas ya empezado el juego), pero en esta unidad veremos el caso simple de manos de 5 cartas repartidas desde el inicio.
+    Una mano consiste en un conjunto de 5 cartas dentro de las 52 dadas al azar. Dadas las manos entre los jugadores, gana quien tenga la mano más alta.
+    Pero, ¿qué hace que un tipo de mano sea mejor que otro? Para poder responder esta pregunta, primero conozcamos los tipos de mano que hay.
+    </p>
+
+    <div class="instrucciones">
+    En el siguiente espacio interactivo selecciona el tipo de mano que deseas revisar usando el menú. Se te presentará una mano del tipo elegido al azar. Con el botón 'Reacomoda', las cartas en la mano se podrán ordenar para visualizar mejor las características de la mano en cuestión. Podrás desordenarlas nuevamente con el botón 'Desacomoda'.
+    Para cada tipo de mano podrás generar más ejemplos (que no necesariamente aparecerán ordenados de inicio) con el botón 'Otro'. Presta atención a la descripción de cada caso.
+    </div>
+
+    <!-- ejemplo para incluir un documento externo en un iframe, aquí van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="480" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+
+    <p>
+    Ahora que ya has revisado en qué consisten las distintas manos del póker, conviene notar lo siguiente:
+	<ul>
+		<li>Cuando se da una mano, las cartas generalmente estarán desordenadas. No obstante, el orden no importa, ya que el jugador que las recibe las puede reordenar a su gusto. Dicho de otra manera, una mano con 2, 3, 4, 5 y 6 de espadas es la misma que una con 3, 4, 2, 6 y 5 de espadas.</li>
+		<li>No todas las manos son igual de fáciles de hacer. Si has jugado antes, habrás notado que obtener un par en tu primera mano es relativamente fácil, mientras que obtener un póker de mano es muy difícil.</li>
+		<li>No todas las manos valen lo mismo.</li>
+	</ul>
+    </p>
+
+    <p>
+    Los conceptos en las dos últimas viñetas se encuentran íntimamente relacionados. Hay manos que son fáciles de lograr y manos que son muy difíciles. La manos más difíciles valen, como seguro habrás intuido, más que las manos fáciles. Pero entonces surge la siguiente pregunta:
+    </p>
+
+    <p class="importante">
+    ¿Cómo se determina la dificultad de lograr una mano específica en el póker?
+    </p><br>
+
+
+    <h2>Formas distintas de generar un mismo tipo de mano</h2>
+    
+    <p>
+    Es preciso notar que estamos considerando como igualmente valiosas todas las manos de un tipo. Por ejemplo, un full house con 3 cuatros y 2 cincos es equivalente a uno con 3 reyes y 2 reinas. En realidad, en póker hay reglas más sutiles que hacen la distinción entre los mencionados en este ejemplo. Pero para fines prácticos, ambos son full house y caen en la misma categoría. Así pues, nos preguntamos cuántos otros full house podemos hacer y notamos que, para uno de 3 cuatros y 2 cincos, los 3 cuatros pueden ser tréboles, espadas y corazones, o corazones, diamantes y tréboles, o espadas, diamantes y tréboles, etcétera. Adicionalmente, los 2 cincos también pueden tener diferentes combinaciones. Así que hay una gran cantidad de formas sólo para hacer el ejemplo de un full house de 3 cuatros y 2 cincos. ¡Imagina ahora cuántas formas hay de hacer todos los full house con todas las combinaciones de los diferentes números y palos de la baraja! La probabilidad de obtener un full house está íntimamente relacionada con este número, y así pasa también con los otros tipos de mano.
+    </p>
+    
+    <p>
+    Otro número que nos conviene conocer para poder calcular las probabilidades de los distintos tipos de mano es el número total de distintas manos de 5 cartas que puedes generar con un mazo de 52.
+    ¿Sabes cuál es ese número? ¡Es 2,598,960! No te asustes, la obtención de este número la abordaremos un poco más adelante. Pero regresando al tema, una estrategia para calcular el número de full houses que puedes generar es anotar las 2,598,960 diferentes manos posibles de 5 cartas con el mazo de 52 en una lista. De ahí, podríamos fijarnos cuántas forman, por ejemplo, un full house.
+    </p>
+
+    <p>
+    Esto obviamente nos tomaría mucho tiempo y esfuerzo. Por otra parte, todavía lo podrías ver realizable para una baraja de 52 cartas y tomando manos de 5 cartas.
+    ¿Qué tal si un día se inventa un juego con 69 cartas y donde las manos son de 7 cartas? Entonces tendrías que escribir una lista de 1,078,897,248 (este número también lo podrás calcular por tu cuenta una vez entiendas bien esta unidad) posibles manos distintas.
+    Un poquito engorroso, ¿no?
+    Así pues, debe haber una forma de calcular, aprovechando el pensamiento matemático, las formas sin tener que generar la lista completa. Puntualicemos entonces el problema que queremos resolver:
+    </p>
+    
+    <p class='problema'>
+      <strong>Problema</strong>
+      <br><br>
+		Encontrar, para los distintos tipos de mano, el número de formas distintas en que se pueden generar para, a partir de ese dato, calcular la probabilidad de obtener ese tipo de mano y así determinar el valor del mismo.
+        <br>
+    </p>
+
+    
+    <p>
+    <!--Ocuparemos algunas herramientas para los cálculos que es importante tener frescas, por lo que se abordarán en la primera parte de la exploración.-->
+    No obstante, antes de continuar, conviene definir algunos términos para evitar confusiones:
+    </p>
+    
+    <p class="importante">
+    Llamaremos <em>mano</em> a cualquier conjunto de 5 cartas que se puede hacer con la baraja de 52 naipes.
+    Llamaremos <em>tipo de mano</em> a, por ejemplo, la flor imperial, la flor corrida y la tercia.
+    Dos manos distintas (por ejemplo una tercia de cuatros y una tercia de reyes) pueden pertenecer a un mismo tipo de mano (las tercias).
+    </p>
+    
+
+    <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+    
+    
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+    
+
+  </div>
+  
+</article>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Reflexiones y otras aplicaciones</h1>
+    
+    <!--- Subtítulo (no necesario en introducción) --->
+    
+    <!--<h2>Reflexiones</h2>
+    
+    
+           
+
+<p>A lo largo de esta unidad, hemos visualizado, explorado y manipulado números y figuras con el fin de recrear el proceso de generalización de patrones numéricos, geométricos y de reglas de tipo natural o social. Eres capaz de construir la expresión algebraica  por medio de la formulación verbal de una regla recursiva que revele cómo recrear los términos siguientes a partir de los anteriores, encontrando el patrón que te guíe en mayor o menor medida a la fórmula matemática. </p>
+<p>Durante toda tu formación matemática te darás cuenta que la generalidad es un aspecto esencial en la actividad matemática en todos los niveles, recurrirás a ella una y otra vez sin importar el tema particular de discusión. 
+</p>
+<p>La generalización es clave para el desarrollo del pensamiento matemático y algebraico, es la base de la abstracción (Mason 1985). Está relacionado con otros procesos propios de la matemática: inducción, observación, descomposición, creación de analogías e identificación de características comunes. Y debe pasar por varias etapas; las que vimos: La percepción de un patrón, expresión del patrón, el registro del patrón y la prueba de validez del patrón.</p>
+<br><br>
+
+-->
+
+<h2>Otra aplicación: Displays electrónicos con tecnología LED</h2>
+<p>
+  Verónica trabaja como compradora en una empresa de construcción de displays electrónicos basados en tecnología LED.
+  Se encarga de realizar todas las compras de insumos y servicios que requiere la empresa, además de mantener al día el inventario.
+  El ingeniero que construye los displays es quien le hace el requerimiento de todos los materiales necesarios, previo análisis del trabajo encargado por el cliente.
+</p>
+
+<p>
+  Cierto día de la semana pasada, un cliente importante que manufactura juguetes educativos pidió un presupuesto sobre un trabajo urgente.
+  El encargo involucraba la creación de displays con patrones rectangulares, pentagonales y hexagonales, compuestos por LEDs de color rojo y azul brillante.
+  A Verónica se le ha informado que el ingeniero se reportó enfermo ese día y ella tendrá que ayudarle al técnico a hacer el presupuesto.
+</p>
+
+<div class="course_extern_content"> 
+        <img src="imgs/led.jpg"></img>
+</div>
+
+<p>
+  Para que un LED funcione es necesario hacer pasar una corriente por él, la intensidad de la misma debe ser calculada con cuidado a fin de no dañar el componente.
+  El voltaje que cada LED necesita para trabajar está dado en función de las características del propio LED, como por ejemplo, su color.
+  Para limitar la corriente que circula por el LED, comúnmente se utiliza una resistencia conectada en serie con él.
+  El cálculo del valor de la resistencia es muy sencillo, sólo requiere aplicar la ley de Ohm con los valores particulares del circuito y el LED.
+</p>
+
+<p>
+  El técnico ha hecho los cálculos de resistencia para cada LED y le ha informado a Verónica que hacen falta materiales en el almacén.
+</p>
+
+<div class="importante" style='margin-left: 15%;margin-right:15%;'>
+Las piezas con bajo inventario son:
+<ul>
+<li>LED color azul de alta luminosidad de 5mm </li>
+<li>Resistencias de 68 ohm a ¼ watt </li>
+</ul>
+</div>
+
+<p class='problema'>
+  <strong>Problema</strong>
+  <br><br>
+  La tarea de Verónica es calcular la cantidad de LEDs azules y resistencias que debe comprar a uno de sus proveedores para cubrir el encargo de la empresa que manufactura juguetes.
+  Vas a ayudar a Verónica a resolver su problema,  asumiendo que no hay ningún LED de color azul ni tampoco ninguna resistencia de 68 ohm. </p>
+
+ <!--- Subtítulo (no necesario en introducción) --->
+    <h2>Displays</h2>
+    
+           
+
+<p>Estos son los diagramas para las tres configuraciones de display.</p>
+<div class="course_extern_content"> 
+        <img src="imgs/patronesLed.png"></img>
+</div>
+<p class="importante" style='margin-left: 15%;margin-right:15%;'>Se requieren 200 displays por cada una de las figuras desde \(n=1\) hasta \(n=10\). 
+<br><br>Por cada uno de los juegos (cuadrado, pentágono y hexágono) se fabricarán 2000 piezas, que corresponden a 200 piezas por cada una de las figuras (\(n=1\) a \( n=10\)). Por lo tanto, serán 6000 piezas en total.
+</p>
+
+<div class="tarea">
+<h3>Tarea </h3>
+<p>
+Con base en los datos proporcionados:
+</p>
+<ul>
+  <li>Encuentra la fórmula que te permite determinar, en función de \(n\), la cantidad de LEDs azules requeridos para cada una de las tres configuraciones de LEDs.</li>
+  <br>
+  <li>Abstrae las anteriores fórmulas aún más, para que quede una sola que cubra las 3 figuras distintas. En otras palabras, existe una regularidad mayor que comprende a todos. Toma en cuenta el número de lados que tienen los juegos de figuras (cuadrado, pentágono y hexágono).</li>
+  <br>
+  <li>A partir de la fórmula encontrada, calcula cuántos LEDs y resistencias tendrá que comprar Verónica para poder despachar el trabajo de la juguetera.</li>
+</ul>
+<p>
+Ayúdate del recurso interactivo que se muestra a continuación para encontrar las regularidades presentes en las figuras.
+</p>
+</div>
+
+<p class='instrucciones'>Con ayuda del siguiente recurso trata de encontrar la fórmula que describe el patrón en el número de LEDs azules.</p>
+<div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="360" frameborder="0" src="escenas/escena2.html"> </iframe>
+    </div>
+
+<p>
+  ¿Ya encontrarte la solución? Entonces avanza a la siguiente página para averiguar si lo hiciste bien.
+
+
+
+
+    
+    <!--- Párrafo --->
+
+  
+	
+  <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  </div>
+  
+
+</article>
+
+</body>
+
+</html>
+

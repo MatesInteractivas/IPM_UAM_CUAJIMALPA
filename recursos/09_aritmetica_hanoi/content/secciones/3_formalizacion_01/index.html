@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="escenas/hanoiJS/js/contribute/modal/css/basic.css" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript" src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+  <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+
+  <script type='text/javascript' src="escenas/hanoiJS/js/contribute/modal/js/jquery.simplemodal.js"></script>
+ 
+
+  <script src="js/main_activity.js"></script>
+  
+</head>
+
+<body onload="initialize();">
+  
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+   <!-- INICIA EL CONTENIDO DE LA PÁGINA -->
+    
+    <!-- Título de la página -->
+   <h1>Formalización del problema</h1>
+    
+    <h2>Fórmula para calcular el número mínimo de movimientos</h2>
+    <!-- Párrafo -->
+    <p>
+      Ahora que ya exploraste el juego, llena la siguiente tabla.
+      La primera columna es el número de discos que tiene la torre y 
+      en la segunda debes escribir cuántos movimientos son los 
+      mínimos suficientes para cambiar la torre de poste. 
+    </p>
+    
+    <!-- Instrucciones -->
+    <div class="instrucciones">
+      Llena los valores que faltan en las celdas con <em>?</em>. Puedes explorar con el juego
+      que está más abajo para ayudarte. 
+    </div>
+
+
+    <div class="course_extern_content"> 
+      <div>
+        <table id='activity-1'  class='tablaTarea'>
+          <tr>
+            <th>N° de discos</th> <th> Movimientos</th>
+          </tr>
+          <tr>
+            <td> 1 </td> <td> 1 </td>
+          </tr>
+          <tr>
+            <td> 2 </td> <td> 3 </td>
+          </tr>
+          <tr>
+            <td> 3 </td> <td> <input type='text' id='mov_3' data='3' </td>
+          </tr>
+          <tr>
+            <td> 4 </td> <td> <input type='text' id='mov_4' data='4'></td>
+          </tr>
+          <tr>
+            <td> 5 </td> <td> <input type='text' id='mov_5' data='5'></td>
+          </tr>
+          <!-- 
+          <tr>
+            <td> 6 </td> <td> <input type='text' id='mov_6' data='6' ></td>
+          </tr>
+          <tr>
+            <td> 7 </td> <td> <input type='text' id='mov_7' data='7' ></td>
+          </tr>
+          -->
+        </table>
+        <div id='activity-1-expresion-cont'>
+            Si tenemos una torre de <span class='formula'>n</span> discos,
+            ¿cuántos movimientos necesitamos? <br><br><br>
+            <div class='control'>
+              <label for='activity-1-expresion'>Expresión</label>
+              <input id='activity-1-expresion' value =''> 
+            </div>
+            movimientos <br><br>
+            <i><small>
+              Nota: Utiliza las notaciones  <span class='formula'>a*b, a+b, a/b, a^b</span> para los operadores. 
+              El operador "^" denota <span class='formula'>a</span> elevado a la <span class='formula'>b</span>.  
+            </small></i>
+        </div>
+      </div>
+      <button id='activity-1-verificar'>Verificar</button>
+      <button id ='activity-1-reinit'> Reiniciar</button>
+    </div>
+    
+    <!-- ejemplo para incluir un documento externo en un iframe, aquí van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="410" frameborder="0" src="escenas/hanoiJS/index2.html"> </iframe>
+    </div>
+    
+   
+    <div class='problema'>
+      <strong>Pregunta</strong>
+      <br><br>
+       Ya encontraste una fórmula que creemos nos permite calcular los movimientos mínimos 
+       necesarios. Pero ¿cómo podemos estar seguros de que funciona para 64 (o una 
+       <span class="formula">n</span> cualquiera), 
+       sin tener que hacer todos los movimientos para corroborarlo?
+    </div>
+    
+    <p>
+      En la siguiente sección veremos el método de <strong>inducción matemática</strong> para 
+      demostrar que nuestra fórmula es válida para cualquier número de discos.
+    </p>
+
+
+
+  
+
+
+   
+
+
+    <!-- TERMINA EL CONTENIDO DE LA PÁGINA -->
+    
+    
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+    
+
+  </div>
+  
+</article>
+
+
+
+
+</body>
+
+</html>

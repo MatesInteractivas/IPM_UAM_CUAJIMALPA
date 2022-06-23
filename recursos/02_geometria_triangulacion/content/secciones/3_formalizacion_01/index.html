@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+  <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Formalización del problema</h1>
+   
+    <p>
+      De la parte de exploración entendimos que podemos localizar cualquier punto en el plano si conocemos la <strong>distancia</strong> \(d\) de dicho punto a otros tres puntos en el mismo plano.
+      La localización del punto (en este caso, un dispositivo) se realiza por medio de la intersección de las 3 circunferencias que tienen los tres puntos fijos como centro \(c\) y la distancia entre esos puntos y el punto buscado como radio \(r\).
+      Este método es conocido como <strong>trilateración</strong>.
+    </p>
+
+    <div class="course_extern_content"> 
+        <img src="imgs/3Circunf_conRadio.png"> </img>
+    </div>
+  
+    <p>
+      Ahora bien, a partir de esta construcción geométrica, ¿cómo obtenemos las coordenadas del punto de intersección?
+      Es decir, ¿cómo traducimos la gráfica que estamos observando a una o varias expresiones algebraicas, de manera que podamos calcular su resultado y obtener las coordenadas \((x,y)\) de nuestro dispositivo móvil?
+      En las siguientes páginas, lo vamos a averiguar.
+    </p>
+    
+    <div class="problema">
+      <strong>Objetivo</strong>
+      <br><br>
+      A partir de la posición de las tres antenas y su distancia al dispositivo a localizar, vamos a formular un <strong>sistema de ecuaciones</strong> que nos permita calcular las coordenadas \(x\) y \(y\) del punto de intersección de las circunferencias, es decir, el dispositivo.
+    </div>
+    
+    <h2>Ecuación ordinaria de la circunferencia</h2>
+    
+    <p>
+    Empecemos por construir la ecuación ordinaria de una circunferencia.
+    Es relativamente sencillo obtenerla a partir de la definición de la circunferencia ('el conjunto de puntos que tienen igual distancia a un punto determinado llamado centro') y el conocidísimo <strong>teorema de Pitágoras</strong>.
+    </p>
+    
+    <p class='importante' style='margin-left:10%;margin-right:10%;'>
+      <strong>Teorema de Pitágoras</strong>
+      <br><br>
+      En todo triángulo rectángulo, el cuadrado de la hipotenusa \(hip\) (el lado de mayor longitud del triángulo) es igual a la suma de los cuadrados de los catetos (los dos lados menores del triángulo, los que conforman el ángulo recto).
+      <br><br>
+      La ecuación del teorema es:
+      \[hip^2 = ca^2 + co^2\]
+      donde \(ca\) y \(co\) son el cateto adyacente y el cateto opuesto, respectivamente.
+    </p>
+    
+   <p>
+    Ahora bien, para cualquier punto \(p\) de una circunferencia, se puede dibujar un triángulo rectángulo con el vértice de uno de sus ángulos agudos en el centro de dicha circunferencia y el vértice del segundo ángulo agudo en el punto \(p\).
+    Compruébalo en la escena interactiva que se muestra a continuación.
+   </p>
+   
+           <!--- Instrucciones --->
+    <div class="instrucciones">
+    <span>Utiliza los controles rojos para colocar el centro \(C\) y el punto \(P\) de la circunferencia en las coordenadas que desees.
+    </div>
+
+    <!-- ejemplo para incluir un documento externo en un iframe, aqui van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="400" height="400" frameborder="0" src="escenas/escena0.html"> </iframe>
+    </div>
+    
+    <p>
+      Pudiste notar que siempre se forma un triángulo rectángulo no importando el punto de la circunferencia o la posición de su centro.
+      Así, gracias al teorema de Pitágoras, se puede calcular el valor del radio \(r\) de la circunferencia. A continuación, vamos a construir la ecuación que nos permite hacer lo mismo.
+    </p>
+    
+           <!--- Instrucciones --->
+    <div class="instrucciones">
+    <span>Contesta las preguntas que se muestran en el siguiente espacio interactivo.</div>
+
+    <!-- ejemplo para incluir un documento externo en un iframe, aqui van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="480" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+    
+    <p>Ahora que obtuvimos una ecuación que expresa en términos algebraicos la relación que existe entre el centro y un punto de la circunferencia, podemos proceder a formular un sistema de ecuaciones donde cada ecuación representa una circunferencia con centro en la posición de una de las antenas.
+    Así podremos obtener las coordenadas \((x,y)\) del punto de intersección de estas tres circunferencias.</p>
+   
+
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>      
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This is a Reload version 2.5.6 SCORM 1.2 Content Package document-->
+<!--Spawned from the Reload Content Package Generator - http://www.reload.ac.uk-->
+<manifest xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2" xmlns:imsmd="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" identifier="MANIFEST-C51B770DC10499E56D2A78EF8D8ECE52" xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+	<metadata>
+		<schema>ADL SCORM</schema>
+		<adlcp:location/>
+		<imsmd:lom>
+			<imsmd:general>
+				<imsmd:identifier>10_algebra_huerto</imsmd:identifier>
+				<imsmd:title>
+					<imsmd:langstring xml:lang="es">Álgebra: Huerto de manzanos</imsmd:langstring>
+				</imsmd:title>
+			</imsmd:general>
+			<imsmd:lifecycle>
+				<imsmd:version>
+					<imsmd:langstring xml:lang="es">1.0</imsmd:langstring>
+				</imsmd:version>
+				<imsmd:status>
+					<imsmd:source>
+						<imsmd:langstring xml:lang="x-none">LOMv1.0</imsmd:langstring>
+					</imsmd:source>
+					<imsmd:value>
+						<imsmd:langstring xml:lang="es"/>
+					</imsmd:value>
+				</imsmd:status>
+				<imsmd:contribute>
+					<imsmd:role>
+						<imsmd:source>
+							<imsmd:langstring xml:lang="x-none">LOMv1.0</imsmd:langstring>
+						</imsmd:source>
+						<imsmd:value>
+							<imsmd:langstring xml:lang="es">Autor</imsmd:langstring>
+						</imsmd:value>
+					</imsmd:role>
+					<imsmd:centity>
+						<imsmd:vcard>Carlos Alberto Jaimes Vergara</imsmd:vcard>
+					</imsmd:centity>
+				</imsmd:contribute>
+			</imsmd:lifecycle>
+			<imsmd:metametadata>
+				<imsmd:identifier>10_algebra_huerto</imsmd:identifier>
+			</imsmd:metametadata>
+			<imsmd:technical>
+				<imsmd:format>text/html</imsmd:format>
+				<imsmd:requirement>
+					<imsmd:name>
+						<imsmd:source>
+							<imsmd:langstring xml:lang="x-none">LOMv1.0</imsmd:langstring>
+						</imsmd:source>
+						<imsmd:value>
+							<imsmd:langstring xml:lang="es"/>
+						</imsmd:value>
+					</imsmd:name>
+				</imsmd:requirement>
+			</imsmd:technical>
+			<imsmd:classification>
+				<imsmd:description>
+					<imsmd:langstring xml:lang="es"><![CDATA[Cómo calcular el número de pinos que rodean a un huerto de manzanos en distintas configuraciones geométricas.
+					
+					En particular, se analizan configuraciones cuadradas y rectangulares en la siembra. El problema se aborda y resuelve en 3 etapas: exploración mediante ejercicios y recursos interactivos que fomentan la capacidad de abstracción; formalización del problema en términos algebraicos y solución del mismo. Posteriormente, se ofrecen algunas aplicaciones y reflexiones. Finalmente, se ofrecen 5 preguntas de opción múltiple para que el alumno evalúe su comprensión del problema y su solución matemática. La unidad le permitirá al alumnno visualizar, explorar y manipular números y figuras con el fin de recrear el proceso de generalización de patrones numéricos, geométricos y de reglas de tipo natural o social. Al final, será capaz de construir expresiones algebraicas por medio de la formulación verbal de una regla recursiva que revele cómo recrear los términos siguientes a partir de los previos en un patrón.]]></imsmd:langstring>
+				</imsmd:description>
+				<imsmd:keyword>
+					<imsmd:langstring xml:lang="es">Álgebra</imsmd:langstring>
+					<imsmd:langstring xml:lang="es">Regularidad</imsmd:langstring>
+					<imsmd:langstring xml:lang="es">Patrón</imsmd:langstring>
+					<imsmd:langstring xml:lang="es">Secuencia</imsmd:langstring>
+					<imsmd:langstring xml:lang="es">Traducción</imsmd:langstring>
+					<imsmd:langstring xml:lang="es">Lenguaje algebraico</imsmd:langstring>
+					<imsmd:langstring xml:lang="es">Lenguaje coloquial</imsmd:langstring>
+					<imsmd:langstring xml:lang="es">Sumatoria</imsmd:langstring>
+					<imsmd:langstring xml:lang="es">Secciona</imsmd:langstring>
+					<imsmd:langstring xml:lang="es">Ohm</imsmd:langstring>
+					<imsmd:langstring xml:lang="es">Terreno</imsmd:langstring>
+					<imsmd:langstring xml:lang="es">Manzano</imsmd:langstring>
+					<imsmd:langstring xml:lang="es">Pino</imsmd:langstring>
+					<imsmd:langstring xml:lang="es">Árboles</imsmd:langstring>
+					<imsmd:langstring xml:lang="es">Cerillos</imsmd:langstring>
+					<imsmd:langstring xml:lang="es">Fórmula</imsmd:langstring>
+					<imsmd:langstring xml:lang="es">Mason</imsmd:langstring>
+					<imsmd:langstring xml:lang="es">Predecir</imsmd:langstring>
+					<imsmd:langstring xml:lang="es">Registrar</imsmd:langstring>
+					<imsmd:langstring xml:lang="es">LED</imsmd:langstring>
+					<imsmd:langstring xml:lang="es">Resistencia</imsmd:langstring>
+					<imsmd:langstring xml:lang="es">Corriente</imsmd:langstring>
+					<imsmd:langstring xml:lang="es">Eléctrica</imsmd:langstring>
+					<imsmd:langstring xml:lang="es">Voltaje</imsmd:langstring>
+				</imsmd:keyword>
+			</imsmd:classification>
+		</imsmd:lom>
+	</metadata>
+	<organizations default="ORG-66DFEE253D6A683735115ADE32F39FD5">
+		<organization identifier="ORG-66DFEE253D6A683735115ADE32F39FD5" structure="hierarchical">
+			<title>main</title>
+			<item identifier="ITEM-7D8E13C3DD94DF2137682321FE228CC3" isvisible="true" identifierref="RES-7AEBA12A3C37D31569C88FD366C6F96A">
+				<title>Álgebra: Huerto de manzanos</title>
+			</item>
+		</organization>
+	</organizations>
+	<resources>
+		<resource identifier="RES-7AEBA12A3C37D31569C88FD366C6F96A" type="webcontent" href="content/index.html">
+			<file href="content/index.html"/>
+			<file href="content/css/contenedor.css"/>
+		</resource>
+	</resources>
+</manifest>

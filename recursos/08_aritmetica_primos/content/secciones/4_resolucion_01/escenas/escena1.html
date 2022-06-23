@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>TITULO</title>	
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body style="margin:0px;padding:0px;overflow:hidden;">
+
+<p align="center">
+<ajs name="Descartes" width=760 height=480 code="Descartes">
+   <param name="tamaño" value="760x480">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=",">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.3.12, 2014-07-09">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' imagen='images/fondo.png' despl_imagen='arr-izq' fondo='blanco' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='reini' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Reiniciar' expresión='(E1._w-140,E1._h-50,120,30)' fijo='sí' visible='sí' color='blanco' fuente puntos='18' imagen='images/btn120x30.png' acción='calcular' parámetro='clean()\npaso=0\nn=1+ent(rnd*10000)\nN=n'">
+   <param name="C_02" value="id='n' tipo='numérico' región='interior' espacio='E1' nombre='n' expresión='(20,20,180,60)' valor='360' incr='1' min='2' max='10000' decimales='0' fijo='sí' visible='sí' acción='calcular' parámetro='N=n\nver=0' activo-si='paso=0' pos_mensajes='centro'">
+   <param name="C_03" value="id='p' tipo='numérico' interfaz='menú' región='interior' espacio='E1' nombre='_nada_' expresión='(520,20,50,50)' decimales='0' fijo='sí' visible='no' opciones='2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97' pos_mensajes='centro'">
+   <param name="C_04" value="id='dividir' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Calcular' expresión='(E1._w-140,30,120,30)' fijo='sí' visible='sí' color='blanco' fuente puntos='18' imagen='images/btn120x30.png' acción='calcular' parámetro='div()' activo-si='N!=1' pos_mensajes='centro'">
+   <param name="C_05" value="id='show' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Ver solución' expresión='(E1._w-140,E1._h-100,120,30)' fijo='sí' visible='sí' color='blanco' fuente puntos='18' imagen='images/btn120x30.png' acción='calcular' parámetro='ver=1' pos_mensajes='centro'">
+   <param name="A_01" value="id='P' vector='sí' evaluar='una-sola-vez' tamaño='25' expresión='P[0]= 2;P[1]= 3;P[2]= 5;P[3]= 7;P[4]= 11;P[5]= 13;P[6]= 17;P[7]= 19;P[8]= 23;P[9]= 29;P[10]= 31;P[11]= 37;P[12]= 41;P[13]= 43;P[14]= 47;P[15]= 53;P[16]= 59;P[17]= 61;P[18]= 67;P[19]= 71;P[20]= 73;P[21]= 79;P[22]= 83;P[23]= 89;P[24]= 97;'">
+   <param name="A_02" value="id='txt' vector='sí' evaluar='una-sola-vez' tamaño='16' expresión='txt[0]=&squot;&squot;;txt[1]=&squot;&squot;;txt[2]=&squot;&squot;;txt[3]=&squot;&squot;;txt[4]=&squot;&squot;;txt[5]=&squot;&squot;;txt[6]=&squot;&squot;;txt[7]=&squot;&squot;;txt[8]=&squot;&squot;;txt[9]=&squot;&squot;;txt[10]=&squot;&squot;;txt[11]=&squot;&squot;;txt[12]=&squot;&squot;;txt[13]=&squot;&squot;;txt[14]=&squot;&squot;;txt[15]=&squot;&squot;;'">
+   <param name="A_03" value="id='div()' algoritmo='sí' expresión='1' algoritmo='sí' hacer='N=(paso=0)?n:N;txt[paso]=&squot;&squot;+N;ok=(N%P[p]=0);txt[paso]=(ok)?txt[paso]+&squot; = &squot;+P[p]+&squot; × &squot;+(N/P[p]):txt[paso]+&squot; no es divisible entre &squot;+P[p];txt[paso]=(ok&primo(N/P[p]))?txt[paso]+&squot;,    &squot;+(N/P[p])+&squot; es primo&squot;:txt[paso];;N=(ok)?N/P[p]:N;;paso=(ok)?paso+1:paso;;'">
+   <param name="A_04" value="id='fact()' algoritmo='sí' expresión='txt' algoritmo='sí' Local='num,i,txt,ok' inicio='num=n;i=0;txt=&squot;&squot;' hacer='ok=(num%P[i]=0);txt=(ok)?txt+P[i]:txt;num=(ok)?num/P[i]:num;txt=(ok&(num>1))?txt+&squot;×&squot;:txt;i=(!ok)?i+1:i;txt=(i=25)?txt+num:txt;;' mientras='(num>1)&(i<25)'">
+   <param name="A_05" value="id='primo(x)' algoritmo='sí' expresión='ok' algoritmo='sí' Local='i,ok' inicio='i=0;ok=1' hacer='ok=((x%P[i]=0)&(x!=P[i]))?0:ok;;i=i+1;;' mientras='(ok=1)&(i<25)'">
+   <param name="A_06" value="id='clean()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='txt=&squot;&squot;;p=0;ver=0;txt[0]=&squot;&squot;;txt[1]=&squot;&squot;;txt[2]=&squot;&squot;;txt[3]=&squot;&squot;;txt[4]=&squot;&squot;;txt[5]=&squot;&squot;;txt[6]=&squot;&squot;;txt[7]=&squot;&squot;;txt[8]=&squot;&squot;;txt[9]=&squot;&squot;;txt[10]=&squot;&squot;;txt[11]=&squot;&squot;;txt[12]=&squot;&squot;;txt[13]=&squot;&squot;;txt[14]=&squot;&squot;;txt[15]=&squot;&squot;;'">
+   <param name="A_07" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='paso=0;ver=0;N=360;'">
+   <param name="A_08" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="G_01" value="espacio='E1' tipo='texto' expresión='[20,100+35*s]' familia='s' s.intervalo='[0,8]' s.pasos='8' texto='[txt[s]]' fuente='Monospaced,PLAIN,18' fijo='sí'">
+   <param name="G_02" value="espacio='E1' tipo='texto' expresión='[400,100+35*s]' familia='s' s.intervalo='[0,7]' s.pasos='7' texto='[txt[s+8]]' fuente='Monospaced,PLAIN,18' fijo='sí'">
+   <param name="G_03" value="espacio='E1' tipo='texto' dibujar-si='debug' expresión='[20,460]' texto='N = [N], paso = [paso], [primo(N)]' fuente='Monospaced,PLAIN,18' fijo='no'">
+   <param name="G_04" value="espacio='E1' tipo='texto' expresión='[235,38]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;}{\colortbl\red154\green48\blue58;\red32\green48\blue58;}\f1\fs36 Evaluar si \b\cf0{\*\mjaformula{\expr N}}\cf1\b0  es divisible entre}' fuente='SansSerif,PLAIN,18' fijo='no'">
+   <param name="G_05" value="espacio='E1' tipo='texto' dibujar-si='(ver=1)|(N=1)|(primo(N))' expresión='[20,415]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs36\b Descomposici\u243 n\f2\fs36}' fuente='SansSerif,BOLD,18' fijo='no' ancho='660'">
+   <param name="G_06" value="espacio='E1' tipo='texto' dibujar-si='(ver=1)|(N=1)|(primo(N))' expresión='[20,445]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs36\b{\*\mjaformula{\expr n}} = {\*\mjaformula{\expr fact()}}{\*\mjaformula{\expr (primo(n))?&squot;,   &squot;+n+&squot; es primo&squot;:&squot;&squot;}}\f2\fs36}' fuente='SansSerif,BOLD,18' fijo='no' ancho='660'">
+   <param name="Animación" value="pausa='1000' controles='no' auto='no' inicio='t=0' hacer='t=t+1' mientras='t<6'">
+</ajs></p>
+
+</body>
+</html>

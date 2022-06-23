@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>TITULO</title>
+
+        <link rel="stylesheet" type="text/css" href="css/descartes.css">	
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body style="margin:0px;padding:0px;overflow:hidden;">
+
+<p align="center">
+<ajs name="Descartes" width=750 height=130 code="Descartes">
+   <param name="tamaño" value="750x130">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.3.12, 2014-07-09">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' imagen='images/fondo.png' despl_imagen='arr-izq' fondo='fff3f0ec' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='P1' tipo='numérico' interfaz='menú' región='interior' espacio='E1' nombre='_nada_' expresión='(60,33,50,34)' decimales='0' fijo='sí' visible='no' opciones=' ,d₁²,x₁²,y₁²,x²' dibujar-si='paso=0' activo-si='!verif'">
+   <param name="C_02" value="id='P2' tipo='numérico' interfaz='menú' región='interior' espacio='E1' nombre='_nada_' expresión='(180,33,50,34)' decimales='0' fijo='sí' visible='no' opciones=' ,d₁,x₁,y₁,x' dibujar-si='paso=0' activo-si='!verif' pos_mensajes='centro'">
+   <param name="C_03" value="id='P3' tipo='numérico' interfaz='menú' región='interior' espacio='E1' nombre='_nada_' expresión='(290,33,50,34)' decimales='0' fijo='sí' visible='no' opciones=' ,d₁,x₁,y₁,x' dibujar-si='paso=0' activo-si='!verif' pos_mensajes='centro'">
+   <param name="C_04" value="id='P4' tipo='numérico' interfaz='menú' región='interior' espacio='E1' nombre='_nada_' expresión='(490,33,50,34)' decimales='0' fijo='sí' visible='no' opciones=' ,d₁,x₁,y,y₁' dibujar-si='paso=0' activo-si='!verif'">
+   <param name="C_05" value="id='P5' tipo='numérico' interfaz='menú' región='interior' espacio='E1' nombre='_nada_' expresión='(600,33,50,34)' decimales='0' fijo='sí' visible='no' opciones=' ,d₁,x₁,y₁,x' dibujar-si='paso=0' activo-si='!verif' pos_mensajes='centro'">
+   <param name="C_06" value="id='VerifBt' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Verificar' expresión='(E1._w/2-45,E1._h-35,90,30)' fijo='sí' visible='sí' color='blanco' color-int='fff0f8ff' fuente puntos='16' imagen='images/btn90x30.png' acción='calcular' parámetro='verif=1\ncalifica()' dibujar-si='(!verif)' activo-si='(P1!=0)&(P2!=0)&(P3!=0)&(P4!=0)&(P5!=0)'">
+   <param name="C_07" value="id='reint' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Reintentar' expresión='(E1._w/2-45,E1._h-35,90,30)' fijo='sí' visible='sí' color='blanco' color-int='fff0f8ff' fuente puntos='16' imagen='images/btn90x30.png' acción='calcular' parámetro='verif=0' dibujar-si='(verif)&(!calif)' activo-si='(P1!=0)&(P2!=0)&(P3!=0)&(P4!=0)&(P5!=0)' pos_mensajes='centro'">
+   <param name="C_08" value="id='sig' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Siguiente' expresión='(E1._w/2-45,E1._h-35,90,30)' fijo='sí' visible='sí' color='blanco' color-int='fff0f8ff' fuente puntos='16' imagen='images/btn90x30.png' acción='calcular' parámetro='paso=1' dibujar-si='(calif)&(!paso)' pos_mensajes='centro'">
+   <param name="A_01" value="id='init()' algoritmo='sí' algoritmo='sí' hacer='paso=0'">
+   <param name="A_02" value="id='xCal' vector='sí' evaluar='una-sola-vez' tamaño='5' expresión='xCal[0]=110;xCal[1]=230;xCal[2]=340;xCal[3]=540;xCal[4]=650'">
+   <param name="A_03" value="id='imgCal' vector='sí' evaluar='una-sola-vez' tamaño='5'">
+   <param name="A_04" value="id='califica()' algoritmo='sí' algoritmo='sí' hacer='calif1=(P1=1)?1:0;calif2=(P2=4)?1:0;calif3=(P3=2)?1:0;calif4=(P4=3)?1:0;calif5=(P5=3)?1:0;calif=(calif1+calif2+calif3+calif4+calif5=5)?1:0;imgCal[0]=(calif1)?&squot;images/bien.png&squot;:&squot;images/mal.png&squot;;imgCal[1]=(calif2)?&squot;images/bien.png&squot;:&squot;images/mal.png&squot;;imgCal[2]=(calif3)?&squot;images/bien.png&squot;:&squot;images/mal.png&squot;;imgCal[3]=(calif4)?&squot;images/bien.png&squot;:&squot;images/mal.png&squot;;imgCal[4]=(calif5)?&squot;images/bien.png&squot;:&squot;images/mal.png&squot;;'">
+   <param name="A_05" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='init()'">
+   <param name="A_06" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="G_01" value="espacio='E1' tipo='texto' expresión='[50,30]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs50\b{\*\mjaformula d{\subix 1}{\supix 2}   =}\f2\fs30\b0}' fuente='SansSerif,BOLD,25' fijo='sí'">
+   <param name="G_02" value="espacio='E1' tipo='texto' expresión='[140,30]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs50\b{\*\mjaformula (     x     -     x{\subix 1}     ){\supix 2}      +}\f2\fs30\b0}' fuente='SansSerif,BOLD,25' fijo='sí'">
+   <param name="G_03" value="espacio='E1' tipo='texto' expresión='[450,30]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs50\b{\*\mjaformula (     y     -     y{\subix 2}     ){\supix 2}}\f2\fs30\b0}' fuente='SansSerif,BOLD,25' fijo='sí'">
+   <param name="G_04" value="espacio='E1' tipo='imagen' dibujar-si='verif' coord_abs='sí' expresión='(xCal[s],20)' familia='s' s.intervalo='[0,4]' s.pasos='4' archivo='imgCal[s]'">
+   <param name="G_05" value="espacio='E1' tipo='texto' dibujar-si='paso=1' expresión='[170,90]' texto='Esta es la primera ecuación de nuestro sistema.' fuente='SansSerif,PLAIN,18' fijo='sí'">
+</ajs></p>
+
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Resolución del problema</h1>
+    
+    <!--- Subtítulo (no necesario en introducción) --->
+    <h2>Divisores primos</h2>
+    
+    
+    <!--- Párrafo --->
+    <p>
+    En la exploración del problema, al trabajar con los croquis, lo
+    que hacemos para encontrar los divisores de \(n\) es ir probando todos
+    los números de uno en uno. Si el número es grande tendremos que
+    hacer muchas pruebas y la mayoría de veces resultará que el número
+    \(p\) que probamos no divide a \(n\).
+    </p>
+
+    <p>
+      Algo que seguramente pudiste observar al usar el croquis
+      interactivo es que, si comienzas con \(p=1\) entonces
+      \(p\lt q\). Al ir aumentando \(p\) llega un momento en el que la
+      desigualdad se invierte, posiblemente pasando por una igualdad,
+      y tenemos que \(p>q\). A partir de ese momento pasamos de nuevo
+      por las mismas parejas de divisores pero con \(p\) y \(q\)
+      invertidos, que representan los mismos rectángulos.
+    </p>
+    
+    <p>Lo anterior nos permite percatarnos de algo muy curioso e
+    importante:
+    </p>
+    
+    <p class='importante' style='margin-left:10%;margin-right:10%;'>
+    Si un número \(n\) no es primo, entonces hay un divisor \(p\)
+    que es menor que o igual a la raíz cuadrada de \(n\).
+    </p>
+    
+    <p>
+    
+    Esto nos puede
+    ahorrar muchísimas pruebas porque ya sabemos que no tenemos que
+    seguir intentando con los números mayores que la raíz cuadrada de
+    \(n\). Si llegamos a este punto habremos encontrado todos los posibles
+    divisores de \(n\) en parejas de valores \(p\) y \(q\). Los divisores menores
+    que la raíz cuadrada de \(n\) serán las \(p\) y las \(q\) serán los divisores
+    mayores que el número cuyo cuadrado es \(n\).
+    </p>
+
+    <p>
+      Lo anterior indica que para encontrar los divisores de números
+      hasta \(10,000\) basta probar con números hasta \(100\), que es la raíz
+      cuadrada de \(10,000\).
+    </p>
+
+    <p>
+      Vamos a usar un resultado muy importante de las matemáticas.
+    </p>
+
+    <p class='importante' style='margin-left:10%;margin-right:10%;'>
+      Cualquier número entero, o bien es primo, o es un producto de números primos.
+    </p>
+    
+    <p>
+      Lo anterior significa que cualquier número entero, si no es un número primo, se puede reescribir como la multiplicación de números primos.
+    </p>
+
+    <h2>Descomposición de un número en sus factores primos</h2>
+
+    <p>
+      Dado un número natural \(n\) que no sea primo, según el
+      resultado anterior podremos encontrar los números primos cuyo
+      producto será \(n\). Si \(n\) es primo entonces no lo podemos
+      descomponer como producto de otros primos.
+    </p>
+
+    <p>
+      Si tomamos \(n\) entre \(1\) y \(10,000\) bastará intentar dividirlo entre
+      los números primos mayores que \(1\) y menores que \(100\), ya que \(100\)
+      es la raíz cuadrada de \(10,000\). Como ya encontramos estos números
+      primos podemos proceder a descomponer un número arbitrario
+      perteneciente a este rango en sus factores primos. Una vez que
+      practiquemos esto podremos escribir la lista de todos los
+      divisores de \(n\).
+    </p>
+
+    <p class="instrucciones">
+      A continuación trabajaremos con un número natural \(n\). Primero
+      será \(360\) como en nuestro problema, pero al reiniciar la actividad se
+      generará de manera aleatoria entre \(2\) y \(10,000\). Este
+      número habrás de irlo dividiendo sucesivamente entre los números
+      primos en el rango de \(1\) a \(100\). Al realizar este proceso obtendrás
+      la descomposición en factores primos de \(n\).<br><br>Para
+      hacerlo con orden y de forma adecuada es importante tomar como
+      divisor de prueba el número primo más pequeño e ir avanzando en
+      la lista cuando resulte que no puedes dividirlo más.<br><br>Al
+      principio te puede resultar conveniente reducir \(n\)
+      manualmente.
+    </p>
+
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="480" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+
+    <p>
+      En tanto es frecuente que un número primo aparezca varias veces,
+      la descomposición en factores primos suele escribirse usando
+      potencias. Por ejemplo, para el número de cajas de nuestro
+      problema tenemos que \[360=2\times2\times2\times3\times3\times5=2^3\times3^2\times5\]
+      Esta notación nos permite abreviar la descomposición.
+    </p>
+
+
+    <div class='problema'>
+      <strong>Preguntas</strong>
+      <ol>
+        <li>¿Cómo se podrá obtener, a partir de la anterior notación de factores primos, la lista completa de todos los números enteros (primos y no primos) que dividen a un número \(n\) determinado?</li>
+        <br>
+        <li>¿Cuántos divisores habrá en total, incluyendo tanto los divisores primos como los que no son primos?</li>
+      </ol>
+      
+        Para encontrar la respuesta a estas preguntas, recuerda las propiedades conmutativa y asociativa de la multiplicación.
+        
+    </div>
+  
+    
+    <br>
+
+
+	
+  <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  </div>
+  
+
+</article>
+
+</body>
+
+</html>
+

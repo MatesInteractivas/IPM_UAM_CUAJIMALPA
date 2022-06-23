@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+  <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onLoad="initialize();">
+  
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    </p><!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Resolución de los problemas</h1>
+    
+    <h2>Problema 3: Comparación de tasas de interés para periodos que son múltiplos o submúltiplos</h2>
+
+
+    <p>
+      <strong>
+	Múltiplos
+      </strong>
+    </p>
+
+    <p>
+      Supondremos que tenemos un número natural \(n\) que determina el múltiplo del periodo. 
+      Por ejemplo, si queremos encontrar la tasa de interés anual cuando conocemos la tasa mensual, entonces \(n=12\). 
+    </p>
+    
+    <div class='problema'>
+      Dado un valor de \(f\) y un número natural \(n\) cualquiera
+      debemos encontrar \(F\) de modo que \(a=1+f\), \(b=F+1\) y
+      \[Ca^n=Cb.\]
+      La igualdad anterior se da solamente cuando
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      (oprime sobre los números de las respuestas correctas)<br><br>
+      <div class="course_extern_content"> 
+	<iframe class="course_iframe" width="760" height="30" frameborder="0" src="escenas/escena1.html"> </iframe>
+      </div>
+      <br>
+      Lo que significa que
+      <br><br>
+      <div class="course_extern_content"> 
+	<iframe class="course_iframe" width="760" height="30" frameborder="0" src="escenas/escena2.html"> </iframe>
+      </div>
+      <br>
+      De donde concluimos que
+      \[F=(f+1)^n-1.\]
+    </div>
+
+
+    <p>
+      Con base en la fórmula encontrada, resolveremos el problema original, esto es, determinar cuál de las dos siguientes opciones de inversión es mejor:
+      <ul>
+	<li>La primera da el \(2\%\) mensual.</li>
+	<li>La segunda da el \(25\%\) anual.</li>
+      </ul>
+    </p>
+    <p>
+      El \(2\%\) corresponde a una fracción \(f=.02\) y \(n=12\),
+      entonces la tasa anual correspondiente, expresada como fracción, será
+      \[F=(1.02)^{12}-1\simeq .268241795\simeq26.82\%\]
+    </p>
+    <p class='importante' style='margin-left:15%;margin-right:15%;'>
+      En otras palabras, la tasa mensual de \(2\%\) es mejor que el \(25\%\) anual de la segunda opción.
+    </p>
+    
+    <p>
+      <strong>
+	Submúltiplos
+      </strong>
+    </p>
+
+    <p>
+      Supondremos, como en el caso anterior, que tenemos un número
+      natural \(n\), pero ahora determina el submúltiplo del periodo.
+      Por ejemplo, si queremos encontrar la tasa de interés diaria
+      cuando conocemos la tasa anual, entonces \(n=365\).
+    </p>
+    
+    <div class='problema'>
+      Dado un valor de \(F\) y un número natural \(n\) cualquiera
+      debemos encontrar \(f\) de modo que \(a=f+1\), \(b=F+1\) y
+      \[Ca^n=Cb.\]
+      Como en el caso de los múltiplos, la igualdad anterior se da solamente cuando
+      \[a^n=b.\]
+      Lo que significa que
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      (oprime sobre los números de las respuestas correctas)<br><br>
+      <div class="course_extern_content"> 
+	<iframe class="course_iframe" width="760" height="30" frameborder="0" src="escenas/escena3.html"> </iframe>
+      </div>
+      <br>
+      De donde concluimos que<br><br>
+      <div class="course_extern_content"> 
+	<iframe class="course_iframe" width="760" height="30" frameborder="0" src="escenas/escena4.html"> </iframe>
+      </div>
+    </div>
+
+
+    <p class='importante' style='margin-left:15%;margin-right:15%;'>
+      ¿A qué tasas mensual y diaria corresponde una tasa de interés anual del 60%?
+    </p>
+
+    <p>
+      El \(60\%\) corresponde a una fracción \(F=.6\) y \(n=12\),
+      entonces la <strong>tasa mensual</strong> correspondiente será
+      \[f=\sqrt[12]{1.6}-1\simeq .039944108\simeq3.99\%,\]
+      mientras que para la <strong>tasa diaria</strong> \(n=365\), lo que nos da
+      \[f=\sqrt[365]{1.6}-1\simeq .001288511\simeq0.12\%.\]
+    <p>
+
+
+    <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+    
+    
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onClick="showCredits()">Condiciones de uso</a>
+    </div>  
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+    
+
+  </div>
+  
+</article>
+
+
+
+
+</body>
+
+</html>

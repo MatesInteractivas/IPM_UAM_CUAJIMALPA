@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Reflexiones y aplicaciones</h1>
+
+    <h2>La proporción áurea</h2>
+
+    <p>
+    Para el caso de la fotografía y las hojas del estándar DIN, la expresión útil para el cálculo de la proporción que los lados deben mantener fue \(\frac{a}{b}=\frac{b}{\frac{a}{2}}\), que eventualmente nos lleva a que la proporción entre lados \(a\) y \(b\) ha de ser \(\frac{a}{b}=\sqrt{2}\). Esto nos garantizó que, al partir la hoja a la mitad por el lado más grande, se obtiene una hoja cuya proporción es igual a la de la hoja original.
+    </p>
+
+    <p>
+    En el ejemplo anterior, la proporción entre lados es \(\sqrt{2}\). No obstante, existen otro tipo de proporciones. Una de ellas es la llamada <em>proporción áurea</em>. Como tal vez hayas escuchado, esta proporción se encuentra en muchos fenómenos de la naturaleza; también puede ser usada para fines prácticos. A continuación abordaremos dicha proporción.
+    </p>
+
+    <p class='problema'>
+    <strong>Problema</strong>
+    <br><br>
+    Supón que tienes un rectángulo cuyo lado mayor denotamos con \(a\) y cuyo lado menor denotamos con \(b\). Construyes un cuadrado dentro de él de lado \(b\) y lo recortas. Sobrará, así pues, un rectángulo. ¿Qué proporción \(\frac{a}{b}\) debe tener el rectángulo original para que el rectángulo sobrante tras recortar el cuadrado tenga la misma proporción (que el original)? 
+    </p>
+    
+    <p>
+    Para empezar a analizar el problema, explora el siguiente interactivo siguiendo las instrucciones que se te proporcionan.
+    </p>
+
+    <div class="instrucciones">En el espacio interactivo de abajo se muestra un rectángulo cuyo lado mayor \(a\) mide 1 unidad. Puedes mover el valor del lado menor \(b\) entre 0.4 y 0.8. Una vez que hayas definido las dimensiones iniciales del rectángulo amarillo original, pulsa el botón 'Siguiente'; verás el recorte del cuadrado (azul) y el rectángulo resultante tras el recorte (rojo).<br><br>Observa bien la proporción del rectángulo original así como la del rectángulo resultante y compáralas. Trata de encontrar un valor para \(b\) para el cual las razones de los lados de ambos rectángulas (amarillo y rojo) sean lo más parecidas posible.</div>
+
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="750" height="480" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+
+    <p>
+    Tras explorar, es probable que hayas llegado a un valor para \(b\) de 0.62, lo que lleva una proporción del rectángulo original de \(\frac{1}{0.62}=1.613\). Para el rectángulo rojo tendrás entonces una proporción de \(\frac{0.62}{0.38}=1.632\). Y ambas proporciones son muy semejantes.
+    Esta proporción de alrededor de 1.613 es un aproximado del valor exacto que buscamos. Pero... ¿cómo hacemos para encontrarlo de forma exacta? ¡Te toca a ti averiguarlo!
+    </p>
+
+    <div class='tarea'>
+      
+      <h3>Tarea</h3>
+      
+      <p>
+	Encuentra el valor exacto de \(b\) para el cual la razón de los lados de los rectángulos amarillo y rojo sea idéntica.
+	<br><br>
+	Para lograr eso, tendrás que:
+	<br>
+	<ul>
+	  <li>Averiguar de qué manera se pueden expresar algebraicamente (es decir, con las literales \(a\) y \(b\)) los lados del rectángulo rojo;</li>
+	  <li>Expresar la igualdad entre las razones de los lados de ambos rectángulos (amarillo y rojo) como una ecuación algebraica de la forma \(\frac{a}{b}=\frac{?}{?}\), donde las interrogaciones representan los lados correspondientes del rectángulo rojo.</li>
+	  <li>Definir una segunda ecuación, para completar el sistema de ecuaciones. Para esto, considera que ya conoces el valor del lado \(a\).</li>
+	</ul>
+      </p>
+      
+      <p>
+      Nuevamente, ¡trata de encontrar la solución por tu cuenta antes de descargar el archivo pdf con la solución!
+      </p>
+      
+      <div class="verSolucion" id="btSolucion" onclick="document.getElementById('solucion').setAttribute('class','visible');document.getElementById('btSolucion').setAttribute('class','oculto');">
+      </div>
+    
+    </div>
+    
+    
+    <div id="solucion" class='oculto'>
+      
+      <h2>Solución de la tarea</h2>
+      
+      <ul>
+      <li>
+      Observa que las dimensiones del rectángulo azul están dadas por \(b\) como el lado grande y \(a-b\) como el lado chico.
+      La razón entre estos lados será \(\frac{b}{a-b}\).
+      </li>
+      <li>
+      Lo que hiciste al mover los valores de \(b\) fue buscar aquél para el cual la razón \(a:b\) del rectángulo original fuera lo más cercana posible a la del rectángulo azul.
+      Es decir, lo que buscaste fue un valor para \(b\) tal que \(\frac{a}{b} = \frac{b}{a-b}\).
+      </li>
+      <li>
+      Si consideramos de inicio que \(a=1\), tenemos que \(\frac{1}{b} = \frac{b}{1-b}\).
+      </li>
+      <li>
+      Multiplicando ambos lados de la ecuación por \(b\) obtenemos que \( 1 = \frac{b^2}{1-b}\).
+      </li>
+      <li>
+      Luego, multiplicamos ambos lados de esta última ecuación por \(1-b\), de donde obtenemos que \(1-b = b^2\). 
+      </li>
+      <li>
+      Pasamos el \(1-b\) restando al lado derecho de la igualdad, obteniendo: \(b^2 + b - 1 = 0\).
+      </li>
+      <li>
+      Esta es una ecuación cuadrática que podemos resolver para \(b\). Así, \( b = \frac{-1±\sqrt{1+4}}{2} \), de donde \( b = \frac{-1+\sqrt{5}}{2} = 0.618033988...\).
+      </li>
+      </ul>
+      
+      <p>
+      Nota que en la última ecuación, escogemos el signo + del ±, ya que es el que nos da un valor positivo, siendo el único que tiene sentido para una longitud. 
+      </p>
+      
+      <p class='importante' style='margin-left:10%;margin-right:10%;'>
+      Finalmente, la proporción que buscamos del lado más grande al más pequeño está dada por \( \frac{a}{b} = \frac{1}{0.618033988...} = 1.618033988... \).
+      Este valor se conoce como la <strong>proporción áurea o dorada</strong> y se denota por la letra griega <em>phi</em> mayúscula: \(\Phi\). 
+      </p>
+      
+    </div>
+    
+	
+  <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>
+
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  
+  </div>
+  
+  
+  
+</article>
+
+
+</body>
+
+</html>

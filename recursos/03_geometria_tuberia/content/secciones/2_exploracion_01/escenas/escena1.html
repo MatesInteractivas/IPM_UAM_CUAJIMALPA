@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<title>TITULO</title>
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/descartes.css" />
+	<title>TITULO</title>	
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body style="margin:0px;padding:0px;overflow:hidden;">
+
+<p align="center">
+<ajs name="Descartes" width=760 height=480 code="Descartes">
+   <param name="tamaño" value="760x480">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.3.12, 2014-07-09">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' imagen='images/fondo.jpg' despl_imagen='arr-izq' fondo='f7f0ec' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='graficos' x='graficos.x' y='graficos.y' ancho='400' alto='400' fijo='sí' escala='49' despl_imagen='arr-izq' red='b8c4c8' red10='889498' ejes='405860' texto='no'">
+   <param name="C_01" value="id='boton cua' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='?' expresión='(410,155,30,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn30x30.png' dibujar-si='0'">
+   <param name="C_02" value="id='boton peq' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Botón' expresión='(450,155,60,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn60x30.png' dibujar-si='0'">
+   <param name="C_03" value="id='boton med' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Verificar' expresión='(520,155,90,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn90x30.png' dibujar-si='0'">
+   <param name="C_04" value="id='boton gra' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Haz clic aquí' expresión='(620,155,120,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn120x30.png' dibujar-si='0'">
+   <param name="C_05" value="id='menú' tipo='numérico' interfaz='menú' región='interior' espacio='E1' expresión='(200,190,100,34)' decimales='0' fijo='sí' visible='no' pos_mensajes='centro'">
+   <param name="C_06" value="id='r' tipo='numérico' región='interior' espacio='E1' nombre='    Radio   ' expresión='(r.ctr.x,r.ctr.y+30,r.ctr.w,r.ctr.h)' valor='r' min='0.5' max='3' decimales='3' fijo='sí' visible='sí' acción='calcular' parámetro='updateGraph()' dibujar-si='r.ctr.visible' activo-si='r.ctr.activo'">
+   <param name="C_07" value="id='agua.A' tipo='numérico' región='interior' espacio='E1' nombre='Área agua' expresión='(areaAgua.x,areaAgua.y,areaAgua.w,areaAgua.h)' valor='agua.A' min='0.01' max='pi*r^2' decimales='3' fijo='sí' visible='sí' acción='calcular' parámetro='updateGraph()' dibujar-si='areaAgua.visible&&0' activo-si='areaAgua.activo'">
+   <param name="C_08" value="id='sedimento.h' tipo='numérico' región='interior' espacio='E1' nombre='Alt. sedimento' expresión='(sedH.x,sedH.y-30,sedH.w,sedH.h)' valor='sedimento.h' min='0' max='sedH.max' decimales='3' fijo='sí' visible='sí' acción='calcular' parámetro='updateGraph()' dibujar-si='sedH.visible' activo-si='sedH.activo'">
+   <param name="C_09" value="id='campo' tipo='numérico' interfaz='campo de texto' región='interior' espacio='E1' expresión='(280,275,150,34)' decimales='3' fijo='no' visible='sí' dibujar-si='0'">
+   <param name="A_01" value="id='initCtrs()' algoritmo='sí' algoritmo='sí' hacer='r.ctr.x=450;r.ctr.y=125;r.ctr.w=250;r.ctr.h=50;r.ctr.txt=&squot;r&squot;;r.ctr.activo=1;r.ctr.visible=1;;;;sedH.x=450;sedH.y=325;sedH.w=250;sedH.h=50;sedH.visible=1;sedH.activo=1;sedH.max=2*r;;areaAgua.x=450;areaAgua.y=225;areaAgua.w=250;areaAgua.h=50;areaAgua.visible=1;areaAgua.activo=1'">
+   <param name="A_02" value="id='getAngAltraAgua_aux(area)' algoritmo='sí' expresión='angH2/2' algoritmo='sí' Local='angH2,const,end,limUp,limDw,tmpA' inicio='const=area*(2/r^2);end=0;limUp=2*pi;limDw=0;angH2=(limUp+limDw)/2;idx=0;_debug=&squot;&squot;' hacer='tmpA=angH2-sen(angH2);;porAbajo=(tmpA>const);limUp=(porAbajo)?angH2:limUp;limDw=(porAbajo)?limDw:angH2;idx=idx+1;end=(abs(tmpA-const)<0.0000001)|(idx>50);;angH2=(end)?angH2:((limUp+limDw)/2);;_debug=&squot;]=>&squot;+tmpA;_Print_(_debug)' mientras='!end'">
+   <param name="A_03" value="id='getMaxAnguloSedimento(areaAgua)' algoritmo='sí' expresión='angH2/2' algoritmo='sí' Local='angH2,const,end,limUp,limDw,idx,tmpA,porAbajo,_debug' inicio='const=(2/r^2)*(areaAgua);angH2=0;end=0;limUp=2*pi;limDw=-limUp;idx=0;_debug=&squot;&squot;' hacer='tmpA=angH2-sen(angH2);;porAbajo=(tmpA>const);limUp=(porAbajo)?angH2:limUp;limDw=(porAbajo)?limDw:angH2;;idx=idx+1;end=(abs(tmpA-const)<0.000000001)|(idx>50);;angH2=(end)?angH2:((limUp+limDw)/2);_debug=idx+&squot;=>&squot;+tmpA+&squot;,&squot;+const;;;' mientras='!end'">
+   <param name="A_04" value="id='updateGraph()' algoritmo='sí' algoritmo='sí' Local='angS' hacer='sedimento.abs_h=-r+sedimento.h ;sedimento.ang=asen(sedimento.abs_h/r);;;angS=(pi+2*sedimento.ang);angS=(angS<0)*2*pi+angS;;sed.AsegCirc=(angS*r^2)/2;sedTbase=2*r*cos(sedimento.ang);sed.ATriang=abs(sedimento.abs_h)*sedTbase/2;sed.ATriang=(sedimento.abs_h<0)?-sed.ATriang:sed.ATriang;sedimento.A=sed.AsegCirc+sed.ATriang;;;ô=&squot;**********************************************&squot;;ô=&squot;* Área de seccion circular dado el ángulo:   *&squot;;ô=&squot;*           (pi*r^2)*(ang/(2*pi))            *&squot;;ô=&squot;**********************************************&squot;;r2=r*r;areaTotal=sedimento.A+agua.A;agua.ang=getAngAltraAgua_aux(areaTotal);agua.angGrad=(agua.ang*180/pi)%360;;;;maxHS=getMaxAnguloSedimento(agua.A);_Print_(&squot;Angulo Max Sedimento: &squot;+(maxHSedimento*180/pi));maxHS=r*sen(maxHS-pi/2);sedH.max=abs(maxHS-r);'">
+   <param name="A_05" value="id='initEscene()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='initCtrs();;graficos.x=20;graficos.y=(E1._h-graficos._h)/2;;;;r=2;agua.A=(2.6/3)*(pi*r*r/2);sedimento.h=r/4;updateGraph();'">
+   <param name="A_06" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='initEscene()'">
+   <param name="A_07" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='rG=r+1/graficos.escala'">
+   <param name="G_01" value="espacio='E1' tipo='texto' dibujar-si='0' expresión='[20,20]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Courier New;}{\colortbl\red35\green35\blue35;\red64\green64\blue64;\red34\green162\blue141;\red112\green63\blue24;\red228\green113\blue0;\red236\green112\blue24;\red32\green48\blue58;}\cf0\f1\fs34\u201 sta es una escena Descartes. Se recomiendan los siguientes lineamientos:\par \par \b Ancho m\u225 ximo\b0  de la escena: 760px\par \b Alto m\u225 ximo\b0  (recomendado, no obligatorio): 480px\par \par \b Texto de p\u225 rrafo\b0 : 17px, \cf1 color grisObscuro\cf0\par \par \b Bot\u243 n\b0 : 30px de alto, texto blanco de 16 puntos\par \par \b Men\u250 \b0 : 34px de alto \par \par \b Pulsador\b0 : alto recomendado 50px \par \par \b Campo de texto\b0 : 34px de alto\par \par Por lo general, los colores que se recomienda usar en las escenas para resaltar cosas son:\par * \cf2\b color 22a28d \b0\cf3\par * \b\cf4 color e47100\cf5\b0  (color de men\u250  de navegaci\u243 n)\cf3\par \par \cf1 El fondo de estas escenas es images/fondo.jpg\cf3\par \cf6\f3\fs30\par }' fuente='SansSerif,PLAIN,17' fijo='sí' info='Párrafo'">
+   <param name="G_02" value="espacio='E1' tipo='texto' dibujar-si='0' expresión='[E1._w-400,10]' texto='sedimento.h=[sedimento.h]\nsedimento.A=[sedimento.A]\nsedimento.ang=[sedimento.ang]\n\nagua.ang=[agua.ang]\nagua.angGrad=[agua.angGrad]' decimales='6' fijo='no'">
+   <param name="G_03" value="espacio='E1' tipo='texto' dibujar-si='0' expresión='[0,E1._h-80]' texto='_debug=[_debug]\nareaTotal=[areaTotal]\nmaxHS=[maxHS]' fijo='sí'">
+   <param name="G_04" value="espacio='graficos' tipo='curva' expresión='(rG*cos(t),rG*sen(t))' t.intervalo='[-agua.ang-pi/2,agua.ang-pi/2]' t.pasos='24' relleno='1956cb' info='AGUA'">
+   <param name="G_05" value="espacio='graficos' tipo='curva' color='ff303a' expresión='(rG*cos(t),rG*sen(t))' t.intervalo='[-(pi+sedimento.ang),sedimento.ang]' t.pasos='24' relleno='ab936f'">
+   <param name="G_06" value="espacio='graficos' tipo='arco' radio='r' fin='360' fijo='sí' ancho='4'">
+</ajs></p>
+
+</body>
+</html>

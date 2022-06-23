@@ -1,0 +1,18 @@
+tipo_de_macro=R2
+Idioma=español
+id='a' constante='sí' expresión='1'
+id='b' constante='sí' expresión='1'
+id='c' constante='sí' expresión='1'
+id='t' constante='sí' expresión='2'
+id='alfa' constante='sí' expresión='0.2'
+id='rojo' constante='sí' expresión='1'
+id='verde' constante='sí' expresión='0'
+id='azul' constante='sí' expresión='1'
+id='rojoInt' constante='sí' expresión='1'
+id='verdeInt' constante='sí' expresión='0.9'
+id='azulInt' constante='sí' expresión='0.9'
+id='pasosV' constante='sí' expresión='10'
+id='pasosU' constante='sí' expresión='10'
+id='cU(uP)' expresión='2*pi*uP'
+id='INICIO' algoritmo='sí' evaluar='una-sola-vez'
+id='CALCULOS' algoritmo='sí' evaluar='siempre'

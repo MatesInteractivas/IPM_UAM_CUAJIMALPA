@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Formalización del problema</h1>
+    <h2>La versión general del problema</h2>
+    
+    <!--- Párrafo --->
+    <p class="problema"> Dados \(n\) puntos y un cuadro de costos de
+    todos los enlaces requeridos para comunicar cada pareja de puntos,
+    debemos escoger una lista de enlaces de tal forma que la suma de
+    los costos correspondientes sea la menor posible, pero que haya
+    siempre una ruta que permita comunicar dos puntos
+    cualesquiera.<br><br>  Sabemos que la cantidad de enlaces o
+    miembros del conjunto de enlaces que soluciona el problema es
+    \(n-1\).<br><br>Sabemos también que el número de costos del
+    cuadro, que es también el número de enlaces necesarios para
+    conectar los puntos todos con todos es\[\frac{n(n-1)}2\]
+    </p>
+
+    <p>
+      Ahora que tenemos claro lo que debemos hacer, que de hecho
+      hemos practicado repetidamente en el apartado de exploración,
+      pasemos a resolver el problema.
+    </p>
+  
+      <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

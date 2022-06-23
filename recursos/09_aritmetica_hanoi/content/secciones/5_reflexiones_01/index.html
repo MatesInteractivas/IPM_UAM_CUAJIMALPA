@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="js/contribute/modal/css/basic.css" />
+  <link type="text/css" rel="stylesheet" href="js/contribute/selectBoxIt/jquery.selectBoxIt.css" />
+  <link rel="stylesheet" type="text/css" href="css/contribute/jquery-ui.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/contribute/jquery-ui.structure.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/contribute/jquery-ui.theme.min.css" />
+ <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+ <link href="css/custom.css" rel="stylesheet" type="text/css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="css/actividad1.css" />
+
+
+
+  <!-- jQuery -->
+  <script src="js/contribute/jquery-1.11.3.min.js"></script>
+  <script src="js/contribute/jquery-ui.min.js"></script>
+  
+  <!-- MathJax -- para fórmulas matemáticas -->
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!-- Script para mostrar créditos y agregar ligas a glosario -->
+  <script type="text/javascript" src="js/local.js"></script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  
+
+  <script type="text/javascript" src="js/contribute/modal/js/jquery.simplemodal.js"></script>
+   <script src="js/contribute/selectBoxIt/jquery.selectBoxIt.min.js"></script>
+  <script type="text/javascript" src="js/utils.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!-- INICIA EL CONTENIDO DE LA PÁGINA -->
+    
+    <!-- Título de la página -->
+    <h1>Reflexiones y aplicaciones</h1>
+
+     <p>
+      La inducción matemática nos ayuda a demostrar que una fórmula o razonamiento 
+      es verdadero, siempre y cuando este se pueda poner en términos sucesivos, 
+      es decir que de alguna manera se pueda definir por medio de una serie de números 
+      enteros positivos. Por ejemplo, con las torres de Hanoi, se puede utilizar este 
+      método de demostración porque podemos obtener la fórmula utilizando el número de 
+      discos, sabiendo que para una torre de (\(n\)) discos, tendremos que 
+      hacer (\(2^n -1\)) movimientos.   
+    </p>
+    
+    <!-- Subtítulo (no necesario en introducción) -->
+    <h2>Cajero automático</h2>
+    
+    <!-- Párrafo -->
+    <p>
+      El método de inducción matemática se puede utilizar para demostrar que es verdad 
+      una aseveración que no es estrictamente una fórmula. Veamos el siguiente problema : 
+    </p>
+    
+    <p class='problema'>
+      <strong>Problema</strong>
+      <br><br>
+      
+      
+        <img src="imgs/atm.png" align='left'></img>
+        Tenemos un cajero automático, el cual este mes sólo tiene billetes de $200 y $500. 
+        Aún así, el personal del banco sabe que este puede surtir cualquier 
+        cantidad de dinero (múltiplo de $100) mayor que o igual a $400 que se le solicite.
+        <br><small>
+          Nota: Suponemos que el cajero tiene suficiente dinero como para surtir todas 
+          las transacciones del mes y que no hay límite en el monto del retiro, a excepción de 
+          la cantidad de dinero que tenga cada cliente en su cuenta. 
+        </small>
+        <br><br>
+        <b>Demostremos por inducción que que esto es verdadero.</b>
+     
+    </p>
+    
+     <p class='importante'>
+        Para simplificarnos las cosas, expresemos la cantidad que nos pidan como :
+        \( n \times 100 \), así por ejemplo tendríamos que: 
+
+        \begin{align}
+           \$ 100   &= 1 \times 100 \\
+           \$ 500   &= 5 \times 100 \\
+           \$ 1500  &= 15 \times 100 \\
+        \end{align}
+
+       
+      </p>
+    <div id='induccion-act1'>
+      <p>
+        Antes de demostrar el problema exploremos un poco cómo surtir el dinero 
+        que se le podría pedir al cajero. Recuerda que sólo puede dar múltiplos de 
+        $100 mayores que o iguales a $400.
+      </p>
+
+      <div class='instrucciones'>
+        Marca con los pulsadores cuántos billetes de $200 y $500 se necesitan para
+        dar como resultado la cantidad que se indica del lado izquierdo. Después 
+        de que aciertes 5 cantidades se revelarán más abajo los siguientes pasos. 
+      </div>
+
+      <div id='induccion-base-act1' class='interaction'>
+        <span class='num'>n</span> = 
+        <input class='k' value=''> &times; 200 +
+        <input class='m' value=''> &times; 500
+        <br>
+        <button class='verificar'>Verificar</button>
+        <button class='reInit'>Otro ejemplo</button>
+      </div>
+    </div>
+
+    <h3>
+      Caso base
+       <span id='espera-base' class='espera'>
+          Esperando a tener paso anterior ...
+        </span>
+    </h3> 
+    <div id='induccion-base'>
+      <div class='instrucciones'>
+       Selecciona en el menú la expresión que modele nuestro problema y con la que  
+       puedes armar el caso base. Cuando encuentres la expresión adecuada se 
+       revelarán los siguientes pasos de la demostración en la parte inferior.
+      </div>
+
+
+      <div id='induccion-base-act1' class='interaction'>
+        Expresión :<br><br>
+          <div class='expresion-cont'>
+            <span>n &times; 100 =</span> 
+            <select class='indiccion-expresion'>
+                <option value='-1' data-text=''> Selecciona una expresión</option>
+                <option value='0' data-text='k &times; 200 + m &times; 500'></option>
+                <option value='1' data-text='k &times; 200 - m &times; 500'></option>
+                <option value='2' data-text='k &times; 200 / m &times; 500'></option>
+                <option value='3' data-text='k &times; 200 &times; m &times; 500'></option>
+                <option value='4' data-text='(k &times; m &times;) 200 + 500'></option>
+            </select>
+          </div>
+      </div>
+      
+      <p class='solucion-base importante' >
+        Entonces, si utilizamos esta expresión para surtir $400, tenemos: 
+        $$  4 \times 100 = 2 \times 200 + 0 \times 500 $$
+        Con esto tenemos un caso base donde se cumple la expresión.
+       </p>
+    </div>    
+
+
+
+    <h3>
+      Hipótesis de inducción
+        <span id='espera-hipotesis' class='espera'>
+          Esperando a tener paso anterior ...
+        </span>
+    </h3>
+    <div id='induccion-hipotesis'>
+        Entonces supongamos que es valido para \( n\), es decir, existen \(k\) y \(m\) tal que:
+              $$  n \times 200 = k \times 200 + m \times 500 $$
+    </div>
+
+
+
+
+    <h3>
+      Paso inductivo
+      <span id='espera-paso-inductivo' class='espera'>
+          Esperando a tener paso anterior ...
+      </span>
+    </h3> 
+    <div id='induccion-paso-inductivo'>
+        Sabemos que para \(n\) existen \(k\) y \(m\) tal que :
+          $$ n \times 100 = k \times 200 + m \times 500 $$
+
+          Podemos sumar $100
+
+          $$ n \times 100  + 100 = k \times 200 + m \times 500 + 100 $$
+
+          Y de aquí podemos ver dos casos:
+
+          <ol>
+            <li>
+              Si tenemos que para surtir \(n\) por lo menos se usa un billete de $500 (\(m > 0\)), 
+              entonces remplazamos ese billete más los $100 nuevos por tres de $200:
+              \begin{align}
+                n \times 100 + 100 &= k \times 200 + m \times 500 + 100 \\
+                n \times 100 + 100 &= k \times 200 + (m-1) \times 500 +  500 + 100 \\
+                n \times 100 + 100 &= k \times 200 + (m-1) \times 500 +  600 \\
+                n \times 100 + 100 &= k \times 200 + (m-1) \times 500 +  3 \times 200 \\
+                n \times 100 + 100 &= (k+3) \times 200 + (m-1) \times 500\\
+                \\
+
+                (n+1) \times 100   &= (k+3) \times 200 + (m-1) \times 500 
+                \\
+              \end{align}
+              EL único problema sería que \(m - 1\) fuera menor que 0, pero dijimos que 
+              por lo menos teníamos un billete de $500; por eso lo menos que puede valer 
+               \(m - 1\) es 0 y sigue siendo válido.
+                <br><br>
+            </li>
+            <li>
+              Si tenemos que para surtir \(n\) sólo se usa un billete de $200 (\(m = 0 \)),
+              entonces podemos tomar 2 billetes de $200 y junto con los $100 nuevos lo remplazamos 
+              por uno de $500:
+
+              \begin{align}
+                n \times 100 + 100 &= k \times 200 + 100 \\
+                n \times 100 + 100 &= (k-2) \times 200 +  2 \times 200 + 100 \\
+                n \times 100 + 100 &= (k-2) \times 200 +  400 + 100 \\
+                n \times 100 + 100 &= (k-2) \times 200 +  500 \\
+                n \times 100 + 100 &= (k-2) \times 200 +  1 \times 500 \\
+                \\
+                  (n+1) \times 100   &= (k-2) \times 200 +  1 \times 500 \\
+              \end{align} 
+              Lo que puede fallar aquí es que \(k -2\) sea menor que 0, pero eso no puede ocurrir
+              porque lo mínimo que dijimos que se va a surtir son $400 o \( 2 \times 200\). Entonces
+              \( k-2 \) a lo menos es 0 y sigue siendo válido.
+               <br><br>
+            </li>
+
+
+           </ol>
+           <div class='importante'>
+           Y con estos dos casos ya demostramos que existen dos valores, llamémolos \(k_2\) y \( m_2\),
+           tal que :
+              $$ (n+1) \times 100 = k_2 \times 200 + m_2 \times 500 $$
+
+              <strong>
+                Y de esta manera demostramos que el cajero automático puede surtir cualquier
+                cantidad mayor que o igual a $400 con sólo billetes de $200 y $500.
+              </strong><br><br><br>
+              <center>
+                <button id='btnReinit'> Reiniciar actividad</button>
+              </center>
+          </div>
+    </div>
+    
+    <br>
+
+    <div class='tarea'>
+      <h3>Tarea</h3>
+      <p>
+        <a href='https://es.wikipedia.org/wiki/Carl_Friedrich_Gauss' target='_blank'>
+          <img src="imgs/gauss.jpg" align='left'></img>
+        </a>
+      
+        <a href='https://es.wikipedia.org/wiki/Carl_Friedrich_Gauss' target='_blank'>Carl Friedrich Gauss
+        </a> fue un matemático alemán que vivió en el siglo XIX. Mostró grandes habilidades
+        matemáticas desde pequeño y una de las anécdotas más contadas de su 
+        niñez es que, a la edad de 7, su profesor castigó a su clase pidiéndoles sumar 
+        los números del 1 al 100. Se dice que a los pocos minutos, mientras sus demás compañeros
+        llenaban sus pizarras de sumas, Gauss le entregó el resultado al profesor. Este 
+        al ver que el resultado era correcto, quedó sorprendido.
+        <br><br>
+        Lo que Gauss hizo fue encontrar una fórmula que le permitía calcular la suma 
+        de los primeros \(n\) números y la usó para \(100\). La fórmula que encontró fue:
+          $$  {n (n+1) \over{2}}$$
+
+        <b>
+          Demuestra por inducción que la fórmula sirve para cualquier número natural,
+          es decir, cuando \( n\) vale \(1, 2, 3, 4 \), etcétera.
+        </b>
+      </p>
+      
+      <p style='margin-top:20px;'>
+        Procura encontrar las respuestas antes de ver la solución.
+      </p>
+      
+      <div class="verSolucion" id="btSolucion" onclick="document.getElementById('solucion').setAttribute('class','visible');document.getElementById('btSolucion').setAttribute('class','oculto');">
+      </div>
+      
+    </div>
+    
+    
+
+    <div id="solucion" class='oculto'>
+      
+      <h4>Solución de la tarea</h4>
+      
+      <p>
+       Para realizar nuestra demostración, sólo seguimos los pasos que ya hemos utilizado antes.
+      </p>
+      
+      
+      <ol>
+        <li><b>Caso base</b><br><br>
+            Si \(n = 1 \), la suma es 1, lo cual es correcto.
+            $$  {1 (1+1) \over{2}} =  {2 \over{2}} = 1 $$
+            Y este es nuestro caso base.
+          <br><br>
+        </li>
+
+        <li><b>Hipótesis de inducción</b><br><br>
+          Entonces supongamos que es válido para \(n\), es decir que :
+              $$  {n (n+1) \over{2}}$$
+          nos da la suma de los primeros \(n \) números.
+          <br><br>
+        </li>
+
+
+        <li><b>Paso inductivo</b><br><br>
+          Ahora sumemos el siguiente número, que es \( n+1 \), y simplifiquemos :    
+         \begin{align}
+              {n (n+1) \over{2}} + (n + 1) &=\\
+              {n (n+1) +2(n+1) \over{2}} &=\\
+              {(n+2) (n+1) \over{2}} &=\\
+              {(n+1) ((n+1) + 1) \over{2}} & \\
+         \end{align}
+        </li>
+      </ol>
+
+      <p style='margin-top:20px;'>
+        Y con esto demostramos que la fórmula funciona para cualquier 
+        valor de \(n\).
+      </p>
+    </div>
+
+
+
+
+<!-- TERMINA EL CONTENIDO DE LA PÁGINA -->
+
+
+
+
+
+
+
+
+  
+     <!-- INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR -->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+  
+  <!-- TERMINA LA INFO SOBRE LAS CONDICIONES DE USO -->
+  
+  
+  </div>
+  
+
+</article>
+
+</body>
+
+</html>

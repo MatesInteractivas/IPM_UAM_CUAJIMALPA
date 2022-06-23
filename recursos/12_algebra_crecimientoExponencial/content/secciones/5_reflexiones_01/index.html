@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>  
+
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Reflexiones y aplicaciones</h1>
+    
+    <!--- Subtítulo (no necesario en introducción) --->
+    <h2>El crecimiento exponencial en fenómenos naturales</h2>
+    
+    <!--- Párrafo --->
+    <p>
+      Sabemos que un esquema de interés compuesto que se aplica a un
+      capital inicial \(C\ge0\), que aumenta en cada unidad de tiempo
+      una fracción \(f\ge0\) de sí mismo, produce una sucesión
+      creciente dada por \[C\rightarrow Ca\rightarrow
+      Ca^2\rightarrow\dots\rightarrow Ca^n\rightarrow\cdots\]
+      donde \(a=f+1\).
+    </p>
+
+    <p>
+      Mediante el crecimiento exponencial es posible describir el
+      comportamiento de la cantidad de individuos en una población de
+      seres vivos, ya sean bacterias, peces, pollos o incluso personas.
+    </p>
+    
+    <div class="course_extern_content"> 
+      <img src="imgs/genteEnCiudad.jpg"></img>
+    </div>
+
+    <p>
+      Por ejemplo, podemos decir que en Japón el porcentaje de
+      crecimiento anual de la población es del \(.9\%\), mientras que
+      en América Latina es del \(2.3\%\). Con estos datos y una
+      población inicial podemos predecir cómo se comportarán estas
+      poblaciones a futuro o cuál era su valor en el pasado. Lo último
+      es consecuencia de que la función \[y=Ca^{n}\] también admite
+      valores de \(n\) negativos que corresponden a tiempos pasados,
+      lo cual podemos representar mediante el siguiente diagrama \[
+      \cdots\rightarrow Ca^{-n}\rightarrow\dots\rightarrow Ca^{-2}
+      \rightarrow Ca^{-1}\rightarrow C\rightarrow Ca\rightarrow
+      Ca^2\rightarrow\dots\rightarrow Ca^n\rightarrow\cdots\] que
+      tiene una correspondencia con los números enteros en tanto
+      \(C=Ca^0\) y \(Ca=Ca^1\).
+    </p>
+
+    <p>
+      Otro fenómeno que se describe con la función exponencial es el
+      <strong>decaimiento radioactivo</strong>. Por ejemplo, la semi vida o vida media
+      de plutonio 238, combustible usado en plantas nucleares, es de
+      \(88\) años. Ahora, ¿qué es la vida media de un material
+      radioactivo? Resulta que es el tiempo que tarda el material en
+      perder la mitad de su masa por sí mismo. Si de algún modo
+      lográramos conseguir una bola de \(1 kg\) de plutonio 238,
+      entonces después de 88 años, sin hacerle nada, sólo quedaría
+      \(\frac12kg\), y 88 años más tarde quedaría \(\frac14kg\), y así
+      sucesivamente. En otras palabras, el plutonio 238 pierde un \(50\%\) de su masa cada 88
+      años. Como en este caso \(f=-.5&lt;0\) y, por tanto,
+      \(a=-.5+1=.5&lt;1\), tenemos un caso de 'decrecimiento exponencial'.
+    </p>
+    
+    <br>
+
+    <div class='tarea'>
+      
+      <h3>Tarea</h3>
+      
+      <p>
+	<ol>
+	  <li>
+	    La población de un país crece al \(.9\%\) anual, como es actualmente el
+	    caso de Japón.<br>
+            <br>
+            <ol type='a'>
+            <li>Si en estos momentos tiene
+	    \(100,000,000\) habitantes, ¿cuántos habitantes tendrá en
+	    \(20\) años y cuántos tenía hace \(20\) años?</li><br>
+	    <li>¿Cuántos años tardará este país en duplicar su población?</li>
+            </ol>
+	  </li>
+	  <br>
+	  <li>
+	    Como ya comentamos arriba, el plutonio 238 tiene una vida media de \(88\) años.<br>
+            <br>
+            <ol type='a'>
+            <li>
+	    ¿Cómo describimos, usando \(Ca^n\), el fenómeno de
+	    decaimiento de \(2kg\) considerando que las unidades de
+	    tiempo son años?
+            </li>
+            <br>
+              <li>¿Cuál es el valor de \(a\) si los periodos fueran siglos?</li>
+	  </li>
+	</ol>
+      </p>
+      
+      <p>
+      ¡Trata de encontrar la solución por tu cuenta antes de oprimir el botón de abajo!
+      </p>
+      
+       <div class="verSolucion" id="btSolucion" onclick="document.getElementById('resp').setAttribute('class','visible');document.getElementById('btSolucion').setAttribute('class','oculto');">
+       </div>
+    </div>
+ 
+    
+    <div id="resp" class="oculto">
+      <h4>Respuestas</h4>
+      <p>
+	<ol>
+	  <li>
+	    Si la población de un país crece al \(.9\%\) anual,
+	    entonces para un valor inicial \(C\) de la población
+	    tendremos en el año \(n\) una población representada por
+	    \[Ca^n\]con \(a=1+.009\) ya que \(1\%\) equivale a \(.01\)
+	    por lo que \(.9\%\) representa la fracción \(.009\).<br>
+            <br>
+            <ol type='a'>
+            <li>Si en estos momentos \(C=100,000,000\), en veinte años será
+	    \[Ca^{20}=1,000,000\times1.009^{20}\simeq1,000,000\times1.196253785\simeq119,625,378,\]
+	    poco más de \(119\) millones y medio de habitantes después de veinte años. Similarmente, veinte años atrás
+	    \[Ca^{-20}=1,000,000\times1.009^{-20}\simeq\frac{1,000,000}{1.196253785}\simeq83,594,301,\]
+	    poco más de \(83\) millones y medio de habitantes veinte años antes.
+	    Para este último cálculo usamos el hecho de que \(x^{-b}=\frac1{x^b}\).</li><br>
+	    <li>Para saber cuántos años tardará este país en duplicar
+	      su población, lo que haremos es buscar una \(n\) para la
+	      cual \[Ca^n=2C,\] es decir, depués de \(n\) años la
+	      población inicial \(C\) crece hasta convertirse en
+	      \(2C\), el doble. La ecuación anterior de hecho es
+	      equivalente a \[a^n=2.\] Haciendo los cálculos veremos que
+	      \[(1.009)^{75}\simeq1.958111724\]
+	      \[(1.009)^{76}\simeq1.975734730\]
+	      \[(1.009)^{77}\simeq1.993516342\]
+	      \[(1.009)^{78}\simeq2.011457989\] por lo que podemos decir
+	      que en algún momento, entre los 77 y 78 años, se duplica
+	      la población. Una manera directa de calcular este dato
+	      es con las funciones logarítmicas.
+	    </li>
+            </ol>
+	  </li>
+	  <br>
+	  <li>
+	    El plutonio 238 tiene una vida media de \(88\) años, lo
+	    cual representamos como \[C\times(.5)^n\] para periodos de
+	    \(88\) años, es decir, si \(n=1\) han transcurrido \(88\)
+	    años, para \(n=2\) van \(192\), etcétera.<br>
+            <br>
+            <ol type='a'>
+            <li>
+	    Dado que un año es un submúltiplo de \(88\) años buscaremos una \(a\), correspondiente a periodos de un año, para la cual
+	    \[Ca^{88}=C\times.5,\] o lo que es lo mismo
+	    \[a^{88}=.5\] lo que ocurre cuando
+	    \[a=\sqrt[88]{.5}\simeq.992154267,\] así el decaimiento anual de \(2kg\) de este material radioactivo estará dado por 
+	    \[2\rightarrow2a\rightarrow2a^2\rightarrow\dots\rightarrow2a^n\rightarrow\cdots\] con \(a=.992154267\).
+            </li>
+            <br>
+            <li>Si los periodos fueran siglos podemos considerarlos
+	      como múltiplos de los años, y entonces el valor de \(a\)
+	      correspondiente a \(100\) años estará dado por
+	      \[a=\left(\sqrt[88]{.5}\right)^{100}=\sqrt[88]{(.5)^{100}}=(.5)^{\frac{100}{88}}\simeq.454904737.\]
+	    </li>
+	  </li>
+	</ol>
+      </p>
+      
+    </div>
+
+
+  <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>     
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  </div>
+  
+
+</article>
+
+</body>
+
+</html>
+

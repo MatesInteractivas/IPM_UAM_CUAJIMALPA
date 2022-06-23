@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<title>HTML5</title>
+		<style>
+		body {
+			margin: 0;
+			padding: 0;
+			overflow:hidden;
+			
+		}
+
+	</style>	
+	<script type="text/javascript">
+
+	var ctx;
+	var lados=5;	
+
+	var origen={
+		x:300,
+		y:300
+	};
+
+	var vertice={
+		x:null,
+		y:null
+	};
+
+	function init(){
+		//console.log("hola");
+		ctx=document.getElementById('main').getContext('2d');
+		drawPoint(origen.x,origen.y);
+		pentagono(15,0);
+		pentagono(40,3,"#ffff00");
+		pentagono(60,5);
+		pentagono(80,7);
+		pentagono(100,9);
+
+	};
+
+	function pentagono(R,div,color){
+		var ang=(360/lados)*(Math.PI/180);
+		var punto;
+		for (var i = 0; i <lados+1; i++) {
+			punto=polar2cartesian(R,ang*i);
+			drawPoint(origen.x+punto.x,origen.y+punto.y,color);
+
+			if (div!=0) {
+
+				if (i>0&&i<6) {
+				//console.log(i);
+				punto1=polar2cartesian(R,ang*(i-1));
+				punto2=polar2cartesian(R,ang*i);
+				
+				for (var j=1;j<div;j++) {
+						punto3=polar2cartesian(R,(ang*i)-((ang/div)*j));
+						console.log((ang*i)*180/Math.PI);
+						console.log(((ang/div)*j)*180/Math.PI);
+						console.log(((ang*i)-((ang/div)*j))*180/Math.PI);
+						puntoInt=checkLineIntersection(punto1.x,punto1.y,punto2.x,punto2.y,0,0,punto3.x,punto3.y);
+						//console.log(puntoInt.x+" "+puntoInt.y);
+						drawPoint(origen.x+puntoInt.x,origen.y+puntoInt.y,"#FF0000");
+					};
+		
+			
+			};
+
+		};
+
+		};
+
+
+			
+	};
+
+	function function_name (argument) {
+			for (var j=1;j<div;j++) {
+						punto3=polar2cartesian(R,(ang*i)-((ang/div)*j));
+						puntoInt=checkLineIntersection(punto1.x,punto1.y,punto2.x,punto2.y,origen.x,origen.y,punto3.x,punto3.y);
+						drawPoint(puntoInt.x,puntoInt.y);
+					};// body...
+	}
+
+	function polar2cartesian(R, theta) {
+		var punto={
+			x:null,
+			y:null	
+		};
+        punto.x = R * Math.cos(theta);
+        punto.y= R * Math.sin(theta);
+        return punto;
+    };
+
+	function checkLineIntersection(line1StartX, line1StartY, line1EndX, line1EndY, line2StartX, line2StartY, line2EndX, line2EndY) {
+    // if the lines intersect, the result contains the x and y of the intersection (treating the lines as infinite) and booleans for whether line segment 1 or line segment 2 contain the point
+    var denominator, a, b, numerator1, numerator2, result = {
+        x: null,
+        y: null,
+        onLine1: false,
+        onLine2: false
+    };
+    denominator = ((line2EndY - line2StartY) * (line1EndX - line1StartX)) - ((line2EndX - line2StartX) * (line1EndY - line1StartY));
+    if (denominator == 0) {
+        return result;
+    }
+    a = line1StartY - line2StartY;
+    b = line1StartX - line2StartX;
+    numerator1 = ((line2EndX - line2StartX) * a) - ((line2EndY - line2StartY) * b);
+    numerator2 = ((line1EndX - line1StartX) * a) - ((line1EndY - line1StartY) * b);
+    a = numerator1 / denominator;
+    b = numerator2 / denominator;
+
+    // if we cast these lines infinitely in both directions, they intersect here:
+    result.x = line1StartX + (a * (line1EndX - line1StartX));
+    result.y = line1StartY + (a * (line1EndY - line1StartY));
+/*
+        // it is worth noting that this should be the same as:
+        x = line2StartX + (b * (line2EndX - line2StartX));
+        y = line2StartX + (b * (line2EndY - line2StartY));
+        */
+    // if line1 is a segment and line2 is infinite, they intersect if:
+    if (a > 0 && a < 1) {
+        result.onLine1 = true;
+    }
+    // if line2 is a segment and line1 is infinite, they intersect if:
+    if (b > 0 && b < 1) {
+        result.onLine2 = true;
+    }
+    // if line1 and line2 are segments, they intersect if both of the above are true
+    return result;
+};
+
+	function drawPoint(x, y, color) {	
+    ctx.fillStyle = color || 'black';
+    ctx.beginPath();
+    ctx.arc(x, y, 5, 0, 2 * Math.PI, true);
+    ctx.fill();
+    };
+
+	</script>
+
+     
+     <body onload="init()">
+
+	 <canvas id="main" width="420" height="650"></canvas>	
+	</body>
+
+</html>

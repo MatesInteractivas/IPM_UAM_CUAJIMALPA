@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Formalización del problema</h1>
+    <h2>Inducción sobre el primer parámetro</h2>
+    
+    <p class='importante'>
+      <strong>Nota:</strong> Esta página en particular contiene material muy
+      importante, en términos matemáticos formales. Sin embargo, el
+      contenido es un poco denso y es opcional. Si estás más interesado en conocer la
+      construcción de la solución del problema, avanza y regresa a esta
+      parte después cuando prefieras.
+    </p>
+
+    <p>
+      La fórmula de la opción 5 de la página anterior es
+      válida para cualquier número natural \(n\), esto es,
+       \[1+2+\dots+(n-1)=\frac{n(n-1)}2.\]
+    </p>
+
+    <div class="tarea">
+      <h3>Tarea</h3>
+      <p>
+      Trata de aplicar el principio de
+      inducción matemática para corroborar la fórmula
+      anterior.
+      <br><br>
+      Recuerda que este principio tiene dos
+      partes:
+      </p>
+      <ol>
+      <li>
+      Verificar la propiedad, en este caso la
+      fórmula, para un valor inicial.
+      <br><br>
+      <em>En este caso, dicho valor puede ser
+      \(1\).</em>
+      </li>
+      <br>
+      <li>
+      Dar por hecho que la fórmula es válida para un
+      número natural arbitrario \(n\), y  transformar la fórmula según lo que pasa al
+      incrementar en 1 ese número.
+      <br><br>
+      <em>En este caso, obtén la fórmula para
+      el siguiente número natural \(m=n+1\).</em>
+      </li>
+      </ol>
+      
+      <p>¡Haz un intento de encontrar el proceso de inducción antes de ver la solución!</p>
+      
+      <div class="verSolucion" id="btSolucion" onclick="document.getElementById('induccion').setAttribute('class','visible');document.getElementById('btSolucion').setAttribute('class','oculto');">
+    
+    </div>
+      
+    </div>
+
+
+
+    <div class="oculto"  id="induccion">
+
+    <h2>Solución</h2>
+
+    <p>
+      Veremos que la fórmula\[1+2+\dots+(n-1)=\frac{n(n-1)}2\]es
+      válida para cualquier número natural \(n\ge1\).
+    </p>
+
+    <p>
+      Si \(n=1\) entonces
+      \[\frac{n(n-1)}2=\frac{1(1-1)}2=\frac{1\times0}2=0\] que
+      coincide con la suma de los números natuales menores que \(1\),
+      que, como no hay números que sumar, es cero. La fórmula es válida si \(n=1\).
+    </p>
+
+    <p>
+      Demos por hecho que la fórmula vale para un número natural cualquiera
+      \(n\) y tomemos \(m=n+1\).
+    </p>
+    
+    <p>
+      La fórmula para \(m\), misma que queremos ver si se cumple, es
+    </p>
+	<div class="course_extern_content"> 
+	  <iframe class="course_iframe" width="750" height="300" frameborder="0" src="escenas/escena.html"></iframe>
+	</div>
+  
+    <p>
+      Si calculamos esta última suma de la parte derecha de la igualdad tenemos que
+      \[\frac{n(n-1)}2+n=\frac{n(n-1)}2+\frac {2n}2=\frac{n(n-1)+2n}2=\frac{n^2-n+2n}2=\frac{n^2+n}2=\frac{(n+1)n}2\] 
+      <br>
+      Como \(m=n+1\) pero también \(n=m-1\) tendremos que el último valor 
+      \[\frac{(n+1)n}2=\frac{m(m-1)}2\] 
+      Esta es la parte derecha de la fórmula que queremos verificar.
+      <br><br>
+      Como la parte izquierda es igual a la derecha,
+      la fórmula es válida para \(m=n+1\). <br><br>Como se cumplen los dos supuestos del principio de inducción matemática,
+      la fórmula es válida para cualquier número natural \(n\ge1\).
+    </p>
+
+    <p class="problema">
+      <strong>Problema</strong>
+      <br><br>
+      Ahora reproduce el razonamiento anterior para demostrar la validez de
+      la siguiente fórmula, misma que permite calcular la suma de los primeros \(n\)
+      números naturales.\[1+2+\dots+n=\frac{n(n+1)}2\]
+    </p>
+
+    </div>
+
+      <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

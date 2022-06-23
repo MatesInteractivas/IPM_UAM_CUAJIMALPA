@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+  <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+
+</head>
+
+<body onload="initialize();">
+  
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    </p><!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Planteamiento del problema: Geolocalización</h1>
+    
+    <!--- Párrafo --->
+    <p>
+      Actualmente el mundo se encuentra conectado principalmente por sistemas móviles inteligentes que funcionan como pequeños ordenadores con conexión a internet. Cuando adquirimos uno de estos equipos, y sobre todo los que cuentan con tecnologías de  vanguardia, llama la atención que al ejecutar prácticamente cualquier aplicación, ésta nos solicita permiso para localizar nuestra posición y cuando lo permitimos nos ubica con mucha precisión en algún tipo de mapa. Este proceso tecnológico es conocido como <strong>geolocalización</strong> y gracias a ella es cada vez menos probable que alguien se pierda en algún lugar del planeta.
+    </p>
+    
+      <div class="course_extern_content"> 
+        <img src="imgs/geolocalizacion.jpg"></img>
+      </div>
+    
+    <h2>
+      ¿Qué proceso se realiza para localizarnos mediante un dispositivo móvil?
+    </h2>
+    
+    <p>
+      La mayoría de los dispositivos móviles incorporan receptores de GPS, que son las siglas en inglés del “Sistema de Posicionamiento Global”. Este sistema es el encargado de ubicar nuestra posición.
+      El GPS inició como un proyecto del departamento de defensa de los Estados Unidos para la navegación militar, y hoy en día es una tecnología accesible para muchos.
+      El sistema se basa en una constelación artificial de satélites que orbitan la Tierra y que continuamente envían la hora exacta y su ubicación. Esta información es interceptada por los receptores GPS, los cuales hacen cálculos (que no son nada triviales) para determinar su distancia a algunos satélites según el tiempo que les toma recibir la información.
+      Con esta información “triangulan” las señales y así logran calcular su ubicación.
+    </p>
+      
+      <div class="course_extern_content"> 
+        <img src="imgs/gps.png"></img>
+      </div>
+    
+    <h2>
+    ¿Es posible saber la posición de un dispositivo móvil sin receptor GPS?
+    </h2>
+
+    <p>
+    Es posible ubicar la posición de un dispositivo móvil por medio de otro tipo de señales que no provienen de los satélites. Estas técnicas se crearon debido a que existen dispositivos móviles que no cuentan con GPS y a que los que cuentan con él en ocasiones tienen mala recepción.
+    Utilizan a los dispositivos como radiocomunicadores, los cuales se pueden comunicar con torres (estaciones base) que tienen antenas con múltiples celdas o células que se encargan de enviar y recibir esas señales de radio. Los móviles tienen trasmisores de baja potencia, lo cual sólo les permite comunicarse con antenas cercanas a ellos.
+    Otra opción de comunicación es cuando los dispositivos se conectan por medio de antenas wifi, las cuales siempre están transmitiendo su ubicación mediante su dirección MAC.
+    <br><br>
+    Estos métodos sin GPS son menos precisos debido a diversos obstáculos que se pueden presentar en el camino de la señal, ya sean muros, árboles, montañas, etcétera.
+    Es por eso que programas como Google Maps en el móvil generalmente recomiendan encender el GPS para obtener información más precisa.
+    <br><br>
+    En la actualidad se hace una combinación de las técnicas antes mencionadas junto con el GPS, sacando provecho de las virtudes de cada una. Esta combinación es conocida como A-GPS o <strong>GPS asistido</strong>.
+    Con este sistema, al encender nuestro dispositivo, éste solicitará a un servidor la identificación de las antenas que tiene cerca y el teléfono obtendrá como respuesta la identificación y ubicación de satélites que están encima de dichas antenas (y según nuestra posición nos dará los datos de unos satélites u otros).
+    De esta manera, la puesta en marcha de la navegación es más rápida, ya que sin esta información el sistema GPS podría tardar hasta 15 minutos en localizar los satélites.
+    </p>
+
+      <div class="course_extern_content"> 
+        <img src="imgs/agps.jpg"></img>
+      </div>
+
+    <!--
+    <p class="importante">
+    ¿Cuál es la razón de qué diversos países trabajan en hacer un sistema de localización más eficiente si en la actualidad ya se puede ubicar un dispositivo?
+    </p>
+    
+    <p>
+     El desarrollo de A-GPS más eficientes está siendo acelerado por requerimiento del servicio de emergencias, este requiere que la información de la ubicación sea exacta y además que esta información llegue lo más rápido posible, por ejemplo en el caso de que se realice una llamada de emergencia y el usuario no pueda dar su ubicación. Otras causas han sido el poder compartir información a tiempo real con nuestras redes sociales desde cualquier lugar. La geolocalización cobra una nueva dimensión y aparecen nuevos conceptos: los mapas en Internet, la geolocalización social, el geomarketing y el geocomercio, la geolocalización aumentada, y el geoposicionamiento web.
+    </p>
+      -->
+    
+    
+    <div class='problema'>
+      <strong>Problema</strong>
+      <br><br>
+    Ahora que conocemos los elementos con los que contamos para poder localizar un dispositivo, nos podemos hacer las siguientes preguntas:
+    <ul>
+      <li>A partir de la comunicación entre antena y dispositivo ¿cómo se puede dar la ubicación de dicho dispositivo?
+      <li>¿Con una sola antena o satélite se puede realizar la localización de un dispositivo?</li>
+      <li>¿Cuál es el procedimiento matemático que se utiliza para lograr la localización?</li>
+    </ul>
+    </div>
+
+
+    <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+    
+    
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+    
+
+  </div>
+  
+</article>
+
+
+
+
+</body>
+
+</html>

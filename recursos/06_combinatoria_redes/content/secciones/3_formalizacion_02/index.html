@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Formalización del problema</h1>
+    <h2>Primer parámetro</h2>
+    
+    <!--- Párrafo --->
+    <p>
+    Para calcular el número de enlaces que se requieren para conectar
+    \(n\) puntos <strong>todos con todos</strong>, con \(n\) un número
+    natural cualquiera y \(n\ge2\), vamos a hacer un ejercicio mental similar
+    al de la página anterior, pero no sin antes practicar en el
+    siguiente espacio interactivo.
+    </p>
+    
+    <p class="instrucciones">
+      Incluimos de nuevo una de las escenas que ya revisaste con el fin de
+      apoyar el ejercicio mental de abajo. Algo que te recomendamos es que
+      observes cómo cambia el cuadro de costos cuando aumentas el
+      número de puntos. Finalmente en el cuadro de costos aparecen
+      tantos valores como el número de enlaces requeridos para
+      conectar los puntos todos con todos.
+    </p>
+
+
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="480" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+
+
+    <div class="problema">
+	<strong>Ejercicio mental</strong>
+	<br><br>
+	<ol>
+	  <li>
+	  Imagina que tienes 2 puntos, mismos que conectas con 1 enlace.
+	  </li>
+	  <br>
+	  <li>
+	    Si en la imagen mental que tenemos aparece otro
+	punto, entonces basta con poner tantos enlaces como puntos
+	tenemos ya enlazados entre sí. Tendremos 3 puntos conectados
+	todos con todos mediante \(1+2=3\) enlaces.
+	  </li>
+	  <br>
+	  <li>
+	  Al repetir la operación de inciso 2), obtendremos 4 puntos
+	  conectados con \(1+2+3=6\) enlaces.
+	</li>
+	  <br>
+	  <li>
+	 Al repetir por tercera vez la operación del inciso 2), obtendremos 5 puntos
+	  conectados con \(1+2+3+4=10\) enlaces.
+	</li>
+	</ol>
+	<br>
+	Este proceso lo podremos repetir indefinidamente obteniendo
+	siempre que para algún número de puntos \(n\) requeriremos tantos enlaces como:
+
+	<div class="course_extern_content"> 
+	  <iframe class="course_iframe" width="750" height="200" frameborder="0" src="escenas/escena.html"></iframe>
+	</div>
+      <br>
+      <strong>Nota:</strong> Los puntos suspensivos entre signos de
+      más, \(+\dots+\), se usan para indicar que el proceso continúa
+      y se suman todos los valores intermedios.
+    </div>
+
+      <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

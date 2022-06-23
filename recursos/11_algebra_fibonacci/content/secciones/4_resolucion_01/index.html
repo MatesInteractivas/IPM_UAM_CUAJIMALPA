@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Resolución del problema</h1>
+    
+    <!--- Subtítulo (no necesario en introducción) --->
+    <h2>¿Qué población de abejas hay para una generación dada?</h2>
+    
+    
+    <!--- Párrafo --->
+    <p>
+    Ahora es tu turno de calcular el número de abejas en una generación, dado el índice \(n\), así como de resolver otros problemas relacionados.
+    A continuación se te presentan problemas que deberás contestar usando lo aprendido hasta ahora.
+    </p>
+
+    <!--- Instrucciones --->
+    <div class="instrucciones">Resuelve los 4 tipos de problemas siguientes usando lo que has entendido de la sucesión de Fibonacci. Introduce tus respuestas para cada uno y pulsa 'Verificar'. Tras tres intentos fallidos podrás ver la respuesta, pero intenta hacerlo sin usar este recurso.</div>
+    
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="480" frameborder="0" src="escenas/escena.html"> </iframe>
+    </div>
+
+    <p>
+    Por un lado, habrás notado que es posible estimar un número de Fibonacci para un cierto índice a partir de aquél del índice anterior si la sucesión está bastante avanzada.
+    </p>
+
+    <p>
+    Por otro lado, habrás notado que una sucesión distinta (el problema con la sucesión \(f\) en lugar de la \(F\)) puede también tender a \(\Phi\). Medita sobre las siguientes preguntas al respecto.
+    </p>
+
+    <div class="problema">
+      <strong>Preguntas</strong>
+      <br><br>
+      Trata de responder lo siguiente:
+      <ol>
+	<li>¿Al árbol genealógico de qué tipo de abeja corresponde la sucesión \(f\)?</li>
+	<br>
+	<li>¿Cuál es el cambio fundamental para este tipo de árbol (y su sucesión correspondiente) respecto al árbol de la sucesión de Fibonacci (\(F\))?</li>
+      </ol>
+
+    </div>
+    
+        <div class="verSolucion" id="btSolucion" onclick="document.getElementById('solucion').setAttribute('class','visible');document.getElementById('btSolucion').setAttribute('class','oculto');">
+    </div>
+
+
+
+    <div id="solucion" class='oculto'>
+    
+    <h2>Solución</h2>
+      
+    <p>
+    <ol>
+		<li>Si observas los números de abejas en la sucesión de Fibonacci, notarás que \(f_0=F_1\) y \(f_1=F_2\). \(F_1\) es precisamente una abeja reina.
+		Así que la sucesión \(f\) es el mismo árbol genealógico (pues las reglas de construcción son las mismas) pero empezando con una reina en vez de un zángano.
+		Es por ello que, para índices grandes, el cociente entre el número de abejas de generaciones sucesivas sigue siendo \(\Phi\).</li>
+		<br>
+		<li>Otra forma de interpretar lo anterior es que la sucesión \(f\) es la misma que \(F\), pero recorriendo los índices un lugar. Ésta es realmente la diferencia fundamental que hay entre la sucesión \(f\) y la \(F\).</li>
+	</ol>
+    </p>
+
+	<p>
+	Verás que, además de tener su aplicación en los árboles genealógicos de las abejas, la proporción áurea aparece en muchos otros fenómenos de la naturaleza.
+	Para descubrirlos, avanza a la sección de reflexiones.
+	</p>
+
+    </div>
+
+  <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  </div>
+  
+
+</article>
+
+</body>
+
+</html>
+

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+  <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onLoad="initialize();">
+  
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    </p><!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Resolución de los problemas</h1>
+    
+    <h2>Problema 2: Relación entre el problema del crecimiento del
+    número de personas del esquema de fraude y el crecimiento del
+    capital en una inversión</h2>
+
+    <p>
+      Teniendo en mente los cuatro casos que se señalaron anteriormente, 
+      habremos de determinar el valor de \(f\) de tal
+      manera que:
+      \[Ca^0\rightarrow Ca^1\rightarrow Ca^2\rightarrow
+      Ca^3\rightarrow\dots\rightarrow Ca^n\]
+      donde \(a=1+f\) y \(n\)
+      sea el número de un nivel arbitrario de la pirámide.<br><br>
+    </p>
+
+    <div class='problema'>
+      <strong>Caso 1. Cada socio por su cuenta recluta dos o más nuevos socios</strong>
+      <br><br>Si comenzamos con dos 'socios' 
+      en el nivel cero, cuando cada 'socio' que está en un nivel de la
+      pirámide recluta a \(3\) nuevos 'socios', la cantidad de
+      personas del siguiente nivel se multiplica por \(3\) dando lugar
+      a la siguiente sucesión:
+      \[2\rightarrow6\rightarrow18\rightarrow\dots\rightarrow2\times3^n\]
+      Suponiendo que comenzamos con \(C\) 'socios' en el nivel cero,
+      cuando cada 'socio' que está en un nivel de la pirámide recluta
+      a \(m\) nuevos 'socios', con \(m\) un número natural mayor que o
+      igual a dos, la cantidad de personas del siguiente nivel se
+      multiplica por \(m\). Este comportamiento se representa
+      como:<br>(oprime el botón con la respuesta correcta)<br><br>
+      <div class="course_extern_content"> 
+	<iframe class="course_iframe" width="760" height="160" frameborder="0" src="escenas/escena1.html"> </iframe>
+      </div>
+      Entonces si \(a=m\) y \(a=f+1\) tendremos que \(m=f+1\) y, por
+      tanto, \(f=m-1\), lo que significa que se
+      trata <strong>exactamente</strong> de un crecimiento conforme a
+      un esquema de interés compuesto.<br><br>  Por ejemplo, para el
+      caso de arriba de este recuadro \(f=2\), que en porcentaje sería
+      un interés del \(200\%\).
+
+    </div>
+
+    <div class='problema'>
+      <strong>Caso 2. Un grupo de dos o más socios se encarga de reclutar al
+	menos un socio más que el tamaño del grupo </strong>(dando por
+	hecho que de inicio hay socios suficientes para formar al
+	menos un grupo)<br><br>Supongamos por un momento que
+      podemos hablar de porciones de personas. Si comenzamos con \(4\)
+      'socios' en el nivel cero, cuando cada grupo de \(4\) 'socios'
+      que está en un nivel de la pirámide recluta a \(5\) nuevos
+      'socios', la cantidad de personas del siguiente nivel se
+      multiplica por \(\frac54\) dando lugar a la siguiente sucesión:<br>(oprime el botón con la respuesta correcta)<br><br>
+      <div class="course_extern_content"> 
+	<iframe class="course_iframe" width="760" height="160" frameborder="0" src="escenas/escena2.html"> </iframe>
+      </div>
+      La suposición que hemos hecho nos muestra que se trata de un
+      crecimiento igual al del caso 1, salvo que la tasa de crecimiento es menor.
+      Podemos concluir que se trata de un fenómeno que se acerca
+      a un esquema de interés compuesto conforme la cantidad de
+      personas crece. El cálculo del valor de \(f\) es el mismo que en
+      el caso anterior.
+    </div>
+
+    <div class='problema'>
+      <strong>Caso 3. Un grupo de socios se encarga de reclutar tantos socios como el tamaño del grupo</strong><br><br>Si comenzamos con doscientos
+      'socios' en el nivel cero, cuando cada 'socio' que está en un
+      nivel de la pirámide recluta solamente a un nuevo 'socios', la
+      cantidad de personas del siguiente nivel se multiplica por \(1\)
+      y, por tanto, se mantiene igual a la del nivel anterior, dando
+      lugar a la siguiente sucesión:
+      \[200\rightarrow200\rightarrow200\rightarrow\dots\rightarrow200\]
+      Suponiendo que comenzamos con \(C\) 'socios' en el nivel cero,
+      tendríamos que:<br>(oprime el botón con la respuesta correcta)<br><br>
+      <div class="course_extern_content"> 
+	<iframe class="course_iframe" width="760" height="160" frameborder="0" src="escenas/escena3.html"> </iframe>
+      </div>
+      Como \(f=m-1\) entonces \(f=0\) lo que significa que se trata de
+      un crecimiento de interés compuesto con
+      una tasa nula, del cero por ciento. Sin embargo, se trata <strong>exactamente</strong> de un crecimiento conforme a
+      un esquema de interés compuesto.
+
+    </div>
+
+    <div class='problema'>
+      <strong>Caso 4. Un grupo de dos o más socios se encarga de reclutar menos socios que el tamaño del grupo</strong><br><br>Como hicimos en el caso 2,
+      supongamos por un momento que podemos hablar de porciones de
+      personas. Si comenzamos con \(4\) 'socios' en el nivel cero,
+      cuando cada grupo de \(4\) 'socios' que está en un nivel de la
+      pirámide recluta a \(3\) nuevos 'socios', la cantidad de
+      personas del siguiente nivel se multiplica por \(\frac34\), dando
+      lugar a la siguiente sucesión:<br>(oprime el botón con la respuesta correcta)<br><br>
+      <div class="course_extern_content"> 
+	<iframe class="course_iframe" width="760" height="160" frameborder="0" src="escenas/escena4.html"> </iframe>
+      </div>
+      La suposición que hemos hecho nos muestra que se trata de un
+      crecimiento igual al del caso 1, sólo que en este caso se pierden fracciones en
+      cada paso. Podemos concluir que se trata de un fenómeno que se
+      parece a un esquema de interés compuesto salvo que hay
+      <em>decrementos</em> cumulativos causados por la pérdida de porciones de
+      personas.<br><br>En este caso, como \(m=\frac34\) tendremos que
+      \(f=\frac34-1=-\frac14\). Es una tasa de interés <em>negativa</em> que,
+      por tanto, causa decrecimiento. Este caso lo abordaremos de nuevo
+      en la sección de Reflexiones.
+
+    </div>
+
+    <p>
+      Una vez analizados los cuatro casos podemos llegar a la siguiente conclusión.
+    </p>
+
+    <p class='importante'>
+      Ambos crecimientos son en esencia los mismos, salvo por
+      diferencias causadas por la imposibilidad de considerar
+      porciones de personas.
+    </p>
+
+
+    <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+    
+    
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onClick="showCredits()">Condiciones de uso</a>
+    </div>  
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+    
+
+  </div>
+  
+</article>
+
+
+
+
+</body>
+
+</html>

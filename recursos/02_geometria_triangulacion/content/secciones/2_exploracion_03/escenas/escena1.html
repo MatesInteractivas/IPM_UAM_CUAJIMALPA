@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>TITULO</title>	
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body style="margin:0px;padding:0px;overflow:hidden;">
+
+<p align="center">
+<ajs name="Descartes" width=760 height=480 code="Descartes">
+   <param name="tamaño" value="760x480">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.3.12, 2014-07-09">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' escala='25' O.x='-255' O.y='120' imagen='images/fondo.jpg' despl_imagen='expand.' fondo='grisClaro' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='anim' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Localizar' expresión='(650,430,90,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn90x30.png' acción='calcular' parámetro='animar=1' dibujar-si='t=0'">
+   <param name="C_02" value="id='sig' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Siguiente' expresión='(650,430,90,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn90x30.png' acción='calcular' parámetro='animar=1' dibujar-si='(t=61)|(t=81)' pos_mensajes='centro'">
+   <param name="C_03" value="id='reinit' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Reinicar' expresión='(650,430,90,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn90x30.png' acción='calcular' parámetro='init()' dibujar-si='t=101' pos_mensajes='centro'">
+   <param name="C_04" value="id='disp' tipo='gráfico' espacio='E1' tamaño='6' expresión='(disp.x,disp.y)' fijo='sí' imagen='images/cel.png'">
+   <param name="C_05" value="id='disp.x' tipo='numérico' región='escenario' espacio='E1' nombre='disp.x' expresión='(0,0,0,0)' valor='10' min='-2' max='23' fijo='sí' visible='sí' pos_mensajes='centro'">
+   <param name="C_06" value="id='disp.y' tipo='numérico' región='escenario' espacio='E1' nombre='disp.y' expresión='(0,0,0,0)' valor='6' min='2' max='11' fijo='sí' visible='sí' pos_mensajes='centro'">
+   <param name="A_01" value="id='init()' algoritmo='sí' algoritmo='sí' hacer='calculos()'">
+   <param name="A_02" value="id='calculos()' algoritmo='sí' algoritmo='sí' hacer='t=0;posXa1=4+(rnd*3);posYa1=2+(rnd*8);'">
+   <param name="A_03" value="id='calcDis()' algoritmo='sí' algoritmo='sí' hacer='d=sqrt(((disp.x-posXa1)^2)+((disp.y-posYa1)^2));img=(d<4)?&squot;images/senal1.png&squot;:img;img=((d>3)&(d<8))?&squot;images/senal2.png&squot;:img;img=((d>7)&(d<12))?&squot;images/senal3.png&squot;:img;img=((d>11)&(d<16))?&squot;images/senal4.png&squot;:img;img=(d>15)?&squot;images/senal5.png&squot;:img'">
+   <param name="A_04" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='init()'">
+   <param name="A_05" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='calcDis()'">
+   <param name="A_06" value="id='anima' evento='sí' condición='animar=1' acción='animar' ejecución='alternar' pos_mensajes='centro'">
+   <param name="G_01" value="espacio='E1' tipo='imagen' expresión='(posXa1-.4,posYa1+1.5)' archivo='images/antena.png'">
+   <param name="G_02" value="espacio='E1' tipo='arco' color='(80,80,80,s/17)' dibujar-si='((ent(t%20))>s)|(t>59)' centro='(posXa1+.3,posYa1+.25)' radio='s' fin='360' familia='s' s.intervalo='[0,20]' s.pasos='20' fijo='sí' ancho='10'">
+   <param name="G_03" value="espacio='E1' tipo='imagen' dibujar-si='((t>40)&(t%2=0))|((t>60)&(t<82))' expresión='(disp.x-.5,disp.y+3.2)' archivo='img'">
+   <param name="G_04" value="espacio='E1' tipo='segmento' color='gris' dibujar-si='((t>61)&(t%2=0))|(t>80)' expresión='(posXa1+.3,posYa1+.25)(disp.x,disp.y)' fijo='sí' ancho='3'">
+   <param name="G_05" value="espacio='E1' tipo='imagen' dibujar-si='((t>80)&(t%2=0))|(t=101)' expresión='(disp.x-.5,disp.y+3.2)' archivo='images/globoR.png'">
+   <param name="G_06" value="espacio='E1' tipo='imagen' dibujar-si='((t>80)&(t%2=0))|(t=101)' expresión='(posXa1-.5,posYa1+3.2)' archivo='images/globoT.png'">
+   <param name="G_07" value="espacio='E1' tipo='imagen' dibujar-si='0' coord_abs='sí' expresión='(380,415,1,.9)' archivo='images/panel.png'">
+   <param name="G_08" value="espacio='E1' tipo='polígono' color='90c2c8' coord_abs='sí' expresión='(10,350)(750,350)(750,475)(10,475)(10,350)' relleno='90c2c8' info='panel'">
+   <param name="G_09" value="espacio='E1' tipo='texto' dibujar-si='(t>0)&(t<62)' expresión='[25,365]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs36 La antena emite se\u241 ales que son capturadas por el dispositivo. Entre mayor\par sea la distancia, el dispositivo recibe la se\u241 al con menor potencia. \par Mueve el dispositivo a trav\u233 s de las se\u241 ales y, a partir de la cantidad de rayitas\par que se muestran, nota c\u243 mo cambia la potencia con la que recibe la se\u241 al. \par }' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_10" value="espacio='E1' tipo='texto' dibujar-si='(t>61)&(t<82)' expresión='[25,365]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs36 En los c\u225 lculos se utilizan ecuaciones de Friis de espacio libre. En estas se\par describe c\u243 mo la potencia decrece de manera cuadr\u225 tica cuando la\par distancia aumenta. Finalmente, con esta informaci\u243 n y el dato de la potencia\par con la que emite la antena, se obtiene un aproximado de la distancia.\par }' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_11" value="espacio='E1' tipo='texto' dibujar-si='(t>81)' expresión='[25,350]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}\f1\fs36 La ecuaci\u243 n de Friis es: \f2\fs40\i{\*\mjaformula P{\subix RX}=P{\subix TX}G{\subix TX}G{\subix RX}({\fraction{\num\u955 }{\den 4\u960 d}}){\supix 2}}\f1\fs36\i0\par \f2\fs40\i{\*\mjaformula P{\subix RX}}\f1\fs36\i0 es la potencia de llegada,\f2\fs40\i{\*\mjaformula P{\subix TX}}\f1\fs36\i0 la potencia transmitida.\par \f2\fs40\i{\*\mjaformula G{\subix TX}}\f1\fs36\i0  es la ganancia del transmisor,\f2\fs40\i{\*\mjaformula G{\subix RX}}\f1\fs36\i0 la ganancia del receptor.\par \f2\fs40\i{\*\mjaformula\u955 }\f1\fs36\i0 es la longitud de la onda y\f2\fs40\i{\*\mjaformula d}\f1\fs36\i0 la distancia entre emisor y receptor.}' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_12" value="espacio='E1' tipo='texto' dibujar-si='debug' expresión='[20,20]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Courier New;}\f1\fs30 t={\*\mjaformula{\expr t}}\par posXa1={\*\mjaformula{\expr posXa1}}\par posYa1={\*\mjaformula{\expr posYa1}}\par d={\*\mjaformula{\expr d}}}' fijo='sí'">
+   <param name="Animación" value="pausa='200' controles='no' auto='no' hacer='animar=((t=60)|(t=80)|(t=100))?0:animar;t=t+1' mientras='animar=1'">
+</ajs></p>
+
+</body>
+</html>

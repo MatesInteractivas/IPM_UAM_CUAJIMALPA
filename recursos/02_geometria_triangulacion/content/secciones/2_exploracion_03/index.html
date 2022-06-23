@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+   <h1>Exploración inicial del problema</h1>
+   
+    <p>
+    El procedimiento que exploramos en la página anterior, el TOA, también es utilizado en los sistemas GPS, pero para ello es indispensable el uso de relojes muy precisos.
+    Este es un factor adverso muy importante porque las ondas transmitidas viajan a la velocidad de la luz y un retraso de tan solo 10ns se traduce en un error de hasta 3 metros.
+    Lo anterior hace que este método suele no ser tan preciso.
+    </p>
+    
+    <h2>Distancia entre una antena y un dispositivo con el método RSSI</h2>
+    <!--- Párrafo --->
+	
+    <p class='importante' style="margin-left:10%;margin-right:10%;">
+    <strong>Método RSSI, indicación de fuerza de señal recibida</strong>
+    
+    <br><br>
+    La idea de este método es que el receptor del dispositivo móvil esté configurado para medir y dar una referencia de la potencia con la que recibe la señal de la antena emisora.
+    Cuando la distancia entre el emisor y el receptor es muy pequeña, la potencia que mide el dispositivo es grande; si la distancia entre ambos va aumentando, la medida de la potencia va disminuyendo.
+    Bajo esta premisa se puede determinar la distancia que hay entre el emisor y el dispositivo móvil.
+    <br><br>
+    En esta técnica se utilizan ecuaciones que determinan la pérdida de propagación. Si conocemos la potencia con la que transmite un emisor, y medimos la potencia que recibe nuestro dispositivo,  podemos estimar la distancia que existe entre la antena y el dispositivo, esto mediante la  diferencia que  existe  entre  los  dos  valores  de potencia.
+    </p>
+
+     <!--- Instrucciones --->
+    <div class="instrucciones">
+    <span>En el siguiente espacio interactivo nuevamente puedes ubicar el dispositivo en el lugar que desees, arrastrando y soltando la imagen que se muestra del dispositivo.
+    A continuación pulsa el botón 'Localizar' y observa el proceso.</span>
+    </div>
+
+
+
+    <!-- ejemplo para incluir un documento externo en un iframe, aqui van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="480" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+
+
+    <p>
+    Como  podemos notar, este  método es afectado por el desvanecimiento de las señales y por esa razón, los sistemas que usan esta técnica necesitan recabar una gran cantidad de datos para dar una buena precisión. Esta cantidad de datos provoca que exista un incremento en el tráfico de señales, por lo tanto un mayor consumo de energía y una menor vida útil de las baterías de nuestros dispositivos. Otra cosa importante de este sistema es que como se debe recolectar una gran cantidad de datos, se incrementa el tiempo de respuesta, lo que es un inconveniente cuando se trata de localizar algún dispositivo en el caso de una emergencia.
+    </p>
+
+    <!--
+    <p>    
+    Como hemos visto, hay diversas formas que nos permiten calcular la distancia que hay entre una antena emisora y un dispositivo móvil. En la actualidad se siguen utilizando los tres métodos pero el que se utiliza con mayor frecuencia es el RSSI debido a que para las demás técnicas debemos contar obligadamente con línea de vista. El factor de la línea de vista es un elemento muy importante a considerar ya que la mayoría de las veces los dispositivos no podrán verse pero deberán tener la capacidad de obtener alguna lectura de la señal.
+    </p>
+    
+    -->
+    
+    <p>
+      Ahora que ya sabemos cómo se puede obtener la distancia entre dispositivos, haciéndolo con el método que nos parezca mejor, podemos darnos cuenta que este dato no es suficiente para poder ubicar la posición del dispositivo.
+    </p>
+    
+    <div class='problema'>
+    <strong>Preguntas</strong>
+    <br><br>
+    Antes de pasar a la siguiente página, medita sobre estas interrogantes:
+    <ol>
+    <li>
+      ¿Por qué no es suficiente conocer solamente la distancia entre la antena y el dispositivo?
+    </li>
+    <li>
+      ¿En cuántos puntos se puede ubicar el dispositivo al contar solo con la distancia?
+    </li>
+    <li>
+      ¿Qué otros datos se necesitan para poder localizar el dispositivo en el plano?
+    </li>
+    
+    </div>
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

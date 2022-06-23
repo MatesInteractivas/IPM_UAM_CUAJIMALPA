@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>TITULO</title>
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body style="margin:0px;padding:0px;overflow:hidden;">
+
+<p align="center">
+<ajs name="Descartes" width=480 height=200 code="Descartes">
+   <param name="tamaño" value="480x200">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=",">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.340, 2015-05-21">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E1' ancho='480' alto='200' imagen='images/fondo.jpg' despl_imagen='arr-izq' fondo='blanco' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='retro' x='25' y='25' ancho='430' alto='150' dibujar-si='evaluado' despl_imagen='arr-izq' fondo='effffb' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='opc1' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Hay 2(n) LEDs por lado' expresión='(140,posY[0])(200,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='15' imagen='images/btn350x30.png' acción='calcular' parámetro='evaluado=1\ncorrecto=1'">
+   <param name="C_02" value="id='opc2' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Hay n LEDs por lado' expresión='(140,posY[1])(200,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='15' imagen='images/btn350x30.png' acción='calcular' parámetro='evaluado=1\ncorrecto=0'">
+   <param name="C_03" value="id='opc3' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Hay n+2 LEDs por lado' expresión='(140,posY[2])(200,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='15' imagen='images/btn350x30.png' acción='calcular' parámetro='evaluado=1\ncorrecto=0'">
+   <param name="C_04" value="id='DEBUG' tipo='numérico' región='exterior' espacio='E1' nombre='DEBUG' incr='1' min='0' max='1' fijo='sí' visible='sí' pos_mensajes='centro'">
+   <param name="C_05" value="id='n5' tipo='numérico' región='exterior' espacio='E1' nombre='n5' incr='1' fijo='sí' visible='sí' pos_mensajes='centro'">
+   <param name="C_06" value="id='n6' tipo='numérico' región='exterior' espacio='E1' nombre='n5' incr='1' fijo='sí' visible='sí' pos_mensajes='centro'">
+   <param name="C_07" value="id='cerrar' tipo='numérico' interfaz='botón' región='interior' espacio='retro' expresión='(retro._w-25,5,20,20)' fijo='sí' visible='sí' imagen='images/cerrar.png' acción='calcular' parámetro='evaluado=0' pos_mensajes='centro'">
+   <param name="A_01" value="id='posY' vector='sí' evaluar='una-sola-vez'">
+   <param name="A_02" value="id='miAleatorio()' algoritmo='sí' algoritmo='sí' hacer='aleatorio.minRango=0;aleatorio.maxRango=3;aleatorio.creaAleatorios();posY[aleatorio.resultadoVec[0]]=45;posY[aleatorio.resultadoVec[1]]=85;posY[aleatorio.resultadoVec[2]]=125;'">
+   <param name="A_03" value="id='verificar()' algoritmo='sí' algoritmo='sí' hacer='literal=(((edCar==&squot;C&squot;)||(edCar==&squot;c&squot;))&&((edFer==&squot;F&squot;)||(edFer==&squot;f&squot;)))?1:0;valores=((valCar==&squot;x&squot;)&&(valFer==&squot;x&squot;))?1:0;;;correcto=(literal&&valores)?1:0'">
+   <param name="A_04" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' inicio='selecciono=0' hacer='evaluado=0;correcto=0;miAleatorio();'">
+   <param name="A_05" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="G_01" value="espacio='E1' tipo='macro' dibujar-si='DEBUG' expresión='macros/randoms.txt' nombre='aleatorio'">
+   <param name="G_02" value="espacio='retro' tipo='texto' dibujar-si='correcto' expresión='[10,15]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Arial;}\f1\fs40                          \u161 Correcto!\fs34\par \par              \b  Hay 2 veces n LEDs en cada lado\b0\par  \par     \par }' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_03" value="espacio='retro' tipo='texto' dibujar-si='!correcto' expresión='[10,15]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;}\f1\fs40                        \u161 Incorrecto!\fs34\par \par              Por favor revisa el recurso anterior y\par                      elige la opci\u243 n correcta.}' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_04" value="espacio='retro' tipo='polígono' color='0a7b70' coord_abs='sí' expresión='(0,0)(retro._w-2,0)(retro._w-2,retro._h-2)(0,retro._h-2)(0,0)' ancho='2'">
+</ajs></p>
+
+<script id="macros/randoms.txt" type="descartes/macro">
+tipo_de_macro=R2
+Idioma=español
+id='minRango' expresión='0' evaluar='una-sola-vez' constante='si'
+id='maxRango' expresión='10' evaluar='una-sola-vez' constante='si'
+id='n_numeros' expresión='ent(maxRango-minRango)'
+id='VecAux1' tamaño='n_numeros+100' evaluar='una-sola-vez' expresión='VecAux1[0]=0;VecAux1[1]=0;VecAux1[2]=0' vector='si'
+id='resultadoVec' tamaño='n_numeros+100' evaluar='una-sola-vez' vector='si'
+id='initVecAux1()' inicio='_indexT=0;_ancla=minRango;' hacer='VecAux1[_indexT]=_ancla;_indexT=_indexT+1;_ancla=_ancla+1;' mientras='_indexT<n_numeros' algoritmo='si'
+id='reacomodaVector(_posBorrar)' inicio='_indexAcomoda=_posBorrar;' hacer='VecAux1[_indexAcomoda]=VecAux1[_indexAcomoda+1];_indexAcomoda=_indexAcomoda+1' mientras='_indexAcomoda<(n_numeros-1)' algoritmo='si'
+id='creaAleatorios()' inicio='initVecAux1();_indexCrearAl=0;' hacer='_cuantosQuedan=(n_numeros-_indexCrearAl);_indexAleatorio=ent(rnd*_cuantosQuedan);;resultadoVec[_indexCrearAl]=VecAux1[_indexAleatorio];;reacomodaVector(_indexAleatorio);_indexCrearAl=_indexCrearAl+1' mientras='_indexCrearAl<n_numeros' algoritmo='si'
+tipo='texto' color='azul' expresión='[20,20*s]' familia='s' s.intervalo='[0,n_numeros-1]' s.pasos='n_numeros-1' texto='resultadoVec([s])=[resultadoVec[s]]' fijo='no' 
+tipo='texto' color='azul' expresión='[220,20*s]' familia='s' s.intervalo='[0,n_numeros-1]' s.pasos='n_numeros-1' texto='VecAux1([s])=[VecAux1[s]]' fijo='no' 
+</script>
+
+</body>
+</html>

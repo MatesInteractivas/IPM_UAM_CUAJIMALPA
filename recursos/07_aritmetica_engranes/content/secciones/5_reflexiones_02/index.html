@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>  
+
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Reflexiones y aplicaciones</h1>
+    
+    <!--- Subtítulo (no necesario en introducción) --->
+    <h2>Calculando eclipses</h2>
+    
+  
+    <!--- Párrafo --->
+    <div class='instrucciones'>
+      Te sugerimos observar el siguiente video en el que se explica brevemente la dinámica de un eclipse solar (en el planeta Tierra) y por qué no vemos uno cada mes.
+    </div>
+
+     <div class="course_extern_content">
+      <a target="_blank" href="https://www.youtube.com/embed/YxrTSAedNY4?list=PL6kQim6ljTJu44dsVeZifHHiuDC1MEZ7q">
+      <b>Solar Eclipse Educational Video (Video educacional de un eclipse solar)</b>
+    </a><br/>
+    <iframe frameborder="0" scrolling="no" width="560" height="355" src="https://www.youtube.com/embed/E1B3RLf1A1s"></iframe>
+    </div>
+
+    <p>
+    ¿Puedes ver alguna relación entre los eclipses solares y múltiplos y divisores?
+    La Luna realiza una órbita alrededor de la Tierra cada 27 días.
+    La Tierra realiza una órbita alrededor del Sol cada 365 días.
+    Así es que hay 13 oportunidades de que haya un eclipse cada año, pues \(365=27\times 13+14\).
+    Sin embargo, no vemos 13 eclipses al año, y esto se debe a la inclinación de 5 grados de la órbita de la Luna alrededor de la Tierra con respecto a la órbita de la Tierra alrededor del Sol.
+    De no ser por esa inclinación, habría 13 eclipses solares cada año visibles desde algún lugar de la Tierra.
+    </p>
+    
+    <p>
+    ¿Cuál es la diferencia entre un eclipse solar y un eclipse lunar? Veamos.
+    </p>
+
+    <div class='instrucciones'>
+      En el siguiente video se explica qué es un eclipse lunar (en el planeta Tierra).
+    </div>
+
+     <div class="course_extern_content">
+      <a target="_blank" href="https://www.youtube.com/embed/YxrTSAedNY4?list=PL6kQim6ljTJu44dsVeZifHHiuDC1MEZ7q">
+      <b>What Is A Lunar Eclipse? (¿Qué es un eclipse lunar?)</b>
+    </a><br/>
+    <iframe frameborder="0" scrolling="no" width="560" height="355" src="https://www.youtube.com/embed/49O2MsT1txU"></iframe>
+    </div>
+
+    <p>
+    Como pudiste ver, un eclipse lunar ocurre cuando la órbita de la Luna y la de la Tierra son coplanares, es decir que están en el mismo plano.
+    En un <strong>eclipse solar</strong>, la Luna "se interpone" entre el Sol y la Tierra, y en un <strong>eclipse lunar</strong>, la Tierra se interpone entre entre el Sol y la Luna.
+    En general un eclipse ocurre cuando un astro se interpone entre otros dos o más. Veamos otro ejemplo de eclipses lunares.
+    </p>
+    
+    <br>
+
+    <h2>Eclipses en un planeta con siete lunas</h2>
+
+    <p>
+    Consideremos el caso hipotético del planeta <strong>Septem 13044 b</strong>, que tiene siete lunas cuyas órbitas son coplanares con la órbita del planeta.
+    Esto quiere decir que en puede haber varios tipos de eclipses y estos siempre son visibles desde el planeta.
+    Las lunas tienen nombres largos o complicados, así es que para simplificar las llamaremos \(L_1\), \(L_2\), \(L_3\), \(L_4\), \(L_5\), \(L_6\) y \(L_7\).
+    La luna \(L_1\) completa un ciclo alrededor del planeta en un <em>año Septemiano</em>, a la luna \(L_2\) le toma dos años, a la luna \(L_3\) tres años, la luna \(L_4\) cuatro años y así sucesivamente.
+    </p>
+    <p>
+    ¿Cuáles son los tipos de eclipses que puede haber?
+    </p>
+    
+    <div class="importante" style='margin-left: 15%;margin-right:15%;'>
+     <ul>
+       <li>Cuando dos de las lunas se alinean con el planeta se llama <em>eclipse lunar</em>.</li>
+       <li>Cuando tres de las lunas se alinean con el planeta se llama <em>doble eclipse</em>.</li>
+       <li>Cuando se alinean cuatro se llama <em>triple eclipse</em>, y así sucesivamente.</li>
+       <li>A veces se alinean las siete lunas con el planeta y esto se llama  <em>súper eclipse</em>.</li>
+     </ul>
+    </div>
+
+
+
+    <p class='problema'>
+      <strong>Problema</strong>
+      <br><br>
+    Sería interesante saber cuándo ocurre un súper eclipse. ¿Cómo resolverías ese problema?
+    <br>
+    </p>
+    
+    <p>
+    Podemos comenzar por ver cuándo ocurre un eclipse lunar, es decir, cuando dos lunas se alinean con el planeta.
+    Para entender mejor el problema, partamos de un momento en el que hubo tal eclipse lunar.
+    ¿Cuántos ciclos completará cada una de las lunas para volver a ese punto inicial?
+    Observa que esta pregunta es equivalente a preguntarse después de cuántas vueltas dos engranes con distinto número de dientes vuelven a su posición inicial.
+    </p>
+    
+    <p>
+    Hagamos la prueba con las lunas \(L_6\) y \(L_4\). Ya sabemos que la respuesta es el mínimo común múltiplo de \(6\) y \(4\), es decir \(12\), ya que \(mcm(6,4)=12\).
+    En otras palabras, habrá un eclipse lunar con las lunas \(L_6\) y \(L_4\) cada doce años.
+    </p>
+
+    <p>
+    Podemos hacer el mismo procedimiento con cada par de lunas.
+    </p>
+  
+    <p>
+    Observa que el mínimo común múltiplo de \(1\) y cualquier otro número, digamos \(n\), es \(n\), pues \(1\times n=n\) y no hay otro más pequeño.
+    Por eso, los eclipses lunares de la Luna \(L_1\) con las otras lunas se dan cada \(2\), \(3\), \(4\), \(5\), \(6\) y \(7\) años, respectivamente.
+    </p>
+
+    <div class='tarea'>
+
+      <h3>Tarea</h3>
+
+      <p>
+      <strong>¿Cada cuándo hay un súper eclipse en el planeta Septem 13044 b?</strong>
+      </p>
+
+      <p>
+      Te sugerimos ir anotando tus observaciones y deducciones, de manera que tengas a la mano toda la información de la que dispones para resolver el problema.
+      </p>
+
+    <div class="verSolucion" id="btSolucion" onclick="document.getElementById('solucion').setAttribute('class','visible');document.getElementById('btSolucion').setAttribute('class','oculto');">
+      </div>
+
+    </div>
+    
+   
+    <div id="solucion" class='oculto'>
+      
+      <h4>Solución de la tarea</h4>
+      
+      <p>
+   <p>
+   En el ejemplo obtuvimos que el periodo de un eclipse lunar entre las lunas \(L_i\) y \(L_j\) es el \(mcm(L_i,L_j)\).
+   Siguiendo este razonamiento, para saber cuándo se da un doble eclipse lunar, es decir cuando se alinean tres lunas con el planeta, habría que obtener el mínimo común múltiplo de tres números. Por ejemplo, un eclipse entre las lunas \(L_1\), \(L_2\) y \(L_4\) se da cada cuatro años, pues el \(mcm(1,2,4)=4\), ya que \(4\) es múltiplo de estos tres números.
+   </p>
+
+   <p>
+   Un triple eclipse lunar, cuando se alinean cuatro lunas con el planeta, se da en el mínimo común múltiplo de cuatro números, y así sucesivamente. O sea que para saber cuándo se da un súper eclipse hay que calcular el mínimo común múltiplo de los números \(1\), \(2\), \(3\), \(4\), \(5\), \(6\) y \(7\). Este número es \(210\).
+   Puedes verificarlo escribiendo las tablas de múltiplos de estos números y viendo cuál es el primer múltiplo que es múltiplo de los siete números.
+   </p>
+
+
+
+
+  <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>
+
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+
+
+  </div>
+  
+
+</article>
+
+</body>
+
+</html>
+

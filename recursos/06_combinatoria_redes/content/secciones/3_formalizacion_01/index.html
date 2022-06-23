@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+  <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Formalización del problema</h1>
+    
+    <h2>Objetivo</h2>
+
+    <p>
+      Aunque ya lo hemos mencionado someramente, algo que vamos a
+      lograr en esta unidad es resolver el problema que nos hemos
+      planteado de una forma general, es decir, desarrollaremos un
+      procedimiento para optimizar una red de \(n\) puntos, con \(n\)
+      un número natural arbitrario, \(n\ge2\), y considerando que
+      tenemos un cuadro de costos para la conexión de cada par de
+      estos \(n\) puntos.
+    </p>
+
+    <h2>Parámetros útiles</h2>
+    
+    <!--- Párrafo --->
+    <p>
+    En la primera página del planteamiento del problema nos preguntamos dos cosas:
+    </p>
+
+    <p>
+      <ol>
+      <li>¿Cuántos enlaces habría que colocar para comunicar 10 edificios todos con todos? 
+      </li>
+      <br>
+      <li>¿Cuál es el número mínimo de enlaces que requerimos para
+      conectar los 8 edificios? ¿Y si fuera un número más grande,
+      digamos cien o mil?
+      </li>
+     </ol>
+    </p>
+
+    <p>
+      Como buscamos un procedimiento general para un número de enlaces
+      \(n\ge2\) arbitrario, es conveniente responder las dos preguntas
+      anteriores en este tenor, transformándolas en las que se presentan a continuación.
+    </p>
+
+    <div class="problema">
+      <span><strong>Preguntas</strong></span>
+      <br>
+	<ol>
+	  <li>¿Cuántos enlaces habría que colocar para comunicar \(n\)
+	    edificios todos con todos?
+	  </li>
+	  <br>
+	  <li>¿Cuál es el número mínimo de enlaces que requerimos para
+	    conectar los \(n\) edificios? 
+	  </li>
+	</ol>
+      </span>
+    </div>
+
+    <p>
+      Las respuestas a estas preguntas nos brindarán dos datos muy
+      útiles para la formalización que estamos llevando a
+      cabo. Sabremos cuántos enlaces requerimos para la solución
+      óptima y de qué tamaño es el cuadro de enlaces, es decir,
+      cuántos datos debemos tener.
+    </p>
+
+    
+    <h2>Principio de inducción matemática</h2>
+
+    <p>
+      Estamos seguros de que conoces, o estás sumamente cerca de, la
+      respuesta a la segunda pregunta. 
+    </p>
+
+
+    <!--- Instrucciones --->
+    <div class="instrucciones">
+      Seguramente recuerdas o has oído del juego que jugábamos de
+      niños y que consiste en encontrar la figura "oculta" uniendo un conjunto de
+      puntos. Usa el pulsador de la esquina superior derecha para
+      avanzar (flecha azul) y retroceder (flecha roja) recordando este juego. Puedes desplazar los
+      puntos libremente. Al terminar, pulsa el botón 'Continuar'.
+    </div>
+
+    <!-- ejemplo para incluir un documento externo en un iframe, aqui van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="750" height="510" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+
+    <p>
+	Realicemos un pequeño ejercicio mental.
+    </p>
+    
+    <div class='problema'>
+      <ol>
+	<li>Imagina que tienes 2 puntos, mismos que conectas con 1 enlace.</li>
+      <br>
+	<li>
+	Si en la imagen mental que tenemos aparece otro punto, entonces
+	  basta con poner 1 enlace con alguno de los puntos que ya
+	  teníamos conectados entre sí. Tendremos 3 puntos conectados con 2 enlaces.</li>
+      <br>
+	<li>
+	Al repetir la operación de inciso 2), obtendremos 4 puntos
+	  conectados con 3 enlaces.</li>
+	<br>
+	<li>
+         Al repetir por tercera vez la operación del inciso 2), obtendremos 5 puntos
+	  conectados con 4 enlaces.
+	</li>
+	</ol>
+      
+	Este proceso lo podremos repetir indefinidamente obteniendo
+	siempre algún número de puntos \(n\) conectados por \(n-1\)
+	enlaces.
+      </div>
+
+    <p>
+      Si procedemos con todo rigor matemático podremos observar dos
+      partes muy importantes en el proceso que acabamos de llevar a cabo:
+    </p>
+    
+    
+    <ol>
+      <li>
+	La propiedad inicial (\(n\) puntos, \(n-1\) enlaces) se cumple en el inciso 1) (2 puntos, 1 enlace).
+      </li>
+      
+      <li>
+	Al incrementar la \(n\) cuando realizamos la operación del inciso 2), la propiedad siempre se mantiene.
+      </li>
+    </ol>
+
+    <p>
+      Los dos incisos anteriores son los componentes que permiten
+      aplicar el <strong>principio de inducción matemática</strong> y
+      así garantizar que la propiedad se cumple para cualquier número
+      natural \(n\ge2\).
+    </p>
+
+    <p class="importante">
+      Sí, la <strong>inducción matemática</strong> no solo parece un
+      concepto sumamente sencillo, ¡lo es!<br><br>  De hecho, la gran
+      diferencia entre su simplicidad y su potencia es lo que a veces
+      puede llegar a confundirnos.
+    </p>
+
+    <div class="problema">
+      <strong>Pregunta</strong>
+      <br><br>
+	El mismo compañero al que le pareció extraño el cuadro de
+	costos de los enlaces ahora nos hace una observación
+	interesante. Dice que la propiedad (\(n\) puntos, \(n-1\)
+	enlaces) también se cumple cuando \(n=1\). ¿Qué opinas?
+	<br><br>
+	De ser cierto lo anterior, aunque no nos es muy útil en la
+	práctica armar redes de un solo punto, podremos afirmar que la
+	propiedad se cumple para cualquier número natural \(n\ge1\).
+    </div>
+
+    <h2>En resumen</h2>
+
+    <p>
+      El <strong> principio de inducción matemática</strong> consiste
+      en establecer, sin lugar a dudas, que una propiedad se cumple
+      para cualquier número natural que sea mayor que o igual a un número
+      natural <strong>inicial</strong>. Esto se consigue garantizando que:
+    </p>
+    
+    <div class='importante' style='margin-left:15%;margin-right:15%;'>
+      <ol>
+	<li>
+	  La propiedad se cumple para el número <strong>inicial</strong>.
+	</li>
+	<br>
+	<li>
+	  Suponiendo, o dando por hecho, que la propiedad se cumple para un número natural
+	  arbitrario \(n\), podemos garantizar que se cumplirá para \(n+1\).
+	</li>
+      </ol>
+    </div>
+
+    <p>
+    Avanza a la siguiente página donde comenzaremos aplicando la
+    inducción al primer parámetro.
+    </p>
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>      
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

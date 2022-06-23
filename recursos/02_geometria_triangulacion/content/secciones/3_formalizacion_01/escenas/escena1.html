@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>TITULO</title>	
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body style="margin:0px;padding:0px;overflow:hidden;">
+
+<p align="center">
+<ajs name="Descartes" width=760 height=480 code="Descartes">
+   <param name="tamaño" value="760x480">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.3.12, 2014-07-09">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' escala='15' O.y='-50' imagen='images/fondo.jpg' despl_imagen='expand.' fondo='grisClaro' red='no' red10='no' ejes='405860' texto='no'">
+   <param name="C_01" value="id='disp' tipo='gráfico' espacio='E1' tamaño='6' expresión='(disp.x,disp.y)' activo-si='0'">
+   <param name="C_02" value="id='disp.x' tipo='numérico' región='escenario' espacio='E1' nombre='disp.x' expresión='(0,0,0,0)' valor='10' min='-15' max='15' fijo='sí' visible='sí' pos_mensajes='centro'">
+   <param name="C_03" value="id='disp.y' tipo='numérico' región='escenario' espacio='E1' nombre='disp.y' expresión='(0,0,0,0)' valor='7' min='-5' max='9' fijo='sí' visible='sí' pos_mensajes='centro'">
+   <param name="C_04" value="id='ant' tipo='gráfico' espacio='E1' tamaño='6' expresión='(disp.x,disp.y)' fijo='sí' activo-si='0'">
+   <param name="C_05" value="id='ant.x' tipo='numérico' región='escenario' espacio='E1' nombre='ant.x' expresión='(0,0,0,0)' valor='3' min='-10' max='10' fijo='sí' visible='sí'">
+   <param name="C_06" value="id='ant.y' tipo='numérico' región='escenario' espacio='E1' nombre='ant.y' expresión='(0,0,0,0)' valor='2' min='-5' max='5' fijo='sí' visible='sí' pos_mensajes='centro'">
+   <param name="C_07" value="id='opc1' tipo='numérico' interfaz='menú' región='interior' espacio='E1' expresión='(282,350,35,35)' fijo='sí' visible='sí' opciones=' ,r,x,y' dibujar-si='paso=0' activo-si='!verif'">
+   <param name="C_08" value="id='opc2' tipo='numérico' interfaz='menú' región='interior' espacio='E1' expresión='(300,390,50,35)' fijo='sí' visible='sí' opciones=' ,y-x,y-k,x-h' dibujar-si='paso=0' activo-si='!verif'">
+   <param name="C_09" value="id='opc3' tipo='numérico' interfaz='menú' región='interior' espacio='E1' expresión='(310,430,50,35)' fijo='sí' visible='sí' opciones=' ,y-x,x-k,x-h' dibujar-si='paso=0' activo-si='!verif'">
+   <param name="C_10" value="id='verif' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Verificar' expresión='(615,430,120,30)' fijo='sí' visible='sí' color='blanco' fuente puntos='16' imagen='images/btn120x30.png' acción='calcular' parámetro='verif=1\nverif()' dibujar-si='(!verif)&(opc1>0)&(opc2>0)&(opc3>0)'">
+   <param name="C_11" value="id='reint' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Reintentar' expresión='(615,430,120,30)' fijo='sí' visible='sí' color='blanco' fuente puntos='16' imagen='images/btn120x30.png' acción='calcular' parámetro='verif=0' dibujar-si='(verif)&(!calif)'">
+   <param name="C_12" value="id='sig' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Siguiente' expresión='(615,430,120,30)' fijo='sí' visible='sí' color='blanco' fuente puntos='16' imagen='images/btn120x30.png' acción='calcular' parámetro='paso=1' dibujar-si='(calif)&(paso=0)'">
+   <param name="A_01" value="id='init()' algoritmo='sí' algoritmo='sí' hacer='calculos()'">
+   <param name="A_02" value="id='calculos()' algoritmo='sí' algoritmo='sí' hacer='xdisp=-10+ent(rnd*21);ydisp=-5+ent(rnd*11);ant.x=-10+ent(rnd*21);ant.y=-2+ent(rnd*5);paso=0;'">
+   <param name="A_03" value="id='CalDis()' algoritmo='sí' algoritmo='sí' hacer='d=sqrt((disp.x-ant.x)^2+(disp.y-ant.y)^2)'">
+   <param name="A_04" value="id='verif()' algoritmo='sí' algoritmo='sí' inicio='ErTipo=0;calif=0' hacer='ErTipo=(opc1!=1)?1:((opc2!=2)?2:((opc3!=3)?3:0));calif=(ErTipo=0)?1:0;imgCal1=(opc1=1)?&squot;images/bien.png&squot;:&squot;images/mal.png&squot;;imgCal2=(opc2=2)?&squot;images/bien.png&squot;:&squot;images/mal.png&squot;;imgCal3=(opc3=3)?&squot;images/bien.png&squot;:&squot;images/mal.png&squot;'">
+   <param name="A_05" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='init()'">
+   <param name="A_06" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='CalDis()'">
+   <param name="G_01" value="espacio='E1' tipo='arco' color='74808080' centro='(ant.x,ant.y)' radio='d' fin='360' fijo='sí' ancho='3'">
+   <param name="G_02" value="espacio='E1' tipo='segmento' color='81ff0000' expresión='(disp.x,disp.y)(ant.x,ant.y)' fijo='sí' tamaño='0' ancho='4'">
+   <param name="G_03" value="espacio='E1' tipo='segmento' color='81ff0000' expresión='(ant.x,ant.y)(disp.x,ant.y)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Courier New;}\f1\fs34\i   {\*\mjaformula ca}\f2\fs30\i0}' fuente='Serif,ITALIC,17' fijo='sí' tamaño='0' ancho='4'">
+   <param name="G_04" value="espacio='E1' tipo='segmento' color='81ff0000' expresión='(disp.x,ant.y)(disp.x,disp.y)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Courier New;}\f1\fs34\i{\*\mjaformula co}\f2\fs30\i0}' fuente='Serif,ITALIC,17' fijo='sí' tamaño='0' ancho='4'">
+   <param name="G_05" value="espacio='E1' tipo='punto' expresión='(ant.x,ant.y)' texto='C=(h,k)' fuente='SansSerif,ITALIC,18' fijo='sí'">
+   <param name="G_06" value="espacio='E1' tipo='punto' expresión='(disp.x,disp.y)' texto='P=(x,y)' fuente='SansSerif,ITALIC,18' fijo='sí'">
+   <param name="G_07" value="espacio='E1' tipo='imagen' coord_abs='sí' expresión='(380,385,.99,1.3)' archivo='images/panel.png'">
+   <param name="G_08" value="espacio='E1' tipo='texto' dibujar-si='paso=0' expresión='[15,305]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}\f1\fs36 De acuerdo con el tri\u225 ngulo y el teorema de Pit\u225 goras\f2\fs40\i  {\*\mjaformula hip{\supix 2}=co{\supix 2}+ca{\supix 2}}\f1\fs36\i0 :\par \par \u191 A qu\u233  equivale la hipotenusa?\par \par \u191 C\u243 mo se expresa el cateto \f2\fs40\i{\*\mjaformula co}\f1\fs36\i0 ?\par \par \u191 C\u243 mo se expresa el cateto \f2\fs40\i{\*\mjaformula ca}\f1\fs36\i0 ?}' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_09" value="espacio='E1' tipo='imagen' dibujar-si='(verif)&(!paso)' coord_abs='sí' expresión='(330,350)' archivo='imgCal1'">
+   <param name="G_10" value="espacio='E1' tipo='imagen' dibujar-si='(verif)&(!paso)' coord_abs='sí' expresión='(360,395)' archivo='imgCal2'">
+   <param name="G_11" value="espacio='E1' tipo='imagen' dibujar-si='(verif)&(!paso)' coord_abs='sí' expresión='(375,435)' archivo='imgCal3'">
+   <param name="G_12" value="espacio='E1' tipo='segmento' color='8700ff00' dibujar-si='(ErTipo=1)&(verif)' expresión='(disp.x,disp.y)(ant.x,ant.y)' fijo='sí' ancho='5'">
+   <param name="G_13" value="espacio='E1' tipo='texto' dibujar-si='(ErTipo=1)&(verif)' expresión='[20,23]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs36 Nota que la distancia entre el\par centro de la circunferencia y\par uno de sus puntos es la\par hipotenusa del tri\u225 ngulo.\par Entonces, \u191 con qu\u233  coincide\par la hipotenusa?}' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_14" value="espacio='E1' tipo='texto' dibujar-si='(ErTipo=2)&(verif)' expresión='[20,23]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}\f1\fs36 Nota que el tama\u241 o del cateto\par opuesto \f2\fs40\i{\*\mjaformula co}\f1\fs36\i0  es la diferencia entre la\par coordenada vertical del punto \f2\fs40\i{\*\mjaformula P}\f1\fs36\i0  \par de la circunferencia y la coorde-\par nada vertical del centro.\par \par \u191 Cu\u225 l es la coordenada\par vertical del centro?}' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_15" value="espacio='E1' tipo='texto' dibujar-si='(ErTipo=3)&(verif)' expresión='[20,23]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}\f1\fs36 Nota que el tama\u241 o del cateto\par \f2\fs40\i{\*\mjaformula ca}\f1\fs36\i0  es la diferencia entre la\par coordenada horizontal del punto\par \f2\fs40\i{\*\mjaformula P}\f1\fs36\i0  de la circunferencia y la\par coordenada horizontal del centro.\par \par \u191 Cu\u225 l es la coordenada\par horizontal del centro?}' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_16" value="espacio='E1' tipo='segmento' color='900000ff' dibujar-si='(ErTipo=2)&(verif)' expresión='(disp.x+.5,disp.y)(disp.x+.5,0)' fijo='sí' ancho='5'">
+   <param name="G_17" value="espacio='E1' tipo='segmento' color='900000ff' dibujar-si='(ErTipo=2)&(verif)' expresión='(disp.x+1,ant.y)(disp.x+1,0)' fijo='sí' ancho='5'">
+   <param name="G_18" value="espacio='E1' tipo='segmento' color='900000ff' dibujar-si='(ErTipo=3)&(verif)' expresión='(0,ant.y-.5)(disp.x,ant.y-.5)' fijo='sí' ancho='5'">
+   <param name="G_19" value="espacio='E1' tipo='segmento' color='900000ff' dibujar-si='(ErTipo=3)&(verif)' expresión='(0,ant.y-1.5)(ant.x,ant.y-1.5)' fijo='sí' ancho='5'">
+   <param name="G_20" value="espacio='E1' tipo='texto' dibujar-si='paso=1' expresión='[15,315]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}\f1\fs36 Al sustituir \f2\fs40\i{\*\mjaformula hip=r}\f1\fs36\i0 , \f2\fs40\i{\*\mjaformula co=y-k}\f1\fs36\i0  y \f2\fs40\i{\*\mjaformula ca=x-h}\f1\fs36\i0  en el teorema de Pit\u225 goras\f2\fs40\i  {\*\mjaformula hip{\supix 2}=co{\supix 2}+ca{\supix 2}}\f1\fs36\i0\par obtenemos:\par                                \f2\fs40\i{\*\mjaformula r{\supix 2}=(y-k){\supix 2}+(x-h){\supix 2}}\f1\fs36\i0\par \par Esta es la ecuaci\u243 n ordinaria de la circunferencia.}' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_21" value="espacio='E1' tipo='texto' dibujar-si='debug' expresión='[20,20]' texto='ErTipo=[ErTipo]\ncalif=[calif]' fuente='SansSerif,PLAIN,15' fijo='sí'">
+</ajs></p>
+
+</body>
+</html>

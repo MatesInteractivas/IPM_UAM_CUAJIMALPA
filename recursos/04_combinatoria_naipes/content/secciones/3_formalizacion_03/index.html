@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+  <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    
+    <!--- Párrafo --->
+	<h1>Formalización del problema: Las combinaciones</h1>
+	<p class='problema'>
+    <strong>Objetivo</strong>
+    <br><br>
+	Abordarás la forma de contar elementos tomados de un conjunto y organizados en una lista de tal forma que sólo puedas elegir cada elemento una vez, y que el orden en que se presentan no importe.
+    </p>
+
+	<h2>Observación de formas de combinar sin importar el orden</h2>
+
+    <p>
+    Queremos obtener el número de formas de hacer una mano particular en el juego de naipes. Recordamos que contamos más veces al usar permutaciones, ya que en éstas el orden en que aparecen las cartas sí importa. Así, necesitamos saber cuántas veces más contamos. De saberlo, basta con dividir entre esas veces y obtendremos cuántas formas de hacer una mano de 5 cartas hay si no nos importa el orden de las 5 cartas tomadas.
+    </p>
+
+    <div class="instrucciones">
+    Experimenta en el interactivo a continuación para notar qué son las combinaciones y en qué difieren de las permutaciones. Para ejemplificar sin complicar mucho el problema, consideraremos sólo cuatro cartas de la baraja que puedes elegir. Éste será tu nuevo mazo.
+    Una vez tomado tu nuevo mazo, selecciona si deseas ver las combinaciones de 4 cartas tomadas en 4 (esto es, las formas de hacer manos de 4 cartas sin importar el orden a partir de tu mazo de 4 cartas), o tomadas en 3, 2 o 1. Prueba con varias cartas para las cuatro opciones que permite la mano en este ejemplo.
+    </div>
+
+    <!-- ejemplo para incluir un documento externo en un iframe, aquí van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="480" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+
+	<h2>Descartando el orden en las permutaciones</h2>
+
+    <p>
+    Probablemente notaste que, teniendo cuatro cartas en la mano, sólo es posible generar una combinación. Igualmente, notarás que aquí cada caso involucra solamente cuáles cartas aparecen, y no se desglosan casos donde aparecen las mismas cartas en orden distinto. ¡Claro! El orden no nos importa en el caso de las combinaciones.
+    </p>
+
+    <p>
+    ¿Por qué sucede esto? ¿Por qué de 4 cartas tomadas en una mano de 4 sólo hay una forma de hacer la mano sin importar el orden? Cuando el orden importaba, había \(4!=(4)(3)(2)(1)=24\) formas de ordenarlas. Parece que encontramos que la forma de <strong>combinar</strong> las 4 cartas en una mano de 4 cartas es tomar las formas de <strong>ordenarlas</strong> (que es 24) y dividirla entre 24. Es decir, dividimos entre el número de formas de ordenarlas. Esto responde al hecho de que, al dividir por este número, estamos excluyendo las formas de ordenarlas. Con que aparezcan es suficiente, no importa el orden. Y el número de formas de ordenarlas coincide con las formas de permutar 4 cartas tomadas en 4, que es \(4!\). Pero, ¿quién es este 4 que aparece? 
+    </p>
+
+    <p>
+    Para el caso de 4 cartas tomadas en 3, hay que dividir entre otro número. Cuando obtienes las permutaciones de 4 tomadas en 3 (\(_{4}{P}_{3} = (4)(3)(2) = 24\)), estás incluyendo también, para las 3 cartas que tomaste, las formas de ordenarlas. Pero ya has visto que esas son 6: \((3)(2)(1)\). Es decir, corresponde a \(3!\).
+    </p>
+
+    <p>
+    Así pues, parece que cuando tomas las permutaciones (\(_{4}{P}_{4}\)), basta dividir ese número entre \(4!\) para que el orden no importe. Y para el caso (\(_{4}{P}_{3}\)) basta dividir entre \(3!\) para que el orden no importe.
+    Haz la prueba con el caso \(_{4}{P}_{2}\) y verás que sucede lo mismo.
+    </p>
+    
+    <p class="importante">
+    De forma general, dividir \(_{n}{P}_{m}\) entre \(m!\) nos dice el número de formas de acomodar \(n\) elementos tomados en subconjuntos de \(m\) sin que el orden importe:
+    \[\frac{{n}{P}_{m}}{m!}\]
+    </p>
+
+    <h2>Las combinaciones</h2>
+
+    <p>
+    Respondiendo a las preguntas de la página anterior, tenemos que \(\frac{{n}{P}_{m}}{m!}\) nos da el número de formas de <strong>combinar</strong> los elementos (en la palabra <em>combinar</em> queda implícito que el orden no importa). Reescribiendo la fórmula para las permutaciones, éstas son \(\frac{n!}{(n-m)!m!}\) formas de hacerlo.
+    </p>
+
+    <p>
+    Al igual que para las permutaciones, veamos ahora algunos detalles de notación:
+	<ul>
+		<li>Se llaman <strong>combinaciones</strong> al número de formas de tomar \(m\) elementos de un conjunto de \(n\) elementos, sin importar en el orden en que aparecen, y se denota como \(_{n}C{_m}\).</li>
+		<li>Las combinaciones de \(n\) elementos tomados en conjuntos de \(m\) elementos corresponden a tomar las permutaciones \(_{n}{P}_{m}\), en que sí importa el orden, y dividirlas entre el número de formas de ordenar los elementos tomados en el conjunto pequeño (\(m!\)). Esto es, \(_{n}C{_m}=\frac{{n}{P}_{m}}{m!}=\frac{n!}{(n-m)!m!}\).</li>
+	</ul>
+    </p>
+
+    <div class='tarea'>
+      <h3>Tarea</h3>
+      <p>
+	Aprovecha ahora estas poderosas herramientas para calcular el número de distintas manos de 5 cartas que puedes hacer a partir de un mazo de 52 cartas, y sin importarte el orden en que se reparten las cartas en las manos. Éste será el número total de manos distintas que puedes hacer en póker.
+      </p>
+      <p>
+      Trata de encontrar la respuesta a estas preguntas:
+      </p>
+      <ol>
+	<li>En el mazo de las 52 cartas, ¿cuál es el conjunto total de elementos? Es decir, ¿quién es \(n\)?</li>
+	<li>¿Quién es \(m\) para cuando se reparten manos de 5 cartas?</li>
+	<li>¿Cómo usas estos valores para obtener el número de manos que puedes formar en póker?</li>
+	<li>¿Cuál es este número de formas?</li>
+      </ol>
+
+      <div class="verSolucion" id="btSolucion" onclick="document.getElementById('solucion').setAttribute('class','visible');document.getElementById('btSolucion').setAttribute('class','oculto');">
+      </div>
+      
+    </div>
+
+    <div id="solucion" class='oculto'>
+      
+    <h2>Solución de la tarea</h2>
+    
+    <p>
+    El conjunto original es de 52 elementos (las 52 cartas del mazo). Por lo mismo, \(n=52\).
+    </p>
+
+    <p >
+    De las 52 cartas, se toman manos de sólo 5 cartas. Por lo tanto, \(m=5\).
+    </p>
+
+	<p >
+    Dado que no nos importa el orden en que hemos de recibir las cartas, y sólo nos importa cuáles cartas aparecen, usamos combinaciones en lugar de permutaciones. Por lo tanto, la fórmula es \(_{52}C_{5}=\frac{52!}{(52-5)!5!}=\frac{(52)(51)(50)(49)(48)}{(5)(4)(3)(2)(1)}\). De donde el número de formas es \(_{52}C_{5}=\frac{311,875,200}{120}=2,598,960\).
+    </p>
+    
+	<p class='importante'>
+	El número total de manos distintas de 5 cartas que se pueden generar en un juego de naipes de 52 cartas es \(_{52}C_{5}=2,598,960\). Y, dado que éste es el número total, la probabilidad de obtener un tipo de mano en particular (por ejemplo, tercia) corresponde al número de distintas manos que involucran una tercia dividido entre \(2,598,960\).
+	<br>
+    </p>
+
+    <p>
+    Ahora sólo resta precisamente encontrar el número de distintas manos que involucran un tipo de mano en particular. Ello lo abordarás en la siguiente página.
+    </p>
+    
+    </div>
+
+  
+       <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>      
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

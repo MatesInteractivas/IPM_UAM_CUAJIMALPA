@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>TITULO</title>	
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body BGCOLOR="e0e4e8">
+
+<p align="center">
+<ajs name="Descartes" width=760 height=450 code="Descartes">
+   <param name="tamaño" value="760x450">
+   <param name="decimal_symbol" value=",">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.3.12, 2014-07-09">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' O.x='-375' O.y='225' imagen='images/fondo.png' despl_imagen='arr-izq' fondo='ffffffff' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='numCirc' tipo='numérico' región='interior' espacio='E1' nombre='numCirc' expresión='(195,16,50,50)' valor='2' incr='1' min='2' max='5' decimales='0' fijo='sí' visible='sí'">
+   <param name="C_02" value="id='antena1' tipo='gráfico' espacio='E1' expresión='(antena1.x,antena1.y)' imagen='images/antena.png' activo-si='ubicar==1'">
+   <param name="C_03" value="id='antena2' tipo='gráfico' espacio='E1' expresión='(antena2.x,antena2.y)' imagen='images/antena.png' activo-si='ubicar==1'">
+   <param name="C_04" value="id='antena3' tipo='gráfico' espacio='E1' expresión='(antena3.x,antena3.y)' imagen='images/antena.png' dibujar-si='numCirc>2' activo-si='ubicar==1'">
+   <param name="C_05" value="id='antena4' tipo='gráfico' espacio='E1' expresión='(antena4.x,antena4.y)' imagen='images/antena.png' dibujar-si='numCirc>3' activo-si='ubicar==1'">
+   <param name="C_06" value="id='antena5' tipo='gráfico' espacio='E1' expresión='(antena5.x,antena5.y)' imagen='images/antena.png' dibujar-si='numCirc==5' activo-si='ubicar==1'">
+   <param name="C_07" value="id='ctrl_circ1' tipo='gráfico' espacio='E1' tamaño='6' expresión='(ctrl_circ1.x,ctrl_circ1.y)' dibujar-si='ubicar==0'">
+   <param name="C_08" value="id='ctrl_circ2' tipo='gráfico' espacio='E1' tamaño='6' expresión='(ctrl_circ2.x,ctrl_circ2.y)' dibujar-si='ubicar==0'">
+   <param name="C_09" value="id='ctrl_circ3' tipo='gráfico' espacio='E1' tamaño='6' expresión='(ctrl_circ3.x,ctrl_circ3.y)' dibujar-si='(ubicar==0)&&(numCirc>2)'">
+   <param name="C_10" value="id='ctrl_circ4' tipo='gráfico' espacio='E1' tamaño='6' expresión='(ctrl_circ4.x,ctrl_circ4.y)' dibujar-si='(ubicar==0)&&(numCirc>3)'">
+   <param name="C_11" value="id='ctrl_circ5' tipo='gráfico' espacio='E1' tamaño='6' expresión='(ctrl_circ5.x,ctrl_circ5.y)' dibujar-si='(ubicar==0)&&(numCirc==5)'">
+   <param name="C_12" value="id='bt_ubicar' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Mover antenas' expresión='(400,25,150,30)' fijo='sí' visible='sí' color='blanco' fuente puntos='15' imagen='images/btn150x30.png' acción='calcular' parámetro='ubicar=!ubicar' activo-si='ubicar==0'">
+   <param name="C_13" value="id='bt_radios' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Ver circunferencias' expresión='(570,25,150,30)' fijo='sí' visible='sí' color='blanco' fuente puntos='15' imagen='images/btn150x30.png' acción='calcular' parámetro='setRadios()\nubicar=!ubicar' activo-si='ubicar==1'">
+   <param name="C_14" value="id='movil' tipo='gráfico' espacio='E1' expresión='(movil.x,movil.y)' imagen='images/cel_opac.png'">
+   <param name="A_01" value="id='init()' algoritmo='sí' hacer='antena1.x=15*rnd;antena1.y=6*rnd+1;antena2.x=15*rnd;antena2.y=6*rnd+1;antena3.x=15*rnd;antena3.y=6*rnd+1;antena4.x=15*rnd;antena4.y=6*rnd+1;antena5.x=15*rnd;antena5.y=6*rnd+1;movil.x=7;movil.y=4;;'">
+   <param name="A_02" value="id='setRadios()' algoritmo='sí' hacer='ctrl_circ1.x=antena1.x+1;ctrl_circ1.y=antena1.y+1;ctrl_circ2.x=antena2.x+1;ctrl_circ2.y=antena2.y+1;ctrl_circ3.x=antena3.x+1;ctrl_circ3.y=antena3.y+1;ctrl_circ4.x=antena4.x+1;ctrl_circ4.y=antena4.y+1;ctrl_circ5.x=antena5.x+1;ctrl_circ5.y=antena5.y+1'">
+   <param name="A_03" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' inicio='ubicar=1' hacer='init();setRadios()'">
+   <param name="A_04" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="G_01" value="espacio='E1' tipo='texto' expresión='[14,30]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs36 N\u250 mero de antenas: \f2\fs36}' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_02" value="espacio='E1' tipo='arco' color='gris' dibujar-si='ubicar==0' centro='(antena1.x,antena1.y)' radio='sqrt((ctrl_circ1.x-antena1.x)^2+(ctrl_circ1.y-antena1.y)^2)' fin='360' fijo='sí' ancho='2' info='circunferencia1'">
+   <param name="G_03" value="espacio='E1' tipo='arco' color='gris' dibujar-si='ubicar==0' centro='(antena2.x,antena2.y)' radio='sqrt((ctrl_circ2.x-antena2.x)^2+(ctrl_circ2.y-antena2.y)^2)' fin='360' fijo='sí' ancho='2' info='circunferencia2'">
+   <param name="G_04" value="espacio='E1' tipo='arco' color='gris' dibujar-si='(ubicar==0)&&(numCirc>2)' centro='(antena3.x,antena3.y)' radio='sqrt((ctrl_circ3.x-antena3.x)^2+(ctrl_circ3.y-antena3.y)^2)' fin='360' fijo='sí' ancho='2' info='circunferencia3'">
+   <param name="G_05" value="espacio='E1' tipo='arco' color='gris' dibujar-si='(ubicar==0)&&(numCirc>3)' centro='(antena4.x,antena4.y)' radio='sqrt((ctrl_circ4.x-antena4.x)^2+(ctrl_circ4.y-antena4.y)^2)' fin='360' fijo='sí' ancho='2' info='circunferencia4'">
+   <param name="G_06" value="espacio='E1' tipo='arco' color='gris' dibujar-si='(ubicar==0)&&(numCirc>4)' centro='(antena5.x,antena5.y)' radio='sqrt((ctrl_circ5.x-antena5.x)^2+(ctrl_circ5.y-antena5.y)^2)' fin='360' fijo='sí' ancho='2' info='circunferencia5'">
+</ajs></p>
+
+</body>
+</html>

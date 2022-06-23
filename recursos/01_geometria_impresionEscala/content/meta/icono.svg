@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink= "http://www.w3.org/1999/xlink" width="200" height="200" viewBox="0 0 200 200">
+
+<defs>
+	<clipPath id="clipPath_E1">
+		<rect x="0" y="0" width="200" height="200" />
+	</clipPath>
+</defs>
+
+<g style="clip-path: url(#clipPath_E1);" stroke-linecap="round">
+	<rect x="0" y="0" width="200" height="200" fill="#ecf0f1" fill-opacity="1"/>
+	<path fill="#f1c40f" fill-opacity="1" stroke="none" d="M 47.5 25.5 L 153.56601717798213 25.5 L 153.56601717798213 175.5 L 47.5 175.5 L 47.5 25.5 " />
+	<path fill="none" stroke="#f1c40f" stroke-opacity="1" stroke-width="1" d="M 47.5 25.5 L 153.56601717798213 25.5 L 153.56601717798213 175.5 L 47.5 175.5 L 47.5 25.5 " />
+	<path fill="none" stroke="#3498db" stroke-opacity="1" stroke-width="3" d="M 40.5 30.5 L 54.5 30.5 " />
+	<path fill="none" stroke="#3498db" stroke-opacity="1" stroke-width="3" d="M 40.5 40.5 L 54.5 40.5 " />
+	<path fill="none" stroke="#3498db" stroke-opacity="1" stroke-width="3" d="M 40.5 50.5 L 54.5 50.5 " />
+	<path fill="none" stroke="#3498db" stroke-opacity="1" stroke-width="3" d="M 40.5 60.5 L 54.5 60.5 " />
+	<path fill="none" stroke="#3498db" stroke-opacity="1" stroke-width="3" d="M 40.5 70.5 L 54.5 70.5 " />
+	<path fill="none" stroke="#3498db" stroke-opacity="1" stroke-width="3" d="M 40.5 80.5 L 54.5 80.5 " />
+	<path fill="none" stroke="#3498db" stroke-opacity="1" stroke-width="3" d="M 40.5 90.5 L 54.5 90.5 " />
+	<path fill="none" stroke="#3498db" stroke-opacity="1" stroke-width="3" d="M 40.5 100.5 L 54.5 100.5 " />
+	<path fill="none" stroke="#3498db" stroke-opacity="1" stroke-width="3" d="M 40.5 110.5 L 54.5 110.5 " />
+	<path fill="none" stroke="#3498db" stroke-opacity="1" stroke-width="3" d="M 40.5 120.5 L 54.5 120.5 " />
+	<path fill="none" stroke="#3498db" stroke-opacity="1" stroke-width="3" d="M 40.5 130.5 L 54.5 130.5 " />
+	<path fill="none" stroke="#3498db" stroke-opacity="1" stroke-width="3" d="M 40.5 140.5 L 54.5 140.5 " />
+	<path fill="none" stroke="#3498db" stroke-opacity="1" stroke-width="3" d="M 40.5 150.5 L 54.5 150.5 " />
+	<path fill="none" stroke="#3498db" stroke-opacity="1" stroke-width="3" d="M 40.5 160.5 L 54.5 160.5 " />
+	<path fill="none" stroke="#3498db" stroke-opacity="1" stroke-width="3" d="M 40.5 170.5 L 54.5 170.5 " />
+	<text fill="#e74c3c" fill-opacity="1" x="74.5" y="113.60425448194681" style="font-size: 40px; font-family:descartesJS_sansserif,Arial,Helvetica,Sans-serif; font-weight:bold; ">A4 </text>
+</g>
+
+
+</svg>

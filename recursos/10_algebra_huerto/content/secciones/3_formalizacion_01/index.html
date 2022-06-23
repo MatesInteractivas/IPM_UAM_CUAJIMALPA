@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+  <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Formalización del problema</h1>
+    
+    <!--- Párrafo --->
+    <p>
+    En la sección anterior recordamos cómo hacer la traducción del lenguaje coloquial a lenguaje algebraico derivado de algunos problemas que pudieran presentarse en la vida cotidiana. Exploramos la generación de algunos patrones por medio de la regla que los construye y seguramente lograste expresar dicha regla en lenguaje algebraico. Ahora, nos toca analizar con detenimiento alguno de los métodos para resolver problemas de este tipo y con ello finalmente ayudar a Rubén con el dilema  de sus cultivos de manzanos.
+    </p>
+	
+    <p>Hasta este punto hemos reconocido, expresado y registrado parcialmente un patrón, es momento de realizar el registro por medio de una expresión algebraica.</p>
+    
+    <h2>Registro del patrón utilizando una expresión algebraica</h2>
+    <p>Retomemos el patrón de cerillos de la sección anterior y veamos cómo puedes obtener el número de cerillos sin necesidad de contarlos. </p>
+    
+    <p class="instrucciones">Con ayuda de los botones con las flechas, secciona e identifica los diferentes componentes dentro del patrón.</p>
+    
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="480" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+    <p>Seguramente observaste que existen 6 cerillos al inicio del patrón que nunca cambia, y de igual manera hay 4 cerillos al final; esto es una regularidad.  Dichos cerillos son sumados en cada una de las figuras, sin importar el número de figura.  Expresaremos ese número de cerillos como sigue:</p>
+    
+    <p class="importante" style='margin-left:15%; margin-right:15%;'>
+      <strong>\(x = 6 + y + 4\)
+      </strong>
+      <br><br>
+    donde <strong>\(x\)</strong> es el número total de cerillos y <strong>\(y\)</strong> es el número de cerillos en los elementos internos del patrón.</p>
+          
+      <p>Ahora observa que los elementos internos se seccionaron en <strong>\(n\)</strong> componentes.
+      En otras palabras, el número interior de cerillos es un múltiplo de \(n\), en específico: <strong>\(4n\)</strong>, ya que hay \(4\) cerillos en cada bloque.
+      A este elemento intermedio lo habíamos llamado <strong>\(y\)</strong> en la expresión anterior y corresponde a otra regularidad o patrón.</p>
+      
+     <p class="importante" style='margin-left:15%; margin-right:15%;'>
+      <strong>\(y = 4n\)
+      </strong>
+    </p> 
+    
+    <p>Sustituimos \(y\) en la primera expresión:</p>
+    
+     <p class="importante" style='margin-left:15%; margin-right:15%;'>
+      <strong>\(x = 6 + 4n + 4\)
+      </strong>
+      <br>
+      <br>
+      Simplificando obtenemos:<br><br>
+      
+      <strong>\(x = 4n + 10\)</strong>
+      
+    </p> 
+   
+
+  
+    <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>      
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

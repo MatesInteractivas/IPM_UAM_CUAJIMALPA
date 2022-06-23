@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+  <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    
+    <!--- Párrafo --->
+	<h1>Formalización del problema: Número de formas de hacer un tipo de mano</h1>
+	<p class='problema'>
+    <strong>Objetivo</strong>
+    <br><br>
+	Abordarás el número de manos distintas, de entre las \(2,598,960\), que forman los distintos tipos de manos en el juego de naipes.
+    </p>
+
+	<h2>Un conteo concienzudo</h2>
+
+    <p>
+    Ahora sí hemos llegado a la parte medular de nuestro problema. Para cada tipo de mano, se te orientará al cálculo del número de formas posibles para lograrlo usando las herramientas de conteo que has abordado antes. Como notarás, no sólo bastan estas herramientas. Es necesario pensar para aplicarlas de formas correcta (de ahí que sea un <em>conteo concienzudo</em>). Es preciso que recuerdes las sugerencias mostradas en la sección de <em>Exploración</em>; ellas te podrán ser de mucha utilidad.
+    </p>
+
+    <div class="instrucciones">
+    En el siguiente espacio se te harán preguntas que podrás responder usando las herramientas y las sugerencias de la parte de exploración.
+    Aún puedes consultar estas sugerencias en el presente espacio en caso que lo requieras.
+    Recorrerás cada uno de los tipos de manos involucrados para obtener el número de formas en que se pueden generar.
+    Para cada tipo de mano, responde las preguntas y, una vez respondidas, presiona el botón 'Verificar' para obtener retroalimentación.
+    Después del tercer intento fallido tendrás la opción de ver las respuestas. No obstante, intenta obtener la correcta antes de verlas, ya que la formulación de los cálculos no es sencilla. Igualmente, las podrás ver después de obtener la respuesta correcta, para que puedas comparar tu abordaje con el de interactivo.
+    Cuando en las preguntas se te cuestione qué operación debes usar, responde usando alguna de las siguientes opciones: 'Suma', 'Resta', 'Multiplicación' o 'División'.
+    </div>
+
+    <!-- ejemplo para incluir un documento externo en un iframe, aquí van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="480" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+    
+    <h2>¡A practicar!</h2>
+    
+    <p>
+      Ya te familiarizaste con las formas de obtener un determinado tipo de mano en póker, pero ¡es importante que practiques!
+      Realiza la siguiente tarea antes de avanzar a la sección de 'Resolución', donde abordarás el cálculo de las probabilidades de obtener cada uno de estos tipos de mano.
+    </p>
+    
+    <div class='tarea'>
+      <h3>Tarea</h3>
+      <p>
+	Calcula por tu cuenta cuántas manos distintas de 5 cartas tomadas de una baraja de 52 te forman los diferentes tipos de mano del póker. Trata de hacerlo sin ver las respuestas en el espacio interactivo de arriba.
+      </p>
+      <p>
+	En muchos casos, podrás usar procedimientos de cálculo un poco distintos a los expuestos anteriormente, sobre todo en lo que se refiere al orden en que se obtienen los distintos subconjuntos de naipes que conforman cierto tipo de mano.
+	Por ejemplo, en el caso de un par, podrías primero determinar los números correspondientes a la obtención de las 3 cartas que no pertenecen al par, y luego hacer el cálculo para la formación del par.
+	Compara el resultado obtenido con el que se muestra en el recurso interactivo... ¡Deberían de coincidir!
+      </p>
+      <p>
+	Por último, si realmente quieres ponerte a prueba, intenta calcular la cantidad de formas de no obtener ningún tipo de mano específico <em>de manera directa</em>, es decir, sin restar la suma de todos los tipos de manos de la cantidad total de diferentes manos. ¡Verás que no está nada sencillo!
+      </p>
+    </div>
+
+    <!--
+    <p>
+    A continuación se te pide resolver un problema cuya respuesta está implícita en el interactivo. Trata nuevamente de hacerlo sin ver las respuestas en el interactivo.
+    </p>
+  
+    <div class="problema">
+      <strong>Preguntas</strong>
+      <br><br>
+      ¿Cuántas manos distintas de 5 cartas tomadas de una baraja de naipes de 52 cartas te forman los siguientes tipos de mano?
+	<ul>
+		<li>Una flor imperial.</li>
+		<li>Una flor corrida.</li>
+		<li>Un póker.</li>
+		<li>Un full house.</li>
+		<li>Un color.</li>
+		<li>Una corrida.</li>
+		<li>Una tercia.</li>
+		<li>Dos pares.</li>
+		<li>Un par.</li>
+		<li>Nada.</li>
+	</ul>
+    </div>
+
+  
+    <div class="verSolucion" id="btSolucion" onclick="document.getElementById('solucion').setAttribute('class','visible');document.getElementById('btSolucion').setAttribute('class','oculto');">
+    </div>
+
+	<div id="solucion" class='oculto'>
+    <p >
+	Se presentan, a manera de resumen, las formas en que se calculan el número de formas de hacer cada tipo de mano:
+	<ul>
+		<li><em>Flor imperial</em>: Para un palo dado, sólo hay una flor imperial, que consiste en la corrida del 10 al as. Por lo tanto, considerando 4 palos disponibles, hay \((1)(4)=4\) formas de hacer una flor imperial.</li>
+		<li><em>Flor corrida</em>: Para un palo dado, hay 9 formas de hacer una corrida que no sea imperial (del as al 5, hasta del 9 al rey). Considerando que hay 4 palos disponibles, el total de formas de hacer una flor corrida es \((9)(4)=36\).</li>
+		<li><em>Póker</em>: Se pueden tener desde póker de ases, hasta póker de reyes. De tal forma que hay 13 números de los cuales escoger para formar el póker. Al elegir uno de estos para el póker se usan cuatro cartas de la baraja. Por lo mismo, la última carta se puede elegir de entre 48. De ahí que el número de formas de hacer un póker es \((13)(48)=624\).</li>
+		<li><em>Full House</em>: El número que conforma la tercia se puede escoger de entre 13 posibilidades. Ya teniendo un número en cuestión, se puede escoger de entre cuatro palos. Es decir, hay \(_{4}C_{3}=4\) formas de hacer una tercia de un número dado considerando los cuatro palos. Para el par dentro del full house, el número del mismo se escoge entre los 12 números restantes disponibles. Y teniendo ese número, hay \(_{4}C_{2}=6\) formas de formarlo tomando en cuenta los 4 palos disponibles. De tal forma que el número de maneras de hacer un full house es \((13)(4)(12)(6)=3,744\).</li>
+		<li><em>Color</em>: Para un determinado palo se pueden tomar, de entre los 13 números (del as al rey) 5 cartas sin importar el orden. El número de formas de hacer esto es \(_{13}C_{5}=1,287\). Se restan 10 casos de este número que son los que llevan a una corrida (para evitar tener flor corrida o flor imperial). De donde se obtienen \(1,277\) casos para un palo dado. Considerando que hay 4 palos, el número de formas de hacer un color es \((1,287)(4)=5,108\).</li>
+		<li><em>Corrida</em>: Sin considerar el palo de las cartas (y sólo considerando su número) se pueden organizar las cartas del as al 5 y hasta del 10 al as, formando un total de 10 opciones para corrida. Ahora, la primera carta puede ser de cuatro formas (4 palos posibles). Lo mismo pasa para la segunda carta, y para la tercera, cuarta y quinta. Así, debemos multiplicar por \(4^5=1,024\) para incluir todas estas posibilidades. Pero dentro de estas vienen incluidas 4 formas que implican igual palo para las 5 cartas, y que hemos de restar de las 1,024 para no formar una flor corrida, por lo que nos restan 1,020 casos. Así pues, el número de formas de hacer una corrida está dado por \((10)(1,020)=10,200\).</li>
+		<li><em>Tercia</em>: De la descripción para el full house, hay \((13)(4)=52\) formas de hacer una tercia. Ya elegida la tercia, las dos cartas restantes no podrán tener el mismo número que la tercia. El número de estas dos cartas (sin importar su palo) se podrá escoger de entre 12 opciones, sin importar el orden. Es decir, se podrá escoger de \(_{12}C_{2}=66\) maneras. Y, considerando que la penúltima carta tiene 4 opciones de palo igual que la última, dado el número para las dos últimas cartas, hay \(4^2=16\) formas de formarlo considerando los 4 palos en cuestión. De tal suerte que el número de formas de hacer una tercia es \((52)(4)(66)(16)=54,912\).</li>
+		<li><em>Dos pares</em>: El número del primer par y el del segundo par se pueden escoger de entre 13 opciones (rey a as) sin importar el orden. Es decir, de \(_{13}C_{2}=78\) maneras. Ya considerando el palo, hay \(_{4}C_{2}=6\) formas de hacer dicho par tomando en cuenta los 4 palos disponibles. Lo mismo para el segundo par, lo que nos indica un factor \((6)(6)=36\). Para evitar hacer full o tercia, es necesario que la quinta carta no comparta número con ninguno de los dos pares. Esto es, del mazo de 52 eliminamos 8 cartas en total, restando sólo 44 opciones para la quinta carta. De tal suerte que el número de maneras de hacer dos pares está dado por \((78)(36)(44)=123,552\).</li>
+		<li><em>Un par</em>: El número para el par se puede escoger de entre 13 opciones (rey a as). Una vez escogido el número, hay \(_{4}C_{2}=6\) formas de elegir dicho par de entre los 4 palos disponibles. El número de las tres cartas restantes se puede escoger de entre 12 opciones (habiendo eliminado la del número del par), y las formas de elegir entre 12 opciones sólo 3 sin importar el orden es \(_{12}C_{3}=220\). Considerando que hay 4 palos posibles para la tercera carta, así como para la cuarta y la quinta (dando un total de \(4^3=64\) opciones), el número total de formas de hacer un par es \((13)(6)(220)(64)=1,098,240\).</li>
+		<li><em>Nada</em>: La suma de todas las formas de hacer algún tipo de mano en especial es 1,296,420, que es el número de formas de hacer algo en el juego de naipes. Por otra parte, sabemos que el número total de manos posibles en este juego es 2,598,960. De donde el número de formas de no hacer algo en naipes es la diferencia: \(2,598,960-1,298,420=1,302,540\).</li>
+	</ul>
+    </p>
+
+    <p>
+    Ahora que ya conoces las formas de hacer un determinado tipo de mano en póker, avanza a la sección de 'Resolución' para abordar el cálculo de las probabilidades de obtenerlas.
+    </p>
+
+    </div>
+    -->
+
+  
+         <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>      
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

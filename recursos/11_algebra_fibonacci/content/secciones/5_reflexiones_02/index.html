@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Reflexiones y aplicaciones: Sorprendentes manifestaciones de la proporción áurea</h1>
+
+    <h2>La proporción áurea como fracción continua</h2>
+
+    <p>
+    Recuerda que la proporción áurea se obtiene de resolver la ecuación cuadrática \(x^2=x+1\). Si, en vez de resolver la ecuación mediante la fórmula general, dividimos ambos lados de la igualdad por \(x\), obtenemos \(x=1+\frac{1}{x}\). De tal forma que obtenemos una forma de expresar a \(x\) en términos de sí mismo.
+    </p>
+
+    <p>
+	Así pues, si sustituimos la \(x\) que aparece a la derecha de la igualdad por toda la parte derecha de la igualdad misma (a esto también se le llama recursividad), obtenemos que \(x=1+\frac{1}{1+\frac{1}{x}}\). Y, continuando este proceso indefinidamente, se obtiene que: 
+    </p>
+    
+    <p class='importante' style='margin-left:15%;margin-right:15%;'>
+      \[x=1+\frac{1}{1+\frac{1}{1+\frac{1}{1+...}}}\]
+      A este tipo de expresión se le conoce como <em>fracción continua</em> (por obvias razones). 
+    </p>
+
+    <p>
+    En este caso, sabemos que la solución es \(\Phi\), de modo que podemos expresarlo como \(\Phi=1+\frac{1}{1+\frac{1}{\Phi}}\).
+    Uno puede aproximar el valor de \(\Phi\) llevando la sustitución más y más lejos en dicha fracción, como observarás adelante.
+    </p>
+
+    <p>
+    Todas las fracciones continuas que se prolongan infinitamente corresponden a números irracionales. Los irracionales se pueden aproximar con números racionales (como viste en la segunda parte de la formalización). De todas las fracciones continuas, la compuesta por puras unidades (puros unos, como \(\Phi\)) resulta ser la que más lentamente se aproxima a un racional. Es por ello que, bajo la expresión de fracción continua, a \(\Phi\) se le conoce como el más irracional de los números.
+    </p>
+
+    <h2>Dos fenómenos relacionados</h2>
+
+    <p>
+      A continuación, te presentamos dos problemas, ambos relacionados con la proporción áurea y su representación como fracción continua.
+      Léelos con cuidado y trata de juntar algunas ideas antes de explorar su solución en el espacio interactivo de esta página. 
+    
+    <div class='problema'>
+    
+    <strong>Las semillas del girasol</strong>
+
+    <br><br>
+    Imagina que quieres disponer las semillas en una planta, que van creciendo del centro hacia afuera, de tal forma que no se apelmacen en el centro y queden muy laxas afuera, o viceversa.
+    Básicamente, se busca que quede una igual cantidad de semillas por unidad de área, independientemente de dónde se estudien en la planta (en el centro o afuera).
+    
+    <br><br>
+    La idea es usar un modelo en que, tras generar una semilla central, las siguientes se van agregando a una distancia cada vez mayor del centro, y a un ángulo dado. ¿Se te ocurre cómo deberá ser dicho ángulo para obtener una distribución óptima de semillas?
+    
+    <br><br>
+
+    <strong>La construcción del rectángulo áureo</strong>
+
+    <br><br>
+    Supón que, para la primera generación de la sucesión de Fibonacci, colocas un cuadrado unitario en un plano (\(F_0=1\)).
+    A este cuadrado le juntas otro igual (\(F_1=1\)), de tal manera que te queda un rectángulo de 2x1.
+    A este le agregas un cuadrado de lado 2 (\(F_2=2\)), de tal forma que quede recargado sobre el lado mayor (de longitud 2) del rectángulo formado en el paso anterior.
+    Y así continúas el proceso formando un espiral de cuadrados.
+    
+    <br><br>
+
+    Resulta ser que el rectángulo obtenido para índices muy grandes de la sucesión de Fibonacci representa una figura por muchos considerada como muy estética. Adelante podrás ver cuál es.
+
+    </div>
+
+    <h2>Relacionando los anteriores tres fenómenos</h2>
+
+    <p>
+    A continuación verás un espacio interactivo en el cual podrás conectar los tres fenómenos antes mencionados. Analízalos concienzudamente antes de seguir.
+	</p>
+
+    <div class="instrucciones">El siguiente espacio interactivo te permite analizar los tres casos anteriormente mencionados conforme avanzas en la sucesión de Fibonacci mediante el pulsador localizado arriba a la izquierda. Cada uno de los casos se muestra en una ventana diferente. Puedes tener acceso a una explicación de qué está pasando pulsando en el botón '?' correspondiente al caso. Estudia bien cada caso y medita sobre lo que se menciona en la explicación de cada uno.</div>
+
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="480" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+
+    <p>
+    Ahora que ya has visto algunas propiedades asombrosas de la sucesión de Fibonacci y la proporción áurea, es tu turno de responder algunas preguntas.
+    </p>
+
+    <div class='tarea'>
+      
+      <h3>Tarea</h3>
+      
+      <p>
+	Responde a las siguientes preguntas:
+	<br><br>
+	<ol>
+	  <li>¿A qué tiende el cociente del lado mayor al menor del rectángulo áureo al tomar índices más y más grandes en la sucesión? ¿Por qué es así?</li>
+	  <br>
+	  <li>Por qué será que la disposición de las semillas es más óptima (densidad de semillas constante independientemente de dónde se estudie) cuando el número de vueltas que se da antes de colocar una semilla tiende a la proporción áurea?</li>
+	  <br>
+	  <li>Por qué la fracción continua, avanzada hasta un cierto índice, presenta números de Fibonacci en el numerador y denominador?</li>
+	</ol>
+      </p>
+      
+      <p>
+      Nuevamente, ¡trata de encontrar la solución a estas preguntas por tu cuenta antes de verlas!
+      </p>
+      
+      <div class="verSolucion" id="btSolucion" onclick="document.getElementById('solucion').setAttribute('class','visible');document.getElementById('btSolucion').setAttribute('class','oculto');">
+      </div>
+    
+    </div>
+    
+    
+    <div id="solucion" class='oculto'>
+      
+      <h2>Solución de la tarea</h2>
+      
+      <ol>
+      <li>
+      El cuadrado que se agrega vez por vez al rectángulo al avanzar el índice en la sucesión tiene por lado el número de Fibonacci en cuestión. El lado grande del nuevo rectángulo, así pues, será la suma de este número, con el número de Fibonacci anterior (que por la regla te da el número de Fibonacci siguiente). Y la longitud del lado pequeño del rectángulo resultante corresponde al número anterior al último encontrado.
+      Es por eso que el cociente de lados tiende a la proporción áurea.
+      Observa qué interesante resulta que el nautilus encaja perfectamente en el rectángulo ya avanzada la sucesión.
+      Incidentalmente, al origen del espiral se le conoce como <em>el ojo de Dios</em>.
+      </li>
+      <br>
+      <li>
+      Cuando el número que indica las vueltas antes de colocar una semilla se puede representar con un racional sencillo (como 1, 2 o 1.5), las semillas se apelmazan rápidamente siguiendo líneas y dejando huecos.
+      Cuando este número se representa exactamente por un irracional, resulta ser que dos semillas no pueden caer en la misma línea.
+      No obstante, aún pueden quedar cerca de la misma línea, dejando huecos aún.
+      Las computadoras y dispositivos no manejan irracionales, pero sí permiten aproximarlos mediante racionales complejos (fracciones donde el numerador y denominador ya no son tan sencillos).
+      Resulta ser que \(\Phi\), al mostrarse como el más irracional de los números en su fracción continua, no sólo evita que dos semillas caigan en una misma línea, sino que además hace que se separen lo más posible, permitiendo el arreglo óptimo observado en los girasoles.
+      </li>
+      <br>
+      <li>
+      Para el índice \(n=3\), el cociente que buscas es \(\frac{F_4}{F_3}\). Tu fracción continua es \(1+\frac{1}{1+\frac{1}{1+\frac{1}{1}}}\), que se puede reducir a \(1+\frac{1}{1+\frac{1}{2}}=1+\frac{1}{\frac{3}{2}}=1+\frac{2}{3}\).
+      El numerador de esta fracción es \(F_2\) y el denominador \(F_3\). Al usar el denominador común en dicha suma, el 1 se convierte en \(\frac{F_3}{F_3}\). El numerador de toda la suma será, así pues, \(F_3+F_2\), que ya sabemos que es \(F_4\).
+      Siguiendo este proceso para índices más grandes, notamos que el cociente siempre sera entre números consecutivos de Fibonacci.
+      </li>
+      </ol>
+      
+      <p>
+      Avanza a la siguiente página en las reflexiones para abordar una paradoja muy interesante conocida como la paradoja del rectángulo de Fibonacci.
+      </p>
+      
+    </div>
+    
+	
+  <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>
+
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  
+  </div>
+  
+  
+  
+</article>
+
+
+</body>
+
+</html>

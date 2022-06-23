@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Reflexiones y otras aplicaciones</h1>
+    
+    <!--- Subtítulo (no necesario en introducción) --->
+    <h2>Otra prueba de validez de la fórmula</h2>
+    
+  <p>
+    Antes de dar respuesta a la última parte de la tarea, hagamos la siguiente prueba de validez de la fórmula que encontramos en la página anterior.
+  La fórmula describe el número de LEDs azules en la periferia de la figura, sin importar cuál de las 3 configuraciones elijas.
+  Ahora bien, ¿qué sucede con figuras como más lados? ¿La fórmula encontrada también las describe?
+  </p>
+  
+  <p class="instrucciones">Cambia el número de lados y observa en qué casos se puede aplicar la misma regla.</p>
+  
+  
+<div class="course_extern_content"> 
+      <iframe class="course_iframe" width="750" height="450" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+    
+    <p>Como pudiste observar en el recurso anterior, la fórmula puede satisfacer diferentes configuraciones de displays.
+    La única limitante es el espacio físico que existe entre cada uno de los LEDs: para figuras con más de 9 lados es necesario cambiar el tamaño del LED o la distancia entre ellos.
+    Además, entre más LEDs haya en cada lado, más se asemejará la figura a un círculo y dejará de ser válida.</p>
+    
+    <br/>
+    
+    <h2>Solución numérica al problema de Verónica</h2>
+    
+    <p>Y ahora, ¿cómo sabemos cuántos LEDs y resistencias tendrá que comprar Verónica para poder despachar el trabajo del fabricante de juguetes? Recuerda que se requieren 200 displays por cada una de las figuras desde \(n=1\) hasta \(n=10\). </p>
+    
+    <p>Primero, obtendremos las cantidades requeridas para <strong>un juego</strong>, es decir, un conjunto de displays cuadrados, pentagonales y hexagonales con \(n=1\) hasta \(n=10\). Para determinar dicha cantidad, hay que realizar una sumatoria desde \(n=1\) hasta \(n=10\) del resultado de la fórmula por cada una de las configuraciones, ya que son tres las configuraciones (\(l=4\), \(l=5\) y \(l=6\)).
+    En otras palabras, tendremos que hacer una doble sumatoria que se expresa matemáticamente de la siguiente manera:</p>
+    
+    <p class='importante' >
+        \[\sum_{l=4}^{6}\sum_{n=1}^{10}l(2n)+l\]
+      Esta expresión se lee como la <b>sumatoria sobre \(l\) desde \(4\) hasta \(6\) de la sumatoria sobre \(n\) desde \(1\) hasta \(10\) de \(l(2n)+l\)</b> y es equivalente a:
+      <br><br>
+      \[ \left (\sum_{n=1}^{10}4(2n)+4 \right)  +  \left (\sum_{n=1}^{10}5(2n)+5 \right)  +  \left (\sum_{n=1}^{10}6(2n)+6 \right) \]
+      <br><br>
+       Y la manera de resolverla es la siguiente:
+        <br><br>
+        Evaluemos y sumemos el resultado de \(l(2n)+l\) sustituyendo \(l\) por \(4\) para cada \(n\) desde \(1\) hasta \(10\).
+        <br>
+        \[\sum_{n=1}^{10}4(2n)+4 = [4(2(1))+4] + [4(2(2))+4] + [(4(2(3))+4] + [(4(2(4))+4] + \] \[[(4(2(5))+4] + [(4(2(6))+4] + [(4(2(7))+4] + [(4(2(8))+4] + [(4(2(9))+4] +\] \[[(4(2(10))+4] = 12 + 20 + 28 + 36 + 44 + 52 + 60 + 68 + 76 + 84 = 480\]
+        <br><br>
+        Evaluemos y sumemos el resultado de \(l(2n)+l\) sustituyendo \(l\) por \(5\) para cada \(n\) desde \(1\) hasta \(10\).
+        <br>
+        \[\sum_{n=1}^{10}5(2n)+5 = [5(2(1))+5] + [5(2(2))+5] + [(5(2(3))+5] + [(5(2(4))+5] + \] \[[(5(2(5))+5] + [(5(2(6))+5] + [(5(2(7))+5] + [(5(2(8))+5] + [(5(2(9))+5] + \]\[[(5(2(10))+5] = 15 + 25 + 35 + 45 + 55 + 65 + 75 + 85 + 95 + 105 = 600\]
+        <br><br>
+        Hagamos lo mismo con \(l(2n)+l\) para \(l=6\) con cada \(n\) desde \(1\) hasta \(10\).
+        <br>
+        \[\sum_{n=1}^{10}6(2n)+6 = [6(2(1))+6] + [6(2(2))+6] + [(6(2(3))+6] + [(6(2(4))+6] + \] \[[(6(2(5))+6] + [(6(2(6))+6] + [(6(2(7))+6] + [(6(2(8))+6] + [(6(2(9))+6] + \]\[[(6(2(10))+6] = 18 + 30 + 42 + 54 + 66 + 78 + 90 + 102 + 114 + 126 = 720\]
+        <br><br>
+        Ahora debemos sumar los resultados obtenidos        
+       \[ 480 + 600 + 720 = 1,800\] 
+        <br> Por lo tanto, concluimos que
+       \[\sum_{l=4}^{6}\sum_{n=1}^{10}l(2n)+l =  1,800\] 
+      
+    </p>
+    
+    
+    <p>El resultado de la anterior sumatoria doble es \(1,800\), es decir, \(1,800\) LEDs azul brillantes son requeridos por juego.
+    Pero la juguetera encargó \(200\) juegos, por lo que el número asciende a \(360,000\) LEDs que deben ser conectados en serie a una resistencia cada uno. </p>
+<div class="problema">
+  <strong>Solución</strong>
+  <br><br>
+Verónica deberá pedir el gran total de:
+<ul>
+<li>\(360,000\) unidades de LED color azul de alta luminosidad de 5mm </li>
+<li>\(360,000\) unidades de resistencias de 68 ohm a ¼ watt </li>
+</ul>
+</div>
+
+<div class="tarea">
+<h3>Tarea final</h3>
+<p>
+Basándote en el mismo contexto de la fabricación de displays, ¿cómo sabrías el número total de LEDs de color rojo y azul necesarios en todo el proyecto que encargó la empresa juguetera?  
+</p>
+</div>
+    
+    
+    
+
+
+
+    
+    <!--- Párrafo --->
+
+  
+	
+  <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  </div>
+  
+
+</article>
+
+</body>
+
+</html>
+

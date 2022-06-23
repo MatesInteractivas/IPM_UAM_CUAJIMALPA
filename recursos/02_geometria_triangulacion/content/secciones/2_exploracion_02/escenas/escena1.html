@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>TITULO</title>	
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body style="margin:0px;padding:0px;overflow:hidden;">
+
+<p align="center">
+<ajs name="Descartes" width=760 height=480 code="Descartes">
+   <param name="tamaño" value="760x480">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.3.12, 2014-07-09">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' escala='25' O.x='-255' O.y='120' imagen='images/fondo.jpg' despl_imagen='expand.' fondo='grisClaro' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='anim' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Localizar' expresión='(650,430,90,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn90x30.png' acción='calcular' parámetro='animar=1' dibujar-si='t=0'">
+   <param name="C_02" value="id='cont' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Continuar' expresión='(650,430,90,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn90x30.png' acción='calcular' parámetro='animar=1' dibujar-si='(t=(2*dist)+1)|(t=(2*dist)+21)' pos_mensajes='centro'">
+   <param name="C_03" value="id='reinit' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Reinicar' expresión='(650,430,90,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn90x30.png' acción='calcular' parámetro='init()' dibujar-si='(t=(2*dist)+41)' pos_mensajes='centro'">
+   <param name="C_04" value="id='disp' tipo='gráfico' espacio='E1' tamaño='6' expresión='(disp.x,disp.y)' fijo='sí' imagen='images/cel.png' activo-si='t=0'">
+   <param name="C_05" value="id='disp.x' tipo='numérico' región='escenario' espacio='E1' nombre='disp.x' expresión='(0,0,0,0)' min='12' max='24' fijo='sí' visible='sí' pos_mensajes='centro'">
+   <param name="C_06" value="id='disp.y' tipo='numérico' región='escenario' espacio='E1' nombre='disp.y' expresión='(0,0,0,0)' min='5' max='13' fijo='sí' visible='sí' pos_mensajes='centro'">
+   <param name="A_01" value="id='init()' algoritmo='sí' algoritmo='sí' hacer='calculos()'">
+   <param name="A_02" value="id='calculos()' algoritmo='sí' algoritmo='sí' hacer='t=0;posXa1=2+(rnd*5);posYa1=2+(rnd*11);posXa2=posXa1-2-(rnd*5);posYa2=posYa1+(rnd*2);'">
+   <param name="A_03" value="id='CalDis()' algoritmo='sí' algoritmo='sí' hacer='d=sqrt((disp.x-posXa1)^2+(disp.y-posYa1)^2);dist=ent(d+2)'">
+   <param name="A_04" value="id='CalcRad()' algoritmo='sí' algoritmo='sí' hacer='rDis=t'">
+   <param name="A_05" value="id='CalcRad2()' algoritmo='sí' algoritmo='sí' hacer='rAnt=t-dist'">
+   <param name="A_06" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='init()'">
+   <param name="A_07" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="A_08" value="id='anima' evento='sí' condición='animar=1' acción='animar' ejecución='alternar' pos_mensajes='centro'">
+   <param name="G_01" value="espacio='E1' tipo='imagen' expresión='(posXa1-.4,posYa1+1.5)' archivo='images/antena.png'">
+   <param name="G_02" value="espacio='E1' tipo='arco' color='74808080' dibujar-si='(t<dist)&(t>0)' centro='(disp.x,disp.y)' radio='rDis' fin='360' fijo='sí' ancho='3'">
+   <param name="G_03" value="espacio='E1' tipo='arco' color='74808080' dibujar-si='(t<dist*2)&(t>0)' centro='(posXa1,posYa1)' radio='rAnt' fin='360' fijo='sí' ancho='3'">
+   <param name="G_04" value="espacio='E1' tipo='segmento' color='1a404040' dibujar-si='((t>((2*dist)+1))&(t%2=0))|(t>(2*dist)+19)' expresión='(disp.x,disp.y)(posXa1+.22,posYa1)' fijo='sí' tamaño='0' ancho='3'">
+   <param name="G_05" value="espacio='E1' tipo='imagen' dibujar-si='(t>((2*dist)+21))' expresión='(posXa2-.4,posYa2+1.5)' archivo='images/antena.png'">
+   <param name="G_06" value="espacio='E1' tipo='segmento' color='1a404040' dibujar-si='((t>((2*dist)+21))&(t%2=0))|(t>(2*dist)+39)' expresión='(disp.x,disp.y)(posXa2+.22,posYa2)' fijo='sí' tamaño='0' ancho='3'">
+   <param name="G_07" value="espacio='E1' tipo='imagen' dibujar-si='0' coord_abs='sí' expresión='(380,415,1,.9)' archivo='images/panel.png'">
+   <param name="G_08" value="espacio='E1' tipo='polígono' color='90c2c8' coord_abs='sí' expresión='(10,365)(750,365)(750,470)(10,470)(10,365)' relleno='90c2c8'">
+   <param name="G_09" value="espacio='E1' tipo='texto' dibujar-si='(t>0)&(t<(2*dist)+2)' expresión='[25,370]' texto='El dispositivo envía una señal. Cuando es interceptada por la antena,\nesta envía de regreso una señal de respuesta.' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_10" value="espacio='E1' tipo='texto' dibujar-si='(t>((2*dist)+1))&(t<((2*dist)+22))' expresión='[25,370]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs36 El dispositivo calcula la diferencia entre el momento en que emiti\u243  su se\u241 al\par y el momento en que lleg\u243  la se\u241 al de respuesta.  Ambas se\u241 ales viajan\par a la velocidad de la luz, lo que permite el c\u225 lculo de la distancia.}' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_11" value="espacio='E1' tipo='texto' dibujar-si='(t>((2*dist)+21))' expresión='[25,360]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}\f1\fs36 La f\u243 rmula para calcular la distancia ser\u237 a entonces \f2\fs40\i{\*\mjaformula d={\fraction{\num c t}{\den 2}}.}\f1\fs36\i0  La divisi\u243 n\par entre dos se debe a que estamos tomando la medida del tiempo que le\par toma a la se\u241 al hacer el viaje de ida y de vuelta. Este proceso se puede\par repetir para obtener la distancia entre el dispositivo y otras antenas.}' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_12" value="espacio='E1' tipo='texto' dibujar-si='debug' expresión='[20,20]' texto='t=[t]\nposXa1=[posXa1]\nposYa1=[posYa1]\ndist=[dist]\nrAnt=[rAnt]' fijo='sí'">
+   <param name="Animación" value="pausa='200' controles='no' auto='no' hacer='varTemp=(t=0)?CalDis():0;varTemp=(dist>t)?CalcRad():0;varTemp=(dist<t)?CalcRad2():0;animar=((t=2*dist)|(t=(2*dist)+20)|(t=(2*dist)+40))?0:animar;t=t+1' mientras='animar=1'">
+</ajs></p>
+
+</body>
+</html>

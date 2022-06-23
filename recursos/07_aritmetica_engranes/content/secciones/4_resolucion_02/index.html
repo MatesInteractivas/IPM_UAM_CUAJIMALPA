@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+  <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Resolución del problema</h1>
+
+    <h2>¿Hay otras parejas que funcionan?</h2>
+
+    <p>
+    En la página anterior observamos algunas parejas que son solución del problema. ¿Opinas que sean todas? ¿O crees que hay otras que también funcionan?
+    </p>
+    
+    <p>
+    En esta página podrás encontrar otras parejas que podrían funcionar usando el espacio interactivo con una cuadrícula de 10 por 12.
+    También contarás con el entorno interactivo de siempre, pero con la diferencia de que el número de dientes de los engranes ya no se limita a 12; pueden tener hasta 48 dientes.
+    Te sugerimos probar con parejas, distintas a las de la página anterior, que estén formadas por:
+    </p>
+    
+    <ul>
+      <li>Números iguales</li>
+      <li>Números consecutivos</li>
+      <li>Números no consecutivos cuyo mínimo común múltiplo sea el producto de ambos (es decir, primos relativos). Lo anterior equivale a considerar números que tengan como único divisor común al \(1\).</li>
+      <li>Números que tengan divisores comunes distintos de 1 (es decir, que <em>no</em> son primos relativos). Esto equivale a considerar números no consecutivos pero con múltiplos comunes distintos del producto de ambos.</li>
+    </ul>
+    
+    <br>
+
+    <!--- Instrucciones --->
+    <div class="instrucciones">
+    Presiona los pulsadores para modificar los números de la derecha. Pueden variar de 1 a 12.
+    </div>
+
+    <!-- ejemplo para incluir un documento externo en un iframe, aqui van las escenas y videos -->
+    <div class="course_extern_content">
+      <iframe class="course_iframe" width="750" height="480" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+
+    <div class="instrucciones">
+     Selecciona el número de dientes de cada engrane presionando sobre los pulsadores correspondientes, el izquierdo para el engrane azul y el derecho para el engrane naranja. Presiona sobre el botón 'Mover' para hacer girar los engranes.
+    Con las flechas izquierda y derecha puedes hacer girar los engranes diente por diente.
+    </div>
+
+    <div class="course_extern_content">
+      <iframe class="course_iframe" width="750" height="460" frameborder="0" src="escenas/escena2.html"> </iframe>
+    </div>
+
+    <p>
+    Seguramente pudiste darte cuenta de que hay muchas otras parejas que funcionan, es decir, que resuelven el problema planteado.
+    Probablemente también observaste qué tienen en común esas parejas.
+    En la página siguiente enunciaremos las condiciones que deben cumplir los números que integran una pareja para que ésta sea solución del problema.
+    Para que ese planteamiento quede claro, observemos lo siguiente:
+    </p>
+
+<div class="course_extern_content">
+      <iframe class="course_iframe" width="750" height="130" frameborder="0" src="escenas/escena3.html"> </iframe>
+    </div>
+
+
+   
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>
+
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+
+
+
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

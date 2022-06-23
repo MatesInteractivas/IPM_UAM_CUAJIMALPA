@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<title>TITULO</title>
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/descartes.css" />
+	<title>TITULO</title>
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body style="margin:0px;padding:0px;overflow:hidden;">
+
+<p align="center">
+<ajs name="Descartes" width=760 height=480 code="Descartes">
+   <param name="tamaño" value="760x480">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.340, 2015-05-21">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' imagen='images/fondo.jpg' despl_imagen='arr-izq' fondo='f7f0ec' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='graficos' x='graficos.x' y='graficos.y' ancho='400' alto='400' fijo='sí' escala='49' despl_imagen='arr-izq' red='b8c4c8' red10='889498' ejes='405860' texto='no'">
+   <param name="C_01" value="id='boton cua' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='?' expresión='(410,155,30,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn30x30.png' dibujar-si='0'">
+   <param name="C_02" value="id='boton peq' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Botón' expresión='(450,155,60,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn60x30.png' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_03" value="id='boton med' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Verificar' expresión='(520,155,90,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn90x30.png' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_04" value="id='boton gra' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Haz clic aquí' expresión='(620,155,120,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn120x30.png' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_05" value="id='menú' tipo='numérico' interfaz='menú' región='interior' espacio='E1' expresión='(200,190,100,34)' decimales='0' fijo='sí' visible='no' pos_mensajes='centro'">
+   <param name="C_06" value="id='r' tipo='numérico' región='exterior' espacio='E1' nombre='r' expresión='(r.ctr.x,r.ctr.y,r.ctr.w,r.ctr.h)' valor='r' min='0.5' max='3' fijo='sí' visible='sí' acción='calcular' parámetro='updateGraph(0)' dibujar-si='r.ctr.visible' activo-si='r.ctr.activo'">
+   <param name="C_07" value="id='sedimento.h' tipo='numérico' región='exterior' espacio='E1' nombre='Alt. sedimento' expresión='(sedH.x,sedH.y,sedH.w,sedH.h)' valor='sedimento.h' min='0' max='sedH.max' decimales='3' fijo='no' visible='sí' acción='calcular' parámetro='updateGraph(1)' dibujar-si='sedH.visible' activo-si='sedH.activo'">
+   <param name="C_08" value="id='agua.H' tipo='numérico' región='exterior' espacio='E1' nombre='Altura agua' expresión='(areaAgua.x,areaAgua.y,areaAgua.w,areaAgua.h)' valor='agua.H' min='sedimento.h+0.01' max='maxAH' decimales='3' fijo='no' visible='sí' acción='calcular' parámetro='updateGraph(0)' dibujar-si='areaAgua.visible' activo-si='areaAgua.activo'">
+   <param name="C_09" value="id='sedIncr' tipo='numérico' región='exterior' espacio='E1' nombre='Incre cm^2/h' valor='0.1' min='0.1' max='r^2' fijo='sí' visible='sí'">
+   <param name="A_01" value="id='initCtrs()' algoritmo='sí' algoritmo='sí' hacer='r.ctr.x=450;r.ctr.y=125;r.ctr.w=160;r.ctr.h=50;r.ctr.txt=&squot;r&squot;;r.ctr.activo=1;r.ctr.visible=1;;;;sedH.x=450;sedH.y=325;sedH.w=250;sedH.h=50;sedH.visible=1;sedH.activo=1;sedH.max=2*r;;areaAgua.x=450;areaAgua.y=225;areaAgua.w=250;areaAgua.h=50;areaAgua.visible=1;areaAgua.activo=1'">
+   <param name="A_02" value="id='getAngAlturaAgua_aux(area)' algoritmo='sí' expresión='angH2/2' algoritmo='sí' Local='angH2,const,end,limUp,limDw,tmpA' inicio='const=area*(2/r^2);end=0;limUp=2*pi;limDw=0;angH2=(limUp+limDw)/2;idx=0;_debug=&squot;&squot;' hacer='tmpA=angH2-sen(angH2);;porAbajo=(tmpA>const);limUp=(porAbajo)?angH2:limUp;limDw=(porAbajo)?limDw:angH2;idx=idx+1;end=(abs(tmpA-const)<0.0000001)|(idx>50);;angH2=(end)?angH2:((limUp+limDw)/2)' mientras='!end'">
+   <param name="A_03" value="id='getMaxAnguloSedimento(areaAgua)' algoritmo='sí' expresión='angH2/2' algoritmo='sí' Local='angH2,const,end,limUp,limDw,idx,tmpA,porAbajo,_debug' inicio='const=(2/r^2)*(areaAgua);angH2=0;end=0;limUp=2*pi;limDw=-limUp;idx=0;' hacer='tmpA=angH2-sen(angH2);;porAbajo=(tmpA>const);limUp=(porAbajo)?angH2:limUp;limDw=(porAbajo)?limDw:angH2;;idx=idx+1;end=(abs(tmpA-const)<0.000000001)|(idx>50);angH2=(end)?angH2:((limUp+limDw)/2);;;' mientras='!end'">
+   <param name="A_04" value="id='updateGraph(areaAFija)' algoritmo='sí' algoritmo='sí' Local='angS' hacer='maxAH=2*r-0.01;agua.H=min(maxAH,agua.H);sedimento.h=max(0,min(sedimento.h,agua.H-0.01));sedimento.abs_h=-r+sedimento.h ;sedimento.ang=asen(sedimento.abs_h/r);;;angS=(pi+2*sedimento.ang);angS=(angS<0)*2*pi+angS;;sed.AsegCirc=(angS*r^2)/2;sedTbase=2*r*cos(sedimento.ang);sed.ATriang=abs(sedimento.abs_h)*sedTbase/2;sed.ATriang=(sedimento.abs_h<0)?-sed.ATriang:sed.ATriang;sedimento.A=sed.AsegCirc+sed.ATriang;;;ô=&squot;**********************************************&squot;;ô=&squot;* Área de seccion circular dado el ángulo:   *&squot;;ô=&squot;*           (pi*r^2)*(ang/(2*pi))            *&squot;;ô=&squot;**********************************************&squot;;r2=r*r;areaTotal=sedimento.A+agua.A;;agua.abs_h=(r-agua.H);;;agua.ang=(areaAFija)?getAngAlturaAgua_aux(areaTotal):acos(agua.abs_h/r);agua.H=(areaAFija)?(r-r*cos(agua.ang)):agua.H;;agua.angGrad=(agua.ang*180/pi);;agua.ang1=(agua.ang-pi/2);agua.ang2=(-agua.ang-pi/2);agua.angG2=(agua.ang1*180/pi);agua.angG1=(agua.ang2*180/pi);;;agua.A=(r2/2)*(2*agua.ang-sen(2*agua.ang));agua.A=agua.A-sedimento.A;;;areaTotal=sedimento.A+agua.A;;maxHS=getMaxAnguloSedimento(agua.A);;maxHS=r*sen(maxHS-pi/2);sedH.max=abs(maxHS-r);;;_Print_(&squot;Angulo Max Sedimento: &squot;+(maxHSedimento*180/pi));_Print_(&squot;Agua : &squot;+agua.abs_h+&squot;,&squot;+agua.ang+&squot;,&squot;+agua.angGrad+&squot;,&squot;+agua.A);_Print_(&squot;areaTotal :&squot;+areaTotal);_Print_(&squot;*******************************************&squot;)'">
+   <param name="A_05" value="id='initEscene()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='initCtrs();;graficos.x=20;graficos.y=(E1._h-graficos._h)/2;;;;r=2;;sedimento.h=r/4;agua.H=sedimento.h+r/6;;updateGraph(0);'">
+   <param name="A_06" value="id='updateAnimation()' algoritmo='sí' Local='angS' hacer='sedimento.A=sedimento.A+sedIncr;angS=getMaxAnguloSedimento(sedimento.A);sedimento.h=(r-r*cos(angS));updateGraph(1)'">
+   <param name="A_07" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='initEscene()'">
+   <param name="A_08" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='rG=r+1/graficos.escala'">
+   <param name="G_01" value="espacio='E1' tipo='texto' dibujar-si='0' expresión='[20,20]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Courier New;}{\colortbl\red35\green35\blue35;\red64\green64\blue64;\red34\green162\blue141;\red112\green63\blue24;\red228\green113\blue0;\red236\green112\blue24;\red32\green48\blue58;}\cf0\f1\fs34\u201 sta es una escena Descartes. Se recomiendan los siguientes lineamientos:\par \par \b Ancho m\u225 ximo\b0  de la escena: 760px\par \b Alto m\u225 ximo\b0  (recomendado, no obligatorio): 480px\par \par \b Texto de p\u225 rrafo\b0 : 17px, \cf1 color grisObscuro\cf0\par \par \b Bot\u243 n\b0 : 30px de alto, texto blanco de 16 puntos\par \par \b Men\u250 \b0 : 34px de alto \par \par \b Pulsador\b0 : alto recomendado 50px \par \par \b Campo de texto\b0 : 34px de alto\par \par Por lo general, los colores que se recomienda usar en las escenas para resaltar cosas son:\par * \cf2\b color 22a28d \b0\cf3\par * \b\cf4 color e47100\cf5\b0  (color de men\u250  de navegaci\u243 n)\cf3\par \par \cf1 El fondo de estas escenas es images/fondo.jpg\cf3\par \cf6\f3\fs30\par }' fuente='SansSerif,PLAIN,17' fijo='sí' info='Párrafo'">
+   <param name="G_02" value="espacio='graficos' tipo='curva' expresión='(rG*cos(t),rG*sen(t))' t.intervalo='[agua.ang1,agua.ang2]' t.pasos='24' relleno='14b1ff' info='AGUA'">
+   <param name="G_03" value="espacio='graficos' tipo='curva' color='ff303a' expresión='(rG*cos(t),rG*sen(t))' t.intervalo='[-(pi+sedimento.ang),sedimento.ang]' t.pasos='24' relleno='998000'">
+   <param name="G_04" value="espacio='graficos' tipo='arco' radio='r' fin='360' fijo='sí' ancho='4' info='Circulo completo'">
+   <param name="Animación" value="pausa='1000' controles='sí' auto='no' hacer='updateAnimation();' mientras='areaTotal<(pi*r^2-0.01)'">
+</ajs></p>
+
+</body>
+</html>

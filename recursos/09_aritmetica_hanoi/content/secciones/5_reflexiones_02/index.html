@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+  <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+
+</head>
+
+<body onload="initialize();">
+  
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+   <!-- INICIA EL CONTENIDO DE LA PÁGINA -->
+    
+    <!-- Título de la página -->
+    <h1>Reflexiones y aplicaciones</h1>
+    
+    <!-- Subtítulo (no necesario en introducción) -->
+
+    <h2>Matemáticas recreativas</h2>
+    <p>
+      Las matemáticas recreativas constituyen un área de las matemáticas 
+      que intenta exponer conceptos, propiedades y resultados de una manera lúdica.
+      Por ejemplo, el juego de las torres de Hanoi nos permite explorar varios conceptos
+      matemáticos; un ejemplo de ellos es, como ya vimos, la inducción matemática.
+
+    </p>
+    <p>
+      Si te interesa conocer algunos de los juegos más populares tenemos : 
+      <ul>
+        <li><a href='http://www.plastelina.net/games/game1.html' target='_blank'>El lobo, la oveja y las calabazas</a></li>
+        <li><a href='http://www.plastelina.net/games/game2.html' target='_blank'>Los caníbales y misioneros</a></li>
+        <li><a href='http://www.plastelina.net/games/game8.html' target='_blank'>Colocar 8 reinas en un tablero de ajedrez</a></li>
+      </ul> 
+     </p>
+     <p>
+       <small><em>Nota: Los juegos en línea a los que se dirigen los vínculos están implementados en flash; no funcionarán en tabletas.</em></small>
+     </p>
+
+    <h2>Crecimiento exponencial</h2>
+    <p>
+      Otro de los temas que está implícito es el del crecimiento exponencial. Si recuerdas,
+      el número de movimientos que se tendrían que hacer para mover una torre de 64 discos es 
+      un número descomunal, aunque para una cantidad de discos pequeña no son tantos.
+      Este es un buen ejemplo de un problema que, a pesar de ser relativamente sencillo, 
+      se convierte en algo virtualmente imposible de realizar según el número de elementos involucrados empiece a incrementar.
+      En computación analizar este tipo de casos 
+      es toda un área de estudio, ya que como dijimos, son problemas relativamente sencillos
+      pero que, al incrementar el número de datos, se vuelven virtualmente imposibles de 
+      procesar.
+    </p> 
+
+  <h2>Recursividad</h2>
+    <p>
+      ¿Recuerdas cuando estábamos tratando de demostrar nuestra fórmula de \( 2^n -1\)? Si notas, 
+      en algún punto dijimos algo como:
+
+      <ol>
+        <li>
+          Movemos una torre de \(n-1\) discos al segundo poste.
+        </li>
+        <li>
+          Movemos la pieza que quedó del primer poste al último.  
+        </li>
+        <li>
+          Movemos la torre de \(n-1\) discos al último poste.
+        </li>
+      </ol>
+    </p>      
+    <p>
+      En este caso estamos definiendo cómo mover una torre de \( n \) discos en términos 
+      de primero mover la torre superior de \( n-1 \) discos. A este tipo de definiciones 
+      se les llama <strong>recursivas</strong>.  
+    </p>      
+
+ 
+    <!-- TERMINA EL CONTENIDO DE LA PÁGINA -->
+    
+    
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+    
+
+  </div>
+  
+</article>
+
+
+
+
+</body>
+
+</html>

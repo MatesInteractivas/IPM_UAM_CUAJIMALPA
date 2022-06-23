@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+  <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Formalización del problema</h1>
+    
+    <h2>La teoría de gráficas</h2>
+    
+    <!--- Párrafo --->
+    <p>
+    El matemático suizo Leonard Euler se interesó en el problema de los puentes de Königsberg, y en 1736 presentó un trabajo en la Academia de Ciencias de San Petersburgo en el que daba una solución.
+    Para resolver el problema Euler utilizó un esquema con puntos y líneas. Usó puntos para representar los lechos del río y las islas, marcados con las letras A, B, C y D; los siete puentes los representó mediante líneas. 
+    </p>
+    
+    <div class="course_extern_content"> 
+        <img src="imgs/esquema.png"></img>
+    </div>
+    
+    <p class='importante' style='margin-left:10%;margin-right:10%;'>
+    La obra de Euler es considerada como el comienzo de la teoría de gráficas, que forma parte de la topología. El esquema anterior es llamado <em>gráfica</em> (<em>o grafo</em>), los puntos se llaman <em>vértices</em> (<em>o nodos</em>) y las líneas se llaman <em>aristas</em> (<em>o lados</em>).
+    </p>
+    
+    <p>
+    En el siguiente espacio interactivo podrás explorar nuevamente diversos caminos para recorrer los puentes, pero esta vez hazlo uniendo los puntos como se muestra en la gráfica de Euler. Puedes cambiar el número de puentes, de manera que explorarás recorridos como los de la sección anterior, pero esta vez, al hacerlo, estarás trazando las aristas de una gráfica cuyos vértices son los puntos A, B, C y D.
+    </p>
+    
+	
+    <!--- Instrucciones --->
+    <div class="instrucciones">
+    Para trazar un recorrido uniendo los puntos azules coloca al sujeto en uno de los puntos y pulsa el botón "Iniciar". Para cambiar de punto de inicio pulsa el botón "Cambiar posición" y luego pulsa "Iniciar". Pulsa sobre el botón "Limpiar" para borrar los caminos que hayas trazado si así lo requieres. Puedes cambiar el número de puentes.
+    </div>
+
+    <!-- ejemplo para incluir un documento externo en un iframe, aqui van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="750" height="510" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+    
+    <p>
+     A continuación se muestra un recorrido tal como lo pudiste haber trazado para (tratar de) reproducir la gráfica propuesta por Euler.
+    </p>
+    
+    <div class="course_extern_content"> 
+        <img src="imgs/ej.jpg"></img>
+    </div>
+    
+    <p>
+    Como habrás notado, los recorridos que has trazado forman gráficas. Algunas de estas gráficas inician en el mismo punto, mientras que otras tienen un punto final distinto al punto de inicio.
+    </p>
+    
+    <p class='importante' style='margin-left:10%;margin-right:10%;'>
+      El problema de los puentes de Königsberg se reduce a dibujar la gráfica que usó Euler partiendo de un punto con un único trazo, es decir, sin despegar el lápiz  del papel (o, en este caso, sin dejar de pulsar sobre el cursor), y sin recorrer la misma línea dos veces.
+      <br><br>
+      A un recorrido con estas características se le llama <em><strong>camino euleriano</strong></em>. Cuando el punto de inicio y el punto final coinciden, el recorrido es un <em><strong>ciclo euleriano</strong></em>.
+    </p>
+
+
+    
+    
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>      
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>TITULO</title>	
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body BGCOLOR="e0e4e8">
+
+<p align="center">
+<ajs name="Descartes" width=750 height=500 code="Descartes">
+   <param name="tamaño" value="750x500">
+   <param name="decimal_symbol" value=",">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.3.12, 2014-07-09">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' O.y='228' imagen='images/road.png' despl_imagen='arr-izq' fondo='blanco' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='ctrl1' tipo='gráfico' espacio='E1' color='cc0022' color-int='3dcc0022' tamaño='5' expresión='(ctrl1.x,ctrl1.y)'">
+   <param name="C_02" value="id='ctrl2' tipo='gráfico' espacio='E1' color='cc0022' color-int='3dcc0022' tamaño='5' expresión='(ctrl2.x,ctrl2.y)' fijo='sí'">
+   <param name="C_03" value="id='g1' tipo='gráfico' espacio='E1' tamaño='5' expresión='(m1.x+1.2,m1.y)' constricción='(x-m1.x)^2+(y-m1.y)^2=1.2^2' fijo='sí' imagen='images/girar.png'">
+   <param name="C_04" value="id='g2' tipo='gráfico' espacio='E1' tamaño='5' expresión='(m2.x+1.4,m2.y)' constricción='(x-m2.x)^2+(y-m2.y)^2=1.4^2' fijo='sí' imagen='images/girar.png'">
+   <param name="C_05" value="id='m1' tipo='gráfico' espacio='E1' expresión='(m1.x,m1.y)' fijo='sí' imagen='images/desplazar.png'">
+   <param name="C_06" value="id='m2' tipo='gráfico' espacio='E1' expresión='(m2.x,m2.y)' fijo='sí' imagen='images/desplazar.png'">
+   <param name="C_07" value="id='ayuda1' tipo='gráfico' espacio='E1' expresión='(4,8)' imagen='images/puntito.png'">
+   <param name="C_08" value="id='ayuda2' tipo='gráfico' espacio='E1' expresión='(4,9)' imagen='images/puntito.png'">
+   <param name="A_01" value="id='init()' algoritmo='sí' algoritmo='sí' hacer='pr1_x=-4;pr1_y=0;pr2_x=4;pr2_y=0;ctrl1.x=pr1_x;ctrl1.y=pr1_y;ctrl2.x=pr2_x;ctrl2.y=pr2_y'">
+   <param name="A_02" value="id='CalculaGiro()' algoritmo='sí' algoritmo='sí' hacer='__comentario=&squot;Se obtiene el ángulo en radianes&squot;;angulito=(abs(g1.x-m1.x)>0.01)?atan((g1.y-m1.y)/(g1.x-m1.x)):angulito;__comentario=&squot;Se corrige el ángulo para el 2o y 3er cuadrantes&squot;;angulito=((g1.x-m1.x)<0)?pi+angulito:angulito;__comentario=&squot;Se incluyen los casos en que el arcotangente divergiría&squot;;angulito=((abs(g1.x-m1.x)<0.01)&(g1.y-m1.y>0.8))?pi/2:angulito;angulito=((abs(g1.x-m1.x)<0.01)&(g1.y-m1.y<-0.8))?3*pi/2:angulito;__comentario=&squot;Se convierte de radianes a grados&squot;;angulito=180*angulito/pi'">
+   <param name="A_03" value="id='CalculaGiro2()' algoritmo='sí' algoritmo='sí' hacer='__comentario=&squot;Se obtiene el ángulo en radianes&squot;;angulito2=(abs(g2.x-m2.x)>0.01)?atan((g2.y-m2.y)/(g2.x-m2.x)):angulito2;__comentario=&squot;Se corrige el ángulo para el 2o y 3er cuadrantes&squot;;angulito2=((g2.x-m2.x)<0)?pi+angulito2:angulito2;__comentario=&squot;Se incluyen los casos en que el arcotangente divergiría&squot;;angulito2=((abs(g2.x-m2.x)<0.01)&(g2.y-m2.y>0.8))?pi/2:angulito2;angulito2=((abs(g2.x-m2.x)<0.01)&(g2.y-m2.y<-0.8))?3*pi/2:angulito2;__comentario=&squot;Se convierte de radianes a grados&squot;;angulito2=180*angulito2/pi'">
+   <param name="A_04" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='m1.x=-5;m1.y=7.5;m2.x=-4.8;m2.y=9;init()'">
+   <param name="A_05" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="A_06" value="id='e3' evento='sí' condición='g1.activo' acción='calcular' parámetro='CalculaGiro()' ejecución='siempre' pos_mensajes='centro'">
+   <param name="A_07" value="id='e4' evento='sí' condición='g2.activo' acción='calcular' parámetro='CalculaGiro2()' ejecución='siempre' pos_mensajes='centro'">
+   <param name="G_01" value="espacio='E1' tipo='punto' color='grisObscuro' expresión='(pr1_x,pr1_y)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs34\b PR1\f2\fs30\b0}' fuente='SansSerif,BOLD,17' fijo='sí' tamaño='10' info='PR1'">
+   <param name="G_02" value="espacio='E1' tipo='punto' color='grisObscuro' expresión='(pr2_x,pr2_y)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs34\b PR2\f2\fs30\b0}' fuente='SansSerif,BOLD,17' fijo='sí' tamaño='10' info='PR2'">
+   <param name="G_03" value="espacio='E1' tipo='imagen' expresión='(m2.x,m2.y,1,1)' archivo='images/coche2.png' rotini='angulito2' info='coche 2 (amarillo)'">
+   <param name="G_04" value="espacio='E1' tipo='imagen' expresión='(m1.x,m1.y,1,1)' archivo='images/coche1.png' rotini='angulito' info='coche 1 (amarillo)'">
+   <param name="G_05" value="espacio='E1' tipo='segmento' color='cc0022' dibujar-si='sqrt((ctrl1.x-pr1_x)^2+(ctrl1.y-pr1_y)^2)>0.1' expresión='(pr1_x,pr1_y)(ctrl1.x,ctrl1.y)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Arial;\f3\fcharset0 Courier New;}\f1\fs32\b\i    r = {\*\mjaformula{\expr sqrt((ctrl1.x-pr1_x)^2+(ctrl1.y-pr1_y)^2)\decimals 2\fixed1} cm}\f2\fs30  \f3\fs30\b0\i0}' fuente='Serif,BOLD+ITALIC,16' fijo='sí' ancho='2' info='segmento r1 con texto'">
+   <param name="G_06" value="espacio='E1' tipo='segmento' color='cc0022' dibujar-si='sqrt((ctrl1.x-pr1_x)^2+(ctrl1.y-pr1_y)^2)<.1' expresión='(pr1_x,pr1_y)(ctrl1.x,ctrl1.y)' fuente='Serif,BOLD+ITALIC,16' fijo='sí' ancho='2' info='segmento r1 sin texto'">
+   <param name="G_07" value="espacio='E1' tipo='arco' color='gris' centro='(pr1_x,pr1_y)' radio='sqrt((ctrl1.x-pr1_x)^2+(ctrl1.y-pr1_y)^2)' fin='360' fijo='sí' ancho='2' info='circulo 1'">
+   <param name="G_08" value="espacio='E1' tipo='arco' color='gris' centro='(pr2_x,pr2_y)' radio='sqrt((ctrl2.x-pr2_x)^2+(ctrl2.y-pr2_y)^2)' fin='360' fijo='sí' ancho='2' info='circulo 2'">
+   <param name="G_09" value="espacio='E1' tipo='segmento' color='cc0022' dibujar-si='sqrt((ctrl2.x-pr2_x)^2+(ctrl2.y-pr2_y)^2)>.1' expresión='(pr2_x,pr2_y)(ctrl2.x,ctrl2.y)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Courier New;}\f1\fs32\b\i    r = {\*\mjaformula{\expr sqrt((ctrl2.x-pr2_x)^2+(ctrl2.y-pr2_y)^2)\decimals 2\fixed1} cm}\f2\fs30\b0\i0}' fuente='Serif,BOLD+ITALIC,16' fijo='sí' ancho='2' info='segmento r2 con texto'">
+   <param name="G_10" value="espacio='E1' tipo='segmento' color='cc0022' dibujar-si='sqrt((ctrl2.x-pr2_x)^2+(ctrl2.y-pr2_y)^2)<.1' expresión='(pr2_x,pr2_y)(ctrl2.x,ctrl2.y)' fuente='Serif,BOLD+ITALIC,16' fijo='sí' ancho='2' info='segmento r2 sin texto'">
+   <param name="G_11" value="espacio='E1' tipo='imagen' expresión='(5.7,9.5)' archivo='images/brujula.png'">
+   <param name="G_12" value="espacio='E1' tipo='segmento' color='grisObscuro' expresión='(pr1_x,pr1_y)(pr2_x,pr2_y)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs30 L\u237 nea base (15.87 m)\f2\fs30}' fuente='SansSerif,PLAIN,15' fijo='sí' ancho='2' info='línea base'">
+   <param name="G_13" value="espacio='E1' tipo='texto' expresión='[10,30]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs32\b Veh. 1\f2\fs30\b0}' fuente='SansSerif,BOLD,16' fijo='sí'">
+   <param name="G_14" value="espacio='E1' tipo='texto' expresión='[10,110]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs32\b Veh. 2 \f2\fs30\b0}' fuente='SansSerif,BOLD,16' fijo='sí'">
+</ajs></p>
+
+</body>
+</html>

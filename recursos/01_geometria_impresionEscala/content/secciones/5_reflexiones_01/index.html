@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>  
+
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Reflexiones y aplicaciones</h1>
+    
+    <!--- Subtítulo (no necesario en introducción) --->
+    <h2>El estándar de papel DIN A y su historia</h2>
+    
+    
+    <!--- Párrafo --->
+    <p>
+    A principios del siglo XX, se hizo evidente la utilidad de contar con un sistema estandarizado de hojas de papel. Ello tuvo su origen en el trabajo de Georg Christoph Lichtenberg, un científico alemán, y fue puesto en práctica por Walter Porstmann. El estándar se conoce como DIN o ISO 216.
+    </p>
+
+    <p>
+    Lo que se buscaba en esa época era una hoja particular que economizara el uso de papel al involucrar reducciones, así como que simplificara los cálculos de gramaje involucrados al mandar cartas.
+    </p>
+
+    <p>
+    En concreto, el poder reducir dos hojas verticales (<em>portrait</em>) y colocarlas tras reducirlas en un ajuste horizontal (<em>landscape</em>) como lo suelen hacer actualmente las impresoras, pero sin que falte o sobre papel, equivale exactamente al problema inicial abordado sobre la colocación de una imagen reducida en un papel del tamaño original. Es decir, se busca que la proporción de la hoja vertical sea tal que, al juntar dos hojas verticales y reducidas cada una a la mitad, quepan en el tamaño original sin que falte o sobre papel.
+    </p>
+
+    <p>
+    Ya más en relación con la estandarización, la idea era contar con una hoja de papel inicial, denotado por <strong>A0</strong>, que tuviera las siguientes propiedades:
+	<ul>
+		<li>Que el papel inicial A0 tuviera un área de \(1\) \(m^2\).</li>
+		<li>Que, tras recortar las hojas a la mitad del lado más largo, las hojas resultantes mantuvieran la proporción de la hoja original.</li>
+	</ul>
+    </p>
+
+    <p>
+    Así, la hoja original de área de un metro se llama \(A0\). A la que se obtiene tras cortar ésta a la mitad se le denota \(A1\). A la que se obtiene tras cortar la \(A1\) por la mitad de su lado más largo se le llama \(A2\), y así sucesivamente.
+    </p>
+    
+    <br>
+    
+    <div class='tarea'>
+      
+      <h3>Tarea</h3>
+      
+      <p>
+      A continuación se presenta una tabla con las distintas hojas que se obtienen a partir de la \(A0\), según el número de recortes (hasta \(A4\)). Adicionalmente, se indica el área y la masa de la hoja \(A0\).
+      </p>
+	
+	<!--
+	<table class='tablaTarea'>
+	<thead>
+	<tr>
+		<th>Hoja</th>
+		<th># recortes</th>
+		<th>Lado mayor \(L\) (\(m\))</th>
+		<th>Lado menor \(l\) (\(m\))</th>
+		<th>Área (\(m^2\))</th>
+		<th>Masa (\(g\))</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td><strong>A0</strong></td>
+		<td>0</td>
+		<td></td>
+		<td></td>
+		<td>1</td>
+		<td>80</td>
+	</tr>
+	<tr>
+		<td><strong>A1</strong></td>
+		<td>1</td>
+		<td></td>
+		<td></td>		
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><strong>A2</strong></td>
+		<td>2</td>
+		<td></td>
+		<td></td>		
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><strong>A3</strong></td>
+		<td>3</td>
+		<td></td>
+		<td></td>		
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><strong>A4</strong></td>
+		<td>4</td>
+		<td></td>
+		<td></td>		
+		<td></td>
+		<td></td>
+	</tr>
+	</tbody>
+	</table>
+	-->
+	
+	<!-- tabla con valores correctos -->
+	<!--<table class='tablaTarea'>
+	<tr>
+		<th>Hoja</th>
+		<th># recortes</th>
+		<th>Lado mayor \(L\) (\(m\))</th>
+		<th>Lado menor \(l\) (\(m\))</th>
+		<th>Área (\(m^2\))</th>
+		<th>Masa (\(g\))</th>
+	</tr>
+	<tr>
+		<td><strong>A0</strong></td>
+		<td>0</td>
+		<td>1.189</td>
+		<td>0.841</td>
+		<td>1</td>
+		<td>80</td>
+	</tr>
+	<tr>
+		<td><strong>A1</strong></td>
+		<td>1</td>
+		<td>0.841</td>
+		<td>0.595</td>		
+		<td>0.5</td>
+		<td>40</td>
+	</tr>
+	<tr>
+		<td><strong>A2</strong></td>
+		<td>2</td>
+		<td>0.595</td>
+		<td>0.420</td>
+		<td>0.25</td>
+		<td>20</td>
+	</tr>
+	<tr>
+		<td><strong>A3</strong></td>
+		<td>3</td>
+		<td>0.420</td>
+		<td>0.297</td>
+		<td>0.125</td>
+		<td>10</td>
+	</tr>
+	<tr>
+		<td><strong>A4</strong></td>
+		<td>4</td>
+		<td>0.297</td>
+		<td>0.210</td>
+		<td>0.0625</td>
+		<td>5</td>
+	</tr>
+	</table>-->
+      
+      <p>
+      Basándote en los datos proporcionados, calcula los lados, el área y la masa que corresponden a cada tamaño de hoja.
+      Considera que, para poder realizar el cálculo, deberás:
+      <br>
+	<ul>
+	  <li>Recordar la ecuación algebraica que expresa la razón entre los lados \(L\) y \(l\); </li>
+	  <li>Formular una segunda ecuación para completar el sistema de ecuaciones lineales y obtener la solución;</li>
+	  <li>Averiguar la relación que hay entre las áreas y las masas de las distintas hojas.</li>
+	</ul>
+      </p>
+      
+      <!-- ejemplo para incluir un documento externo en un iframe, aqui van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="730" height="330" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+      
+      <!--
+      <p>
+      ¡Trata de encontrar la solución por tu cuenta antes de descargar el archivo pdf con la solución!
+      </p>
+      -->
+      
+      <!--<div class="descargar" onclick="window.open('pdf/solucion_dinA.pdf')">
+    </div>-->
+
+    </div>
+  
+	
+  <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>     
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  </div>
+  
+
+</article>
+
+</body>
+
+</html>
+

@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>TITULO</title>
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body style="margin:0px;padding:0px;overflow:hidden;">
+
+<p align="center">
+<ajs name="Descartes" width=730 height=450 code="Descartes">
+   <param name="tamaño" value="730x450">
+   <param name="image_loader" value="">
+   <param name="expand" value="">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' escala='1' O.x='-50%' O.y='-50%' imagen='images/fondo.jpg' despl_imagen='arr-izq' fondo='blanco' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='mX' tipo='numérico' región='exterior' espacio='E1' nombre='mX' incr='1' decimales='0' fijo='no' visible='sí'">
+   <param name="C_02" value="id='mY' tipo='numérico' región='exterior' espacio='E1' nombre='mY' incr='1' decimales='0' fijo='no' visible='sí' pos_mensajes='centro'">
+   <param name="C_03" value="id='Ini' tipo='gráfico' espacio='E1' color='2d72b5' color-int='62ac96' tamaño='10' expresión='(200,-100)' fijo='sí'">
+   <param name="C_04" value="id='limpiar' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Limpiar' expresión='(lim.x,lim.y,lim.w,lim.h)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn90x30.png' acción='limpiar' parámetro='inicia=0' pos_mensajes='centro'">
+   <param name="C_05" value="id='iniciar' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Iniciar' expresión='(ini.x,ini.y,ini.w,ini.h)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn90x30.png' acción='calcular' parámetro='inicia=1' pos_mensajes='centro'">
+   <param name="C_06" value="id='cambiar' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Cambiar posición' expresión='(cam.x,cam.y,cam.w,cam.h)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn150x30.png' acción='calcular' parámetro='inicia=0' pos_mensajes='centro'">
+   <param name="A_01" value="id='InitBtn()' algoritmo='sí' algoritmo='sí' hacer='menu.w=140;menu.h=34;;lim.w=90;lim.h=30;ini.w=90;ini.h=30;cam.w=150;cam.h=30;;gap=10;margenIzq=(E1._w-menu.w-lim.w-gap)/2;margenIzq=(E1._w-ini.w-lim.w-cam.w-2*gap)/2;texto.w=120;;menu.x=margenIzq+texto.w/2;menu.y=E1._h-9-menu.h;;ini.x=margenIzq;ini.y=E1._h-11-lim.h;cam.x=ini.x+ini.w+gap;cam.y=E1._h-11-cam.h;lim.x=cam.x+cam.w+gap;lim.y=E1._h-11-lim.h;;'">
+   <param name="A_02" value="id='Init()' algoritmo='sí' algoritmo='sí' hacer='menu=0;inicia=0;scrl=0;scrlMax=2;Ini.x=350;Ini.y=-30;InitBtn()'">
+   <param name="A_03" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='Init()'">
+   <param name="A_04" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="G_01" value="espacio='E1' tipo='texto' dibujar-si='0' expresión='[20,20]' texto='scrl=[scrl]' fijo='sí' info='debug'">
+   <param name="G_02" value="espacio='E1' tipo='punto' color='2d72b5' dibujar-si='inicia' expresión='(Ini.x,Ini.y)' rastro='7db3d7' fijo='sí' tamaño='3'">
+   <param name="G_03" value="espacio='E1' tipo='imagen' fondo='sí' expresión='((E1._w-697)/2,0)' archivo='images/graficas.png'">
+</ajs></p>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>TITULO</title>	
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body style="margin:0px;padding:0px;overflow:hidden;">
+
+<p align="center">
+<ajs name="Descartes" width=760 height=480 code="Descartes">
+   <param name="tamaño" value="760x480">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.3.12, 2014-07-09">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' escala='25' O.x='-255' O.y='120' imagen='images/fondo.jpg' despl_imagen='expand.' fondo='grisClaro' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='anim' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Localizar' expresión='(650,430,90,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn90x30.png' acción='calcular' parámetro='animar=1' dibujar-si='t=0'">
+   <param name="C_02" value="id='sig' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Siguiente' expresión='(650,430,90,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn90x30.png' acción='calcular' parámetro='animar=1' dibujar-si='(t=41)|(t=61)|(t=81)' pos_mensajes='centro'">
+   <param name="C_03" value="id='Reinit' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Reiniciar' expresión='(650,430,90,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn90x30.png' acción='calcular' parámetro='init()' dibujar-si='(t=101)' pos_mensajes='centro'">
+   <param name="C_04" value="id='disp' tipo='gráfico' espacio='E1' tamaño='6' expresión='(disp.x,disp.y)' fijo='sí' imagen='images/cel.png' activo-si='t=0'">
+   <param name="C_05" value="id='disp.x' tipo='numérico' región='escenario' espacio='E1' nombre='disp.x' expresión='(0,0,0,0)' min='12' max='24' fijo='sí' visible='sí' pos_mensajes='centro'">
+   <param name="C_06" value="id='disp.y' tipo='numérico' región='escenario' espacio='E1' nombre='disp.y' expresión='(0,0,0,0)' min='5' max='13' fijo='sí' visible='sí' pos_mensajes='centro'">
+   <param name="A_01" value="id='init()' algoritmo='sí' algoritmo='sí' hacer='calculos()'">
+   <param name="A_02" value="id='calculos()' algoritmo='sí' algoritmo='sí' hacer='t=0;paso=0;posXa1=2+(rnd*5);posYa1=2+(rnd*3);posXa2=2+(rnd*5);posYa2=10+(rnd*4);pMX=(posXa1+posXa2)/2;pMY=(posYa1+posYa2)/2;'">
+   <param name="A_03" value="id='funcRad()' algoritmo='sí' algoritmo='sí' hacer='rDis=t'">
+   <param name="A_04" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='init()'">
+   <param name="A_05" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="A_06" value="id='anima' evento='sí' condición='animar=1' acción='animar' ejecución='alternar' pos_mensajes='centro'">
+   <param name="G_01" value="espacio='E1' tipo='imagen' dibujar-si='t>20' expresión='(posXa1-.4,posYa1+1.5)' archivo='images/antena.png'">
+   <param name="G_02" value="espacio='E1' tipo='imagen' dibujar-si='t>20' expresión='(posXa2-.4,posYa2+1.5)' archivo='images/antena.png'">
+   <param name="G_03" value="espacio='E1' tipo='arco' color='(20,30,3a,t/15)' dibujar-si='t<25' centro='(disp.x,disp.y)' radio='rDis' fin='360' fijo='sí' ancho='3'">
+   <param name="G_04" value="espacio='E1' tipo='segmento' color='grisObscuro' dibujar-si='((t>30)&(t<40)&(t%2=0))|(t>39)' expresión='(posXa1+.2,posYa1)(disp.x,disp.y)' fijo='sí' tamaño='0' ancho='3'">
+   <param name="G_05" value="espacio='E1' tipo='segmento' color='grisObscuro' dibujar-si='((t>41)&(t<60)&(t%2=0))|(t>60)' expresión='(posXa2+.2,posYa2)(disp.x,disp.y)' fijo='sí' tamaño='0' ancho='3'">
+   <param name="G_06" value="espacio='E1' tipo='segmento' color='grisObscuro' dibujar-si='((t>61)&(t<80)&(t%2=0))|(t>80)' expresión='(posXa1+.2,posYa1)(posXa2+.2,posYa2)' fijo='sí' tamaño='0' ancho='3'">
+   <param name="G_07" value="espacio='E1' tipo='punto' dibujar-si='((t>61)&(t<80)&(t%2=0))|(t>80)' expresión='(pMX-1,pMY-.5)' texto='a' fuente='SansSerif,PLAIN,17' fijo='sí' tamaño='0'">
+   <param name="G_08" value="espacio='E1' tipo='punto' dibujar-si='((t>61)&(t<80)&(t%2=0))|(t>80)' expresión='(posXa1+1,posYa1+1)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Courier New;}\f1\fs34\i\u946 \f2\fs30\i0}' fuente='Serif,ITALIC,17' fijo='sí' tamaño='0'">
+   <param name="G_09" value="espacio='E1' tipo='punto' dibujar-si='((t>61)&(t<80)&(t%2=0))|(t>80)' expresión='(posXa2+.5,posYa2-1.5)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Times New Roman;\f2\fcharset0 Courier New;}\f1\fs38\i\u947 \f2\fs30\i0}' fuente='Serif,ITALIC,19' fijo='sí' tamaño='0'">
+   <param name="G_10" value="espacio='E1' tipo='segmento' dibujar-si='(t>95)' expresión='(0,0)(23,0)' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_11" value="espacio='E1' tipo='punto' dibujar-si='(t>95)' expresión='(23,0)' texto='X' fuente='Serif,PLAIN,20' fijo='sí' tamaño='0'">
+   <param name="G_12" value="espacio='E1' tipo='segmento' dibujar-si='(t>95)' expresión='(0,0)(0,10)' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_13" value="espacio='E1' tipo='punto' dibujar-si='(t>95)' expresión='(0,10)' texto='Y' fuente='Serif,PLAIN,20' fijo='sí' tamaño='0'">
+   <param name="G_14" value="espacio='E1' tipo='imagen' coord_abs='sí' expresión='(380,420,1,.8)' archivo='images/panel.png'">
+   <param name="G_15" value="espacio='E1' tipo='polígono' color='90c2c8' coord_abs='sí' expresión='(10,365)(750,365)(750,470)(10,470)(10,365)' relleno='90c2c8'">
+   <param name="G_16" value="espacio='E1' tipo='texto' dibujar-si='(t>0)&(t<42)' expresión='[25,375]' texto='El dispositivo envía una señal para que pueda ser interceptada por las\nantenas cercanas. A continuación la primera antena calcula en qué\ndirección llegó la señal.' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_17" value="espacio='E1' tipo='texto' dibujar-si='(t>41)&(t<62)' expresión='[25,375]' texto='Una segunda antena que intercepta la señal también identifica la dirección\nen la que la recibió. Las torres se comunican con una terminal y envían la\ninformación del ángulo de recepción.' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_18" value="espacio='E1' tipo='texto' dibujar-si='(t>61)&(t<82)' expresión='[25,375]' texto='La terminal analiza el triángulo que se forma. Como se conoce la ubicación\nde las antenas, se conoce la distancia entre ellas. Por lo tanto, se tiene\nun triángulo para el que se conoce la longitud de uno de los lados y\nel tamaño de dos de sus ángulos.' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_19" value="espacio='E1' tipo='texto' dibujar-si='t>81' expresión='[25,375]' texto='Analizando el triángulo con fórmulas trigonométricas se pueden determinar las\nmedidas faltantes, es decir: las distancias entre las antenas y el dispositivo,\nlo cual era lo que se buscaba.' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_20" value="espacio='E1' tipo='texto' dibujar-si='debug' expresión='[20,20]' texto='t=[t]\nposXa1=[posXa1]\nposYa1=[posYa1]' fijo='sí'">
+   <param name="Animación" value="pausa='200' controles='no' auto='no' hacer='funcRad();animar=((t=40)|(t=60)|(t=80)|(t=100))?0:animar;t=t+1' mientras='animar=1'">
+</ajs></p>
+
+</body>
+</html>

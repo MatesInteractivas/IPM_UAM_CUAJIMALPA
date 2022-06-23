@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>  
+
+  <!-- MathJax -- para fórmulas matemáticas -->
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!-- Script para mostrar créditos y agregar ligas a glosario -->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+  <style type="text/css">
+    div.course_extern_content img{
+      border-radius: 6px;
+    }
+  </style>
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!-- INICIA EL CONTENIDO DE LA PÁGINA -->
+    
+    <!-- Título de la página -->
+    <h1>Reflexiones y aplicaciones</h1>
+    
+    
+    <p>
+      En la página anterior vimos una aplicación de las razones trigonométricas para resolver problemas.
+      Ahora bien, en geometría se utilizan otras muchas herramientas, como lo pudiste observar en esta unidad, donde mapeamos nuestro problema a formas y figuras 
+      geométricas que nos permitieron atacar el problema con la información de la que disponíamos.
+    </p>
+    
+    <p>
+      Como lo señalamos anteriormente, el reto está en reconocer en el planteamiento de un problema los elementos que te permiten
+      resolverlo, y mediante qué estrategia. 
+      El procedimiento para resolver un problema de índole geométrica se puede resumir en los siguientes pasos:
+    </p>
+    
+    <div class='importante' style='margin-left:15%;margin-right:15%'>
+      <strong>Pasos para resolver problemas matemáticos con métodos geométricos</strong>
+      <ol>
+	<li>Leer el problema repetitas veces hasta haberlo comprendido cabalmente.</li>
+	<li>Elaborar una representación esquemática del problema.</li>
+	<li>Identificar en el esquema la incógnita y los datos relevantes.</li>
+	<li>Elegir la estrategia que permite resolver el problema, es decir: identificar las composiciones y figuras geométricas que permitirán llegar a la solución.</li>
+	<li>Escribir las fórmulas correspondientes, sustituir en ellas las variables por los datos conocidos y hacer los cálculos requeridos.</li>
+	<li>Corroborar la(s) respuesta(s) obtenida(s).</li>
+      </ol>
+    </div>
+
+    <p>
+      El objetivo de esta página es que resuelvas el siguiente problema, poniendo en práctica la metodología descrita anteriormente.
+    </p>
+    
+    <p class='problema'>
+    <strong>Problema</strong>
+    <br><br>
+    Se tiene una fuente de agua de forma semicircular saliendo de una pared.
+    El radio del círculo es de 1.2 metros.
+    Sin embargo, la distancia de la pared al punto más alejado de la pileta (tina) de la fuente es de solo 1m; es decir, el semicírculo no está completo.
+    Además, la pileta tiene una profundidad de 50 centímetros.
+    <br><br>
+    Se quiere cambiar los mosaicos cerámicos que recubren la parte interior de la pileta.
+    ¿Cuántos metros cuadrados de mosaicos se requieren? 
+    </p>
+    
+    <div class="course_extern_content"> 
+        <img src="imgs/fuente_frontal.jpg"> 
+      </div>
+
+    <div class='tarea'>
+      
+      <h3>Tarea</h3>
+      
+      <p>
+        Trata de resolver el problema descrito.
+	Para ello, elabora un dibujo de la fuente y ubica en él cada una de las medidas proporcionadas.
+	Hazte las siguientes preguntas:
+      </p>
+        <ol>
+	  <li>¿Cuáles son las áreas que tendré que calcular para obtener el área total del interior de la pileta?</li>
+	  <br>
+	  <li>¿Cómo podré calcular cada una de estas áreas?</li>
+	  <br>
+	  <li>¿Qué operación debo realizar al final para obtener el área total a partir de las áreas calculadas?</li>
+	</ol>
+      <p>
+	<strong>¡Ojo!</strong>  Para poder resolver el problema, no sólo necesitarás recordar lo que se vio en esta unidad; también tendrás que echar mano de otros conocimientos previos.
+	También asegúrate de que tu calculadora haga los cálculos en radianes.
+      </p>
+      <p>
+      ¡Intenta encontrar la respuesta por tu cuenta antes de ver la solución! Y recuerda: si no sabes, siempre está la posibilidad de investigar...
+      </p>
+
+    <div class="verSolucion" id="btSolucion" onclick="document.getElementById('solucion').setAttribute('class','visible');document.getElementById('btSolucion').setAttribute('class','oculto');">
+    </div>
+    
+    </div>
+
+    <div id="solucion" class='oculto'>
+      
+      <h4>Solución de la tarea</h3>
+            
+      <p>
+	Observa los siguientes dibujos representativos del problema:
+      </p>
+      
+      <div class="course_extern_content"> 
+        <img src="imgs/fuente_esquema.jpg"> 
+      </div>
+      
+      <p>
+	Resumamos los datos con que contamos para resolver el problema:
+      </p>
+	
+	  <center> 
+            <table width='60%' class='tablaTarea'>
+              <tr>
+                <td>El radio \(r\)</td> <td width='150px'>\(r = 1.2 \text{m}\)</td>
+              </tr>
+              <tr>
+                <td >
+                  La distancia de la pared al extremo del círculo 
+                  (equivalente a \(h_{vacío}\))
+                </td> 
+                <td> \(h_{vacío} = 1 \text{m}\) </td>
+              </tr>
+              <tr>
+                <td>La profundidad de la pileta </td> 
+                <td> \(P = 0.5 \text{m}\)</td></tr>
+            </table>
+          </center>
+
+
+      <p class='importante'>
+	<strong>Estrategia</strong>
+	<br><br>
+	Seguramente notaste que el área a cubrir con mosaicos es la <strong>suma</strong> del área del <strong>fondo</strong> y de las <strong>paredes</strong> de la pileta.
+	<br><br>
+	La pileta tiene la forma de un <strong>segmento circular</strong>, así que ya sabemos cómo calcular el área del fondo de la pileta.
+	<br><br>
+	Para calcular el área  de las paredes, necesitamos conocer el <strong>perímetro</strong> del segmento circular.
+	Éste, a su vez, equivale a la suma de la longitud del <strong>arco</strong> más la longitud de la <strong>cuerda</strong> que delimitan el segmento circular.
+	<br><br>
+	Finalmente, para obtener el área de las paredes, tendremos que multiplicar el perímetro obtenido por la altura de la pared.
+      </p>
+      
+      
+      	
+      <ol>
+	<li>
+	  <p> 
+	   Empecemos por calcular el <strong>área del segmento circular</strong> que equivale al fondo de la pileta.
+	   </p>
+      
+	   <ul>
+	     <li>
+	     Calculamos el ángulo que lo define: 
+		 $$ \begin{align} 
+		   \alpha  &= 2 × arccos \left(1-\frac{1}{1.2}\right)  \\
+		          &= 2 × arccos (0.1667)  \\
+			    &= 2.8 rad  \\
+		 \end{align} $$
+	    </li>
+	    <li>
+	      Conociendo el ángulo, calculamos el área del segmento circular : 
+		  $$ \begin{align} 
+		    \text{Área seg. circular}  &= \left(\frac{1.2^2}{2}\right) × ( 2.8 - sen (2.8))   \\
+		    &= 0.72 × (2.8 - 0.334)  \\
+		    &= 1.775 m^2  \\
+		    
+		  \end{align} $$
+	    </li>
+	   </ul>
+	</li>
+	<br>
+    	<li>
+            Calculemos ahora el <strong>perímetro</strong> de la pileta, el cual como ya dijimos está compuesto por el <strong>arco</strong> y por la <strong>cuerda</strong> que delimitan el segmento circular.
+	      <br><br>
+              <div class="course_extern_content"> 
+                <img src="imgs/fuente_esquema_perimetro.jpg"> 
+              </div>
+	      <br>
+	    <ul>
+	     <li>
+            Si recuerdas, el perímetro de una circunferencia equivale a \(2\pi r\), donde \(r\) es el radio de la circunferencia y \(2\pi\) es el valor en radianes del ángulo (de 360º) de la circunferencia.
+	    Entonces, por analogía, sabemos que la longitud del <strong>arco</strong> de nuestro segmento circular se calcula como \( r × \alpha \), donde
+             \( \alpha \) es el ángulo que ya calculamos.
+	     $$ \begin{align}
+                \text{Arco}  &= r × \alpha \\
+                            &= 1.2 × 2.8 \\
+                            &= 3.36 m  \\
+              \end{align} $$
+	     </li>
+	     <br>
+	    <li>
+	    Por otro lado, la <strong>cuerda</strong> se puede obtener a partir de uno de los lados 
+            del triángulo que usamos para definir la fórmula para \( \alpha \); de hecho, es el doble de ese lado.
+	    Recuerda también que \( \alpha \) es el doble del ángulo \(\theta\) del triángulo rectángulo, de modo que \( \theta = \frac{\alpha}{2} \).
+            De páginas anteriores, sabemos que el lado del triángulo tiene longitud \( r × sen (\frac{\alpha}{2}) \).
+	    Entonces:
+             $$ \begin{align}
+                \text{Cuerda}  &= 2 × (r × sen (\frac{\alpha}{2}) ) \\
+                                  &= 2 × (1.2 × sen(1.4) )\\
+				  &= 2 × (1.2 × 0.985)\\
+                                  &= 2.364 m  \\
+              \end{align} $$
+	    </li>
+	    <br>
+	    <li>
+	    Entonces el perímetro completo del segmento circular es:
+	    $$ \begin{align}
+                \text{Perímetro}  &= \text{Arco} + \text{Cuerda} \\
+				  &= 3.36 m + 2.364 m \\
+                                  &= 5.724m  \\
+              \end{align} $$
+	    </li>
+	    </ul>
+	<br>
+        <li>
+            Ahora multiplicamos el perímetro obtenido por la profundidad de la pileta y tenemos el <strong>área de la pared</strong>:
+             $$ \begin{align} 
+                \text{Área pared}  &= \text{Perímetro} × \text{Profundidad} \\
+                                   &= 5.724 m × 0.5 m \\
+                                   &= 2.862 m^2  \\
+                
+              \end{align} $$
+        </li>
+	<br>
+        <li>
+            Y para finalizar sólo sumamos las dos áreas:
+             $$ \begin{align} 
+                \text{Área total}  &= \text{Área pared} + \text{Área segmento circular}\\
+                                   &= 2.862 m^2 + 1.775 m^2 \\
+                                   &= 4.637 m^2 \\
+                                   
+            \end{align} $$
+        </li>  
+      </ol>
+
+
+      <p>
+        Por último, conviene <strong>corroborar</strong> si las medidas obtenidas son correctas. Más que corroborarlas numéricamente, hagamos un breve ejercicio de validación de nuestras medidas a través de su comparación con algunos otros datos conocidos. En específico:
+      </p>
+      <ul>
+	<li>Primero, comparemos el valor del área del segmento circular (\(1.775 m^2\)) con el área del círculo completo (\(\pi r^2 = 4.52 m^2\) ). ¿Te parece factible que el área obtenida para el segmento sea ésa? </li>
+	<li>Luego, validemos la longitud del arco (\(3.36 m\)) en función del perímetro completo del círculo (\( 2 \pi r = 7.539 m \)).  ¿Te suena lógico?</li>
+	<li>Por último, ¿la cuerda puede tener una longitud de \(2.364 m\), cuando el diámetro del círculo es de \(2.4 m\)?</li>
+      </ul>
+      
+      <p>¡Parece que los datos verificados tienen sentido en el contexto de las medidas proporcionadas en el plantamiento del problema! Por lo mismo, asumimos que son correctos. 
+    </div>
+  
+	
+  <!-- TERMINA EL CONTENIDO DE LA PÁGINA -->
+
+  
+     <!-- INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR -->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>     
+  
+  <!-- TERMINA LA INFO SOBRE LAS CONDICIONES DE USO -->
+  
+  
+  </div>
+  
+
+</article>
+
+</body>
+
+</html>
+

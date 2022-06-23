@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="escenas/hanoiJS/css/contribute/jquery-ui.min.css"  />   
+  <link rel="stylesheet" type="text/css" href="escenas/hanoiJS/js/contribute/modal/css/basic.css" />
+  
+  <link type="text/css" rel="stylesheet" href="js/contribute/selectBoxIt/jquery.selectBoxIt.css" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-- MathJax -- para fórmulas matemáticas -->
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!-- Script para mostrar créditos y agregar ligas a glosario -->
+  <script type="text/javascript" src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+  <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+  
+  
+  
+
+  <script type='text/javascript' src="escenas/hanoiJS/js/contribute/jquery-ui.min.js"></script>
+  <script type='text/javascript' src="escenas/hanoiJS/js/contribute/modal/js/jquery.simplemodal.js"></script>
+  <script src="js/contribute/selectBoxIt/jquery.selectBoxIt.min.js"></script>
+  <script type='text/javascript' src="escenas/hanoiJS/js/utils.js"></script>
+  
+  
+  <script type='text/javascript' src="js/main.js"></script>
+</head>
+
+<body onload="initialize();">
+  
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+   <!-- INICIA EL CONTENIDO DE LA PÁGINA -->
+    
+    <!-- Título de la página -->
+    <h1>Resolución del problema</h1>
+    
+    <!-- Subtítulo (no necesario en introducción) -->
+    <h2>Método de inducción</h2>
+    
+    <p>
+      Ahora que ya tenemos una expresión con la que creemos se puede
+      calcular el número de movimientos, tenemos que demostrar que es válida
+      para las 64 piezas. Esto lo haremos por medio del método de inducción matemática.
+    </p>
+    
+    <div class='importante' style='margin-left:15%;margin-right:15%;'>
+      
+      El <strong>método de inducción matemática</strong> consiste en realizar tres pasos:
+
+      <ol>
+        <li><b>Caso Base</b> : Verificar un caso base;</li>
+        <li><b>Hipótesis de inducción</b> : Suponer que es verdadero para <span class='formula'>n</span>;</li>
+        <li><b>Paso inductivo</b> : Demostrar que es válido al agregar un elemento más (<span class='formula'>n+1</span>).</li>
+      </ol>
+    </div>
+
+    <p>
+      Piensa en este método como una fila infinita de fichas de dominó alineadas.
+      Cuando tiras la primera, la siguiente se cae en consecuencia, pero al caer
+      la siguiente provocará que se caiga una tercera y así sucesivamente. 
+    </p>
+
+    <div class="course_extern_content"> 
+      <img src="imgs/domino.jpg" style='border-radius: 0px 0px 10px;box-shadow: 0px 0px 2px 0px #aaa;'></img>
+    </div>
+    
+    <p>
+      Otra forma de verlo es si demostramos que funciona para <span class='formula'>n+1</span> y funciona para <span class='formula'>1</span>,
+      entonces funciona para <span class='formula'>1+1</span>. Y como funciona para <span class='formula'>2</span>, funciona para <span class='formula'>2+1</span>,
+      y como funciona para <span class='formula'>3</span>, entonces funciona para <span class='formula'>3+1</span>... Y así podríamos seguir para 
+      cualquier valor de <span class='formula'>n</span>. 
+    </p>
+
+    <p>
+        En general, lo complicado es ver (demostrar) que, si es válido para <span class='formula'>n</span>, al agregar un 
+        elemento más, es decir,  sumarle <span class='formula'>1</span>, llegamos a una expresión que involucre a <span class='formula'>n+1</span>. 
+    </p>
+    <p class='problema'>
+      <strong>Objetivo</strong>
+      <br><br>
+      Intentemos demostrar que el número mínimo de movimientos para <span class='formula'>n</span> discos será 
+      <span class='formula'>2<sup>n</sup> -1</span>, haciendo uso de la inducción matemática.
+      <br><br>
+      Para ello sigamos los pasos que se listaron anteriormente.
+    </p>
+
+
+
+    <h3>1) Verificar un caso base (<b>Caso Base</b>)</h3>
+    <p>
+      En las escenas anteriores comprobamos que para 1, 2 y 3 discos se cumple la fórmula, ya que:
+          \begin{align}
+           2^1 - 1  &= 1  \\
+           2^2 - 1  &= 3  \\
+           2^3 - 1  &= 7  \\
+           \end{align}
+
+        Por lo que ya tenemos por lo menos un caso base.
+    </p>
+
+     <p class='importante'>
+      Es importante hacer notar que la <span class='formula'>n</span> de nuestro caso base debe de ser lo más pequeña
+      posible, ya que sólo podemos decir que es válido para las <span class='formula'>n</span> mayores o iguales a nuestro
+      caso base. 
+    </p>
+
+
+    <h3>2) Suponer verdadero para \(n\) (<b>Hipótesis de inducción</b>)</h3>
+    <p>
+        Este paso sólo consiste en decir que es válido para \(n\). En nuestro caso, vamos a decir 
+        que la fórmula funciona para \(n\) discos, 
+        es decir, que se cumple \(2^n-1\) cuando tenemos \(n\) discos.
+        A partir de aquí, llamaremos <em><strong>hipótesis de inducción</strong></em> a la expresión 
+        \(2^n-1\).
+    </p>
+
+
+    <h3>3) Demostrar que es valido al agregar un elemento más (\(n +1\)) (<b>Paso inductivo</b>)</h3>
+    
+    <p>
+        Supongamos que ya movimos los discos de la torre a excepción del último, 
+       o dicho de otra manera, ya movimos una torre de \(n\)
+       discos a otro poste y le agregamos un disco más. Entonces tenemos que determinar 
+       cuántos movimientos nos faltan a partir de la configuración actual para mover
+       una torre de \( n+1 \) discos.
+    </p>
+    
+    <div class="instrucciones">
+       Determina cuántos movimientos adicionales necesitas hacer para mover el último 
+       disco y los otros discos de tal manera que la torre completa quede en el 
+       poste vacío. 
+    </div>
+
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="410" frameborder="0" src="escenas/hanoiJS/index2.html"> </iframe>
+    </div>
+    
+     <p>
+       Si observas, primero tuviste que mover el último disco al poste vacío (\(1\) movimiento) y
+       luego hiciste \( 2^n - 1 \) movimientos para acomodar la torre que ya teníamos
+       sobre el nuevo disco.
+       Si hacemos la suma de la cantidad de movimientos nos da un total 
+       de \( 2^n - 1 + 1 = 2^n \).
+       
+     </p>
+
+     <div class="instrucciones">
+      Pero ¿cuántos movimientos se tuvieron que hacer previamente para acomodar
+      los discos a como inicialmente se mostraron en el espacio interactivo ?
+      <div style='text-align: center; margin-top: 30px; font-weight: bold;'>
+        Movimientos previos :<br><br>
+            <select id='movimientos_prev'>
+                <option value='0' data-text='8'></option>
+                <option value='1' data-text='2<sup>n</sup>'></option>
+                <option value='2' data-text='2<sup>n</sup>+1'></option>
+                <option value='3' data-text='n'></option>
+                <option value='4' data-text='n+1'></option>
+                <option value='5' data-text='n-1'></option>
+                <option value='6' data-text='2<sup>n</sup>-1'</option>
+            </select>
+        </div>
+    </div>
+
+  <div id='paso_sumas'>
+    <p>
+        Entonces el número total de pasos para mover la torre completa es : 
+
+          \begin{align}
+              Movimientos &= 2^n + (2^n-1) \\
+                          &= 2(2^n) - 1 \\
+                          &= 2^{n+1} - 1 \\
+          \end{align}
+        Y con esto queda demostrado, ya que llegamos a una expresión que involucra
+        a <span class='formula'>n+1</span> y tiene la misma forma que nuestra suposición.
+    </p>
+ 
+    <p class='importante'>
+      <strong>Número de movimientos</strong>
+      <br><br>
+        Ahora que estamos seguros de que nuestra fórmula \( 2^n -1\) funciona,
+        podemos hacer el cálculo para 64 discos.
+      <br><br>
+          $$ 2^{64} - 1 \approx 1.844674407×10^{19} $$
+
+          Si los monjes pudieran mover un disco cada segundo, entonces el tiempo 
+          que les llevaría cambiar los discos de una torre a otra sería: 
+          $$ 
+            {1.844674407×10^{19} \over {60 \times 60 \times 24}} 
+            \approx 2.135039823×10^{14} días\ o...
+          $$
+          
+          $$
+          ¡\ 584,942,417,355\ años!
+          $$
+
+	  </p>
+  </div>
+
+
+   
+
+
+    <!-- TERMINA EL CONTENIDO DE LA PÁGINA -->
+    
+    
+     <!-- INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR -->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+  
+  <!-- TERMINA LA INFO SOBRE LAS CONDICIONES DE USO -->
+    
+
+  </div>
+  
+</article>
+
+
+
+
+</body>
+
+</html>

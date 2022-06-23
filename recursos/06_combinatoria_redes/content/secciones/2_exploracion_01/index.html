@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+   <h1>Exploración inicial del problema</h1>
+    
+    <h2>Optimización de la red de respaldo</h2>
+    <!--- Párrafo --->
+    <p>
+      Comenzaremos con la segunda parte del problema que corresponde a
+      la optimización de la red de respaldo. De hecho, en una
+      implementación real lo más probable es que se inicie también por
+      esta parte porque es la más sencilla y rápida de implementar.
+    </p>
+    
+    <!-- ejemplo para incluir un documento externo en un iframe, aqui van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <img  src="imgs/redAntenas.png"> </img>
+    </div>
+    
+    <p>
+    La configuración de la red con antenas no tiene por qué coincidir
+    con la de fibra óptica, es decir, no necesariamente enlazaremos
+    los mismos pares de puntos. No es difícil llegar a la conclusión de
+    que lo que puede resultar óptimo en un caso puede no serlo para el
+    otro, en tanto los costos no tienen relación.
+    </p>
+
+    <div class='instrucciones'>
+      A continuación incluimos la representación gráfica
+      correspondiente a la red de respaldo con el objeto de que
+      encuentres la solución de costo mínimo que comunique todos los
+      puntos. Al presionar sobre los puntos anaranjados o sobre los
+      costos del cuadro podrás marcar o desmarcar, según sea el caso,
+      un enlace como parte de la solución óptima en
+      construcción. Cuando hayas logrado el objetivo aparecerá el
+      aviso correspondiente.<br><br>El acomodo de los puntos es
+      arbitrario, tratando de simular una distribución real en un
+      mapa, pero como en la escena anterior, puedes desplazarlos
+      libremente para acomodarlos de acuerdo con alguna estrategia que
+      escojas. No olvides incluir todos los puntos.
+    </div>
+    
+    <!-- ejemplo para incluir un documento externo en un iframe, aqui van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="480" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+
+  <div class="problema">
+    <strong>Preguntas</strong>
+    <br><br> Una vez que hayas practicado varias veces la búsqueda de
+     la solución de costo mínimo para la red de respaldo, contesta
+     las siguientes preguntas:
+     <ol>
+      <li>¿Consideras que fue difícil o tardado encontrar una solución correcta?</li>
+      <br>
+      <li>¿A qué crees que se debe tu respuesta anterior?</li>
+      <br>
+      <li>¿Consideras que, dentro de las diferentes soluciones
+      correctas que encontraste, si es que lo hiciste, hay una que
+      consideres más fácil de encontrar? ¿Podrías explicar por qué te
+      parece que es más fácil?</li>
+      <br>
+      <li>¿Crees que con otros costos puede haber casos en los que la
+      configuración de menor costo sea única? ¿De qué dependerá?</li>
+     </ol>
+  </div>
+
+    <p>
+    En la siguiente página trabajaremos con la solución de la primera parte del problema de una forma similar a como lo hicimos aquí.
+    </p>
+
+    <p>
+    Avanza a la página 2 para seguir explorando.
+    </p>
+
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>
+    
+
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

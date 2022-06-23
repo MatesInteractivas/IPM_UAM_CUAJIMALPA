@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+   <h1>Exploración inicial del problema</h1>
+    
+    <h2>Acomodo de las cajas</h2>
+    <!--- Párrafo --->
+
+    <!--- Instrucciones --->
+    <div class="instrucciones">
+    <span>A continuación incluimos un croquis interactivo de las
+      dimensiones de nuestro paquete de cajas. La \(n\), que representa el
+      número total de cajas, la puedes variar entre \(1\) y \(10,000\). La \(p\),
+      que tomamos como el número de filas, la puedes varíar entre \(1\) y
+      \(100\). En el croquis se cuentan y se dibujan en rojo los huecos
+      que existen cuando no hay suficientes cajas para
+      completar la última columna. La \(q\) corresponde al número de
+      columnas completas que pudimos acomodar.<br><br>Puedes arrastar
+      el paquete para moverlo y modificar la escala con las lupas de
+      la esquina inferior derecha.</span>
+    </div>
+
+    <!-- ejemplo para incluir un documento externo en un iframe, aqui van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="480" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+
+  <div class="problema">
+    <strong>Preguntas</strong>
+    <br><br>
+     Suponemos que has encontrado diversas maneras de acomodar las \(360\) cajas, pero
+     <ol>
+      <li>¿Crees que este es un buen
+      método para encontrar todos los posibles acomodos según las
+      características convenidas para el paquete?</span>
+      </li>
+      <br>
+      <li>
+      ¿Habrá casos en que no haya
+      más que un acomodo posible?
+      </li>
+     </ol>
+      Para lo anterior consideramos que
+      no importa la orientación de filas y columnas, es decir, es lo mismo un paquete de
+      cinco por cuatro que uno de cuatro por cinco, por ejemplo.
+  </div>
+
+    <p>
+    Continuaremos con la segunda parte del problema. Avanza a la página 2 para seguir explorando.
+    </p>
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>
+    
+
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

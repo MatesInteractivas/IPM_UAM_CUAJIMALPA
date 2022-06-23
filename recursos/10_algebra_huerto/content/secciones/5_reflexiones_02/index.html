@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Reflexiones y otras aplicaciones: Solución del problema</h1>
+    
+    <h2>Obtención de la fórmula para el cuadrado</h2>
+    
+   
+<p>
+En esta página te guiaremos paso por paso a la solución del problema.
+Tomemos primero como referencia la fórmula obtenida en la sección anterior:</p>
+<p class="importante"  style='margin-left: 15%;margin-right:15%;'>
+
+<strong>\(4n+4\)</strong>
+<br><br>
+Corresponde al caso particular de la configuración cuadrada del huerto de manzanos de Rubén, donde \(4n\) era el número de pinos en los \(4\) lados más 4 pinos (uno por cada esquina). 
+</p>
+
+<p class="ejercicio">¿Encuentras similitud con los displays de LEDs? </p>
+<p class="instrucciones">Analicemos sólo el caso del display de configuración cuadrada.</p>
+<div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="360" frameborder="0" src="escenas/escena3.html"> </iframe>
+    </div>
+<p>Cuando presionas el botón "Vértices" aíslas las esquinas en el perímetro de LEDs azules, pero además haces notoria una regularidad con los LEDs restantes del perímetro. ¿Cuál es esa regularidad?</p>
+<div class="course_extern_content"> 
+      <iframe class="course_iframe" width="480" height="200" frameborder="0" src="escenas/escena4.html"> </iframe>
+<p>
+  Muy bien, seguramente en este punto ya descubriste que por cada lado de la figura cuadrada hay \(2n\) LEDs azules, es decir que para el caso de \(n=1\) hay 2 LEDs, para \(n=2\) hay 4 y para \(n=3\) hay 6.
+  Además es necesario agregar los LEDs de las esquinas.
+</p>
+
+<p class="importante"  style='margin-left: 15%;margin-right:15%;'>
+Lo anterior es equivalente a:
+<br><br>
+<strong>\(4(2n)+4\)</strong>
+<br><br>
+Esta fórmula describe el número de LEDs azules en las figuras con configuración <strong>cuadrada</strong>.
+</p>
+
+<p>¿Cuál es el origen del 4 a la izquierda de la fórmula anterior? ¿Con que variable en los displays se relaciona?</p>
+
+
+<h2>Obtención de la fórmula general</h2>
+
+<br>
+
+<p class="instrucciones">Revisa de nuevo las configuraciones y con ayuda de la fórmula recién obtenida construye la o las fórmulas que describan las configuraciones pentagonal y hexagonal.
+Utiliza el número de lados.</p>
+<div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="360" frameborder="0" src="escenas/escena2.html"> </iframe>
+    </div>
+
+<p>Seguramente llegaste a una fórmula parecida a la siguiente:</p>
+
+<p class="importante"  style='margin-left: 15%;margin-right:15%;'>
+<strong>\(l(2n)+l\)</strong>
+<br><br>
+Lo anterior se obtiene derivado de que, existen \(2n\) LEDs azules por lado de la figura, más el mismo número de LEDs que vértices en ella, equivalente al número de lados por configuración (\(l\)).
+<br>
+<br>
+Como se había mencionado antes, esta es la regularidad mayor que comprende a estas tres configuraciones. Con la fórmula anterior describimos el número de LEDs azules de la periferia de los displays.
+
+</p>
+
+
+<p class="instrucciones">Verifica que la fórmula hallada satisface las diferentes figuras y configuraciones.</p>
+
+<div class="course_extern_content"> 
+      <iframe class="course_iframe" width="750" height="430" frameborder="0" src="escenas/escena0.html"> </iframe>
+    </div>
+    
+
+
+    
+    <!--- Párrafo --->
+
+  
+	
+  <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  </div>
+  
+
+</article>
+
+</body>
+
+</html>
+

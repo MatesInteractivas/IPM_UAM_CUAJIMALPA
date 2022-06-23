@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Resolución del problema</h1>
+    
+    <!--- Subtítulo (no necesario en introducción) --->
+    <h2>Algunas parejas que funcionan</h2>
+
+    
+    <!--- Párrafo --->
+    <p>
+    Recordemos el problema que planteamos al inicio de esta unidad.
+    </p>
+    
+    <p class='problema'>
+    <strong>Problema</strong>
+    <br><br>
+    Tenemos dos engranes entrelazados que tienen \(p\) y \(q\) dientes respectivamente, donde \( 4≤q≤p≤12\). Encuentra los valores de \(p\) y \(q\) para los que el diente marcado de uno de los engranes se encaje en cada hueco del otro engrane a medida que los engranes giran.
+    </p>
+    
+    <p>
+    En la Exploración investigamos las relaciones que hay entre el número de dientes de cada engrane, el número de vueltas que da cada engrane para regresar a la posición inicial y el número de dientes encajados.
+    En la Formalización definimos los conceptos de múltiplos, factores y divisores de un número, así como múltiplos y divisores comunes a dos o más números, y el mínimo común múltiplo y máximo común divisor.
+    También conocimos el concepto de primos relativos, y su relación con los números analizados en la Exploración.
+    Usaremos toda esta información para encontrar la solución al problema.
+    </p>
+
+    <p>
+     Utiliza el entorno interactivo de siempre para explorar 9 casos específicos: las parejas (5,5), (6,5), (6,6), (7,5), (7,6), (7,7), (8,5), (8,6), (8,7) y (8,8).
+     Responde algunas preguntas que te pueden servir como guía en la búsqueda de la solución a nuestro problema.
+    </p>
+
+
+    <!--- Instrucciones --->
+    <div class="instrucciones">
+     Selecciona el número de dientes de cada engrane presionando sobre los pulsadores correspondientes, el izquierdo para el engrane azul y el derecho para el engrane naranja. Presiona sobre el botón 'Mover' para hacer girar los engranes.
+    Con las flechas izquierda y derecha puedes hacer girar los engranes diente por diente.
+    </div>
+
+    <!-- ejemplo para incluir un documento externo en un iframe, aqui van las escenas y videos -->
+    <div class="course_extern_content">
+      <iframe class="course_iframe" width="750" height="480" frameborder="0" src="escenas/escena1.html"> </iframe>
+      <iframe class="course_iframe" width="750" height="130" frameborder="0" src="escenas/escena2.html"> </iframe>
+    </div>
+
+    <p>
+     Hagamos una recapitulación.
+    </p>
+
+     <ul>
+       <li>Las parejas (5,5), (6,6), (7,7) y (8,8) no funcionan, es decir, las que tienen el mismo número de dientes.</li>
+       <br>
+       <li>Las parejas (6,5), (7,6) y (8,7) funcionan. Observa que estas parejas tienen un número de dientes consecutivo.</li>
+       <br>
+       <li>Y finalmente, las parejas (7,5) y (8,5) también funcionan.</li>
+     </ul>
+     
+     <p>
+      Ahora busca la respuesta a las siguientes preguntas.
+     </p>
+     
+     
+
+    <div class='problema'>
+      <strong>Preguntas</strong>
+      <ol>
+        <li>¿Cómo se relacionan los números de las cinco parejas encontradas que funcionan?</li>
+        <br>
+          <li>¿Habrá otras parejas que también resuelven nuestro problema?</li>
+        <br>
+        <li>Usando las parejas inversas de las parejas estudiadas, &#8212;por ejemplo: (5,6), (5,7), (6,7), (5,8), (6,8) y (7,8)&#8212;, ¿obtienes los mismos resultados que para las parejas originales (6,5), (7,5), (7,6), (8,5), (8,6) y (8,7)?</li>
+      </ol>
+    </div>
+
+  <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  </div>
+  
+
+</article>
+
+</body>
+
+</html>
+

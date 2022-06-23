@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>TITULO</title>
+
+        <link rel="stylesheet" type="text/css" href="css/descartes.css">	
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body style="margin:0px;padding:0px;overflow:hidden;">
+
+<p align="center">
+<ajs name="Descartes" width=750 height=500 code="Descartes">
+   <param name="tamaño" value="750x500">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.3.12, 2014-07-09">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' escala='65' O.x='-400' imagen='images/fondo.png' despl_imagen='arr-izq' fondo='f3f0ec' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='borrar' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Reiniciar' expresión='(20,E1._h-70,120,30)' fijo='sí' visible='sí' color='blanco' color-int='fff0f8ff' fuente puntos='17' imagen='images/btn120x30.png' acción='calcular' parámetro='clean()'">
+   <param name="A_01" value="id='fila(n)' algoritmo='sí' expresión='x' algoritmo='sí' Local='x, i' inicio='x=&squot;&squot;; i=n+1' hacer='x=(i<10)?x+&squot; &squot;+i+&squot;    &squot;:((i!=99)?x+i+&squot;    &squot;:x+i+&squot;   &squot;);i=i+1' mientras='i<n+11'">
+   <param name="A_02" value="id='plot(x,y)' algoritmo='sí' algoritmo='sí' Local='p' inicio='p=0' hacer='X=x;Y=y;xn=ent(x);yn=ent(6.5-1.75*y);NUM=yn*10+xn;;p=((fact(NUM)=&squot;P&squot;)&(NUM>1)&(graficados<25));;xpos[graficados]=(p)?x:100;ypos[graficados]=(p)?y:100;graficados=(p)?graficados+1:graficados;'">
+   <param name="A_03" value="id='fact(x)' algoritmo='sí' expresión='txt' algoritmo='sí' Local='txt,n,p' inicio='txt=&squot;&squot;' hacer='cleanp();aux=f(x);n=p[2]+p[3]+p[5]+p[7]+p[8];p=((n=1)|(n=p[8]));txt=(p)?&squot;P&squot;:txt;txt=(!p&(p[2]>0))?repite(2,p[2]):txt;txt=(!p&(txt!=&squot;&squot;)&p[3]>0)?txt+&squot; × &squot;+repite(3,p[3]):txt;txt=(!p&(txt=&squot;&squot;)&p[3]>0)?repite(3,p[3]):txt;txt=(!p&(txt!=&squot;&squot;)&p[5]>0)?txt+&squot; × &squot;+repite(5,p[5]):txt;txt=(!p&(txt=&squot;&squot;)&p[5]>0)?repite(5,p[5]):txt;txt=(!p&(txt!=&squot;&squot;)&p[7]>0)?txt+&squot; × &squot;+repite(7,p[7]):txt;txt=(!p&(txt=&squot;&squot;)&p[7]>0)?repite(7,p[7]):txt;;txt=(!p&(txt!=&squot;&squot;)&p[8]>0)?txt+&squot; × &squot;+p[8]:txt;'">
+   <param name="A_04" value="id='p' vector='sí' evaluar='una-sola-vez' tamaño='9' expresión='p[2]=0;p[3]=0;p[5]=0;p[7]=0;p[8]=0;'">
+   <param name="A_05" value="id='cleanp()' algoritmo='sí' expresión='1' algoritmo='sí' hacer='p[2]=0;p[3]=0;p[5]=0;p[7]=0;p[8]=0;'">
+   <param name="A_06" value="id='f(x)' algoritmo='sí' expresión='1' algoritmo='sí' inicio='cleanp()' hacer='p[2]=(x%2=0)?p[2]+1:p[2];x=(x%2=0)?x/2:x;p[3]=(x%3=0)?p[3]+1:p[3];x=(x%3=0)?x/3:x;p[5]=(x%5=0)?p[5]+1:p[5];x=(x%5=0)?x/5:x;p[7]=(x%7=0)?p[7]+1:p[7];x=(x%7=0)?x/7:x;;p[8]=((x%2!=0)&(x%3!=0)&(x%5!=0)&(x%7!=0)&(x>1))?x:p[8];x=((x%2!=0)&(x%3!=0)&(x%5!=0)&(x%7!=0))?1:x;' mientras='x>1'">
+   <param name="A_07" value="id='repite(x,n)' algoritmo='sí' expresión='txt' algoritmo='sí' Local='txt, i' inicio='i=0;txt=&squot;&squot;' hacer='txt=txt+x;txt=(i<n-1)?txt+&squot;×&squot;:txt;i=i+1' mientras='i<n'">
+   <param name="A_08" value="id='xpos' vector='sí' evaluar='una-sola-vez' tamaño='30' expresión='xpos[0]=100;xpos[1]=100;xpos[2]=100;xpos[3]=100;xpos[4]=100;xpos[5]=100;xpos[6]=100;xpos[7]=100;xpos[8]=100;xpos[9]=100;xpos[10]=100;xpos[11]=100;xpos[12]=100;xpos[13]=100;xpos[14]=100;xpos[15]=100;xpos[16]=100;xpos[17]=100;xpos[18]=100;xpos[19]=100;xpos[20]=100;xpos[21]=100;xpos[22]=100;xpos[23]=100;xpos[24]=100;'">
+   <param name="A_09" value="id='ypos' vector='sí' evaluar='una-sola-vez' tamaño='30' expresión='ypos[0]=100;ypos[1]=100;ypos[2]=100;ypos[3]=100;ypos[4]=100;ypos[5]=100;ypos[6]=100;ypos[7]=100;ypos[8]=100;ypos[9]=100;ypos[10]=100;ypos[11]=100;ypos[12]=100;ypos[13]=100;ypos[14]=100;ypos[15]=100;ypos[16]=100;ypos[17]=100;ypos[18]=100;ypos[19]=100;ypos[20]=100;ypos[21]=100;ypos[22]=100;ypos[23]=100;ypos[24]=100;'">
+   <param name="A_10" value="id='clean()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='graficados=0;xpos[0]=100;xpos[1]=100;xpos[2]=100;xpos[3]=100;xpos[4]=100;xpos[5]=100;xpos[6]=100;xpos[7]=100;xpos[8]=100;xpos[9]=100;xpos[10]=100;xpos[11]=100;xpos[12]=100;xpos[13]=100;xpos[14]=100;xpos[15]=100;xpos[16]=100;xpos[17]=100;xpos[18]=100;xpos[19]=100;xpos[20]=100;xpos[21]=100;xpos[22]=100;xpos[23]=100;xpos[24]=100;'">
+   <param name="A_11" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='graficados=0'">
+   <param name="A_12" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='aux=((E1.mouse_clicked&(E1.mouse_x>1.2)&(E1.mouse_x<10.72)&(E1.mouse_y>-1.75)&(E1.mouse_y<3.45))?plot(E1.mouse_x,E1.mouse_y):0);E1.mouse_clicked=0;'">
+   <param name="G_01" value="espacio='E1' tipo='arco' centro='(xpos[s],ypos[s])' radio='.25' fin='360' familia='s' s.intervalo='[0,29]' s.pasos='29' fijo='no' relleno='naranja' ancho='0'">
+   <param name="G_02" value="espacio='E1' tipo='texto' expresión='[60,30+s*35]' familia='s' s.intervalo='[0,9]' s.pasos='9' texto='[fila(s*10)]' fuente='Monospaced,PLAIN,18' fijo='no'">
+   <param name="G_03" value="espacio='E1' tipo='texto' dibujar-si='debug' expresión='[520,400]' texto='([X],[Y]), [yn],[xn]' fuente='Monospaced,PLAIN,18' fijo='no'">
+   <param name="G_04" value="espacio='E1' tipo='texto' dibujar-si='NUM=1' expresión='[20,400]' texto='El 1 no es primo.' fuente='SansSerif,PLAIN,18' fijo='no'">
+   <param name="G_05" value="espacio='E1' tipo='texto' color='azul' dibujar-si='(NUM>1)&(fact(NUM)=&squot;P&squot;)' expresión='[20,400]' texto='[NUM] es primo.' fuente='SansSerif,PLAIN,18' fijo='no'">
+   <param name="G_06" value="espacio='E1' tipo='texto' color='azul' dibujar-si='graficados=25' expresión='[300,400]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs36 Si pusiste solo una marca en cada n\u250 mero, quiere\par decir que encontraste todos los primos en el cuadro.}' fuente='SansSerif,PLAIN,18' fijo='no' ancho='350'">
+   <param name="G_07" value="espacio='E1' tipo='texto' dibujar-si='(NUM>1)&(fact(NUM)!=&squot;P&squot;)' expresión='[20,400]' texto='[NUM] = [fact(NUM)]' fuente='SansSerif,PLAIN,18' fijo='no'">
+   <param name="G_08" value="espacio='E1' tipo='texto' color='azul' dibujar-si='graficados<25' expresión='[370,400]' texto='Te falta marcar [25-graficados] números primos.' fuente='SansSerif,PLAIN,18' fijo='no' ancho='350'">
+</ajs></p>
+
+</body>
+</html>

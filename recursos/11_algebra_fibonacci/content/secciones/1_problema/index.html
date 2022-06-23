@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+  <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+
+</head>
+
+<body onload="initialize();">
+  
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    </p><!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Planteamiento del problema: El árbol genealógico de las abejas</h1>
+    
+    <!--- Subtítulo (no necesario en introducción) --->
+<!--    <h2>Parejas de conejos</h2>
+    
+    
+    <p>
+    Supongamos que se cuenta con una pareja inicial de conejos que se reproduce a lo largo del tiempo. Cada mes corresponde a una generación nueva de conejos, donde pueden haber parejas de conejos que vienen de generaciones previas junto con conejos recién nacidos. Lo que nos interesa es poder saber el número de parejas de conejos dado un número de generación
+    </p>
+
+    <p>
+    No obstante, tenemos que poner claro el comienzo del problema. Para ello, primero decimos que en la generación 0 (que corresponde al mes cero) se tiene una pareja inicial de conejos recién nacida. De esta forma analizaremos mes con mes (generación con generación) el número de parejas sucesivos.
+    </p>
+
+    <p>
+    También es importante tener claras las reglas de reproducción de los conejos. Ellas son:
+	Inicia una sola pareja de conejos infértiles.
+	<ul>
+		<li>Tras nacer una pareja de conejos, tarda una generación en volverse fértil (no procrearán para la siguiente generación).</li>
+		<li>Una vez fértiles, cada pareja de conejos tendrá otra pareja de conejos la siguiente generación.</li>
+		<li>Una pareja de conejos fértil siempre procreará una pareja nueva de conejos (infértil) por generación.</li>
+	</ul>
+    </p>
+
+    <p>
+    Veamos ahora cómo se comporta el árbol hasta la tercera generación, y comenzando desde la generación cero.
+    </p>
+    
+      <div class="course_extern_content"> 
+        <img src="imgs/abejas.jpg"></img>
+      </div>
+
+    <p>
+    Nota lo siguiente:
+	<ul>
+		<li>En la generación cero se tiene una pareja infértil.</li>
+		<li>En la primera generación se tiene a la misma pareja, que ya es fértil.</li>
+		<li>En la segunda generación, como la pareja ya era fértil, da una pareja infértil. Por lo mismo, en esta generación se tienen dos parejas: la que ya era fértil y una nueva infértil.</li>
+		<li>En la tercera generación, la pareja de inicio sigue ahí. La pareja que era infértil en la generación anterior aparece nuevamente en esta generación, pero ya fértil. Y hay una pareja adicional que proviene de la que, en la generación pasada, era fértil (de hecho, la pareja de inicio).</li>
+	</ul>
+    </p>
+    
+    <p class="importante">
+    ¿Se podrá calcular el número de parejas dada una generación \(n\) cualquiera? ¿Cómo sería la regla de correspondencia en cuestión? ¿Habrá alguna relación entre el número de parejas sucesivas (de una generación respecto a su anterior)?
+    </p><br>
+-->
+
+    <h2>Modelación algebraica de fenómenos</h2>
+    
+    
+    <p>
+	Para la descripción de fenómenos, muchas veces resulta útil el poder modelarlos de forma algebraica. Para ejemplificar esto, en la presente unidad abordamos un tema que es el conteo del número de abejas en una generación determinada de un árbol genealógico compuesto sólo por zánganos y reinas, y que sigue ciertas condiciones que son necesarias para establecer el conteo.
+    </p>
+
+    <p>
+	Aunque elegimos un ejemplo particular para trabajar de forma inicial, es importante que notes que cada ejemplo puede tener su modelo propio. Y para cada caso hay que analizar el comportamiento, sus reglas y, a partir de esto, pensar para poder generar el modelo.
+    </p>
+
+    <h2>Las reglas de reproducción de nuestro ejemplo de abejas</h2>
+
+    <p>
+	Como seguramente ya sabes, las abejas pueden ser hembras (reinas y obreras) y machos (zánganos). Las reinas y zánganos se encargan de la reproducción. La diferencia entre una obrera y una reina es que la obrera no contribuye a la reproducción; cuando una abeja hembra nace, se volverá reina u obrera sólo dependiendo del tipo de alimentación que recibe.
+    </p>
+    
+    <div class="course_extern_content"> 
+      <img src="imgs/abeja1.jpg"> </img>
+    </div>
+
+    <p>
+	El modelo que analizaremos es una simplificación de la realidad en el sentido de que sólo consideraremos las abejas que contribuyen a la reproducción (reina y zángano), y descartaremos a las obreras. Así pues, aunque una reina podría tener obreras en su descendencia, no las estudiaremos.
+	A pesar de eliminar a las obreras, los árboles genealógicos que formarán el objeto de nuestro análisis son una representación de la realidad para las abejas reinas y zánganos.
+    </p>
+
+    <p>
+    Es necesario tener claras las reglas que nos permiten saber cómo se construye el árbol genealógico de las abejas. Primero que nada, es importante aclarar que contaremos las generaciones hacia arriba, es decir, la generación cero es la última, la actual; la que se encuentra inmediatamente arriba de ésta (la generación 1) es la anterior, de la cual provino la generación cero, y así sucesivamente.
+    Las generaciones que se consideran en nuestro análisis inicial son aquellas que dan origen a un zángano (generación 0).
+    A continuación se indican las reglas de reproducción de las abejas.
+    </p>
+
+    <div class='importante' style='margin-left:10%;margin-right:10%;'>
+    <strong>Reglas de reproducción</strong>
+    <br>
+	<ol>
+		<li>Sólo las reinas podrán tener descendencia sin ser fecundadas.</li>
+		<li>Las reinas provienen de otra reina fecundada por un zángano.</li>
+		<li>Los zánganos provienen de una reina sin necesidad de fecundación.</li>
+	</ol>
+    </div>
+
+    <p>
+    <em><strong>Nota:</strong> En las imágenes que se usarán a lo largo de la unidad, las abejas reina siempre tienen una corona, mientras que los zánganos no.</em>
+    </p>
+    
+    <div class="course_extern_content"> 
+      <img src="imgs/abejas.png"> </img>
+    </div>
+
+    <p>
+    Nota lo siguiente:
+	<ul>
+		<li>En la <strong>generación cero</strong>, se tiene el zángano a partir del cual se construye el árbol. Eso significa que hay <strong>una sola abeja</strong> en esta generación.</li>
+		<br>
+		<li>En la <strong>primera generación</strong>, se tiene de quién provino el zángano. Por la regla, es una reina sola sin fecundar, por lo que también hay <strong>una sola abeja</strong> en esta generación.</li>
+		<br>
+		<li>En la <strong>segunda generación</strong>, están las abejas de las que provino la reina anteriormente mencionada. Por la regla, viene de una reina fecundada por un zángano, entonces hay <strong>dos abejas</strong> en esta generación.</li>
+		<br>
+		<li>En la <strong>tercera generación</strong>, se tiene por un lado de quién provino el zángano de la segunda generación y la reina de la segunda generación. El zángano, por la regla, tuvo que venir de una reina sola. La reina, por la regla, tuvo que venir de un zángano y una reina. Por lo mismo, hay <strong>tres abejas</strong> en esta generación.</li>
+	</ul>
+    </p>
+
+    <p>A partir de estos datos, surgen las siguientes preguntas.</p>
+
+    <div class='importante' style='margin-left:10%;margin-right:10%;'>
+    <strong>Preguntas</strong>
+    <ul>
+      <li>
+	¿Se puede calcular el número de abejas (zánganos y reinas) para una generación \(n\) cualquiera?
+      </li>
+      <br>
+      <li>
+      ¿Cómo será la regla de correspondencia en cuestión?
+      <br><br>
+      <span style='font-size:15px;'>Por <em>regla de correspondencia</em> nos referimos a una regla que relacione el índice de la generación (\(n\)) con el número de abejas que aparecerán en esa generación.</span>
+      </li>
+      <br>
+      <li>
+    ¿Habrá alguna relación entre el número de abejas sucesivas (de una generación determinada respecto a sus anteriores)?
+    </li>
+    </ul>
+    </div>
+
+    <p>
+	Seguro ya notaste que, si cuentas con el número y tipo de abejas que forman una generación, es posible calcular el número de abejas en la generación anterior (de la que vienen).
+	Pero tal vez haya una forma de calcular el número de abejas en esta generación anterior considerando los números en generaciones posteriores <em>sin importar cuántas abejas de qué tipo (reina o zángano) las componen</em>.
+    </p>
+
+    <p class='problema'>
+      <strong>Problema</strong>
+      <br><br>
+		En resumen, se busca obtener, para una generación \(n\), el número de abejas en el árbol genealógico de éstas usando los números de generaciones siguientes.
+        <br>
+    </p>
+
+  <h2>Recursividad</h2>
+
+    <p>
+	Hablar de <em> generaciones siguientes</em> implica un concepto que se conoce como <strong>recursividad</strong>. Cuando algo es recursivo, quiere decir que su proceso (en nuestro ejemplo, el cálculo de abejas de una generación dada) se puede describir a partir de su propia definición. En este ejemplo, la definición de nuestro caso la dan las reglas mencionadas anteriormente. Y lo que buscamos es precisamente una fórmula para calcular el número de abejas de una generación determinada (es decir, el proceso mismo).
+    </p>
+
+    <p>
+	En el caso de las abejas, se trata de ver si hay alguna relación entre el número de abejas en la generación \(n\) y el número de abejas en generaciones siguientes, por ejemplo, la generación siguiente (\(n-1\)) y la generación (\(n-2\)), que corresponde a dos generaciones adelante.
+    </p>
+
+    <p>
+	Adicionalmente, en procesos recursivos a menudo se encuentran patrones entre generaciones sucesivas. En el caso específico de las abejas, es interesante preguntarse si el cociente del números de abejas de generaciones sucesivas sigue algún comportamiento.
+    </p>
+
+    <p class='problema'>
+      <strong>Problema</strong>
+      <br><br>
+		Se desea determinar si hay algún patrón en la razón del número de abejas de una generación \(n\) al número de abejas en la generación siguiente (\(n-1\)). En particular, se busca si hay algún patrón en dicho cociente conforme se consideran valores más y más grandes de \(n\).
+        <br>
+    </p>
+    
+    <br>
+    <p/>
+    
+
+    <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+    
+    
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+    
+
+  </div>
+  
+</article>
+
+
+
+
+</body>
+
+</html>

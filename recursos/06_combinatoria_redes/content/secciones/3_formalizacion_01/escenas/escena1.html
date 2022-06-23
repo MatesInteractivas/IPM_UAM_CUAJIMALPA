@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>TITULO</title>
+
+        <link rel="stylesheet" type="text/css" href="css/descartes.css">	
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body style="margin:0px;padding:0px;overflow:hidden;">
+
+<p align="center">
+<ajs name="Descartes" width=750 height=500 code="Descartes">
+   <param name="tamaño" value="750x500">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.3.12, 2014-07-09">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' O.x='-150' O.y='40' imagen='images/fondo.png' despl_imagen='arr-izq' fondo='f3f0ec' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='p' tipo='numérico' región='interior' espacio='E1' nombre='_nada_' expresión='(715,10,25,50)' incr='1' min='0' max='9' fijo='no' visible='no' dibujar-si='c=0'">
+   <param name="C_02" value="id='A1' tipo='gráfico' espacio='E1' color-int='000091' tamaño='8' expresión='(r,0)' fijo='sí' dibujar-si='c=0'">
+   <param name="C_03" value="id='B1' tipo='gráfico' espacio='E1' color-int='000091' tamaño='8' expresión='(cos(4*pi/5)*r,sen(4*pi/5)*r)' fijo='sí' dibujar-si='c=0'">
+   <param name="C_04" value="id='C1' tipo='gráfico' espacio='E1' color-int='000091' tamaño='8' expresión='(cos(8*pi/5)*r,sen(8*pi/5)*r)' fijo='sí' dibujar-si='c=0'">
+   <param name="C_05" value="id='D1' tipo='gráfico' espacio='E1' color-int='000091' tamaño='8' expresión='(cos(2*pi/5)*r,sen(2*pi/5)*r)' fijo='sí' dibujar-si='c=0'">
+   <param name="C_06" value="id='E1' tipo='gráfico' espacio='E1' color-int='000091' tamaño='8' expresión='(cos(6*pi/5)*r,sen(6*pi/5)*r)' fijo='sí' dibujar-si='c=0'">
+   <param name="C_07" value="id='A2' tipo='gráfico' espacio='E1' color-int='000091' tamaño='8' expresión='(3*r,2)' fijo='sí' dibujar-si='c=0'">
+   <param name="C_08" value="id='B2' tipo='gráfico' espacio='E1' color-int='000091' tamaño='8' expresión='(2*r+cos(4*pi/5)*r,sen(4*pi/5)*r+2)' fijo='sí' dibujar-si='c=0'">
+   <param name="C_09" value="id='C2' tipo='gráfico' espacio='E1' color-int='000091' tamaño='8' expresión='(2*r+cos(8*pi/5)*r,sen(8*pi/5)*r+2)' fijo='sí' dibujar-si='c=0'">
+   <param name="C_10" value="id='D2' tipo='gráfico' espacio='E1' color-int='000091' tamaño='8' expresión='(2*r+cos(2*pi/5)*r,sen(2*pi/5)*r+2)' fijo='sí' dibujar-si='c=0'">
+   <param name="C_11" value="id='E2' tipo='gráfico' espacio='E1' color-int='000091' tamaño='8' expresión='(2*r+cos(6*pi/5)*r,sen(6*pi/5)*r+2)' fijo='sí' dibujar-si='c=0'">
+   <param name="C_12" value="id='cont' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Continuar' expresión='(330,450,90,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' negrita='sí' fuente puntos='16' imagen='images/btn90x30.png' acción='calcular' parámetro='c=1\np=0' dibujar-si='p=9'">
+   <param name="C_13" value="id='r1' tipo='numérico' interfaz='menú' región='interior' espacio='E1' nombre='_nada_' expresión='(363,123,40,40)' fijo='no' visible='no' opciones='&squot;&squot;,1,2,3,4,5,6' dibujar-si='c=1'">
+   <param name="C_14" value="id='r2' tipo='numérico' interfaz='menú' región='interior' espacio='E1' nombre='_nada_' expresión='(373,207,55,40)' fijo='no' visible='no' opciones='&squot;&squot;,101,100,99,98' dibujar-si='c=1'">
+   <param name="C_15" value="id='r3' tipo='numérico' interfaz='menú' región='interior' espacio='E1' nombre='_nada_' expresión='(363,292,55,40)' fijo='no' visible='no' opciones='&squot;&squot;,n+1,n-1,n' dibujar-si='c=1'">
+   <param name="C_16" value="id='turnar' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Regresar' expresión='(330,450,90,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' negrita='sí' fuente puntos='16' imagen='images/btn90x30.png' acción='calcular' parámetro='c=0\np=0' dibujar-si='c=1'">
+   <param name="A_01" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='r=3'">
+   <param name="A_02" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="G_01" value="espacio='E1' tipo='punto' color='8c0000' dibujar-si='c=0' expresión='(A1.x+.3,A1.y-.3)' texto='1' fuente='SansSerif,BOLD,18' fijo='no' tamaño='0'">
+   <param name="G_02" value="espacio='E1' tipo='punto' color='8c0000' dibujar-si='c=0' expresión='(B1.x+.3,B1.y-.3)' texto='2' fuente='SansSerif,BOLD,18' fijo='no' tamaño='0'">
+   <param name="G_03" value="espacio='E1' tipo='punto' color='8c0000' dibujar-si='c=0' expresión='(C1.x+.3,C1.y-.3)' texto='3' fuente='SansSerif,BOLD,18' fijo='no' tamaño='0'">
+   <param name="G_04" value="espacio='E1' tipo='punto' color='8c0000' dibujar-si='c=0' expresión='(D1.x+.3,D1.y-.3)' texto='4' fuente='SansSerif,BOLD,18' fijo='no' tamaño='0'">
+   <param name="G_05" value="espacio='E1' tipo='punto' color='8c0000' dibujar-si='c=0' expresión='(E1.x+.3,E1.y-.3)' texto='5' fuente='SansSerif,BOLD,18' fijo='no' tamaño='0'">
+   <param name="G_06" value="espacio='E1' tipo='punto' color='8c0000' dibujar-si='c=0' expresión='(A2.x+.3,A2.y-.3)' texto='6' fuente='SansSerif,BOLD,18' fijo='no' tamaño='0'">
+   <param name="G_07" value="espacio='E1' tipo='punto' color='8c0000' dibujar-si='c=0' expresión='(B2.x+.3,B2.y-.3)' texto='7' fuente='SansSerif,BOLD,18' fijo='no' tamaño='0'">
+   <param name="G_08" value="espacio='E1' tipo='punto' color='8c0000' dibujar-si='c=0' expresión='(C2.x+.3,C2.y-.3)' texto='8' fuente='SansSerif,BOLD,18' fijo='no' tamaño='0'">
+   <param name="G_09" value="espacio='E1' tipo='punto' color='8c0000' dibujar-si='c=0' expresión='(D2.x+.3,D2.y-.3)' texto='9' fuente='SansSerif,BOLD,18' fijo='no' tamaño='0'">
+   <param name="G_10" value="espacio='E1' tipo='punto' color='8c0000' dibujar-si='c=0' expresión='(E2.x+.3,E2.y-.3)' texto='10' fuente='SansSerif,BOLD,18' fijo='no' tamaño='0'">
+   <param name="G_11" value="espacio='E1' tipo='segmento' color='ff8200' dibujar-si='p>0' expresión='(A1.x,A1.y)(B1.x,B1.y)' fijo='sí' ancho='5'">
+   <param name="G_12" value="espacio='E1' tipo='segmento' color='ff8200' dibujar-si='p>1' expresión='(B1.x,B1.y)(C1.x,C1.y)' fijo='sí' ancho='5'">
+   <param name="G_13" value="espacio='E1' tipo='segmento' color='ff8200' dibujar-si='p>2' expresión='(C1.x,C1.y)(D1.x,D1.y)' fijo='sí' ancho='5'">
+   <param name="G_14" value="espacio='E1' tipo='segmento' color='ff8200' dibujar-si='p>3' expresión='(D1.x,D1.y)(E1.x,E1.y)' fijo='sí' ancho='5'">
+   <param name="G_15" value="espacio='E1' tipo='segmento' color='ff8200' dibujar-si='p>4' expresión='(E1.x,E1.y)(A2.x,A2.y)' fijo='sí' ancho='5'">
+   <param name="G_16" value="espacio='E1' tipo='segmento' color='ff8200' dibujar-si='p>5' expresión='(A2.x,A2.y)(B2.x,B2.y)' fijo='sí' ancho='5'">
+   <param name="G_17" value="espacio='E1' tipo='segmento' color='ff8200' dibujar-si='p>6' expresión='(B2.x,B2.y)(C2.x,C2.y)' fijo='sí' ancho='5'">
+   <param name="G_18" value="espacio='E1' tipo='segmento' color='ff8200' dibujar-si='p>7' expresión='(C2.x,C2.y)(D2.x,D2.y)' fijo='sí' ancho='5'">
+   <param name="G_19" value="espacio='E1' tipo='segmento' color='ff8200' dibujar-si='p>8' expresión='(D2.x,D2.y)(E2.x,E2.y)' fijo='sí' ancho='5'">
+   <param name="G_20" value="espacio='E1' tipo='texto' dibujar-si='c=1' expresión='[50,50]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;\f3\fcharset0 Times New Roman;}\f1\fs36 Entonces, \par \par \par \par Para conectar  \f2\fs40\i{\*\mjaformula 3}\f1\fs36\i0   puntos basta con              enlaces.\par \par \par \par Para conectar \f2\fs40\i{\*\mjaformula 100}\f1\fs36\i0   puntos basta con                enlaces.\par \par \par \par Para conectar  \f2\fs40\i{\*\mjaformula n}\f1\fs36\i0   puntos basta con                  enlaces.\f3\fs36\par \par \par }' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_21" value="espacio='E1' tipo='imagen' dibujar-si='(c=1)&(r1=2)' coord_abs='sí' expresión='(480,130)' archivo='images/bien.png'">
+   <param name="G_22" value="espacio='E1' tipo='imagen' dibujar-si='(c=1)&(r1!=2)&(r1!=0)' coord_abs='sí' expresión='(480,130)' archivo='images/mal.png'">
+   <param name="G_23" value="espacio='E1' tipo='imagen' dibujar-si='(c=1)&(r2=3)' coord_abs='sí' expresión='(505,215)' archivo='images/bien.png'">
+   <param name="G_24" value="espacio='E1' tipo='imagen' dibujar-si='(c=1)&(r2!=3)&(r2!=0)' coord_abs='sí' expresión='(505,215)' archivo='images/mal.png'">
+   <param name="G_25" value="espacio='E1' tipo='imagen' dibujar-si='(c=1)&(r3=2)' coord_abs='sí' expresión='(500,300)' archivo='images/bien.png'">
+   <param name="G_26" value="espacio='E1' tipo='imagen' dibujar-si='(c=1)&(r3!=2)&(r3!=0)' coord_abs='sí' expresión='(500,300)' archivo='images/mal.png'">
+</ajs></p>
+
+</body>
+</html>

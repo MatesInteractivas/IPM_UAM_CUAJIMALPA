@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+  <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+
+</head>
+
+<body onLoad="initialize();">
+  
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    </p><!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Planteamiento del problema: Negocios en pirámide</h1>
+    
+    <!--- Subtítulo (no necesario en introducción) --->
+    <h2>Las pirámides comerciales</h2>
+
+    <p>
+      El tipo de 'negocio' descrito anteriormente es conocido como
+      'negocio en pirámide' o 'pirámides comerciales', ya que el
+      'negocio' es iniciado por pocas personas y al ir reclutando más
+      gente se forman niveles con un número cada vez mayor de
+      personas. Quienes lo inician reclutan una cierta cantidad de
+      'socios', por ejemplo 2, aunque pueden ser más. Cada una de
+      ellos recluta de nuevo a la misma cantidad de personas y el
+      proceso se repite cuantas veces se pueda.
+      Como pudiste ver en el espacio interactivo de la página
+      anterior, los niveles subsiguientes se componen de un número
+      mayor de personas que los anteriores, lo que le da un aspecto de
+      pirámide.
+    </p>
+
+    <p>
+      Seguramente estás pensando que debe haber algún tipo de trampa
+      en todo esto...
+    </p>
+    <p class='importante' style='margin-left:15%;margin-right:15%;'>
+      De hecho este esquema actualmente es considerado
+      un fraude en términos legales estrictos. Pero ¿por qué? ¿En dónde
+      está el fraude? O más bien, ¿quiénes son defraudados?
+    </p>
+
+    <p>
+      Para aclarar este punto vamos a realizar el ejercicio de suponer
+      que entras en el 'negocio' que te proponen y veamos cómo es que
+      avanza. En particular, pensemos en los 'socios' que son la base
+      de la pirámide cuando tú eres la punta y recibes más de
+      \(\$800,000.00\) de ellos. ¿Cómo le hacen tus 'socios
+      recompensadores' para ser punta de la pirámide y recibir
+      esta misma cantidad? Dicho de otra forma:
+    </p>
+    
+    <p class='problema'>
+      <strong>Pregunta</strong>
+      <br><br>
+      ¿Qué tiene que pasar para que las personas que
+      entran cuando tú eres punta de la pirámide se vuelvan punta de
+      una pirámide cada uno de ellos?
+    </p>
+    
+    <br>
+    <p>
+      Comenzando con el ejercicio, digamos que entramos en el nivel
+      \(6\) de la pirámide, esto quiere decir que hay
+    </p>
+
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="320" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+
+    <p>
+      \[2\times2\times2\times2\times2\times2=2^6=64\]
+      'socios' en nuestro nivel. 
+    </p>
+
+    <p>
+      Si todo marcha bien, cada uno de estos \(64\) 'socios' será,
+      junto contigo, la punta de una pirámide que en la base tiene a
+      \(1024\) 'socios recompensadores' recién ingresados. En este punto hay
+      \(1024\times64\simeq64,000\) personas que esperan recibir un
+      poco más de \(\$800,000.00\) (el símbolo \(\simeq\) se lee 'aproximadamente'). 
+    </p>
+
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="480" frameborder="0" src="escenas/escena2.html"> </iframe>
+    </div>
+
+    <p>
+      A su vez, cada uno de estos \(64,000\)
+      'socios recompensadores' será la punta de una pirámide que en la base tiene a
+      \(1024\) 'socios recompensadores de socios recompensadores' recién ingresados. En este punto hay
+      \(1024\times1024\times64\simeq64,000,000\) personas recien
+      ingresadas y que además esperan recibir un poco más de
+      \(\$800,000.00\).
+    </p>
+
+    <p>
+      Si calculamos el número de personas que hacen falta para pagar a
+      los más de \(64,000,000\) nuevos 'socios' llegaremos a más de
+      \(64,000,000,000\) de personas.
+    </p>
+
+    <p class='importante' style='margin-left:15%;margin-right:15%;'>
+      El número anterior son sesenta y
+      cuatro mil millones de personas y equivale a varias veces la
+      poblacion entera del mundo. Y apenas hemos bajado \(36\) niveles
+      en la pirámide inicial.
+    </p>
+
+    <div class='problema'>
+      <strong>Preguntas</strong>
+      <ol>
+      <li>
+      ¿Por qué crees que hemos usado cantidades aproximadas en los cálculos de arriba?
+      </li>
+      <br>
+      <li>
+      ¿A qué piensas que se deba que el crecimiento de los números de 'socios'
+      en los niveles de una pirámide sea tan rápido?
+      </li>
+      <br>
+      <li>
+      ¿Puedes explicar por qué este modelo de 'negocio' es un fraude y quiénes son los defraudados?
+      </li>
+      </ol>
+    </div>
+
+    <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+    
+    
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onClick="showCredits()">Condiciones de uso</a>
+    </div>  
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+    
+
+  </div>
+  
+</article>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>TITULO</title>	
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body style="margin:0px;padding:0px;overflow:hidden;">
+
+<p align="center">
+<ajs name="Descartes" width=760 height=480 code="Descartes">
+   <param name="tamaño" value="760x480">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.3.12, 2014-07-09">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' escala='1' O.x='-300' O.y='70' imagen='images/fondo.jpg' despl_imagen='expand.' fondo='grisClaro' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='A' tipo='gráfico' espacio='E1' color='ffffffff' color-int='cc000000' tamaño='24' expresión='(150,150)' dibujar-si='(t=0)&(paso=0)' activo-si='t=0'">
+   <param name="C_02" value="id='sig' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Cortar' expresión='(520,430,90,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn90x30.png' acción='animar' dibujar-si='(t=0)|(t=110)' pos_mensajes='centro'">
+   <param name="C_03" value="id='reinit' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Reiniciar' expresión='(650,430,90,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn90x30.png' acción='calcular' parámetro='t=0\npaso=0' dibujar-si='t=110' pos_mensajes='centro'">
+   <param name="C_04" value="id='campoh' tipo='numérico' interfaz='campo de texto' región='interior' espacio='E1' expresión='(100,360,45,34)' valor='6' incr='0.01' min='.4' max='25' fijo='sí' visible='sí' acción='calcular' parámetro='A.x=campoh*25' dibujar-si='(t=0)&(paso=0)' pos_mensajes='centro'">
+   <param name="C_05" value="id='campow' tipo='numérico' interfaz='campo de texto' región='interior' espacio='E1' expresión='(100,410,45,34)' valor='6' incr='0.01' min='.4' max='25' fijo='sí' visible='sí' acción='calcular' parámetro='A.y=campow*25' dibujar-si='(t=0)&(paso=0)' pos_mensajes='centro'">
+   <param name="A_01" value="id='calculos()' algoritmo='sí' algoritmo='sí' hacer='minx=10;maxx=250;miny=10;maxy=250;A.x=min(max(A.x,minx),maxx);A.y=max(min(max(A.y,miny),maxy),A.x);campoh=A.x/25;campow=A.y/25;;'">
+   <param name="A_02" value="id='calrect()' algoritmo='sí' algoritmo='sí' hacer='razo1=(paso=0)?A.x/A.y:razo1;razo2=(paso=0)?(A.y/2)/A.x:razo2;B1.x=A.x;B1.y=0;B2.x=A.x;B2.y=A.y/2;hip2=sqrt((A.x)^2+(A.y/2)^2);ang2=atan((A.y/2)/A.x);B3.x=0;B3.y=A.y/2;B4.x=0;B4.y=0'">
+   <param name="A_03" value="id='trasp()' algoritmo='sí' algoritmo='sí' hacer='trasp=(t-16)/48'">
+   <param name="A_04" value="id='rotar()' algoritmo='sí' algoritmo='sí' hacer='B2.x=A.x+((A.y/2)*(cos((90-4.5*(t-40))*pi/180)));B2.y=((A.y/2)*(sin((90-4.5*(t-40))*pi/180)));B3.x=A.x+hip2*cos((pi-ang2)-(4.5*(t-40)*pi/180));B3.y=hip2*sin((pi-ang2)-(4.5*(t-40)*pi/180));B4.x=A.x+A.x*cos(pi-(4.5*(t-40)*pi/180));B4.y=A.x*sin(pi-(4.5*(t-40)*pi/180))'">
+   <param name="A_05" value="id='traslada()' algoritmo='sí' algoritmo='sí' hacer='B1.x=B1.x-(A.x/20);B2.x=B2.x-(A.x/20);B3.x=B3.x-(A.x/20);B4.x=B4.x-(A.x/20)'">
+   <param name="A_06" value="id='trasp2()' algoritmo='sí' algoritmo='sí' hacer='trasp=.5+((t-70)/40)'">
+   <param name="A_07" value="id='recalc()' algoritmo='sí' algoritmo='sí' hacer='A.x=B3.x-B4.x;A.y=B4.y;paso=paso+1'">
+   <param name="A_08" value="id='frazon()' algoritmo='sí' algoritmo='sí' hacer='razo=(paso%2=0)?razo1:razo;razo=(paso%2=1)?razo2:razo'">
+   <param name="A_09" value="id='ladx' vector='sí' evaluar='una-sola-vez' tamaño='50'">
+   <param name="A_10" value="id='lady' vector='sí' evaluar='una-sola-vez' tamaño='50'">
+   <param name="A_11" value="id='calcseg()' algoritmo='sí' algoritmo='sí' Local='i' inicio='i=0' hacer='ladx[i]=(i%2=0)?(A.x/25)/(2^(ent(i/2))):0;ladx[i]=(i%2=1)?(A.y/25)/(2^(ent((i+1)/2))):ladx[i];lady[i]=(i%2=0)?(A.y/25)/(2^(ent(i/2))):0;lady[i]=(i%2=1)?(A.x/25)/(2^(ent(i/2))):lady[i];i=i+1' mientras='i<25'">
+   <param name="A_12" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez'">
+   <param name="A_13" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='temp2=(paso=0)?calculos():0'">
+   <param name="G_01" value="espacio='E1' tipo='imagen' coord_abs='sí' expresión='(500,100)' archivo='images/fondito.jpg'">
+   <param name="G_02" value="espacio='E1' tipo='punto' dibujar-si='paso=0' expresión='(A.x/2.5,A.y+15)' texto='[A.x/25]' fuente='SansSerif,PLAIN,18' fijo='sí' tamaño='0'">
+   <param name="G_03" value="espacio='E1' tipo='punto' dibujar-si='paso=0' expresión='(-60,(A.y/2))' texto='[A.y/25]' fuente='SansSerif,PLAIN,18' fijo='sí' tamaño='0'">
+   <param name="G_04" value="espacio='E1' tipo='punto' dibujar-si='(paso>0)&(t>99)' expresión='(A.x/2.5,A.y+15)' texto='[ladx[paso]]' fuente='SansSerif,PLAIN,18' fijo='sí' tamaño='0'">
+   <param name="G_05" value="espacio='E1' tipo='punto' dibujar-si='(paso>0)&(t>99)' expresión='(-60,(B3.y/2))' texto='[lady[paso]]' fuente='SansSerif,PLAIN,18' fijo='sí' tamaño='0'">
+   <param name="G_06" value="espacio='E1' tipo='polígono' color='grisClaro' dibujar-si='t<20' expresión='(A.x,A.y)(0,A.y)(0,0)(A.x,0)(A.x,A.y)' relleno='blanco' ancho='2' info='orilla del rectángulo'">
+   <param name="G_07" value="espacio='E1' tipo='polígono' color='(c0,c0,c0,trasp)' dibujar-si='(t>15)' expresión='(A.x,A.y)(0,A.y)(0,0)(A.x,0)(A.x,A.y)' relleno='(ff,ff,ff,trasp)' ancho='2' info='orilla del rectángulo'">
+   <param name="G_08" value="espacio='E1' tipo='segmento' dibujar-si='(s%2=0)&(t<40)&(t>s)' expresión='(A.x/11*s,A.y/2)(A.x/11*(s+1),A.y/2)' familia='s' s.intervalo='[0,10]' s.pasos='10' fijo='sí' tamaño='0'">
+   <param name="G_09" value="espacio='E1' tipo='polígono' color='grisClaro' dibujar-si='(t>19)' expresión='(B1.x,B1.y)(B2.x,B2.y)(B3.x,B3.y)(B4.x,B4.y)(B1.x,B1.y)' relleno='blanco' ancho='2' info='orilla del rectángulo'">
+   <param name="G_10" value="espacio='E1' tipo='texto' expresión='[470,120]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs38            Raz\u243 n:\par \par             {\*\mjaformula{\fraction{\num{\expr A.x/25\decimals 2\fixed1}}{\den{\expr A.y/25\decimals 2\fixed1}}}}\par \par             {\*\mjaformula{\expr A.x/25\decimals 2\fixed1}}: {\*\mjaformula{\expr A.y/25\decimals 2\fixed1}}\par \par             {\*\mjaformula{\expr A.x/A.y\decimals 2\fixed1}} \par \f2\fs30}' fuente='SansSerif,PLAIN,19' decimales='0' fijo='sí'">
+   <param name="G_11" value="espacio='E1' tipo='punto' dibujar-si='(t=0)&(paso=0)' coord_abs='sí' expresión='(30,390)' texto='Ancho\n\nAlto' fuente='SansSerif,PLAIN,18' fijo='sí' tamaño='0'">
+   <param name="G_12" value="espacio='E1' tipo='texto' dibujar-si='0' expresión='[20,20]' texto='t=[t]\nA.x=[A.x]\nA.y=[A.y]\npaso=[paso]\nRazon1=[razo1]\nRazon2=[razo2]\nentro=[entro]\nE1_w=[E1._w]\na=[a]' fijo='sí'">
+   <param name="G_13" value="espacio='E1' tipo='texto' dibujar-si='debug' expresión='[220,20+15*s]' familia='s' s.intervalo='[0,25]' s.pasos='25' texto='[ladx[s]],[lady[s]]\n' fijo='sí'">
+   <param name="G_14" value="espacio='E1' tipo='punto' dibujar-si='0' expresión='(B4.x,B4.y)' fijo='sí'">
+   <param name="G_15" value="espacio='E1' tipo='punto' dibujar-si='0' expresión='(A.x,A.y)' fijo='sí'">
+   <param name="Animación" value="pausa='100' controles='no' auto='no' inicio='t=0' hacer='t=t+1;temp=((t=1)&(paso=0))?calcseg():0;temp=((t>14)&(t<16))?calrect():0;temp=((t>15)&(t<41))?trasp():0;temp=((t>40)&(t<61))?rotar():0;temp=((t>70)&(t<91))?traslada():0;temp=((t>80)&(t<101))?trasp2():0;temp=((t>99)&(t<111))?frazon():0;temp=(t=100)?recalc():0' mientras='t<110'">
+</ajs></p>
+
+</body>
+</html>

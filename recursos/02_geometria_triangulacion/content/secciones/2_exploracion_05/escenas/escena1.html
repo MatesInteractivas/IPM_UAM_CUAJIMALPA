@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>TITULO</title>	
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body style="margin:0px;padding:0px;overflow:hidden;">
+
+<p align="center">
+<ajs name="Descartes" width=760 height=480 code="Descartes">
+   <param name="tamaño" value="760x480">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.3.12, 2014-07-09">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' escala='25' imagen='images/fondo.jpg' despl_imagen='expand.' fondo='grisClaro' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='P1' tipo='gráfico' espacio='E1' tamaño='6' expresión='(P1.x,P1.y)' activo-si='t=0'">
+   <param name="C_02" value="id='P1.x' tipo='numérico' región='escenario' espacio='E1' nombre='P1.x' expresión='(0,0,0,0)' valor='2' min='-15' max='15' fijo='sí' visible='sí' pos_mensajes='centro'">
+   <param name="C_03" value="id='P1.y' tipo='numérico' región='escenario' espacio='E1' nombre='P1.y' expresión='(0,0,0,0)' valor='6' min='-5' max='9' fijo='sí' visible='sí' pos_mensajes='centro'">
+   <param name="C_04" value="id='P2' tipo='gráfico' espacio='E1' tamaño='6' expresión='(P2.x,P2.y)' fijo='sí' activo-si='t=0'">
+   <param name="C_05" value="id='P2.x' tipo='numérico' región='escenario' espacio='E1' nombre='P2.x' expresión='(0,0,0,0)' valor='-5' min='-15' max='15' fijo='sí' visible='sí' pos_mensajes='centro'">
+   <param name="C_06" value="id='P2.y' tipo='numérico' región='escenario' espacio='E1' nombre='P2.y' expresión='(0,0,0,0)' valor='5' min='-5' max='9' fijo='sí' visible='sí' pos_mensajes='centro'">
+   <param name="C_07" value="id='P3' tipo='gráfico' espacio='E1' tamaño='6' expresión='(P3.x,P3.y)' fijo='sí' activo-si='t=0'">
+   <param name="C_08" value="id='P3.x' tipo='numérico' región='escenario' espacio='E1' nombre='P3.x' expresión='(0,0,0,0)' valor='5' min='-15' max='15' fijo='sí' visible='sí' pos_mensajes='centro'">
+   <param name="C_09" value="id='P3.y' tipo='numérico' región='escenario' espacio='E1' nombre='P3.y' expresión='(0,0,0,0)' valor='-2' min='-5' max='9' fijo='sí' visible='sí' pos_mensajes='centro'">
+   <param name="C_10" value="id='sig' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Siguiente' expresión='(650,430,90,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn90x30.png' acción='calcular' parámetro='paso=paso+1' dibujar-si='paso<9'">
+   <param name="C_11" value="id='ant' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Anterior' expresión='(550,430,90,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn90x30.png' acción='calcular' parámetro='paso=paso-1' dibujar-si='paso>0' pos_mensajes='centro'">
+   <param name="C_12" value="id='reinit' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='Reiniciar' expresión='(650,430,90,30)' fijo='sí' visible='sí' color='blanco' color-int='blanco' fuente puntos='16' imagen='images/btn90x30.png' acción='calcular' parámetro='paso=0' dibujar-si='paso=9' pos_mensajes='centro'">
+   <param name="A_01" value="id='init()' algoritmo='sí' algoritmo='sí' hacer='calculos()'">
+   <param name="A_02" value="id='calculos()' algoritmo='sí' algoritmo='sí' hacer='paso=0;'">
+   <param name="A_03" value="id='CalDis()' algoritmo='sí' algoritmo='sí' hacer='Pm1.x=(P1.x+P2.x)/2;Pm1.y=(P1.y+P2.y)/2;Pm2.x=(P2.x+P3.x)/2;Pm2.y=(P2.y+P3.y)/2;Pm3.x=(P3.x+P1.x)/2;Pm3.y=(P3.y+P1.y)/2;m1=-((P2.x-P1.x)/(P2.y-P1.y));b1=Pm1.y-(Pm1.x*m1);m2=-((P3.x-P2.x)/(P3.y-P2.y));b2=Pm2.y-(Pm2.x*m2);m3=-((P1.x-P3.x)/(P1.y-P3.y));b3=Pm3.y-(Pm3.x*m3);C1.x=(b2-b1)/(m1-m2);C1.y=(m1*C1.x)+b1;C2.x=(b3-b2)/(m2-m3);C2.y=(m2*C2.x)+b2;C3.x=(b1-b3)/(m3-m1);C3.y=(m3*C3.x)+b3;r=sqrt((P1.x-C1.x)^2+(P1.y-C1.y)^2)'">
+   <param name="A_04" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='init()'">
+   <param name="A_05" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='CalDis()'">
+   <param name="G_01" value="espacio='E1' tipo='punto' expresión='(P1.x,P1.y)' texto='P1' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_02" value="espacio='E1' tipo='punto' expresión='(P2.x,P2.y)' texto='P2' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_03" value="espacio='E1' tipo='punto' expresión='(P3.x,P3.y)' texto='P3' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_04" value="espacio='E1' tipo='polígono' color='6d808080' dibujar-si='(paso>0)&(paso<8)' expresión='(P1.x,P1.y)(P2.x,P2.y)(P3.x,P3.y)(P1.x,P1.y)' ancho='3'">
+   <param name="G_05" value="espacio='E1' tipo='punto' dibujar-si='(paso>1)&(paso<8)' expresión='(Pm1.x,Pm1.y)' fijo='sí'">
+   <param name="G_06" value="espacio='E1' tipo='punto' dibujar-si='(paso>1)&(paso<8)' expresión='(Pm2.x,Pm2.y)' fijo='sí'">
+   <param name="G_07" value="espacio='E1' tipo='punto' dibujar-si='(paso>1)&(paso<8)' expresión='(Pm3.x,Pm3.y)' fijo='sí'">
+   <param name="G_08" value="espacio='E1' tipo='ecuación' dibujar-si='(P1.y#P2.y)&(paso>2)&(paso<8)' expresión='y=m1*x+b1'">
+   <param name="G_09" value="espacio='E1' tipo='ecuación' dibujar-si='(P1.y=P2.y)&(paso>2)&(paso<8)' expresión='x=Pm1.x'">
+   <param name="G_10" value="espacio='E1' tipo='ecuación' dibujar-si='(P2.y#P3.y)&(paso>2)&(paso<8)' expresión='y=m2*x+b2'">
+   <param name="G_11" value="espacio='E1' tipo='ecuación' dibujar-si='(P2.y=P3.y)&(paso>2)&(paso<8)' expresión='x=Pm2.x'">
+   <param name="G_12" value="espacio='E1' tipo='ecuación' dibujar-si='(P3.y#P1.y)&(paso>2)&(paso<8)' expresión='y=m3*x+b3'">
+   <param name="G_13" value="espacio='E1' tipo='ecuación' dibujar-si='(P3.y=P1.y)&(paso>2)&(paso<8)' expresión='x=Pm3.x'">
+   <param name="G_14" value="espacio='E1' tipo='punto' color='a60000ff' dibujar-si='(paso>3)' expresión='(C1.x,C1.y)' fijo='sí' tamaño='4'">
+   <param name="G_15" value="espacio='E1' tipo='punto' color='a60000ff' dibujar-si='(paso>3)' expresión='(C2.x,C2.y)' fijo='sí' tamaño='4'">
+   <param name="G_16" value="espacio='E1' tipo='punto' color='a60000ff' dibujar-si='(paso>3)' expresión='(C3.x,C3.y)' fijo='sí' tamaño='4'">
+   <param name="G_17" value="espacio='E1' tipo='segmento' color='7600ff00' dibujar-si='(P1.y#P2.y)&(paso>4)&(paso<9)' expresión='(C1.x,C1.y)(P1.x,P1.y)' fijo='sí' ancho='3'">
+   <param name="G_18" value="espacio='E1' tipo='segmento' color='7600ff00' dibujar-si='(P1.y=P2.y)&(paso>4)&(paso<9)' expresión='(C2.x,C2.y)(P1.x,P1.y)' fijo='sí' ancho='3'">
+   <param name="G_19" value="espacio='E1' tipo='segmento' color='7600ff00' dibujar-si='(P2.y#P3.y)&((paso=5)|(paso>6))&(paso<9)' expresión='(C2.x,C2.y)(P2.x,P2.y)' fijo='sí' ancho='3'">
+   <param name="G_20" value="espacio='E1' tipo='segmento' color='7600ff00' dibujar-si='(P2.y=P3.y)&((paso=5)|(paso>6))&(paso<9)' expresión='(C3.x,C3.y)(P2.x,P2.y)' fijo='sí' ancho='3'">
+   <param name="G_21" value="espacio='E1' tipo='segmento' color='7600ff00' dibujar-si='(P2.y#P1.y)&(paso>5)&(paso<9)' expresión='(C1.x,C1.y)(P3.x,P3.y)' fijo='sí' ancho='3'">
+   <param name="G_22" value="espacio='E1' tipo='segmento' color='7600ff00' dibujar-si='(P2.y=P1.y)&(paso>5)&(paso<9)' expresión='(C2.x,C2.y)(P3.x,P3.y)' fijo='sí' ancho='3'">
+   <param name="G_23" value="espacio='E1' tipo='arco' color='81ff0000' dibujar-si='(P1.y#P2.y)&(paso>6)&(paso<9)' centro='(C1.x,C1.y)' radio='r' fin='360' fijo='sí'">
+   <param name="G_24" value="espacio='E1' tipo='arco' color='81ff0000' dibujar-si='(P2.y#P3.y)&(paso>6)&(paso<9)' centro='(C2.x,C2.y)' radio='r' fin='360' fijo='sí'">
+   <param name="G_25" value="espacio='E1' tipo='arco' color='81ff0000' dibujar-si='(P1.y#P3.y)&(paso>6)&(paso<9)' centro='(C3.x,C3.y)' radio='r' fin='360' fijo='sí'">
+   <param name="G_26" value="espacio='E1' tipo='arco' color='990000ff' dibujar-si='(paso>7)' centro='(P1.x,P1.y)' radio='r' fin='360' fijo='sí' ancho='3'">
+   <param name="G_27" value="espacio='E1' tipo='arco' color='990000ff' dibujar-si='(paso>7)' centro='(P2.x,P2.y)' radio='r' fin='360' fijo='sí' ancho='3'">
+   <param name="G_28" value="espacio='E1' tipo='arco' color='990000ff' dibujar-si='(paso>7)' centro='(P3.x,P3.y)' radio='r' fin='360' fijo='sí' ancho='3'">
+   <param name="G_29" value="espacio='E1' tipo='imagen' coord_abs='sí' expresión='(380,410,1,1)' archivo='images/panel.png'">
+   <param name="G_30" value="espacio='E1' tipo='texto' dibujar-si='paso=0' expresión='[25,370]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs36 Coloca los tres puntos en la posici\u243 n que desees y pulsa el bot\u243 n &squot;Siguiente&squot;. \par En cualquier momento de la construcci\u243 n podr\u225 s mover estos puntos.}' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_31" value="espacio='E1' tipo='texto' dibujar-si='paso=1' expresión='[25,360]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs36 A continuaci\u243 n trazamos todos los segmentos que unen los\par tres puntos. Nota que la figura formada por estos segmentos\par es un tri\u225 ngulo.}' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_32" value="espacio='E1' tipo='texto' dibujar-si='paso=2' expresión='[25,354]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Times New Roman;}\f1\fs36 Ahora pintamos el \b punto medio \b0 de cada segmento; este es el punto que\par equidista de los extremos del segmento. Por ejemplo, en el segmento que \par une los puntos \f3\fs40\i{\*\mjaformula P1} \f1\fs36\i0 y \f3\fs40\i{\*\mjaformula P2}\f1\fs36\i0 , es el punto que se encuentra en dicho segmento\par y que se encuentra a igual distancia de \f3\fs40\i{\*\mjaformula P1}\f1\fs36\i0  que de \f3\fs40\i{\*\mjaformula P2.}\f1\fs36\i0}' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_33" value="espacio='E1' tipo='texto' dibujar-si='paso=3' expresión='[25,354]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Arial;}\f1\fs36 Ahora trazamos las \b mediatrices\b0 , las cuales son, por definici\u243 n, las rectas perpen-\par diculares a los lados del tri\u225 ngulo y que adem\u225 s pasan por el punto medio. Una\par propiedad importante de la mediatriz es que es el lugar geom\u233 trico\par de \i todos\i0  los puntos que equidistan de los extremos del\par segmento.}' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_34" value="espacio='E1' tipo='texto' dibujar-si='paso=4' expresión='[25,370]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;}\f1\fs36 Como puedes notar, las mediatrices se intersecan en un solo punto. \par Este punto es llamado \b circuncentro\b0 .}' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_35" value="espacio='E1' tipo='texto' dibujar-si='paso=5' expresión='[25,360]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}\f1\fs36 Si ahora trazamos los segmentos que unen el circuncentro con los extremos de\par un segmento, por ejemplo con los puntos \f2\fs40\i{\*\mjaformula P1}\f1\fs36\i0  y \f2\fs40\i{\*\mjaformula P2}\f1\fs36\i0 , nos damos cuenta de que\par dichos segmentos miden lo mismo.}' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_36" value="espacio='E1' tipo='texto' dibujar-si='paso=6' expresión='[25,354]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;\f3\fcharset0 Arial;}\f1\fs36 Si hacemos lo mismo con otro segmento, por ejemplo el que une los puntos\par \f2\fs40\i{\*\mjaformula P1}\f1\fs36\i0  y \f2\fs40\i{\*\mjaformula P3}\f1\fs36\i0 , tambi\u233 n los segmentos miden lo mismo. Por lo tanto, podemos\par concluir que los tres segmentos entre el circuncentro y los puntos\b  \f2\fs40\b0\i{\*\mjaformula P1}\f3\fs36\b\i0 , \f2\fs40\b0\i{\*\mjaformula P2}\f3\fs36\b\i0  \par \b0 y\b  \f2\fs40\b0\i{\*\mjaformula P3}\f3\fs36\b\i0  miden lo mismo\b0 .}' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_37" value="espacio='E1' tipo='texto' dibujar-si='paso=7' expresión='[25,354]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}\f1\fs36 Esto nos conduce a la definici\u243 n de la circunferencia, que es el lugar geom\u233 trico\par de todos los puntos que equidistan de un punto llamado centro. As\u237  que podemos\par trazar la circunferencia cuyo radio \f2\fs40\i{\*\mjaformula r}\f1\fs36\i0   es igual al tama\u241 o del segmento que une el\par circuncentro con cualquiera de los puntos \f2\fs40\i{\*\mjaformula P1}\f1\fs36\i0 , \f2\fs40\i{\*\mjaformula P2}\f1\fs36\i0  o \f2\fs40\i{\*\mjaformula P3}\f1\fs36\i0 .}' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_38" value="espacio='E1' tipo='texto' dibujar-si='paso=8' expresión='[25,354]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;}\f1\fs36 Lo que haremos a continuaci\u243 n es trazar tres circunferencias con el mismo\par radio \f2\fs40\i{\*\mjaformula r}\f1\fs36\i0  pero con centro en \f2\fs40\i{\*\mjaformula P1}\f1\fs36\i0 , \f2\fs40\i{\*\mjaformula P2}\f1\fs36\i0  y \f2\fs40\i{\*\mjaformula P3}\f1\fs36\i0 . Como puedes ver, estas se inter-\par secan en un \u250 nico punto. Estas circunferencias no se pueden cortar en m\u225 s\par de un punto pues recuerda que por construcci\u243 n es el centro de\par la primera circunferencia roja y por definici\u243 n este es \u250 nico.}' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_39" value="espacio='E1' tipo='texto' dibujar-si='paso=9' expresión='[25,354]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;}\f1\fs36 Finalmente podemos asegurar que \b si tres circunferencias se cortan en un\par punto, este es \u250 nico\b0 . En otras palabras, para ubicar un punto en un plano\par por medio de circunferencias, necesitamos como m\u237 nimo tres.}' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_40" value="espacio='E1' tipo='texto' dibujar-si='debug' expresión='[25,30]' texto='paso=[paso]' fuente='SansSerif,PLAIN,18' fijo='sí'">
+</ajs></p>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+  <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+
+</head>
+
+<body onload="initialize();">
+  
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    </p><!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Planteamiento del problema: Engranes</h1>
+
+    <!--- Subtítulo (no necesario en introducción) --->
+    <h2>Contando dientes</h2>
+
+    <p>
+      En esta unidad didáctica abordaremos dos conceptos fundamentales en matemáticas: <em>múltiplo</em> y <em>divisor</em>.
+      Encontramos múltiplos y divisores en numerosas aplicaciones en la vida real; de hecho, los utilizamos prácticamente a diario, aun sin darnos cuenta.
+      Por ejemplo, en una clase donde se forman equipos de cierto número de personas, tomando en cuenta el total de alumnos que integran el grupo.
+      Pero también se aplican en áreas más complejas, como la <strong>criptografía</strong>, es decir, en la codificación y decodificación de mensajes, que es de suma importancia en la "era de la información" en la que vivimos actualmente.
+      En la sección de Reflexiones, analizaremos un ejemplo de cómo se usan los múltiplos y divisores en esta área.
+    </p>
+
+    <p>
+      Para acercarnos al entendimiento de múltiplos y divisores, resulta conveniente utilizar un par de engranes encajados entre sí, con cierto número de dientes cada uno.
+    </p>
+    
+    <div class="course_extern_content">
+      <img src="imgs/engranes_DaVinci.png"></img>
+    </div>
+
+    <p>
+En la escena siguiente hay dos engranes. Puedes elegir el número de dientes que tiene cada uno y hacerlos girar. Uno de los dientes de uno de los engranes
+      está marcado con un punto blanco. Conforme giran los engranes observa en qué huecos del otro engrane se encaja el diente marcado. Por ejemplo, fíjate qué
+      pasa cuando los dos engranes tienen el mismo número de dientes.
+    </p>
+
+    <!--- Instrucciones --->
+    <div class="instrucciones">
+      Presiona los pulsadores para modificar el número de dientes de cada engrane. Presiona el botón 'Mover' para hacer girar los engranes.
+    </div>
+
+    <!-- ejemplo para incluir un documento externo en un iframe, aquí van las escenas y videos -->
+    <div class="course_extern_content">
+      <iframe class="course_iframe" width="620" height="420" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+
+    <!--- Párrafo --->
+    <div class='problema'>
+      <strong>Problema</strong>
+
+      <p>
+      <strong>A</strong> y <strong>B</strong> son dos engranes entrelazados que tienen \(p\) y \(q\) dientes respectivamente, donde \( 4≤q≤p≤12\).
+      Un diente de <strong>B</strong> está marcado. Encuentra los valores de \(p\) y \(q\) para los que este diente marcado en <strong>B</strong> se encaje en cada hueco en el engrane <strong>A</strong> a medida que los engranes giran.
+      </p>
+
+    </div>
+
+      <div class="course_extern_content">
+        <img src="imgs/engranes.png"></img>
+      </div>
+
+     <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>
+
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+
+
+  </div>
+  
+</article>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<html>
+<body>
+<p align=center>
+<applet name="Puntos_en_el_plano_cartesiano_01"
+        code="Descartes.class"
+        codebase="../../../"
+        archive="Descartes3.jar"
+        MAYSCRIPT
+        width=790 height=520>
+   <param name="decimal_symbol" value=".">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Puntos_en_el_plano_cartesiano_01">
+   <param name="Versi&oacute;n" value="3.902, 2007-10-17">
+   <param name="Idioma" value="espa&ntilde;ol">
+   <param name="Botones" value="cr&eacute;ditos=no config=no inicio=no limpiar=no">
+   <param name="E_00" value="id='grafica' despl_imagen='arr-izq' fondo='blanco' red='grisClaro' red10='gris' ejes='gris' texto='rosa'">
+   <param name="C_00" value="tipo='num&eacute;rico' id='debug' regi&oacute;n='exterior' espacio='grafica' nombre='debug' incr='1' min='0' max='1' visible='si' pos_mensajes='centro'">
+   <param name="C_01" value="tipo='num&eacute;rico' id='minRango' regi&oacute;n='exterior' espacio='grafica' valor='minRango' nombre='minRango' incr='1' max='maxRango-1' visible='si' pos_mensajes='centro'">
+   <param name="C_02" value="tipo='num&eacute;rico' id='maxRango' regi&oacute;n='exterior' espacio='grafica' valor='maxRango' nombre='maxRango' incr='1' min='minRango+1' visible='si' pos_mensajes='centro'">
+   <param name="C_03" value="tipo='num&eacute;rico' id='crearAleatorios' interfaz='bot&oacute;n' regi&oacute;n='exterior' espacio='grafica' nombre='crearAleatorios' visible='si' acci&oacute;n='calcular' par&aacute;metro='minRango=3\nmaxRango=6\ncreaAleatorios()' pos_mensajes='centro'">
+   <param name="A_00" value="id='minRango' expresi&oacute;n='0' evaluar='una-sola-vez' constante='si'">
+   <param name="A_01" value="id='maxRango' expresi&oacute;n='10' evaluar='una-sola-vez' constante='si'">
+   <param name="A_02" value="id='n_numeros' expresi&oacute;n='ent(maxRango-minRango)'">
+   <param name="A_03" value="id='VecAux1' tama&ntilde;o='n_numeros+20' evaluar='una-sola-vez' expresi&oacute;n='VecAux1[0]=0;VecAux1[1]=0;VecAux1[2]=0' vector='si'">
+   <param name="A_04" value="id='resultadoVec' tama&ntilde;o='n_numeros+20' evaluar='una-sola-vez' vector='si'">
+   <param name="A_05" value="id='initVecAux1()' inicio='_indexT=0;_ancla=minRango;' hacer='VecAux1[_indexT]=_ancla;_indexT=_indexT+1;_ancla=_ancla+1;' mientras='_indexT&lt;n_numeros' algoritmo='si'">
+   <param name="A_06" value="id='reacomodaVector(_posBorrar)' inicio='_indexAcomoda=_posBorrar;' hacer='VecAux1[_indexAcomoda]=VecAux1[_indexAcomoda+1];_indexAcomoda=_indexAcomoda+1' mientras='_indexAcomoda&lt;(n_numeros-1)' algoritmo='si'">
+   <param name="A_07" value="id='creaAleatorios()' inicio='initVecAux1();_indexCrearAl=0;' hacer='_cuantosQuedan=(n_numeros-_indexCrearAl);_indexAleatorio=ent(rnd*_cuantosQuedan);;resultadoVec[_indexCrearAl]=VecAux1[_indexAleatorio];;reacomodaVector(_indexAleatorio);_indexCrearAl=_indexCrearAl+1' mientras='_indexCrearAl&lt;n_numeros' algoritmo='si'">
+   <param name="G_00" value="espacio='grafica' tipo='texto' color='azul' expresi&oacute;n='[20,20*s]' familia='s' s.intervalo='[0,n_numeros-1]' s.pasos='n_numeros-1' texto='resultadoVec([s])=[resultadoVec[s]]' fijo='no'">
+   <param name="G_01" value="espacio='grafica' tipo='texto' color='azul' expresi&oacute;n='[220,20*s]' familia='s' s.intervalo='[0,n_numeros-1]' s.pasos='n_numeros-1' texto='VecAux1([s])=[VecAux1[s]]' fijo='no'">
+</applet>
+
+<br><br>
+<applet name="PruebaMacroEjes"
+        code="Descartes.class"
+        codebase="../../../"
+        archive="Descartes3.jar"
+        MAYSCRIPT
+        width=790 height=520>
+   <param name="decimal_symbol" value=".">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="PruebaMacroEjes">
+   <param name="Versi&oacute;n" value="3.902, 2007-10-17">
+   <param name="Idioma" value="espa&ntilde;ol">
+   <param name="Botones" value="cr&eacute;ditos=no config=no inicio=no limpiar=no">
+   <param name="E_00" value="id='E3' despl_imagen='arr-izq' fondo='blanco' red='grisClaro' red10='gris' ejes='gris' texto='rosa'">
+   <param name="C_00" value="tipo='num&eacute;rico' id='ejes.tamFuente' interfaz='men&uacute;' regi&oacute;n='exterior' espacio='E3' valor='ejes.tamFuente' nombre='ejes.tamFuente' visible='no' opciones='8[8],10[10],12[12],16[16]' pos_mensajes='centro'">
+   <param name="C_01" value="tipo='num&eacute;rico' id='ejes.graduado' regi&oacute;n='exterior' espacio='E3' valor='ejes.graduado' nombre='ejes.graduado' incr='1' min='0' max='1' discreto='si' visible='si' opciones='8[8],10[10],12[12],16[16]' pos_mensajes='centro'">
+   <param name="A_00" value="id='a2' hacer='ejes.WIDTH=790;ejes.HEIGHT=520;ejes.Ox=E3.Ox;ejes.Oy=E3.Oy;ejes.ESCALA=E3.escala' evaluar='siempre' algoritmo='si'">
+   <param name="G_00" value="espacio='E3' tipo='ecuaci&oacute;n' color='azul' expresi&oacute;n='y=x' visible='no'">
+   <param name="G_01" value="espacio='E2' tipo='macro' expresi&oacute;n='misEjes.txt' nombre='ejes'">
+</applet>
+
+
+
+</p>
+</body>
+</html>

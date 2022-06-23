@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página ---> 
+    <h1>Exploración inicial del problema</h1>
+    
+    <!--- Subtítulo de la página ---> 
+   <h2>¿Cómo se denota el número de abejas de una generación?</h2>
+    
+    <!--- Párrafo --->
+    <p>
+    Antes de continuar, es necesario establecer algunas reglas de notación para no perderse.
+    </p>
+
+    <p>
+    Dada una generación (por ejemplo, la cuarta generación), el número de abejas en dicha generación lo denotaremos como \(F_4\). Otra notación que podemos usar es \(F(4)\). Lo anterior es un ejemplo para la cuarta generación, pero bien puede extenderse a generaciones cualesquiera. Es decir, para una generación \(n\), o \(n\)-ésima generación.
+    </p>
+
+    <p class="importante" style='margin-left:10%;margin-right:10%;'>
+    El número de abejas para una generación \(n\) (o \(n\)-ésima generación) se denota como \(F_n\) o \(F(n)\).
+    </p>
+
+    <p>
+      Apliquemos esta notación a las generaciones de abejas que conociste en la página anterior.
+    </p>
+    
+    <ul>
+      <li>
+      La generación cero, como habíamos visto, consiste de un solo zángano. Es decir, de inicio sabemos que \(F_0=1\).
+      </li>
+      <br>
+      <li>
+    Sabemos que este zángano proviene de una reina solamente. Esta reina se encuentra en la generación 1, y es la única abeja en dicha generación. De otra forma, estamos diciendo que \(F_1=1\).
+    </li>
+      <br>
+      <li>
+    Como vimos antes, la reina en la primera generación proviene de un zángano con una reina. Es decir, para la segunda generación tenemos 2 abejas. O, en términos matemáticos, \(F_2=2\).
+    </li>
+      <br>
+      <li>
+    ¿Cómo será \(F_3\)? Esto es, ¿cuántas abejas habrá en la tercera generación? Anteriormente viste que son 3 abejas, es decir: \(F_3=3\).
+    </li>
+    </ul>
+    
+    <p>
+      Ahora, si no supieras que \(F_3=3\), ¿habría forma de calcularlo matemáticamente? El siguiente recurso interactivo te puede orientar al respecto.
+    </p>
+    <!--- Instrucciones --->
+    <div class="instrucciones">
+    En el siguiente espacio puedes practicar tu intuición sobre cómo calcular el número de abejas de una generación que aún no se muestra.
+    Para ello, pulsa en cada una de las abejas de la última generación mostrada y se te proporcionará un poco de ayuda.
+    Una vez visitadas todas las abejas de la última generación, podrás avanzar a las abejas de la generación anterior (predecesora).
+    Por ahora, sólo se mostrará hasta la 4a generación.
+    Medita sobre cómo puedes obtener el número de abejas de la generación anterior a partir del número de abejas de las generaciones inmediatamente abajo de la incógnita.
+    Cuando revises todo el recurso hasta la parte de 'autosimilitud', podrás revisarlo de nuevo pulsando el botón 'Revisar'.
+    </div>
+
+    <!-- ejemplo para incluir un documento externo en un iframe, aquí van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="480" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+
+    <p>
+    Es importante que notes que cuando analizaste una abeja, o un par de abejas, según sea el caso, puedes saber cuántas habrá sobre dicho ente (abeja o par) en una generación más arriba.
+    Con base en lo que pudiste observar en la escena interactiva, reflexiona sobre lo siguiente:
+    </p>
+    <div class='problema'>
+    <strong>Preguntas</strong>
+      
+    <ul>
+		<li>¿Qué operación se debe realizar entre los números de abejas que aparecen sobre cada ente para poder calcular el número de abejas de la generación superior, que es lo que desconoces?</li>
+		<br>
+		<li>En la parte de autosimilitud, pon atención en la diferencia de generaciones entre los marcos rojos y entre los marcos amarillos (uno está un cierto número de generaciones arriba del otro).
+		Con base en ello, ¿cómo se puede obtener el número de abejas en una generación a partir del número de abejas en las generaciones inmediatamente siguientes?</li>
+	</ul>
+    </div>
+
+    <p>
+	Más adelante en la unidad podrás formalizar lo que hayas intuido en esta página. Por ahora, avanza a la siguiente página donde se presenta la exploración de la segunda parte de nuestro problema: los cocientes del número de abejas de generaciones sucesivas.
+    </p>
+
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>
+    
+
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

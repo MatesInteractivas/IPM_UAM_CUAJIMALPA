@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>TITULO</title>	
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body style="margin:0px;padding:0px;overflow:hidden;">
+
+<p align="center">
+<ajs name="Descartes" width=760 height=480 code="Descartes">
+   <param name="tamaño" value="760x480">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.3.12, 2014-07-09">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' escala='25' imagen='images/fondo.jpg' despl_imagen='expand.' fondo='grisClaro' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='P1' tipo='gráfico' espacio='E1' tamaño='6' expresión='(P1.x,P1.y)' constricción='x^2+y^2=r' imagen='images/cel.png' activo-si='t=0'">
+   <param name="C_02" value="id='P1.x' tipo='numérico' región='escenario' espacio='E1' nombre='P1.x' expresión='(0,0,0,0)' valor='r' fijo='sí' visible='sí' pos_mensajes='centro'">
+   <param name="C_03" value="id='radio' tipo='numérico' región='interior' espacio='E1' nombre='Distancia' expresión='(20,20,160,60)' decimales='0' fijo='sí' visible='sí' dibujar-si='0' pos_mensajes='centro'">
+   <param name="A_01" value="id='init()' algoritmo='sí' algoritmo='sí' hacer='r=10+ent(rnd*10);'">
+   <param name="A_02" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='init()'">
+   <param name="A_03" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="G_01" value="espacio='E1' tipo='punto' expresión='(P1.x,P1.y)' rastro='gris' fijo='sí'">
+   <param name="G_02" value="espacio='E1' tipo='punto' color='azul' expresión='(0,0)' fijo='sí' tamaño='4'">
+   <param name="G_03" value="espacio='E1' tipo='segmento' color='96808080' expresión='(0,0)(P1.x,P1.y)' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_04" value="espacio='E1' tipo='imagen' dibujar-si='0' coord_abs='sí' expresión='(380,420,1,.8)' archivo='images/panel.png'">
+   <param name="G_05" value="espacio='E1' tipo='polígono' color='90c2c8' coord_abs='sí' expresión='(20,380)(730,380)(730,470)(20,470)(20,380)' relleno='90c2c8' info='panel'">
+   <param name="G_06" value="espacio='E1' tipo='texto' expresión='[50,400]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;}\f1\fs36 Como puedes ver, la curva a la que nos refer\u237 amos es una \b circunferencia\b0   y,\par por ende, hay muchos puntos en los que se puede ubicar el dispositivo.}' fuente='SansSerif,PLAIN,18' fijo='sí'">
+   <param name="G_07" value="espacio='E1' tipo='texto' dibujar-si='debug' expresión='[20,20]' texto='r=[r]' fijo='sí'">
+</ajs></p>
+
+</body>
+</html>

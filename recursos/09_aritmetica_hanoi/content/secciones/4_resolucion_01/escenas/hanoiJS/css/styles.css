@@ -1,0 +1,329 @@
+/*
+ * $Id: $
+ *
+ * Copyright (C) 2012 Stoyan Rachev (stoyanr@gmail.com)
+ *
+ * This program is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License as published by the
+ * Free Software Foundation; either version 2, or (at your option) any
+ * later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * General Public License for more details.
+ */
+ 
+
+
+body {
+	text-align: center;
+	/*background: url(../img/fondo.jpg);*/
+}
+.game-container {
+	position: relative;
+	display: inline-block;
+
+	border-radius: 20px;
+	border: 3px solid #939683;
+	overflow: hidden;
+}
+
+.game-container  .buttons-bar{
+	position: absolute;
+	bottom : 10px;
+	left :15px; 
+}
+
+#game {
+	position: relative;
+	
+	background: url('../img/background.png') top left no-repeat;
+	
+	width: 720px;
+	height: 380px;
+	box-sizing: border-box;
+
+	margin-left: auto;
+	margin-right: auto;
+	padding: 40px 0px 10px 0px;
+	text-shadow: 0px 0px 1px white;
+}
+
+#game .moves {
+	position: absolute;
+	top: 8px;
+	right: 10px;
+	background-color: rgba(255, 255, 255, 0.68);
+	border-radius: 5px;
+	padding: 5px;
+
+	font-family: sans-serif;
+}
+
+#game .moves .counter {
+	font-weight: bold;
+	margin-left: 10px;
+}
+
+#footer {
+	width: 100%;
+}	
+
+
+
+
+.tower {
+	background:
+		url('../img/tower_base.png') bottom center no-repeat,
+		url('../img/tower.png') bottom center repeat-y
+		;
+	width: 240px;
+	height: 280px;
+	display: inline-block;
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+	vertical-align: bottom;
+
+}
+.tower .container {
+	position: absolute;
+	bottom: 0px;
+	display: block;
+	text-align: center;
+	border: 1px solid red;
+	width: 99%;
+}
+
+.hanoi-disk{
+	height: 30px;
+	width: 48px;
+
+	border-top-left-radius: 50% 10px;
+	border-top-right-radius: 50% 10px;
+	border-bottom-right-radius: 50% 5px;
+	border-bottom-left-radius: 50% 5px;
+	/*
+	border: 1px solid black;
+*/
+	background: rgba(86,179,98,1);
+	background: -moz-linear-gradient(top, rgba(86,179,98,1) 0%, rgba(12,136,28,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(86,179,98,1)), color-stop(100%, rgba(12,136,28,1)));
+	background: -webkit-linear-gradient(top, rgba(86,179,98,1) 0%, rgba(12,136,28,1) 100%);
+	background: -o-linear-gradient(top, rgba(86,179,98,1) 0%, rgba(12,136,28,1) 100%);
+	background: -ms-linear-gradient(top, rgba(86,179,98,1) 0%, rgba(12,136,28,1) 100%);
+	background: linear-gradient(to bottom, rgba(86,179,98,1) 0%, rgba(12,136,28,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#56b362', endColorstr='#0c881c', GradientType=0 );
+
+	text-align: center;
+	cursor:not-allowed;
+	margin: 0px auto 0px auto;
+	overflow: hidden;
+}
+
+
+
+
+.hanoi-disk.ui-draggable{
+	cursor: move;
+}
+
+.hanoi-disk.ui-draggable-dragging{
+	cursor: grabbing;
+	box-shadow: 2px 2px 5px gray;
+	z-index: 999;
+	position: absolute;
+}
+
+.hanoi-disk.ui-draggable-dragging:before{
+	content: none;
+}
+
+.hanoi-disk:before,
+.hanoi-disk:after  {
+	display: block;
+	margin: 0;
+	padding: 0;
+	border:0; 
+}
+
+.hanoi-disk:before {
+	content: url("../img/tower.png");
+	width: 10px;
+	height: 8px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top: -7px;
+}
+
+.hanoi-disk:after {
+	content: "a";
+	width: 23px;
+	height: 14px;
+	m_argin: 6px auto 0px auto;
+	color: white;
+	text-shadow: 0px 0px 1px black ;
+	font-family: sans-serif;
+	font-weight: bold;
+	font-size: 15px;
+
+	display: inline-block;
+	position: absolute;
+	bottom: 2px;
+	left: 49%;
+
+	transform:translate(-45%,0);
+}
+
+
+#disk0 {
+	background: url(../img/disco01.png) no-repeat center center;
+	width: 42px;
+	z-index: 999;
+}
+
+
+
+
+#disk1 {
+	background: url(../img/disco02.png) no-repeat center center;
+	width: 70px;
+	z-index: 998;
+}
+
+
+
+#disk2 {
+	background: url(../img/disco03.png) no-repeat center center;
+	width: 96px;
+	z-index: 997;
+}
+
+
+
+#disk3 {
+		background: url(../img/disco04.png) no-repeat center center;
+		width: 120px;
+		z-index: 996;
+}
+
+
+
+
+#disk4 {
+	background: url(../img/disco05.png) no-repeat center center;
+	width: 148px;
+	z-index: 995;
+}
+
+
+
+#disk5 {
+	background: url(../img/disco06.png) no-repeat center center;
+	width: 172px;
+	z-index: 994;
+}
+
+
+
+#disk6 {
+	background: url(../img/disco07.png) no-repeat center center;
+	width: 196px;
+	z-index: 993;
+}
+
+
+.hanoi-disk#disk0:after{
+	content: '1';
+}
+.hanoi-disk#disk1:after{
+	content: '2';
+}
+.hanoi-disk#disk2:after{
+	content: '3';
+}
+.hanoi-disk#disk3:after{
+	content: '4';
+}
+.hanoi-disk#disk4:after{
+	content: '5';
+}
+.hanoi-disk#disk5:after{
+	content: '6';
+}
+.hanoi-disk#disk6:after{
+	content: '7';
+}
+.hanoi-disk#disk7:after{
+	content: '8';
+}
+.hanoi-disk#disk8:after{
+	content: '9';
+}
+
+div.spinner label,
+button {
+
+	background: -webkit-linear-gradient(top, rgb(95, 197, 178) 0%, rgb(42, 175, 150) 4%, rgb(11, 123, 112) 48%, rgb(7, 106, 99) 100%);
+	background: -o-linear-gradient(top, rgb(95, 197, 178) 0%, rgb(42, 175, 150) 4%, rgb(11, 123, 112) 48%, rgb(7, 106, 99) 100%);
+	background: -ms-linear-gradient(top, rgb(95, 197, 178) 0%, rgb(42, 175, 150) 4%, rgb(11, 123, 112) 48%, rgb(7, 106, 99) 100%);
+	background: -moz-linear-gradient(top, rgb(95, 197, 178) 0%, rgb(42, 175, 150) 4%, rgb(11, 123, 112) 48%, rgb(7, 106, 99) 100%);
+	background: linear-gradient(to bottom, rgb(95, 197, 178) 0%, rgb(42, 175, 150) 4%, rgb(11, 123, 112) 48%, rgb(7, 106, 99) 100%);
+
+	
+	border-radius: 5px;
+	color: white;
+	font-weight: bolder;
+	font-family: Arial;
+		
+	border: 0;
+	padding: 5px;
+	cursor: pointer;
+}
+
+button:hover {
+	background: -webkit-linear-gradient(top, rgb(43, 177, 152) 0%, rgb(48, 139, 131) 45%);
+	background: -o-linear-gradient(top, rgb(43, 177, 152) 0%, rgb(48, 139, 131) 45%);
+	background: -ms-linear-gradient(top, rgb(43, 177, 152) 0%, rgb(48, 139, 131) 45%);
+	background: -moz-linear-gradient(top, rgb(43, 177, 152) 0%, rgb(48, 139, 131) 45%);
+	background: linear-gradient(to bottom, rgb(43, 177, 152) 0%, rgb(48, 139, 131) 45%);
+}
+
+button:disabled{
+	background: -webkit-linear-gradient(top, rgb(151, 200, 191) 0%, rgb(104, 157, 151) 43%, rgb(101, 148, 144) 100%);
+	background: -o-linear-gradient(top, rgb(151, 200, 191) 0%, rgb(104, 157, 151) 43%, rgb(101, 148, 144) 100%);
+	background: -ms-linear-gradient(top, rgb(151, 200, 191) 0%, rgb(104, 157, 151) 43%, rgb(101, 148, 144) 100%);
+	background: -moz-linear-gradient(top, rgb(151, 200, 191) 0%, rgb(104, 157, 151) 43%, rgb(101, 148, 144) 100%);
+	background: linear-gradient(to bottom, rgb(151, 200, 191) 0%, rgb(104, 157, 151) 43%, rgb(101, 148, 144) 100%);
+
+	cursor: not-allowed;
+} 
+
+
+
+div.spinner {
+	display: inline-block;
+}
+
+div.spinner label{
+	font-family: Trebuchet MS,Tahoma,Verdana,Arial,sans-serif;
+	font-size: 1em;
+	border-top-right-radius: 0px; 
+	border-bottom-right-radius: 0px;
+	display: inline-block;
+} 
+
+
+div.spinner span.ui-spinner{
+	border-top-left-radius: 0px; 
+	border-bottom-left-radius: 0px;
+	vertical-align: top;
+	margin-left: -5px;
+}
+
+div.spinner input.ui-spinner-input{
+	width: 50px;
+	
+}

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Reflexiones y aplicaciones</h1>
+    
+    <!--- Subtítulo (no necesario en introducción) --->
+    <h2>Red de antenas de telefonía celular</h2>
+    
+    
+    <!--- Párrafo --->
+    <p>
+    Como seguramente te habrás dado cuenta, para que un dispositivo tenga servicio de comunicación, se requiere que el dispositivo se encuentre cerca de alguna antena.
+    Dichas antenas forman la red de telefonía celular y deben distribuirse de manera estratégica para cubrir toda una área con la menor cantidad de antenas posible, ya que la colocación y el mantenimiento de cada antena supone costos para las compañías telefónicas.
+    </p>
+    
+    <p class='problema'>
+      <strong>Problema</strong>
+      <br><br>
+      Imagina que una compañía telefónica quiere ofrecer servicios en una nueva zona, por lo que tendrá que extender su red de telefonía instalando nuevas antenas en dicha zona.
+      Te contratan para que encuentres la forma más eficiente de colocar las nuevas antenas, procurando que el 100% de la zona tenga cobertura y reduciendo, además, los costos de compra e instalación de las antenas. En otras palabras, tendrás que asegurar el 100% de cobertura con la menor cantidad posible de antenas.
+      <br><br>¿Qué propondrías? ¿De qué manera procederías para determinar la colocación más eficiente de la red de antenas?
+    </p>
+    
+    <p>
+      Para dar solución al problema, toma en cuenta los siguientes aspectos y pistas:
+    </p>
+    
+    <ul>
+      <li>Se puede considerar a la zona como una malla compuesta por M filas y N columnas.</li>
+      <li>Aunque sabemos que las antenas dan servicio a una zona circular de cierto radio, probablemente convenga pensar en la superficie a cubrir no como un círculo sino como otra figura geométrica.</li>
+      <li>Para lograr el 100% de cobertura, es inevitable que haya áreas que queden cubiertas por varias antenas; es decir, es normal que se solapen las señales de 2 o más antenas en ciertas áreas.</li>
+    </ul>
+    
+    <p>
+      Empieza a explorar el problema a partir de las escenas interactivas que se proporcionan.
+    </p>
+    
+    <div class='instrucciones'>
+      En el siguiente espacio interactivo se muestran las nuevas antenas que se pretende colocar; éstas pueden enviar y recibir señales hasta una distancia determinada.
+      Puedes arrastrar y reacomodar las antenas para buscar la respuesta al problema.
+    </div>
+
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="480" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+    
+      <!--- Instrucciones --->
+    <div class="instrucciones">
+    <span>En el siguiente espacio interactivo se muestra una circunferencia y un rectángulo, el cual puedes modificar con los controles rojos.
+    Trata de construir un rectángulo de tal forma que quede inscrito dentro de la circunferencia y cubra la mayor parte posible del área del círculo.</span>
+    </div>
+        <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="400" height="400" frameborder="0" src="escenas/escena0.html"> </iframe>
+    </div>
+        
+    <p>
+      ¿Te diste cuenta de que la figura rectangular que se puede inscribir dentro de una circunferencia cubriendo la mayor parte del área es un cuadrado?
+      Saber esto es de gran ayuda para hacer los cálculos de cobertura celular, como lo puedes ver en la escena que se muestra a continuación.
+    </p>
+    
+    <div class='instrucciones'>
+      En el siguiente espacio interactivo se muestran nuevamente las antenas que se pretenden colocar, esta vez con el cuadrado más grande posible inscrito dentro de las circunferencias.
+      ¡Verás que ahora es mucho más sencillo buscar la colocación óptima de las antenas!
+    </div>
+
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="480" frameborder="0" src="escenas/escena2.html"> </iframe>
+    </div>
+    
+    
+    <div class='tarea'>
+      <h3>Tarea</h3>
+      <p>
+        Elabora tu propuesta de colocación de las antenas considerando que las antenas que se van a colocar pueden proveer señal celular hasta <strong>5 km radiales</strong>.
+        En vez de considerar áreas de cobertura celular circulares, contempla los bloques cuadrados que queden inscritos dentro de la circunferencia formada por cada antena.
+        <br><br>Haz los cálculos necesarios para obtener la respuesta a las siguientes preguntas:
+      </p>
+      <ul>
+        <li>¿Cuánto medirán los lados de los cuadrados que quedan inscritos en las circunferencias formadas por la señal de las antenas?</li>
+        <li>¿Cuántas antenas necesitarás para cubrir una zona de \(32km x 20km\), sin dejar huecos en la cobertura?</li>
+      </ul>
+      
+      <p>
+        Procura encontrar las respuestas antes de ver la solución.
+      </p>
+      
+      <div class="verSolucion" id="btSolucion" onclick="document.getElementById('solucion').setAttribute('class','visible');document.getElementById('btSolucion').setAttribute('class','oculto');">
+      </div>
+      
+    </div>
+    
+    
+
+    <div id="solucion" class='oculto'>
+      
+      <h2>Solución de la tarea</h2>
+      
+      <div class="course_extern_content"> 
+          <img src="imgs/cuadrado.jpg"></img>
+        </div>
+      
+      <p>Observando la figura, podemos ver que la diagonal del cuadrado coincide con el diámetro de la circunferencia, por lo que podemos construir un triángulo rectángulo cuya hipotenusa es igual al diámetro o a dos veces el radio.
+      Dado que este triángulo está sobre el cuadrado, los lados del triángulo miden lo mismo, por lo tanto el triángulo es rectángulo e isósceles.
+      Entonces, para resolver el triángulo podemos usar el teorema de Pitágoras. Denotando el lado del cuadrado con la variable \( L \) tenemos que:
+      </p>
+      
+      <div align="center"> \( (2r)^2 = L^2 + L^2 \)</div>
+      <div align="center"> \( 4r^2 = 2L^2 \)</div>
+      <div align="center"> \( 2r^2 = L^2 \)</div>
+      <div align="center"> \( L = \sqrt{2}r \)</div>
+      
+      
+      <p>
+        Sustituyendo los valores de nuestra tarea, calculamos:
+      </p>
+      
+      <div align="center"> \( (2*5)^2 = L^2 + L^2 \)</div>
+      <div align="center"> \( 100 = 2L^2 \)</div>
+      <div align="center"> \( 50 = L^2 \)</div>
+      <div align="center"> \( L = \sqrt{50} = 7.0188... \)</div>
+      
+          <p>
+      Conociendo el valor de \( L \), podemos determinar cuántas antenas vamos a requerir.
+      <br><br>
+      Para cubrir el lado más largo de nuestra zona, \(32km\), vamos a necesitar \( \frac{32}{7.0188} = 4.555918... \) antenas. Queda claro que para cubrir el ancho total de nuestra zona, hay que redondear hacia arriba, dando así un valor de 5 antenas.
+      <br><br>
+      Por otro lado, para cubrir el lado más corto de nuestra zona, \(20km\), vamos a necesitar \( \frac{20}{7.0188} = 2.8494... \) antenas, es decir: 3 antenas.
+      <br><br>Lo anterior significa que necesitamos \(5x3 = 15\) antenas para no dejar huecos en la cobertura celular de la zona.
+    </p>
+    
+    </div>
+   
+
+    
+    
+
+  
+	
+  <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  </div>
+  
+
+</article>
+
+</body>
+
+</html>
+

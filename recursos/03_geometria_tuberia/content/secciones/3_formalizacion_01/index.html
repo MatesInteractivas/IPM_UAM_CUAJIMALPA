@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-- MathJax -- para fórmulas matemáticas -->
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!-- Script para mostrar créditos y agregar ligas a glosario -->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+  <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!-- INICIA EL CONTENIDO DE LA PÁGINA -->
+    
+    <!-- INICIA EL CONTENIDO DE LA PÁGINA -->
+    
+    <!-- Título de la página -->
+    <h1>Formalización del problema</h1>
+    
+    <h2>Triángulos y sectores circulares</h2>
+
+
+
+    <!-- Párrafo -->
+    <p>
+      Como seguramente te diste cuenta, el área que deseamos calcular (el área de la parte del tubo que no contiene ni sedimento ni agua)
+      se puede obtener a partir de la suma o resta, según sea el caso, del área de un sector circular y un triángulo.
+      Más adelante en esta sección de la unidad analizaremos con más detalle cuándo hay que sumar ambas áreas y cuándo es preciso restarlas. 
+      Por ahora, descubriremos cómo calcular las áreas del triángulo y del sector circular, respectivamente.
+      
+    </p>
+  
+    <p class="instrucciones">
+      El siguiente interactivo sirve como recordatorio de las fórmulas para calcular el área de un 
+      triángulo y de un sector circular. Nota que aquí el ángulo se indica en radianes.
+    </p>
+  
+     <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="750" height="510" frameborder="0" src="escenas/areas1.html"> </iframe>
+    </div>
+ 
+    <p>
+      Habrás notado que para poder calcular el área de un sector circular, necesitamos conocer 
+      el ángulo  <span class="formula">α</span> que define a dicho sector.
+      Como quizá ya hayas comprendido, podemos obtener ese ángulo haciendo uso del triángulo 
+      que se observa en la escena interactiva. Es por eso que en esta página nos enfocaremos en 
+      el cálculo de algunas medidas de ese triángulo.
+    </p>
+    
+    <div class='problema'>
+      <strong>Objetivo</strong>
+      <br><br>
+      A continuación determinaremos cómo obtener:
+      <ul>
+        <li>el ángulo <span class="formula">θ</span> del triángulo amarillo de arriba, a fin de poder calcular el área del sector circular;</li>
+        <br>
+        <li>el área de dicho triángulo, para obtener, a partir del área del sector circular, el área vacía.</li>
+    </div>
+    
+    <br>
+      
+    <h2>Obtención del área y el ángulo <span class="formula">θ</span> del triángulo</h2>
+    <p class="instrucciones">
+      Utiliza el siguiente interactivo para encontrar una forma de calcular el ángulo que define
+      el sector circular de la parte vacía, conociendo la altura del agua.
+    </p>
+
+
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="750" height="510" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+
+    <p>
+      Acabamos de darnos cuenta de que dos de los tres lados del triángulo amarillo se pueden obtener de manera sencilla:
+    </p>
+    
+    <ul>
+      <li>El lado mayor (la hipotenusa) equivale al radio \(r\) de la circunferencia;</li>
+       <li>El lado \(a\) equivale a la altura del segmento circular vacío menos el radio : \( a = r - h_{vacío} \) </li>
+    </ul>
+    
+    <p>
+      Gracias a las razones trigonométricas, también establecimos que:
+    </p>
+    
+        <p class='importante' style='margin-left:20%;margin-right:20%;'>
+        \[\theta = arccos \left({r- h_{vacío} \over{r} }\right) \]
+         \[ b = r * \text{sen} \theta \]
+         \[ a = r * \text{cos} \theta \] 
+      
+    </p>
+    
+    <p>
+      Los datos anteriores nos permiten determinar el área del triángulo que pudiste observar en las páginas de exploración de esta unidad. Veamos cómo.
+    </p>
+
+    <ol>
+      <li>
+        La fórmula del área del triángulo amarillo que analizaste en el recurso interactivo de arriba queda:
+        $$ 
+        {Área\ del\ triángulo}
+            = \frac{(r \ sen \theta) × (r \ cos \theta)}{2}
+        $$
+      </li>
+      <br>
+      <li>
+      Pero si notas, este triángulo es sólo la mitad del triángulo que en realidad queremos, entonces
+      lo multiplicamos por dos y simplificamos:
+      $$
+        \begin{align*}
+          2 (\text{Área del triángulo})
+            &= 2 \left( {r\ sen \theta × r \ cos \theta \over{2} } \right) \\
+            &= { r^2 cos \theta\ sen \theta } \\
+        \end{align*}
+      $$
+      </li>
+      <br>
+      <li>
+        Dada la identidad trigonométrica  
+      \( sen(2\alpha ) =2 cos\ \alpha\ sen\ \alpha  \), reescribimos esta ecuación de la siguiente manera:
+      $$
+        \begin{align*}
+         { r^2 cos \theta\ sen \theta } 
+            &= \frac{r^2}{2} ( 2\ cos \theta\ sen \theta ) \\
+            &= \frac{r^2}2 (  sen 2\theta ) \\
+        \end{align*}
+      $$
+      </li>
+    </ol>
+
+    <p class='importante' style='margin-left:10%;margin-right:10%;'>
+      Entonces tenemos que : 
+      $$ \text{Área del triángulo} =  \frac{r^2}2 (  sen 2\theta ) $$
+      $$ \theta = arccos \left({ r - h_{vacío} \over{r} }\right) $$ 
+    </p>
+    
+
+    <h2>Área libre mayor que la mitad del tubo</h2>
+    
+    <p>
+      En los ejemplos anteriores supusimos que el área vacía dentro del tubo no cubría
+      más de la mitad de este, pero ¿qué ocurre cuando es mayor? <br>
+    </p>
+
+    <p class="instrucciones">
+        En el siguiente espacio interactivo cambia los valores correspondientes a las alturas del
+        sedimento y del agua. Observa cómo se debería adaptar la fórmula para obtener el ángulo <span class="formula">θ</span>
+        y cómo afecta el valor de <span class="formula">θ</span>.
+    </p>
+
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="750" height="510" frameborder="0" src="escenas/escena2.html"> </iframe>
+    </div>
+
+    <p class='importante' style='margin-left:10%;margin-right:10%;'>
+      Podemos concluir que, independientemente de la porción  
+      del tubo que esté vacía, podemos definir el lado \( a \) indistintamente como:
+
+        $$ (h_{vacio} - r \ )  \text{      o      } (r - h_{vacio} ) $$ 
+      
+      <br>Por lo mismo podemos dejar nuestras fórmulas como: 
+      
+      $$ \text{Área del triángulo} =  \frac{r^2}2 (  sen 2\theta ) $$
+      $$ \theta = arccos \left({ r - h_{vacío} \over{r} }\right) = arccos \left(1 - {h_{vacío} \over{r} }\right) $$ 
+    </p>
+
+    <p>
+      En la siguiente página utilizaremos estas dos ecuaciones para 
+      obtener el área libre dentro del tubo.
+    </p>
+
+    
+    <!-- INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR -->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+  
+  <!-- TERMINA LA INFO SOBRE LAS CONDICIONES DE USO -->
+  
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

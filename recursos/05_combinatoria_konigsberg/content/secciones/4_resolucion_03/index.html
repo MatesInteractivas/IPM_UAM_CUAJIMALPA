@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Resolución del problema</h1>
+    
+    <!--- Subtítulo (no necesario en introducción) --->
+    <h2>La resolución de Euler</h2>
+    
+    <div class="importante" style='margin-left:5%;margin-right:5%;'>
+    <strong>En resumen</strong>
+    <br><br>
+     De las páginas 1 y 2 de la resolución podemos concluir que:
+     <ol>
+      <li>Cuando una gráfica tiene sólo <strong>vértices pares</strong> (vértices con un número par de aristas), el recorrido es un ciclo euleriano, pues sin importar en qué vértice se inicie el recorrido, al hacerlo sin levantar el lápiz del papel y pasando sólo una vez por cada vértice, regresamos al vértice del que partimos.</li>
+      <br>
+      <li>Cuando la gráfica tiene <strong>dos vértices impares</strong> (vértices con un número impar de aristas), el recorrido no es un ciclo euleriano, sino un camino euleriano, pues los puntos de partida y de terminación son distintos.</li>
+      <br>
+      <li>Y finalmente, en una gráfica con dos vértices impares, no se puede obtener un camino euleriano si se parte de un vértice par.</li>
+     </ol>     
+    </div>
+      
+     <p>
+      A continuación se ofrece un espacio interactivo en el que se muestra la gráfica a partir de la que Euler resolvió el problema de los siete puentes de Königsberg.
+      Traza diversos caminos y toma en cuenta las siguientes preguntas, te pueden guiar hacia la solución.
+    </p>
+    
+    <div class="problema">
+    <strong>Preguntas</strong>
+    <br>
+      <ol>
+      <li>Observa cuántas aristas tiene cada vértice de la gráfica. ¿Es posible salir y entrar a algún vértice sólo una vez? </li>
+      <br>
+      <li>Observa que la gráfica es simétrica con respecto a una línea longitudinal. Supongamos que el camino se inicia en un lecho del río; puede ser el punto A o B, ya que la gráfica es simétrica.
+      Este punto tiene tres puentes que lo unen a las dos islas. Si una persona recorre los tres puentes, ¿puede regresar al punto del que partió? Si no, ¿qué se necesita para que pueda regresar al punto de partida (A o B)?</li>
+     </ol>     
+  </div>
+          
+    <div class='instrucciones'>
+      Coloca el control gráfico en uno de los puntos de la gráfica y pulsa el botón "Iniciar". Para cambiar de punto de inicio pulsa el botón "Cambiar posición" y luego pulsa "Iniciar". Pulsa sobre el botón "Limpiar" para borrar los caminos que hayas trazado si así lo requieres.
+    </div>
+    
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="400" frameborder="0" src="escenas/escena3.html"> </iframe>      
+    </div>
+      
+    <p>
+    Euler demostró que era imposible caminar por la ciudad de Königsberg cruzando cada puente sólo una vez. En la gráfica de Euler esto significaría que no es posible trazar un camino que pase sobre cada arista sólo una vez y pasando sobre todos los vértices. ¿Cómo dedujo esto? Veamos.
+    </p>
+    <p>
+    Antes de continuar, recuerda lo siguiente: cuando un vértice tiene un número impar de aristas, es un <em>vértice impar</em>. De manera análoga, para que un vértice sea <em>par</em>, debe tener un número par de aristas.
+    </p>
+    
+     <!--- Párrafo --->
+     <div class='problema'>
+      <strong>Tarea</strong>
+      <br><br>
+      A continuación se ofrece un espacio interactivo en el que se muestran vértices. El objetivo es que traces gráficas de 2, 3 o 4 vértices como se indica a continuación.
+      <ul>
+      <li>Traza un ciclo euleriano y un camino euleriano con dos vértices. ¿Hay más de una posibilidad para cada uno?</li>
+      <li>Traza ciclos eulerianos distintos con tres vértices. En todos los casos, ¿cómo son los vértices, pares o impares?</li>
+      <li>Traza caminos euleriano distintos con tres vértices, es decir que los puntos de inicio y de término sean distintos. ¿Cómo son los vértices, pares o impares?</li>
+      <li>Traza ciclos eulerianos distintos con cuatro vértices. En todos los casos, ¿cómo son los vértices, pares o impares?</li>
+      <li>Traza caminos eulerianos distintos con cuatro vértices, es decir que los puntos de inicio y de término sean distintos. ¿Hay vértices pares?, ¿hay vértices impares?, ¿cuántos?</li>
+      <br>
+      Además en cada caso:
+      <li>Intenta trazar un ciclo euleriano con un solo vértice impar. ¿Es posible?</li>
+      <li>Intenta trazar un ciclo euleriano con dos vértices impares. ¿Es posible?</li>
+      <li>Intenta trazar un camino euleriano con todos sus vértices pares. ¿Es posible?</li>
+      <li>Intenta trazar un camino euleriano con todos sus vértices impares. ¿Es posible?</li>
+     </ul>
+    </div>
+    
+    <div class='instrucciones'>
+      Coloca el control gráfico en un vértice y pulsa el botón "Iniciar". Para cambiar el punto de inicio pulsa el botón "Cambiar posición" y luego pulsa "Iniciar". Pulsa sobre el botón "Limpiar" para borrar los caminos que hayas trazado si así lo requieres.
+    </div>
+    
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="320" frameborder="0" src="escenas/escena1.html"> </iframe>
+      <iframe class="course_iframe" width="760" height="130" frameborder="0" src="escenas/escena2.html"> </iframe>
+    </div>
+    
+    <p class='importante' style="margin-left:10%;margin-right:10%;">
+    <strong>La resolución de Euler</strong>
+    <br><br>
+    Concretando, en la gráfica de Euler hay cuatro puntos y siete aristas. Puedes ver que tres aristas, es decir tres puentes, se unen al lecho del río A, y tres se unen al lecho del río B. Cinco puentes se unen a la isla C, y tres a la isla D.
+    Esto quiere decir que todos los vértices tienen un número impar de aristas.  
+    <br><br>
+    Ya vimos que para que la gráfica tenga un vértice impar se tendría que empezar o terminar el trayecto en ese vértice. Como sólo puede haber un inicio y un final del trayecto, sólo puede haber dos vértices impares si se quiere que sea posible trazar un camino sobre cada arista sólo una vez. Como el problema de los puentes tiene cuatro vértices impares, es simplemente imposible hacerlo.
+    </p>
+  <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  </div>
+  
+
+</article>
+
+</body>
+
+</html>
+

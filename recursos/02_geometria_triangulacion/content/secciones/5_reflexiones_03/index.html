@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Reflexiones y aplicaciones</h1>
+    
+    <!--- Subtítulo (no necesario en introducción) --->
+    <h2>Levantamiento topográfico para reconstrucción de accidentes de tránsito</h2>
+    
+    
+    <!--- Párrafo --->
+    <p>
+      
+
+    
+     La topografía es la disciplina que se dedica a medir distancias horizontales y verticales que permiten la representación detallada de un terreno.
+     En el ámbito judicial, la topografía tiene por objeto estudiar y representar sobre el papel las características físicas que constituyen la escena de algún accidente o crimen.
+     Por ejemplo, cuando ocurre un accidente de tránsito, el topógrafo forense se encarga de realizar levantamientos topográficos orientados a la investigación y posterior reconstrucción del accidente.
+     Los dibujos topográficos que son el fruto de dicho proceso de levantamiento son esquemas, mapas, croquis o diagramas que representan gráficamente las características del lugar de los hechos y la presencia de elementos físicos probatorios como personas, vehículos y otros objetos propios de la escena del incidente.
+    </p>
+    
+    <p>        
+    Uno de los métodos convencionales para hacer el levantamiento del mapa topográfico es el de las <strong>coordenadas por triangulación</strong>; este método permite localizar un elemento por medio de medidas ubicadas desde dos o más puntos de referencia (PR). 
+    </p>
+    
+      <div class="course_extern_content"> 
+        <img src="imgs/levantamientoPorTriangulacion.JPG"></img>
+      </div>
+    
+    
+    <p>
+      A continuación, se muestra el conjunto de medidas tomadas por el topógrafo de la defensa en un accidente de tránsito, donde resultó gravemente herido el conductor de uno de los vehículos.
+      En el cuadro, la abreviación PR se refiere al punto de referencia desde el cual se tomó la medida, y las abreviaciones VAI y VPI denotan el vértice anterior y posterior izquierdo, respectivamente, de los dos vehículos involucrados en el accidente.
+      Las distancias se indican en metros.
+    </p>
+    
+    
+    <table  class="tablaImportante columna1">
+    <thead>
+    <tr>
+      <th></th>
+      <th colspan='2'>Vehículo 1</th>
+      <th colspan='2'>Vehículo 2</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th>VAI</th>
+      <th>VPI</th>
+      <th>VAI</th>
+      <th>VPI</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>PR1</td>
+      <td>7.04</td>
+      <td>7.68</td>
+      <td>9.98</td>
+      <td>13.66</td>
+    </tr>
+    <tr>
+      <td>PR2</td>
+      <td>15.82</td>
+      <td>10.74</td>
+      <td>11.98</td>
+      <td>13.84</td>
+    </tr>
+    </tbody>
+    </table>
+
+    <div class='instrucciones'>
+      A continuación se muestra el plano del lugar donde ocurrió el accidente de tránsito.
+      Reconstruye el accidente basándote en las medidas registradas por el topógrafo y la longitud (en cm) del radio \(r\) de las circunferencias que puedes trazar desde los puntos PR1 y PR2 (centro de la circunferencia).
+      Puedes reacomodar los vehículos arrastrándolos desde el ancla que se encuentra en su centro, y puedes girarlos con la flecha circular.
+      Toma en cuenta que el dibujo topográfico que vas a realizar tiene una <strong>escala de 1:200</strong>.
+      Puedes usar los dos pequeños íconos al lado de la brújula para marcar algún punto en el plano.
+    </div>
+    
+    <!-- ejemplo para incluir un documento externo en un iframe, aqui van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="750" height="500" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+    
+    <div class="verSolucion" id="btSolucion" onclick="document.getElementById('induccion').setAttribute('class','visible');document.getElementById('btSolucion').setAttribute('class','oculto');">
+    </div>
+    
+    <div class="oculto"  id="induccion">
+
+    <h2>Solución</h2>
+    
+    <p>
+      Si interpretaste bien los datos proporcionados e hiciste correctamente la conversión de la escala, tu mapa topográfico debería de verse así:
+    </p>
+    
+    <div class="course_extern_content"> 
+        <img src="imgs/solucion.png"></img>
+      </div>
+    
+    <p>
+      Ahora reflexiona sobre las siguientes preguntas.
+    </p>
+    
+    <div class='problema'>
+      <strong>Preguntas</strong>
+      <ol>
+	<li>¿Por qué en este caso es suficiente contar con dos puntos de referencia, es decir, con dos circunferencias, para localizar en el plano cada uno de los puntos (vértices del coche) registrados?</li>
+	<br>
+	<li>¿De qué manera puedes expresar lo anterior algebraicamente? Como ayuda, recuerda la ecuación ordinaria de la circunferencia y toma la línea de base de los puntos de referencia como el eje X del plano.</li>
+      </ol>
+      
+    </div>
+    
+    </div>
+    
+
+  
+	
+  <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  </div>
+  
+
+</article>
+
+</body>
+
+</html>
+

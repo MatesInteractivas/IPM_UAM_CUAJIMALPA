@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+  <!-- INICIA EL CONTENIDO DE LA PÁGINA -->
+    
+    <!-- Título de la página -->
+   <h1>Exploración inicial del problema</h1>
+    
+    <h2>El juego</h2>
+    <!-- Párrafo -->
+    <p>
+      A continuación tenemos el juego de las torres de Hanoi con 1, 2, 3, 4 y 5
+      discos. Intenta pasar los discos de un poste a otro utilizando la menor
+      cantidad de movimientos.
+      Recuerda que las reglas son:
+    </p> 
+      <ul>
+        <li>Sólo puedes mover un disco a la vez.</li>
+        <li>No puedes colocar un disco sobre otro de menor diámetro.</li>
+      </ul>
+    
+    <!-- Instrucciones -->
+    <div class="instrucciones">
+      Arrastra los discos de un poste a otro, siguiendo las reglas.
+      Cada vez que termines de mover una torre y lo hayas hecho con el menor número de movimientos
+      posible, se te presentará una nueva torre con un disco más.
+    </div>
+
+    <!-- ejemplo para incluir un documento externo en un iframe, aquí van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="410" frameborder="0" src="escenas/hanoiJS/index.html"> </iframe>
+    </div>
+    
+
+    <div class='problema'>
+      <strong>Preguntas</strong>
+      <br><br>
+        Ahora que ya sabes cómo mover los discos de un poste a otro
+        con el menor número de paso: 
+      <br>
+      <ul>
+        <li>
+          ¿Puedes encontrar una fórmula para calcular el menor número de pasos necesarios
+          para mover una torre de 1, 2, 3, 4 o 5 discos a un poste distinto?
+        </li>
+        <br>
+        <li>
+          ¿Nos servirá esta fórmula para calcular los movimientos que tendrían que hacer los monjes y
+          así determinar el tiempo en que se acabará el mundo?
+        </li>
+      </ul>
+    </div>
+
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>
+    
+
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

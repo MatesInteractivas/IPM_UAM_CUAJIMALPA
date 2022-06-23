@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+   <h1>Exploración inicial del problema</h1>
+    
+    <h2>Lenguaje algebraico</h2>
+    <!--- Párrafo --->
+    <p>
+    Antes de iniciar con la resolución del problema, verifiquemos cómo está nuestro lenguaje algebraico; nos será necesario durante toda esta unidad.</p>
+      <p>       
+Iniciemos con la traducción de lenguaje coloquial a lenguaje algebraico de un ejercicio de matemáticas que el abuelo de Jorge le pidió hacer cuando era joven. 
+
+    </p>
+    
+   
+<div class="problema">
+<strong>Ejercicio</strong>
+<br><br>
+La edad del señor Carlos es de 39 años y la de su hija Fernanda es de 11. ¿Después de cuántos años, la edad de Carlos será tres veces más que la edad de su hija? Encuentra la respuesta a través del lenguaje algebraico. 
+</div>
+
+<p>Para poder resolver este ejercicio tenemos que leer muy bien el problema unas dos o tres veces; en cada una de ellas deberemos obtener información útil para formular una ecuación algebraica que al resolverla nos ofrezca la solución.
+Este es un ejercicio ideal para favorecer nuestra capacidad de abstracción.
+</p>
+
+<p>Leamos uno por uno los enunciados del problema con la finalidad de ver qué información podemos obtener:</p>
+
+<ol>
+  <li>
+  <strong>La edad del señor Carlos es de 39 años y la de su hija Fernanda es de 11.</strong>
+  <br><br>
+  De lo anterior simplificamos la edad de cada uno usando la letra inicial correspondiente, por lo que la edad de Carlos se expresaría sólo con la letra <span class='formula'>C</span> y la correspondiente de Fernanda con la letra <span class='formula'>F</span>.</p>
+
+  <p class="instrucciones">
+  Expresa algebraicamente las edades de Carlos y Fernanda utilizando la información anterior.
+  </p>    
+
+<!-- ejemplo para incluir un documento externo en un iframe, aqui van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="520" height="200" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+  
+  </li>
+  <br>
+  <li>
+  <strong>¿Después de cuántos años, la edad de Carlos será tres veces más que la edad de su hija?</strong>
+  <br><br>
+  En este enunciado radica la complejidad del problema, ya que aquí se presenta la incógnita &#8212;<em>¿Después de cuántos años?</em>&#8212; y además se nos da una condición &#8212;<em>la edad de Carlos será tres veces más que la edad de su hija</em>&#8212;.
+
+  <p class="instrucciones">Leyendo sólo el enunciado anterior, ¿qué debemos obtener después de resolver el problema?</p>
+
+  <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="520" height="200" frameborder="0" src="escenas/escena2.html"> </iframe>
+  </div>
+  
+  </li>
+</ol>
+
+<p>Llamemos <span class='formula'>x</span> al tiempo que debe pasar para que se cumpla la condición de que Carlos sea tres veces mayor que su hija. Ahora bien, ¿cómo relacionamos <span class='formula'>x</span> con <span class='formula'>C</span> y <span class='formula'>F</span>?</p>
+
+<p><strong>La edad de Carlos será tres veces más que la edad de su hija</strong></p>
+<p class="instrucciones">En el enunciado se dice que la edad de Carlos <strong>será tres veces más</strong> que la edad de su hija, por lo que habrá que multiplicar la edad de Fernanda por 3. Escribe esa igualdad en lenguaje algebraico. </p>
+<div class="course_extern_content"> 
+      <iframe class="course_iframe" width="520" height="200" frameborder="0" src="escenas/escena3.html"> </iframe>
+    </div>
+
+<p>Pero además se nos pregunta cuánto tiempo <strong>después</strong> se cumplirá la condición.  De ello deducimos que tenemos que <strong>sumarle el tiempo</strong> a las edades de ambos pues los dos se ven afectados de la misma manera por él, por lo que agregamos <span class='formula'>x</span> a cada una de las edades. </p>
+
+<p class="instrucciones">Suma el tiempo a las edades de Carlos y Fernada.</p>
+<div class="course_extern_content"> 
+      <iframe class="course_iframe" width="520" height="200" frameborder="0" src="escenas/escena4.html"> </iframe>
+    </div>
+    
+<p>Recordemos que la condición dice que la edad de Carlos más un tiempo es igual a tres veces la edad de Fernanda más ese mismo tiempo.</p>  
+
+<p class="instrucciones">Escoge la ecuación que describe la condición anterior.</p>  
+<div class="course_extern_content"> 
+      <iframe class="course_iframe" width="520" height="200" frameborder="0" src="escenas/escena5.html"> </iframe>
+    </div>    
+    
+
+<div class="tarea">
+<h3>Tarea</h3>
+<p>
+José Luis y Miguel son hermanos, José Luis es 15 años mayor que Miguel. La última vez que se vieron, 4 años atrás, José Luis era 4 veces mayor que Miguel. ¿Cuáles son sus edades actuales?  
+</p>
+<div class="verSolucion" id="btSolucion" onclick="document.getElementById('solucion').setAttribute('class','visible');document.getElementById('btSolucion').setAttribute('class','oculto');">
+      </div>
+</div>
+  
+  <div id="solucion" class='oculto'>
+      
+      <h4>Solución de la tarea</h4>
+      <p>Para encontrar la solución debemos leer con mucho cuidado el problema con el fin de encontrar las variables involucradas y  los datos relevantes.</p>
+      <ul>
+      <li>Identificar las variables
+      <p>Al leer el problema podemos identificar claramente que las incógnitas son las edades actuales de José Luis y Miguel. Utilizaremos entonces las literales \(J\) y \(M\), respectivamente, para representar sus edades actuales. 
+      </p>
+      <p class="importante">
+      <strong>J = Edad actual de José Luis<br><br>
+      M = Edad actual de Miguel 
+      </strong>
+      </p>
+      </li>
+      <li>Hallar datos relevantes
+        <p>En el primer enunciado se dice además que José Luis <strong>es 15 años mayor que</strong> Miguel. Lo anterior lo expresamos de la siguiente manera:</p>
+      <p class="importante">
+      <strong>\(J = 15 + M\)</strong>&nbsp;&nbsp;&nbsp;...(1)
+      </p>
+      <p>Definimos una primera ecuación, continuemos con la lectura del segundo enunciado:</p>
+
+<p><strong>La última vez que se vieron, 4 años atrás, José Luis era 4 veces mayor que Miguel.</strong></p>  
+<p>Lo más importante que encontramos en él es el hecho de que <strong>hace cuatro años</strong> (la última vez que se vieron) <strong>José Luis era cuatro veces mayor que Miguel</strong>. Esto lo expresamos así:</p> 
+<p class="importante">
+      <strong>\(J - 4 = 4 ( M - 4 )\)</strong>&nbsp;&nbsp;&nbsp;...(2)
+      </p>   
+      <p>En la segunda ecuación podemos ver que la edad de José Luis hace cuatro años es igual a cuatro veces la edad de Miguel hace cuatro años también.</p>
+      </li>
+      <li>Sustituir ecuaciones
+      <p>Para dar solución al problema primero debemos sustituir una ecuación en la otra. Por facilidad sustituyamos \(J\) en la ecuación 2 con la ecuación 1.</p>
+      <p class="importante">
+      <strong>\(15 + M - 4 = 4 ( M - 4 )\) </strong>
+      <br><br>Simplificando obtenemos:
+      <br><br>
+      <strong>\(11 + M = 4M - 16 \) </strong>      
+      </p>
+      </li>
+      <li>Despejar y resolver
+      <p class="importante">
+      <strong>\(11 + 16 = 4M - M\)</strong>
+      <br><br>
+      <strong>\(27 = 3M\)</strong>
+      <br><br>
+      <strong>\(9 = M\)</strong>      
+      </p>
+      <p>Obtenemos entonces la edad actual de Miguel, que es de nueve años.
+      Utilicemos de nuevo la ecuación 1 para saber la edad actual de José Luis, sustituyamos el valor de \(M\).</p>
+      <p class="importante">
+      <strong>\(J = 15 + 9\) </strong>
+      <br><br>
+      <strong>\(J = 24\) </strong>
+      </p>
+      <p><strong>Las edades actuales de José Luis y Miguel son 24 y 9 años respectivamente.</strong></p>     
+      </li>
+      <li>Verificar
+      <p>Con el fin de comprobar que nuestra solución satisface el ejercicio, debemos restar 4 años a las edades actuales de José Luis y Miguel y verificar que la edad de José Luis es 4 veces la edad de Miguel.</p>
+      <p class="importante">
+      La edad de José Luis hace cuatro años era <strong>20</strong> y la de Miguel era <strong>5</strong>, <strong>como 20 es cuatro veces 5</strong>, confirmamos que nuestra solución satisface el ejercicio. </p>
+      </li>
+      
+      </ul>
+      
+      
+    </div>
+
+    
+
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>
+    
+
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

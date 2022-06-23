@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Resolución del problema</h1>
+    
+    <!--- Subtítulo (no necesario en introducción) --->
+    <h2>El procedimiento</h2>
+    
+    <!--- Párrafo --->
+     <p>
+      La idea fundamental detrás del procedimiento que nos lleva a la
+      solución del problema tiene que ver con la forma en la que
+      añadimos un <strong>siguiente punto</strong> a nuestra solución en
+      construcción.
+      </p>
+
+     <p>
+       Tiene que ver con la forma en la que pasamos de
+      \(S_k\) a \(S_{k+1}\) y, por tanto, de \(E_{k-1}\) a \(E_k\).
+    </p>
+    <p class='importante' style='margin-left:20%;margin-right:20%;'>
+       \[S_k\mathop{\longrightarrow}^?S_{k+1}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ E_{k-1}\mathop{\longrightarrow}^?E_{k}\]
+    </p>
+
+     <p>
+       Como referencia para lo que sigue, nos va a ayudar pensar en la
+       manera en la que acabamos de construir la red de respaldo óptima
+       de la página anterior.
+     </p>
+
+    <h2>Comenzamos</h2>
+
+     <p>
+       Vamos a suponer que escogemos algún punto de forma arbitraria y
+       construimos \(S_1\).
+     </p>
+
+     <p class="problema">
+      <strong>Pregunta</strong>
+      <br><br>
+       ¿La elección al azar de este primer punto
+       debe preocuparnos? ¿Será que hay algún punto privilegiado por
+       el que debamos comenzar?
+     </p>
+
+     <p>
+       No, porque en principio todos los puntos deben ser
+       conectados. Al avanzar un poco más quedarás convencido de esto.
+     </p>
+
+    <h2>Continuamos</h2>
+
+    <p>
+      Ahora, demos por hecho que tenemos un conjunto de \(k\) puntos
+      \(S_k\) que se enlaza mediante los \(k-1\) enlaces de
+      \(E_{k-1}\). Por ejemplo, \(S_5\) con los enlaces de \(E_4\) en
+      la página anterior.
+    </p>
+
+     <div class="problema">
+      <strong>Pregunta</strong>
+      <br><br>
+       Pensando en la construcción de la red de respaldo, ¿qué
+       características tiene el siguiente enlace que tomamos para
+       pasar de \(S_5\) a \(S_6\)?
+       <br><br>En general, ¿serán estas las mismas
+       características que tiene el siguiente enlace que tomamos en el
+       resto de los pasos, salvo el primero?<br><br>
+
+	<div class="course_extern_content"> 
+	  <iframe class="course_iframe" width="750" height="300" frameborder="0" src="escenas/escena.html"></iframe>
+	</div>
+      </div>
+      
+     <p>
+       Bueno, pues ya sabes lo que hay que hacer, pasa a la siguiente
+       página para practicar este procedimiento.
+     </p>
+	
+
+  <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  </div>
+  
+
+</article>
+
+</body>
+
+</html>
+

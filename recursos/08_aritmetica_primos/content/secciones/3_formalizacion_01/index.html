@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+  <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<article class="course_content_container">
+  
+  <div class="course_content">
+    
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Formalización del problema</h1>
+    
+    <p>
+      Como ya se mencionó al inicio de esta unidad, la parte 1) del problema consiste en encontrar
+      los <strong>divisores</strong> de un número natural \(n\) para
+      entonces poder pasar a la parte 2) y encontrar la solución
+      óptima en términos de la menor cantidad posible de pies
+      cuadrados de lona requerida para cubrir el paquete de \(n\) cajas.
+    </p>
+	
+    <p>
+      En otras palabras, primero debemos de encontrar la lista de todos los divisores de
+      un número natural \(n\) cualquiera y después la pareja de divisores
+      que optimiza el valor \(L\) (la cantidad de lona, en pies cuadrados).
+    </p>
+	
+    <p>
+      No siempre es lo mismo, pero en nuestro problema un paquete de \(p\times q\)
+       cajas <strong>no</strong> lo consideraremos diferente de un paquete de
+      \(q\times p\) cajas, ya que lo único que los distingue es la
+      orientación de filas y columnas. Para nosotros los dos
+      paquetes serán iguales, ya que requieren la misma cantidad de
+      lona.
+    </p>
+
+    <h2>Divisores de un número</h2>
+    <!--- Párrafo --->
+
+    <p>
+      Recordemos a qué nos referimos cuando hablamos de divisibilidad.
+    </p>
+
+    <p class='importante' style="margin-left:10%;margin-right:10%;">
+    <strong>Divisibilidad</strong>
+    <br><br> Dada una pareja de números enteros \(n\) y \(p\) decimos que
+    \(p\) <strong>divide</strong> a \(n\), que \(n\) es <strong>divisible</strong>
+    entre \(p\) o que \(p\) es un <strong>divisor</strong> de \(n\) cuando el cociente
+    de \(n\) entre \(p\) es exacto.<br><br>En tal situación existirá
+    un número entero \(q\) tal que \(n = p\times q\).<br><br>En
+    particular \(n\) y \(p\) pueden ser números naturales, en cuyo caso \(q\)
+    también lo será.<br><br>Escribimos \(p | n\) que se lee \(p\) <em>divide a</em> \(n\). 
+    <br>
+    </p>
+
+   <p>
+      Lo primero que podemos inferir rápidamente de la definición de
+      divisibilidad debido a la conmutatividad de la multiplicación es
+      que, con la notación empleada, si \(p | n\) entonces también \(q | n\).
+      Lo que significa que al encontrar un divisor por fuerza
+      encontramos otro, que es el resultado de la división, es decir, el cociente.
+    </p>
+
+   <p>
+      <strong>¡Ojo!</strong> Lo anterior no quiere decir que \(p\) y \(q\)
+      sean siempre diferentes. Por ejemplo, \(49 = 7\times7\), lo que muestra
+      que \(p = q\) en este caso particular. Si reflexionamos un poco,
+      podremos concluir que cualquier número que sea el cuadrado de un
+      entero es divisible entre su raíz cuadrada.
+   </p>
+
+   <p>
+   Este par de divisores \(p\) y \(q\), tales que \(p\times q = n\) será siempre
+   una posible solución a nuestro problema.
+   </p>
+
+    <h2>Números primos</h2>
+   <p>
+     La lista de divisores de un número entero arbitrario \(n\) puede no
+   ser muy grande. Sin embargo, para cualquier número entero \(n\)
+   ocurrirá que \(1 | n\) y \(n | n\), ya que
+   \(n\div1=n\) y
+   \(n\div n=1\), esto es, la lista de
+   divisores de \(n\) siempre contará con el \(1\) y \(n\) mismo.
+   </p>
+
+    <p class='importante' style="margin-left:10%;margin-right:10%;">
+    Decimos que un número natural \(n\) es <strong>primo</strong>
+    cuando es mayor que \(1\) y sus únicos divisores son \(1\) y \(n\)
+    mismo.
+    </p>
+
+    <p>
+      En términos del problema que queremos resolver, si el número de
+      cajas \(n\) es primo, entonces no podremos armar el paquete más que
+      de una sola forma. Como apuntamos más arriba, un paquete de
+      \(1\times n\) es lo mismo que un paquete de
+      \(n\times1\), solo cambia la orientación de filas y columnas.
+    </p>
+
+    <p class="instrucciones">
+      En el siguiente cuadro aparecen los número naturales del \(1\) al
+      \(100\). La idea es que marques todos los números primos que
+      encuentres con un clic. La lista resultante la utilizaremos más adelante.
+    </p>
+
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="760" height="480" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+
+       <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>      
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  
+  </div>
+  
+  
+</article>
+
+
+</body>
+
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- jQuery -->
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+  
+   <!-- Scrollbar -->
+  <script type='text/javascript' src="../../scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../scrollbar/jquery.mCustomScrollbar.css" />
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Formalización del problema</h1>
+    
+    <!--- Subtítulo (no necesario en introducción) --->
+    <h2>Algoritmo para la localización</h2>
+    
+    <p>
+      En la página anterior obtuvimos la ecuación ordinaria de la circunferencia con radio \(r\) y centro con coordenadas \(h,k\):
+    </p>
+    
+    
+    <p class='importante' style='margin-left:30%;margin-right:30%;'>
+      \[ r^2 = (x-h)^2 + (y-k)^2 \]
+    </p>
+ 
+    
+    <p>
+    Ahora, para determinar la posición de nuestro dispositivo, ¿cuáles son las variables que conocemos dicha ecuación?
+    </p>
+    
+    <p>La central que se encarga de realizar los cálculos necesarios recibe de la antena 1 el valor de sus coordenadas (que indican su posición en el plano) y el valor de la distancia entre ella y el dispositivo a ubicar.
+    Tenemos entonces una primera terna de tres valores: \(x_1, y_1\) que son las coordenadas de la antena 1 y \(d_1\) siendo la distancia entre la antena y el dispositivo.
+    También se reciben las ternas de las otras antenas. Como se mencionó anteriormente es necesario como mínimo tres antenas, por lo que haremos los cálculos con datos de tres de ellas.
+    </p>
+    
+    <p>
+      La central entonces entonces en total de tres ternas de valores:
+    </p>
+
+    <div class="importante" style='margin-left:30%;margin-right:30%;'>
+      <span>Antena 1 \( \rightarrow (x_1, y_1, d_1)\)</span>
+      <br>
+      <span>Antena 2 \( \rightarrow (x_2, y_2, d_2)\)</span>
+      <br>
+      <span>Antena 3 \( \rightarrow (x_3, y_3, d_3)\)</span>
+    </div>
+    
+    
+    <p>
+    Como vimos anteriormente, la posición del dispositivo puede ser cualquier punto de la circunferencia, y sus coordenadas están dadas por las variables \( x\) y \(y\).
+    </p>
+    
+    <p class='problema'>
+      <strong>Pregunta</strong>
+      <br><br>
+      ¿Cómo quedará entonces la ecuación ordinaria de la circunferencia con centro en <strong>antena 1</strong> y radio igual a la distancia entre dicha antena y el dispositivo?
+    </p>
+    
+    <div class='instrucciones'>
+      En la ecuación que se muestra a continuación, llena cada posición con el dato correcto.
+    </div>
+    
+    <!-- ejemplo para incluir un documento externo en un iframe, aqui van las escenas y videos -->
+    <div class="course_extern_content"> 
+      <iframe class="course_iframe" width="750" height="130" frameborder="0" src="escenas/escena1.html"> </iframe>
+    </div>
+
+    
+    <div class='tarea'>
+      <h3>Tarea</h3>
+      <p>
+      Ahora que ya conoces la ecuación que corresponde a la circunferencia de la primera antena, haz lo siguiente:
+      </p>
+      <ol>
+        <li>Escribe las ecuaciones faltantes (las de antena 2 y 3) para completar el sistema de ecuaciones cuadráticas.</li>
+        <br>
+        <li>Trata de resolver el sistema, de modo que obtengas dos ecuaciones de la forma \(x = ¿? \) y \(y = ¿?\),
+        donde las interrogaciones corresponden a una expresión algebraica que ya no contenga las incógnitas \(x\) y \(y\), sino solo las literales de los datos de la antena.</li>
+      </ol>
+      <p>
+      Si quieres, puedes cambiar las literales \((x_1, y_1, d_1)\), \((x_2, y_2, d_2)\) y \((x_3, y_3, d_3)\) a otras que te resulten más cómodas.
+      Si no sabes o no recuerdas cómo resolver un sistema de ecuaciones cuadráticas, haz una búsqueda en Internet. Como punto de partida, puedes consultar el siguiente video.
+      </p>
+      <!-- ejemplo para incluir videos embebidos desde youtube -->
+      <div class="course_extern_content video-content"> 
+       <iframe width="560" height="315" src="https://www.youtube.com/embed/oFG8TuCZynM" frameborder="0"></iframe>
+      </div>
+      <p>
+      En todo caso, ¡haz un intento antes de ver la solución!
+      </p>
+      
+      <div class="verSolucion" id="btSolucion" onclick="document.getElementById('solucion').setAttribute('class','visible');document.getElementById('btSolucion').setAttribute('class','oculto');">
+      </div>
+      
+    </div>
+      
+      
+
+    <div id="solucion" class='oculto'>
+      
+    <h2>Solución del sistema de ecuaciones</h2>
+    
+    <p>Para resolver la tarea, pudiste haber seguido los pasos que se indican a continuación.</p> 
+    
+    <ol>
+      <li>Nuestro sistema a resolver consiste en 3 ecuaciones con 2 variables:
+      <br>
+      <br>
+        \( d_1^2 = (x-x_1)^2 + (y-y_1)^2 \)<br>
+        \( d_2^2 = (x-x_2)^2 + (y-y_2)^2 \)<br>
+        \( d_3^2 = (x-x_3)^2 + (y-y_3)^2 \)<br>
+    </li>
+      
+    <br>
+    
+    <li>
+    Tomemos la primera ecuación y desarrollemos los binomios al cuadrado; a continuación pasamos todo de un solo lado:
+    <br><br>
+    \( d_1^2 = x_1^2 -2x_1x + x^2 + y_1^2 -2y_1y + y^2\)<br>
+    \( x^2 + y^2 - 2x_1x - 2y_1y + [x_1^2 + y_1^2 - d_1^2] = 0 \) 
+    </li>
+    
+    <br>
+    
+    <li>
+      Son conocidos los valores de los términos que se encuentran dentro de los corchetes por lo que se puede asignar la constante \( a \) a la suma de estos, es decir, \( a = x_1^2 + y_1^2 - d_1^2 \).
+      Si hacemos este mismo proceso para las otras dos ecuaciones obtenemos el siguiente sistema:<br><br>
+    
+    \( x^2 + y^2 - 2x_1x - 2y_1y + a= 0 \)<br>
+    \( x^2 + y^2 - 2x_2x - 2y_2y + b= 0 \)<br>
+    \( x^2 + y^2 - 2x_3x - 2y_3y + c= 0 \)<br>
+    <br>
+    donde \( b = x_2^2 + y_2^2 - d_2^2 \), y \( c = x_3^2 + y_3^2 - d_3^2 \)
+    </li>
+    
+    <br>
+
+    <li>
+      Ahora ya tenemos un sistema de ecuaciones reducido.
+      Este sistema se puede resolver de diversas formas; una de ellas es reducir el sistema a dos ecuaciones de primer grado con dos variables.
+      Como lo pudiste ver en el video, la primera se obtiene de restar la segunda ecuación de la primera de nuestro sistema original; la segunda ecuación se obtiene de restar la ecuación dos de la tercera del sistema original.
+      Así se obtienen las siguientes ecuaciones:
+    <br><br>
+    \( x(2x_2-2x_1) = (b-a) - (2y_2y-2y_1y)\)<br>
+    \( x(2x_2-2x_3) = (b-c) - (2y_2y-2y_3y)\)<br>
+    </li>
+    
+    <br>
+        
+    <li>
+      Ahora nuestro sistema se redujo a un sistema de dos ecuaciones de primer grado con dos variables, así que podemos resolverlo por el método de sustitución.
+      Esto significa que vamos a despejar una de ambas variables y sustituirla en la otra ecuación.
+      Haciendo lo propio, obtenemos la solución al sistema:
+    </li>
+    </ol>
+    <br>
+    <div class='importante' style='margin-left:20%;margin-right:20%'>
+      \[ x = \frac{(b-a)-(2y_2y-2y_1y)}{2x_2-2x_1} \]
+      \[ y = \frac{\frac{x_3(b-a)}{x_2-x_1}-\frac{x_2(b-a)}{x_2-x_1}-(c-b)} {\frac{2y_1x_2-2y_2x_2}{x_2-x_1}+\frac{2y_2x_3+2y_1x_3}{x_2-x_1}+2y_2-2y_3} \]
+    </div>
+    
+    <br>
+      
+    <p>
+    <strong>¡Al fin sabemos cómo obtener las coordenadas del dispositivo a ubicar!</strong>
+    </p>
+    
+  </div>
+ 
+	
+  <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+    
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  </div>
+  
+
+</article>
+
+</body>
+
+</html>
+

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="css/html5.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="../../css/stylestxt.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-------- MathJax --- para fórmulas matemáticas ------>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!---- Script para mostrar créditos y agregar ligas a glosario ---->
+  <script type="text/javascript"
+    src="js/local.js">
+  </script>
+  
+  <!-- Glosario -->
+  <script src="../../info/glosario.js"></script>
+
+</head>
+
+<body onload="initialize();">
+  
+<!-- contenido -->
+<article class="course_content_container">
+  
+  <div class="course_content">
+        
+    <!------ INICIA EL CONTENIDO DE LA PÁGINA --------->
+    
+    <!--- Título de la página --->
+    <h1>Evaluación con ayuda de un tutor</h1>
+    
+    <!--- Subtítulo (no necesario en introducción) --->
+    <h2>¿Sólo se puede calcular la sucesión de Fibonacci de forma recursiva?</h2>
+    
+    
+    <!--- Párrafo --->
+    <p>
+    Anteriormente observaste que la sucesión de Fibonacci es recursiva. Es decir, para conocer un número de Fibonacci correspondiente al índice \(n\) es necesario, en general, calcular los anteriores. ¿Será posible convertir la sucesión de su forma recursiva a una no recursiva? Esto implicaría contar con una fórmula que permitiera conocer \(F_n\) sólo en términos de \(n\), aún sin contar con \(F_{n-2}\) y \(F_{n-1}\).
+    </p>
+
+    <p>
+    Para ello, se estudiará primero el comportamiento de las potencias de \(\Phi\) y \(-\phi\), y luego se usarán éstas para la eventual construcción de la fórmula buscada.
+    </p>
+
+	<h2>Las potencias de \(\Phi\) y \(-\phi\)</h2>
+
+    <p>
+    Observa las siguientes potencias de \(\Phi\). Compruébalas tanto algebráicamente como con tu calculadora y haz llegar tus resultados a tu tutor. Recuerda que \(\Phi=\frac{1+\sqrt{5}}{2}\).
+	<ul>
+		<li>\(\Phi^1=0+1\Phi\)</li>
+		<li>\(\Phi^2=1+1\Phi\)</li>
+		<li>\(\Phi^3=1+2\Phi\)</li>
+		<li>\(\Phi^4=2+3\Phi\)</li>
+		<li>\(\Phi^5=3+5\Phi\)</li>
+	</ul>
+    </p>
+
+    <p>
+    Seguro notas que los coeficientes en las ecuaciones anteriores son números de Fibonacci. Así, ya cuentas con las expresiones para las primeras 5 potencias de \(\Phi\). Y puedes conjeturar que \(\Phi^n=F_{n-2}+F_{n-1}\Phi\). Pero para demostrarlo para cualquier \(n\), debes adoptar un abordaje más general.
+    </p>
+
+    <p>
+    Ahora nota las potencias de \(-\phi\). Compruébalas tanto algebráicamente como con tu calculadora y haz llegar tus resultados a tu tutor. Recuerda que \(\phi=\frac{1}{\Phi}\) y nota que también lo puedes expresar como \(\phi=\frac{-1+\sqrt{5}}{2}\).
+	<ul>
+		<li>\((-\phi)^1=0+1(-\phi)\)</li>
+		<li>\((-\phi)^2=1+1(-\phi)\)</li>
+		<li>\((-\phi)^3=1+2(-\phi)\)</li>
+		<li>\((-\phi)^4=2+3(-\phi)\)</li>
+		<li>\((-\phi)^5=3+5(-\phi)\)</li>
+	</ul>
+    </p>
+
+    <p>
+    En este caso, los coeficientes también son números de Fibonacci y podrías conjeturar que \((-\phi)^n=F_{n-2}+F_{n-1}(-\phi)\). Pero, nuevamente, para generalizar esta ecuación para cualquier \(n\), deberás adoptar un abordaje más general.
+    </p>
+
+    <p>
+    Como conoces una relación recursiva de los números de Fibonacci, podrías aprovechar esto para usar la inducción matemática como una forma de generalizar esto y, así, saber a ciencia cierta que la fórmula es válida independiente del índice usado. Recuerda que la inducción matemática consiste en tres pasos principales, a saber:
+	<ol>
+		<li>Determinar que la fórmula es válida para \(n=2\). Normalmente se hace la comprobación para \(n=1\), pero en nuestro caso particular, como no existe \(F_{-1}\), es necesario empezar con \(n=2\).</li>
+		<li>Suponer que la fórmula es válida para un entero \(k\).</li>
+		<li>Corroborar, usando la fórmula para \(k\), que también es válida para el siguiente entero (esto es, para \(k+1\)).</li>
+	</ol>
+    </p>
+
+    <div class='tarea'>
+      
+      <h3>Tarea</h3>
+      
+      <p>
+		<ol>
+			<li>Escribe un texto para enviar a tu asesor demostrando por inducción la validez de la fórmula para \((\Phi)^n\).</li>
+			<li>Escribe un texto para enviar a tu asesor demostrando por inducción la validez de la fórmula para \((-\phi)^n\).</li>
+		</ol>
+      </p>
+
+    </div>
+
+    <h2>Deducción de la fórmula de Binet</h2>
+
+    <p>
+    La fórmula de Binet es una fórmula para calcular la sucesión de Fibonacci de una manera no recursiva. Hay muchas formas de demostrarla, pero en este caso podemos aprovechar las fórmulas anteriormente demostradas para \((\Phi)^n\) y \((-\phi)^n\) para deducir la fórmula de Binet.
+    </p>
+
+    <p>
+    Para ello te proporcionamos algunas sugerencias para atacar el problema:
+	<ol>
+		<li>Intenta combinar las expresiones para \((\Phi)^n\) y \((-\phi)^n\) mediante una operación (por ejemplo, suma o resta) de tal forma que desaparezcan los términos que involucran a \(F_{n-2}\). Estos términos involucran el cálculo de los números de Fibonacci que, para calcularse, requieren recursividad. Es por ello que nos conviene deshacernos de ellos. Tal vez te quede un término que involucre \(F_{n-1}\), pero este te conviene que permanezca, pues es el que eventualmente despejarás para obtener la fórmula no recursiva de la sucesión.</li>
+		<li>Cuando obtengas dicha ecuación, notarás que relaciona a \(F_{n-1}\), \(\Phi\), \(-\phi\), \((\Phi)^n\) y \((-\phi)^n\). De esta fórmula, despeja a \(F_{n-1}\).</li>
+		<li>En lo posible, trata de reducir los términos que te queden que involucran \(\Phi\) y \(\phi\) usando sus definiciones respectivas (\(\frac{1+\sqrt{5}}{2}\) y \(\frac{-1+\sqrt{5}}{2}\)). Con ello tendrás una fórmula reducida que te indique el número \(F_{n-1}\) de la sucesión sólo en función de algunas constantes, y con una única variable \(n\). Es decir, una fórmula no recursiva.</li>
+		<li>Aunque la expresión que obtengas será para \(F_{n-1}\), puedes recorrer los índices para obtener la correspondiente a \(F_n\).</li>
+	</ol>
+    </p>
+
+    <div class='tarea'>
+      
+      <h3>Tarea</h3>
+      
+      <p>
+		Envía a tu tutor tu intento de la deducción de la fórmula no recursiva para obtener \(F_n\).
+      </p>
+
+    </div>
+  
+	
+  <!------ TERMINA EL CONTENIDO DE LA PÁGINA --------->
+
+  
+     <!------ INICIA LA INFO SOBRE LAS CONDICIONES DE USO; ESTE CONTENIDO NO SE DEBE CAMBIAR ---------->
+
+    <div class="div_creditos">
+      <a class="liga_creditos" href="#" onclick="showCredits()">Condiciones de uso</a>
+    </div>  
+
+    <div id="popup_creditos" class="oculto">
+      
+      <div class='popup_inner'>
+      
+          <a id="bt_close_popup" class="standardButton" title="Haz clic aquí para cerrar esta ventana." href="#" onclick="document.getElementById('popup_creditos').className='oculto';">×</a>
+  
+	  <h1 class="popup_header">Condiciones de uso</h1>
+	  
+	  <div class="popup_content">
+  
+	    <!-- Aviso licencias -->
+	    <div class="licencias">
+		    <p>Los contenidos de esta unidad didáctica interactiva están bajo una licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual</a>.</p>
+		    <p>La unidad didáctica contiene escenas elaboradas con <a href='http://arquimedes.matem.unam.mx/' target='_blank'>Descartes</a>, una herramienta de código abierto.</p>
+		    <br><br>
+		    <div class="course_extern_content"> 
+		      <img src="icns/logosCondUso.jpg"></img>
+		    </div>
+	    </div>
+	</div>
+      </div>
+    </div> 
+    
+  
+  <!------ TERMINA LA INFO SOBRE LAS CONDICIONES DE USO ---------->
+  
+  
+  </div>
+  
+
+</article>
+
+</body>
+
+</html>
+
